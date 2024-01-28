@@ -1,0 +1,88 @@
+@import "components/_resetStyle";
+
+//Страница
+$widthReportMax: 1305;
+$widthReportMin: 320;
+$maxWidthContainer: 1225px; //максимальная ширина контейнера + padding left + padding right
+$containerPadding: 15px; //внутринние отступы в контейнере
+
+//Шрифт
+$fontFamily: "Inter", sans-serif;
+$mainColor: #ffffff; //основной цвет шрифта
+$mainBackGround: linear-gradient(153deg, #36603e 35.82%, #1e262c 107.75%);
+//основной цвет фона
+$mainSize: 12;
+$size: $mainSize + px;
+$lineheight: calc(15 / $mainSize);
+$fontWeight: 400;
+
+//Контейнер
+[class*="__container"] {
+  max-width: $maxWidthContainer;
+  margin: 0 auto;
+  padding: 0 $containerPadding;
+}
+
+//Бургер меню
+[class*="__burger"] {
+  display: none;
+  flex-direction: column;
+  row-gap: 4px;
+  cursor: pointer;
+
+  span {
+    width: 24px;
+    height: 3px;
+    border-radius: 5px;
+    background: #000000;
+    transition: all 0.3s linear;
+  }
+}
+
+body {
+  font-family: $fontFamily;
+  background: $mainBackGround;
+  color: $mainColor;
+  font-size: clamp(
+    10px,
+    calc(10px + ($mainSize - 10) * ((100vw - 320px) / ($widthReportMax - $widthReportMin))),
+    $size
+  );
+  line-height: $lineheight;
+  font-weight: $fontWeight;
+  border-radius: 12px;
+  box-shadow:
+    0px -9.631px 86.681px 0px rgba(0, 0, 0, 0.1),
+    0px 23.115px 240.782px 0px rgba(0, 0, 0, 0.05);
+
+  &.lock {
+    overflow: hidden;
+  }
+}
+
+.hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.main {
+  flex: 1 1 auto;
+}
+
+.logo {
+  // .logo__img
+  &__img {
+  }
+}
+
+@import "module/_header";
+@import "module/_menu";
+@import "module/_intro";
+@import "components/_adaptive";

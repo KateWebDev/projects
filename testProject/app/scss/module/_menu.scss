@@ -1,0 +1,26 @@
+.menu {
+  // .menu__items
+  &__items {
+    display: flex;
+    column-gap: clamp(20px, calc(20px + (48 - 20) * ((100vw - 320px) / ($widthReportMax - $widthReportMin))), 48px);
+  }
+  // .menu__item
+  &__item {
+  }
+  // .menu__link
+  &__link {
+    color: rgba(255, 255, 255, 0.8);
+    text-transform: capitalize;
+    transition: all 0.3s linear;
+
+    &--active {
+      font-weight: 600;
+      color: #ffffff;
+    }
+
+    &:hover {
+      color: #ffffff;
+      text-decoration: underline;
+    }
+  }
+}
