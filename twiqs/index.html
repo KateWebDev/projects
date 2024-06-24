@@ -1,0 +1,714 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scable=0" />
+  <link rel="icon" type="image/icon" href="favicon.ico" sizes="16x16">
+  <link rel="icon" type="image/icon" href="favicon.ico" sizes="32x32">
+  <link rel="icon" type="image/icon" href="favicon.ico" sizes="64x64">
+  <link rel="icon" type="image/svg+xml" href="images/favicons/favicon.svg">
+  <link rel="apple-touch-icon" href="images/favicons/appeal-touch-icon.png">
+  <link rel="stylesheet" href="css/style.min.css" />
+  <title>Twiqs</title>
+</head>
+
+<body>
+  <div class="wrapper">
+    <header class="header">
+      <div class="header__container">
+        <a class="header__logo logo" href="#">
+          <svg width="100" height="50" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M0 23.358V6.922h2.155v5.596h7.959v1.897H2.155l-.051 8.829c0 5.44 3.026 8.528 8.01 8.528v1.948C3.544 33.73 0 29.834 0 23.358zm35.947 10.424c-4.155 0-6.622-1.595-7.45-4.518-.82 2.933-3.39 4.518-7.607 4.518-4.414 0-7.45-2.466-7.45-8.32V12.57h2.103v12.84c0 4.777 2.207 6.424 5.596 6.424 3.855 0 6.27-2.052 6.27-5.906V12.57h2.103v13.41c0 3.75 2.363 5.854 6.166 5.854 3.44 0 5.803-1.647 5.803-6.424V12.57h2.104v12.891c.02 5.866-3.12 8.322-7.638 8.322zM49.098 8.829c-.87 0-1.596-.622-1.596-1.44 0-.715.715-1.389 1.596-1.389.87 0 1.596.663 1.596 1.44 0 .778-.726 1.389-1.596 1.389zM48.02 33.534V12.57h2.104v20.953H48.02v.01zm27.524 13.554c0-3.336-1.493-6.476-6.01-6.476h-13.4l.052-.104h-.052c.156-3.596 1.182-6.321 3.855-7.648-3.751-1.647-6.321-5.243-6.321-9.502 0-6.83 5.544-10.736 11.813-10.736h3.596c2.881 0 3.803-1.948 3.803-4.114h1.026c-.052 1.896-.518 3.285-1.647 4.114h3.44v2s-4.984-.052-5.596-.052c3.389 1.233 5.855 4.83 5.855 8.788 0 5.958-4.88 10.528-11.098 10.528h-1.182c-3.7 0-5.336 2.156-5.803 4.777h10.529c2.922 0 3.855-1.948 3.855-4.113h1.026c-.104 2.103-.664 3.544-2.052 4.362 4.207.87 5.7 3.803 5.906 8.166h-1.595v.01zM64.808 14.581c-5.036 0-9.14 3.906-9.14 8.684 0 3.44 2.104 6.414 5.14 7.803-.518-.819-.767-1.897-.819-3.285h1.026c0 2.155.922 4.155 3.751 4.155h.052c5.037 0 9.14-3.855 9.14-8.684 0-4.777-4.114-8.673-9.15-8.673zm21.471 19.253c-1.845 0-5.036-.611-7.503-2.829l1.182-1.389c2.155 1.793 4.725 2.26 6.217 2.26 2.622-.052 5.088-1.596 5.037-3.959-.052-6.415-11.71-1.845-11.814-9.959-.052-3.13 3.13-5.544 6.518-5.647 1.44 0 4.26.363 6.622 2.155l-1.233 1.337c-1.751-1.233-4.01-1.596-5.192-1.596-2.31.052-4.673 1.544-4.673 3.7 0 6.166 11.658 1.948 11.813 9.917.062 3.399-3.016 5.958-6.974 6.01zm9.483-20.197c0-1.202.943-2.176 2.114-2.176 1.181 0 2.124.974 2.124 2.176 0 1.171-.943 2.156-2.124 2.156-1.171 0-2.114-.974-2.114-2.156zm3.824 0c0-.995-.757-1.813-1.71-1.813-.943 0-1.72.819-1.72 1.813 0 .985.766 1.793 1.72 1.793.953 0 1.71-.819 1.71-1.793zM97.15 12.57c.176-.02.394-.042.622-.042.632 0 .922.301.922.695a.671.671 0 01-.383.622l.518.829h-.539l-.414-.726c-.052.01-.083.01-.114.01-.042 0-.083 0-.166-.01v.726h-.456V12.57h.01zm.467 1.005c.072.01.124.01.176.01.259 0 .414-.124.414-.352 0-.186-.134-.3-.383-.3-.073 0-.135 0-.197.01v.632h-.01z" />
+          </svg>
+        </a>
+        <nav class="header__menu menu">
+          <ul class="menu__items">
+            <li class="menu__item">
+              <a class="menu__link" href="#">Shop</a>
+            </li>
+            <li class="menu__item">
+              <a class="menu__link" href="#">About</a>
+            </li>
+            <li class="menu__item">
+              <a class="menu__link" href="#">Sustainability</a>
+            </li>
+          </ul>
+        </nav>
+        <ul class="header__actions">
+          <li class="header__action">
+            <a class="header__link" href="#">
+              <svg width="32" height="32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M13.333 8a8 8 0 110 16 8 8 0 010-16zm13.334 18.667l-10-8" />
+              </svg>
+            </a>
+          </li>
+          <li class="header__action">
+            <a class="header__link" href="#">
+              <svg width="32" height="32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M8.367 24.317l-2.223-10a3 3 0 012.929-3.65h13.854a3 3 0 012.928 3.65l-2.222 10a3 3 0 01-2.929 2.35h-9.409a3 3 0 01-2.928-2.35z" />
+                <path d="M12.364 13.778V8.97a3.636 3.636 0 117.273 0v4.808" />
+              </svg>
+              <span>0</span>
+            </a>
+          </li>
+        </ul>
+        <button class="header__burger" type="button">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </header>
+
+<main class="main">
+  <section class="intro">
+    <div class="intro__container">
+      <div class="intro__content">
+        <h1 class="intro__title">
+          Give the best wishes to&nbsp;your loved ones.
+        </h1>
+        <h2 class="intro__subtitle">
+          the eco-friendly way&nbsp;to
+        </h2>
+        <a class="intro__btn btn" href="#">
+          Shop Now
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <div class="dop">
+    <div class="dop__container">
+      <div class="dop__inner">
+        <span class="dop__text">Customer Feedback</span>
+        <div class="dop__rateyo" data-rateyo-rating="5"></div>
+        <span class="dop__text">based on 1000+ Etsy Reviews</span>
+      </div>
+    </div>
+  </div>
+
+  <section class="sustainability">
+    <div class="sustainability__container">
+      <h2 class="hidden">sustainability</h2>
+      <p class="sustainability__text">
+        Our smallest choices have the potential for the biggest impact. Let&rsquo;s make good ones together.
+      </p>
+      <a class="sustainability__btn btn btn--reverse" href="#">
+        Sustainability
+      </a>
+    </div>
+  </section>
+
+  <section class="sellers">
+    <div class="sellers__container">
+      <div class="sellers__content">
+        <h3 class="sellers__title title">
+          Our Best Sellers
+        </h3>
+        <p class="sellers__text">
+          Deliver a&nbsp;smile to&nbsp;yourself or&nbsp;someone special with one of&nbsp;our sustainable favorites.
+        </p>
+        <a class="sellers__btn btn" href="#">
+          Shop all products
+        </a>
+      </div>
+      <div class="sellers__slider-container">
+        <div class="sellers__slider swiper">
+          <ul class="sellers__items swiper-wrapper">
+            <li class="sellers__item swiper-slide">
+              <div class="sellers__ibg">
+                <picture>
+                  <source type='image/avif' srcset='images/main/products/1.avif'>
+                  <source type='image/webp' srcset='images/main/products/1.webp'>
+                  <img class="sellers__img" src="images/main/products/1.jpg" alt="" loading="lazy" width="328"
+                    height="309">
+                </picture>
+              </div>
+              <div class="sellers__category">
+                Assorted Card Set
+              </div>
+              <h5 class="sellers__name">
+                Dogs
+              </h5>
+              <span class="sellers__price">
+                $ 14.00
+              </span>
+            </li>
+            <li class="sellers__item swiper-slide">
+              <div class="sellers__ibg">
+                <picture>
+                  <source type='image/avif' srcset='images/main/products/2.avif'>
+                  <source type='image/webp' srcset='images/main/products/2.webp'>
+                  <img class="sellers__img" src="images/main/products/2.jpg" alt="" loading="lazy" width="328"
+                    height="309">
+                </picture>
+              </div>
+              <div class="sellers__category">
+                Assorted Card Set
+              </div>
+              <h5 class="sellers__name">
+                North American Birds
+              </h5>
+              <span class="sellers__price">
+                $ 14.00
+              </span>
+            </li>
+            <li class="sellers__item swiper-slide">
+              <div class="sellers__ibg">
+                <picture>
+                  <source type='image/avif' srcset='images/main/products/3.avif'>
+                  <source type='image/webp' srcset='images/main/products/3.webp'>
+                  <img class="sellers__img" src="images/main/products/3.jpg" alt="" loading="lazy" width="328"
+                    height="309">
+                </picture>
+              </div>
+              <div class="sellers__category">
+                Assorted Card Set
+              </div>
+              <h5 class="sellers__name">
+                New York, London, Paris
+              </h5>
+              <span class="sellers__price">
+                $ 13.00
+              </span>
+            </li>
+            <li class="sellers__item swiper-slide">
+              <div class="sellers__ibg">
+                <picture>
+                  <source type='image/avif' srcset='images/main/products/4.avif'>
+                  <source type='image/webp' srcset='images/main/products/4.webp'>
+                  <img class="sellers__img" src="images/main/products/4.jpg" alt="" loading="lazy" width="328"
+                    height="309">
+                </picture>
+              </div>
+              <div class="sellers__category">
+                Assorted Card Set
+              </div>
+              <h5 class="sellers__name">
+                Dogs
+              </h5>
+              <span class="sellers__price">
+                $ 25.00
+              </span>
+            </li>
+          </ul>
+          <div class="sellers__buttons">
+            <button class="sellers__button sellers__button--prev">
+              <svg fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g clip-path="url(#clip0_1_103)">
+                  <path d="M1.22 12.5H50M11.382 25c0-6.25-10.163-9.375-10.163-12.5S11.382 7.292 11.382 0" />
+                </g>
+              </svg>
+            </button>
+            <button class="sellers__button sellers__button--next">
+              <svg fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g clip-path="url(#clip0_1_106)">
+                  <path d="M48.78 12.5H0M38.618 0c0 6.25 10.163 9.375 10.163 12.5S38.618 17.708 38.618 25" />
+                </g>
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="testimonials">
+    <div class="testimonials__image">
+      <picture>
+        <source type='image/avif' srcset='images/main/testimonials/photo.avif'>
+        <source type='image/webp' srcset='images/main/testimonials/photo.webp'>
+        <img class="testimonials__img" src="images/main/testimonials/photo.jpg" alt="" loading="lazy">
+      </picture>
+    </div>
+    <div class="testimonials__content">
+      <div class="testimonials__container">
+        <div class="testimonials__inner">
+          <div class="testimonials__slider swiper">
+            <ul class="testimonials__items swiper-wrapper">
+              <li class="testimonials__item swiper-slide">
+                <div class="testimonials__block">
+                  <div class="testimonials__rateyo" data-rateyo-rating="5"></div>
+                  <blockquote class="testimonials__text">
+                    Beautiful cards and very high quality. They were shipped to&nbsp;me&nbsp;very quickly and the
+                    packaging was
+                    awesome. Definitely recommend and will order again.
+                  </blockquote>
+                  <cite class="testimonials__author">
+                    Tirzah
+                  </cite>
+                </div>
+              </li>
+              <li class="testimonials__item swiper-slide">
+                <div class="testimonials__block">
+                  <div class="testimonials__rateyo" data-rateyo-rating="3"></div>
+                  <blockquote class="testimonials__text">
+                    Beautiful cards and very high quality. They were shipped to&nbsp;me&nbsp;very quickly and the
+                    packaging was
+                    awesome. Definitely recommend and will order again.
+                  </blockquote>
+                  <cite class="testimonials__author">
+                    Tirzah
+                  </cite>
+                </div>
+              </li>
+              <li class="testimonials__item swiper-slide">
+                <div class="testimonials__block">
+                  <div class="testimonials__rateyo" data-rateyo-rating="4"></div>
+                  <blockquote class="testimonials__text">
+                    Beautiful cards and very high quality. They were shipped to&nbsp;me&nbsp;very quickly and the
+                    packaging was
+                    awesome. Definitely recommend and will order again.
+                  </blockquote>
+                  <cite class="testimonials__author">
+                    Tirzah
+                  </cite>
+                </div>
+              </li>
+            </ul>
+            <div class="testimonials__pagination"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="transparency">
+    <div class="transparency__container">
+      <h3 class="transparency__title title">
+        Led by&nbsp;Transparency
+      </h3>
+      <ul class="transparency__items">
+        <li class="transparency__item">
+          <div class="transparency__image">
+            <picture>
+              <source type='image/avif' srcset='images/main/transparency/1.avif'>
+              <source type='image/webp' srcset='images/main/transparency/1.webp'>
+              <img class="transparency__img" src="images/main/transparency/1.jpg" alt="" loading="lazy">
+            </picture>
+          </div>
+          <p class="transparency__text">
+            Fast shipping. Free on&nbsp;orders over $25.
+          </p>
+        </li>
+        <li class="transparency__item">
+          <div class="transparency__image">
+            <picture>
+              <source type='image/avif' srcset='images/main/transparency/2.avif'>
+              <source type='image/webp' srcset='images/main/transparency/2.webp'>
+              <img class="transparency__img" src="images/main/transparency/2.jpg" alt="" loading="lazy">
+            </picture>
+          </div>
+          <p class="transparency__text">
+            Sustainable process from start to&nbsp;finish.
+          </p>
+        </li>
+        <li class="transparency__item">
+          <div class="transparency__image">
+            <picture>
+              <source type='image/avif' srcset='images/main/transparency/3.avif'>
+              <source type='image/webp' srcset='images/main/transparency/3.webp'>
+              <img class="transparency__img" src="images/main/transparency/3.jpg" alt="" loading="lazy">
+            </picture>
+          </div>
+          <p class="transparency__text">
+            Unique designs and high-quality materials.
+          </p>
+        </li>
+        <li class="transparency__item">
+          <div class="transparency__image">
+            <picture>
+              <source type='image/avif' srcset='images/main/transparency/4.avif'>
+              <source type='image/webp' srcset='images/main/transparency/4.webp'>
+              <img class="transparency__img" src="images/main/transparency/4.jpg" alt="" loading="lazy">
+            </picture>
+          </div>
+          <p class="transparency__text">
+            Partnering with small businesses in&nbsp;the USA.
+          </p>
+        </li>
+      </ul>
+      <a class="transparency__btn btn" href="#">
+        Shop now
+      </a>
+    </div>
+  </section>
+
+  <section class="inspiration">
+    <div class="inspiration__container">
+      <div class="inspiration__content">
+        <h2 class="inspiration__chapter">
+          Inspiration
+        </h2>
+        <h3 class="inspiration__title title">
+          The Ultimate Guide: What to&nbsp;Write in&nbsp;a&nbsp;Birthday Card
+        </h3>
+        <p class="inspiration__text">
+          <span>Celebrate the life you have!</span> Birthdays are the one time of&nbsp;year we&nbsp;get
+          to&nbsp;celebrate those
+          closest to&nbsp;us and we
+          should take the opportunity to&nbsp;let them know just how much they are appreciated.
+        </p>
+        <p class="inspiration__text">
+          We&nbsp;all know that a&nbsp;unique birthday greeting card is&nbsp;a&nbsp;great way to&nbsp;make the Birthday
+          Person&rsquo;s day memorable.
+          But let&rsquo;s be&nbsp;honest. Even though it&nbsp;seems simple, writing a&nbsp;perfect birthday card
+          sometimes isn&rsquo;t the easiest
+          thing to&nbsp;do. That&rsquo;s why we&nbsp;compiled a&nbsp;list of&nbsp;Birthday Wishes to&nbsp;inspire your
+          next Birthday Greeting Card.
+        </p>
+        <a class="inspiration__btn btn btn--reverse" href="#">
+          Read Article
+        </a>
+      </div>
+      <div class="inspiration__image">
+        <picture>
+          <source type='image/avif' srcset='images/main/inspiration/photo.avif'>
+          <source type='image/webp' srcset='images/main/inspiration/photo.webp'>
+          <img class="inspiration__img" src="images/main/inspiration/photo.jpg" alt="" loading="lazy">
+        </picture>
+      </div>
+    </div>
+  </section>
+
+  <section class="products">
+    <div class="products__container">
+      <h3 class="products__title title">
+        Explore our products
+      </h3>
+      <ul class="products__items">
+        <li class="products__item"
+          style=' background: image-set( url("images/main/products/4.avif") type("image/avif"), url("images/main/products/4.webp") type("image/webp"), url("images/main/products/4.jpg"))  left center/cover no-repeat;'>
+          <h5 class="products__name">
+            Greeting cards
+          </h5>
+        </li>
+        <li class="products__item"
+          style=' background: image-set( url("images/main/products/5.avif") type("image/avif"), url("images/main/products/5.webp") type("image/webp"), url("images/main/products/5.jpg"))  left center/cover no-repeat;'>
+          <h5 class="products__name">
+            Assorted Card Sets
+          </h5>
+        </li>
+        <li class="products__item"
+          style=' background: image-set( url("images/main/products/6.avif") type("image/avif"), url("images/main/products/6.webp") type("image/webp"), url("images/main/products/6.jpg"))  left center/cover no-repeat;'>
+          <h5 class="products__name">
+            Notebooks
+          </h5>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="gallery">
+    <div class="gallery__container">
+      <h3 class="hidden">Gallery</h3>
+      <p class="gallery__text">
+        Say hi and follow along for updates
+        <a href="#">@twigspaper</a>
+      </p>
+      <div class="gallery__images">
+        <picture>
+          <source type='image/avif' srcset='images/main/gallery/all.avif'>
+          <source type='image/webp' srcset='images/main/gallery/all.webp'>
+          <img class="gallery__img" src="images/main/gallery/all.jpg" alt="" loading="lazy">
+        </picture>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+
+  <div class="footer__container">
+
+    <div class="footer__top">
+
+      <a class="footer__logo logo logo--footer" href="#">
+
+        <svg width="135" height="55" viewBox="0 0 135 55" fill="none" xmlns="http://www.w3.org/2000/svg">
+
+          <path
+
+            d="M0 23.5645V2.19873H2.80207V9.47334H13.1482V11.9386H2.80207L2.73471 23.4163C2.73471 30.4889 6.66839 34.5034 13.1482 34.5034V37.036C4.60725 37.0495 0 31.9842 0 23.5645Z" />
+
+          <path
+
+            d="M46.7328 37.1172C41.3307 37.1172 38.1245 35.0426 37.0468 31.2436C35.9825 35.056 32.6416 37.1172 27.1587 37.1172C21.4198 37.1172 17.4727 33.911 17.4727 26.2996V9.54102H20.2074V26.2322C20.2074 32.4426 23.0768 34.5845 27.482 34.5845C32.4934 34.5845 35.6322 31.9172 35.6322 26.9058V9.54102H38.367V26.9731C38.367 31.8498 41.4385 34.5845 46.3825 34.5845C50.855 34.5845 53.9265 32.4426 53.9265 26.2322V9.54102H56.6613V26.2996C56.6882 33.9244 52.6063 37.1172 46.7328 37.1172Z" />
+
+          <path
+
+            d="M63.8285 4.67772C62.6969 4.67772 61.7539 3.86943 61.7539 2.80518C61.7539 1.87565 62.6834 1 63.8285 1C64.9601 1 65.9031 1.86218 65.9031 2.87254C65.9031 3.8829 64.9601 4.67772 63.8285 4.67772ZM62.4275 36.7938V9.54093H65.1622V36.7803H62.4275V36.7938Z" />
+
+          <path
+
+            d="M98.2069 54.4142C98.2069 50.0764 96.267 45.9945 90.3934 45.9945H72.9748L73.0421 45.8598H72.9748C73.1768 41.1852 74.5105 37.6422 77.9862 35.9178C73.1095 33.7759 69.7686 29.1013 69.7686 23.5645C69.7686 14.6868 76.9758 9.60796 85.1261 9.60796H89.8007C93.5458 9.60796 94.7447 7.07531 94.7447 4.25977H96.0784C96.011 6.72505 95.4048 8.53024 93.9364 9.60796H98.409V12.208C98.409 12.208 91.9292 12.1406 91.1344 12.1406C95.5395 13.7437 98.7458 18.4184 98.7458 23.5645C98.7458 31.3106 92.4007 37.2515 84.3178 37.2515H82.782C77.9727 37.2515 75.8442 40.0536 75.238 43.4619H88.925C92.724 43.4619 93.9364 40.9292 93.9364 38.1137H95.2701C95.1354 40.8484 94.4079 42.721 92.6027 43.7852C98.0722 44.9168 100.012 48.7292 100.282 54.4007H98.2069V54.4142ZM84.2504 12.1541C77.7033 12.1541 72.3686 17.2329 72.3686 23.4432C72.3686 27.9158 75.1033 31.7821 79.0504 33.5873C78.3768 32.523 78.0535 31.122 77.9862 29.3168H79.3199C79.3199 32.1189 80.5188 34.7189 84.1965 34.7189H84.2639C90.811 34.7189 96.1458 29.7075 96.1458 23.4298C96.1458 17.2194 90.7976 12.1541 84.2504 12.1541Z" />
+
+          <path
+
+            d="M112.163 37.1849C109.765 37.1849 105.615 36.39 102.409 33.5071L103.945 31.702C106.747 34.0325 110.088 34.6387 112.028 34.6387C115.436 34.5714 118.642 32.5641 118.575 29.4926C118.508 21.1538 103.352 27.0947 103.217 16.5465C103.15 12.4781 107.286 9.3393 111.691 9.20459C113.564 9.20459 117.228 9.67609 120.299 12.0066L118.696 13.7444C116.42 12.1413 113.483 11.6698 111.947 11.6698C108.943 11.7372 105.871 13.6771 105.871 16.4792C105.871 24.4947 121.027 19.0118 121.229 29.3714C121.31 33.79 117.309 37.1175 112.163 37.1849Z" />
+
+          <path
+
+            d="M124.49 10.9286C124.49 9.36593 125.716 8.09961 127.238 8.09961C128.774 8.09961 130 9.36593 130 10.9286C130 12.4509 128.774 13.7307 127.238 13.7307C125.716 13.7307 124.49 12.4643 124.49 10.9286ZM129.461 10.9286C129.461 9.63536 128.478 8.57111 127.238 8.57111C126.013 8.57111 125.002 9.63536 125.002 10.9286C125.002 12.2084 125.999 13.2592 127.238 13.2592C128.478 13.2592 129.461 12.1949 129.461 10.9286ZM126.295 9.54106C126.524 9.51411 126.807 9.48717 127.104 9.48717C127.925 9.48717 128.303 9.87784 128.303 10.3897C128.303 10.7265 128.128 11.0498 127.804 11.198L128.478 12.2757H127.777L127.238 11.3327C127.171 11.3462 127.131 11.3462 127.09 11.3462C127.036 11.3462 126.982 11.3462 126.875 11.3327V12.2757H126.282V9.54106H126.295ZM126.902 10.8478C126.996 10.8612 127.063 10.8612 127.131 10.8612C127.467 10.8612 127.669 10.6996 127.669 10.4032C127.669 10.1607 127.494 10.0125 127.171 10.0125C127.077 10.0125 126.996 10.0125 126.915 10.026V10.8478H126.902Z" />
+
+        </svg>
+
+      </a>
+
+      <ul class="footer__socials">
+
+        <li class="footer__social">
+
+          <a class="footer__social-link" href="#">
+
+            Instagram
+
+          </a>
+
+        </li>
+
+        <li class="footer__social">
+
+          <a class="footer__social-link" href="#">
+
+            Facebook
+
+          </a>
+
+        </li>
+
+      </ul>
+
+    </div>
+
+    <div class="footer__items">
+
+      <div class="footer__item">
+
+        <div class="footer__name">
+
+          Shop
+
+        </div>
+
+        <nav class="footer__menu">
+
+          <ul class="footer__list">
+
+            <li class="footer__point">
+
+              <a class="footer__link" href="#">Shop All</a>
+
+            </li>
+
+            <li class="footer__point">
+
+              <a class="footer__link" href="#">Greeting Cards</a>
+
+            </li>
+
+            <li class="footer__point">
+
+              <a class="footer__link" href="#">Assorted Card Sets</a>
+
+            </li>
+
+            <li class="footer__point">
+
+              <a class="footer__link" href="#">Notebooks</a>
+
+            </li>
+
+          </ul>
+
+        </nav>
+
+      </div>
+
+      <div class="footer__item">
+
+        <div class="footer__name">
+
+          About
+
+        </div>
+
+        <nav class="footer__menu">
+
+          <ul class="footer__list">
+
+            <li class="footer__point">
+
+              <a class="footer__link" href="#">Our Story</a>
+
+            </li>
+
+            <li class="footer__point">
+
+              <a class="footer__link" href="#">Our Values</a>
+
+            </li>
+
+            <li class="footer__point">
+
+              <a class="footer__link" href="#">Journal</a>
+
+            </li>
+
+            <li class="footer__point">
+
+              <a class="footer__link" href="#">Sustainability</a>
+
+            </li>
+
+          </ul>
+
+        </nav>
+
+      </div>
+
+      <div class="footer__item">
+
+        <div class="footer__name">
+
+          Customer Care
+
+        </div>
+
+        <nav class="footer__menu">
+
+          <ul class="footer__list">
+
+            <li class="footer__point">
+
+              <a class="footer__link" href="#">Contact Us</a>
+
+            </li>
+
+            <li class="footer__point">
+
+              <a class="footer__link" href="#">FAQs</a>
+
+            </li>
+
+            <li class="footer__point">
+
+              <a class="footer__link" href="#">Returns & Exchanges</a>
+
+            </li>
+
+            <li class="footer__point">
+
+              <a class="footer__link" href="#">Support</a>
+
+            </li>
+
+          </ul>
+
+        </nav>
+
+      </div>
+
+      <div class="footer__item">
+
+        <div class="footer__name">
+
+          Wholesale
+
+        </div>
+
+        <nav class="footer__menu">
+
+          <ul class="footer__list">
+
+            <li class="footer__point">
+
+              <a class="footer__link" href="#">Overview</a>
+
+            </li>
+
+            <li class="footer__point">
+
+              <a class="footer__link" href="#">Register as a Wholesaler</a>
+
+            </li>
+
+            <li class="footer__point">
+
+              <a class="footer__link" href="#">Access the Wholesale Store</a>
+
+            </li>
+
+          </ul>
+
+        </nav>
+
+      </div>
+
+    </div>
+
+    <div class="footer__bottom">
+
+      <p class="footer__copy">
+
+        &copy; 2021 Twigs Paper. All Rights Reserved.
+
+      </p>
+
+      <ul class="footer__actions">
+
+        <li class="footer__action">
+
+          <a class="footer__action-link" href="#">
+
+            Privacy Policy
+
+          </a>
+
+        </li>
+
+        <li class="footer__action">
+
+          <a class="footer__action-link" href="#">
+
+            Terms & Conditions
+
+          </a>
+
+        </li>
+
+      </ul>
+
+      <div class="footer__razrab">
+
+        Built by The Papestielliz
+
+      </div>
+
+    </div>
+
+  </div>
+
+</footer>
+
+</div>
+
+<script src="js/script.min.js" defer></script>
+
+</body>
+
+
+
+
+
+
+
+
+
+
+
+</html>
