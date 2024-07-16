@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scable=0" />
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+  <link rel="icon" type="image/icon" href="favicon.ico" sizes="16x16">
+  <link rel="icon" type="image/icon" href="favicon.ico" sizes="32x32">
+  <link rel="icon" type="image/icon" href="favicon.ico" sizes="64x64">
+  <link rel="icon" type="image/svg+xml" href="images/favicons/favicon.svg">
+  <link rel="apple-touch-icon" href="images/favicons/appeal-touch-icon.png">
+  <link rel="stylesheet" href="css/style.min.css" />
+  <title>ВелоSHOP</title>
+</head>
+<body>
+  <div class="wrapper">
+    <header class="header">
+      <div class="header__container">
+        <a class="header__logo logo" href="#" aria-label="logo company name" title="logo company name">
+          <img class="logo__img" src="images/header/logo.svg" alt="logo" loading="lazy" width="154" height="15">
+        </a>
+        <nav class="header__menu menu">
+          <ul class="menu__items">
+            <li class="menu__item">
+              <a class="menu__link" href="#">Каталог</a>
+            </li>
+            <li class="menu__item">
+              <a class="menu__link" href="#">Новинки</a>
+            </li>
+            <li class="menu__item">
+              <a class="menu__link" href="#">Заказать</a>
+            </li>
+            <li class="menu__item">
+              <a class="menu__link" href="#">Контакты</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+<main class="main">
+  <section class="intro">
+    <div class="intro__container">
+      <div class="intro__content">
+        <h2 class="intro__title">
+          Магазин велосипедов с&nbsp;самой быстрой доставкой
+        </h2>
+        <p class="intro__text">
+          Закажите велосипед прямо сейчас и&nbsp;мы&nbsp;подарим вам отличную <a class="intro__link link"
+            href="#">каску</a>.
+        </p>
+        <a class="intro__btn btn" href="#">
+          Выбрать велосипед
+        </a>
+      </div>
+      <div class="intro__image">
+        <img class="intro__img" src="images/main/intro/decor.svg" alt="" width="493" height="378" loading="lazy">
+      </div>
+    </div>
+  </section>
+
+  <section class="feedback">
+    <h2 class="hidden">Обратная связь</h2>
+    <div class="feedback__image">
+      <picture>
+        <source type='image/avif' srcset='images/main/feedback/left.avif, images/main/feedback/left_2x.avif 2x'>
+        <source type='image/webp' srcset='images/main/feedback/left.webp, images/main/feedback/left_2x.webp 2x'>
+        <img class="feedback__img" src="images/main/feedback/left_2x.jpg"
+          srcset="images/main/feedback/left_2x.jpg 2x" alt="" loading="lazy">
+      </picture>
+    </div>
+    <div class="feedback__content">
+      <div class="feedback__container">
+        <div class="feedback__inner">
+          <form class="feedback__form" action="#">
+            <label class="feedback__label" for="phone">
+              Укажите номер телефона и&nbsp;мы&nbsp;с&nbsp;вам свяжемся для обсуждения заказа.
+            </label>
+            <input class="feedback__input" id="phone" type="tel" placeholder="Телефон" required autocomplete="off">
+            <button class="feedback__btn btn" type="submit">
+              Отправить
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="catalog">
+    <div class="catalog__container">
+      <h2 class="catalog__title title">
+        Каталог
+      </h2>
+      <ul class="catalog__items">
+        <li class="catalog__item">
+          <div class="catalog__card">
+            <div class=" catalog__ibg">
+              <picture>
+                <source type='image/avif' srcset='images/main/catalog/1.avif, images/main/catalog/1_2x.avif 2x'>
+                <source type='image/webp' srcset='images/main/catalog/1.webp, images/main/catalog/1_2x.webp 2x'>
+                <img class="catalog__img" src="images/main/catalog/1.jpg" srcset="images/main/catalog/1_2x.jpg 2x"
+                  alt="" loading="lazy" width="268" height="180">
+              </picture>
+            </div>
+            <div class="catalog__content">
+              <h4 class="catalog__name">
+                Велосипед BMX Tech Team Goof 20
+              </h4>
+              <span class="catalog__price">
+                12 830 руб
+              </span>
+              <a class="catalog__btn btn" href="#">
+                Купить
+              </a>
+            </div>
+          </div>
+        </li>
+        <li class="catalog__item">
+          <div class="catalog__card">
+            <div class=" catalog__ibg">
+              <picture>
+                <source type='image/avif' srcset='images/main/catalog/2.avif, images/main/catalog/2_2x.avif 2x'>
+                <source type='image/webp' srcset='images/main/catalog/2.webp, images/main/catalog/2_2x.webp 2x'>
+                <img class="catalog__img" src="images/main/catalog/2.jpg" srcset="images/main/catalog/2_2x.jpg 2x"
+                  alt="" loading="lazy" width="268" height="180">
+              </picture>
+            </div>
+            <div class="catalog__content">
+              <h4 class="catalog__name">
+                Горный велосипед 29" TRINX
+              </h4>
+              <span class="catalog__price">
+                13 884 руб
+              </span>
+              <a class="catalog__btn btn" href="#">
+                Купить
+              </a>
+            </div>
+          </div>
+        </li>
+        <li class="catalog__item catalog__item--big"
+          style='  background: image-set(url("images/main/catalog/3.avif") type("image/avif"),url("images/main/catalog/3_2x.avif") 2x type("image/avif"),url("images/main/catalog/3.webp") type("image/webp"), url("images/main/catalog/3_2x.webp") 2x type("image/webp"), url("images/main/catalog/3.jpg"), url("images/main/catalog/3_2x.jpg") 2x )center/cover no-repeat;'>
+          <div class="catalog__card">
+            <div class="catalog__content">
+              <h4 class="catalog__name">
+                Велосипед BMX Tech Team Goof 20
+              </h4>
+              <span class="catalog__price">
+                12 830 руб
+              </span>
+              <a class="catalog__btn btn" href="#">
+                Купить
+              </a>
+            </div>
+          </div>
+        </li>
+        <li class="catalog__item catalog__item--big"
+          style='  background: image-set(url("images/main/catalog/4.avif") type("image/avif"),url("images/main/catalog/4_2x.avif") 2x type("image/avif"),url("images/main/catalog/4.webp") type("image/webp"), url("images/main/catalog/4_2x.webp") 2x type("image/webp"), url("images/main/catalog/4.jpg"), url("images/main/catalog/4_2x.jpg") 2x )center/cover no-repeat;'>
+          <div class="catalog__card">
+            <div class="catalog__content">
+              <h4 class="catalog__name">
+                Велосипед BMX Tech Team Goof 20
+              </h4>
+              <span class="catalog__price">
+                12 830 руб
+              </span>
+              <a class="catalog__btn btn" href="#">
+                Купить
+              </a>
+            </div>
+          </div>
+        </li>
+        <li class="catalog__item">
+          <div class="catalog__card">
+            <div class=" catalog__ibg">
+              <picture>
+                <source type='image/avif' srcset='images/main/catalog/5.avif, images/main/catalog/5_2x.avif 2x'>
+                <source type='image/webp' srcset='images/main/catalog/5.webp, images/main/catalog/5_2x.webp 2x'>
+                <img class="catalog__img" src="images/main/catalog/5.jpg" srcset="images/main/catalog/5_2x.jpg 2x"
+                  alt="" loading="lazy" width="268" height="180">
+              </picture>
+            </div>
+            <div class="catalog__content">
+              <h4 class="catalog__name">
+                Шлем велосипедный VSH 25 full lime
+              </h4>
+              <span class="catalog__price">
+                1244 руб
+              </span>
+              <a class="catalog__btn btn" href="#">
+                Купить
+              </a>
+            </div>
+          </div>
+        </li>
+        <li class="catalog__item">
+          <div class="catalog__card">
+            <div class=" catalog__ibg">
+              <picture>
+                <source type='image/avif' srcset='images/main/catalog/6.avif, images/main/catalog/6_2x.avif 2x'>
+                <source type='image/webp' srcset='images/main/catalog/6.webp, images/main/catalog/6_2x.webp 2x'>
+                <img class="catalog__img" src="images/main/catalog/6.jpg" srcset="images/main/catalog/6_2x.jpg 2x"
+                  alt="" loading="lazy" width="268" height="180">
+              </picture>
+            </div>
+            <div class="catalog__content">
+              <h4 class="catalog__name">
+                Велосипед RUSH HOUR XS 925
+              </h4>
+              <span class="catalog__price">
+                12 830 руб
+              </span>
+              <a class="catalog__btn btn" href="#">
+                Купить
+              </a>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </section>
+</main>
+<footer class="footer">
+  <a class="footer__logo logo logo--footer" href="#" aria-label="logo company name" title="logo company name">
+    <img class="logo__img" src="images/header/logo.svg" alt="logo" loading="lazy" width="154" height="15">
+  </a>
+</footer>
+</div>
+</body>
+</html>
