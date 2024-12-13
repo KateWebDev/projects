@@ -1,0 +1,978 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scable=0" />
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+  <link rel="icon" type="image/icon" href="favicon.ico" sizes="16x16">
+  <link rel="icon" type="image/icon" href="favicon.ico" sizes="32x32">
+  <link rel="icon" type="image/icon" href="favicon.ico" sizes="64x64">
+  <link rel="icon" type="image/svg+xml" href="images/favicons/favicon.svg">
+  <link rel="apple-touch-icon" href="images/favicons/appeal-touch-icon.png">
+  <link rel="stylesheet" href="css/style.min.css" />
+  <title>Coffee Shop</title>
+</head>
+
+<body>
+  <div class="wrapper">
+    <header class="header">
+      <div class="header__container">
+        <nav class="header__menu menu">
+          <ul class="menu__items">
+            <li class="menu__item">
+              <a class="menu__link menu__link--active" href="#">Home</a>
+            </li>
+            <li class="menu__item">
+              <a class="menu__link" href="#">About</a>
+            </li>
+            <li class="menu__item">
+              <a class="menu__link" href="#">Menu</a>
+            </li>
+            <li class="menu__item">
+              <a class="menu__link" href="#">Reservation</a>
+            </li>
+            <li class="menu__item menu__item--mobile">
+              <a class="menu__link" href="#">Pages</a>
+            </li>
+            <li class="menu__item menu__item--mobile">
+              <a class="menu__link" href="#">Shop</a>
+            </li>
+            <li class="menu__item menu__item--mobile">
+              <a class="menu__link" href="#">Contact</a>
+            </li>
+          </ul>
+        </nav>
+        <a class="header__logo logo" href="#" aria-label="logo company Coffe Shop" title="logo company Coffe Shop">
+          <img src="images/logo.svg" alt="logo" loading="lazy" width="72" height="60">
+        </a>
+        <nav class="header__menu menu menu--mobile">
+          <ul class="menu__items">
+            <li class="menu__item">
+              <a class="menu__link" href="#">Pages</a>
+            </li>
+            <li class="menu__item">
+              <a class="menu__link" href="#">Shop</a>
+            </li>
+            <li class="menu__item">
+              <a class="menu__link" href="#">Contact</a>
+            </li>
+          </ul>
+        </nav>
+        <ul class="header__actions">
+          <li class="header__action">
+            <a class="header__action-link" href="#" aria-label="go to search" title="go to search">
+              <svg width="30" height="30" fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30 ">
+                <path
+                  d="M13.75 23.75c5.523 0 10-4.477 10-10s-4.477-10-10-10-10 4.477-10 10 4.477 10 10 10zm12.5 2.5l-5.438-5.438"
+                  stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+            </a>
+          </li>
+          <li class="header__action">
+            <a class="header__action-link" href="#" aria-label="go to cart" title="go to cart">
+              <svg width="30" height="30" fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30 ">
+                <path
+                  d="M7.5 2.5l-3.75 5V25a2.5 2.5 0 002.5 2.5h17.5a2.5 2.5 0 002.5-2.5V7.5l-3.75-5h-15zm-3.75 5h22.5m-6.25 5a5 5 0 11-10 0"
+                  stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+            </a>
+          </li>
+        </ul>
+        <button class="header__burger" type="button" aria-label="menu" title="menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </header>
+
+<main class="main">
+  <section class="main__section intro">
+    <div class="intro__container container-full">
+      <div class="intro__content">
+        <h1 class="intro__title main-title">
+          Enjoy Your
+          Morning Coffee.
+        </h1>
+        <div class="intro__text text">
+          <p>
+            The coofee is brewed by fist roasting the green coffee beans over hot coals in brazier. given to Opportunity
+          </p>
+        </div>
+        <a class="intro__btn btn btn--big" href="#">
+          Test Coffee
+        </a>
+      </div>
+      <a class="intro__video" href="https://www.youtube.com/watch?v=TATWKHPY-4c" data-fancybox>
+        <div class="intro__icon">
+          <svg width="24" height="24" fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <path d="M5 3l14 9-14 9V3z" />
+          </svg>
+        </div>
+        Play video
+      </a>
+    </div>
+  </section>
+
+  <section class="main__section advantages">
+    <h2 class="hidden"> Advantages </h2>
+    <div class="advantages__container">
+      <ol class="advantages__items">
+        <li class="advantages__item">
+          <p class="advantages__text">
+            Best Coffee Flavour
+          </p>
+          <div class="advantages__ibg">
+            <picture>
+              <source type='image/avif'
+                srcset='images/main/advantages/1.avif, images/main/advantages/1@2x.avif 2x'>
+              <source type='image/webp'
+                srcset='images/main/advantages/1.webp, images/main/advantages/1@2x.webp 2x'>
+              <img class="advantages__img" src="images/main/advantages/1.jpg"
+                srcset="images/main/advantages/1@2x.jpg 2x" alt="" loading="lazy" width="366" height="420">
+            </picture>
+          </div>
+        </li>
+        <li class="advantages__item">
+          <p class="advantages__text">
+            Place to get lost
+          </p>
+          <div class="advantages__ibg">
+            <picture>
+              <source type='image/avif'
+                srcset='images/main/advantages/2.avif, images/main/advantages/2@2x.avif 2x'>
+              <source type='image/webp'
+                srcset='images/main/advantages/2.webp, images/main/advantages/2@2x.webp 2x'>
+              <img class="advantages__img" src="images/main/advantages/2.jpg"
+                srcset="images/main/advantages/2@2x.jpg 2x" alt="" loading="lazy" width="366" height="420">
+            </picture>
+          </div>
+        </li>
+        <li class="advantages__item">
+          <p class="advantages__text">
+            Proper roesting
+          </p>
+          <div class="advantages__ibg">
+            <picture>
+              <source type='image/avif'
+                srcset='images/main/advantages/3.avif, images/main/advantages/3@2x.avif 2x'>
+              <source type='image/webp'
+                srcset='images/main/advantages/3.webp, images/main/advantages/3@2x.webp 2x'>
+              <img class="advantages__img" src="images/main/advantages/3.jpg"
+                srcset="images/main/advantages/3@2x.jpg 2x" alt="" loading="lazy" width="366" height="420">
+            </picture>
+          </div>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="main__section history">
+    <div class="history__container">
+      <div class="history__items">
+        <div class="history__item">
+          <div class="history__ibg">
+            <picture>
+              <source type='image/avif' srcset='images/main/history/1.avif, images/main/history/1@2x.avif 2x'>
+              <source type='image/webp' srcset='images/main/history/1.webp, images/main/history/1@2x.webp 2x'>
+              <img class="history__img" src="images/main/history/1.jpg" srcset="images/main/history/1@2x.jpg 2x"
+                alt="" loading="lazy" width="298" height="302">
+            </picture>
+          </div>
+        </div>
+        <div class="history__item history__item--row">
+          <div class="history__ibg">
+            <picture>
+              <source type='image/avif' srcset='images/main/history/3.avif, images/main/history/3@2x.avif 2x'>
+              <source type='image/webp' srcset='images/main/history/3.webp, images/main/history/3@2x.webp 2x'>
+              <img class="history__img" src="images/main/history/3.jpg" srcset="images/main/histxory/3@2.jpg 2x"
+                alt="" loading="lazy" width="298" height="635">
+            </picture>
+          </div>
+        </div>
+        <div class="history__item history__item--row">
+          <div class="history__content">
+            <span class="history__badge badge">
+              Our history
+            </span>
+            <h2 class="history__title title">
+              Create a<br>new story with us
+            </h2>
+            <div class="history__text text">
+              <p>
+                mauris rhoncus in imperdiet placerat. vestibu emismd nisl suscirpit ligula volutpat, a feyguat urn
+                maxmaus. cars massa nibhtincidunt. donec et nibh maximus, est eu, mattis nuce. preasent ut quam quis
+                quam
+                venen
+                atis fringilla. morbi vastibulum id tells mmodo mattis. aliauam erat volutpal.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="history__item">
+          <div class="history__ibg">
+            <picture>
+              <source type='image/avif' srcset='images/main/history/2.avif, images/main/history/2@2x.avif 2x'>
+              <source type='image/webp' srcset='images/main/history/2.webp, images/main/history/2@2x.webp 2x'>
+              <img class="history__img" src="images/main/history/2.jpg" srcset="images/main/history/2@2x.jpg 2x"
+                alt="" loading="lazy" width="298" height="302">
+            </picture>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="main__section products">
+    <div class="products__container">
+      <span class="products__badge badge">
+        Popular Product
+      </span>
+      <h2 class="products__title title">
+        Coffee popular Product
+      </h2>
+      <ul class="products__items">
+        <li class="products__item">
+          <div class="products__ibg">
+            <picture>
+              <source type='image/avif' srcset='images/main/products/1.avif, images/main/products/1@2x.avif 2x'>
+              <source type='image/webp' srcset='images/main/products/1.webp, images/main/products/1@2x.webp 2x'>
+              <img class="products__img" src="images/main/products/1.jpg"
+                srcset="images/main/products/1@2x.jpg 2x" alt="" loading="lazy" width="270" height="343">
+            </picture>
+          </div>
+          <div class="products__content">
+            <div class="products__action">
+              <span>Coffee</span>
+              <div class="products__raiting" data-rateyo-rating="4"></div>
+            </div>
+            <h3 class="products__name">
+              brazil coffee gred
+            </h3>
+            <p class="products__price">
+              Price - <span class="products__price products__price--color">$320.00 /</span> <span
+                class="products__price products__price--line">$358</span>
+            </p>
+            <a class="products__btn btn btn--icon" href="#">
+              Add to cart
+            </a>
+          </div>
+        </li>
+        <li class="products__item">
+          <div class="products__ibg">
+            <picture>
+              <source type='image/avif' srcset='images/main/products/1.avif, images/main/products/1@2x.avif 2x'>
+              <source type='image/webp' srcset='images/main/products/1.webp, images/main/products/1@2x.webp 2x'>
+              <img class="products__img" src="images/main/products/1.jpg"
+                srcset="images/main/products/1@2x.jpg 2x" alt="" loading="lazy" width="270" height="343">
+            </picture>
+          </div>
+          <div class="products__content">
+            <div class="products__action">
+              <span>Coffee</span>
+              <div class="products__raiting" data-rateyo-rating="5"></div>
+            </div>
+            <h3 class="products__name">
+              brazil coffee gred
+            </h3>
+            <p class="products__price">
+              Price - <span class="products__price products__price--color">$320.00 /</span> <span
+                class="products__price products__price--line">$358</span>
+            </p>
+            <a class="products__btn btn btn--icon" href="#">
+              Add to cart
+            </a>
+          </div>
+        </li>
+        <li class="products__item">
+          <div class="products__ibg">
+            <picture>
+              <source type='image/avif' srcset='images/main/products/1.avif, images/main/products/1@2x.avif 2x'>
+              <source type='image/webp' srcset='images/main/products/1.webp, images/main/products/1@2x.webp 2x'>
+              <img class="products__img" src="images/main/products/1.jpg"
+                srcset="images/main/products/1@2x.jpg 2x" alt="" loading="lazy" width="270" height="343">
+            </picture>
+          </div>
+          <div class="products__content">
+            <div class="products__action">
+              <span>Coffee</span>
+              <div class="products__raiting" data-rateyo-rating="0"></div>
+            </div>
+            <h3 class=" products__name">
+              brazil coffee gred
+            </h3>
+            <p class="products__price">
+              Price - <span class="products__price products__price--color">$320.00 /</span> <span
+                class="products__price products__price--line">$358</span>
+            </p>
+            <a class="products__btn btn btn--icon" href="#">
+              Add to cart
+            </a>
+          </div>
+        </li>
+      </ul>
+      <a class="products__button btn" href="#">
+        View all product
+      </a>
+    </div>
+  </section>
+
+  <section class="main__section ware">
+    <div class="ware__container">
+      <div class="ware__image">
+        <picture>
+          <source type='image/avif' srcset='images/main/ware/1.avif, images/main/ware/1@2x.avif 2x'>
+          <source type='image/webp' srcset='images/main/ware/1.webp, images/main/ware/1@2x.webp 2x'>
+          <img class="ware__img" src="images/main/ware/1.png" srcset="images/main/ware/1@2x.png 2x" alt=""
+            loading="lazy" width="226" height="359">
+        </picture>
+      </div>
+      <div class="ware__content">
+        <h2 class="ware__title title">
+          Coffee<br>
+          machine, buy for home
+        </h2>
+        <div class="ware__text text">
+          <p>
+            mauris rhoncus in imperdiet placerat. vestibu emismd nisl suscirpit ligula
+            volutpat, a feyguat urn maxmaus. cars massa nibhtincidunt. donec et nib
+            maximus, est eu, mattis nuce. preasent ut quam quis quam venen atis fri
+            ngilla. morbi vastibulum id tells mmodo mattis. aliauam erat volutpal.
+          </p>
+        </div>
+        <a class="ware__btn btn" href="#">
+          Discover now
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="main__section carte">
+    <div class="carte__container">
+      <span class="carte__badge badge badge--center">
+        Menu
+      </span>
+      <h2 class="carte__title title title--center">
+        Coffee popular menu
+      </h2>
+      <ul class="carte__items">
+        <li class="carte__item">
+          <div class="carte__image">
+            <picture>
+              <source type='image/avif' srcset='images/main/menu/1.avif, images/main/menu/1@2x.avif 2x'>
+              <source type='image/webp' srcset='images/main/menu/1.webp, images/main/menu/1@2x.webp 2x'>
+              <img class="carte__img" src="images/main/menu/1.jpg" srcset="images/main/menu/1@2x.jpg 2x" alt=""
+                loading="lazy" width="72" height="72">
+            </picture>
+          </div>
+          <h3 class="carte__name">
+            Americano rosted gred
+          </h3>
+          <span class="carte__price">
+            $12:00
+          </span>
+        </li>
+        <li class="carte__item">
+          <div class="carte__image">
+            <picture>
+              <source type='image/avif' srcset='images/main/menu/2.avif, images/main/menu/2@2x.avif 2x'>
+              <source type='image/webp' srcset='images/main/menu/2.webp, images/main/menu/2@2x.webp 2x'>
+              <img class="carte__img" src="images/main/menu/2.jpg" srcset="images/main/menu/2@2x.jpg 2x" alt=""
+                loading="lazy" width="72" height="72">
+            </picture>
+          </div>
+          <h3 class="carte__name">
+            Americano rosted gred
+          </h3>
+          <span class="carte__price">
+            $12:00
+          </span>
+        </li>
+        <li class="carte__item">
+          <div class="carte__image">
+            <picture>
+              <source type='image/avif' srcset='images/main/menu/3.avif, images/main/menu/3@2x.avif 2x'>
+              <source type='image/webp' srcset='images/main/menu/3.webp, images/main/menu/3@2x.webp 2x'>
+              <img class="carte__img" src="images/main/menu/3.jpg" srcset="images/main/menu/3@2x.jpg 2x" alt=""
+                loading="lazy" width="72" height="72">
+            </picture>
+          </div>
+          <h3 class="carte__name">
+            Americano rosted gred
+          </h3>
+          <span class="carte__price">
+            $12:00
+          </span>
+        </li>
+        <li class="carte__item">
+          <div class="carte__image">
+            <picture>
+              <source type='image/avif' srcset='images/main/menu/4.avif, images/main/menu/4@2x.avif 2x'>
+              <source type='image/webp' srcset='images/main/menu/4.webp, images/main/menu/4@2x.webp 2x'>
+              <img class="carte__img" src="images/main/menu/4.jpg" srcset="images/main/menu/4@2x.jpg 2x" alt=""
+                loading="lazy" width="72" height="72">
+            </picture>
+          </div>
+          <h3 class="carte__name">
+            Americano rosted gred
+          </h3>
+          <span class="carte__price">
+            $12:00
+          </span>
+        </li>
+        <li class="carte__item">
+          <div class="carte__image">
+            <picture>
+              <source type='image/avif' srcset='images/main/menu/5.avif, images/main/menu/5@2x.avif 2x'>
+              <source type='image/webp' srcset='images/main/menu/5.webp, images/main/menu/5@2x.webp 2x'>
+              <img class="carte__img" src="images/main/menu/5.jpg" srcset="images/main/menu/5@2x.jpg 2x" alt=""
+                loading="lazy" width="72" height="72">
+            </picture>
+          </div>
+          <h3 class="carte__name">
+            Americano rosted gred
+          </h3>
+          <span class="carte__price">
+            $12:00
+          </span>
+        </li>
+        <li class="carte__item">
+          <div class="carte__image">
+            <picture>
+              <source type='image/avif' srcset='images/main/menu/6.avif, images/main/menu/6@2x.avif 2x'>
+              <source type='image/webp' srcset='images/main/menu/6.webp, images/main/menu/6@2x.webp 2x'>
+              <img class="carte__img" src="images/main/menu/6.jpg" srcset="images/main/menu/6@2x.jpg 2x" alt=""
+                loading="lazy" width="72" height="72">
+            </picture>
+          </div>
+          <h3 class="carte__name">
+            Americano rosted gred
+          </h3>
+          <span class="carte__price">
+            $12:00
+          </span>
+        </li>
+        <li class="carte__item">
+          <div class="carte__image">
+            <picture>
+              <source type='image/avif' srcset='images/main/menu/7.avif, images/main/menu/7@2x.avif 2x'>
+              <source type='image/webp' srcset='images/main/menu/7.webp, images/main/menu/7@2x.webp 2x'>
+              <img class="carte__img" src="images/main/menu/7.jpg" srcset="images/main/menu/7@2x.jpg 2x" alt=""
+                loading="lazy" width="72" height="72">
+            </picture>
+          </div>
+          <h3 class="carte__name">
+            Americano rosted gred
+          </h3>
+          <span class="carte__price">
+            $12:00
+          </span>
+        </li>
+        <li class="carte__item">
+          <div class="carte__image">
+            <picture>
+              <source type='image/avif' srcset='images/main/menu/8.avif, images/main/menu/8@2x.avif 2x'>
+              <source type='image/webp' srcset='images/main/menu/8.webp, images/main/menu/8@2x.webp 2x'>
+              <img class="carte__img" src="images/main/menu/8.jpg" srcset="images/main/menu/8@2x.jpg 2x" alt=""
+                loading="lazy" width="72" height="72">
+            </picture>
+          </div>
+          <h3 class="carte__name">
+            Americano rosted gred
+          </h3>
+          <span class="carte__price">
+            $12:00
+          </span>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="main__section reviews">
+    <div class="reviews__container">
+      <span class="reviews__badge badge badge--center">
+        Testimonial
+      </span>
+      <h2 class="reviews__title title title--center">
+        Says our customers
+      </h2>
+      <div class="reviews__slider slider swiper">
+        <ul class="slider__items swiper-wrapper">
+          <li class="slider__item swiper-slide">
+            <div class="slider__content">
+              <div class="slider__image">
+                <picture>
+                  <source type='image/avif'
+                    srcset='images/main/testimonial/1.avif, images/main/testimonial/1@2x.avif 2x'>
+                  <source type='image/webp'
+                    srcset='images/main/testimonial/1.webp, images/main/testimonial/1@2x.webp 2x'>
+                  <img class="slider__img" src="images/main/testimonial/1.jpg"
+                    srcset="images/main/testimonial/1@2x.jpg 2x" alt="" loading="lazy" width="129" height="149">
+                </picture>
+              </div>
+              <div class="slider__text text">
+                <p>
+                  Education WP is a special build for effective education & Learning Management System site. Education
+                  WP is the next generation & one of the best education WordPress themes which all the strength of
+                  eLearning WP..
+                </p>
+              </div>
+            </div>
+            <div class="slider__info">
+              <div class="slider__descr">
+                <a class="slider__author" href="#">
+                  John Smith
+                </a>
+                <div class="slider__work">
+                  Product Designer
+                </div>
+              </div>
+              <div class="slider__raiting" data-rateyo-rating="5"></div>
+            </div>
+          </li>
+          <li class="slider__item swiper-slide">
+            <div class="slider__content">
+              <div class="slider__image">
+                <picture>
+                  <source type='image/avif'
+                    srcset='images/main/testimonial/2.avif, images/main/testimonial/2@2x.avif 2x'>
+                  <source type='image/webp'
+                    srcset='images/main/testimonial/2.webp, images/main/testimonial/2@2x.webp 2x'>
+                  <img class="slider__img" src="images/main/testimonial/2.jpg"
+                    srcset="images/main/testimonial/2@2x.jpg 2x" alt="" loading="lazy" width="129" height="149">
+                </picture>
+              </div>
+              <div class="slider__text text">
+                <p>
+                  Education WP is a special build for effective education & Learning Management System site. Education
+                  WP is the next generation & one of the best education WordPress themes which all the strength of
+                  eLearning WP..
+                </p>
+              </div>
+            </div>
+            <div class="slider__info">
+              <div class="slider__descr">
+                <a class="slider__author" href="#">
+                  Brett Lee
+                </a>
+                <div class="slider__work">
+                  User Experience Designer
+                </div>
+              </div>
+              <div class="slider__raiting" data-rateyo-rating="5"></div>
+            </div>
+          </li>
+          <li class="slider__item swiper-slide">
+            <div class="slider__content">
+              <div class="slider__image">
+                <picture>
+                  <source type='image/avif'
+                    srcset='images/main/testimonial/1.avif, images/main/testimonial/1@2x.avif 2x'>
+                  <source type='image/webp'
+                    srcset='images/main/testimonial/1.webp, images/main/testimonial/1@2x.webp 2x'>
+                  <img class="slider__img" src="images/main/testimonial/1.jpg"
+                    srcset="images/main/testimonial/1@2x.jpg 2x" alt="" loading="lazy" width="129" height="149">
+                </picture>
+              </div>
+              <div class="slider__text text">
+                <p>
+                  Education WP is a special build for effective education & Learning Management System site. Education
+                  WP is the next generation & one of the best education WordPress themes which all the strength of
+                  eLearning WP..
+                </p>
+              </div>
+            </div>
+            <div class="slider__info">
+              <div class="slider__descr">
+                <a class="slider__author" href="#">
+                  John Smith
+                </a>
+                <div class="slider__work">
+                  Product Designer
+                </div>
+              </div>
+              <div class="slider__raiting" data-rateyo-rating="5"></div>
+            </div>
+          </li>
+          <li class="slider__item swiper-slide">
+            <div class="slider__content">
+              <div class="slider__image">
+                <picture>
+                  <source type='image/avif'
+                    srcset='images/main/testimonial/2.avif, images/main/testimonial/2@2x.avif 2x'>
+                  <source type='image/webp'
+                    srcset='images/main/testimonial/2.webp, images/main/testimonial/2@2x.webp 2x'>
+                  <img class="slider__img" src="images/main/testimonial/2.jpg"
+                    srcset="images/main/testimonial/2@2x.jpg 2x" alt="" loading="lazy" width="129" height="149">
+                </picture>
+              </div>
+              <div class="slider__text text">
+                <p>
+                  Education WP is a special build for effective education & Learning Management System site. Education
+                  WP is the next generation & one of the best education WordPress themes which all the strength of
+                  eLearning WP..
+                </p>
+              </div>
+            </div>
+            <div class="slider__info">
+              <div class="slider__descr">
+                <a class="slider__author" href="#">
+                  Brett Lee
+                </a>
+                <div class="slider__work">
+                  User Experience Designer
+                </div>
+              </div>
+              <div class="slider__raiting" data-rateyo-rating="5"></div>
+            </div>
+          </li>
+          <li class="slider__item swiper-slide">
+            <div class="slider__content">
+              <div class="slider__image">
+                <picture>
+                  <source type='image/avif'
+                    srcset='images/main/testimonial/1.avif, images/main/testimonial/1@2x.avif 2x'>
+                  <source type='image/webp'
+                    srcset='images/main/testimonial/1.webp, images/main/testimonial/1@2x.webp 2x'>
+                  <img class="slider__img" src="images/main/testimonial/1.jpg"
+                    srcset="images/main/testimonial/1@2x.jpg 2x" alt="" loading="lazy" width="129" height="149">
+                </picture>
+              </div>
+              <div class="slider__text text">
+                <p>
+                  Education WP is a special build for effective education & Learning Management System site. Education
+                  WP is the next generation & one of the best education WordPress themes which all the strength of
+                  eLearning WP..
+                </p>
+              </div>
+            </div>
+            <div class="slider__info">
+              <div class="slider__descr">
+                <a class="slider__author" href="#">
+                  John Smith
+                </a>
+                <div class="slider__work">
+                  Product Designer
+                </div>
+              </div>
+              <div class="slider__raiting" data-rateyo-rating="5"></div>
+            </div>
+          </li>
+          <li class="slider__item swiper-slide">
+            <div class="slider__content">
+              <div class="slider__image">
+                <picture>
+                  <source type='image/avif'
+                    srcset='images/main/testimonial/2.avif, images/main/testimonial/2@2x.avif 2x'>
+                  <source type='image/webp'
+                    srcset='images/main/testimonial/2.webp, images/main/testimonial/2@2x.webp 2x'>
+                  <img class="slider__img" src="images/main/testimonial/2.jpg"
+                    srcset="images/main/testimonial/2@2x.jpg 2x" alt="" loading="lazy" width="129" height="149">
+                </picture>
+              </div>
+              <div class="slider__text text">
+                <p>
+                  Education WP is a special build for effective education & Learning Management System site. Education
+                  WP is the next generation & one of the best education WordPress themes which all the strength of
+                  eLearning WP..
+                </p>
+              </div>
+            </div>
+            <div class="slider__info">
+              <div class="slider__descr">
+                <a class="slider__author" href="#">
+                  Brett Lee
+                </a>
+                <div class="slider__work">
+                  User Experience Designer
+                </div>
+              </div>
+              <div class="slider__raiting" data-rateyo-rating="5"></div>
+            </div>
+          </li>
+        </ul>
+      </div>
+      <div class="reviews__actions">
+        <div class="reviews__action">
+          <div class="reviews__pagination"></div>
+          <div class="reviews__scrollbar"></div>
+        </div>
+        <div class="reviews__buttons">
+          <button class="reviews__button reviews__button--prev" type="button" aria-label="prev slide"
+            title="prev slide">
+            <svg width="24" height="24" fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+              <path d="M23 12H5m7 7l-7-7 7-7" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+          </button>
+
+          <button class="reviews__button reviews__button--next" type="button" aria-label="next slide"
+            title="next slide">
+            <svg width="24" height="24" fill="none" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24">
+              <path d="M1 12h18m-7-7l7 7-7 7" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="main__section booking">
+    <div class="booking__container">
+      <div class="booking__image">
+        <picture>
+          <source type='image/avif' srcset='images/main/booking/map.avif, images/main/booking/map@2x.avif 2x'>
+          <source type='image/webp' srcset='images/main/booking/map.webp, images/main/booking/map@2x.webp 2x'>
+          <img class="booking__img" src="images/main/booking/map.jpg" srcset="images/main/booking/map@2x.jpg 2x"
+            alt="" loading="lazy" width="100%" height="100%">
+        </picture>
+      </div>
+      <div class="booking__content">
+        <span class="booking__badge badge badge--center">
+          Reservation
+        </span>
+        <h2 class="booking__title title title--center">
+          Booking a table
+        </h2>
+        <form class="booking__form" action="#" method="post">
+          <label class="hidden" for="person">Enter count Person</label>
+          <input class="booking__input" id="person" type="number" min="1" max="10" placeholder="count person" required>
+          <label class="hidden" for="date">Enter date</label>
+          <input class="booking__input" id="date" type="date" placeholder="12.25, 2020" required>
+          <label class="hidden" for="time">Enter date</label>
+          <input class="booking__input" id="time" type="time" placeholder="11:00 AM" required>
+          <button class="booking__btn btn" type="submit">
+            BOOK S TABLE
+          </button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <section class="main__section news">
+    <div class="news__container">
+      <span class="news__badge badge badge--center">
+        Testimonial
+      </span>
+      <h2 class="news__title title title--center">
+        Our latest news
+      </h2>
+      <ul class="news__items">
+        <li class="news__item">
+          <div class="news__ibg">
+            <picture>
+              <source type='image/avif' srcset='images/main/news/1.avif, images/main/news/1@2x.avif 2x'>
+              <source type='image/webp' srcset='images/main/news/1.webp, images/main/news/1@2x.webp 2x'>
+              <img class="news__img" src="images/main/news/1.jpg" srcset="images/main/news/1@2x.jpg 2x" alt=""
+                loading="lazy" width="366" height="360">
+            </picture>
+          </div>
+          <div class="news__content">
+            <div class="news__info">
+              <a class="news__author" href="#">
+                rasaline
+              </a>
+              <time class="news__date" datetime="2021-01-23">
+                23.01.2021
+              </time>
+            </div>
+            <h3 class="news__name">
+              Ideal cocktails from barmen Lorem ipsum dolor sit amet.
+            </h3>
+            <a class="news__link link" href="#">
+              Read More
+            </a>
+          </div>
+        </li>
+        <li class="news__item">
+          <div class="news__ibg">
+            <picture>
+              <source type='image/avif' srcset='images/main/news/2.avif, images/main/news/2@2x.avif 2x'>
+              <source type='image/webp' srcset='images/main/news/2.webp, images/main/news/2@2x.webp 2x'>
+              <img class="news__img" src="images/main/news/2.jpg" srcset="images/main/news/2@2x.jpg 2x" alt=""
+                loading="lazy" width="366" height="360">
+            </picture>
+          </div>
+          <div class="news__content">
+            <div class="news__info">
+              <a class="news__author" href="#">
+                rasaline
+              </a>
+              <time class="news__date" datetime="2021-01-23">
+                23.01.2021
+              </time>
+            </div>
+            <h3 class="news__name">
+              Ideal cocktails from barmen Lorem ipsum dolor sit amet.
+            </h3>
+            <a class="news__link link" href="#">
+              Read More
+            </a>
+          </div>
+        </li>
+        <li class="news__item">
+          <div class="news__ibg">
+            <picture>
+              <source type='image/avif' srcset='images/main/news/3.avif, images/main/news/3@2x.avif 2x'>
+              <source type='image/webp' srcset='images/main/news/3.webp, images/main/news/3@2x.webp 2x'>
+              <img class="news__img" src="images/main/news/3.jpg" srcset="images/main/news/3@2x.jpg 2x" alt=""
+                loading="lazy" width="366" height="360">
+            </picture>
+          </div>
+          <div class="news__content">
+            <div class="news__info">
+              <a class="news__author" href="#">
+                rasaline
+              </a>
+              <time class="news__date" datetime="2021-01-23">
+                23.01.2021
+              </time>
+            </div>
+            <h3 class="news__name">
+              Ideal cocktails from barmen Lorem ipsum dolor sit amet.
+            </h3>
+            <a class="news__link link" href="#">
+              Read More
+            </a>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+
+  <div class="footer__top">
+
+    <div class="footer__container">
+
+      <a class="footer__logo logo" href="#" aria-label="logo company Coffe Shop" title="logo company Coffe Shop">
+
+        <img src="images/logo.svg" alt="logo" loading="lazy" width="72" height="60">
+
+      </a>
+
+      <nav class="footer__nav">
+
+        <ul class="footer__items">
+
+          <li class="footer__item">
+
+            <a class="footer__link" href="#">
+
+              Home
+
+            </a>
+
+          </li>
+
+          <li class="footer__item">
+
+            <a class="footer__link" href="#">
+
+              Rerervation
+
+            </a>
+
+          </li>
+
+          <li class="footer__item">
+
+            <a class="footer__link" href="#">
+
+              Menu
+
+            </a>
+
+          </li>
+
+          <li class="footer__item">
+
+            <a class="footer__link" href="#">
+
+              About
+
+            </a>
+
+          </li>
+
+          <li class="footer__item">
+
+            <a class="footer__link" href="#">
+
+              Pages
+
+            </a>
+
+          </li>
+
+          <li class="footer__item">
+
+            <a class="footer__link" href="#">
+
+              Shop
+
+            </a>
+
+          </li>
+
+          <li class="footer__item">
+
+            <a class="footer__link" href="#">
+
+              Blogs
+
+            </a>
+
+          </li>
+
+        </ul>
+
+      </nav>
+
+      <form class="footer__form" action="#" method="post">
+
+        <label class="hidden" for="email">Enter Your Email address</label>
+
+        <input class="footer__input" id="email" type="email" required placeholder="Enter Your Email">
+
+        <button class="footer__btn" aria-label="send Email" title="send Email">
+
+          <svg width="24" height="24" fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+
+            <path d="M5 12h14m-7-7l7 7-7 7" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+
+          </svg>
+
+        </button>
+
+      </form>
+
+    </div>
+
+  </div>
+
+  <div class="footer__bottom">
+
+    <p class="footer__copy">
+
+      e-Tennis &copy; 2021. All rights reserved.
+
+    </p>
+
+  </div>
+
+</footer>
+
+</div>
+
+<script src="js/script.min.js" defer></script>
+
+</body>
+
+
+
+</html>
