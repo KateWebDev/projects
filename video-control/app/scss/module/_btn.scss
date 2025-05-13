@@ -1,0 +1,55 @@
+.btn {
+  background: $white;
+  color: #173483;
+  border-radius: $radius;
+  padding: 5px 55px 5px 10px;
+  min-height: 45px;
+  line-height: 45px;
+  @include Inter500;
+  font-size: clampAd(14, 22);
+  position: relative;
+  transition: all 0.3s linear;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    width: clampAd(30, 35);
+    aspect-ratio: 1;
+    border-radius: 50%;
+    background: #173483 url(../../images/arrow.svg) center/21px 21px no-repeat;
+    transition: all 0.3s linear;
+  }
+
+  @media (any-hover: hover) {
+    &:hover {
+      background: #173483;
+      color: $white;
+
+      &::before {
+        transform: rotate(90deg) translate(-15px, 0);
+      }
+    }
+  }
+}
+
+.button {
+  padding: 10px;
+  min-height: 42px;
+  background: $color-accent2;
+  border-radius: $radius;
+  @include Inter500;
+  font-size: clampAd(12, 18);
+  text-align: center;
+  color: $white;
+  transition: all 0.3s linear;
+
+  @media (any-hover: hover) {
+    &:hover {
+      background: $white;
+      color: $color-accent2;
+    }
+  }
+}

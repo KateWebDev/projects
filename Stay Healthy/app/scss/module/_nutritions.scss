@@ -1,0 +1,113 @@
+.nutritions {
+  // .nutritions__container
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+  }
+  // .nutritions__images
+  &__images {
+    max-width: clampAd(400, 605);
+    width: 100%;
+  }
+  // .nutritions__image
+  &__image {
+    max-width: clampAd(200, 472);
+    max-height: 274px;
+    position: relative;
+
+    &--top {
+      margin-left: auto;
+    }
+    &--bottom {
+      margin-right: auto;
+      margin-top: -65px;
+    }
+  }
+  // .nutritions__ibg
+  &__ibg {
+    padding: 0px 0px 58.054% 0px;
+  }
+  // .nutritions__img
+  &__img {
+    border-radius: 10px;
+  }
+  // .nutritions__top
+  &__top {
+    padding: clampAd(10, 15) clampAd(10, 15) clampAd(10, 15) clampAd(40, 55);
+    position: absolute;
+    z-index: 2;
+    background: #262626;
+    border-radius: 10px;
+    box-shadow: 0 8px 24px 0 rgba($black, 0.15);
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 15px;
+      transform: translateY(-50%);
+      width: clampAd(20, 30);
+      aspect-ratio: 1;
+    }
+
+    // .nutritions__top--trophy
+    &--trophy {
+      top: 0;
+      right: 100%;
+      transform: translateX(50%);
+      &::before {
+        background: url(../../images/icons/trophy.svg) center/cover no-repeat;
+      }
+    }
+    // .nutritions__top--hours
+    &--hours {
+      bottom: 0;
+      left: 100%;
+      transform: translateX(-50%);
+      &::before {
+        background: url(../../images/icons/hours.svg) center/cover no-repeat;
+      }
+    }
+  }
+  // .nutritions__top-text
+  &__top-text {
+    @include Poppins500;
+    font-size: clampAd(14, 18);
+    text-transform: capitalize;
+    color: $white;
+    white-space: nowrap;
+  }
+  // .nutritions__content
+  &__content {
+    max-width: clampAd(250, 445);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    row-gap: 10px;
+  }
+  // .nutritions__subtitle
+  &__subtitle {
+    text-align: left;
+  }
+  // .nutritions__title
+  &__title {
+    text-align: left;
+  }
+  // .nutritions__text
+  &__text {
+    font-size: 15px;
+    line-height: 2;
+    text-transform: capitalize;
+    margin-bottom: 20px;
+
+    span {
+      font-weight: 500;
+      color: $color-dark;
+    }
+  }
+  // .nutritions__btn
+  &__btn {
+  }
+}

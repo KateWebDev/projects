@@ -1,0 +1,51 @@
+.error {
+  min-height: 75svh;
+  background: image-set(
+      url("../images/main/error/bg.avif") type("image/avif"),
+      url("../images/main/error/bg.avif") 2x type("image/avif"),
+      url("../images/main/error/bg.webp") type("image/webp"),
+      url("../images/main/error/bg.webp") 2x type("image/webp"),
+      url("../images/main/error/bg.jpg"),
+      url("../images/main/error/bg.jpg") 2x
+    )
+    center/cover no-repeat;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 10px;
+
+  // .error__content
+  &__content {
+    max-width: 663px;
+    width: 100%;
+    padding: clampAd(20, 40);
+
+    line-height: 1.25;
+    text-align: center;
+    color: $color-text;
+
+    border-radius: 50px 50px 0 0;
+    box-shadow: 0 5px 8px 2px rgba(18, 17, 17, 0.13);
+    background: $color-gradient;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+  }
+  // .error__text
+  &__text {
+    @include SourceSans700;
+    font-size: clampAd(22, 32);
+  }
+  // .error__link
+  &__link {
+    font-size: clampAd(18, 24);
+
+    a {
+      text-decoration: underline;
+    }
+  }
+}

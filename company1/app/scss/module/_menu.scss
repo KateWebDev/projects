@@ -1,0 +1,34 @@
+.menu {
+  // .menu__items
+  &__items {
+    display: flex;
+    gap: 20px clampAd(20, 35);
+  }
+  // .menu__item
+  &__item {
+  }
+  // .menu__link
+  &__link {
+    color: $white;
+    white-space: nowrap;
+    transition: all 0.3s linear;
+    padding-bottom: 3px;
+    border-bottom: 1px solid transparent;
+
+    @media (any-hover: hover) {
+      &:hover {
+        border-color: currentColor;
+      }
+    }
+
+    &--active {
+      cursor: default;
+
+      @media (any-hover: hover) {
+        &:hover {
+          border-color: transparent;
+        }
+      }
+    }
+  }
+}

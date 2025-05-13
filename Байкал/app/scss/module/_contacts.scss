@@ -1,0 +1,93 @@
+.contacts {
+  padding: clamp(30px, calc(30px + (50 - 30) * ((100vw - 320px) / ($widthReportMax - $widthReportMin))), 50px) 0
+    clamp(20px, calc(20px + (100 - 20) * ((100vw - 320px) / ($widthReportMax - $widthReportMin))), 100px);
+
+  // .contacts__container
+  &__container {
+    position: relative;
+  }
+  // .contacts__map
+  &__map {
+    border-radius: 20px;
+    position: relative;
+    max-width: 1230px;
+    width: 100%;
+    height: clamp(270px, calc(270px + (503 - 270) * ((100vw - 320px) / ($widthReportMax - $widthReportMin))), 503px);
+  }
+  // .contacts__content
+  &__content {
+    position: absolute;
+    top: 50%;
+    left: 75px;
+    z-index: 2;
+    transform: translateY(-50%);
+    max-width: 355px;
+    padding: clamp(20px, calc(20px + (32 - 20) * ((100vw - 320px) / ($widthReportMax - $widthReportMin))), 32px) 48px;
+    border-radius: 20px;
+    background: #ffffff;
+    box-shadow: 5px 5px 15px 0px rgba(0, 0, 0, 0.15);
+  }
+  // .contacts__title
+  &__title {
+    margin-bottom: clamp(15px, calc(15px + (25 - 15) * ((100vw - 320px) / ($widthReportMax - $widthReportMin))), 25px);
+  }
+  // .contacts__address
+  &__address {
+    max-width: 205px;
+    font-size: clamp(16px, calc(16px + (18 - 16) * ((100vw - 320px) / ($widthReportMax - $widthReportMin))), 18px);
+    font-weight: 700;
+    letter-spacing: 0.9px;
+    margin-bottom: clamp(15px, calc(15px + (25 - 15) * ((100vw - 320px) / ($widthReportMax - $widthReportMin))), 25px);
+  }
+  // .contacts__address-text
+  &__address-text {
+    margin-top: clamp(5px, calc(5px + (10 - 5) * ((100vw - 320px) / ($widthReportMax - $widthReportMin))), 10px);
+    font-size: clamp(12px, calc(12px + (16 - 12) * ((100vw - 320px) / ($widthReportMax - $widthReportMin))), 16px);
+    font-style: normal;
+    font-weight: 400;
+    letter-spacing: 0.48px;
+  }
+  // .contacts__phone
+  &__phone {
+    display: inline-block;
+    color: #000000;
+    font-size: clamp(20px, calc(20px + (30 - 20) * ((100vw - 320px) / ($widthReportMax - $widthReportMin))), 30px);
+    letter-spacing: 0.6px;
+    margin-bottom: 10px;
+    @media (any-hover: hover) and (min-width: 992px) {
+      &:hover {
+        opacity: 0.8;
+      }
+    }
+
+    & + .contacts__phone {
+      margin-bottom: clamp(
+        15px,
+        calc(15px + (25 - 15) * ((100vw - 320px) / ($widthReportMax - $widthReportMin))),
+        25px
+      );
+    }
+  }
+  // .contacts__socials
+  &__socials {
+    display: flex;
+    column-gap: clamp(5px, calc(5px + (30 - 5) * ((100vw - 320px) / ($widthReportMax - $widthReportMin))), 30px);
+  }
+  // .contacts__social
+  &__social {
+    border-radius: 10px;
+  }
+  // .contacts__social-link
+  &__social-link {
+    svg {
+      width: clamp(40px, calc(40px + (60 - 40) * ((100vw - 320px) / ($widthReportMax - $widthReportMin))), 60px);
+      height: clamp(40px, calc(40px + (60 - 40) * ((100vw - 320px) / ($widthReportMax - $widthReportMin))), 60px);
+    }
+
+    @media (any-hover: hover) and (min-width: 992px) {
+      &:hover {
+        opacity: 0.8;
+      }
+    }
+  }
+}

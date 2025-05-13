@@ -1,0 +1,60 @@
+.stages {
+  padding-top: 150px;
+
+  // .stages__container
+  &__container {
+    display: flex;
+    gap: 20px;
+  }
+  // .stages__content
+  &__content {
+  }
+  // .stages__items
+  &__items {
+    max-width: 765px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 72px 25px;
+    counter-reset: num;
+  }
+  // .stages__item
+  &__item {
+    flex: 0 0 370px;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+
+    &::before {
+      content: counter(num, decimal-leading-zero);
+      counter-increment: num;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      color: $color-accent;
+      font-family: "Yeseva One", sans-serif;
+      font-size: 30px;
+    }
+
+    &:nth-child(4n + 3),
+    &:nth-child(4n + 4) {
+      flex-direction: row-reverse;
+
+      &::before {
+        left: auto;
+        right: 0;
+      }
+    }
+  }
+
+  // .stages__text
+  &__text {
+    width: 174px;
+  }
+  // .stages__img
+  &__img {
+    width: 158px;
+    height: 220px;
+    object-fit: cover;
+  }
+}

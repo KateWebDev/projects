@@ -1,0 +1,26 @@
+.btn {
+  padding: clampAd(8, 12) clampAd(12, 24);
+  background: $color-accent;
+  border: 1px solid transparent;
+
+  font-weight: 600;
+  line-height: 1.5;
+  text-align: center;
+  text-transform: capitalize;
+  white-space: nowrap;
+
+  transition: all 0.3s linear;
+
+  &--reverse {
+    background: transparent;
+    color: $color-accent;
+    border-color: currentColor;
+  }
+
+  @media (any-hover: hover) {
+    &:hover {
+      background: $white;
+      color: $color-accent;
+    }
+  }
+}

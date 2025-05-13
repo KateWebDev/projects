@@ -1,0 +1,98 @@
+.info {
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 28%;
+    width: clampAd(150, 270);
+    height: clampAd(150, 270);
+    border-radius: $radius-circle;
+    background: rgba(29, 161, 242, 0.5);
+    filter: blur(200px);
+    z-index: 2;
+  }
+  // .info__container
+  &__container {
+    min-height: 100svh;
+    padding: clampAd(50, 100) clampAd(15, 100);
+
+    background: image-set(
+        url("../images/main/info/bg.avif") type("image/avif"),
+        url("../images/main/info/bg_2x.avif") 2x type("image/avif"),
+        url("../images/main/info/bg.webp") type("image/webp"),
+        url("../images/main/info/bg_2x.webp") 2x type("image/webp"),
+        url("../images/main/info/bg.jpg"),
+        url("../images/main/info/bg_2x.jpg") 2x
+      )
+      center/cover no-repeat;
+    border-radius: $radius-big;
+
+    margin-bottom: clampAd(60, 120);
+
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: clampAd(0, 60);
+      bottom: calc(clampAd(0, 80) * -1);
+      width: clampAd(204, 404);
+      height: clampAd(161, 361);
+      background: image-set(
+          url("../images/main/info/decor.avif") type("image/avif"),
+          url("../images/main/info/decor_2x.avif") 2x type("image/avif"),
+          url("../images/main/info/decor.webp") type("image/webp"),
+          url("../images/main/info/decor_2x.webp") 2x type("image/webp"),
+          url("../images/main/info/decor.png"),
+          url("../images/main/info/decor_2x.png") 2x
+        )
+        center/cover no-repeat;
+      z-index: 2;
+    }
+  }
+  // .info__content
+  &__content {
+    max-width: 570px;
+    min-height: clampAd(350, 685);
+
+    padding: clampAd(30, 60) 20px clampAd(30, 60) clampAd(20, 60);
+
+    background: $color-bg-2;
+    backdrop-filter: blur(30px);
+    border-radius: $radius-big;
+
+    color: $white;
+  }
+  // .info__title
+  &__title {
+    color: inherit;
+    margin-bottom: 13px;
+  }
+  // .info__list
+  &__list {
+    display: flex;
+    flex-direction: column;
+    row-gap: clampAd(20, 30);
+  }
+  // .info__point
+  &__point {
+    @include BaiJamjuree700;
+    font-size: clampAd(13, 24);
+    line-height: 1;
+
+    display: flex;
+    align-items: center;
+    column-gap: 5px;
+  }
+  // .info__name
+  &__name {
+    &::after {
+      content: ":";
+    }
+  }
+  // .info__text
+  &__text {
+  }
+}

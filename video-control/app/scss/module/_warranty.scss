@@ -1,0 +1,98 @@
+.warranty {
+  // .warranty__container
+  &__container {
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(clampAd(280, 560), 1fr));
+    grid-auto-flow: dense;
+    gap: clampAd(20, 40);
+  }
+  // .warranty__content
+  &__content {
+    border-radius: $radius;
+    padding: clampAd(70, 100) 20px 20px;
+    background: $white;
+  }
+  // .warranty__title
+  &__title {
+    margin-bottom: clampAd(20, 40);
+  }
+  // .warranty__text
+  &__text {
+    max-width: 440px;
+    margin-bottom: clampAd(40, 80);
+    span {
+      @include Inter600;
+    }
+  }
+  // .warranty__items
+  &__items {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: clampAd(20, 40);
+  }
+  // .warranty__item
+  &__item {
+    padding: 15px clampAd(15, 40);
+    flex: 0 0 calc(50% - (clampAd(20, 40) / 2));
+    min-height: clampAd(100, 140);
+    border-radius: $radius;
+    background: $color-accent2;
+    color: $white;
+    @include Inter600;
+    font-size: clampAd(18, 35);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: clampAd(5, 10);
+    position: relative;
+
+    span {
+      @include Inter400;
+      font-size: clampAd(12, 18);
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 13px;
+      right: 10px;
+    }
+
+    &--1 {
+      &::before {
+        width: 32px;
+        height: 37px;
+        background: url(../../images/main/sertificates/1.svg) center/cover no-repeat;
+      }
+    }
+    &--2 {
+      &::before {
+        width: 37px;
+        height: 33px;
+        background: url(../../images/main/sertificates/2.svg) center/cover no-repeat;
+      }
+    }
+  }
+  // .warranty__dops
+  &__dops {
+  }
+  // .warranty__image
+  &__image {
+    border-radius: $radius;
+    background: $color-accent2;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  // .warranty__img
+  &__img {
+    max-width: clampAd(200, 318);
+    max-height: 450px;
+    width: 100%;
+    height: auto;
+  }
+}

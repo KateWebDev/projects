@@ -1,0 +1,45 @@
+.connection {
+  padding: 23px 0;
+
+  // .connection__container
+  &__container {
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      right: clampAd(0, 135);
+      transform: translateY(-50%);
+      width: clampAd(100, 359);
+      height: clampAd(120, 394);
+      background: url(../../images/main/connection/bg.svg) center/cover no-repeat;
+      pointer-events: none;
+    }
+  }
+  // .connection__inner
+  &__inner {
+    background: $color-bg-light;
+    border-radius: $radius-big;
+    padding: clampAd(50, 60);
+  }
+  // .connection__content
+  &__content {
+    max-width: 500px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 25px;
+  }
+  // .connection__name
+  &__name {
+    @include SpaceGrotesk500;
+    font-size: clampAd(20, 30);
+  }
+  // .connection__text
+  &__text {
+  }
+  // .connection__btn
+  &__btn {
+  }
+}

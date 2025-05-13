@@ -1,0 +1,21 @@
+@function clampAd($min, $max) {
+  $minPx: $min + px;
+  $maxPx: $max + px;
+
+  $result: clamp(
+    $minPx,
+    calc($minPx + ($max - $min) * ((100vw - $widthReportMinPx) / ($widthReportMax - $widthReportMin))),
+    $maxPx
+  );
+
+  @return $result;
+}
+
+@mixin Inter400 {
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+}
+@mixin Fraunces400 {
+  font-family: "Fraunces", sans-serif;
+  font-weight: 400;
+}

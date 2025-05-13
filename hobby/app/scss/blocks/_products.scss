@@ -1,0 +1,105 @@
+.products {
+  // .products__container
+  &__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: clampAd(30, 50);
+
+    position: relative;
+    z-index: 1;
+  }
+  // .products__top
+  &__top {
+    max-width: 530px;
+  }
+  // .products__items
+  &__items {
+    align-self: stretch;
+
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(clampAd(200, 360), 1fr));
+    gap: 30px clampAd(20, 45);
+  }
+  // .products__item
+  &__item {
+    padding: clampAd(20, 30) clampAd(20, 36);
+    border: 1px solid $color-border;
+    border-radius: $radius-medium;
+    background: $white;
+
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+  }
+  // .products__ibg
+  &__ibg {
+    width: clampAd(100, 200);
+    padding: 0px 0px 83.8% 0px;
+
+    margin: 0 auto;
+  }
+  // .products__img
+  &__img {
+  }
+  // .products__content
+  &__content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  // .products__name
+  &__name {
+    flex: 0 0 100%;
+
+    @include Fredoka;
+    font-size: clampAd(16, 24);
+    line-height: 1.25;
+    text-align: center;
+    color: $color-dark1;
+  }
+
+  // .products__rait
+  &__rait {
+    flex: 0 0 100%;
+    display: flex;
+    align-items: center;
+    gap: clampAd(10, 12);
+    flex-wrap: wrap;
+
+    font-weight: 600;
+    font-size: clampAd(12, 16);
+    line-height: 1.7;
+    color: $mainColor;
+
+    &::after {
+      content: attr(data-raiting);
+      white-space: nowrap;
+    }
+  }
+
+  // .products__raiting
+  &__raiting {
+  }
+  // .products__price
+  &__price {
+    @include Fredoka;
+    font-size: clampAd(14, 20);
+    line-height: 1.5;
+    color: $color-accent;
+
+    span {
+      display: block;
+      @include Gilroy;
+      font-size: clampAd(10, 12);
+      line-height: 1;
+      color: $mainColor;
+    }
+  }
+  // .products__btn
+  &__btn {
+    padding: clampAd(5, 10) clampAd(10, 19);
+  }
+}

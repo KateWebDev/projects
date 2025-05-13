@@ -1,0 +1,14 @@
+.title {
+  font-weight: 600;
+  font-size: clampAd(20, 32);
+  line-height: 1.5;
+  color: $color-dark;
+}
+
+.name {
+  font-weight: 500;
+  font-size: clampAd(14, 16);
+  line-height: 1.5;
+  color: $color-dark;
+  text-transform: capitalize;
+}

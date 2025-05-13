@@ -1,0 +1,84 @@
+.contacts {
+  // .contacts__container
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 50px;
+  }
+  // .contacts__content
+  &__content {
+  }
+  // .contacts__title
+  &__title {
+    margin-bottom: 50px;
+    &--color {
+      font-size: clamp(18px, calc(18px + (36 - 18) * ((100vw - 320px) / ($widthReportMax - $widthReportMin))), 36px);
+      color: $mainBackGround;
+      margin-bottom: 16px;
+      &::after {
+        background: $mainBackGround;
+      }
+    }
+  }
+  // .contacts__box
+  &__box {
+  }
+  // .contacts__items
+  &__items {
+  }
+  // .contacts__item
+  &__item {
+    &:not(:last-child) {
+      margin-bottom: 20px;
+    }
+  }
+  // .contacts__name
+  &__name {
+    color: $color-accent;
+  }
+  // .contacts__text
+  &__text {
+    max-width: 170px;
+  }
+  // .contacts__link
+  &__link {
+  }
+  // .contacts__form
+  &__form {
+    max-width: 600px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 12px;
+    padding: clamp(20px, calc(20px + (50 - 20) * ((100vw - 320px) / ($widthReportMax - $widthReportMin))), 50px)
+      clamp(30px, calc(30px + (75 - 30) * ((100vw - 320px) / ($widthReportMax - $widthReportMin))), 75px);
+    background: $color-firm;
+    text-align: center;
+  }
+  // .contacts__input
+  &__input {
+    align-self: stretch;
+    background: transparent;
+    color: $color-gray;
+    border: 1px solid #ffffff;
+    text-align: center;
+    padding: 24px;
+
+    &::placeholder {
+      color: $color-gray;
+      font-family: "Oswald", sans-serif;
+      font-size: 18px;
+      font-style: normal;
+      font-weight: 300;
+      line-height: 1.5;
+      text-align: center;
+    }
+  }
+  // .contacts__btn
+  &__btn {
+    margin-top: clamp(30px, calc(30px + (75 - 30) * ((100vw - 320px) / ($widthReportMax - $widthReportMin))), 75px);
+  }
+}

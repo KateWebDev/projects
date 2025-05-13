@@ -1,0 +1,29 @@
+.reviews {
+  padding-bottom: clampAd(50, 200);
+  // .reviews__container
+  &__container {
+    padding: 0 clampAd(15, 120) 0 clampAd(15, 150);
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    gap: 30px;
+  }
+  // .reviews__image
+  &__image {
+    max-width: 365px;
+  }
+  // .reviews__img
+  &__img {
+    display: block;
+    max-width: 100%;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    object-position: center;
+  }
+  // .reviews__slider
+  &__slider {
+    max-width: clampAd(290, 400);
+    margin-bottom: clampAd(0, 40);
+  }
+}

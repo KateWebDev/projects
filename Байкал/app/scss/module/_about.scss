@@ -1,0 +1,36 @@
+.about {
+  padding: clamp(30px, calc(30px + (50 - 30) * ((100vw - 320px) / ($widthReportMax - $widthReportMin))), 50px) 0;
+  // .about__container
+  &__container {
+  }
+  // .about__inner
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  // .about__title
+  &__title {
+  }
+  // .about__content
+  &__content {
+    max-width: 391px;
+  }
+  // .about__text
+  &__text {
+    margin-bottom: 20px;
+    & + .about__text {
+      margin-bottom: 30px;
+      flex: 0 0 auto;
+    }
+  }
+  // .about__image
+  &__image {
+    max-width: 810px;
+  }
+  // .about__img
+  &__img {
+    width: 100%;
+    object-fit: cover;
+  }
+}

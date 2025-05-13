@@ -1,0 +1,21 @@
+@import "components/mixin";
+
+.main-title {
+  @include Gelasio700;
+  font-size: clampAdRem(32, 65);
+  line-height: 1.2;
+  text-transform: capitalize;
+}
+
+.title {
+  @include Gelasio500;
+  font-size: clampAdRem(20, 43);
+  line-height: 1.4;
+  text-align: center;
+  text-transform: capitalize;
+  color: $black;
+}
+
+[class*="__title"] {
+  margin-bottom: rem(20);
+}

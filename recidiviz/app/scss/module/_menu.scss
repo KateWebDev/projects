@@ -1,0 +1,36 @@
+.menu {
+  // .menu__items
+  &__items {
+    display: flex;
+    gap: 20px clampAd(20, 51);
+  }
+  // .menu__item
+  &__item {
+  }
+  // .menu__link
+  &__link {
+    font-size: 13px;
+    line-height: 1.2;
+    color: $white;
+    text-transform: capitalize;
+    white-space: nowrap;
+    transition: all 0.3s linear;
+
+    @media (any-hover: hover) {
+      &:hover {
+        text-decoration: underline;
+        text-underline-offset: 8px;
+      }
+    }
+
+    &--active {
+      cursor: default;
+
+      @media (any-hover: hover) {
+        &:hover {
+          text-decoration: none;
+        }
+      }
+    }
+  }
+}

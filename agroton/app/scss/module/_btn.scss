@@ -1,0 +1,90 @@
+@import "components/mixin";
+
+.btn {
+  padding: 10px clampAd(20, 40);
+  border-radius: $radius-big;
+  background: $color-dark;
+  border: 1px solid transparent;
+
+  @include NunitoSans500;
+  font-size: clampAd(12, 16);
+  text-transform: uppercase;
+  text-align: center;
+  line-height: 1.375;
+  color: $white;
+
+  transition: all 0.3s linear;
+
+  @media (any-hover: hover) {
+    &:hover {
+      color: $color-dark;
+      border-color: currentColor;
+      background: $color-accent;
+    }
+  }
+
+  &--icon {
+    padding: 3px;
+    padding-left: clampAd(18, 38);
+
+    display: flex;
+    align-items: center;
+
+    &::after {
+      --size: #{clampAd(26, 54)};
+
+      content: "";
+      width: var(--size);
+      height: var(--size);
+      border-radius: $radius-circle;
+      background: $white url(../../images/icons/arrow-top-right.svg) center/10px 10px no-repeat;
+
+      margin-left: clampAd(18, 38);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      transition: all 0.3s linear;
+    }
+
+    @media (any-hover: hover) {
+      &:hover {
+        &::after {
+          transform: rotate(-90deg);
+        }
+      }
+    }
+  }
+}
+
+.link {
+  --size: #{clampAd(30, 50)};
+  --color: #{$color-bg};
+
+  width: var(--size);
+  height: var(--size);
+  border-radius: $radius-circle;
+  background: var(--color);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  transition: all 0.3s linear;
+
+  &::before {
+    --sizeIcon: #{clampAd(10, 12)};
+
+    content: "";
+    width: var(--sizeIcon);
+    height: var(--sizeIcon);
+    background: url(../../images/icons/arrow-top-right.svg) center/cover no-repeat;
+  }
+
+  @media (any-hover: hover) {
+    &:hover {
+      background: $color-accent;
+      transform: rotate(-90deg);
+    }
+  }
+}

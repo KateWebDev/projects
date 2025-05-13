@@ -1,0 +1,70 @@
+.filters {
+  padding: 12px 0;
+  &.filters--active {
+    transform: translateX(0);
+  }
+  // .filters__form
+  &__form {
+    display: flex;
+    flex-direction: column;
+    row-gap: 48px;
+    user-select: none;
+  }
+  // .filters__fieldset
+  &__fieldset {
+  }
+  // .filters__type
+  &__type {
+    @include ClashDisplay400;
+    line-height: 1.4;
+    margin-bottom: 20px;
+  }
+  // .filters__item
+  &__item {
+    &:not(:last-child) {
+      margin-bottom: 12px;
+    }
+  }
+  // .filters__input
+  &__input {
+    display: none;
+    &:checked + .filters__label {
+      &::before {
+        background: $color-accent;
+        border-color: $color-accent;
+      }
+      &::after {
+        background: url(../../images/main/checked.svg) center/cover no-repeat;
+      }
+    }
+  }
+  // .filters__label
+  &__label {
+    white-space: nowrap;
+    padding-left: 28px;
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 16px;
+      aspect-ratio: 1;
+      border: 1px solid $color-border;
+      border-radius: 2px;
+      transition: all 0.3s linear;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 3px;
+      left: 2px;
+      width: 12px;
+      height: 9px;
+      background: transparent;
+      transition: all 0.3s linear;
+    }
+  }
+}

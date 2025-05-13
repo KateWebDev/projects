@@ -1,0 +1,17 @@
+.top {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  row-gap: clampAd(20, 30);
+  // .top--center
+  &--center {
+    align-items: center;
+    text-align: center;
+  }
+  // .top__title
+  &__title {
+  }
+  // .top__text
+  &__text {
+  }
+}

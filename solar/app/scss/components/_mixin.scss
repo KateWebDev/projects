@@ -1,0 +1,20 @@
+@mixin Noto400 {
+  font-family: "Noto Sans", sans-serif;
+  font-weight: 400;
+}
+
+@mixin Noto700 {
+  font-family: "Noto Sans", sans-serif;
+  font-weight: 700;
+}
+
+@mixin Roboto400 {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+}
+
+/*
+@include Noto400;
+@include Noto700;
+@include Roboto400;
+*/

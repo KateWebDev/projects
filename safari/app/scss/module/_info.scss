@@ -1,0 +1,57 @@
+.info {
+  // .info__container
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 30px 20px;
+  }
+  // .info__content
+  &__content {
+    max-width: clampAd(200, 448);
+  }
+  // .info__title
+  &__title {
+    text-align: left;
+    margin-bottom: 25px;
+  }
+  // .info__text
+  &__text {
+    margin-bottom: 34px;
+  }
+  // .info__link
+  &__link {
+    font-size: clampAd(14, 16);
+    text-decoration: underline;
+    color: $color-dop;
+  }
+  // .info__video
+  &__video {
+    background: image-set(
+        url("../images/main/info/1.avif") type("image/avif"),
+        url("../images/main/info/1.webp") type("image/webp"),
+        url("../images/main/info/1.jpg")
+      )
+      center/cover no-repeat;
+    max-width: clampAd(300, 640);
+    width: 100%;
+    min-height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  // .info__btn
+  &__btn {
+    width: 73px;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    background: url(../../images/play.svg) center/cover no-repeat;
+    transition: all 0.3s linear;
+
+    @media (any-hover: hover) {
+      &:hover {
+        opacity: 0.8;
+      }
+    }
+  }
+}

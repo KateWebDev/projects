@@ -1,0 +1,72 @@
+.intro {
+  background: $color-bg-accent;
+
+  // .intro__container
+  &__container {
+    max-width: 1920px;
+    min-height: clamp(
+      400px,
+      calc(400px + (985 - 400) * ((100vw - 320px) / ($widthReportMax - $widthReportMin))),
+      985px
+    );
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+  }
+  // .intro__items
+  &__items {
+  }
+  // .intro__item
+  &__item {
+  }
+  // .intro__subtitle
+  &__subtitle {
+    display: flex;
+    align-items: flex-end;
+    column-gap: clamp(15px, calc(15px + (30 - 15) * ((100vw - 320px) / ($widthReportMax - $widthReportMin))), 30px);
+    font-size: clamp(16px, calc(16px + (30 - 16) * ((100vw - 320px) / ($widthReportMax - $widthReportMin))), 30px);
+    font-weight: 700;
+    line-height: 1.26;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+
+    &::before {
+      content: "";
+      width: clamp(60px, calc(60px + (194 - 60) * ((100vw - 320px) / ($widthReportMax - $widthReportMin))), 194px);
+      aspect-ratio: 1;
+      background: url(../images/main/arrowDown.svg) center/cover no-repeat;
+    }
+  }
+  // .intro__title
+  &__title {
+    font-size: clamp(60px, calc(60px + (360 - 60) * ((100vw - 320px) / ($widthReportMax - $widthReportMin))), 360px);
+    font-weight: 700;
+    line-height: 1;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+  }
+
+  .slick-dots {
+    padding-bottom: 36px;
+    display: flex;
+    justify-content: center;
+    column-gap: 14px;
+
+    button {
+      width: 10px;
+      aspect-ratio: 1;
+      border-radius: 50%;
+      border: 1px solid currentColor;
+      background: transparent;
+    }
+    li {
+      font-size: 0;
+    }
+
+    .slick-active {
+      button {
+        background: currentColor;
+      }
+    }
+  }
+}

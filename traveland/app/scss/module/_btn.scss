@@ -1,0 +1,29 @@
+@import "components/mixin";
+
+.btn {
+  border-radius: $radius-small;
+  background: $color-accent;
+
+  font-size: rem(16);
+  line-height: 1.5;
+  text-align: center;
+  white-space: nowrap;
+  color: $white;
+  transition: all 0.3s linear;
+
+  &--small {
+    padding: rem(5) clampAdRem(20, 32);
+  }
+  &--medium {
+    padding: clampAdRem(10, 14) clampAdRem(25, 36);
+  }
+  &--big {
+    padding: clampAdRem(10, 18) clampAdRem(30, 46);
+  }
+
+  @media (any-hover: hover) {
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+}

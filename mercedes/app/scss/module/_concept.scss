@@ -1,0 +1,29 @@
+.concept {
+  // .concept__container
+  &__container {
+  }
+  // .concept__inner
+  &__inner {
+    max-width: 900px;
+    margin-left: auto;
+  }
+  // .concept__title
+  &__title {
+    margin-bottom: 25px;
+  }
+  // .concept__text
+  &__text {
+    font-size: clampAd(16, 24);
+    margin-bottom: 25px;
+  }
+  // .concept__image
+  &__image {
+    max-width: 100%;
+  }
+  // .concept__img
+  &__img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+}

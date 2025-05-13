@@ -1,0 +1,9 @@
+.logo {
+  width: clamp(50px, calc(50px + (83 - 50) * ((100vw - 320px) / ($widthReportMax - $widthReportMin))), 83px);
+  // .logo__img
+  &__img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+}

@@ -1,0 +1,72 @@
+.intro {
+  background: image-set(
+      url("../images/main/intro/bg.avif") type("image/avif"),
+      url("../images/main/intro/bg.webp") type("image/webp"),
+      url("../images/main/intro/bg.jpg")
+    )
+    center/cover no-repeat;
+  @include Impact;
+
+  // .intro__container
+  &__container {
+    min-height: 100svh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    text-align: center;
+    padding: 100px 15px 30px;
+  }
+  // .intro__title
+  &__title {
+    font-size: clamp(25px, calc(25px + (76 - 25) * ((100vw - 320px) / ($widthReportMax - $widthReportMin))), 76px);
+    text-transform: uppercase;
+    letter-spacing: 0.02em;
+  }
+  // .intro__subtitle
+  &__subtitle {
+    font-size: clamp(20px, calc(20px + (48 - 20) * ((100vw - 320px) / ($widthReportMax - $widthReportMin))), 48px);
+  }
+  // .intro__date
+  &__date {
+    font-size: clamp(18px, calc(18px + (34 - 18) * ((100vw - 320px) / ($widthReportMax - $widthReportMin))), 34px);
+    line-height: 1;
+    color: $color-accent;
+    padding: 0 clamp(50px, calc(50px + (113 - 50) * ((100vw - 320px) / ($widthReportMax - $widthReportMin))), 113px)
+      10px clamp(50px, calc(50px + (113 - 50) * ((100vw - 320px) / ($widthReportMax - $widthReportMin))), 113px);
+    border-bottom: 1px solid $mainColor;
+  }
+  // .intro__location
+  &__location {
+    @include Roboto400;
+    font-size: 15px;
+    color: $color-dop;
+  }
+  // .intro__btn
+  &__btn {
+    margin-top: auto;
+    svg {
+      .stroke {
+        stroke: $mainColor;
+        transition: all 0.3s linear;
+      }
+      .fill {
+        fill: $mainColor;
+        transition: all 0.3s linear;
+      }
+    }
+
+    @media (any-hover: hover) {
+      &:hover {
+        svg {
+          .stroke {
+            stroke: $color-accent;
+          }
+          .fill {
+            fill: $color-accent;
+          }
+        }
+      }
+    }
+  }
+}

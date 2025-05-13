@@ -1,0 +1,132 @@
+.about {
+  padding-bottom: clampAd(90, 180);
+
+  // .about__container
+  &__container {
+  }
+  // .about__news
+  &__news {
+    margin-top: -60px;
+    margin-bottom: clampAd(20, 90);
+
+    @include w_991 {
+      margin-top: 20px;
+    }
+  }
+  // .about__advantages
+  &__advantages {
+    margin-bottom: clampAd(30, 70);
+  }
+  // .about__content
+  &__content {
+    display: flex;
+    flex-direction: column;
+    row-gap: clampAd(20, 40);
+  }
+  // .about__text
+  &__text {
+    @include WorkSans300;
+    font-size: clampAd(18, 40);
+    line-height: 1.17;
+    color: $color-dark-3;
+
+    strong {
+      @include WorkSans500;
+    }
+  }
+  // .about__inner
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px clampAd(10, 140);
+
+    line-height: 1.38;
+
+    @include w_991 {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+  // .about__image
+  &__image {
+    max-width: 340px;
+    width: 100%;
+    height: 100%;
+  }
+  // .about__img
+  &__img {
+    display: block;
+    max-width: 100%;
+    max-height: 100%;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+  // .about__block
+  &__block {
+    display: flex;
+    flex-direction: column;
+    row-gap: clampAd(20, 45);
+  }
+  // .about__info
+  &__info {
+    @include NunitoSans300;
+    font-size: clampAd(14, 18);
+
+    span {
+      @include NunitoSans600;
+      color: $color-accent;
+    }
+
+    strong {
+      @include NunitoSans700;
+    }
+  }
+  // .about__list
+  &__list {
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+  }
+  // .about__point
+  &__point {
+    padding-bottom: 10px;
+    border-bottom: 1px solid rgba(14, 13, 13, 0.23);
+
+    &:first-of-type {
+      padding-top: 10px;
+      border-top: 1px solid rgba(14, 13, 13, 0.23);
+    }
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+
+    @include w_575 {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  }
+  // .about__preeminence
+  &__preeminence {
+    @include NunitoSans500;
+    font-size: clampAd(14, 18);
+
+    strong {
+      @include NunitoSans600;
+      color: $color-accent;
+    }
+  }
+  // .about__descr
+  &__descr {
+    color: $color-dark-2;
+
+    @include w_575 {
+      align-self: flex-end;
+      text-align: right;
+    }
+  }
+}

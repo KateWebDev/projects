@@ -1,0 +1,109 @@
+.header {
+  background: $white;
+
+  // .header__top
+  &__top {
+    background: $color-accent2;
+    color: $white;
+    padding: clampAd(6, 18) 0 clampAd(7, 14);
+  }
+  // .header__container
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px clampAd(20, 55);
+  }
+  // .header__address
+  &__address {
+    font-size: clampAd(9, 14);
+    line-height: 1.28;
+    font-style: normal;
+
+    padding-left: clampAd(20, 31);
+    position: relative;
+
+    margin-right: auto;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 0;
+      transform: translateY(-50%);
+      width: clampAd(12, 18);
+      height: clampAd(15, 23);
+      background: url(../../images/icons/location.svg) center/cover no-repeat;
+    }
+  }
+  // .header__actions
+  &__actions {
+    display: flex;
+    align-items: center;
+    column-gap: clampAd(10, 40);
+  }
+  // .header__action
+  &__action {
+  }
+  // .header__action-link
+  &__action-link {
+    display: flex;
+    align-items: center;
+    column-gap: 10px;
+    text-underline-offset: 0px;
+    transition: all 0.3s linear;
+
+    font-size: 16px;
+    line-height: 1.25;
+
+    &::before {
+      content: "";
+      width: 16px;
+      height: 16px;
+      background: $color-accent;
+    }
+
+    // .header__action-link--phone
+    &--phone {
+      &::before {
+        background: url(../../images/icons/phone.svg) center/cover no-repeat;
+      }
+    }
+    // .header__action-link--mail
+    &--mail {
+      &::before {
+        width: 21px;
+        background: url(../../images/icons/mail.svg) center/cover no-repeat;
+      }
+    }
+
+    @media (any-hover: hover) {
+      &:hover {
+        text-underline-offset: 5px;
+        text-decoration: underline;
+      }
+    }
+  }
+  // .header__socials
+  &__socials {
+  }
+  // .header__burger
+  &__burger {
+    position: relative;
+    z-index: 5;
+  }
+  // .header__bottom
+  &__bottom {
+    padding: clampAd(12, 25) 0 clampAd(12, 14);
+  }
+  // .header__logo
+  &__logo {
+    align-self: flex-end;
+  }
+  // .header__menu
+  &__menu {
+  }
+  // .header__btn
+  &__btn {
+  }
+}

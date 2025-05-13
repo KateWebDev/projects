@@ -1,0 +1,82 @@
+.blog {
+  // .blog__container
+  &__container {
+    display: flex;
+    flex-direction: column;
+    row-gap: clampAd(40, 90);
+  }
+  // .blog__top
+  &__top {
+  }
+  // .blog__title
+  &__title {
+  }
+  // .blog__subtitle
+  &__subtitle {
+  }
+  // .blog__items
+  &__items {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(clampAd(250, 570), 1fr));
+    gap: clampAd(30, 40) clampAd(20, 30);
+  }
+  // .blog__item
+  &__item {
+    display: grid;
+    grid-template-columns: clampAd(100, 170) auto;
+    gap: 30px;
+  }
+  // .blog__ibg
+  &__ibg {
+    padding: 0px 0px 100% 0px;
+  }
+  // .blog__img
+  &__img {
+  }
+  // .blog__content
+  &__content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    row-gap: 10px;
+  }
+  // .blog__name
+  &__name {
+    @include PlayfairDisplay400;
+    font-size: clampAd(14, 20);
+    color: $black;
+  }
+  // .blog__text
+  &__text {
+  }
+  // .blog__link
+  &__link {
+    @include PlayfairDisplay400;
+    font-size: clampAd(14, 16);
+    color: $black;
+
+    display: flex;
+    align-items: center;
+    column-gap: clampAd(6, 10);
+
+    transition: all 0.3s linear;
+
+    &::after {
+      content: "";
+      width: clampAd(6, 8);
+      height: clampAd(12, 14);
+      background: url(../../images/icons/arrow-link.svg) center/contain no-repeat;
+    }
+
+    @media (any-hover: hover) {
+      &:hover {
+        text-shadow: 0 0 1px currentColor;
+      }
+    }
+  }
+  // .blog__btn
+  &__btn {
+    padding: 10px 50px;
+    margin: 0 auto;
+  }
+}

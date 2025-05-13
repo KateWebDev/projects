@@ -1,0 +1,16 @@
+.newsletter {
+  padding: clampAd(50, 135) 0;
+
+  // .newsletter__container
+  &__container {
+  }
+  // .newsletter__title
+  &__title {
+    margin-bottom: clampAd(20, 60);
+  }
+  // .newsletter__form
+  &__form {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+}

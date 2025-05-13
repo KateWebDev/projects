@@ -1,0 +1,49 @@
+.family {
+  background: $color-bg-accent;
+  padding: 130px 0 50px;
+  text-align: center;
+  // .family__container
+  &__container {
+    max-width: 1920px;
+  }
+  // .family__title
+  &__title {
+    span {
+      left: 1.3em;
+      top: -0.3em;
+    }
+    margin-bottom: 14px;
+  }
+  // .family__text
+  &__text {
+    font-size: clamp(14px, calc(14px + (20 - 14) * ((100vw - 320px) / ($widthReportMax - $widthReportMin))), 20px);
+    line-height: 1.65;
+    text-transform: uppercase;
+    margin-bottom: 62px;
+  }
+  // .family__items
+  &__items {
+    //margin: 0 -13px;
+  }
+  // .family__item
+  &__item {
+    padding: 0 13px;
+    overflow: hidden;
+  }
+  // .family__img
+  &__img {
+    width: 100%;
+    height: clamp(200px, calc(200px + (479 - 200) * ((100vw - 320px) / ($widthReportMax - $widthReportMin))), 479px);
+    object-fit: cover;
+  }
+
+  .slick-slide {
+    max-width: 396px;
+    width: 100%;
+    transition: width 0.2s linear;
+  }
+
+  .slick-current {
+    max-width: clamp(300px, calc(300px + (744 - 300) * ((100vw - 320px) / ($widthReportMax - $widthReportMin))), 744px);
+  }
+}

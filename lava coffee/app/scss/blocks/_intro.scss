@@ -1,0 +1,74 @@
+.intro {
+  background: $color-bg-light;
+  position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: calc(clampAd(10, 20) * -1);
+    width: clampAd(100, 261);
+    height: clampAd(180, 411);
+    background: url(../../images/main/decor/foliage-left.svg) center/cover no-repeat;
+  }
+
+  // .intro__container
+  &__container {
+    padding-block: clampAd(110, 120);
+    min-height: calc(100svh - clampAd(96, 114));
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    position: relative;
+  }
+  // .intro__content
+  &__content {
+    max-width: clampAd(290, 580);
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    position: relative;
+    z-index: 2;
+  }
+  // .intro__title
+  &__title {
+    margin-bottom: 15px;
+  }
+  // .intro__subtitle
+  &__subtitle {
+    margin-bottom: 8px;
+  }
+  // .intro__text
+  &__text {
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+    margin-bottom: clampAd(20, 35);
+  }
+  // .intro__btn
+  &__btn {
+  }
+  // .intro__image
+  &__image {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%) translateX(20%);
+
+    max-width: clampAd(250, 763);
+    width: 100%;
+  }
+  // .intro__img
+  &__img {
+    display: block;
+    max-width: 100%;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    object-position: center;
+  }
+}

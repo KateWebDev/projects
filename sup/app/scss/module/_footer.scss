@@ -1,0 +1,114 @@
+.footer {
+  padding: clampAd(50, 100) 0 clampAd(40, 80);
+  background: $mainColor;
+  color: $white;
+  @include Inter700;
+  // .footer__container
+  &__container {
+  }
+  // .footer__top
+  &__top {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 40px 20px;
+    margin-bottom: clampAd(40, 95);
+  }
+  // .footer__content
+  &__content {
+    max-width: 500px;
+  }
+  // .footer__title
+  &__title {
+    color: inherit;
+    margin-bottom: 35px;
+  }
+  // .footer__form
+  &__form {
+    width: 100%;
+  }
+  // .footer__logo
+  &__logo {
+    svg {
+      width: clampAd(150, 370);
+      height: auto;
+      fill: $white;
+    }
+  }
+  // .footer__socials
+  &__socials {
+    margin-bottom: 48px;
+  }
+  // .footer__social-link
+  &__social-link {
+    text-transform: uppercase;
+    margin-bottom: clampAd(14, 28);
+    transition: all 0.3s linear;
+
+    @media (any-hover: hover) {
+      &:hover {
+        color: $color-accent2;
+      }
+    }
+  }
+  // .footer__items
+  &__items {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(clampAd(130, 260), 1fr));
+    grid-auto-flow: dense;
+    gap: clampAd(20, 52);
+  }
+  // .footer__item
+  &__item {
+  }
+  // .footer__item-link
+  &__item-link {
+    @media (any-hover: hover) {
+      &:hover {
+        .footer__img {
+          transform: scale(1.1);
+        }
+      }
+    }
+  }
+  // .footer__img
+  &__img {
+    display: block;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    object-position: center;
+    transition: all 0.3s linear;
+  }
+  // .footer__bottom
+  &__bottom {
+  }
+  // .footer__nav
+  &__nav {
+  }
+  // .footer__list
+  &__list {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  // .footer__point
+  &__point {
+  }
+  // .footer__copy
+  &__copy {
+  }
+  // .footer__link
+  &__link {
+    transition: all 0.3s linear;
+
+    @media (any-hover: hover) {
+      &:hover {
+        color: $color-accent2;
+      }
+    }
+  }
+}

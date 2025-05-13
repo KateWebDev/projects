@@ -1,0 +1,24 @@
+.menu {
+  // .menu__items
+  &__items {
+    display: flex;
+    column-gap: clamp(10px, calc(10px + (22 - 10) * ((100vw - 320px) / ($widthReportMax - $widthReportMin))), 22px);
+  }
+  // .menu__item
+  &__item {
+  }
+  // .menu__link
+  &__link {
+    transition: all 0.3s linear;
+
+    &--active {
+      color: $color-active;
+    }
+
+    @media (any-hover: hover) and (min-width: 992px) {
+      &:hover {
+        color: $color-active;
+      }
+    }
+  }
+}

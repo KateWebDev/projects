@@ -1,0 +1,43 @@
+.contacts {
+  // .contacts__container
+  &__container {
+  }
+  // .contacts__title
+  &__title {
+    font-size: clampAd(16, 24);
+    color: $color-dop;
+    margin-bottom: 10px;
+  }
+  // .contacts__inner
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    flex-wrap: wrap;
+    gap: 30px;
+  }
+  // .contacts__block
+  &__block {
+    max-width: clampAd(300, 600);
+  }
+  // .contacts__form
+  &__form {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+  // .contacts__link
+  &__link {
+    margin-right: clampAd(0, 18);
+    transition: all 0.3s linear;
+
+    @media (any-hover: hover) {
+      &:hover {
+        text-shadow: 0 0 1px $mainColor;
+      }
+    }
+  }
+  // .contacts__text
+  &__text {
+    font-size: 13px;
+  }
+}

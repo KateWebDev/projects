@@ -1,0 +1,60 @@
+.works {
+  // .works__top
+  &__top {
+    padding-right: clampAd(30, 130);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  // .works__text
+  &__text {
+    @include JosefinSans700;
+    font-size: clampAd(18, 24);
+    color: $white;
+  }
+  // .works__link
+  &__link {
+    @include Montserrat600;
+    font-size: clampAd(12, 14);
+    letter-spacing: 0.04em;
+    color: $color-accent;
+    transition: all 0.3s linear;
+
+    @media (any-hover: hover) {
+      &:hover {
+        text-shadow: 0 0 1px currentColor;
+      }
+    }
+  }
+  // .works__slider
+  &__slider {
+  }
+  // .works__items
+  &__items {
+    margin-bottom: 20px;
+  }
+  // .works__item
+  &__item {
+    max-width: 250px;
+    max-height: 150px;
+  }
+  // .works__item-link
+  &__item-link {
+    transition: all 0.3s linear;
+    @media (any-hover: hover) {
+      &:hover {
+        transform: scale(1.05);
+      }
+    }
+  }
+  // .works__img
+  &__img {
+    border-radius: 5px;
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+}

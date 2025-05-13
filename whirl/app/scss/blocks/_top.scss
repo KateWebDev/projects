@@ -1,0 +1,35 @@
+.top {
+  padding: 12px 0;
+  background: $color-dop-bg;
+  color: $white;
+
+  // .top__container
+  &__container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 5px;
+    text-align: center;
+  }
+  // .top__text
+  &__text {
+    font-size: clampAd(10, 14);
+    line-height: 1.4;
+    letter-spacing: 0.01em;
+  }
+  // .top__link
+  &__link {
+    font-size: clampAd(9, 13);
+    line-height: 1.4;
+    letter-spacing: 0.02em;
+    color: $color-other1;
+    transition: all 0.3s linear;
+
+    @media (any-hover: hover) {
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}

@@ -1,0 +1,15 @@
+.reviews {
+  padding: clampAd(50, 100) 0 clampAd(70, 150);
+
+  // .reviews__container
+  &__container {
+    position: relative;
+  }
+  // .reviews__title
+  &__title {
+    max-width: clampAd(400, 640);
+  }
+  // .reviews__slider
+  &__slider {
+  }
+}

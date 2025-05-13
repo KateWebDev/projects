@@ -1,0 +1,37 @@
+.menu {
+  // .menu__items
+  &__items {
+    display: flex;
+    align-items: center;
+    gap: 20px clampAd(20, 54);
+  }
+  // .menu__item
+  &__item {
+  }
+  // .menu__link
+  &__link {
+    font-weight: 300;
+    font-size: 14px;
+    text-transform: capitalize;
+    color: $white;
+    white-space: nowrap;
+    opacity: 0.7;
+    transition: all 0.3s linear;
+
+    @media (any-hover: hover) {
+      &:hover {
+        opacity: 1;
+      }
+    }
+    &--active {
+      opacity: 1;
+      cursor: default;
+
+      @media (any-hover: hover) {
+        &:hover {
+          opacity: 1;
+        }
+      }
+    }
+  }
+}

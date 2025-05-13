@@ -1,0 +1,47 @@
+.view {
+  padding: clamp(70px, calc(70px + (180 - 70) * ((100vw - 414px) / ($widthReportMax - $widthReportMin))), 180px) 0;
+  background: url(../images/main/view/bg.jpg) center/cover no-repeat;
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(180deg, #242b33 10.42%, rgba(36, 43, 51, 0) 50.52%, #242b33 90.1%),
+      linear-gradient(0deg, rgba(36, 43, 51, 0.9) 0%, rgba(36, 43, 51, 0.9) 100%);
+  }
+  // .view__container
+  &__container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 40px 30px;
+    position: relative;
+    z-index: 1;
+  }
+  // .view__content
+  &__content {
+    max-width: 535px;
+  }
+  // .view__title
+  &__title {
+    margin-bottom: clamp(10px, calc(10px + (50 - 10) * ((100vw - 414px) / ($widthReportMax - $widthReportMin))), 50px);
+  }
+  // .view__text
+  &__text {
+    font-size: clamp(14px, calc(14px + (16 - 14) * ((100vw - 414px) / ($widthReportMax - $widthReportMin))), 16px);
+  }
+  // .view__form
+  &__form {
+    max-width: 540px;
+    display: grid;
+    grid-template-columns: repeat(2, 255px);
+    align-content: center;
+    gap: clamp(15px, calc(15px + (35 - 15) * ((100vw - 414px) / ($widthReportMax - $widthReportMin))), 35px) 30px;
+    text-align: center;
+  }
+}

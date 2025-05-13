@@ -1,0 +1,39 @@
+.error {
+  // .error__container
+  &__container {
+  }
+  // .error__title
+  &__title {
+    @include Poppins700;
+    line-height: 1;
+    font-size: clampAd(130, 350);
+    color: $color-light;
+    margin-bottom: clampAd(30, 50);
+
+    display: flex;
+    align-items: center;
+
+    span {
+      width: clampAd(110, 309);
+      height: clampAd(110, 309);
+      background: image-set(
+          url("../images/main/decor/cup.avif") type("image/avif"),
+          url("../images/main/decor/cup@2x.avif") 2x type("image/avif"),
+          url("../images/main/decor/cup.webp") type("image/webp"),
+          url("../images/main/decor/cup@2x.webp") 2x type("image/webp"),
+          url("../images/main/decor/cup.jpg"),
+          url("../images/main/decor/cup@2x.jpg") 2x
+        )
+        center/cover no-repeat;
+    }
+  }
+  // .error__text
+  &__text {
+    @include Poppins500;
+    font-size: clampAd(16, 28);
+    margin-bottom: clampAd(20, 40);
+  }
+  // .error__btn
+  &__btn {
+  }
+}

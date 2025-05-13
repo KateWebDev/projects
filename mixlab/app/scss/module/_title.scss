@@ -1,0 +1,38 @@
+@import "components/mixin";
+
+.main-title {
+  font-size: clampAd(28, 55);
+  line-height: 1.2;
+  text-align: center;
+}
+
+.title {
+  font-size: clampAd(20, 44);
+  line-height: 1.2;
+
+  &--center {
+    text-align: center;
+  }
+}
+
+.subtitle {
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: $color-accent-2;
+}
+
+.name {
+  font-size: clampAd(16, 24);
+  line-height: 1.32;
+
+  // .name--color
+  &--color {
+    color: $color-accent-1;
+  }
+
+  // .name--weight
+  &--weight {
+    font-weight: 700;
+  }
+}

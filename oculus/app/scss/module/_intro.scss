@@ -1,0 +1,60 @@
+.intro {
+  background: image-set(
+      url("../images/main/intro/bg.avif") type("image/avif"),
+      url("../images/main/intro/bg.webp") type("image/webp"),
+      url("../images/main/intro/bg.jpg")
+    )
+    center/cover no-repeat;
+  // .intro__container
+  &__container {
+    min-height: calc(100svh - 81px);
+  }
+  // .intro__title
+  &__title {
+    padding-top: clampAd(50, 230);
+    font-size: clampAd(40, 96);
+    margin-bottom: 10px;
+    text-transform: capitalize;
+  }
+  // .intro__dop
+  &__dop {
+    font-size: clampAd(22, 36);
+    margin-bottom: 5px;
+  }
+  // .intro__text
+  &__text {
+    font-size: 13px;
+    margin-bottom: clampAd(20, 50);
+  }
+  // .intro__price
+  &__price {
+    display: inline-flex;
+    border: 1px solid transparent;
+    border-image: $color-gradient 1;
+    transition: all 0.3s linear;
+    margin-bottom: 10px;
+
+    span {
+      display: inline-block;
+      min-width: clampAd(140, 300);
+      padding: 21px;
+      @include Helvetica700;
+      font-size: clampAd(12, 16);
+      text-transform: uppercase;
+      text-align: center;
+    }
+
+    @media (any-hover: hover) {
+      &:hover {
+        opacity: 0.8;
+      }
+    }
+  }
+  // .intro__btn
+  &__btn {
+  }
+  // .intro__subtext
+  &__subtext {
+    font-size: 13px;
+  }
+}

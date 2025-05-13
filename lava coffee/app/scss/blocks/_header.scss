@@ -1,0 +1,62 @@
+.header {
+  padding: 13px 0;
+  background: $mainBackGround;
+
+  &--background {
+    background: $color-bg-light;
+  }
+
+  // .header__container
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    column-gap: clampAd(30, 148);
+  }
+  // .header__logo
+  &__logo {
+    position: relative;
+    z-index: 4;
+  }
+  // .header__menu
+  &__menu {
+    margin-left: auto;
+  }
+  // .header__action
+  &__action {
+    width: 26px;
+    height: 26px;
+
+    position: relative;
+    z-index: 4;
+
+    svg {
+      width: 19px;
+      height: 26px;
+    }
+
+    span {
+      position: absolute;
+      top: 0;
+      right: 0;
+
+      width: 15px;
+      height: 15px;
+      border-radius: $radius-circle;
+      background: $color-accent;
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      @include Poppins600;
+      font-size: 8px;
+      color: $white;
+    }
+  }
+  // .header__burger
+  &__burger {
+    position: relative;
+    z-index: 4;
+  }
+}

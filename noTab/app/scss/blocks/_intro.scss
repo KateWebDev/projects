@@ -1,0 +1,104 @@
+.intro {
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: clampAd(363, 662);
+    height: clampAd(430, 783);
+    background: url(../../images/icons/decor.svg) center/cover no-repeat;
+  }
+
+  // .intro__container
+  &__container {
+    min-height: 100svh;
+    padding: clampAd(130, 150) 15px 80px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    row-gap: clampAd(55, 75);
+
+    position: relative;
+    z-index: 2;
+  }
+  // .intro__inner
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  // .intro__content
+  &__content {
+    max-width: clampAd(300, 650);
+  }
+  // .intro__title
+  &__title {
+    margin-bottom: clampAd(24, 130);
+  }
+  // .intro__text
+  &__text {
+    max-width: 475px;
+    font-size: clampAd(16, 20);
+    line-height: 1.35;
+
+    padding-left: 107px;
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: 39px;
+      bottom: -10px;
+      width: 4px;
+      height: 140px;
+      background: $white;
+      transform: rotate(30deg);
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: 60%;
+      left: 0;
+      width: clampAd(74, 125);
+      aspect-ratio: 1/1;
+      background: $color-accent-2;
+      filter: blur(50px);
+      border-radius: $radius-circle;
+    }
+  }
+  // .intro__image
+  &__image {
+    max-width: clampAd(161, 332);
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: $white;
+      filter: blur(78px);
+      opacity: 0.2;
+    }
+  }
+  // .intro__img
+  &__img {
+    display: block;
+    max-width: 100%;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    object-position: center;
+
+    position: relative;
+    z-index: 2;
+  }
+  // .intro__download
+  &__download {
+  }
+}

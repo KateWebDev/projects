@@ -1,0 +1,13 @@
+.logo {
+  width: 119px;
+  height: 38px;
+
+  img {
+    display: block;
+    max-width: 100%;
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    object-position: center;
+  }
+}

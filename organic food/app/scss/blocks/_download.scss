@@ -1,0 +1,66 @@
+.download {
+  padding-bottom: clampAd(50, 140);
+  // .download__container
+  &__container {
+    padding: 0 clampAd(15, 100);
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+  }
+  // .download__image
+  &__image {
+    max-width: clampAd(100, 265);
+    width: 100%;
+  }
+  // .download__img
+  &__img {
+    display: block;
+    max-width: 100%;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    object-position: center;
+  }
+  // .download__content
+  &__content {
+    max-width: clampAd(290, 660);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  // .download__title
+  &__title {
+    margin-bottom: 20px;
+  }
+  // .download__badge
+  &__badge {
+    order: -1;
+    margin-bottom: 16px;
+  }
+  // .download__text
+  &__text {
+    margin-bottom: clampAd(30, 50);
+  }
+  // .download__list
+  &__list {
+    display: flex;
+    align-items: center;
+    gap: clampAd(16, 24);
+  }
+  // .download__point
+  &__point {
+  }
+  // .download__link
+  &__link {
+  }
+  // .download__icon
+  &__icon {
+    display: block;
+    width: 104px;
+    height: 30px;
+    object-fit: cover;
+    object-position: center;
+  }
+}

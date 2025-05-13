@@ -1,0 +1,15 @@
+.progress {
+  // .progress__container
+  &__container {
+  }
+  // .progress__info
+  &__info {
+    margin-bottom: clampAd(30, 80);
+    .info__text {
+      max-width: 292px;
+    }
+  }
+  // .progress__accardeon
+  &__accardeon {
+  }
+}

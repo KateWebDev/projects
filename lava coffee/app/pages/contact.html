@@ -1,0 +1,98 @@
+<!--=include header.html -->
+
+<main class="main">
+  <div class="top">
+    <h1 class="top__title title">
+      Contact us
+    </h1>
+    <div class=" top__breadcrumbs breadcrumbs">
+      <div class="breadcrumbs__container">
+        <nav class="breadcrumbs__nav">
+          <ul class="breadcrumbs__list">
+            <li class="breadcrumbs__point">
+              <a class="breadcrumbs__link breadcrumbs__link--default" href="index.html">
+                Home
+              </a>
+            </li>
+            <li class="breadcrumbs__point">
+              <a class="breadcrumbs__link" href="#">
+                Contact us
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </div>
+
+  <section class="main__section contact">
+    <h2 class="hidden">Contact</h2>
+    <div class="contact__container">
+      <form class="contact__form form-contact" action="#" method="post" autocomplete="off">
+        <label class="hidden" for="name">Enter Your name</label>
+        <input class="form-contact__input" id="name" type="text" placeholder="Name*" required>
+        <label class="hidden" for="phone">Enter Your phone</label>
+        <input class="form-contact__input" id="phone" type="tel" placeholder="Phone Number*" required
+          autocomplete="off">
+        <label class="hidden" for="mail">Enter Your E-mail</label>
+        <input class="form-contact__input" id="mail" type="email" placeholder="Email*" required autocomplete="off">
+        <label class="hidden" for="message">Enter Your message</label>
+        <input class="form-contact__input" id="message" type="text" placeholder="Message*" required>
+        <button class="form-contact__btn btn" type="submit">
+          send
+        </button>
+      </form>
+      <div class="contact__content">
+        <div class="contact__item">
+          <div class="contact__subtitle">
+            Visit Our Roastery
+          </div>
+          <address class="contact__address">
+            82 Guild Street<br>
+            London EC1P 4ZJ, UK
+          </address>
+        </div>
+        <div class="contact__item">
+          <div class="contact__subtitle">
+            Wholesale Enquiries
+          </div>
+          <a class="contact__link" href="mailto:Gmail@Lavaroasters.com">
+            Gmail@Lavaroasters.com
+          </a>
+          <a class="contact__link" href="tel:+442079460612">
+            +44 20 7946 0612
+          </a>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="main__section news">
+    <div class="news__container">
+      <div class="news__image">
+        <picture>
+          <source type='image/avif' srcset='../images/main/news/new.avif, ../images/main/news/new@2x.avif 2x'>
+          <source type='image/webp' srcset='../images/main/news/new.webp, ../images/main/news/new@2x.webp 2x'>
+          <img class="news__img" src="../images/main/news/new.jpg" srcset="../images/main/news/new@2x.jpg 2x" alt=""
+            loading="lazy" width="567" height="396">
+        </picture>
+      </div>
+      <div class="news__content">
+        <h2 class="news__title title">
+          News As Fresh As Our Coffee
+        </h2>
+        <p class="news__text">
+          Get The Latest Updated On New Products And Upcoming Sales
+        </p>
+        <form class="news__form form" action="#" method="post" autocomplete="off">
+          <label class="hidden" for="email">Enter Your E-mail</label>
+          <input class="form__input" id="email" type="email" autocomplete="off" placeholder="Your email">
+          <button class="form__button" aria-label="send message" title="send message"> </button>
+        </form>
+      </div>
+    </div>
+  </section>
+</main>
+
+<!--=include footer.html -->

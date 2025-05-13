@@ -1,0 +1,58 @@
+@media (max-width: 767.98px) {
+  .logo {
+    width: 100%;
+  }
+
+  .header {
+    &__container {
+      flex-direction: column;
+      padding: 0;
+    }
+
+    &__menu {
+      padding: clampAd(20, 40) 0 clampAd(20, 40) 15px;
+    }
+  }
+
+  .intro {
+    &__container {
+      flex-wrap: wrap;
+    }
+    &__content {
+      max-width: 100%;
+    }
+    &__image {
+      margin: 0 auto;
+    }
+  }
+
+  .feedback {
+    &__image {
+      display: none;
+    }
+    &__content {
+      width: 100%;
+      background-size: cover;
+    }
+  }
+}
+
+@media (max-width: 479.98px) {
+  .intro {
+    &__image {
+      display: none;
+    }
+  }
+
+  .feedback {
+    &__form {
+      flex-direction: column;
+    }
+    &__label {
+      flex: auto;
+    }
+    &__input {
+      width: 100%;
+    }
+  }
+}

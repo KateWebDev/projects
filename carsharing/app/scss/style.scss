@@ -1,0 +1,126 @@
+@import "components/_mixin";
+@import "components/_resetStyle";
+@import "components/_fonts";
+//@import "components/_popup";
+//@import "../../node_modules/swiper/swiper-bundle"; // swiper
+@import "../../node_modules/slick-carousel/slick/slick";
+@import "../../node_modules/@fancyapps/fancybox/dist/jquery.fancybox";
+//@import "../../node_modules/rateyo/src/jquery.rateyo";
+//@import "../../node_modules/animate.css/animate";
+
+@import url("https://fonts.googleapis.com/css2?family=Fira+Sans:wght@500&family=Roboto+Condensed&display=swap");
+
+//Страница
+$maxWidthContainer: 1230px; //максимальная ширина контейнера + padding left + padding right
+$containerPadding: 15px; //внутринние отступы в контейнере
+
+//Шрифт
+$fontFamily: "Roboto Condensed", sans-serif;
+$mainColor: #1b1818; //основной цвет шрифта
+$mainBackGround: #fefefe; //основной цвет фона
+$mainSize: 16;
+$lineheight: calc(19 / $mainSize);
+$fontWeight: 400;
+
+$bg-color: #332208;
+$accent-color: #c5ac2d;
+
+//Контейнер
+[class*="__container"] {
+  max-width: $maxWidthContainer;
+  margin: 0 auto;
+  padding: 0 $containerPadding;
+}
+
+[class*="__cont-left"] {
+  padding-left: calc((100% - $maxWidthContainer) / 2 + $containerPadding);
+}
+
+[class*="__cont-right"] {
+  padding-right: calc((100% - $maxWidthContainer) / 2 + $containerPadding);
+}
+
+//Бургер меню
+[class*="__burger"] {
+  display: none;
+  flex-direction: column;
+  row-gap: 4px;
+  cursor: pointer;
+
+  span {
+    width: 24px;
+    height: 3px;
+    border-radius: 5px;
+    background: #fefefe;
+    transition: all 0.3s linear;
+  }
+}
+
+/*Для контейнера картинок в карточках - технический класс*/
+[class*="__ibg"] {
+  position: relative;
+  /*Для самих картинок в карточках технический класс*/
+  img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+body {
+  font-family: $fontFamily;
+  background-color: $mainBackGround;
+  color: $mainColor;
+  font-size: $mainSize + px;
+  line-height: $lineheight;
+  font-weight: $fontWeight;
+}
+
+.hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.main {
+  flex: 1 1 auto;
+}
+
+.title {
+  font-family: "Fira Sans", sans-serif;
+  font-size: 24px;
+  font-weight: 500;
+}
+
+.btn {
+  display: inline-block;
+  padding: 16px 18px;
+  background: $accent-color;
+  color: #fefefe;
+  text-transform: uppercase;
+  border: 1px solid $accent-color;
+  transition: all 0.3s linear;
+
+  &:hover {
+    background: #fefefe;
+    color: $accent-color;
+  }
+}
+
+@import "module/_header";
+@import "module/_intro";
+@import "module/_conditions";
+@import "module/_advantages";
+@import "module/_reviews";
+@import "module/_questions";
+@import "module/_footer";
+@import "components/_adaptive";

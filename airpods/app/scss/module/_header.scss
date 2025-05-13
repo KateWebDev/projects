@@ -1,0 +1,62 @@
+.header {
+  padding: clamp(20px, calc(20px + (40 - 20) * ((100vw - 320px) / ($widthReportMax - $widthReportMin))), 40px) 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+
+  &--fixed {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 8;
+    overflow: auto;
+    background: #ffffff;
+  }
+
+  // .header__container
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    z-index: 8;
+  }
+  // .header__logo
+  &__logo {
+    position: relative;
+    z-index: 10;
+  }
+  // .header__menu
+  &__menu {
+    margin-left: auto;
+    margin-right: 40px;
+  }
+  // .header__btn
+  &__btn {
+    position: relative;
+    z-index: 10;
+    border: 1px solid currentColor;
+    border-radius: 30px;
+    background: $mainColor;
+    padding: clamp(10px, calc(10px + (15 - 10) * ((100vw - 320px) / ($widthReportMax - $widthReportMin))), 15px)
+      clamp(30px, calc(30px + (58 - 30) * ((100vw - 320px) / ($widthReportMax - $widthReportMin))), 58px);
+    font-weight: 700;
+    text-transform: uppercase;
+    color: $mainBackGround;
+    transition: all 0.3s linear;
+
+    @media (any-hover: hover) and (min-width: 992px) {
+      &:hover {
+        color: $mainColor;
+        background: $mainBackGround;
+      }
+    }
+  }
+  // .header__burger
+  &__burger {
+    position: relative;
+    z-index: 10;
+  }
+}

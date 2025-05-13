@@ -1,0 +1,51 @@
+.booking {
+  padding: clamp(50px, calc(50px + (100 - 50) * ((100vw - 320px) / ($widthReportMax - $widthReportMin))), 100px) 0;
+
+  background: image-set(
+      url("../images/main/booking/bg.avif") type("image/avif"),
+      url("../images/main/booking/bg.webp") type("image/webp"),
+      url("../images/main/booking/bg.jpg")
+    )
+    left center/cover no-repeat;
+  position: relative;
+
+  &:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(180deg, #010203 8.85%, rgba(1, 2, 3, 0) 86.98%);
+  }
+
+  // .booking__container
+  &__container {
+    min-height: clamp(
+      200px,
+      calc(200px + (914 - 200) * ((100vw - 320px) / ($widthReportMax - $widthReportMin))),
+      914px
+    );
+    position: relative;
+    z-index: 2;
+  }
+  // .booking__title
+  &__title {
+    margin-bottom: 50px;
+  }
+  // .booking__items
+  &__items {
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: 30px;
+    column-gap: 50px;
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  // .booking__text
+  &__text {
+    max-width: 165px;
+    font-size: 14px;
+  }
+}

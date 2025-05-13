@@ -1,0 +1,39 @@
+.contacts {
+  background: image-set(
+      url("../images/main/contacts/bg.avif") type("image/avif"),
+      url("../images/main/contacts/bg.webp") type("image/webp"),
+      url("../images/main/contacts/bg.jpg")
+    )
+    left bottom no-repeat;
+
+  // .contacts__container
+  &__container {
+  }
+  // .contacts__content
+  &__content {
+    background: $white;
+    max-width: 390px;
+    margin-left: auto;
+    padding: 40px 40px 25px 25px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 30px;
+    font-size: clampAd(12, 18);
+    min-height: clampAd(300, 350);
+  }
+  // .contacts__text
+  &__text {
+    max-width: 195px;
+    @include RobotoSlab400;
+    color: $color-accent;
+  }
+  // .contacts__link
+  &__link {
+    max-width: 220px;
+  }
+  // .contacts__address
+  &__address {
+  }
+}
+.hidden {
+}

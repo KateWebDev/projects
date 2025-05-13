@@ -1,0 +1,22 @@
+@function clampAd($min, $max) {
+  $minPx: $min + px;
+  $maxPx: $max + px;
+
+  $result: clamp(
+    $minPx,
+    calc($minPx + ($max - $min) * ((100vw - $widthReportMinPx) / ($widthReportMax - $widthReportMin))),
+    $maxPx
+  );
+
+  @return $result;
+}
+
+@mixin Fredoka {
+  font-family: "Fredoka", sans-serif;
+  font-weight: 400;
+}
+
+@mixin Gilroy {
+  font-family: "Gilroy", sans-serif;
+  font-weight: 400;
+}

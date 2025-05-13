@@ -1,0 +1,93 @@
+.about {
+  // .about__container
+  &__container {
+  }
+  // .about__top
+  &__top {
+    @include grid;
+    margin-bottom: clampAd(80, 190);
+  }
+  // .about__statistics
+  &__statistics {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    row-gap: clampAd(30, 60);
+  }
+  // .about__statistic
+  &__statistic {
+  }
+  // .about__num
+  &__num {
+    font-weight: 300;
+    font-size: clampAd(30, 64);
+    line-height: 1.4;
+  }
+  // .about__descr
+  &__descr {
+    color: $color-dop;
+  }
+  // .about__content
+  &__content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    row-gap: clampAd(30, 60);
+  }
+  // .about__title
+  &__title {
+  }
+  // .about__text
+  &__text {
+    display: flex;
+    flex-direction: column;
+    row-gap: 25px;
+  }
+  // .about__bottom
+  &__bottom {
+  }
+  // .about__video
+  &__video {
+    width: 100%;
+    min-height: clampAd(200, 630);
+    background: image-set(
+        url("../images/main/about/photo.avif") type("image/avif"),
+        url("../images/main/about/photo_2x.avif") 2x type("image/avif"),
+        url("../images/main/about/photo.webp") type("image/webp"),
+        url("../images/main/about/photo_2x.webp") 2x type("image/webp"),
+        url("../images/main/about/photo.jpg"),
+        url("../images/main/about/photo_2x.jpg") 2x
+      )
+      center/cover no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  // .about__play
+  &__play {
+    width: clampAd(50, 100);
+    height: clampAd(50, 100);
+    border-radius: 50%;
+    background: $white;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.3s linear;
+
+    svg {
+      fill: $mainColor;
+      transition: all 0.3s linear;
+    }
+
+    @media (any-hover: hover) {
+      &:hover {
+        background: $mainColor;
+
+        svg {
+          fill: $white;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,6 @@
+.title {
+  @include Arial700;
+  font-size: clampAd(26, 34);
+  text-align: center;
+  color: $black;
+}

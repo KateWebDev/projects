@@ -1,0 +1,145 @@
+.dop {
+  padding: clamp(30px, calc(30px + (50 - 30) * ((100vw - 320px) / ($widthReportMax - $widthReportMin))), 50px) 0
+    clamp(50px, calc(50px + (100 - 50) * ((100vw - 320px) / ($widthReportMax - $widthReportMin))), 100px);
+
+  // .dop__container
+  &__container {
+    position: relative;
+    z-index: 2;
+  }
+  // .dop__title
+  &__title {
+    max-width: 600px;
+    margin-bottom: 80px;
+  }
+  // .dop__content
+  &__content {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 130px 50px;
+    margin-bottom: clamp(
+      50px,
+      calc(50px + (200 - 50) * ((100vw - 320px) / ($widthReportMax - $widthReportMin))),
+      200px
+    );
+  }
+  // .dop__info
+  &__info {
+    max-width: 620px;
+  }
+  // .dop__text
+  &__text {
+    font-size: clamp(18px, calc(18px + (24 - 18) * ((100vw - 320px) / ($widthReportMax - $widthReportMin))), 24px);
+    margin-bottom: 25px;
+  }
+  // .dop__items
+  &__items {
+    margin-bottom: 25px;
+  }
+  // .dop__item
+  &__item {
+    font-size: clamp(18px, calc(18px + (24 - 18) * ((100vw - 320px) / ($widthReportMax - $widthReportMin))), 24px);
+    padding-left: 36px;
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 0;
+      transform: translateY(-50%);
+      width: clamp(10px, calc(10px + (20 - 10) * ((100vw - 320px) / ($widthReportMax - $widthReportMin))), 20px);
+      height: clamp(10px, calc(10px + (20 - 10) * ((100vw - 320px) / ($widthReportMax - $widthReportMin))), 20px);
+      border-radius: 50%;
+      background: $mainColor;
+    }
+  }
+  // .dop__key
+  &__key {
+    font-size: 12px;
+    color: #e5e5e5;
+  }
+  // .dop__actions
+  &__actions {
+    max-width: 500px;
+  }
+  // .dop__btn
+  &__btn {
+    font-size: clamp(14px, calc(14px + (18 - 14) * ((100vw - 320px) / ($widthReportMax - $widthReportMin))), 18px);
+
+    &:not(:last-child) {
+      margin-bottom: 49px;
+    }
+
+    &--icon {
+      position: relative;
+
+      &::before {
+        content: "";
+        position: absolute;
+        top: calc(
+          (clamp(90px, calc(90px + (130 - 90) * ((100vw - 320px) / ($widthReportMax - $widthReportMin))), 130px)) * -1
+        );
+        right: 0;
+        width: clamp(142px, calc(142px + (192 - 142) * ((100vw - 320px) / ($widthReportMax - $widthReportMin))), 192px);
+        height: clamp(
+          100px,
+          calc(100px + (150 - 100) * ((100vw - 320px) / ($widthReportMax - $widthReportMin))),
+          150px
+        );
+        background: image-set(
+            url("../images/main/dop/1.avif") type("image/avif"),
+            url("../images/main/dop/1.webp") type("image/webp"),
+            url("../images/main/dop/1.png")
+          )
+          left center/cover no-repeat;
+      }
+    }
+  }
+  // .dop__slider
+  &__slider {
+    border: 1px solid $mainColor;
+    background: transparent;
+    padding: clamp(0px, calc(0px + (100 - 0) * ((100vw - 320px) / ($widthReportMax - $widthReportMin))), 100px)
+      clamp(0px, calc(0px + (65 - 0) * ((100vw - 320px) / ($widthReportMax - $widthReportMin))), 65px)
+      clamp(0px, calc(0px + (100 - 0) * ((100vw - 320px) / ($widthReportMax - $widthReportMin))), 100px)
+      clamp(0px, calc(0px + (70 - 0) * ((100vw - 320px) / ($widthReportMax - $widthReportMin))), 70px);
+
+    margin-bottom: clamp(30px, calc(30px + (50 - 30) * ((100vw - 320px) / ($widthReportMax - $widthReportMin))), 50px);
+  }
+  // .dop__points
+  &__points {
+    text-align: center;
+  }
+  // .dop__point
+  &__point {
+    max-width: 800px;
+    width: 100%;
+    position: relative;
+  }
+  // .dop__img
+  &__img {
+    width: 100%;
+    object-fit: cover;
+  }
+  // .dop__description
+  &__description {
+    font-family: "Space Age Cyrillic", sans-serif;
+    font-size: clamp(12px, calc(12px + (24 - 12) * ((100vw - 320px) / ($widthReportMax - $widthReportMin))), 24px);
+    text-align: center;
+  }
+  // .dop__arrow
+  &__arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 2;
+    &--left {
+      left: 0;
+    }
+    &--right {
+      right: 0;
+    }
+  }
+}

@@ -1,0 +1,106 @@
+.intro {
+  background: image-set(
+      url("../images/main/intro/bg.avif") type("image/avif"),
+      url("../images/main/intro/bg.webp") type("image/webp"),
+      url("../images/main/intro/bg.jpg")
+    )
+    left 50% top/cover no-repeat;
+  // .intro__container
+  &__container {
+    min-height: calc(100svh - 100px);
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    row-gap: 30px;
+    padding-bottom: 40px;
+  }
+  // .intro__content
+  &__content {
+    margin: auto 0 auto auto;
+    max-width: clampAd(200, 625);
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    letter-spacing: 0.04em;
+  }
+  // .intro__title
+  &__title {
+    @include Montserrat800;
+    font-size: clampAd(40, 100);
+    line-height: 1.22;
+    letter-spacing: 0.06em;
+    color: $color-accent;
+  }
+  // .intro__text
+  &__text {
+    order: -1;
+    @include Poppins500;
+    font-size: clampAd(14, 18);
+    line-height: 1.5;
+  }
+  // .intro__info
+  &__info {
+    max-width: 550px;
+    color: rgba($white, 0.6);
+  }
+  // .intro__works
+  &__works {
+    max-width: clampAd(300, 790);
+    width: 100%;
+    margin: 0 -170px 0 auto;
+  }
+  // .intro__actions
+  &__actions {
+  }
+  // .intro__button
+  &__button {
+    &.swiper-button-disabled {
+      opacity: 0.6;
+    }
+    // .intro__button--prev
+    &--prev {
+    }
+    // .intro__button--next
+    &--next {
+    }
+  }
+  // .intro__icon
+  &__icon {
+  }
+  // .intro__dop-text-1
+  &__dop-text-1 {
+    max-width: 200px;
+    @include Montserrat800;
+    font-size: clampAd(18, 24);
+    line-height: 1.25;
+    letter-spacing: 0.04em;
+    color: $color-accent;
+    position: absolute;
+    top: 50%;
+    left: 15px;
+    transform: translateY(-50%);
+  }
+  // .intro__dop-text-2
+  &__dop-text-2 {
+    max-width: 380px;
+    @include Montserrat800;
+    font-size: clampAd(18, 24);
+    line-height: 1.6;
+    padding-left: 30px;
+    position: absolute;
+    bottom: 40px;
+    left: 15px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 22px;
+      left: 0;
+      width: 20px;
+      height: 3px;
+      background: $color-accent;
+    }
+  }
+}

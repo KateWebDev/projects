@@ -1,0 +1,960 @@
+@media (max-width: 1200px) {
+  .content {
+    flex: 0 0 300px;
+  }
+
+  .products__container {
+    column-gap: 5px;
+  }
+
+  .products__items {
+    gap: 67px;
+  }
+
+  .stages__container {
+    column-gap: 0;
+  }
+
+  .stages__items {
+    gap: 37px 35px;
+  }
+
+  .stages__item {
+    flex: 0 0 300px;
+  }
+  .stages__text {
+    width: 141px;
+  }
+
+  .stages__img {
+    width: 128px;
+    height: 225px;
+  }
+
+  .course__container {
+    column-gap: 10px;
+  }
+
+  .course__items {
+    column-gap: 77px;
+  }
+
+  .teacher__container {
+    column-gap: 10px;
+  }
+  .teacher__items {
+    grid-template-columns: repeat(2, 315px);
+    gap: 30px 20px;
+  }
+
+  .teacher__info {
+    max-width: 150px;
+    padding: 14px 8px;
+  }
+
+  .teacher__img {
+    width: 214px;
+  }
+
+  .certificates__inner {
+    width: 860px;
+  }
+
+  .certificates__item {
+    img {
+      width: 280px;
+      height: 179px;
+    }
+  }
+
+  .certificates {
+    .slick-dots {
+      margin-left: 50%;
+      transform: translateX(-50%);
+    }
+  }
+
+  .contacts__container {
+    column-gap: 30px;
+  }
+
+  .contacts__form {
+    padding: 75px 20px;
+  }
+
+  .contacts__image {
+    width: 335px;
+    height: 510px;
+  }
+}
+
+@media (max-width: 1000px) {
+  [class*="__container"] {
+    max-width: 960px;
+  }
+
+  .intro__container {
+    min-height: 415px;
+  }
+
+  .intro__image {
+    width: 655px;
+    left: 297px;
+  }
+
+  .intro__img {
+    width: 100%;
+    object-fit: cover;
+  }
+
+  .intro__content {
+    max-width: 333px;
+    padding-top: 95px;
+  }
+
+  .about__items {
+    padding-left: 0;
+  }
+
+  .line {
+    padding-bottom: 50px;
+  }
+
+  .reviews__info {
+    width: 264px;
+  }
+
+  .reviews__text {
+    margin-bottom: 45px;
+  }
+
+  .reviews__btn {
+    font-size: 14px;
+  }
+
+  .slick-dots {
+    margin-top: 20px;
+  }
+}
+
+@media (max-width: 999px) {
+  .products__container {
+    column-gap: 30px;
+  }
+
+  .products__items {
+    column-gap: 16px;
+  }
+
+  .products__item {
+    width: 200px;
+  }
+
+  .products__image {
+    margin: 0 6px 6px;
+    width: 188px;
+    height: 213px;
+  }
+
+  .products__price {
+    font-size: 12px;
+    margin-bottom: 6px;
+  }
+
+  .products__name {
+    font-size: 12px;
+    margin-bottom: 10px;
+  }
+
+  .products__text {
+    font-size: 8px;
+    margin-bottom: 18px;
+  }
+
+  .stages__items {
+    gap: 25px 35px;
+  }
+
+  .stages__item {
+    flex: 0 0 200px;
+    &::before {
+      font-size: 20px;
+    }
+  }
+  .stages__text {
+    width: 94px;
+    font-size: 8px;
+  }
+
+  .stages__img {
+    width: 85px;
+    height: 150px;
+  }
+  .course__container {
+    column-gap: 0px;
+  }
+  .course__items {
+    grid-template-columns: repeat(2, 220px);
+    column-gap: 15px;
+  }
+  .course__name {
+    font-size: 12px;
+    margin-bottom: 8px;
+  }
+  .course__img {
+    width: 220px;
+    height: 265px;
+  }
+  .course__img-name {
+    font-size: 8px;
+    padding: 12px 5px;
+    top: 118px;
+  }
+  .course__hours {
+    padding: 6px 5px;
+    font-size: 8px;
+    text-align: left;
+    top: 166px;
+
+    span {
+      font-size: 8px;
+    }
+  }
+  .course__price {
+    min-width: 59px;
+    bottom: -10px;
+    right: -10px;
+    padding: 14px;
+    font-size: 8px;
+  }
+  .course__text {
+    font-size: 10px;
+    margin-bottom: 10px;
+  }
+  .course__btn {
+    font-size: 12px;
+    padding: 13px 16px;
+  }
+  .course__img {
+    width: 195px;
+    position: relative;
+  }
+
+  .teacher__container {
+    column-gap: 8px;
+  }
+  .teacher__items {
+    grid-template-columns: repeat(2, 210px);
+    gap: 30px 14px;
+  }
+
+  .teacher__info {
+    max-width: 105px;
+    padding: 9px 5px;
+  }
+
+  .teacher__name {
+    font-size: 8px;
+    margin-bottom: 0;
+  }
+  .teacher__text {
+    font-size: 6px;
+  }
+  .teacher__img {
+    width: 142px;
+    height: 155px;
+  }
+}
+
+@media (max-width: 880.98px) {
+  .menu__link {
+    font-size: 10px;
+    line-height: 1.5;
+  }
+
+  .header__action {
+    font-size: 10px;
+    line-height: 1.5;
+    padding-left: 16px;
+
+    &::before {
+      width: 14px;
+    }
+  }
+
+  .footer__actions {
+    font-size: 10px;
+    line-height: 1.1;
+  }
+
+  .products__container {
+    column-gap: 30px;
+  }
+
+  .products__items {
+    grid-template-columns: repeat(2, 200px);
+    gap: 30px 16px;
+  }
+
+  .products__image {
+    margin: 0 5px 5px;
+    width: 188px;
+    height: 213px;
+  }
+
+  .products__price {
+    font-size: 12px;
+    margin-bottom: 6px;
+  }
+
+  .products__name {
+    font-size: 12px;
+    margin-bottom: 9px;
+  }
+
+  .products__text {
+    font-size: 8px;
+    margin-bottom: 16px;
+  }
+
+  .reviews__video {
+    width: 200px;
+    height: 200px;
+    &::before {
+      width: 50px;
+    }
+  }
+
+  .reviews__info {
+    max-width: 209px;
+  }
+
+  .reviews__icon {
+    width: 15px;
+    height: 15px;
+    margin-bottom: 10px;
+  }
+
+  .reviews__name {
+    font-size: 12px;
+    margin-bottom: 10px;
+  }
+
+  .reviews__text {
+    font-size: 10px;
+    margin-bottom: 35px;
+  }
+
+  .reviews__btn {
+    font-size: 8px;
+    padding: 15px 20px;
+  }
+
+  .slick-dots {
+    column-gap: 4px;
+    button {
+      width: 28px;
+    }
+  }
+
+  .certificates__inner {
+    width: 620px;
+  }
+
+  .certificates__item {
+    img {
+      width: 200px;
+      height: 128px;
+    }
+  }
+
+  .contacts__container {
+    column-gap: 15px;
+  }
+
+  .contacts__form {
+    padding: 30px 20px;
+  }
+
+  .contacts__image {
+    width: 187px;
+    height: 285px;
+  }
+
+  .contacts__title {
+    font-size: 15px;
+    margin-bottom: 20px;
+  }
+
+  .contacts__input {
+    font-size: 8px;
+
+    &::placeholder {
+      font-size: 8px;
+    }
+  }
+
+  .contacts__btn {
+    margin-top: 30px;
+  }
+
+  .questions__item {
+    padding: 12px 7px;
+  }
+
+  .questions__name {
+    font-size: 12px;
+    &::after {
+      width: 12px;
+      height: 10px;
+    }
+  }
+
+  .questions__text {
+    font-size: 10px;
+
+    &.questions__text--active {
+      padding: 10px 0 20px;
+    }
+  }
+}
+
+@media (max-width: 767.98px) {
+  [class*="__container"] {
+    max-width: 640px;
+  }
+
+  .footer__actions {
+    text-align: center;
+    flex: 0 0 100%;
+    row-gap: 10px;
+  }
+
+  .footer__socials {
+    align-self: center;
+  }
+
+  .intro__content {
+    max-width: 230px;
+    padding-top: 100px;
+  }
+
+  .intro__title {
+    font-size: 20px;
+    margin-bottom: 20px;
+  }
+
+  .intro__text {
+    font-size: 10px;
+    line-height: 1.1;
+    margin-bottom: 20px;
+  }
+
+  .intro__image {
+    left: 180px;
+  }
+
+  .intro__btn,
+  .products__btn {
+    padding: 14px 30px;
+  }
+
+  .title {
+    font-size: 15px;
+    margin-bottom: 20px;
+  }
+  .content {
+    flex: 0 0 200px;
+    &__text {
+      font-size: 10px;
+      line-height: 1.1;
+    }
+  }
+  .about__box {
+    padding-bottom: 20px;
+  }
+  .about__items {
+    max-width: 452px;
+    column-gap: 9px;
+    padding-left: 20px;
+  }
+
+  .about__img {
+    width: 120px;
+    height: 120px;
+
+    &--center {
+      width: 190px;
+      height: 195px;
+    }
+  }
+
+  .about__text {
+    font-size: 6px;
+  }
+
+  .stages {
+    padding-top: 50px;
+  }
+
+  .stages__container {
+    flex-direction: column;
+
+    .content.content--small {
+      flex: 0 0 100%;
+      text-align: center;
+    }
+  }
+
+  .course__btn {
+    font-size: 12px;
+    padding: 13px 16px;
+  }
+
+  .certificates {
+    padding-bottom: 50px;
+  }
+
+  .sale__container {
+    min-height: 150px;
+  }
+
+  .sale__btn {
+    padding: 13px 28px;
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 680.98px) {
+  .products__container {
+    flex-direction: column;
+  }
+
+  .content.content--small {
+    flex: 0 0 100%;
+    text-align: center;
+
+    .content__title {
+      margin-bottom: 15px;
+    }
+
+    .content__text {
+      max-width: 400px;
+      margin: 0 auto;
+    }
+  }
+
+  .products__items {
+    justify-content: center;
+  }
+
+  .products {
+    padding-top: 50px;
+  }
+
+  .line {
+    &::before {
+      left: -12px;
+    }
+    &::after {
+      left: 12px;
+    }
+  }
+
+  .course {
+    padding: 50px 0;
+  }
+
+  .course__container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .course__items {
+    justify-content: center;
+  }
+
+  .teacher__container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .teacher__items {
+    gap: 30px 30px;
+  }
+
+  .reviews {
+    padding: 50px 0;
+  }
+
+  .reviews__container {
+    flex-direction: column;
+  }
+
+  .certificates__container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .certificates__inner {
+    width: 410px;
+  }
+
+  .certificates {
+    .slick-dots {
+      margin: 0;
+      transform: translateX(0);
+      justify-content: center;
+    }
+  }
+  .questions__container {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+@media (max-width: 630.98px) {
+  .header__burger {
+    display: flex;
+  }
+
+  .header__menu {
+    position: absolute;
+  }
+
+  .header .menu__items {
+    position: fixed;
+    z-index: 2;
+    top: 74px;
+    right: 0;
+    flex-direction: column;
+    padding: 25px 34px 20px 43px;
+    background: $color-btn-active;
+    transition: all 0.4s linear;
+    transform: translatex(200%) rotate(-90deg);
+    overflow: auto;
+    overflow-x: hidden;
+  }
+
+  .header .menu__items.menu__items--active {
+    transform: translateX(0) rotate(0deg);
+  }
+
+  .header .menu__item {
+    &:not(:last-child) {
+      margin-bottom: 20px;
+    }
+  }
+
+  .header .menu__link {
+    color: #ffffff;
+  }
+
+  .intro__container {
+    min-height: 310px;
+  }
+
+  .intro__content {
+    max-width: 179px;
+    padding-top: 110px;
+  }
+
+  .intro__title {
+    font-size: 15px;
+    margin-bottom: 15px;
+  }
+
+  .intro__text {
+    font-size: 8px;
+  }
+
+  .intro__image {
+    width: 309px;
+    left: 165px;
+  }
+}
+
+@media (max-width: 520.98px) {
+  .footer__container {
+    flex-direction: column;
+    align-items: center;
+    row-gap: 50px;
+  }
+
+  .footer .menu__items {
+    flex-direction: column;
+    align-items: center;
+    row-gap: 22px;
+  }
+
+  .content:not(.content--small) {
+    flex: 0 0 172px;
+  }
+
+  .about__box {
+    padding-bottom: 50px;
+  }
+
+  .about__items {
+    column-gap: 5px;
+    padding-left: 0;
+    align-items: flex-end;
+  }
+
+  .about__img {
+    width: 80px;
+    height: 80px;
+
+    &--center {
+      width: 140px;
+      height: 140px;
+    }
+  }
+  .about__text {
+    display: none;
+  }
+
+  .course__items {
+    column-gap: 10px;
+  }
+  .course__name {
+    margin-bottom: 4px;
+  }
+
+  .sale__container {
+    min-height: 120px;
+  }
+
+  .sale__btn {
+    padding: 11px 16px;
+    font-size: 8px;
+  }
+
+  .contacts {
+    padding: 50px 0;
+  }
+
+  .contacts__image {
+    display: none;
+  }
+
+  .contacts__btn {
+    padding: 15px 13px;
+  }
+}
+
+@media (max-width: 480.98px) {
+  [class*="__container"] {
+    max-width: 460px;
+  }
+}
+
+@media (max-width: 460.98px) {
+  .stages__items {
+    gap: 20px 24px;
+  }
+
+  .stages__item {
+    flex: 0 0 155px;
+    &::before {
+      font-size: 12px;
+    }
+  }
+  .stages__text {
+    width: 72px;
+    font-size: 6px;
+  }
+
+  .stages__img {
+    width: 66px;
+    height: 100px;
+  }
+
+  .course__items {
+    grid-template-columns: 289px;
+    column-gap: 0px;
+    row-gap: 30px;
+  }
+
+  .teacher__items {
+    grid-template-columns: 300px;
+    row-gap: 20px;
+  }
+  .teacher__img {
+    width: 204px;
+    height: 220px;
+  }
+  .teacher__info {
+    max-width: 150px;
+    padding: 14px 8px;
+  }
+  .teacher__name {
+    font-size: 11px;
+    margin-bottom: 5px;
+  }
+  .teacher__text {
+    font-size: 9px;
+  }
+
+  .reviews__card {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .reviews__video {
+    width: 250px;
+    height: 250px;
+  }
+
+  .reviews__info {
+    max-width: 250px;
+    align-items: center;
+  }
+
+  .reviews__text {
+    margin-bottom: 20px;
+  }
+
+  .reviews__btn {
+    align-self: center;
+  }
+
+  .certificates__inner {
+    width: 200px;
+  }
+}
+
+@media (max-width: 420.98px) {
+  .intro__container {
+    min-height: 180px;
+  }
+
+  .intro__content {
+    max-width: 203px;
+    padding-top: 30px;
+  }
+
+  .intro__title {
+    font-size: 18px;
+  }
+
+  .intro__text {
+    font-size: 10px;
+  }
+
+  .intro__btn,
+  .products__btn {
+    padding: 11px 23px;
+  }
+
+  .intro__image {
+    width: 175px;
+    left: 209px;
+  }
+
+  .title {
+    margin-bottom: 10px;
+  }
+
+  .content:not(.content--small) {
+    flex: 0 0 234px;
+    .content__text {
+      font-size: 8px;
+    }
+  }
+
+  .about__box {
+    padding-bottom: 20px;
+    margin-left: 30px;
+  }
+
+  .about__items {
+    justify-content: space-between;
+  }
+
+  .about__item:not(:first-child) {
+    display: none;
+  }
+
+  .products__items {
+    grid-template-columns: repeat(2, 150px);
+    gap: 40px 7px;
+  }
+
+  .products__card {
+    width: 150px;
+  }
+
+  .products__image {
+    margin: 0 4px 4px;
+    width: 141px;
+    height: 176px;
+  }
+  .products__price {
+    font-size: 10px;
+    margin-bottom: 5px;
+  }
+
+  .products__name {
+    font-size: 10px;
+    margin-bottom: 7px;
+  }
+
+  .products__text {
+    font-size: 6px;
+    margin-bottom: 16px;
+  }
+
+  .products__btn {
+    padding: 10px 21px;
+    font-size: 8px;
+  }
+  .questions__item {
+    padding: 9px 5px;
+  }
+
+  .questions__name {
+    font-size: 10px;
+
+    &::after {
+      width: 9px;
+      height: 7px;
+    }
+  }
+
+  .questions__text {
+    font-size: 8px;
+    &.questions__text--active {
+      padding: 10px 0 30px;
+    }
+  }
+}
+
+@media (max-width: 359.98px) {
+  [class*="__container"] {
+    max-width: 340px;
+  }
+
+  .stages__items {
+    gap: 20px 10px;
+  }
+
+  .stages__item {
+    flex: 0 0 140px;
+  }
+
+  .stages__img {
+    width: 60px;
+  }
+}
+
+@media (max-width: 340.98px) {
+  [class*="__container"] {
+    max-width: 340px;
+  }
+
+  .intro__image {
+    width: 115px;
+  }
+}

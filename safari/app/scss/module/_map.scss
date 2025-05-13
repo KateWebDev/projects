@@ -1,0 +1,13 @@
+.map {
+  // .map__container
+  &__container {
+  }
+  // .map__title
+  &__title {
+    margin-bottom: 45px;
+  }
+  iframe {
+    width: 100%;
+    height: clampAd(300, 600);
+  }
+}

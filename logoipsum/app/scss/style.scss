@@ -1,0 +1,160 @@
+@import "components/_resetStyle";
+@import "components/_mixin";
+@import "components/_fonts";
+//@import "../../node_modules/@fancyapps/fancybox/dist/jquery.fancybox";
+
+//Страница
+$widthReportMax: 1440;
+$widthReportMin: 320;
+$maxWidthContainer: 1140px; //максимальная ширина контейнера + padding left + padding right
+$containerPadding: 15px; //внутринние отступы в контейнере
+
+//Шрифт
+$fontFamily: "Mulish", sans-serif;
+$mainColor: #696871; //основной цвет шрифта
+$mainBackGround: #ffffff; //основной цвет фона
+$mainSize: 20;
+$size: $mainSize + px;
+$lineheight: calc(30 / $mainSize);
+$fontWeight: 400;
+
+//Контейнер
+[class*="__container"] {
+  max-width: $maxWidthContainer;
+  margin: 0 auto;
+  padding: 0 $containerPadding;
+}
+
+[class*="__cont-left"] {
+  padding-left: calc((100% - $maxWidthContainer) / 2 + $containerPadding);
+}
+
+[class*="__cont-right"] {
+  padding-right: calc((100% - $maxWidthContainer) / 2 + $containerPadding);
+}
+
+//Бургер меню
+[class*="__burger"] {
+  display: none;
+  flex-direction: column;
+  row-gap: 4px;
+  cursor: pointer;
+
+  span {
+    width: 24px;
+    height: 3px;
+    border-radius: 5px;
+    background: #ffffff;
+    transition: all 0.3s linear;
+  }
+}
+
+/*Для контейнера картинок в карточках - технический класс*/
+[class*="__ibg"] {
+  position: relative;
+  /*Для самих картинок в карточках технический класс*/
+  img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+body {
+  font-family: $fontFamily;
+  background-color: $mainBackGround;
+  color: $mainColor;
+  font-size: clamp(
+    14px,
+    calc(14px + ($mainSize - 14) * ((100vw - 320px) / ($widthReportMax - $widthReportMin))),
+    $size
+  );
+  line-height: $lineheight;
+  font-weight: $fontWeight;
+
+  &.lock {
+    overflow: hidden;
+  }
+}
+
+.hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.arrow {
+  display: inline-block;
+  cursor: pointer;
+  position: absolute;
+  z-index: 2;
+  top: 0;
+  right: 0;
+  width: 0;
+  height: 0;
+  border-top: 7px solid #ffffff;
+  border-left: 7px solid transparent;
+  border-right: 7px solid transparent;
+  transition: all 0.3s linear;
+
+  &--active {
+    top: 0;
+    border-left: 7px solid #ffffff;
+    border-top: 7px solid transparent;
+    border-bottom: 7px solid transparent;
+  }
+}
+
+.main {
+  flex: 1 1 auto;
+}
+
+.logo {
+  // .logo__img
+  &__img {
+  }
+}
+
+.btn {
+  display: inline-block;
+  padding: clamp(13px, calc(13px + (19 - 13) * ((100vw - 320px) / ($widthReportMax - $widthReportMin))), 19px)
+    clamp(20px, calc(20px + (59 - 20) * ((100vw - 320px) / ($widthReportMax - $widthReportMin))), 59px);
+  border-radius: 10px;
+  border: 1px solid currentColor;
+  background: #ff7143;
+  text-align: center;
+  @include font_family;
+  font-size: clamp(14px, calc(14px + (17 - 14) * ((100vw - 320px) / ($widthReportMax - $widthReportMin))), 17px);
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: -0.531px;
+  color: #ffffff;
+  transition: all 0.3s linear;
+
+  @media (any-hover: hover) and (min-width: 992px) {
+    &:hover {
+      background: #ffffff;
+      color: #ff7143;
+    }
+  }
+}
+
+@import "module/_header";
+@import "module/_menu";
+@import "module/_intro";
+@import "module/_clients";
+@import "module/_about";
+@import "module/_advantages";
+@import "module/_pricing";
+@import "module/_tabs";
+@import "module/_footer";
+@import "components/_adaptive";

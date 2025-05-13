@@ -1,0 +1,30 @@
+@function rem($px) {
+  $result: math.div($px, 16) + rem;
+  @return $result;
+}
+
+@function clampAd($min, $max) {
+  $minPx: $min + px;
+  $maxPx: $max + px;
+
+  $result: clamp(
+    $minPx,
+    calc($minPx + ($max - $min) * ((100vw - $widthReportMinPx) / ($widthReportMax - $widthReportMin))),
+    $maxPx
+  );
+
+  @return $result;
+}
+
+@function clampAdRem($min, $max) {
+  $minRem: rem($min);
+  $maxRem: rem($max);
+
+  $result: clamp(
+    $minRem,
+    calc($minRem + ($max - $min) * ((100vw - $widthReportMinPx) / ($widthReportMax - $widthReportMin))),
+    $maxRem
+  );
+
+  @return $result;
+}

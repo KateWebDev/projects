@@ -1,0 +1,54 @@
+.form {
+  padding: 12px 15px 11px clampAd(15, 45);
+  width: 100%;
+  min-height: clampAd(80, 139);
+
+  position: relative;
+
+  background: $white;
+  border-radius: $radius-small;
+
+  display: flex;
+  align-items: center;
+
+  // .form__input
+  &__input {
+    width: 55%;
+    outline: none;
+
+    font-size: clampAd(16, 24);
+    line-height: 1.5;
+    color: $color-dark;
+
+    transition: all 0.3s linear;
+
+    &::placeholder {
+      font-family: "Poppins", sans-serif;
+      font-weight: 500;
+      font-size: clampAd(16, 24);
+      line-height: 1.5;
+      color: $color-dark;
+      opacity: 0.5;
+    }
+
+    &:focus {
+      border-bottom: 1px solid $color-dop;
+    }
+
+    @media (any-hover: hover) {
+      &:hover {
+        border-bottom: 1px solid $color-dop;
+      }
+    }
+  }
+  // .form__btn
+  &__btn {
+    padding: clampAd(15, 34) clampAd(30, 86);
+    border-radius: $radius-small;
+
+    position: absolute;
+    top: 50%;
+    right: 15px;
+    transform: translateY(-50%);
+  }
+}

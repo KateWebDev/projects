@@ -1,0 +1,49 @@
+.map {
+  // .map__container
+  &__container {
+    max-width: 1920px;
+    min-height: clamp(
+      300px,
+      calc(300px + (600 - 300) * ((100vw - 320px) / ($widthReportMax - $widthReportMin))),
+      600px
+    );
+
+    display: flex;
+    align-items: center;
+    gap: 50px clamp(20px, calc(20px + (200 - 20) * ((100vw - 320px) / ($widthReportMax - $widthReportMin))), 200px);
+  }
+  // .map__info
+  &__info {
+    width: 50%;
+    height: 100%;
+    iframe {
+      width: 100%;
+      height: clamp(300px, calc(300px + (600 - 300) * ((100vw - 320px) / ($widthReportMax - $widthReportMin))), 600px);
+    }
+  }
+  // .map__content
+  &__content {
+    padding-right: clamp(
+      120px,
+      calc(120px + (213 - 120) * ((100vw - 320px) / ($widthReportMax - $widthReportMin))),
+      213px
+    );
+    max-width: clamp(400px, calc(400px + (705 - 400) * ((100vw - 320px) / ($widthReportMax - $widthReportMin))), 705px);
+    text-align: center;
+  }
+  // .map__title
+  &__title {
+    span {
+      top: -0.3em;
+      left: 0.3em;
+    }
+    margin-bottom: 14px;
+  }
+  // .map__text
+  &__text {
+    margin-bottom: 35px;
+  }
+  // .map__btn
+  &__btn {
+  }
+}

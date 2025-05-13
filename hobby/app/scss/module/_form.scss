@@ -1,0 +1,30 @@
+.form {
+  width: 100%;
+
+  border: 1px solid $color-accent;
+  border-radius: $radius-small;
+  background: $white;
+
+  display: flex;
+  justify-content: space-between;
+
+  position: relative;
+
+  // .form__input
+  &__input {
+    width: 100%;
+    border-radius: $radius-small;
+    padding: clampAd(10, 25) clampAd(15, 35);
+
+    &::placeholder {
+      font-family: "Gilroy", sans-serif;
+      font-weight: 500;
+      font-size: clampAd(12, 18);
+      line-height: 1.7;
+      color: #c4c4c4;
+    }
+  }
+  // .form__btn
+  &__btn {
+  }
+}

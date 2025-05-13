@@ -1,0 +1,122 @@
+.product {
+  // .product__container
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: clampAd(20, 50);
+  }
+  // .product__types
+  &__types {
+    max-width: clampAd(300, 600);
+    padding: 40px 0 15px;
+    text-align: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 1s ease;
+
+    &.slick-initialized {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    .slick-current {
+      .product__type {
+        @include RobotoSlab700;
+        font-size: clampAd(18, 36);
+        color: $color-accent;
+      }
+    }
+  }
+  // .product__type
+  &__type {
+    @include RobotoSlab400;
+    font-size: clampAd(16, 24);
+    cursor: pointer;
+    margin-bottom: 30px;
+  }
+  // .product__items
+  &__items {
+    max-width: clampAd(300, 600);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 1s ease;
+    padding: 0 0 20px 0;
+
+    &.slick-initialized {
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+  // .product__item
+  &__item {
+  }
+  // .product__decription
+  &__decription {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 30px clampAd(20, 45);
+    margin-bottom: 10px;
+  }
+  // .product__image
+  &__image {
+    max-width: clampAd(180, 260);
+  }
+  // .product__img
+  &__img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+  // .product__content
+  &__content {
+    max-width: 290px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+  }
+  // .product__content-item
+  &__content-item {
+  }
+  // .product__name
+  &__name {
+    @include RobotoSlab400;
+    font-size: clampAd(14, 18);
+    color: $color-accent;
+    margin-bottom: 10px;
+  }
+  // .product__info
+  &__info {
+  }
+  // .product__title
+  &__title {
+    @include RobotoSlab400;
+    font-size: clampAd(16, 24);
+    color: $color-accent;
+    margin-bottom: 20px;
+  }
+  // .product__text
+  &__text {
+    margin-bottom: 25px;
+  }
+  // .product__btn
+  &__btn {
+  }
+  &__buttons {
+    position: relative;
+    z-index: 20;
+  }
+
+  // .product__button
+  &__button {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+
+    svg {
+      fill: $color-accent;
+    }
+  }
+}

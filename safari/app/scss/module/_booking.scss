@@ -1,0 +1,16 @@
+.booking {
+  background: #eaeaea;
+  padding: clampAd(50, 75) 0;
+  // .booking__container
+  &__container {
+  }
+  // .booking__title
+  &__title {
+    margin-bottom: 43px;
+  }
+  // .booking__form
+  &__form {
+    max-width: 832px;
+    margin: 0 auto;
+  }
+}

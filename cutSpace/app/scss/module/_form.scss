@@ -1,0 +1,52 @@
+.form {
+  padding: clampAd(10, 18) clampAd(10, 28);
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+  column-gap: clampAd(10, 30);
+
+  border-radius: $radius-big;
+  box-shadow: $shadow;
+  background: $white;
+
+  position: relative;
+
+  // .form__label
+  &__label {
+    width: clampAd(16, 24);
+    height: clampAd(13, 19);
+    cursor: pointer;
+
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+  // .form__input
+  &__input {
+    width: 50%;
+    outline: none;
+    line-height: 1.5;
+    border-bottom: 1px solid transparent;
+
+    &::placeholder {
+      font-family: "Poppins", sans-serif;
+      font-weight: 400;
+      font-size: clampAd(12, 16);
+      line-height: 1.5;
+      color: $color-light-1;
+    }
+
+    &:focus {
+      border-color: $color-accent;
+    }
+  }
+  // .form__btn
+  &__btn {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+  }
+}

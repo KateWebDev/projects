@@ -1,0 +1,114 @@
+<!--=include header.html -->
+<main class="main">
+
+  <section class="cart">
+    <div class="cart__container">
+      <h1 class="cart__title title title--small">
+        Your shopping cart
+      </h1>
+      <div class="cart__inner">
+        <table class="cart__table table">
+          <thead class="table__thead">
+            <tr class="table__tr">
+              <th class="table__name">Product</th>
+              <th class="table__name">Quantity</th>
+              <th class="table__name">Total</th>
+            </tr>
+          </thead>
+          <tbody class="table__tbody">
+            <tr class="table__tr">
+              <td class="table__td">
+                <div class="table__block">
+                  <picture>
+                    <source type='image/avif' srcset='../images/main/cart/1.avif, ../images/main/cart/1_2x.avif 2x'>
+                    <source type='image/webp' srcset='../images/main/cart/1.webp, ../images/main/cart/1_2x.webp 2x'>
+                    <img class="table__img" src="../images/main/cart/1.jpg" srcset="../images/main/cart/1_2x.jpg 2x"
+                      alt="" loading="lazy" width="109" height="134">
+                  </picture>
+                  <div class="table__content">
+                    <h5 class="table__title">
+                      Graystone vase
+                    </h5>
+                    <p class="table__text">
+                      A&nbsp;timeless ceramic vase with a&nbsp;tri color grey glaze.
+                    </p>
+                    <span class="table__price">
+                      £85
+                    </span>
+                  </div>
+                </div>
+              </td>
+              <td class="table__td">
+                <div class="table__counter counter">
+                  <button class="counter__button  counter__button--minus" aria-label="reduce count products"
+                    title="reduce count products" type="button" disabled> - </button>
+                  <input class="counter__count-product" type="number" value="1" aria-label="count product"
+                    title="count product" size="4" min="1" max="10">
+                  <button class="counter__button counter__button--plus" aria-label="add count products"
+                    title="add count products" type="button"> +
+                  </button>
+                </div>
+              </td>
+              <td class="table__td">
+                <span class="table__all-price">
+                  £85
+                </span>
+              </td>
+            </tr>
+            <tr class="table__tr">
+              <td class="table__td">
+                <div class="table__block">
+                  <picture>
+                    <source type='image/avif' srcset='../images/main/cart/2.avif, ../images/main/cart/2_2x.avif 2x'>
+                    <source type='image/webp' srcset='../images/main/cart/2.webp, ../images/main/cart/2_2x.webp 2x'>
+                    <img class="table__img" src="../images/main/cart/2.jpg" srcset="../images/main/cart/2_2x.jpg 2x"
+                      alt="" loading="lazy" width="109" height="134">
+                  </picture>
+                  <div class="table__content">
+                    <h5 class="table__title">
+                      Basic white vase
+                    </h5>
+                    <p class="table__text">
+                      Beautiful and simple this is&nbsp;one for the classics collections
+                    </p>
+                    <span class="table__price">
+                      £85
+                    </span>
+                  </div>
+                </div>
+              </td>
+              <td class="table__td">
+                <div class="table__counter counter">
+                  <button class="counter__button  counter__button--minus" aria-label="reduce count products"
+                    title="reduce count products" type="button" disabled> - </button>
+                  <input class="counter__count-product" type="number" value="1" aria-label="count product"
+                    title="count product" size="4" min="1" max="10">
+                  <button class="counter__button counter__button--plus" aria-label="add count products"
+                    title="add count products" type="button"> +
+                  </button>
+                </div>
+              </td>
+              <td class="table__td">
+                <span class="table__all-price">
+                  £85
+                </span>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <div class="cart__dop">
+          <p class="cart__info">
+            Taxes and shipping are calculated at&nbsp;checkout
+          </p>
+          <p class="cart__all-price">
+            Subtotal <span class="cart__data">£210</span>
+          </p>
+        </div>
+        <a class="cart__btn btn btn--dark" href="#">
+          Go&nbsp;to&nbsp;checkout
+        </a>
+      </div>
+    </div>
+  </section>
+</main>
+<!--=include footer.html -->

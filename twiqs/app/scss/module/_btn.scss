@@ -1,0 +1,54 @@
+.btn {
+  padding: 9px clampAd(15, 28) 12px;
+  border: 1px solid $mainColor;
+  border-radius: 40px;
+  background: $mainColor;
+
+  display: inline-flex;
+  align-items: center;
+  column-gap: 15px;
+  white-space: nowrap;
+
+  font-size: 15px;
+  line-height: 1.68;
+  color: $color-light;
+
+  transition: all 0.3s linear;
+
+  &::after {
+    content: url('data:image/svg+xml;utf8,<svg width = "32" height = "14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M23.429 0c0 3.5 5.714 5.25 5.714 7s-5.714 2.917-5.714 7m5.714-7H1.714" stroke="%23F5EEE6"/></svg>');
+    width: 32px;
+    height: 14px;
+  }
+
+  @media (any-hover: hover) {
+    &:hover {
+      background: $color-light;
+      color: $mainColor;
+
+      &::after {
+        content: url('data:image/svg+xml;utf8,<svg fill="none" width = "32" height = "14" xmlns="http://www.w3.org/2000/svg"><path d="M23.429 0c0 3.5 5.714 5.25 5.714 7s-5.714 2.917-5.714 7m5.714-7H1.714" stroke="%23212806"/></svg>');
+      }
+    }
+  }
+
+  &--reverse {
+    background: $white;
+    color: $mainColor;
+
+    &::after {
+      content: url('data:image/svg+xml;utf8,<svg fill="none" width = "32" height = "14" xmlns="http://www.w3.org/2000/svg"><path d="M23.429 0c0 3.5 5.714 5.25 5.714 7s-5.714 2.917-5.714 7m5.714-7H1.714" stroke="%23212806"/></svg>');
+    }
+
+    @media (any-hover: hover) {
+      &:hover {
+        background: $mainColor;
+        color: $color-light;
+
+        &::after {
+          content: url('data:image/svg+xml;utf8,<svg width = "32" height = "14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M23.429 0c0 3.5 5.714 5.25 5.714 7s-5.714 2.917-5.714 7m5.714-7H1.714" stroke="%23F5EEE6"/></svg>');
+        }
+      }
+    }
+  }
+}

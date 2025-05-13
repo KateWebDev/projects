@@ -1,0 +1,12 @@
+.main-title {
+  font-weight: 800;
+  font-size: clampAd(40, 80);
+  line-height: 1.175;
+}
+
+.title {
+  font-weight: 800;
+  font-size: clampAd(32, 80);
+  line-height: 1.175;
+  color: $color-dark;
+}

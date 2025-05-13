@@ -1,0 +1,31 @@
+.btn {
+  padding: 20px clampAd(20, 35);
+  background: $color-bg-dark;
+  border-radius: $radius;
+  font-size: 20px;
+  line-height: 1.4;
+  text-align: center;
+  color: $white;
+  white-space: nowrap;
+  border: $border;
+  transition: all 0.3s linear;
+
+  @media (any-hover: hover) {
+    &:hover {
+      background: transparent;
+      color: $black;
+    }
+  }
+
+  &--transparent {
+    background: transparent;
+    color: $black;
+
+    @media (any-hover: hover) {
+      &:hover {
+        background: $color-bg-dark;
+        color: $white;
+      }
+    }
+  }
+}

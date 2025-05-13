@@ -1,0 +1,198 @@
+@import "components/_resetStyle";
+//@import "components/_popup";
+//@import "../../node_modules/swiper/swiper-bundle"; // swiper
+@import "../../node_modules/slick-carousel/slick/slick";
+//@import "../../node_modules/@fancyapps/fancybox/dist/jquery.fancybox";
+//@import "../../node_modules/rateyo/src/jquery.rateyo";
+//@import "../../node_modules/animate.css/animate";
+
+//Страница
+$widthReportMax: 1440;
+$widthReportMin: 320;
+$maxWidthContainer: 1140px; //максимальная ширина контейнера + padding left + padding right
+$containerPadding: 15px; //внутринние отступы в контейнере
+
+//Шрифт
+$fontFamily: "Stem", sans-serif;
+$mainColor: rgba(0, 0, 0, 0.7); //основной цвет шрифта
+$mainBackGround: #ffffff; //основной цвет фона
+$mainSize: 18;
+$size: $mainSize + px;
+$lineheight: calc(24 / $mainSize);
+$fontWeight: 500;
+
+$color-accent: #ff5545;
+$color-accent-bg: #f7f8fa;
+
+//Контейнер
+[class*="__container"] {
+  max-width: $maxWidthContainer;
+  margin: 0 auto;
+  padding: 0 $containerPadding;
+}
+
+[class*="__cont-left"] {
+  padding-left: calc((100% - $maxWidthContainer) / 2 + $containerPadding);
+}
+
+[class*="__cont-right"] {
+  padding-right: calc((100% - $maxWidthContainer) / 2 + $containerPadding);
+}
+
+//Бургер меню
+[class*="__burger"] {
+  display: none;
+  flex-direction: column;
+  row-gap: 4px;
+  cursor: pointer;
+
+  span {
+    width: 24px;
+    height: 3px;
+    border-radius: 5px;
+    background: #000000;
+    transition: all 0.3s linear;
+  }
+}
+
+/*Для контейнера картинок в карточках - технический класс*/
+[class*="__ibg"] {
+  position: relative;
+  /*Для самих картинок в карточках технический класс*/
+  img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+body {
+  font-family: $fontFamily;
+  background-color: $mainBackGround;
+  color: $mainColor;
+  font-size: clamp(
+    14px,
+    calc(14px + ($mainSize - 14) * ((100vw - 320px) / ($widthReportMax - $widthReportMin))),
+    $size
+  );
+  line-height: $lineheight;
+  font-weight: $fontWeight;
+
+  &.lock {
+    overflow: hidden;
+  }
+}
+
+.hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.arrow {
+  display: inline-block;
+  cursor: pointer;
+  position: absolute;
+  z-index: 2;
+  top: 0;
+  right: 0;
+  width: 0;
+  height: 0;
+  border-top: 7px solid #ffffff;
+  border-left: 7px solid transparent;
+  border-right: 7px solid transparent;
+  transition: all 0.3s linear;
+
+  &--active {
+    top: 0;
+    border-left: 7px solid #ffffff;
+    border-top: 7px solid transparent;
+    border-bottom: 7px solid transparent;
+  }
+}
+
+.main {
+  flex: 1 1 auto;
+}
+
+.logo {
+  max-width: 150px;
+  height: 32px;
+  // .logo__img
+  &__img {
+    width: 100%;
+    object-fit: cover;
+  }
+}
+
+.btn {
+  display: inline-block;
+  min-width: clamp(100px, calc(100px + (120 - 100) * ((100vw - 320px) / ($widthReportMax - $widthReportMin))), 120px);
+  padding: 12px;
+  border-radius: 6px;
+  background: $color-accent;
+  text-align: center;
+  color: #ffffff;
+  font-size: clamp(15px, calc(15px + (18 - 15) * ((100vw - 320px) / ($widthReportMax - $widthReportMin))), 18px);
+  line-height: 1.33;
+  border: 1px solid transparent;
+  transition: all 0.3s linear;
+
+  @media (any-hover: hover) and (min-width: 992px) {
+    &:hover {
+      background: #ffffff;
+      color: #ff5545;
+      border: 1px solid $color-accent;
+    }
+  }
+
+  &--reverse {
+    border: 1px solid rgba(0, 0, 0, 0.06);
+    background: #ffffff;
+    color: $color-accent;
+    box-shadow:
+      0px 4px 16px 0px rgba(0, 0, 0, 0.04),
+      0px 0px 4px 0px rgba(0, 0, 0, 0.04);
+
+    @media (any-hover: hover) and (min-width: 992px) {
+      &:hover {
+        background: $color-accent;
+        color: #ffffff;
+      }
+    }
+  }
+}
+
+.title {
+  color: #000000;
+  font-size: clamp(30px, calc(30px + (64 - 30) * ((100vw - 320px) / ($widthReportMax - $widthReportMin))), 64px);
+  font-weight: 700;
+  line-height: 1;
+}
+
+
+
+@import "module/_header";
+@import "module/_menu";
+@import "module/_intro";
+@import "module/_interests";
+@import "module/_about";
+@import "module/_education";
+@import "module/_call";
+@import "module/_work";
+@import "module/_consultation";
+@import "module/_timer";
+@import "module/_clients";
+@import "module/_reviews";
+@import "module/_contacts";
+@import "module/_footer";
+@import "components/_adaptive";

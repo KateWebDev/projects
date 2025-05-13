@@ -1,0 +1,16 @@
+.btn {
+  display: inline-block;
+  padding: 12px 31px;
+  border-radius: 30px;
+  background: $color-accent;
+  font-size: clampAd(14, 18);
+  color: $white;
+  transition: all 0.3s linear;
+
+  @media (any-hover: hover) {
+    &:hover {
+      background: $white;
+      color: $color-accent;
+    }
+  }
+}

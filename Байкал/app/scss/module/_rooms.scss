@@ -1,0 +1,112 @@
+.rooms {
+  padding: clamp(30px, calc(30px + (50 - 30) * ((100vw - 320px) / ($widthReportMax - $widthReportMin))), 50px) 0;
+
+  // .rooms__container
+  &__container {
+    position: relative;
+    &::before,
+    &::after {
+      position: absolute;
+      bottom: 130px;
+    }
+
+    &::before {
+      content: url(../images/main/rooms/man.svg);
+      left: 0;
+    }
+
+    &::after {
+      content: url(../images/main/rooms/woman.svg);
+      right: 0;
+    }
+  }
+  // .rooms__title
+  &__title {
+  }
+  // .rooms__items
+  &__items {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px 30px;
+  }
+  // .rooms__item
+  &__item {
+    width: clamp(272px, calc(272px + (285 - 272) * ((100vw - 320px) / ($widthReportMax - $widthReportMin))), 285px);
+    border-radius: 20px;
+    border: 3px solid $accent-color;
+    background: #ffffff;
+    min-height: clamp(
+      476px,
+      calc(476px + (570 - 476) * ((100vw - 320px) / ($widthReportMax - $widthReportMin))),
+      570px
+    );
+    padding: clamp(30px, calc(30px + (40 - 30) * ((100vw - 320px) / ($widthReportMax - $widthReportMin))), 40px)
+      clamp(18px, calc(18px + (27 - 18) * ((100vw - 320px) / ($widthReportMax - $widthReportMin))), 27px);
+  }
+  // .rooms__card
+  &__card {
+    text-align: center;
+  }
+  // .rooms__icon
+  &__icon {
+    margin-bottom: clamp(20px, calc(20px + (30 - 20) * ((100vw - 320px) / ($widthReportMax - $widthReportMin))), 30px);
+  }
+  // .rooms__name
+  &__name {
+    color: $accent-color;
+    font-family: "Lora", serif;
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: 0.6px;
+    margin-bottom: clamp(20px, calc(20px + (30 - 20) * ((100vw - 320px) / ($widthReportMax - $widthReportMin))), 30px);
+  }
+  // .rooms__list
+  &__list {
+    margin-bottom: clamp(20px, calc(20px + (30 - 20) * ((100vw - 320px) / ($widthReportMax - $widthReportMin))), 30px);
+  }
+  // .rooms__point
+  &__point {
+    text-align-last: left;
+    position: relative;
+    padding-left: 30px;
+    letter-spacing: 0.48px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 0;
+      transform: translateY(-50%);
+      width: 10px;
+      height: 10px;
+      background: $mainColor;
+      border-radius: 50%;
+    }
+    &:not(:last-child) {
+      margin-bottom: 10px;
+    }
+  }
+  // .rooms__pice
+  &__pice {
+    color: $button-color;
+    font-family: "Lora", serif;
+    font-size: 25px;
+    font-weight: 700;
+    letter-spacing: 0.75px;
+
+    &-title {
+      color: $accent-color;
+      font-size: 16px;
+      line-height: 1;
+      letter-spacing: 0.48px;
+      display: block;
+      margin-bottom: 10px;
+    }
+
+    &-text {
+      font-size: 20px;
+      letter-spacing: 0.6px;
+    }
+  }
+}

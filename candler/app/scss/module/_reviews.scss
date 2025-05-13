@@ -1,0 +1,82 @@
+.reviews {
+  padding: 100px 0 150px;
+
+  // .reviews__container
+  &__container {
+    display: flex;
+    gap: 30px 0px;
+  }
+  // .reviews__content
+  &__content {
+  }
+  // .reviews__inner
+  &__inner {
+  }
+  // .reviews__items
+  &__items {
+    display: grid;
+  }
+  // .reviews__item
+  &__item {
+  }
+  // .reviews__card
+  &__card {
+    margin-left: 16px;
+    display: flex;
+    gap: 12px 16px;
+  }
+  // .reviews__video
+  &__video {
+    display: inline-block;
+    width: 380px;
+    height: 370px;
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 95px;
+      aspect-ratio: 1;
+      border-radius: 50%;
+      background: url(../images/main/reviews/play.svg) center/cover no-repeat;
+    }
+  }
+  // .reviews__img
+  &__img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  // .reviews__info
+  &__info {
+    max-width: 372px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+  }
+  // .reviews__icon
+  &__icon {
+    width: 25px;
+    height: 25px;
+    margin-bottom: 12px;
+  }
+  // .reviews__name
+  &__name {
+    font-family: "Yeseva One", serif;
+    font-size: 16px;
+    margin-bottom: 15px;
+  }
+  // .reviews__text
+  &__text {
+    margin-bottom: 63px;
+  }
+  // .reviews__btn
+  &__btn {
+    padding: 20px 35px;
+    align-self: flex-end;
+  }
+}

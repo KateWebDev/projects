@@ -1,0 +1,74 @@
+.menu {
+  // .menu__items
+  &__items {
+    display: flex;
+    align-items: center;
+    gap: 34px clampAd(20, 39);
+  }
+  // .menu__item
+  &__item {
+    // .menu__item--mobile
+    &--mobile {
+      display: none;
+    }
+  }
+  // .menu__action
+  &__action {
+    display: flex;
+    align-items: center;
+    column-gap: 10px;
+
+    &::before {
+      content: "";
+      width: 16px;
+      height: 16px;
+      background: $color-accent;
+    }
+
+    &::before {
+      content: "";
+      width: 16px;
+      height: 16px;
+      background: $color-accent;
+    }
+
+    // .menu__action--phone
+    &--phone {
+      &::before {
+        background: url(../../images/icons/phone.svg) center/cover no-repeat;
+      }
+    }
+    // .menu__action--mail
+    &--mail {
+      &::before {
+        width: 21px;
+        background: url(../../images/icons/mail.svg) center/cover no-repeat;
+      }
+    }
+  }
+  // .menu__socials
+  &__socials {
+  }
+  // .menu__link
+  &__link {
+    line-height: 1.27;
+    color: $color-text;
+    white-space: nowrap;
+
+    @media (any-hover: hover) {
+      &:hover {
+        color: $color-accent;
+      }
+    }
+    &--active {
+      cursor: default;
+      color: $color-accent;
+
+      @media (any-hover: hover) {
+        &:hover {
+          color: $color-accent;
+        }
+      }
+    }
+  }
+}

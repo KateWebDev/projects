@@ -1,0 +1,51 @@
+.start {
+  padding: clampAd(40, 80) 0;
+
+  // .start__container
+  &__container {
+    background: $color-dop-2;
+  }
+  // .start__content
+  &__content {
+    max-width: 610px;
+    padding: clampAd(30, 60) clampAd(35, 64);
+  }
+  // .start__title
+  &__title {
+    margin-bottom: 18px;
+  }
+  // .start__text
+  &__text {
+    font-size: clampAd(14, 18);
+    letter-spacing: 0.01em;
+    margin-bottom: clampAd(20, 33);
+  }
+  // .start__btn
+  &__btn {
+    margin-bottom: 20px;
+  }
+  // .start__list
+  &__list {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: clampAd(20, 32);
+  }
+  // .start__point
+  &__point {
+    display: inline-flex;
+    align-items: center;
+    gap: 3px;
+
+    font-size: clampAd(11, 13);
+    line-height: 1.6;
+    letter-spacing: 0.02em;
+    color: $color-dop-text;
+
+    svg {
+      width: 15px;
+      height: 10px;
+      stroke: currentColor;
+    }
+  }
+}

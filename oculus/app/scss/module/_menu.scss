@@ -1,0 +1,26 @@
+.menu {
+  // .menu__items
+  &__items {
+    display: flex;
+    gap: 30px 20px;
+  }
+  // .menu__item
+  &__item {
+  }
+  // .menu__link
+  &__link {
+    white-space: nowrap;
+    text-transform: uppercase;
+    transition: all 0.3s linear;
+
+    &--active {
+      cursor: default;
+    }
+
+    @media (any-hover: hover) {
+      &:hover {
+        text-shadow: 0 0 1px currentColor;
+      }
+    }
+  }
+}

@@ -1,0 +1,64 @@
+.accardeon {
+  // .accardeon__container
+  &__container {
+  }
+  // .accardeon__items
+  &__items {
+    display: flex;
+    flex-direction: column;
+    row-gap: clampAd(20, 30);
+  }
+  // .accardeon__item
+  &__item {
+    background: $white;
+    padding: clampAd(20, 30) clampAd(30, 70) clampAd(20, 30) clampAd(15, 23);
+    overflow: hidden;
+
+    display: flex;
+    flex-direction: column;
+    row-gap: 0px;
+
+    transition: all 0.3s linear;
+
+    position: relative;
+
+    &::after {
+      content: "+";
+      position: absolute;
+      top: clampAd(15, 23);
+      right: clampAd(15, 52);
+
+      font-size: clampAd(18, 28);
+      color: #707070;
+
+      pointer-events: none;
+      transition: all 0.3s linear;
+    }
+
+    &--active {
+      row-gap: clampAd(12, 15);
+
+      &::after {
+        content: "-";
+      }
+    }
+  }
+  // .accardeon__name
+  &__name {
+    font-size: clampAd(14, 18);
+    text-align: left;
+    user-select: none;
+    transition: all 0.3s linear;
+  }
+  // .accardeon__text
+  &__text {
+    color: #646464;
+    opacity: 0;
+    user-select: none;
+    transition: all 0.3s linear;
+
+    &--active {
+      opacity: 1;
+    }
+  }
+}

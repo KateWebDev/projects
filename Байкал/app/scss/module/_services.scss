@@ -1,0 +1,55 @@
+.services {
+  padding: clamp(30px, calc(30px + (50 - 30) * ((100vw - 320px) / ($widthReportMax - $widthReportMin))), 50px) 0;
+
+  // .services__container
+  &__container {
+  }
+  // .services__title
+  &__title {
+  }
+  // .services__items
+  &__items {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    row-gap: clamp(35px, calc(35px + (50 - 35) * ((100vw - 320px) / ($widthReportMax - $widthReportMin))), 50px);
+  }
+  // .services__item
+  &__item {
+    display: flex;
+    justify-content: center;
+    flex: 1 1 33.33%;
+  }
+  // .services__card
+  &__card {
+    text-align: center;
+    width: clamp(126px, calc(126px + (237 - 126) * ((100vw - 320px) / ($widthReportMax - $widthReportMin))), 237px);
+  }
+  // .services__icon
+  &__icon {
+    width: clamp(36px, calc(36px + (65 - 36) * ((100vw - 320px) / ($widthReportMax - $widthReportMin))), 65px);
+    height: clamp(36px, calc(36px + (65 - 36) * ((100vw - 320px) / ($widthReportMax - $widthReportMin))), 65px);
+    margin-bottom: clamp(10px, calc(10px + (20 - 10) * ((100vw - 320px) / ($widthReportMax - $widthReportMin))), 20px);
+  }
+  // .services__name
+  &__name {
+    color: $accent-color;
+    font-family: "Lora", serif;
+    font-size: clamp(12px, calc(12px + (20 - 12) * ((100vw - 320px) / ($widthReportMax - $widthReportMin))), 20px);
+    font-weight: 700;
+    letter-spacing: clamp(
+      0.36px,
+      calc(0.36px + (0.6 - 0.36) * ((100vw - 320px) / ($widthReportMax - $widthReportMin))),
+      0.6px
+    );
+    margin-bottom: clamp(5px, calc(5px + (10 - 5) * ((100vw - 320px) / ($widthReportMax - $widthReportMin))), 10px);
+  }
+  // .services__text
+  &__text {
+    letter-spacing: clamp(
+      0.3px,
+      calc(0.3px + (0.42 - 0.3) * ((100vw - 320px) / ($widthReportMax - $widthReportMin))),
+      0.42px
+    );
+  }
+}

@@ -1,0 +1,65 @@
+.interests {
+  padding: clamp(60px, calc(60px + (120 - 60) * ((100vw - 320px) / ($widthReportMax - $widthReportMin))), 120px) 0;
+  background: $color-accent-bg;
+
+  // .interests__container
+  &__container {
+    text-align: center;
+  }
+  // .interests__content
+  &__content {
+    max-width: 720px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+    margin: 0 auto clamp(24px, calc(24px + (64 - 24) * ((100vw - 320px) / ($widthReportMax - $widthReportMin))), 64px);
+  }
+  // .interests__subtitle
+  &__subtitle {
+    color: $color-accent;
+    font-size: clamp(18px, calc(18px + (28 - 18) * ((100vw - 320px) / ($widthReportMax - $widthReportMin))), 28px);
+    line-height: 1.4;
+  }
+  // .interests__title
+  &__title {
+  }
+  // .interests__text
+  &__text {
+    max-width: 650px;
+    font-size: clamp(14px, calc(14px + (24 - 14) * ((100vw - 320px) / ($widthReportMax - $widthReportMin))), 24px);
+  }
+  // .interests__items
+  &__items {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+  }
+  // .interests__item
+  &__item {
+    flex: 0 1 350px;
+    min-height: clamp(
+      280px,
+      calc(280px + (380 - 280) * ((100vw - 320px) / ($widthReportMax - $widthReportMin))),
+      380px
+    );
+    padding: 32px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    border-radius: 16px;
+    color: #ffffff;
+  }
+  // .interests__name
+  &__name {
+    font-size: clamp(18px, calc(18px + (28 - 18) * ((100vw - 320px) / ($widthReportMax - $widthReportMin))), 28px);
+    line-height: 1.4;
+    margin-bottom: 10px;
+  }
+  // .interests__info
+  &__info {
+    font-weight: 700;
+    opacity: 0.8;
+  }
+}

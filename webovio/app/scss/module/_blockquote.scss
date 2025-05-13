@@ -1,0 +1,73 @@
+.blockquote {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  row-gap: clampAd(25, 50);
+  padding: clampAd(30, 40) 8px clampAd(30, 60) clampAd(8, 40);
+  box-shadow: 0 100px 100px 0 rgba(0, 0, 0, 0.15);
+  background: $white;
+
+  &--radius {
+    border-radius: 8px;
+  }
+
+  &--small {
+    row-gap: clampAd(12, 24);
+
+    .blockquote__text {
+      font-size: clampAd(14, 16);
+    }
+    .blockquote__img {
+      max-width: 46px;
+    }
+    .blockquote__content {
+      row-gap: 4px;
+    }
+    .blockquote__name {
+      font-size: clampAd(14, 16);
+    }
+    .blockquote__work {
+      font-size: clampAd(12, 14);
+    }
+  }
+
+  // .blockquote__text
+  &__text {
+    font-style: italic;
+    font-size: clampAd(18, 24);
+    color: $color-title;
+  }
+  // .blockquote__author
+  &__author {
+    display: flex;
+    align-items: center;
+    gap: clampAd(15, 30);
+  }
+  // .blockquote__img
+  &__img {
+    max-width: clampAd(50, 90);
+    aspect-ratio: 1;
+    border-radius: 50%;
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+  // .blockquote__content
+  &__content {
+    display: flex;
+    flex-direction: column;
+    row-gap: 6px;
+  }
+  // .blockquote__name
+  &__name {
+    font-weight: 700;
+    font-size: clampAd(16, 22);
+    color: $color-title;
+  }
+  // .blockquote__work
+  &__work {
+  }
+}

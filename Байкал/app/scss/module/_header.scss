@@ -1,0 +1,134 @@
+.header {
+  padding: clamp(20px, calc(20px + (30 - 20) * ((100vw - 320px) / ($widthReportMax - $widthReportMin))), 30px) 0;
+
+  &--fixed {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    overflow: auto;
+    background: #ffffff;
+    z-index: 2;
+  }
+  // .header__container
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    z-index: 2;
+  }
+  // .header__logo
+  &__logo {
+    position: relative;
+    z-index: 1;
+  }
+  // .header__nav
+  &__nav {
+  }
+  // .header__menu
+  &__menu {
+  }
+  // .header__btn
+  &__btn {
+    position: relative;
+    z-index: 1;
+  }
+  // .header__burger
+  &__burger {
+    position: relative;
+    z-index: 1;
+  }
+}
+.logo {
+  width: clamp(108px, calc(108px + (160 - 108) * ((100vw - 320px) / ($widthReportMax - $widthReportMin))), 160px);
+  // .logo__img
+  &__img {
+    width: 100%;
+    object-fit: cover;
+  }
+}
+
+.menu {
+  display: flex;
+  margin: 0 -7px;
+
+  // .menu__item
+  &__item {
+    padding: 0 7px;
+  }
+  // .menu__link
+  &__link {
+    padding: 0 8px 8px;
+    position: relative;
+    letter-spacing: 0.54px;
+    white-space: nowrap;
+    border-bottom: 9px solid transparent;
+    transition: all 0.3s linear;
+
+    &--active {
+      color: $accent-color;
+      font-weight: 800;
+      border-image: url(../images/wavy.svg) 9;
+    }
+
+    @media (any-hover: hover) and (min-width: 992px) {
+      &:hover {
+        color: $accent-color;
+        font-weight: 800;
+        border-image: url(../images/wavy.svg) 9;
+      }
+    }
+  }
+  // .menu__actions
+  &__actions {
+    display: none;
+  }
+  // .menu__btn
+  &__btn {
+    margin: 40px 0;
+  }
+  // .menu__address
+  &__address {
+    font-weight: 700;
+    letter-spacing: 0.8px;
+    margin-bottom: 15px;
+  }
+  // .menu__address-text
+  &__address-text {
+    display: block;
+
+    margin-top: 5px;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    letter-spacing: 0.36px;
+  }
+  // .menu__phone
+  &__phone {
+    margin-bottom: 5px;
+
+    & + .menu__phone {
+      margin-bottom: 15px;
+    }
+  }
+  // .menu__phone-link
+  &__phone-link {
+    color: #000000;
+    font-size: 20px;
+    letter-spacing: 0.6px;
+  }
+  // .menu__social
+  &__social {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+
+    &:not(:last-child) {
+      margin-right: 5px;
+    }
+  }
+  // .menu__soial-link
+  &__soial-link {
+  }
+}

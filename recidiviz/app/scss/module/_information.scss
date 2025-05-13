@@ -1,0 +1,57 @@
+.information {
+  padding: clampAd(40, 88) 0 clampAd(70, 141);
+  background: $color-bg-light;
+
+  // .information__image
+  &__image {
+    min-height: 80svh;
+    background: image-set(
+        url("../images/main/about/bg.avif") type("image/avif"),
+        url("../images/main/about/bg_2x.avif") 2x type("image/avif"),
+        url("../images/main/about/bg.webp") type("image/webp"),
+        url("../images/main/about/bg_2x.webp") 2x type("image/webp"),
+        url("../images/main/about/bg.jpg"),
+        url("../images/main/about/bg_2x.jpg") 2x
+      )
+      center/cover no-repeat;
+    background-attachment: fixed;
+  }
+  // .information__container
+  &__container {
+    padding-top: 50px;
+  }
+  // .information__data
+  &__data {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 40px;
+  }
+  // .information__title
+  &__title {
+    max-width: 420px;
+  }
+  // .information__items
+  &__items {
+    max-width: 560px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(clampAd(200, 250), 1fr));
+    grid-auto-flow: dense;
+    gap: clampAd(30, 48) clampAd(30, 36);
+  }
+  // .information__item
+  &__item {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    row-gap: 4px;
+  }
+  // .information__name
+  &__name {
+    color: $color-titlte;
+  }
+  // .information__text
+  &__text {
+  }
+}

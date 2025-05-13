@@ -1,0 +1,26 @@
+.title {
+  font-size: clampAd(30, 52);
+  line-height: 1.25;
+  color: $color-text;
+
+  span {
+    @include SourceSans700;
+    color: $color-accent2;
+  }
+
+  &--center {
+    text-align: center;
+  }
+
+  &--color {
+    font-size: clampAd(23, 52);
+    color: $white;
+  }
+  &--small-adaptive {
+    font-size: clampAd(23, 52);
+  }
+
+  &--small {
+    font-size: clampAd(23, 32);
+  }
+}

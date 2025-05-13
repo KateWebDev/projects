@@ -1,0 +1,143 @@
+@import "components/fonts";
+@import "components/mixin";
+@import "components/resetStyle";
+@import "../../node_modules/swiper/swiper-bundle";
+@import "../../node_modules/@fancyapps/fancybox/dist/jquery.fancybox";
+
+//Страница
+$widthReportMax: 1920;
+$widthReportMin: 320;
+$maxWidthContainer: 1260px; //максимальная ширина контейнера + padding left + padding right
+$containerPadding: 15px; //внутринние отступы в контейнере
+
+//Шрифт
+$fontFamily: "Lato", sans-serif;
+$mainColor: #424551; //основной цвет шрифта
+$mainBackGround: #ffffff; //основной цвет фона
+$white: #ffffff;
+$black: #000000;
+$mainSize: 16;
+$size: $mainSize + px;
+$lineheight: 1.6;
+$fontWeight: 400;
+
+$color-accent: #ff3f3a;
+$color-gradient: linear-gradient(45deg, #ff3f3a 0%, #f75e05 100%);
+$color-dark: #1e212c;
+$color-dop: #ffcf2d;
+$color-border: #e5e8ed;
+$color-bg-dop: #f4f5f6;
+
+$color-1: #03cea4;
+$color-2: #5a87fc;
+$color-3: #f89828;
+$color-4: #f52f6e;
+$color-5: #7772f1;
+
+//Контейнер
+[class*="__container"] {
+  max-width: $maxWidthContainer;
+  margin: 0 auto;
+  padding: 0 $containerPadding;
+}
+
+//Бургер меню
+[class*="__burger"] {
+  display: none;
+  flex-direction: column;
+  row-gap: 4px;
+  cursor: pointer;
+
+  span {
+    width: 24px;
+    height: 3px;
+    border-radius: 5px;
+    background: $color-dark;
+    transition: all 0.3s linear;
+  }
+
+  &.header__burger--active {
+    span {
+      &:nth-child(1) {
+        display: none;
+      }
+      &:nth-child(2) {
+        transform: rotate(45deg);
+      }
+      &:nth-child(3) {
+        transform: rotate(-45deg) translateY(-5px) translateX(5px);
+      }
+    }
+  }
+}
+
+/*Для контейнера картинок в карточках - технический класс*/
+[class*="__ibg"] {
+  position: relative;
+  /*Для самих картинок в карточках технический класс*/
+  img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+}
+
+body {
+  font-family: $fontFamily;
+  background-color: $mainBackGround;
+  color: $mainColor;
+  font-size: clampAd(12, $mainSize);
+  line-height: $lineheight;
+  font-weight: $fontWeight;
+
+  &.lock {
+    overflow: hidden;
+  }
+}
+
+.hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.main {
+  flex: 1 1 auto;
+  &__section {
+    margin-bottom: clampAd(50, 100);
+  }
+}
+
+@import "module/logo";
+@import "module/menu";
+@import "module/btn";
+@import "module/name";
+@import "module/arrows";
+@import "module/form";
+@import "module/accardeon";
+
+@import "module/header";
+@import "module/intro";
+@import "module/about";
+@import "module/directions";
+@import "module/certificate";
+@import "module/tutors";
+@import "module/testimonials";
+@import "module/work";
+@import "module/program";
+@import "module/blog";
+@import "module/contact";
+@import "module/questions";
+@import "module/footer";
+
+@import "components/adaptive";

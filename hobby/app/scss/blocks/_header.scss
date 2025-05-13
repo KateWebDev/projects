@@ -1,0 +1,46 @@
+.header {
+  padding: clampAd(20, 45) 0;
+
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: auto;
+  z-index: 14;
+
+  &--fixed {
+    padding: 20px 0;
+
+    position: fixed;
+    overflow: auto;
+    background: $white;
+  }
+
+  // .header__container
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px clampAd(20, 65);
+  }
+  // .header__logo
+  &__logo {
+    margin-right: auto;
+
+    position: relative;
+    z-index: 16;
+  }
+  // .header__menu
+  &__menu {
+  }
+  // .header__btn
+  &__btn {
+    position: relative;
+    z-index: 16;
+  }
+  // .header__burger
+  &__burger {
+    position: relative;
+    z-index: 16;
+  }
+}

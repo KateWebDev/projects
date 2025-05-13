@@ -1,0 +1,76 @@
+HTML
+
+
+ <div class="intro__before-after before-after">
+        <div class="before-after__before">
+          <picture>
+            <source type='image/avif' srcset='../images/main/1.avif'>
+            <source type='image/webp' srcset='../images/main/1.webp'>
+            <img class="before-after__img" src="../images/main/1.jpg" alt="before img" loading="lazy">
+          </picture>
+        </div>
+        <div class="before-after__after">
+          <picture>
+            <source type='image/avif' srcset='../images/main/2.avif'>
+            <source type='image/webp' srcset='../images/main/2.webp'>
+            <img class="before-after__img" src="../images/main/2.jpg" alt="after img" loading="lazy">
+          </picture>
+        </div>
+        <button class="before-after__runner" type="button"></button>
+      </div>
+
+
+
+CSS
+
+.before-after {
+  position: relative;
+  overflow: hidden;
+  border: 3px solid red;
+  width: 100%;
+
+  // .before-after__before
+  &__before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 100%;
+    overflow: hidden;
+    z-index: 2;
+  }
+  // .before-after__img
+  &__img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+  // .before-after__after
+  &__after {
+  }
+  // .before-after__runner
+  &__runner {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 3px;
+    height: 100%;
+    background: red;
+    z-index: 3;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 30px;
+      aspect-ratio: 1;
+      border-radius: 50%;
+      background: red;
+    }
+  }
+}

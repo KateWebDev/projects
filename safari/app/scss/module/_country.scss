@@ -1,0 +1,34 @@
+.country {
+  // .country__container
+  &__container {
+  }
+  // .country__items
+  &__items {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(256px, 1fr));
+    gap: 32px;
+  }
+  // .country__item
+  &__item {
+    border: 1px solid #d9d9de;
+  }
+  // .country__ibg
+  &__ibg {
+    padding: 0px 0px 43% 0px;
+  }
+  // .country__img
+  &__img {
+  }
+  // .country__link
+  &__link {
+    font-size: 16px;
+    padding: 12px 19px 19px;
+    transition: all 0.3s linear;
+
+    @media (any-hover: hover) {
+      &:hover {
+        text-shadow: 0 0 1px $mainColor;
+      }
+    }
+  }
+}

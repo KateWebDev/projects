@@ -1,0 +1,44 @@
+@function clampAd($min, $max) {
+  $minPx: $min + px;
+  $maxPx: $max + px;
+
+  $result: clamp(
+    $minPx,
+    calc($minPx + ($max - $min) * ((100vw - 320px) / ($widthReportMax - $widthReportMin))),
+    $maxPx
+  );
+
+  @return $result;
+}
+
+@mixin OpenSans400 {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 400;
+}
+@mixin OpenSans600 {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 600;
+}
+@mixin OpenSans700 {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 700;
+}
+
+@mixin DMSans400 {
+  font-family: "DM Sans", sans-serif;
+  font-weight: 400;
+}
+@mixin DMSans700 {
+  font-family: "DM Sans", sans-serif;
+  font-weight: 700;
+}
+
+/* 
+@include OpenSans400;
+@include OpenSans600;
+@include OpenSans700;
+
+
+@include DMSans400;
+@include DMSans700;
+*/

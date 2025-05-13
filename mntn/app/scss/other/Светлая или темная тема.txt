@@ -1,0 +1,94 @@
+HTML структура
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Тема сайта</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="light-theme">
+  <header>
+    <button id="theme-toggle">Сменить тему</button>
+  </header>
+
+  <main>
+    <h1>Добро пожаловать на наш сайт</h1>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
+
+
+
+
+CSS стилизация
+
+
+body {
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.light-theme {
+  background-color: #ffffff;
+  color: #000000;
+
+}
+
+.dark-theme {
+  background-color: #000000;
+  color: #ffffff;
+}
+
+header {
+  display: flex;
+  justify-content: flex-end;
+  padding: 1rem;
+}
+
+button {
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+}
+
+
+
+JavaScript для переключения тем
+
+const themeToggle = document.getElementById('theme-toggle');
+const body = document.body;
+themeToggle.addEventListener('click', () => {
+  if (body.classList.contains('light-theme')) {
+    body.classList.remove('light-theme');
+    body.classList.add('dark-theme');
+  } else {
+    body.classList.remove('dark-theme');
+    body.classList.add('light-theme');
+  }
+});
+
+
+Сохранение выбора пользователя
+
+document.addEventListener('DOMContentLoaded', () => {
+  if (localStorage.getItem('theme') === 'dark') {
+    body.classList.add('dark-theme');
+  } else {
+    body.classList.add('light-theme');
+  }
+});
+
+themeToggle.addEventListener('click', () => {
+  if (body.classList.contains('light-theme')) {
+    body.classList.remove('light-theme');
+    body.classList.add('dark-theme');
+    localStorage.setItem('theme', 'dark');
+  } else {
+    body.classList.remove('dark-theme');
+    body.classList.add('light-theme');
+    localStorage.setItem('theme', 'light');
+  }
+});

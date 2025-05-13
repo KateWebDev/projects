@@ -1,0 +1,66 @@
+.info {
+  overflow: hidden;
+  // .info__cont-left
+  &__container {
+    padding-left: clamp(30px, calc(30px + (200 - 30) * ((100vw - 320px) / ($widthReportMax - $widthReportMin))), 200px);
+    position: relative;
+  }
+  // .info__items
+  &__items {
+    width: clamp(350px, calc(350px + (1600 - 350) * ((100vw - 320px) / ($widthReportMax - $widthReportMin))), 1600px);
+    margin-bottom: 20px;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 1s ease;
+
+    &.slick-initialized {
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+  // .info__item
+  &__item {
+    max-width: clamp(300px, calc(300px + (386 - 300) * ((100vw - 320px) / ($widthReportMax - $widthReportMin))), 386px);
+  }
+  // .info__card
+  &__card {
+  }
+  // .info__name
+  &__name {
+    @include inter700;
+    color: $black;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+  }
+  // .info__ibg
+  &__ibg {
+    width: clamp(250px, calc(250px + (386 - 250) * ((100vw - 320px) / ($widthReportMax - $widthReportMin))), 386px);
+    padding: 0px 0px 181.4% 0px;
+  }
+  // .info__img
+  &__img {
+  }
+  // .info__btn
+  &__btn {
+    padding: clamp(10px, calc(10px + (21 - 10) * ((100vw - 320px) / ($widthReportMax - $widthReportMin))), 21px)
+      clamp(83px, calc(83px + (135 - 83) * ((100vw - 320px) / ($widthReportMax - $widthReportMin))), 135px);
+  }
+
+  .slick-slide {
+    &:not(:last-child) {
+      margin-right: 20px;
+    }
+  }
+
+  &__slick-btn {
+    position: absolute;
+    bottom: clamp(50px, calc(50px + (73 - 50) * ((100vw - 320px) / ($widthReportMax - $widthReportMin))), 73px);
+
+    &--prev {
+      left: 0;
+    }
+    &--next {
+      left: 70px;
+    }
+  }
+}

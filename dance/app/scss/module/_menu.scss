@@ -1,0 +1,26 @@
+.menu {
+  // .menu__items
+  &__items {
+    display: flex;
+    align-items: center;
+    gap: 20px clampAd(20, 33);
+  }
+  // .menu__item
+  &__item {
+  }
+  // .menu__link
+  &__link {
+    white-space: nowrap;
+    transition: all 0.3s linear;
+
+    @media (any-hover: hover) {
+      &:hover:not(.menu__link--active) {
+        color: $black;
+      }
+    }
+
+    &--active {
+      cursor: default;
+    }
+  }
+}

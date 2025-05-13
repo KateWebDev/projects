@@ -1,0 +1,25 @@
+.mobile-menu {
+  // .mobile-menu__container
+  &__container {
+    padding-block: 80px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    row-gap: 80px;
+  }
+  // .mobile-menu__text
+  &__text {
+    max-width: 220px;
+
+    font-weight: 800;
+    font-size: 40px;
+    line-height: 1.4;
+    color: $color-dark;
+  }
+  // .mobile-menu__contacts
+  &__contacts {
+    max-width: 165px;
+  }
+}

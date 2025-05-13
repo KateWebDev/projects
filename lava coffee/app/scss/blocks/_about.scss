@@ -1,0 +1,48 @@
+.about {
+  // .about__container
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  // .about__image
+  &__image {
+    max-width: clampAd(400, 759);
+    width: 100%;
+    margin-left: calc(clampAd(50, 90) * -1);
+  }
+  // .about__img
+  &__img {
+    display: block;
+    max-width: 100%;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    object-position: center;
+  }
+  // .about__content
+  &__content {
+    margin-left: auto;
+    max-width: clampAd(350, 560);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    position: relative;
+    z-index: 2;
+  }
+  // .about__title
+  &__title {
+    margin-bottom: 6px;
+  }
+  // .about__subtitle
+  &__subtitle {
+    margin-bottom: 3px;
+  }
+  // .about__text
+  &__text {
+    margin-bottom: clampAd(20, 35);
+  }
+  // .about__btn
+  &__btn {
+  }
+}

@@ -1,0 +1,22 @@
+.link {
+  font-weight: 700;
+  font-size: clampAd(14, 16);
+  text-decoration: underline;
+  color: $color-accent;
+  transition: all 0.3s linear;
+
+  @media (any-hover: hover) {
+    &:hover {
+      color: $color-light;
+    }
+  }
+  &--color {
+    color: $color-light;
+
+    @media (any-hover: hover) {
+      &:hover {
+        color: $color-accent;
+      }
+    }
+  }
+}

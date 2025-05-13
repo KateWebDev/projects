@@ -1,0 +1,86 @@
+@mixin w_1440 {
+  @media (max-width: 1440.98px) {
+    @content;
+  }
+}
+
+@mixin w_991 {
+  @media (max-width: 991.98px) {
+    @content;
+  }
+}
+
+@mixin w_767 {
+  @media (max-width: 767.98px) {
+    @content;
+  }
+}
+
+@mixin w_575 {
+  @media (max-width: 575.98px) {
+    @content;
+  }
+}
+
+@mixin w_479 {
+  @media (max-width: 479.98px) {
+    @content;
+  }
+}
+
+@mixin w_349 {
+  @media (max-width: 349.98px) {
+    @content;
+  }
+}
+
+@function clampAd($min, $max) {
+  $minPx: $min + px;
+  $maxPx: $max + px;
+
+  $result: clamp(
+    $minPx,
+    calc($minPx + ($max - $min) * ((100vw - $widthReportMinPx) / ($widthReportMax - $widthReportMin))),
+    $maxPx
+  );
+
+  @return $result;
+}
+
+@mixin NunitoSans300 {
+  font-family: "Nunito Sans", sans-serif;
+  font-weight: 300;
+}
+@mixin NunitoSans400 {
+  font-family: "Nunito Sans", sans-serif;
+  font-weight: 400;
+}
+@mixin NunitoSans500 {
+  font-family: "Nunito Sans", sans-serif;
+  font-weight: 500;
+}
+@mixin NunitoSans600 {
+  font-family: "Nunito Sans", sans-serif;
+  font-weight: 600;
+}
+@mixin NunitoSans700 {
+  font-family: "Nunito Sans", sans-serif;
+  font-weight: 700;
+}
+
+@mixin WorkSans300 {
+  font-family: "Work Sans", sans-serif;
+  font-weight: 300;
+}
+@mixin WorkSans400 {
+  font-family: "Work Sans", sans-serif;
+  font-weight: 400;
+}
+@mixin WorkSans500 {
+  font-family: "Work Sans", sans-serif;
+  font-weight: 500;
+}
+@mixin WorkSans600 {
+  font-family: "Work Sans", sans-serif;
+  font-weight: 600;
+}

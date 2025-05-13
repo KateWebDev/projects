@@ -1,0 +1,286 @@
+@media (max-width: 991.98px) {
+  .header__burger {
+    display: flex;
+    span {
+      background: $black;
+    }
+    &.header__burger--active {
+      span {
+        background: $white;
+
+        &:nth-child(1) {
+          display: none;
+        }
+        &:nth-child(2) {
+          transform: rotate(45deg);
+        }
+        &:nth-child(3) {
+          transform: rotate(-45deg) translateY(-5px) translateX(5px);
+        }
+      }
+    }
+  }
+  .header {
+    &__btn {
+      margin-left: auto;
+    }
+  }
+
+  .header .menu {
+    position: fixed;
+    z-index: 3;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transition: all 0.4s linear;
+    transform: translateY(-100%);
+    overflow: auto;
+    overflow-x: hidden;
+    padding: 20px 0;
+    background: $black;
+
+    &.menu--active {
+      transform: translateY(0);
+    }
+
+    &__items {
+      height: 100%;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    &__link {
+      color: $white;
+      font-size: 24px;
+    }
+  }
+
+  .partners {
+    &__items {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+
+  .footer {
+    &__form {
+      flex-direction: column;
+    }
+    &__input {
+      width: 100%;
+    }
+    &__btn {
+      width: 100%;
+    }
+  }
+}
+
+@media (max-width: 767.98px) {
+  .intro {
+    &__container {
+      flex-direction: column;
+      align-items: stretch;
+    }
+    &__content {
+      display: contents;
+    }
+    &__title {
+      order: 1;
+    }
+    &__image {
+      order: 2;
+    }
+    &__text {
+      order: 3;
+    }
+    &__btn {
+      order: 4;
+    }
+  }
+
+  .connection {
+    &__container {
+      &::before {
+        display: none;
+      }
+    }
+  }
+
+  .studies {
+    &__items {
+      border-radius: 0;
+      background: transparent;
+      padding: 0;
+      scroll-snap-type: x mandatory;
+      overflow-x: scroll;
+      column-gap: 10px;
+    }
+    &__item {
+      width: clampAd(260, 350);
+      scroll-snap-align: start;
+      padding: clampAd(30, 42) 50px;
+      border-radius: $radius-big;
+      background: $color-bg-dark;
+    }
+  }
+
+  .team {
+    &__item {
+      padding: 40px clampAd(40, 50);
+    }
+    &__btn {
+      justify-content: center;
+      width: 100%;
+    }
+  }
+
+  .contacts {
+    &__content {
+      &::after {
+        display: none;
+      }
+    }
+    &__form {
+      max-width: 100%;
+    }
+  }
+
+  .form {
+    &__action {
+      column-gap: 60px;
+    }
+  }
+
+  .footer {
+    &__container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 30px;
+    }
+    &__top {
+      display: contents;
+    }
+    &__logo {
+      order: 1;
+    }
+    &__menu {
+      order: 2;
+
+      .menu__items {
+        flex-direction: column;
+        text-align: center;
+        row-gap: 15px;
+      }
+    }
+    &__socials {
+      order: 4;
+    }
+    &__content {
+      order: 3;
+      justify-content: center;
+    }
+    &__contact {
+      text-align: center;
+      align-items: center;
+    }
+    &__form {
+      max-width: 100%;
+      width: 100%;
+    }
+    &__bottom {
+      order: 5;
+      justify-content: center;
+    }
+  }
+}
+
+@media (max-width: 575.98px) {
+  .header {
+    &__btn {
+      display: none;
+    }
+  }
+
+  .header .menu {
+    &__btn {
+      display: block;
+    }
+  }
+
+  .info {
+    justify-content: center;
+    text-align: center;
+    &__text {
+      max-width: 100%;
+    }
+  }
+
+  .services {
+    &__img {
+      position: absolute;
+      bottom: 50px;
+      right: 50px;
+    }
+    &__link {
+      span {
+        display: none;
+      }
+    }
+  }
+
+  .contacts {
+    &__content {
+      padding: 0;
+      background: transparent;
+      border-radius: 0;
+    }
+  }
+
+  .form {
+    &__items {
+      padding: clampAd(30, 60) clampAd(20, 100) clampAd(30, 50);
+      background: $color-bg-light;
+      border-radius: $radius-big;
+      margin-bottom: 30px;
+    }
+    &__textarea {
+      margin-bottom: 0;
+    }
+  }
+}
+
+@media (max-width: 429.98px) {
+  [class*="__container"]:not(.footer__container) {
+    padding: 0 10px;
+  }
+
+  .connection {
+    &__inner {
+      padding: 50px 20px;
+    }
+    &__content {
+      max-width: 280px;
+    }
+  }
+
+  .team {
+    &__social {
+      top: -20px;
+      right: -20px;
+    }
+  }
+
+  .studies {
+    &__item {
+      padding: 30px;
+    }
+  }
+
+  .form {
+    &__action {
+      column-gap: 30px;
+    }
+  }
+}

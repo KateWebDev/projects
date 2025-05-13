@@ -1,0 +1,124 @@
+.footer {
+  background: #001414;
+  // .footer__container
+  &__container {
+  }
+  // .footer__nav
+  &__nav {
+    padding: clampAd(50, 112) 0 clampAd(60, 137);
+  }
+  // .footer__items
+  &__items {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 2fr;
+    gap: clampAd(30, 50);
+  }
+  // .footer__item
+  &__item {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    row-gap: 23px;
+
+    &--big {
+      margin-left: auto;
+    }
+  }
+  // .footer__name
+  &__name {
+    font-size: 11px;
+    line-height: 1.45;
+    letter-spacing: 0.09em;
+    text-transform: uppercase;
+    color: #7d9798;
+    position: relative;
+    padding-bottom: 25px;
+
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 16px;
+      height: 1px;
+      background: #25b895;
+    }
+  }
+  // .footer__list
+  &__list {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  // .footer__point
+  &__point {
+  }
+  // .footer__link
+  &__link {
+    line-height: 2;
+    color: #edeceb;
+    white-space: nowrap;
+    transition: all 0.3s linear;
+
+    @media (any-hover: hover) {
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+  // .footer__bottom
+  &__bottom {
+    padding: 40px 0 clampAd(40, 63);
+    background: #000f0f;
+  }
+  // .footer__bottom-inner
+  &__bottom-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 30px;
+  }
+  // .footer__logo
+  &__logo {
+  }
+  // .footer__block
+  &__block {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 8px;
+  }
+  // .footer__block-items
+  &__block-items {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 8px;
+    text-align: right;
+  }
+  // .footer__block-item
+  &__block-item {
+  }
+  // .footer__block-link
+  &__block-link {
+    font-size: 10px;
+    line-height: 1;
+    color: #e5ecec;
+    white-space: nowrap;
+    transition: all 0.3s linear;
+
+    @media (any-hover: hover) {
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+  // .footer__copy
+  &__copy {
+    font-size: 10px;
+    line-height: 1;
+    color: #e5ecec;
+    white-space: nowrap;
+    transition: all 0.3s linear;
+  }
+}

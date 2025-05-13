@@ -1,0 +1,121 @@
+.pricing {
+  background: $white;
+  background: linear-gradient(180deg, rgba($white, 0) 57%, $white 43%), $color-bg-gradient;
+  padding-top: clampAd(50, 100);
+  padding-bottom: clampAd(50, 100);
+
+  // .pricing__container
+  &__container {
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+  }
+  // .pricing__subtitle
+  &__subtitle {
+    color: $white;
+  }
+  // .pricing__title
+  &__title {
+    max-width: 490px;
+    margin: 0 auto 20px;
+    color: $white;
+  }
+  // .pricing__items
+  &__items {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(clampAd(280, 350), 1fr));
+    grid-auto-flow: dense;
+    gap: 30px;
+  }
+  // .pricing__item
+  &__item {
+    position: relative;
+    padding: clampAd(20, 30);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 10px;
+    box-shadow: 0 16px 35px 0 rgba(112, 144, 176, 0.2);
+    background: $white;
+    border: 1px solid $white;
+    border-radius: 35px;
+  }
+  // .pricing__name
+  &__name {
+    @include Poppins600;
+    font-size: 30px;
+    color: $color-dark;
+  }
+  // .pricing__image
+  &__image {
+    max-width: 188px;
+  }
+  // .pricing__img
+  &__img {
+    border-radius: 8px;
+  }
+  // .pricing__instructor
+  &__instructor {
+    @include Poppins500;
+    font-size: clampAd(16, 20);
+    line-height: 1.5;
+    text-align: center;
+  }
+  // .pricing__list
+  &__list {
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+    margin-bottom: clampAd(20, 40);
+  }
+  // .pricing__point
+  &__point {
+    font-size: 18px;
+    line-height: 1.5;
+    padding-left: 34px;
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 0;
+      transform: translateY(-50%);
+      width: 24px;
+      aspect-ratio: 1;
+      background: url(../../images/icons/check.svg) center/cover no-repeat;
+    }
+  }
+  // .pricing__price
+  &__price {
+    margin: auto 0 20px;
+    @include Poppins600;
+    font-size: clampAd(20, 32);
+    line-height: 1.5;
+    text-align: center;
+    color: $color-dark;
+
+    span {
+      @include Poppins300;
+      font-size: clampAd(16, 20);
+      color: $mainColor;
+    }
+  }
+  // .pricing__btn
+  &__btn {
+  }
+  // .pricing__special
+  &__special {
+    position: absolute;
+    top: -1px;
+    right: -1px;
+    padding: 27px 10px;
+    background: $color-special;
+    @include Poppins600;
+    font-size: clampAd(12, 14);
+    text-transform: capitalize;
+    text-align: center;
+    color: $white;
+    border-radius: 0 35px;
+  }
+}

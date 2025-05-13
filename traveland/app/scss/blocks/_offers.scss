@@ -1,0 +1,14 @@
+.offers {
+  // .offers__title
+  &__title {
+  }
+  // .offers__text
+  &__text {
+    max-width: rem(656);
+    margin: 0 auto clampAdRem(30, 60);
+    text-align: center;
+  }
+  // .offers__slider
+  &__slider {
+  }
+}

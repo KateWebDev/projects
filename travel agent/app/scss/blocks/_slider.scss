@@ -1,0 +1,58 @@
+.slider {
+  // .slider__items
+  &__items {
+    height: 100%;
+  }
+  // .slider__item
+  &__item {
+    display: flex;
+    flex-direction: column;
+    width: clampAd(150, 304);
+  }
+  // .slider__card
+  &__card {
+    width: 100%;
+    height: 100%;
+
+    @media (any-hover: hover) {
+      &:hover {
+        .slider__name {
+          color: $color-accent;
+        }
+      }
+    }
+  }
+  // .slider__ibg
+  &__ibg {
+    padding: 0px 0px 100% 0px;
+    margin-bottom: 16px;
+  }
+  // .slider__img
+  &__img {
+    border-radius: $radius-medium;
+  }
+  // .slider__content
+  &__content {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 5px clampAd(10, 20);
+  }
+  // .slider__name
+  &__name {
+    font-weight: 500;
+    font-size: clampAd(14, 20);
+    color: $color-dark;
+    text-transform: capitalize;
+
+    transition: all 0.3s linear;
+  }
+  // .slider__raiting
+  &__raiting {
+  }
+  // .slider__text
+  &__text {
+    margin-top: auto;
+    flex: 0 0 100%;
+  }
+}

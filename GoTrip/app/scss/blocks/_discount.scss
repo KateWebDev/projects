@@ -1,0 +1,55 @@
+.discount {
+  padding: clampAd(60, 135) 0;
+  // .discount__container
+  &__container {
+    padding-block: clampAd(50, 116);
+    background: $white;
+    border-radius: $radius-medium;
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: clampAd(15, 75);
+      right: clampAd(15, 80);
+      width: clampAd(43, 63);
+      height: clampAd(63, 83);
+      background: url(../../images/main/discount/decor-right.svg) center/contain no-repeat;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: clampAd(15, 56);
+      left: clampAd(15, 75);
+      width: clampAd(43, 63);
+      height: clampAd(63, 83);
+      background: url(../../images/main/discount/decor-left.svg) center/contain no-repeat;
+    }
+  }
+  // .discount__content
+  &__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    row-gap: clampAd(20, 30);
+
+    position: relative;
+    z-index: 1;
+  }
+  // .discount__title
+  &__title {
+    max-width: 520px;
+  }
+  // .discount__text
+  &__text {
+    font-size: clampAd(16, 30);
+    font-weight: 400;
+    margin-bottom: clampAd(10, 30);
+  }
+  // .discount__btn
+  &__btn {
+    padding: clampAd(15, 25) clampAd(30, 55);
+  }
+}

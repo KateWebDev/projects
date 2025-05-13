@@ -1,0 +1,19 @@
+.name {
+  display: flex;
+  flex-direction: column;
+  row-gap: clampAd(4, 8);
+  color: $color-dark;
+  // .name__title
+  &__title {
+    font-weight: 700;
+    line-height: 1.5;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+  }
+  // .name__subtitle
+  &__subtitle {
+    font-weight: 900;
+    font-size: clampAd(24, 46);
+    line-height: 1.3;
+  }
+}

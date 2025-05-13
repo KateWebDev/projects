@@ -1,0 +1,120 @@
+.contact {
+  padding-bottom: clampAd(60, 180);
+  // .contact__container
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    gap: 30px;
+  }
+  // .contact__content
+  &__content {
+    max-width: 400px;
+  }
+  // .contact__name
+  &__name {
+    margin-bottom: clampAd(20, 40);
+  }
+  // .contact__items
+  &__items {
+    display: flex;
+    flex-direction: column;
+    row-gap: clampAd(18, 24);
+    margin-bottom: clampAd(20, 48);
+  }
+  // .contact__item
+  &__item {
+    font-size: 18px;
+    line-height: 1.5;
+    color: $color-dark;
+    padding-left: 36px;
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 24px;
+      aspect-ratio: 1;
+    }
+
+    // .contact__item--mail
+    &--mail {
+      &::before {
+        background: url(../../images/icons/chat.svg) center/cover no-repeat;
+      }
+    }
+    // .contact__item--phone
+    &--phone {
+      &::before {
+        background: url(../../images/icons/phone.svg) center/cover no-repeat;
+      }
+    }
+    // .contact__item--address
+    &--address {
+      &::before {
+        background: url(../../images/icons/map.svg) center/cover no-repeat;
+      }
+    }
+  }
+  // .contact__link
+  &__link {
+    span {
+      display: block;
+      font-weight: 700;
+      font-size: 14px;
+      color: #787a80;
+    }
+  }
+  // .contact__address
+  &__address {
+    font-style: normal;
+    span {
+      display: block;
+      font-weight: 700;
+      font-size: 14px;
+      color: #787a80;
+    }
+  }
+  // .contact__type
+  &__type {
+    font-weight: 700;
+    line-height: 1.5;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: $color-dark;
+    margin-bottom: clampAd(18, 24);
+  }
+  // .contact__socials
+  &__socials {
+    display: flex;
+    column-gap: clampAd(20, 32);
+  }
+  // .contact__social
+  &__social {
+    width: 24px;
+    aspect-ratio: 1;
+  }
+  // .contact__social-link
+  &__social-link {
+    @media (any-hover: hover) {
+      &:hover {
+        svg {
+          fill: $color-accent;
+        }
+      }
+    }
+    svg {
+      fill: #787a80;
+      transition: all 0.3s linear;
+    }
+  }
+  // .contact__map
+  &__map {
+    max-width: clampAd(300, 705);
+    width: 100%;
+    max-height: 412px;
+    height: 100%;
+  }
+}

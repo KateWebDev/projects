@@ -1,0 +1,87 @@
+.intro {
+  // .intro__items
+  &__items {
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 1s ease;
+    &.slick-initialized {
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+  // .intro__item
+  &__item {
+  }
+  // .intro__container
+  &__container {
+    min-height: clamp(
+      280px,
+      calc(280px + (700 - 280) * ((100vw - 320px) / ($widthReportMax - $widthReportMin))),
+      700px
+    );
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+  }
+  // .intro__container-btn
+  &__container-btn {
+    max-width: 1230px;
+    height: clamp(30px, calc(30px + (50 - 30) * ((100vw - 320px) / ($widthReportMax - $widthReportMin))), 50px);
+    padding: 0 15px;
+    margin: 0 auto;
+    position: relative;
+  }
+  // .intro__img
+  &__img {
+    max-width: clamp(110px, calc(110px + (183 - 110) * ((100vw - 320px) / ($widthReportMax - $widthReportMin))), 183px);
+    width: 100%;
+    height: auto;
+  }
+  // .intro__content
+  &__content {
+    max-width: clamp(115px, calc(115px + (185 - 115) * ((100vw - 320px) / ($widthReportMax - $widthReportMin))), 185px);
+    margin-top: calc(
+      clamp(10px, calc(10px + (85 - 10) * ((100vw - 320px) / ($widthReportMax - $widthReportMin))), 85px) * -1
+    );
+  }
+  // .intro__title
+  &__title {
+    @include play400;
+    font-size: clamp(25px, calc(25px + (70 - 25) * ((100vw - 320px) / ($widthReportMax - $widthReportMin))), 70px);
+    line-height: 1.3;
+    margin-bottom: clamp(10px, calc(10px + (55 - 10) * ((100vw - 320px) / ($widthReportMax - $widthReportMin))), 55px);
+    text-transform: uppercase;
+  }
+  // .intro__type
+  &__type {
+    font-size: clamp(16px, calc(16px + (24 - 16) * ((100vw - 320px) / ($widthReportMax - $widthReportMin))), 24px);
+    margin-bottom: 10px;
+  }
+  // .intro__text
+  &__text {
+    margin-bottom: clamp(10px, calc(10px + (20 - 10) * ((100vw - 320px) / ($widthReportMax - $widthReportMin))), 20px);
+  }
+  // .intro__btn
+  &__btn {
+    margin: auto 0 auto auto;
+  }
+  // .intro__photo
+  &__photo {
+    max-width: clamp(150px, calc(150px + (387 - 150) * ((100vw - 320px) / ($widthReportMax - $widthReportMin))), 387px);
+    width: 100%;
+    height: 100%;
+  }
+
+  &__slick-btn {
+    position: absolute;
+    bottom: 0;
+
+    &--next {
+      left: clamp(50px, calc(50px + (85 - 50) * ((100vw - 320px) / ($widthReportMax - $widthReportMin))), 88px);
+    }
+    &--prev {
+      left: 15px;
+    }
+  }
+}

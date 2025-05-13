@@ -1,0 +1,136 @@
+.footer {
+  background: $color-bg-dark;
+  color: $white;
+  // .footer__container
+  &__container {
+  }
+  // .footer__top
+  &__top {
+    padding: clampAd(40, 83) 0 clampAd(30, 77);
+    border-bottom: 1px solid rgba($white, 0.08);
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px clampAd(20, 48);
+  }
+  // .footer__item
+  &__item {
+    flex: 0 0 clampAd(150, 164);
+    &--subscription {
+      flex: 0 0 clampAd(290, 405);
+      align-self: center;
+    }
+  }
+  // .footer__name
+  &__name {
+    font-size: 16px;
+    margin-bottom: clampAd(10, 24);
+  }
+  // .footer__form
+  &__form {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px clampAd(8, 16);
+    margin-bottom: clampAd(10, 18);
+  }
+  // .footer__input
+  &__input {
+    flex: 0 0 260px;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.08);
+    border: 1px solid #e5e7eb;
+    border-radius: 8px;
+    padding: 10px;
+    color: $color-dop;
+    font-size: 14px;
+
+    &::placeholder {
+      @include DMSans400;
+      font-size: 14px;
+      line-height: 1.5;
+      color: $color-bg-dark;
+    }
+  }
+  // .footer__btn
+  &__btn {
+  }
+  // .footer__text
+  &__text {
+    font-size: clampAd(10, 12);
+  }
+  // .footer__policy
+  &__policy {
+    font-size: clampAd(10, 12);
+    text-transform: capitalize;
+    transition: all 0.3s linear;
+
+    @media (any-hover: hover) {
+      &:hover {
+        text-shadow: 0 0 2px currentColor;
+        text-decoration: underline;
+      }
+    }
+  }
+  // .footer__menu
+  &__menu {
+  }
+  // .footer__list
+  &__list {
+    display: flex;
+    flex-direction: column;
+    row-gap: clampAd(8, 16);
+  }
+  // .footer__point
+  &__point {
+  }
+  // .footer__link
+  &__link {
+    font-size: clampAd(12, 14);
+    transition: all 0.3s linear;
+
+    @media (any-hover: hover) {
+      &:hover {
+        text-shadow: 0 0 2px currentColor;
+      }
+    }
+  }
+  // .footer__bottom
+  &__bottom {
+    padding: clampAd(20, 32) 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  // .footer__copy
+  &__copy {
+    font-size: clampAd(11, 14);
+  }
+  // .footer__socials
+  &__socials {
+    display: flex;
+    gap: 8px;
+  }
+  // .footer__social
+  &__social {
+  }
+  // .footer__social-link
+  &__social-link {
+    width: 32px;
+    height: 32px;
+    background: $color-accent;
+    border-radius: 4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.3s linear;
+
+    @media (any-hover: hover) {
+      &:hover {
+        background: $color-accent-light;
+      }
+    }
+  }
+  // .footer__icon
+  &__icon {
+  }
+}

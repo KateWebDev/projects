@@ -1,0 +1,12 @@
+.logo {
+  width: clampAd(90, 172);
+  height: clampAd(23, 44);
+  // .logo__img
+  &__img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+}

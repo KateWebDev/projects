@@ -1,0 +1,37 @@
+.care {
+  background: $color-light-bg;
+  padding: clampAd(40, 80) 0;
+
+  // .care__container
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: clampAd(20, 40);
+  }
+  // .care__content
+  &__content {
+    max-width: clampAd(300, 550);
+  }
+  // .care__title
+  &__title {
+    margin-bottom: clampAd(25, 35);
+  }
+  // .care__accardeon
+  &__accardeon {
+    max-width: clampAd(300, 485);
+  }
+  // .care__image
+  &__image {
+    max-width: 482px;
+    max-height: 479px;
+  }
+  // .care__img
+  &__img {
+    display: block;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    object-position: center;
+  }
+}

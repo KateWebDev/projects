@@ -1,0 +1,30 @@
+.education {
+  padding: clamp(40px, calc(40px + (80 - 40) * ((100vw - 320px) / ($widthReportMax - $widthReportMin))), 80px) 0;
+
+  // .education__container
+  &__container {
+  }
+  // .education__items
+  &__items {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-items: center;
+    gap: 30px;
+  }
+  // .education__item
+  &__item {
+    max-width: 540px;
+
+    // .education__item--big-row
+    &--big-row {
+      grid-row: span 2;
+    }
+  }
+  // .education__img
+  &__img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 24px;
+  }
+}

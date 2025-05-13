@@ -1,0 +1,29 @@
+.socials {
+  display: flex;
+  align-items: center;
+  gap: 20px clampAd(20, 50);
+
+  // .socials__item
+  &__item {
+  }
+  // .socials__link
+  &__link {
+    width: 24px;
+    height: 24px;
+
+    svg {
+      width: 100%;
+      height: 100%;
+      fill: $color-text-1;
+      transition: all 0.3s linear;
+    }
+
+    @media (any-hover: hover) {
+      &:hover {
+        svg {
+          fill: $color-accent;
+        }
+      }
+    }
+  }
+}

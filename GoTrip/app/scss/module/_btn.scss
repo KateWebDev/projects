@@ -1,0 +1,46 @@
+.btn {
+  padding: clampAd(10, 13) clampAd(20, 45);
+  border-radius: $radius;
+  background: $color-accent;
+
+  font-size: clampAd(16, 25);
+  color: $white;
+  text-align: center;
+  white-space: nowrap;
+  text-transform: capitalize;
+  transition: all 0.3s linear;
+
+  @media (any-hover: hover) {
+    &:hover {
+      background: $color-accent-hover;
+    }
+  }
+
+  &--small-padding {
+    padding: clampAd(10, 13) clampAd(15, 25);
+  }
+  &--transparent {
+    background: transparent;
+
+    @media (any-hover: hover) {
+      &:hover {
+        background: transparent;
+        color: $color-dop;
+      }
+    }
+  }
+  &--big-radius {
+    border-radius: $radius-big;
+  }
+  &--no-capitalize {
+    text-transform: none;
+  }
+
+  &--small-text {
+    font-size: clampAd(12, 15);
+  }
+
+  &--color {
+    color: $mainColor;
+  }
+}

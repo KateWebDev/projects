@@ -1,0 +1,56 @@
+.help {
+  padding-bottom: clamp(50px, calc(50px + (70 - 50) * ((100vw - 320px) / ($widthReportMax - $widthReportMin))), 70px);
+
+  // .help__container
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 30px;
+  }
+  // .help__content
+  &__content {
+    max-width: 542px;
+    font-size: clamp(14px, calc(14px + (20 - 14) * ((100vw - 320px) / ($widthReportMax - $widthReportMin))), 20px);
+    line-height: 1.6;
+  }
+  // .help__title
+  &__title {
+    text-align: left;
+    margin-bottom: 16px;
+  }
+  // .help__text
+  &__text {
+    margin-bottom: 28px;
+  }
+  // .help__slogan
+  &__slogan {
+    display: inline-block;
+    color: $color-btn;
+    position: relative;
+
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: clamp(8px, calc(8px + (16 - 8) * ((100vw - 320px) / ($widthReportMax - $widthReportMin))), 16px);
+      background: $color-accent;
+      z-index: -1;
+    }
+  }
+  // .help__image
+  &__image {
+    max-width: 464px;
+    max-height: 400px;
+    margin: 0 auto;
+  }
+  // .help__img
+  &__img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+}

@@ -1,0 +1,114 @@
+@import "components/fonts";
+@import "components/mixin";
+@import "components/resetStyle";
+
+//Страница
+$widthReportMax: 1441;
+$widthReportMin: 320;
+$maxWidthContainer: 1140px; //максимальная ширина контейнера + padding left + padding right
+$containerPadding: 15px; //внутринние отступы в контейнере
+
+//Шрифт
+$fontFamily: "Poppins", sans-serif;
+$mainColor: #213842; //основной цвет шрифта
+$mainBackGround: #ffffff; //основной цвет фона
+$white: #ffffff;
+$black: #000000;
+$mainSize: 16;
+$size: $mainSize + px;
+$lineheight: 1.625;
+$fontWeight: 400;
+
+$color-title: #4d533c;
+$color-accent: #ffd723;
+$color-light: #d4d6d4;
+$color-dark: #152934;
+$color-bg-dop: #4f553d;
+$color-dop: #b6c197;
+$color-dop-border: #5d6544;
+
+[class*="__container"] {
+  max-width: $maxWidthContainer;
+  margin: 0 auto;
+  padding: 0 $containerPadding;
+}
+
+[class*="__burger"] {
+  width: 40px;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: #f5f6f7;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  row-gap: 4px;
+  cursor: pointer;
+
+  span {
+    width: 18px;
+    height: 2px;
+    background: $black;
+    transition: all 0.3s linear;
+  }
+
+  &.header__burger--active {
+    span {
+      &:nth-child(1) {
+        display: none;
+      }
+      &:nth-child(2) {
+        transform: rotate(45deg) translateY(2px) translateX(2px);
+      }
+      &:nth-child(3) {
+        transform: rotate(-45deg) translateY(-2px) translateX(2px);
+      }
+    }
+  }
+}
+
+body {
+  font-family: $fontFamily;
+  background-color: $mainBackGround;
+  color: $mainColor;
+  font-size: clampAd(12, $mainSize);
+  line-height: $lineheight;
+  font-weight: $fontWeight;
+
+  &.lock {
+    overflow: hidden;
+  }
+}
+
+.hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.main {
+  flex: 1 1 auto;
+}
+
+@import "module/logo";
+@import "module/menu";
+@import "module/btn";
+@import "module/title";
+@import "module/blockquote";
+
+@import "module/header";
+@import "module/intro";
+@import "module/clients";
+@import "module/strategy";
+@import "module/about";
+@import "module/destination";
+@import "module/action";
+@import "module/footer";
+
+@import "components/adaptive";

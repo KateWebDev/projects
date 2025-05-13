@@ -1,0 +1,38 @@
+.menu {
+  // .menu__items
+  &__items {
+    display: flex;
+    align-items: center;
+    gap: 20px clampAd(20, 40);
+  }
+  // .menu__item
+  &__item {
+  }
+  // .menu__link
+  &__link {
+    @include JosefinSans700;
+    font-size: clampAd(14, 18);
+    line-height: 1;
+    white-space: nowrap;
+    padding-bottom: 3px;
+    border-bottom: 1px solid transparent;
+    transition: all 0.3s linear;
+
+    @media (any-hover: hover) {
+      &:hover {
+        border-color: currentColor;
+      }
+    }
+
+    &--active {
+      color: $color-accent;
+      cursor: default;
+
+      @media (any-hover: hover) {
+        &:hover {
+          border-color: transparent;
+        }
+      }
+    }
+  }
+}

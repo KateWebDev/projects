@@ -1,0 +1,134 @@
+.blog {
+  padding: 20px 0 clampAd(40, 80);
+
+  // .blog__big-container
+  &__big-container {
+    padding: clampAd(50, 100) 0;
+  }
+  // .blog__container
+  &__container {
+    display: flex;
+    flex-direction: column;
+    row-gap: clampAd(20, 40);
+  }
+  // .blog__title
+  &__title {
+  }
+  // .blog__items
+  &__items {
+    display: grid;
+    grid-template-columns: clampAd(300, 580) 1fr;
+    gap: 32px clampAd(26, 44);
+
+    @include w_991 {
+      grid-template-columns: 1fr;
+    }
+  }
+  // .blog__item
+  &__item {
+    display: flex;
+    align-items: center;
+    gap: clampAd(24, 32) clampAd(16, 24);
+
+    // .blog__item--big-row
+    &--big-row {
+      grid-row: span 2;
+
+      flex-direction: column;
+      align-items: flex-start;
+
+      .blog__image {
+        max-width: 100%;
+      }
+    }
+
+    @include w_575 {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  }
+  // .blog__image
+  &__image {
+    max-width: clampAd(180, 320);
+    width: 100%;
+
+    @include w_575 {
+      max-width: 100%;
+    }
+  }
+
+  // .blog__img
+  &__img {
+    display: block;
+    max-width: 100%;
+    max-height: 100%;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+
+    border-radius: $radius-small;
+  }
+  // .blog__content
+  &__content {
+    display: flex;
+    flex-direction: column;
+    row-gap: clampAd(10, 12);
+  }
+  // .blog__info
+  &__info {
+    @include NunitoSans600;
+    font-size: 14px;
+    line-height: 1.4;
+    color: $color-accent;
+
+    display: flex;
+    align-items: center;
+    column-gap: 4px;
+
+    & > *:not(:last-child) {
+      display: flex;
+      align-items: center;
+      column-gap: 4px;
+
+      &::after {
+        content: "";
+        width: 5px;
+        height: 5px;
+        border-radius: $radius-circle;
+        background: currentColor;
+      }
+    }
+  }
+  // .blog__actions
+  &__actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  // .blog__name
+  &__name {
+    max-width: 80%;
+
+    @include WorkSans500;
+    font-size: clampAd(16, 24);
+    line-height: 1.3;
+    transition: all 0.3s linear;
+
+    @media (any-hover: hover) {
+      &:hover {
+        color: $color-accent;
+      }
+    }
+  }
+  // .blog__link
+  &__link {
+    --size: #{clampAd(16, 24)};
+  }
+  // .blog__text
+  &__text {
+    color: $color-light-text;
+  }
+}

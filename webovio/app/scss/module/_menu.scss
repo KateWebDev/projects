@@ -1,0 +1,49 @@
+.menu {
+  position: fixed;
+  z-index: 3;
+  top: 0;
+  right: 0;
+  width: 50%;
+  height: 100%;
+  transition: all 0.4s linear;
+  transform: translateX(100%);
+  overflow: auto;
+  overflow-x: hidden;
+  background: $color-bg-dop;
+
+  &.menu--active {
+    transform: translateX(0);
+  }
+  // .menu__items
+  &__items {
+    padding: 50px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+  }
+  // .menu__item
+  &__item {
+    &--mobile {
+      display: none;
+    }
+  }
+  // .menu__link
+  &__link {
+    font-size: 20px;
+    color: $white;
+    white-space: nowrap;
+
+    svg {
+      fill: currentColor;
+    }
+    &--active {
+      cursor: default;
+    }
+  }
+  // .intro__icon
+  &__icon {
+    transform: rotate(90deg);
+  }
+}

@@ -1,0 +1,71 @@
+.footer {
+  background: $mainColor;
+  color: $white;
+  padding: clampAd(40, 75) 0;
+  // .footer__container
+  &__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: clampAd(30, 70);
+  }
+  // .footer__logo
+  &__logo {
+  }
+  // .footer__items
+  &__items {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px clampAd(30, 120);
+  }
+  // .footer__item
+  &__item {
+    font-size: clampAd(12, 14);
+  }
+  // .footer__name
+  &__name {
+    @include Roboto500;
+    margin-bottom: 7px;
+  }
+  // .footer__copy
+  &__copy {
+    opacity: 0.8;
+    margin-bottom: 3px;
+  }
+  // .footer__link
+  &__link {
+    text-decoration: underline;
+    transition: all 0.3s linear;
+
+    @media (any-hover: hover) {
+      &:hover {
+        color: $color-accent;
+        opacity: 1;
+      }
+    }
+  }
+  // .footer__address
+  &__address {
+    max-width: 159px;
+    opacity: 0.8;
+  }
+  // .footer__social
+  &__social {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+  }
+  // .footer__social-link
+  &__social-link {
+    opacity: 0.8;
+    transition: all 0.3s linear;
+
+    @media (any-hover: hover) {
+      &:hover {
+        color: $color-accent;
+        opacity: 1;
+      }
+    }
+  }
+}

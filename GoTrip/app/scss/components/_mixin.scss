@@ -1,0 +1,49 @@
+@function rem($px) {
+  $result: math.div($px, 16) + rem;
+  @return $result;
+}
+
+@function em($px, $current: 16) {
+  $result: math.div($px, $current) + em;
+  @return $result;
+}
+
+@function percent($px, $current) {
+  $result: math.div($px, $current) * 100%;
+  @return $result;
+}
+
+@function clampAd($min, $max) {
+  $minPx: $min + px;
+  $maxPx: $max + px;
+
+  $result: clamp(
+    $minPx,
+    calc($minPx + ($max - $min) * ((100vw - $widthReportMinPx) / ($widthReportMax - $widthReportMin))),
+    $maxPx
+  );
+
+  @return $result;
+}
+
+@function clampAdRem($min, $max) {
+  $minRem: rem($min);
+  $maxRem: rem($max);
+
+  $result: clamp(
+    $minRem,
+    calc($minRem + ($max - $min) * ((100vw - $widthReportMinPx) / ($widthReportMax - $widthReportMin))),
+    $maxRem
+  );
+
+  @return $result;
+}
+
+@mixin family_name {
+  font-family: "шрифт", sans-serif;
+  font-weight: 400;
+}
+
+/*
+@include family_name;
+*/

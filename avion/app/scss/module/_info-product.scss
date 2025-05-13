@@ -1,0 +1,120 @@
+.info-product {
+  background: $color-bg-dop;
+  // .info-product__container
+  &__container {
+  }
+  // .info-product__items
+  &__items {
+    display: flex;
+    flex-direction: column;
+  }
+  // .info-product__item
+  &__item {
+    padding: clampAd(0, 50) clampAd(0, 20) clampAd(30, 50) 0;
+    display: flex;
+    gap: 25px clampAd(30, 65);
+  }
+  // .info-product__image
+  &__image {
+    max-width: clampAd(300, 607);
+    max-height: 661px;
+  }
+  // .info-product__img
+  &__img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+  // .info-product__content
+  &__content {
+    padding: 30px 0;
+    max-width: clampAd(300, 520);
+  }
+  // .info-product__main-info
+  &__main-info {
+    padding-bottom: 28px;
+    margin-bottom: 24px;
+    position: relative;
+
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 1px;
+      background: $color-light;
+    }
+  }
+  // .info-product__name
+  &__name {
+    @include ClashDisplay400;
+    font-size: clampAd(22, 36);
+    //margin-bottom: clampAd(10, 16);
+  }
+  // .info-product__price
+  &__price {
+    font-size: clampAd(18, 24);
+  }
+  // .info-product__block
+  &__block {
+    display: flex;
+    flex-direction: column;
+    row-gap: clampAd(10, 14);
+    &:not(:last-child) {
+      margin-bottom: 35px;
+    }
+  }
+  // .info-product__type
+  &__type {
+    @include ClashDisplay400;
+  }
+  // .info-product__text
+  &__text {
+  }
+  // .info-product__list
+  &__list {
+    display: flex;
+    column-gap: 50px;
+  }
+  // .info-product__point
+  &__point {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+
+    &:not(:last-child) {
+      padding-right: 50px;
+
+      &::after {
+        content: "";
+        position: absolute;
+        top: 5px;
+        bottom: 5px;
+        right: 0;
+        width: 1px;
+        background: $color-light;
+      }
+    }
+  }
+  // .info-product__point-name
+  &__point-name {
+    @include ClashDisplay400;
+    font-size: 14px;
+  }
+  // .info-product__description
+  &__description {
+  }
+  // .info-product__actions
+  &__actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px clampAd(10, 16);
+  }
+  // .info-product__btn
+  &__btn {
+  }
+}

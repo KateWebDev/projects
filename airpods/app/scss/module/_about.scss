@@ -1,0 +1,50 @@
+.about {
+  padding-bottom: clamp(45px, calc(45px + (180 - 45) * ((100vw - 320px) / ($widthReportMax - $widthReportMin))), 180px);
+  // .about__container
+  &__container {
+  }
+  // .about__title
+  &__title {
+    margin-bottom: 20px;
+  }
+  // .about__text
+  &__text {
+    text-align: center;
+    max-width: 635px;
+    margin: 0 auto 40px;
+  }
+  // .about__content
+  &__content {
+    //max-width: 625px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    gap: 30px clamp(50px, calc(50px + (150 - 50) * ((100vw - 320px) / ($widthReportMax - $widthReportMin))), 150px);
+    flex-wrap: wrap;
+  }
+  // .about__description
+  &__description {
+    max-width: 230px;
+  }
+  // .about__info
+  &__info {
+    &:not(:last-child) {
+      margin-bottom: clamp(
+        30px,
+        calc(30px + (80 - 30) * ((100vw - 320px) / ($widthReportMax - $widthReportMin))),
+        80px
+      );
+    }
+  }
+  // .about__images
+  &__images {
+  }
+  // .about__img
+  &__img {
+    &:not(.hidden) {
+      width: clamp(145px, calc(145px + (245 - 145) * ((100vw - 320px) / ($widthReportMax - $widthReportMin))), 245px);
+      height: clamp(325px, calc(325px + (425 - 325) * ((100vw - 320px) / ($widthReportMax - $widthReportMin))), 425px);
+      object-fit: cover;
+    }
+  }
+}

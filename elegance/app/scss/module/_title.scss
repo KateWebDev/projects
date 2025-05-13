@@ -1,0 +1,31 @@
+.main-title {
+  @include PlayfairDisplay400;
+  font-size: clampAd(35, 72);
+  line-height: 1.3;
+  color: $black;
+  text-transform: capitalize;
+}
+
+.title {
+  @include PlayfairDisplay400;
+  font-weight: 400;
+  font-size: clampAd(20, 42);
+  line-height: 1.3;
+  color: $black;
+  text-transform: capitalize;
+
+  // .title--big
+  &--big {
+    font-size: clampAd(25, 52);
+    line-height: 1;
+  }
+  // .title--color
+  &--color {
+    color: $white;
+  }
+}
+
+.subtitle {
+  text-transform: uppercase;
+  color: $color-light;
+}

@@ -1,0 +1,37 @@
+.slogan {
+  text-align: center;
+  text-transform: uppercase;
+  padding: clampAd(50, 115) 0 20px;
+
+  // .slogan__text
+  &__text {
+    @include WorkSans500;
+    font-size: clampAd(14, 40);
+    line-height: 1.3;
+    color: $black;
+  }
+  // .slogan__title
+  &__title {
+    @include WorkSans600;
+    font-size: clampAd(60, 300);
+    line-height: 1.17;
+    color: $color-accent;
+  }
+  // .slogan__image
+  &__image {
+    margin-top: calc(clampAd(35, 185) * -1);
+    width: 100%;
+
+    min-height: clampAd(67, 402);
+  }
+  // .slogan__img
+  &__img {
+    display: block;
+    max-width: 100%;
+    max-height: 100%;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+}

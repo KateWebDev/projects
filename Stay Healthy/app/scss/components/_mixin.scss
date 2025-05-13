@@ -1,0 +1,42 @@
+@function clampAd($min, $max) {
+  $minPx: $min + px;
+  $maxPx: $max + px;
+
+  $result: clamp(
+    $minPx,
+    calc($minPx + ($max - $min) * ((100vw - 320px) / ($widthReportMax - $widthReportMin))),
+    $maxPx
+  );
+
+  @return $result;
+}
+
+@mixin Poppins300 {
+  font-family: "Poppins", sans-serif;
+  font-weight: 300;
+}
+@mixin Poppins500 {
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+}
+@mixin Poppins600 {
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+}
+@mixin Poppins700 {
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+}
+@mixin Inter800 {
+  font-family: "Inter", sans-serif;
+  font-weight: 800;
+}
+
+/*
+@include Poppins300;
+@include Poppins500;
+@include Poppins600;
+@include Poppins700;
+
+@include Inter800;
+*/

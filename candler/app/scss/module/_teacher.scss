@@ -1,0 +1,51 @@
+.teacher {
+  background: $color-bg-accent;
+  padding: 50px 0;
+
+  // .teacher__container
+  &__container {
+    display: flex;
+    gap: 30px 50px;
+  }
+  // .teacher__content
+  &__content {
+    color: #ffffff;
+  }
+  // .teacher__items
+  &__items {
+    display: grid;
+    grid-template-columns: repeat(2, 320px);
+    gap: 75px 25px;
+  }
+  // .teacher__item
+  &__item {
+    position: relative;
+  }
+  // .teacher__img
+  &__img {
+    width: 220px;
+    height: 220px;
+    object-fit: cover;
+  }
+  // .teacher__info
+  &__info {
+    position: absolute;
+    right: 0;
+    bottom: 10px;
+    max-width: 165px;
+    padding: 14px 20px;
+    background: $color-btn-active;
+    color: #ffffff;
+    text-align: center;
+  }
+  // .teacher__name
+  &__name {
+    font-family: "Yeseva One", serif;
+    font-size: 12px;
+    margin-bottom: 4px;
+  }
+  // .teacher__text
+  &__text {
+    font-size: 10px;
+  }
+}

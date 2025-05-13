@@ -1,0 +1,13 @@
+.popular {
+  padding: clampAd(40, 65) 0 clampAd(30, 45);
+  // .popular__container
+  &__container {
+  }
+  // .popular__title
+  &__title {
+    margin-bottom: 28px;
+  }
+  // .popular__products
+  &__products {
+  }
+}

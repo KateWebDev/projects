@@ -1,0 +1,54 @@
+.promo {
+  // .promo__container
+  &__container {
+    padding-left: clamp(15px, calc(15px + (200 - 15) * ((100vw - 320px) / ($widthReportMax - $widthReportMin))), 200px);
+  }
+  // .promo__inner
+  &__inner {
+    width: 100%;
+    min-height: clamp(
+      300px,
+      calc(300px + (600 - 300) * ((100vw - 320px) / ($widthReportMax - $widthReportMin))),
+      600px
+    );
+    background: image-set(
+        url("../images/main/promo/1.avif") type("image/avif"),
+        url("../images/main/promo/1.webp") type("image/webp"),
+        url("../images/main/promo/1.jpg")
+      )
+      center/cover no-repeat;
+    position: relative;
+  }
+  // .promo__link
+  &__link {
+    transition: all 0.3s linear;
+    width: clamp(50px, calc(50px + (100 - 50) * ((100vw - 320px) / ($widthReportMax - $widthReportMin))), 100px);
+    aspect-ratio: 1;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba($white, 0.7);
+    border: 1px solid $white;
+    backdrop-filter: blur(2.5px);
+    transition: all 0.3s linear;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 55%;
+      transform: translate(-50%, -50%);
+      width: clamp(15px, calc(15px + (30 - 15) * ((100vw - 320px) / ($widthReportMax - $widthReportMin))), 30px);
+      height: clamp(18px, calc(18px + (36 - 18) * ((100vw - 320px) / ($widthReportMax - $widthReportMin))), 36px);
+      background: url(../../images/main/promo/triangle.svg) center/cover no-repeat;
+    }
+
+    @media (any-hover: hover) {
+      &:hover {
+        background: rgba($color-accent-bg, 0.7);
+      }
+    }
+  }
+}

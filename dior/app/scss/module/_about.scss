@@ -1,0 +1,35 @@
+.about {
+  // .about__container
+  &__container {
+    padding-left: clamp(30px, calc(30px + (200 - 30) * ((100vw - 320px) / ($widthReportMax - $widthReportMin))), 200px);
+  }
+  // .about__title
+  &__title {
+    max-width: 160px;
+    @include play400;
+    font-size: clamp(20px, calc(20px + (32 - 20) * ((100vw - 320px) / ($widthReportMax - $widthReportMin))), 32px);
+    text-transform: uppercase;
+    margin-bottom: 20px;
+  }
+  // .about__inner
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  // .about__content
+  &__content {
+    max-width: 387px;
+    &--bold {
+      font-weight: 700;
+    }
+  }
+  // .about__text
+  &__text {
+    &:not(:last-child) {
+      margin-bottom: 20px;
+    }
+  }
+}

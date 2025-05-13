@@ -1,0 +1,27 @@
+@function clampAd($min, $max) {
+  $minPx: $min + px;
+  $maxPx: $max + px;
+
+  $result: clamp(
+    $minPx,
+    calc($minPx + ($max - $min) * ((100vw - 320px) / ($widthReportMax - $widthReportMin))),
+    $maxPx
+  );
+
+  @return $result;
+}
+
+@mixin Satoshi400 {
+  font-family: "Satoshi", sans-serif;
+  font-weight: 400;
+}
+
+@mixin ClashDisplay400 {
+  font-family: "Clash Display", sans-serif;
+  font-weight: 400;
+}
+
+/*
+@include Satoshi400;
+@include ClashDisplay400;
+*/

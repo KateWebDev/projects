@@ -1,0 +1,31 @@
+.btn {
+  background: rgba(249, 249, 249, 0.15);
+  padding: 16px 32px;
+  @include Satoshi400;
+  font-size: 16px;
+  line-height: 1.5;
+  text-align: center;
+  white-space: nowrap;
+  color: $white;
+  transition: all 0.3s linear;
+
+  @media (any-hover: hover) {
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+
+  &--dark {
+    background: $color-dark;
+    color: $white;
+  }
+  &--light {
+    background: $color-bg-dop;
+    color: $color-dark;
+  }
+
+  &--medium {
+    background: $white;
+    color: $color-dark;
+  }
+}

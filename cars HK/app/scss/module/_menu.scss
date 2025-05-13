@@ -1,0 +1,29 @@
+.menu {
+  // .menu__items
+  &__items {
+    display: flex;
+    align-items: center;
+    gap: 20px clampAd(20, 48);
+  }
+  // .menu__item
+  &__item {
+  }
+  // .menu__link
+  &__link {
+    font-weight: 600;
+    line-height: 1.5;
+    white-space: nowrap;
+    transition: all 0.3s linear;
+
+    @media (any-hover: hover) {
+      &:hover:not(.menu__link--active) {
+        color: $color-accent;
+      }
+    }
+
+    &--active {
+      color: $color-accent;
+      cursor: default;
+    }
+  }
+}

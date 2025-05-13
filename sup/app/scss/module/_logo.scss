@@ -1,0 +1,16 @@
+.logo {
+  svg {
+    width: clampAd(110, 158);
+    height: auto;
+    fill: $mainColor;
+    transition: all 0.3s linear;
+  }
+
+  @media (any-hover: hover) {
+    &:hover {
+      svg {
+        fill: $color-accent2;
+      }
+    }
+  }
+}

@@ -1,0 +1,39 @@
+.clients {
+  padding: 60px 0;
+  background: #f7f2ea;
+  
+  // .clients__container
+  &__container {
+  }
+  // .clients__title
+  &__title {
+    text-align: center;
+    margin-bottom: 60px;
+  }
+  // .clients__items
+  &__items {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 30px 26px;
+  }
+  // .clients__item
+  &__item {
+    width: 280px;
+  }
+  // .clients__blockquote
+  &__blockquote {
+  }
+  // .clients__text
+  &__text {
+    font-size: 16px;
+    font-style: italic;
+    margin-bottom: 10px;
+  }
+  // .clients__author
+  &__author {
+    display: block;
+    font-style: normal;
+    font-weight: 600;
+  }
+}

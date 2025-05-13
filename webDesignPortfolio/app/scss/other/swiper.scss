@@ -1,0 +1,283 @@
+
+
+      <div class="swiper">
+        <div class="image-slider swiper-container">
+          <!-- swiper-wrapper - обязательная оболочка -->
+          <div class="image-slider__wrapper swiper-wrapper">
+            <!-- swiper-slide - слайды -->
+            <!-- для использования хэш-навигации необходимо каждому слайду указать дата атрибут data-hash -->
+            <div class="image-slider__slide swiper-slide" data-hash="slide-1">
+              <!-- для применения zoom к какртинке необходимо добавить класс swiper-zoom-container для родителя самой картинки в нашем случае для image-slider__image -->
+              <div class="image-slider__image swiper-zoom-container">
+                <img src="images/main/intro/mersedes.png" alt="">
+              </div>
+            </div>
+            <div class="image-slider__slide swiper-slide" data-hash="slide-2">
+              <div class="image-slider__image swiper-zoom-container">
+                <img src="images/main/intro/milih.png" alt="">
+              </div>
+            </div>
+            <div class="image-slider__slide swiper-slide" data-hash="slide-3">
+              <div class="image-slider__image swiper-zoom-container">
+                <img src="images/main/intro/Oculus.png" alt="">
+              </div>
+            </div>
+            <div class="image-slider__slide swiper-slide" data-hash="slide-4">
+              <div class="image-slider__image swiper-zoom-container">
+                <img src="images/main/intro/safari.png" alt="">
+              </div>
+            </div>
+            <div class="image-slider__slide swiper-slide" data-hash="slide-5">
+              <div class="image-slider__image swiper-zoom-container">
+                <img src="images/main/intro/solar.png" alt="">
+              </div>
+            </div>
+          </div>
+
+          <!-- Добавляем если нужны стрелки -->
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next"></div>
+
+          <!-- Добавляем если нужна пагинация -->
+          <div class="swiper-pagination"></div>
+
+          <!-- Добавляем если нужна полоса прокрутки (scrollbar) -->
+          <div class="swiper-scrollbar"></div>
+        </div>
+      </div>
+    </div>
+
+
+
+
+
+
+    const swiper = new Swiper(".testimonials__slider", {
+      // стрелки - название классов может быть любым, то что указано, это  название по-умолчанию
+      navigation: {
+        prevEl: ".swiper-button-prev",
+        nextEl: ".swiper-button-next",
+      },
+      // пагинация (буллеты)
+      pagination: {
+        el: ".swiper-pagination",
+        //чтобы по пагинации можно было нажимать
+        clickable: true,
+        // динамические буллеты - точки будут изменять свой размер в зависимости от того на сколько далеко они от активной точки
+        //dynamicBullets: true,
+        // кастомные буллеты (выводит номер слайда)
+        //renderBullet: function (index, classname) { return '<span class="' + classname + '">' + (index + 1) + "</span>";},
+    
+        // Фракции - выводит текущую страница слайда из общего числа (пример 1/3, 2/3 ...)
+        //type: "fraction",
+        // Кастомные буллеты для фракции
+        //  renderFraction: function (currentClass, totalClass) { return 'Photo <span class=">' + currentClass + '"></span>' + " in " + '<span class=">' + totalClass + '"></span>'; },
+    
+        // Прогрессбар - линия сверху, которая заполняется по мере приближения к последнему слайду
+        //type: "progressbar",
+      },
+    
+      // Скролл
+      scrollbar: {
+        el: ".swiper-scrollbar",
+        // Возможность перетаскивать скролл
+        draggable: true,
+      },
+    
+      // Перетаскивание слайдов на пк
+      simulateTouch: true,
+    
+      // Чувствительность свайпа
+      touchRatio: 1,
+    
+      // Угод перетаскивания слайда
+      touchAngle: 45,
+    
+      // Курсор перетаскивания
+      grabCursor: true,
+    
+      // Переключение при клике на соседний слайд
+      slideToClickedSlide: true,
+    
+      // Навигация по хэшу
+    
+      hashNavigation: {
+        // Отслеживать состояние
+        watchState: true,
+      },
+    
+      // Управление клавиатурой
+      keyboard: {
+        //включить / выключить управление клавиатурой
+        enabled: true,
+        // включить / выключить только когда слайдер в пределах вьюпорта (будет листаться только когда до него до скролили)
+        onlyInViewport: true,
+        // Включить / выключить управление клавишами pageUp и pageDown
+        pageUpDown: true,
+      },
+    
+      // Управление колесом мыши
+      mousewheel: {
+        // чувствительность колеса мыши
+        sensitivity: 1,
+        // Класс объекта на котором будет срабатывать прокрутка мышью
+        eventsTarget: ".image-slider",
+      },
+    
+      // Авто высота
+      autoHeight: false,
+    
+      // Количество слайдов для показа,  можно включать не целые числа, а например 2.5 слайда
+      // можно указать значение auto и ширина слайда будет формироваться самим контентом внутри него, или конкретно заданной шириной в CSS
+      slidesPerView: 1,
+    
+      // Отключение функционала, если слайдов меньше чем нужно
+      watchOverflow: true,
+    
+      // Отступ между слайдами
+      spaceBetween: 50,
+    
+      // Количество пролистываемых слайдов
+      slidesPerGroup: 1,
+    
+      // Активный слайд по центру
+      centeredSlides: true,
+    
+      // Старотовый слайд (нумерация слайдов начинается с 0)
+      initialSlide: 0,
+    
+      // Мультирядность (необходимо отключить авто высоту если она включена, т.е.   autoHeight: false)
+      slidesPerColumn: 2,
+    
+      // Бесконечная прокрутка ( не работает с Мультирядностью)
+      loop: true,
+    
+      // Количество дублирующихся слайдов (если slidesPerView = auto)
+      loopedSlides: 3,
+    
+      // Свободный режим - может перетаскивать (свайпать) слайды без фиксированной позиции, что-то вроде как будто скролишь ленту
+      freeMode: true,
+    
+      // Автопрокрутка
+      autoplay: {
+        // Задержка
+        delay: 1000,
+        // Закончить на последнем слайде?
+        stopOnLastSlide: true,
+        // Отключить после ручного переключения
+        disableOnInteraction: false,
+      },
+    
+      // Скорость переключения слайдов
+      speed: 300,
+    
+      // Вертикальный слайдер
+      direction: "vertical",
+    
+      // Эффекты
+      // slide - по умолчанию
+      // fade - плавная смена (подходит когда выводится 1 слайд на странице)
+      // flip
+      // cube
+      // coverflow
+    
+      effect: "slide",
+    
+      // Дополнение к effect: 'fade'
+      fadeEffect: {
+        // Паралельная смена прозрачности
+        crossFade: true,
+      },
+    
+      // Дополнение к effect: 'flip'
+      flipEffect: {
+        // Тень
+        slideShadows: true,
+        // Показ только активного слайда
+        limitRotation: true,
+      },
+      // Дополнение к effect: 'cube'
+      cubeEffect: {
+        // Настройка тени
+        slideShadows: true,
+        shadow: true,
+        shadowOffset: 20,
+        shadowScale: 0.94,
+      },
+    
+      // Дополнение к effect: 'coverflow'
+      coverfloweffect: {
+        // угол
+        rotate: 20,
+        // наложение
+        stretch: 50,
+        // тень
+        slideShadows: true,
+      },
+    
+      // Адаптив (подход как на mobileFirst)
+      breakpoints: {
+        320: {},
+        480: {},
+      },
+    
+      // ЗУМ картинки
+      zoom: {
+        // Максимальное увеличение
+        maxRatio: 3,
+        // Минимальное увеличение
+        minRatio: 1,
+      },
+    
+      // Слайдер с миниатрами
+      thumbs: {
+        // Свайпер с миниатюрами и его настройки
+        swiper: {
+          el: ".image-min-slider", //класс 2-ого слайдера где есть миниатюры
+          slidesPerView: 5,
+        },
+      },
+      // сетка на гридах
+      grid: {
+        rows: 2,
+        fill: "row",
+      },
+    
+      // Слайдер в слайдере
+      /*
+      new swiper('.image-in-slider', {
+        // Курсор перетаскивания 
+        grabCursor: true,
+        // Навигация
+        pagination:{
+          el: '.swiper-pagination',
+          clickable: true,
+        },
+        // Корректная работа перетаскивания для доченего слайдера
+        nested: true,
+      })
+    */
+      // связка 2 слайдеров
+    
+      // отдельно за пределами текущего слайдера инициализирует 2 слайдер, т.е. будет инициализировано 2 слайдера
+    
+      // Количество слайдов для показа у обоих слайдеров должна быть одинаково и общее количесто слайдов должно быть одинаково
+    
+      // помещаем оба слайдера в переменные (пример: let slider1 - new Swoper('.xxx', {...}))
+    
+      // Передача управления между слайдерами (пиштся после объявления слайдеров)
+      /* 
+        slider1.controller.control = slider2;
+        slider2.controller.control = slider1;
+      */
+    
+      // Обновить слайдер при изменении элементов
+      observe: true,
+    
+      // Обновить слайдер при изменении родиетльских элементов
+      observeParents: true,
+    
+      // Обновить слайдер при изменении дочерних элементов
+      observeSlideChildren: true,
+    });
+    

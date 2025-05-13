@@ -1,0 +1,121 @@
+.about {
+  background: image-set(
+      url("../images/main/about/bg.avif") type("image/avif"),
+      url("../images/main/about/bg.webp") type("image/webp"),
+      url("../images/main/about/bg.jpg")
+    )
+    center/cover no-repeat;
+  background-attachment: fixed;
+  color: $white;
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: clampAd(90, 180);
+    background: $mainColor;
+    transform: translateY(-50%);
+    z-index: 1;
+  }
+
+  // .about__container
+  &__container {
+    min-height: 160svh;
+    padding-top: clampAd(150, 200);
+    padding-bottom: clampAd(30, 54);
+    position: relative;
+    z-index: 4;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    row-gap: 30px;
+  }
+  // .about__top
+  &__top {
+    display: flex;
+    align-items: flex-end;
+    gap: 20px clampAd(30, 87);
+  }
+  // .about__content
+  &__content {
+    display: grid;
+    grid-template-columns: repeat(2, 291px);
+    gap: 20px clampAd(15, 87);
+  }
+  // .about__box
+  &__box {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-end;
+    row-gap: 20px;
+  }
+  // .about__text
+  &__text {
+    &:last-child {
+      padding-bottom: 30px;
+      border-bottom: 1px solid $white;
+    }
+  }
+  // .about__play
+  &__play {
+    svg {
+      width: clampAd(35, 70);
+      height: clampAd(35, 70);
+    }
+  }
+  // .about__image
+  &__image {
+    max-width: 227px;
+    max-height: 650px;
+  }
+  // .about__img
+  &__img {
+    display: block;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    object-position: center;
+  }
+  // .about__bottom
+  &__bottom {
+    display: flex;
+    align-items: center;
+    gap: 30px clampAd(30, 160);
+  }
+  // .about__type
+  &__type {
+    @include Comfortaa400;
+    font-size: clampAd(30, 60);
+    text-transform: uppercase;
+  }
+  // .about__list
+  &__list {
+    display: flex;
+    flex-direction: column;
+    row-gap: clampAd(20, 24);
+    @include Inter700;
+    text-transform: uppercase;
+
+    padding: 30px 0;
+    border: 1px solid $white;
+    border-left: none;
+    border-right: none;
+  }
+  // .about__point
+  &__point {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    column-gap: clampAd(15, 25);
+  }
+  // .about__name
+  &__name {
+  }
+  // .about__descr
+  &__descr {
+  }
+}

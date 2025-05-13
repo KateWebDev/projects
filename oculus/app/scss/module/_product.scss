@@ -1,0 +1,38 @@
+.product {
+  // .product__container
+  &__container {
+  }
+  // .product__type
+  &__type {
+    margin-bottom: clampAd(30, 50);
+  }
+  // .product__items
+  &__items {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(clampAd(140, 280), 1fr));
+    grid-auto-flow: dense;
+    gap: clampAd(19, 32) clampAd(10, 19);
+  }
+  // .product__item
+  &__item {
+    &--big {
+      grid-column: span 2;
+      grid-row: span 2;
+    }
+  }
+  // .product__img
+  &__img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    margin-bottom: 10px;
+  }
+  // .product__name
+  &__name {
+    text-transform: capitalize;
+    padding-right: 10px;
+  }
+  // .product__title
+  &__title {
+  }
+}

@@ -1,0 +1,15 @@
+.map {
+  padding: clampAd(50, 102) 0;
+  // .map__container
+  &__container {
+  }
+  // .map__title
+  &__title {
+    margin-bottom: clampAd(20, 40);
+  }
+
+  iframe {
+    width: 100%;
+    min-height: clampAd(200, 524);
+  }
+}

@@ -1,0 +1,126 @@
+.services {
+  // .services__container
+  &__container {
+  }
+  // .services__info
+  &__info {
+    margin-bottom: clampAd(30, 80);
+  }
+
+  // .services__items
+  &__items {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(clampAd(200, 600), 1fr));
+    grid-auto-rows: 310px;
+    grid-auto-flow: dense;
+    gap: 40px;
+  }
+  // .services__item
+  &__item {
+    padding: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: $radius-big;
+    border: $border;
+    box-shadow: $shadow;
+
+    position: relative;
+    &:nth-child(3n + 1) {
+      background: $color-bg-light;
+    }
+
+    &:nth-child(3n + 2) {
+      background: $color-accent;
+    }
+
+    &:nth-child(3n + 3) {
+      background: $color-bg-dark;
+
+      .services__arrow {
+        background: $color-bg-light;
+        svg {
+          fill: $color-bg-dark;
+        }
+      }
+
+      .services__link {
+        color: $white;
+      }
+    }
+  }
+  // .services__item-content
+  &__item-content {
+    max-width: 222px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  // .services__name
+  &__name {
+    @include SpaceGrotesk500;
+    font-size: clampAd(20, 30);
+
+    span {
+      border-radius: $radius-small;
+      padding: 0 7px;
+      white-space: nowrap;
+    }
+
+    // .services__name--green
+    &--green {
+      span {
+        background: $color-accent;
+      }
+    }
+    // .services__name--white
+    &--white {
+      span {
+        background: $white;
+      }
+    }
+  }
+  // .services__link
+  &__link {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    font-size: 20px;
+    line-height: 1.4;
+    color: $black;
+    transition: all 0.3s linear;
+
+    @media (any-hover: hover) {
+      &:hover {
+        text-shadow: 0 0 1px currentColor;
+        .services__arrow {
+          transform: scale(1.1);
+        }
+      }
+    }
+  }
+  // .services__arrow
+  &__arrow {
+    width: 41px;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: $color-bg-dark;
+    transition: all 0.3s linear;
+
+    svg {
+      fill: $color-accent;
+    }
+  }
+  // .services__img
+  &__img {
+    max-width: clampAd(110, 210);
+    width: auto;
+    height: auto;
+    object-fit: cover;
+    object-position: center;
+  }
+}

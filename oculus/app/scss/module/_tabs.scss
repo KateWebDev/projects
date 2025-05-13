@@ -1,0 +1,114 @@
+.tabs {
+  // .tabs__items
+  &__items {
+    display: inline-flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: clampAd(10, 20) 30px;
+    counter-reset: num;
+    padding-right: 10px;
+  }
+
+  // .tabs__item
+  &__item {
+    @include Helvetica700;
+    position: relative;
+
+    &::before {
+      content: counter(num, decimal-leading-zero);
+      counter-increment: num;
+      margin-right: 5px;
+    }
+
+    // .tabs__item--active
+    &--active {
+      color: $color-dop;
+    }
+  }
+
+  // .tabs__content
+  &__content {
+  }
+
+  // .tabs__block
+  &__block {
+    display: none;
+    grid-template-columns: auto clampAd(150, 280);
+    align-items: end;
+    gap: clampAd(20, 40);
+
+    // .tabs__block--actives
+    &--active {
+      display: grid;
+    }
+  }
+  // .tabs__img
+  &__img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  // .tabs__box
+  &__box {
+  }
+  // .tabs__name
+  &__name {
+    font-size: clampAd(14, 24);
+    margin-bottom: 10px;
+  }
+  // .tabs__text
+  &__text {
+    margin-bottom: clampAd(10, 40);
+  }
+  // .tabs__video
+  &__video {
+    width: 100%;
+    min-height: 150px;
+    background: image-set(
+        url("../images/main/about/2.avif") type("image/avif"),
+        url("../images/main/about/2.webp") type("image/webp"),
+        url("../images/main/about/2.jpg")
+      )
+      center/cover no-repeat;
+    position: relative;
+  }
+  // .tabs__play
+  &__play {
+    width: 50px;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    background: $color-light;
+    position: absolute;
+    left: 31px;
+    top: 66px;
+    transition: all 0.3s linear;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 12px;
+      height: 13px;
+      background: url(../../images/main/about/play.svg) center/cover no-repeat;
+    }
+
+    span {
+      margin-top: 9px;
+      font-size: 13px;
+      color: $color-light;
+      white-space: nowrap;
+      position: absolute;
+      top: 100%;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    @media (any-hover: hover) {
+      &:hover {
+        opacity: 0.8;
+      }
+    }
+  }
+}

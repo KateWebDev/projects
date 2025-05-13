@@ -1,0 +1,22 @@
+.logo {
+  padding: 22px;
+  width: 198px;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: $color-accent;
+
+  &--footer {
+    width: 100%;
+    background: $color-dop;
+  }
+  // .logo__img
+  &__img {
+    display: block;
+    width: auto;
+    height: auto;
+    object-fit: cover;
+    object-position: center;
+  }
+}

@@ -1,0 +1,36 @@
+.footer {
+  padding: clampAd(32, 80) 0;
+  // .footer__container
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 16px clampAd(20, 100);
+
+    line-height: 1.8;
+    letter-spacing: 0.04em;
+    color: $color-dark;
+  }
+  // .footer__copy
+  &__copy {
+    font-size: clampAd(14, 20);
+    margin-right: auto;
+  }
+  // .footer__link
+  &__link {
+    font-size: clampAd(16, 20);
+    opacity: 0.7;
+    transition: all 0.3s linear;
+
+    @media (any-hover: hover) {
+      &:hover {
+        color: $color-accent;
+      }
+    }
+  }
+  // .footer__socials
+  &__socials {
+    opacity: 0.7;
+  }
+}

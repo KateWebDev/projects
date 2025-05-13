@@ -1,0 +1,13 @@
+.slider {
+  // .slider__items
+  &__items {
+  }
+  // .slider__item
+  &__item {
+  }
+  // .slider__img
+  &__img {
+    width: 100%;
+    min-height: clampAd(300, 900);
+  }
+}

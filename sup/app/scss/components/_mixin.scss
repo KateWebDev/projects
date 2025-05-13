@@ -1,0 +1,49 @@
+@function clampAd($min, $max) {
+  $minPx: $min + px;
+  $maxPx: $max + px;
+
+  $result: clamp(
+    $minPx,
+    calc($minPx + ($max - $min) * ((100vw - 320px) / ($widthReportMax - $widthReportMin))),
+    $maxPx
+  );
+
+  @return $result;
+}
+
+@mixin Inter300I {
+  font-family: "Inter", sans-serif;
+  font-weight: 300;
+  font-style: italic;
+}
+@mixin Inter400 {
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+}
+@mixin Inter700 {
+  font-family: "Inter", sans-serif;
+  font-weight: 700;
+}
+@mixin Inter800I {
+  font-family: "Inter", sans-serif;
+  font-weight: 800;
+  font-style: italic;
+}
+@mixin Comfortaa400 {
+  font-family: "Comfortaa", sans-serif;
+  font-weight: 400;
+}
+@mixin Comfortaa700 {
+  font-family: "Comfortaa", sans-serif;
+  font-weight: 700;
+}
+
+/*
+@include Inter300I;
+@include Inter400;
+@include Inter700;
+@include Inter800I;
+
+@include Comfortaa400;
+@include Comfortaa700;
+*/

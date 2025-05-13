@@ -1,0 +1,45 @@
+.header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: auto;
+  z-index: 2;
+
+  // .header__container
+  &__container {
+    padding: 20px 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    column-gap: clampAd(30, 60);
+  }
+  // .header__logo
+  &__logo {
+    position: relative;
+    z-index: 4;
+  }
+  // .header__menu
+  &__menu {
+    margin-right: auto;
+  }
+  // .header__actions
+  &__actions {
+    position: relative;
+    z-index: 4;
+    display: flex;
+    align-items: center;
+    column-gap: clampAd(18, 36);
+  }
+  // .header__action
+  &__action {
+  }
+  // .header__actin-link
+  &__actin-link {
+  }
+  // .header__burger
+  &__burger {
+    position: relative;
+    z-index: 4;
+  }
+}

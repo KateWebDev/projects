@@ -1,0 +1,61 @@
+.button {
+  border-radius: $radius;
+  background: $color-accent;
+  padding: 17px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  border: 1px solid transparent;
+  transition: all 0.3s linear;
+
+  svg {
+    fill: $white;
+    width: 24px;
+    height: 24px;
+    transition: all 0.3s linear;
+  }
+
+  &--big {
+    padding: 23px;
+  }
+
+  @media (any-hover: hover) {
+    &:hover {
+      background: $white;
+      border-color: $color-accent;
+
+      svg {
+        fill: $color-accent;
+      }
+    }
+  }
+}
+
+.btn {
+  padding: 10px 34px 10px 10px;
+  background: #f6f4ff;
+  border-radius: $radius;
+  color: $color-accent;
+  text-align: center;
+  white-space: nowrap;
+  position: relative;
+  transition: all 0.3s linear;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    width: 20px;
+    height: 20px;
+    background: url(../../images/icons/arrow-right.svg) center/cover no-repeat;
+  }
+
+  @media (any-hover: hover) {
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+}

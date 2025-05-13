@@ -1,0 +1,25 @@
+.socials {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px clampAd(32, 43);
+
+  // .socials__item
+  &__item {
+  }
+  // .socials__link
+  &__link {
+    svg {
+      fill: $color-light;
+      transition: all 0.3s linear;
+    }
+
+    @media (any-hover: hover) {
+      &:hover {
+        svg {
+          fill: $color-dop;
+        }
+      }
+    }
+  }
+}

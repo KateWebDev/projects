@@ -1,0 +1,88 @@
+.intro {
+  background: image-set(
+      url("../images/main/intro/bg.avif") type("image/avif"),
+      url("../images/main/intro/bg.webp") type("image/webp"),
+      url("../images/main/intro/bg.jpg")
+    )
+    top center/cover no-repeat;
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(#000000, 0.3);
+  }
+
+  // .intro__container
+  &__container {
+    position: relative;
+    z-index: 2;
+  }
+  // .intro__content
+  &__content {
+    padding: 20px 0;
+    max-width: 480px;
+    min-height: calc(
+      100vh - clamp(84px, calc(84px + (98 - 84) * ((100vw - 320px) / ($widthReportMax - $widthReportMin))), 98px)
+    );
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 20px 0;
+  }
+  // .intro__title
+  &__title {
+    font-size: clamp(30px, calc(30px + (64 - 30) * ((100vw - 320px) / ($widthReportMax - $widthReportMin))), 64px);
+    font-weight: 700;
+    line-height: 1;
+    margin-bottom: 24px;
+  }
+  // .intro__text
+  &__text {
+    font-size: clamp(16px, calc(16px + (24 - 16) * ((100vw - 320px) / ($widthReportMax - $widthReportMin))), 24px);
+    color: rgba(#ffffff, 0.8);
+    margin-bottom: clamp(20px, calc(20px + (40 - 20) * ((100vw - 320px) / ($widthReportMax - $widthReportMin))), 40px);
+  }
+  // .intro__actions
+  &__actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+  }
+  // .intro__action
+  &__action {
+  }
+  // .intro__btn
+  &__btn {
+    padding: clamp(10px, calc(10px + (20 - 10) * ((100vw - 320px) / ($widthReportMax - $widthReportMin))), 20px)
+      clamp(16px, calc(16px + (32 - 16) * ((100vw - 320px) / ($widthReportMax - $widthReportMin))), 32px);
+  }
+  // .intro__button
+  &__button {
+    position: absolute;
+    bottom: 16px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 80px;
+    animation: jump 0.5s linear infinite alternate;
+
+    svg {
+      fill: #ffffff;
+    }
+  }
+}
+
+@keyframes jump {
+  0% {
+    transform: translateY(-2px);
+  }
+  100% {
+    transform: translateY(2px);
+  }
+}

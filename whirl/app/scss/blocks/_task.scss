@@ -1,0 +1,91 @@
+.task {
+  padding: clampAd(60, 120) 0;
+
+  // .task__container
+  &__container {
+  }
+  // .task__title
+  &__title {
+    margin-bottom: clampAd(14, 18);
+  }
+  // .task__info
+  &__info {
+    max-width: 650px;
+
+    font-size: clampAd(14, 18);
+    letter-spacing: 0.01em;
+
+    margin-bottom: clampAd(30, 65);
+  }
+  // .task__items
+  &__items {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(234px, 1fr));
+    grid-auto-flow: dense;
+    grid-auto-rows: minmax(clampAd(100, 218), 1fr);
+    gap: clampAd(30, 64);
+  }
+  // .task__item
+  &__item {
+    display: flex;
+    flex-direction: column;
+    row-gap: 11px;
+
+    &::before {
+      content: "";
+      width: 55px;
+      height: 55px;
+    }
+    // .task__item--1
+    &--1 {
+      &::before {
+        background: image-set(
+            url("../images/main/task/1.avif") type("image/avif"),
+            url("../images/main/task/1.webp") type("image/webp"),
+            url("../images/main/task/1.jpg")
+          )
+          center/cover no-repeat;
+      }
+    }
+    // .task__item--2
+    &--2 {
+      &::before {
+        background: image-set(
+            url("../images/main/task/2.avif") type("image/avif"),
+            url("../images/main/task/2.webp") type("image/webp"),
+            url("../images/main/task/2.jpg")
+          )
+          center/cover no-repeat;
+      }
+    }
+    // .task__item--3
+    &--3 {
+      &::before {
+        background: image-set(
+            url("../images/main/task/3.avif") type("image/avif"),
+            url("../images/main/task/3.webp") type("image/webp"),
+            url("../images/main/task/3.jpg")
+          )
+          center/cover no-repeat;
+      }
+    }
+    // .task__item--4
+    &--4 {
+      &::before {
+        background: image-set(
+            url("../images/main/task/4.avif") type("image/avif"),
+            url("../images/main/task/4.webp") type("image/webp"),
+            url("../images/main/task/4.jpg")
+          )
+          center/cover no-repeat;
+      }
+    }
+  }
+  // .task__name
+  &__name {
+  }
+  // .task__text
+  &__text {
+    letter-spacing: 0.01em;
+  }
+}

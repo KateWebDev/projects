@@ -1,0 +1,44 @@
+//Страница
+$widthReportMax: 1600;
+$widthReportMin: 320;
+$widthReportMinPx: $widthReportMin + px;
+
+// Контейнер
+// Контейнер
+$widthContainer: 1170px;
+$containerPadding: 15px;
+$maxWidthContainer: calc($widthContainer + (2 * $containerPadding));
+
+//Фон
+$mainBackGround: #ffffff;
+
+//Шрифт
+$fontFamily: "Gilroy", sans-serif;
+$mainColor: #678570;
+$mainSize: 18;
+$size: $mainSize + px;
+$fontWeight: 500;
+$lineheight: calc(32 / $mainSize); //1.7
+
+// Доп цвета
+$white: #ffffff;
+$black: #000000;
+
+$color-accent: #0ca941;
+
+$color-dark1: #374a3d;
+$color-dark2: #1d3b53;
+
+$color-light: #f8f8f8;
+
+$color-border: rgba($black, 0.36);
+
+// Радиусы
+$radius-circle: 50%;
+
+$radius-small: 10px;
+$radius-medium: 35px;
+$radius-big: 100%;
+
+// @include Fredoka;
+// @include Gilroy;

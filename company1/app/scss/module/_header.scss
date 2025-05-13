@@ -1,0 +1,55 @@
+.header {
+  padding: 40px 0 37px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: auto;
+  z-index: 2;
+
+  &--fixed {
+    position: fixed;
+    overflow: auto;
+    background: $black;
+  }
+  // .header__container
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    column-gap: 35px;
+  }
+  // .header__logo
+  &__logo {
+    position: relative;
+    z-index: 4;
+  }
+  // .header__action
+  &__action {
+    position: relative;
+    z-index: 4;
+    margin-left: auto;
+
+    svg {
+      stroke: $white;
+      fill: none;
+      transition: all 0.3s linear;
+    }
+
+    @media (any-hover: hover) {
+      &:hover {
+        svg {
+          stroke: red;
+        }
+      }
+    }
+  }
+  // .header__menu
+  &__menu {
+  }
+  // .header__burger
+  &__burger {
+    position: relative;
+    z-index: 4;
+  }
+}

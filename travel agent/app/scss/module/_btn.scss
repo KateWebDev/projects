@@ -1,0 +1,30 @@
+.btn {
+  padding: 8px clampAd(10, 20);
+  border-radius: $radius-small;
+  background: $color-dark;
+  color: $white;
+  border: 1px solid transparent;
+
+  white-space: nowrap;
+
+  transition: all 0.3s linear;
+
+  &--light {
+    background: $white;
+    color: $color-light;
+    border-color: $color-light-border;
+  }
+
+  &--color {
+    background: $color-accent;
+    color: $white;
+  }
+
+  @media (any-hover: hover) {
+    &:hover {
+      color: $color-accent;
+      border-color: currentColor;
+      background: $white;
+    }
+  }
+}

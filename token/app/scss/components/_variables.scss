@@ -1,0 +1,42 @@
+//Страница
+$widthReportMax: 1920;
+$widthReportMin: 320;
+$widthReportMinPx: $widthReportMin + px;
+
+// Контейнер
+$maxWidthContainer: 1200px;
+$containerPadding: 15px;
+
+//Фон
+$mainBackGround: #ffffff;
+
+//Шрифт
+$fontFamily: "BaiJamjuree", sans-serif;
+$mainColor: #444444;
+$mainSize: 16;
+$size: $mainSize + px;
+$fontWeight: 500;
+$lineheight: calc(30 / $mainSize); // 1.8
+
+// Доп цвета
+$white: #ffffff;
+$black: #000000;
+
+$color-accent-1: #1da1f2;
+$color-dark: #111111;
+$color-accent-2: #f3ba2f;
+
+$color-bg-1: rgba($black, 0.08);
+$color-bg-2: rgba($black, 0.2);
+$color-bg-3: rgba($black, 0.05);
+$color-bg-4: rgba($black, 0.03);
+
+$color-gradient: linear-gradient(90deg, #eef6fb 0%, rgba(238, 246, 251, 0.3) 100%);
+$color-gradient-2: linear-gradient(180deg, rgba(29, 161, 242, 0.2) 0%, rgba(29, 161, 242, 0.2) 100%);
+
+// Радиусы
+$radius-circle: 50%;
+$radius-small: 23px;
+$radius-medium: 30px;
+$radius: 20px;
+$radius-big: 50px;

@@ -1,0 +1,36 @@
+.menu {
+  padding: 27px 0 24px;
+  border: 1px solid $white;
+  border-left: none;
+  border-right: none;
+
+  // .menu__items
+  &__items {
+    display: flex;
+    justify-content: center;
+    gap: 30px clampAd(20, 120);
+  }
+  // .menu__item
+  &__item {
+    &--mobile {
+      display: none;
+    }
+  }
+  // .menu__link
+  &__link {
+    font-size: 16px;
+    white-space: nowrap;
+    color: inherit;
+    transition: all 0.3s linear;
+
+    &--active {
+      cursor: default;
+    }
+
+    @media (any-hover: hover) {
+      &:hover {
+        text-shadow: 0 0 1px $white;
+      }
+    }
+  }
+}

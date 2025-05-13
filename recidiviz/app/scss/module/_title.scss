@@ -1,0 +1,16 @@
+.title {
+  font-family: "Libre", sans-serif;
+  font-size: clampAd(18, 30);
+  line-height: 1.26;
+  letter-spacing: 0.04em;
+  color: $color-titlte;
+
+  &--big {
+    font-size: clampAd(22, 38);
+    line-height: 1.5;
+    letter-spacing: 0.03em;
+  }
+  &--color {
+    color: $white;
+  }
+}

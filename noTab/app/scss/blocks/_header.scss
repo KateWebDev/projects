@@ -1,0 +1,36 @@
+.header {
+  padding: 25px 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: auto;
+  z-index: 3;
+
+  // .header__container
+  &__container {
+    display: flex;
+    align-items: center;
+    column-gap: clampAd(50, 108);
+  }
+  // .header__logo
+  &__logo {
+  }
+  // .header__action
+  &__action {
+    display: flex;
+    align-items: center;
+    column-gap: 12px;
+
+    @include NotoSans500;
+    text-decoration: underline;
+    text-underline-offset: 4px;
+
+    &::before {
+      content: "";
+      width: 26px;
+      height: 25px;
+      background: url(../../images/icons/user.svg) center/cover no-repeat;
+    }
+  }
+}

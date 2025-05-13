@@ -1,0 +1,49 @@
+.intro {
+  background: image-set(
+      url("../images/main/intro/bg.avif") type("image/avif"),
+      url("../images/main/intro/bg@2x.avif") 2x type("image/avif"),
+      url("../images/main/intro/bg.webp") type("image/webp"),
+      url("../images/main/intro/bg@2x.webp") 2x type("image/webp"),
+      url("../images/main/intro/bg.jpg"),
+      url("../images/main/intro/bg@2x.jpg") 2x
+    )
+    center/cover no-repeat;
+  color: $white;
+
+  // .intro__container
+  &__container {
+    padding-block: clampAd(100, 130);
+    min-height: 100svh;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  // .intro__content
+  &__content {
+    max-width: 550px;
+  }
+  // .intro__title
+  &__title {
+    font-weight: 500;
+    font-size: clampAd(12, 14);
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    margin-bottom: 7px;
+  }
+  // .intro__subtitle
+  &__subtitle {
+    font-weight: 500;
+    font-size: clampAd(26, 57);
+    margin-bottom: clampAd(20, 37);
+  }
+  // .intro__text
+  &__text {
+    max-width: 440px;
+    color: $mainColor;
+    margin-bottom: clampAd(20, 42);
+  }
+  // .intro__btn
+  &__btn {
+  }
+}

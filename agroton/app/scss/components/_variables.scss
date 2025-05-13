@@ -1,0 +1,59 @@
+//Страница
+$widthReportMax: 1920;
+$widthReportMin: 320;
+$widthReportMinPx: $widthReportMin + px;
+
+// Контейнер
+$widthContainer: 1420px;
+$containerPadding: 15px;
+$maxWidthContainer: calc($widthContainer + (2 * $containerPadding));
+
+// Доп цвета
+$white: #ffffff;
+$black: #000000;
+
+$color-accent: #f2a531;
+$color-bg-accent: #355020;
+
+$color-dark: #0e0d0d;
+$color-gloomy: #0d1615;
+
+$color-light: #fdfdf0;
+$color-light-text: #667085;
+$color-bg: #f4f4e7;
+
+$color-dark-2: rgba($color-dark, 0.71);
+$color-dark-3: rgba($color-dark, 0.84);
+
+//Фон
+$mainBackGround: $color-light;
+
+//Шрифт
+$fontFamily: "Nunito Sans", sans-serif;
+$mainColor: $color-dark;
+$mainSize: 16;
+$size: $mainSize + px;
+$fontWeight: 400;
+$lineheight: calc(24 / $mainSize);
+
+// Радиусы
+$radius-circle: 50%;
+
+$radius-small: 10px;
+$radius-mediun: 20px;
+$radius-big: 50px;
+$radius-large: 96px;
+
+// Шрифты
+/*
+@include NunitoSans300;
+@include NunitoSans400;
+@include NunitoSans500;
+@include NunitoSans600;
+@include NunitoSans700;
+
+@include WorkSans300;
+@include WorkSans400;
+@include WorkSans500;
+@include WorkSans600;
+*/

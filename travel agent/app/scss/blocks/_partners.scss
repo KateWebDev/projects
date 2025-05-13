@@ -1,0 +1,45 @@
+.partners {
+  // .partners__container
+  &__container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 30px clampAd(0, 180);
+  }
+  // .partners__title
+  &__title {
+    max-width: 250px;
+
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 1.4;
+    color: $color-dop;
+    text-transform: capitalize;
+  }
+  // .partners__items
+  &__items {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: clampAd(20, 32);
+  }
+  // .partners__item
+  &__item {
+  }
+  // .partners__image
+  &__image {
+    max-height: 40px;
+  }
+  // .partners__img
+  &__img {
+    display: block;
+    max-width: 100%;
+    max-height: 100%;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+}

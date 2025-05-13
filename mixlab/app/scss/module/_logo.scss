@@ -1,0 +1,13 @@
+.logo {
+  width: clampAd(100, 124);
+  height: clampAd(26, 38);
+
+  img {
+    display: block;
+    max-width: 100%;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    object-position: center;
+  }
+}

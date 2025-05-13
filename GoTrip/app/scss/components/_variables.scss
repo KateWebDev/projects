@@ -1,0 +1,39 @@
+//Страница
+$widthReportMax: 1440;
+$widthReportMin: 320;
+$widthReportMinPx: $widthReportMin + px;
+
+// Контейнер
+$maxWidthContainer: 1270px;
+$containerPadding: 15px;
+
+//Фон
+$mainBackGround: #f6f6f6;
+
+//Шрифт
+$fontFamily: "Poppins", sans-serif;
+$mainColor: rgba(#0f1f1c, 0.5);
+$mainSize: 25;
+$size: $mainSize + px;
+$fontWeight: 500;
+$lineheight: calc(38 / $mainSize);
+
+// Доп цвета
+$white: #ffffff;
+$black: #000000;
+$color-bg-accent: linear-gradient(154deg, #428e5f 0%, #112120 100%);
+
+$color-accent: linear-gradient(172deg, #ff7b4e 0%, #ff584e 100%);
+$color-accent-hover: linear-gradient(135deg, #ff584e 0%, #ff7b4e 100%);
+
+$color-bg-light: rgba($white, 0.25);
+$color-dark: #0f1f1c;
+$color-dop: #ff7c4e;
+
+// Радиусы
+$radius-circle: 50%;
+$radius-big: 100px;
+$radius-medium: 60px;
+$radius-small: 35px;
+$radius: 27px;
+$radius-very-small: 15px;

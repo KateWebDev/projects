@@ -1,0 +1,31 @@
+.clients {
+  transform: translateY(-50%);
+  &__inner {
+    margin-left: calc((100% - $maxWidthContainer) / 2 + $containerPadding);
+    background: $white;
+    box-shadow: 50px 50px 100px 0 rgba($black, 0.15);
+  }
+  // .clients__container
+  &__container {
+    margin-left: 0;
+  }
+  // .clients__items
+  &__items {
+    padding: clampAd(30, 60) 0 clampAd(25, 55) clampAd(0, 65);
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(clampAd(80, 156), 1fr));
+    grid-auto-flow: dense;
+    gap: clampAd(20, 66);
+  }
+  // .clients__item
+  &__item {
+  }
+  // .clients__img
+  &__img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+}

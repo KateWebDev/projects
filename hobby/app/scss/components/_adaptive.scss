@@ -1,0 +1,152 @@
+@media (max-width: 1500px) {
+  .intro {
+    &::before {
+      left: 30%;
+    }
+  }
+}
+
+@media (max-width: 991.98px) {
+  .intro {
+    &__decor {
+      display: none;
+    }
+  }
+
+  .footer {
+    &__top {
+      flex-wrap: wrap;
+    }
+    &__info {
+      width: 100%;
+    }
+    &__nav {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+}
+
+@media (max-width: 767.98px) {
+  .header {
+    &__burger {
+      display: flex;
+    }
+  }
+
+  .menu {
+    position: fixed;
+    z-index: 15;
+    top: 0;
+    left: 0;
+    width: 100%;
+    min-height: 50%;
+    height: auto;
+    transition: all 0.4s linear;
+
+    transform: translateY(-100%);
+    overflow: auto;
+    overflow-x: hidden;
+    background: $mainColor;
+
+    &.menu--active {
+      transform: translateY(0);
+    }
+    &__items {
+      padding: 100px 0;
+      min-height: 100%;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+    &__item {
+      &--mobile {
+        display: block;
+      }
+    }
+    &__link {
+      color: $white;
+      font-size: 24px;
+    }
+  }
+
+  .link {
+    &::before {
+      transform: translateX(50%);
+      animation: none;
+    }
+  }
+
+  .intro {
+    &__container {
+      align-items: center;
+    }
+    &__content {
+      max-width: 100%;
+    }
+    &__image {
+      position: static;
+      transform: translateY(0);
+    }
+  }
+
+  .about {
+    &__item {
+      display: grid;
+      grid-template-columns: 1fr;
+    }
+    &__content {
+      max-width: 100%;
+    }
+  }
+
+  .products {
+    &__ibg {
+      padding: 0px 0px 60% 0px;
+    }
+  }
+}
+
+@media (max-width: 575.98px) {
+  .intro {
+    &::before {
+      left: 45%;
+    }
+  }
+
+  .advantages {
+    &__container {
+      text-align: center;
+
+      &::before {
+        position: static;
+        transform: translateX(0);
+      }
+    }
+    &__item {
+      max-width: 100%;
+      align-items: center;
+    }
+  }
+
+  .about {
+    &__list {
+      &::before {
+        display: none;
+      }
+    }
+  }
+
+  .footer {
+    &__nav {
+      width: 100%;
+      grid-template-columns: repeat(2, 1fr);
+      grid-auto-flow: dense;
+    }
+
+    &__item {
+      &:last-of-type {
+        grid-column: span 2;
+      }
+    }
+  }
+}

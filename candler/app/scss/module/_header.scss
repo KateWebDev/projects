@@ -1,0 +1,56 @@
+.header {
+  padding: 4px 0 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+
+  &--fixed {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    overflow: auto;
+    background: $mainBackGround;
+  }
+  // .header__container
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  // .header__logo
+  &__logo {
+  }
+  // .header__menu
+  &__menu {
+  }
+  // .header__action
+  &__action {
+    text-transform: uppercase;
+    padding-left: 23px;
+    position: relative;
+    transition: all 0.3s linear;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 0;
+      transform: translateY(-50%);
+      width: 20px;
+      aspect-ratio: 1;
+      background: url(../images/header/phone.svg) center/cover no-repeat;
+    }
+
+    @media (any-hover: hover) and (min-width: 992px) {
+      &:hover {
+        opacity: 0.8;
+      }
+    }
+  }
+  // .header__burger
+  &__burger {
+  }
+}

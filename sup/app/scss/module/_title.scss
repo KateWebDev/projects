@@ -1,0 +1,9 @@
+.title {
+  @include Comfortaa400;
+  font-size: clampAd(30, 60);
+  text-transform: uppercase;
+  // .title--color
+  &--color {
+    color: $color-accent2;
+  }
+}

@@ -1,0 +1,32 @@
+.menu {
+  // .menu__items
+  &__items {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+  }
+  // .menu__item
+  &__item {
+  }
+  // .menu__link
+  &__link {
+    @include Roboto500;
+    font-size: clampAd(14, 18);
+    text-transform: uppercase;
+    border-bottom: 1px solid transparent;
+    transition: all 0.3s linear;
+    color: $color-accent;
+    white-space: nowrap;
+
+    &--active {
+      border-bottom: 1px solid currentColor;
+      cursor: default;
+    }
+
+    @media (any-hover: hover) {
+      &:hover {
+        border-bottom: 1px solid currentColor;
+      }
+    }
+  }
+}

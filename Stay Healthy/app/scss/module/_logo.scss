@@ -1,0 +1,10 @@
+.logo {
+  width: 156px;
+  height: 36px;
+  // .logo__img
+  &__img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+}

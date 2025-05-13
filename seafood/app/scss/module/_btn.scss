@@ -1,0 +1,58 @@
+.btn {
+  display: inline-block;
+  padding: clampAd(10, 11);
+  border-radius: 20px;
+  min-width: clampAd(150, 300);
+  background: transparent;
+  border: 1px solid $color-accent;
+  color: $color-accent;
+
+  @include RobotoSlab500;
+  font-size: clampAd(14, 24);
+  text-align: center;
+  text-transform: uppercase;
+  transition: all 0.3s linear;
+
+  @media (any-hover: hover) {
+    &:hover {
+      background: $color-accent;
+      color: $white;
+    }
+  }
+
+  &--select {
+    padding: clampAd(10, 14);
+    background: rgba($white, 0.5);
+    border: none;
+    color: $white;
+
+    @media (any-hover: hover) {
+      &:hover {
+        background: $white;
+        color: $color-accent;
+      }
+    }
+  }
+}
+
+.slick-btn {
+  z-index: 1;
+  svg {
+    fill: $white;
+    transition: all 0.3s linear;
+  }
+  &--prev {
+    top: 0;
+  }
+  &--next {
+    bottom: 0;
+  }
+
+  @media (any-hover: hover) {
+    &:hover {
+      svg {
+        opacity: 0.8;
+      }
+    }
+  }
+}

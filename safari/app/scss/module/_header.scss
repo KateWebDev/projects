@@ -1,0 +1,51 @@
+.header {
+  padding: 15px 0;
+  color: $white;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: auto;
+  z-index: 2;
+
+  // .header__container
+  &__container {
+  }
+  // .header__top
+  &__top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+  }
+  // .header__logo
+  &__logo {
+    position: relative;
+    z-index: 4;
+  }
+  // .header__action
+  &__action {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+
+    span {
+      @include Roboto700;
+      font-size: 16px;
+    }
+  }
+  // .header__btn
+  &__btn {
+    font-size: 14px;
+    border-radius: 22px;
+  }
+  // .header__burger
+  &__burger {
+    position: relative;
+    z-index: 4;
+  }
+  // .header__menu
+  &__menu {
+    line-height: 1;
+  }
+}

@@ -1,0 +1,33 @@
+.header {
+  padding: clampAd(18, 24) 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: auto;
+  z-index: 3;
+
+  &--fixed {
+    position: fixed;
+    overflow: auto;
+    background: $color-bg-dop;
+  }
+  // .header__container
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    column-gap: 20px;
+  }
+  // .header__logo
+  &__logo {
+  }
+  // .header__menu
+  &__menu {
+  }
+  // .header__burger
+  &__burger {
+    position: relative;
+    z-index: 4;
+  }
+}

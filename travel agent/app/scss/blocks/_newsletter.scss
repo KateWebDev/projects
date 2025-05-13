@@ -1,0 +1,112 @@
+.newsletter {
+  padding: clampAd(40, 80) 0;
+
+  background: $color-accent;
+  color: $white;
+
+  overflow: hidden;
+
+  // .newslettecler__container
+  &__container {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 30px clampAd(30, 50);
+
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: -10%;
+      transform: translateY(-50%);
+      width: clampAd(220, 320);
+      height: clampAd(220, 320);
+      background: url(../../images/icons/location.svg) center/cover no-repeat;
+    }
+  }
+  // .newsletter__content
+  &__content {
+    max-width: 485px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    row-gap: 4px;
+
+    line-height: 1.25;
+
+    position: relative;
+    z-index: 1;
+  }
+  // .newsletter__title
+  &__title {
+    font-weight: 500;
+    font-size: clampAd(18, 28);
+  }
+  // .newsletter__text
+  &__text {
+    font-size: clampAd(14, 20);
+  }
+  // .newsletter__form
+  &__form {
+    margin-right: clampAd(0, 24);
+    display: flex;
+    align-items: center;
+    gap: clampAd(10, 12);
+
+    position: relative;
+    z-index: 1;
+  }
+  // .newsletter__item
+  &__item {
+    width: clampAd(250, 328);
+    padding: clampAd(10, 12);
+
+    background: $white;
+    border-radius: $radius-medium;
+    border: 1px solid currentColor;
+
+    display: flex;
+    align-items: center;
+    column-gap: 8px;
+  }
+  // .newsletter__label
+  &__label {
+  }
+  // .newsletter__input
+  &__input {
+    outline: none;
+
+    width: 85%;
+    border-bottom: 1px solid transparent;
+
+    font-size: 14px;
+    line-height: 1.5;
+    color: $color-dark;
+
+    transition: all 0.3s linear;
+
+    &::placeholder {
+      font-family: "Circular Std", sans-serif;
+      font-weight: 450;
+      font-size: 14px;
+      line-height: 1.5;
+      color: $mainColor;
+    }
+
+    @media (any-hover: hover) {
+      &:hover {
+        border-color: $color-accent;
+      }
+    }
+    &:focus {
+      border-color: $color-dark;
+    }
+  }
+  // .newsletter__btn
+  &__btn {
+    padding: clampAd(10, 12) clampAd(12, 24);
+  }
+}

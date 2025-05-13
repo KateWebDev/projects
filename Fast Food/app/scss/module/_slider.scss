@@ -1,0 +1,44 @@
+.slider {
+  // .slider__items
+  &__items {
+  }
+  // .slider__item
+  &__item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  // .slider__text
+  &__text {
+    max-width: 368px;
+    margin-bottom: clampAd(20, 27);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: clampAd(20, 34);
+
+    &::before {
+      content: "";
+      width: clampAd(25, 47);
+      aspect-ratio: 1/1;
+      background: url(../../images/main/reviews/mark.svg) center/cover no-repeat;
+    }
+  }
+  // .slider__author
+  &__author {
+    font-weight: 500;
+    font-style: normal;
+    font-size: clampAd(18, 24);
+    color: $white;
+    text-transform: capitalize;
+    margin-bottom: 2px;
+  }
+  // .slider__info
+  &__info {
+    font-weight: 500;
+    font-size: 12px;
+    text-transform: uppercase;
+  }
+}

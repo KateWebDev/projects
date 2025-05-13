@@ -1,0 +1,45 @@
+.approach {
+  padding: clampAd(40, 80) 0;
+  background: $color-bg-light;
+  // .approach__container
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+  }
+  // .approach__content
+  &__content {
+    max-width: 450px;
+  }
+  // .approach__title
+  &__title {
+    font-size: clampAd(18, 22);
+    margin-bottom: 13px;
+  }
+  // .approach__text
+  &__text {
+    margin-bottom: clampAd(20, 37);
+  }
+  // .approach__btn
+  &__btn {
+  }
+  // .approach__images
+  &__images {
+    max-width: 560px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+  // .approach__img
+  &__img {
+    border-radius: 3px;
+    display: block;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    object-position: center;
+  }
+}

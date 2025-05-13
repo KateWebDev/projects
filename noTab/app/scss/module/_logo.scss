@@ -1,0 +1,19 @@
+@import "components/mixin";
+.logo {
+  width: clampAd(102, 211);
+  height: clampAd(52, 109);
+
+  &--small {
+    width: clampAd(71, 82);
+    height: clampAd(15, 17);
+  }
+
+  img {
+    display: block;
+    max-width: 100%;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+}

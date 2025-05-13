@@ -1,0 +1,98 @@
+.destinations {
+  // .destinations__container
+  &__container {
+  }
+  &__left-container {
+  }
+  // .destinations__top
+  &__top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 16px 30px;
+
+    margin-bottom: clampAd(20, 32);
+  }
+  // .destinations__inner
+  &__inner {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    row-gap: clampAd(10, 16);
+  }
+  // .destinations__title
+  &__title {
+  }
+  // .destinations__text
+  &__text {
+  }
+  // .destinations__actions
+  &__actions {
+    display: flex;
+    align-items: center;
+    column-gap: clampAd(10, 15);
+  }
+  // .destinations__button
+  &__button {
+    width: clampAd(30, 48);
+    height: clampAd(30, 48);
+    border-radius: $radius-circle;
+    background: $color-accent;
+    border: 1px solid transparent;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.3s linear;
+
+    svg {
+      width: clampAd(16, 24);
+      height: clampAd(16, 24);
+      fill: $white;
+      transition: all 0.3s linear;
+    }
+
+    @media (any-hover: hover) {
+      &:hover {
+        background: $white;
+        border-color: $color-accent;
+
+        svg {
+          fill: $color-accent;
+        }
+      }
+    }
+
+    &.swiper-button-disabled {
+      background: transparent;
+      border-color: $color-no-active;
+      cursor: default;
+
+      svg {
+        fill: $color-no-active;
+      }
+
+      @media (any-hover: hover) {
+        &:hover {
+          background: transparent;
+          border-color: $color-no-active;
+
+          svg {
+            fill: $color-no-active;
+          }
+        }
+      }
+    }
+
+    // .destinations__button--prev
+    &--prev {
+    }
+    // .destinations__button--next
+    &--next {
+    }
+  }
+  // .destinations__slider
+  &__slider {
+  }
+}

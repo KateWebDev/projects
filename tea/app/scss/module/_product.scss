@@ -1,0 +1,53 @@
+.product {
+  padding: 120px 0;
+  font-family: "Cormorant", serif;
+  // .product__container
+  &__container {
+  }
+  // .product__quote
+  &__quote {
+    display: block;
+    max-width: 705px;
+    margin: 0 auto 150px;
+    font-size: 40px;
+    font-style: italic;
+    text-align: center;
+
+    span {
+      background: rgba(#f7f2ea, 0.5);
+    }
+  }
+  // .product__title
+  &__title {
+    text-align: center;
+    margin-bottom: 60px;
+  }
+  // .product__items
+  &__items {
+    display: flex;
+    justify-content: space-around;
+    gap: 0 40px;
+  }
+  // .product__item
+  &__item {
+    width: 208px;
+    text-align: center;
+  }
+  // .product__img
+  &__img {
+    width: 100%;
+    border-radius: 50%;
+  }
+  // .product__name
+  &__name {
+    font-size: 24px;
+    font-weight: 400;
+    transition: all 0.3s linear;
+
+    @media (any-hover: hover) and (min-width: 992px) {
+      &:hover {
+        text-shadow: 0 0 1px $mainColor;
+      }
+    }
+  }
+}

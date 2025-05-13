@@ -1,0 +1,53 @@
+.intro {
+  padding: clampAd(144, 209) 0;
+  // .intro__container
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 64px 30px;
+  }
+  // .intro__content
+  &__content {
+    max-width: clampAd(360, 500);
+  }
+  // .intro__title
+  &__title {
+    font-size: clampAd(36, 54);
+    line-height: 1.18;
+    letter-spacing: -0.01em;
+    margin-bottom: clampAd(20, 24);
+  }
+  // .intro__text
+  &__text {
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+
+    font-weight: 600;
+    font-size: clampAd(18, 20);
+    line-height: 1.5;
+    letter-spacing: -0.03em;
+    color: $color-light;
+
+    margin-bottom: clampAd(48, 88);
+  }
+  // .intro__btn
+  &__btn {
+  }
+  // .intro__image
+  &__image {
+    width: clampAd(200, 400);
+    aspect-ratio: 1/1;
+  }
+  // .intro__img
+  &__img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+
+    border-radius: $radius-circle;
+  }
+}

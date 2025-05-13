@@ -1,0 +1,48 @@
+.intro {
+  padding: clampAd(40, 70) 0 clampAd(50, 80);
+  // .intro__container
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 40px;
+  }
+  // .intro__content
+  &__content {
+    max-width: 450px;
+  }
+  // .intro__title
+  &__title {
+    @include Fraunces400;
+    font-size: clampAd(35, 58);
+    line-height: 1.1;
+    margin-bottom: clampAd(15, 21);
+  }
+  // .intro__text
+  &__text {
+    font-size: clampAd(14, 20);
+    letter-spacing: 0.01em;
+    margin-bottom: clampAd(20, 32);
+  }
+  // .intro__actions
+  &__actions {
+    display: flex;
+    gap: clampAd(15, 24);
+  }
+  // .intro__btn
+  &__btn {
+  }
+  // .intro__image
+  &__image {
+    max-width: 452px;
+    max-height: 422px;
+  }
+  // .intro__img
+  &__img {
+    display: block;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    object-position: center;
+  }
+}

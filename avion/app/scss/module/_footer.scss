@@ -1,0 +1,85 @@
+.footer {
+  background: $color-dark;
+  color: $white;
+  // .footer__container
+  &__container {
+  }
+  // .footer__top
+  &__top {
+    padding: clampAd(35, 58) 0 clampAd(15, 48);
+    border-bottom: 1px solid $color-accent;
+  }
+  // .footer__items
+  &__items {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 40px clampAd(30, 100);
+  }
+  // .footer__item
+  &__item {
+    &--form {
+      max-width: 627px;
+      width: 100%;
+    }
+  }
+  // .footer__name
+  &__name {
+    @include ClashDisplay400;
+    font-size: 16px;
+    margin-bottom: 12px;
+  }
+  // .footer__list
+  &__list {
+    display: flex;
+    flex-direction: column;
+    row-gap: 12px;
+  }
+  // .footer__point
+  &__point {
+  }
+  // .footer__link
+  &__link {
+    font-size: 14px;
+
+    @media (any-hover: hover) {
+      &:hover {
+        text-shadow: 0 0 1px currentColor;
+      }
+    }
+  }
+  // .footer__form
+  &__form {
+    width: 100%;
+  }
+  // .footer__botttom
+  &__botttom {
+    padding: clampAd(18, 22) 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 30px;
+  }
+  // .footer__copy
+  &__copy {
+    font-size: 14px;
+  }
+  // .footer__socials
+  &__socials {
+    display: flex;
+
+    column-gap: 24px;
+  }
+  // .footer__social
+  &__social {
+  }
+  // .footer__social-link
+  &__social-link {
+    svg {
+      width: 24px;
+      height: 24px;
+      fill: $white;
+    }
+  }
+}

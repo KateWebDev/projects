@@ -1,0 +1,24 @@
+.promo {
+  // .promo__container
+  &__container {
+    background: image-set(
+        url("../images/main/promo/bg.avif") type("image/avif"),
+        url("../images/main/promo/bg.webp") type("image/webp"),
+        url("../images/main/promo/bg.png")
+      )
+      top center/clampAd(300, 800) clampAd(100, 311) no-repeat;
+    min-height: clampAd(170, 370);
+    padding-top: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    text-align: center;
+  }
+  // .promo__text
+  &__text {
+    max-width: 600px;
+    @include RobotoSlab400;
+    font-size: clampAd(12, 18);
+  }
+}

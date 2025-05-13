@@ -1,0 +1,182 @@
+.reviews {
+  padding: clampAd(46, 90) 0;
+  background: image-set(
+      url("../images/main/reviews/bg.avif") type("image/avif"),
+      url("../images/main/reviews/bg_2x.avif") 2x type("image/avif"),
+      url("../images/main/reviews/bg.webp") type("image/webp"),
+      url("../images/main/reviews/bg_2x.webp") 2x type("image/webp"),
+      url("../images/main/reviews/bg.jpg"),
+      url("../images/main/reviews/bg_2x.jpg") 2x
+    )
+    left center/cover no-repeat;
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(50, 48, 48, 0.39);
+  }
+  // .reviews__container
+  &__container {
+    position: relative;
+    z-index: 1;
+  }
+  // .reviews__inner
+  &__inner {
+    max-width: clampAd(500, 1060);
+    padding: clampAd(17, 55) clampAd(17, 83) clampAd(30, 80) clampAd(17, 115);
+    margin: 0 auto;
+    background: rgba($white, 0.9);
+    border-radius: clampAd(10, 20);
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 40%;
+      left: 56%;
+      transform: translateX(-50%) translateY(-50%);
+      width: clampAd(64, 84);
+      height: clampAd(44, 64);
+      background: url(../../images/main/reviews/decor.svg) center/cover no-repeat;
+    }
+  }
+  // .reviews__title
+  &__title {
+    margin-bottom: clampAd(20, 60);
+  }
+  // .reviews__slider
+  &__slider {
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 1s ease;
+
+    &.swiper-initialized {
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+  // .reviews__items
+  &__items {
+  }
+  // .reviews__item
+  &__item {
+    display: grid;
+    grid-template-columns: clampAd(120, 235) clampAd(239, 495);
+    align-items: center;
+    gap: 20px clampAd(20, 60);
+  }
+  // .reviews__img
+  &__img {
+    display: block;
+    max-width: clampAd(120, 235);
+    width: 100%;
+    height: clampAd(120, 235);
+    border-radius: $radius-circle;
+  }
+  // .reviews__content
+  &__content {
+    display: flex;
+    flex-direction: column;
+    gap: clampAd(16, 37);
+  }
+  // .reviews__blockquote
+  &__blockquote {
+    font-size: clampAd(9, 18);
+  }
+  // .reviews__info
+  &__info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+  }
+  // .reviews__author
+  &__author {
+    @include SourceSans700;
+    font-size: clampAd(15, 30);
+    color: $color-accent2;
+  }
+  // .reviews__socials
+  &__socials {
+    display: flex;
+    gap: clampAd(10, 20);
+  }
+  // .reviews__social
+  &__social {
+  }
+  // .reviews__link
+  &__link {
+    width: clampAd(20, 40);
+    height: clampAd(20, 40);
+    border-radius: $radius-circle;
+    background: $color-slider;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.3s linear;
+
+    svg {
+      fill: $color-text;
+      transition: all 0.3s linear;
+      width: clampAd(12, 24);
+      height: clampAd(12, 24);
+    }
+
+    @media (any-hover: hover) {
+      &:hover {
+        background: $color-accent2;
+
+        svg {
+          fill: $white;
+        }
+      }
+    }
+  }
+  // .reviews__btn
+  &__btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 2;
+
+    width: clampAd(30, 60);
+    height: clampAd(30, 60);
+    border-radius: $radius-circle;
+    background: $color-dop;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    // .reviews__btn--prev
+    &--prev {
+      left: 0;
+      transform: translate(-50%, -50%);
+    }
+    // .reviews__btn--next
+    &--next {
+      right: 0;
+      transform: translate(50%, -50%);
+    }
+
+    &.swiper-button-disabled {
+      pointer-events: none;
+      background: $color-slider;
+      user-select: none;
+    }
+  }
+  // .reviews__btn-icon
+  &__btn-icon {
+    display: block;
+    width: clampAd(12, 24);
+    height: clampAd(12, 24);
+    object-fit: cover;
+    object-position: center;
+  }
+}

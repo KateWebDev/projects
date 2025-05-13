@@ -1,0 +1,35 @@
+.info {
+  // .info__container
+  &__container {
+  }
+  // .info__items
+  &__items {
+    max-width: 570px;
+    margin: 0 auto clampAd(50, 150);
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 30px clampAd(30, 60);
+  }
+  // .info__item
+  &__item {
+    max-width: 255px;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+  }
+  // .info__text
+  &__text {
+    font-size: clampAd(14, 16);
+  }
+  // .info__image
+  &__image {
+    max-width: 100%;
+  }
+  // .info__img
+  &__img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+}

@@ -1,0 +1,48 @@
+.steps {
+  // .steps__container
+  &__container {
+  }
+  // .steps__title
+  &__title {
+  }
+  // .steps__inner
+  &__inner {
+  }
+  // .steps__items
+  &__items {
+    counter-reset: num;
+  }
+  // .steps__item
+  &__item {
+    padding-top: 30px;
+    position: relative;
+
+    &::before {
+      content: counter(num, decimal-leading-zero);
+      counter-increment: num;
+      position: absolute;
+      top: 0;
+      left: 0;
+      color: $color-dop;
+    }
+
+    &:not(:last-child) {
+      margin-bottom: 30px;
+    }
+  }
+  // .steps__name
+  &__name {
+    @include Noto700;
+    font-size: clamp(14px, calc(14px + (18 - 14) * ((100vw - 320px) / ($widthReportMax - $widthReportMin))), 18px);
+    margin-bottom: 2px;
+  }
+  // .steps__text
+  &__text {
+  }
+  // .steps__img
+  &__img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+}

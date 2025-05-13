@@ -1,0 +1,123 @@
+.intro {
+  background: image-set(
+      url("../images/main/intro/bg.avif") type("image/avif"),
+      url("../images/main/intro/bg.webp") type("image/webp"),
+      url("../images/main/intro/bg.jpg")
+    )
+    top center/cover no-repeat;
+  color: $white;
+
+  // .intro__container
+  &__container {
+    margin-top: 50px;
+    padding-bottom: 80px;
+    min-height: calc(100svh - 50px);
+    position: relative;
+  }
+  // .intro__title
+  &__title {
+    padding-top: clampAd(140, 210);
+    max-width: 590px;
+    margin-bottom: clampAd(20, 130);
+    @include RobotoSlab700;
+    font-size: clampAd(30, 72);
+    color: $color-accent;
+  }
+  // .intro__inner
+  &__inner {
+    position: relative;
+    max-width: 520px;
+  }
+  // .intro__items
+  &__items {
+    min-height: clampAd(280, 410);
+    padding: clampAd(20, 55) 0 130px clampAd(70, 110);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 1s ease;
+    &.slick-initialized {
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+  // .intro__item
+  &__item {
+    max-width: 407px;
+  }
+  // .intro__text
+  &__text {
+    font-size: clampAd(14, 18);
+
+    &:not(:last-child) {
+      margin-bottom: 20px;
+    }
+  }
+  // .intro__btn
+  &__btn {
+    position: absolute;
+    bottom: 0;
+    left: clampAd(70, 110);
+  }
+  // .intro__langs
+  &__langs {
+    position: absolute;
+    right: 30px;
+    bottom: clampAd(50, 80);
+  }
+  // .intro__lang
+  &__lang {
+    font-size: clampAd(10, 18);
+    text-transform: uppercase;
+  }
+  // .intro__lang-link
+  &__lang-link {
+    transition: all 0.3s linear;
+    // .intro__lang-link--active
+    &--active {
+      @include Roboto700;
+    }
+
+    @media (any-hover: hover) {
+      &:hover {
+        opacity: 0.8;
+      }
+    }
+  }
+  // .intro__button
+  &__button {
+    position: absolute;
+    left: 40px;
+  }
+
+  .slick-dots {
+    position: absolute;
+    top: 55px;
+    left: 35px;
+    bottom: 55px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    li {
+      position: relative;
+      opacity: 0.5;
+
+      &::before {
+        content: "0";
+        font-size: clampAd(16, 24);
+      }
+
+      &:nth-child(n + 10) {
+        &::before {
+          content: "";
+        }
+      }
+    }
+
+    button {
+      font-size: clampAd(16, 24);
+    }
+    .slick-active {
+      opacity: 1;
+    }
+  }
+}

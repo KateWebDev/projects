@@ -1,0 +1,40 @@
+.intro {
+  background: image-set(
+      url("../images/main/intro/bg.avif") type("image/avif"),
+      url("../images/main/intro/bg.webp") type("image/webp"),
+      url("../images/main/intro/bg.jpg")
+    )
+    center/cover no-repeat;
+  // .intro__container
+  &__container {
+    min-height: 100svh;
+    padding-bottom: 115px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    gap: 20px;
+  }
+  // .intro__content
+  &__content {
+    max-width: clampAd(300, 600);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    row-gap: 10px;
+  }
+  // .intro__title
+  &__title {
+    font-size: clampAd(30, 65);
+    line-height: 1.2;
+    margin-bottom: clampAd(20, 55);
+  }
+  // .intro__subtitle
+  &__subtitle {
+    order: -1;
+    line-height: 1.1;
+    text-transform: uppercase;
+  }
+  // .intro__btn
+  &__btn {
+  }
+}

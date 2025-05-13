@@ -1,0 +1,13 @@
+.subtitle {
+  font-size: clampAd(12, 14);
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.title {
+  @include Poppins600;
+  font-size: clampAd(20, 40);
+  line-height: 1.5;
+  text-transform: capitalize;
+  text-align: center;
+}

@@ -1,0 +1,49 @@
+.btn {
+  padding: 10px 24px;
+  border-radius: $radius-small;
+  border: 1px solid transparent;
+  background: $color-accent;
+
+  line-height: 1.1;
+  color: $white;
+  white-space: nowrap;
+  transition: all 0.3s linear;
+
+  @media (any-hover: hover) {
+    &:hover {
+      background: $white;
+      color: $color-accent;
+      border-color: currentColor;
+    }
+  }
+}
+
+.link {
+  display: inline-flex;
+  align-items: center;
+  gap: clampAd(10, 20);
+
+  font-weight: 500;
+  text-transform: capitalize;
+  color: $color-text-1;
+  transition: all 0.3s linear;
+
+  &::after {
+    content: "";
+    width: clampAd(30, 64);
+    aspect-ratio: 1/1;
+    border-radius: $radius-circle;
+    background: $color-accent url(../../images/icons/arrow-right.svg) center/clampAd(15, 33) clampAd(10, 16) no-repeat;
+    transition: all 0.2s linear;
+  }
+
+  @media (any-hover: hover) {
+    &:hover {
+      color: $color-accent;
+
+      &::after {
+        transform: rotate(180deg);
+      }
+    }
+  }
+}

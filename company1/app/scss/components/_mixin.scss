@@ -1,0 +1,19 @@
+@function clampAd($min, $max) {
+  $minPx: $min + px;
+  $maxPx: $max + px;
+
+  $result: clamp(
+    $minPx,
+    calc($minPx + ($max - $min) * ((100vw - 320px) / ($widthReportMax - $widthReportMin))),
+    $maxPx
+  );
+
+  @return $result;
+}
+
+@mixin grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(clampAd(290, 570), 1fr));
+  grid-auto-flow: dense;
+  gap: clampAd(30, 60);
+}

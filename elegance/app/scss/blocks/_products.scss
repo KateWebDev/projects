@@ -1,0 +1,78 @@
+.products {
+  // .products__container
+  &__container {
+    display: flex;
+    flex-direction: column;
+    row-gap: clampAd(20, 40);
+  }
+  // .products__top
+  &__top {
+  }
+  // .products__items
+  &__items {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(clampAd(130, 270), 1fr));
+    gap: clampAd(30, 40) clampAd(20, 30);
+  }
+  // .products__item
+  &__item {
+  }
+  // .products__card
+  &__card {
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+
+    @media (any-hover: hover) {
+      &:hover {
+        .products__img {
+          transform: scale(1.05);
+        }
+        .products__name {
+          text-shadow: 0 0 1px currentColor;
+        }
+      }
+    }
+  }
+  // .products__ibg
+  &__ibg {
+    padding: 0px 0px 129.63% 0px;
+    overflow: hidden;
+  }
+  // .products__img
+  &__img {
+    transition: all 0.3s linear;
+  }
+  // .products__content
+  &__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    row-gap: clampAd(10, 12);
+  }
+  // .products__name
+  &__name {
+    @include PlayfairDisplay400;
+    font-size: clampAd(14, 20);
+    color: $black;
+
+    transition: all 0.3s linear;
+  }
+  // .products__price
+  &__price {
+    text-transform: uppercase;
+
+    span {
+      @include NotoSans700;
+      color: $color-accent;
+    }
+  }
+  // .products__btn
+  &__btn {
+    padding: 10px 40px;
+    margin: 0 auto;
+  }
+}

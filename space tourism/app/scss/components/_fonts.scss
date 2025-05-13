@@ -1,0 +1,28 @@
+@font-face {
+  font-family: "Space Age Cyrillic";
+  src:
+    url("../../fonts/space-age-cyrillic-regular.woff2") format("woff2"),
+    url("../../fonts/space-age-cyrillic-regular.woff") format("woff");
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "SF Pro Display";
+  src:
+    url("../../fonts/sf-pro-display-regular.woff2") format("woff2"),
+    url("../../fonts/sf-pro-display-regular.woff") format("woff");
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+}
+@font-face {
+  font-family: "SF Pro Display";
+  src:
+    url("../../fonts/sf-pro-display-bold.woff2") format("woff2"),
+    url("../../fonts/sf-pro-display-bold.woff") format("woff");
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+}

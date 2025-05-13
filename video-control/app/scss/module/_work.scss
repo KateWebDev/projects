@@ -1,0 +1,56 @@
+.work {
+  // .work__container
+  &__container {
+    background: $color-accent2;
+    color: $white;
+    border-radius: $radius;
+    padding: 20px clampAd(15, 20);
+    position: relative;
+  }
+  // .work__title
+  &__title {
+    max-width: 750px;
+    margin-bottom: clampAd(40, 90);
+  }
+  // .work__items
+  &__items {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: clampAd(20, 40);
+  }
+  // .work__item
+  &__item {
+    min-width: clampAd(200, 345);
+    aspect-ratio: 1;
+    border-radius: 50%;
+    border: 1px solid $white;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  // .work__text
+  &__text {
+    max-width: clampAd(160, 285);
+    margin: 0 auto;
+    @include Inter300;
+    font-size: clampAd(14, 22);
+    span {
+      @include Inter700;
+    }
+  }
+  // .work__dops
+  &__dops {
+    max-width: clampAd(300, 350);
+    justify-content: flex-end;
+    left: auto;
+    right: clampAd(15, 20);
+    p {
+      background: $white;
+      color: $color-accent2;
+    }
+  }
+}

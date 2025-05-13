@@ -1,0 +1,22 @@
+.menu {
+  // .menu__items
+  &__items {
+    display: flex;
+    column-gap: 40px;
+  }
+  // .menu__item
+  &__item {
+  }
+  // .menu__link
+  &__link {
+    font-size: 16px;
+    font-weight: 700;
+    transition: all 0.3s linear;
+
+    @media (any-hover: hover) and (min-width: 992px) {
+      &:hover {
+        text-shadow: 0 0 1px $mainColor;
+      }
+    }
+  }
+}

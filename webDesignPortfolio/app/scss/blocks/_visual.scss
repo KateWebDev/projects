@@ -1,0 +1,47 @@
+.visual {
+  // .visual__container
+  &__container {
+  }
+  // .visual__title
+  &__title {
+    margin-bottom: clampAd(34, 65);
+  }
+  // .visual__items
+  &__items {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(clampAd(366, 400), 1fr));
+    grid-auto-rows: minmax(clampAd(366, 408), 1fr);
+    gap: $gap;
+  }
+  // .visual__item
+  &__item {
+    position: relative;
+    transition: all 0.3s linear;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba($black, 0);
+      transition: all 0.3s linear;
+    }
+
+    @media (any-hover: hover) {
+      &:hover {
+        &::before {
+          background: rgba($black, 0.6);
+        }
+      }
+    }
+  }
+  // .visual__card
+  &__card {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    z-index: 2;
+  }
+}

@@ -1,0 +1,96 @@
+.news {
+  // .news__container
+  &__container {
+  }
+  // .news__title
+  &__title {
+  }
+  // .news__text
+  &__text {
+    max-width: rem(580);
+    margin: 0 auto clampAdRem(30, 56);
+
+    text-align: center;
+  }
+  // .news__items
+  &__items {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: rem(32) clampAdRem(20, 30);
+  }
+  // .news__item
+  &__item {
+    display: grid;
+    grid-template-columns: clampAdRem(150, 263) auto;
+    align-items: center;
+    gap: clampAdRem(20, 35) clampAdRem(20, 27);
+
+    // .news__item--big
+    &--big {
+      grid-template-columns: 1fr;
+      grid-row: span 3;
+      align-items: normal;
+
+      .news__ibg {
+        padding: 0px 0px 71.532% 0px;
+      }
+      .news__content {
+        flex-direction: column;
+      }
+      .news__text {
+        margin-bottom: rem(10);
+      }
+      .news__author {
+        color: $black;
+      }
+    }
+  }
+  // .news__ibg
+  &__ibg {
+    padding: 0px 0px 76.43% 0px;
+    border-radius: $radius-medium;
+    overflow: hidden;
+  }
+  // .news__img
+  &__img {
+    transition: all 0.3s linear;
+  }
+  // .news__content
+  &__content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  // .news__name
+  &__name {
+    @include Gelasio500;
+    font-size: clampAdRem(16, 20);
+    line-height: 1.5;
+    color: $black;
+    margin-bottom: rem(10);
+    transition: all 0.3s linear;
+
+    @media (any-hover: hover) {
+      &:hover {
+        color: $color-accent;
+      }
+    }
+  }
+  // .news__descr
+  &__descr {
+    margin-bottom: rem(5);
+  }
+  // .news__author
+  &__author {
+    font-size: clampAdRem(16, 20);
+    line-height: 1.5;
+    color: rgba($black, 0.8);
+    transition: all 0.3s linear;
+
+    @media (any-hover: hover) {
+      &:hover {
+        color: $color-accent;
+      }
+    }
+  }
+}

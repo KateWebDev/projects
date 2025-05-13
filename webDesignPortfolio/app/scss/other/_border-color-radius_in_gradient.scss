@@ -1,0 +1,67 @@
+// кнопка с градиентым фоном , а в модификаторе рамка, радиус скругления углов рамки и цыет текста сделаны градиентом
+// при этом градиентная рамка задается псевдоэлементом для обычной кнопки но скрыта, а уже для модификатора мы делаем ее доступной
+.btn {
+  padding: 10px clampAd(20, 40);
+  height: 52px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  border-radius: 4px;
+  background: $color-gradient;
+  font-size: 16px;
+  font-weight: 700;
+  white-space: nowrap;
+  letter-spacing: 0.03em;
+  color: $white;
+  transition: all 0.3s linear;
+  border: 1px solid transparent;
+  position: relative;
+  &::before {
+    // тут рамка градиентом + скруглением углов
+    display: none;
+    content: "";
+    position: absolute;
+    z-index: -1;
+    inset: 0;
+    border-radius: 4px;
+    border: 1px solid transparent;
+    background: $color-gradient border-box;
+    -webkit-mask:
+      linear-gradient($white 0 0) padding-box,
+      linear-gradient($white 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    -webkit-mask-repeat: no-repeat;
+    transition: all 0.3s linear;
+  }
+
+  @media (any-hover: hover) {
+    &:hover {
+      display: block;
+    }
+  }
+
+  &--reverse {
+    background: $color-gradient;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+    position: relative;
+
+    &::before {
+      display: block;
+    }
+
+    @media (any-hover: hover) {
+      &:hover {
+        background: $color-gradient;
+        color: $white;
+        border: 1px solid transparent;
+        -webkit-mask: none;
+        -webkit-text-fill-color: $white;
+      }
+    }
+  }
+}

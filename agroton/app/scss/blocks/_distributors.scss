@@ -1,0 +1,41 @@
+.distributors {
+  padding: clampAd(50, 130) 0;
+
+  // .distributors__container
+  &__container {
+    display: grid;
+    grid-template-columns: 1fr 1.25fr;
+    gap: clampAd(30, 130);
+
+    @include w_991 {
+      grid-template-columns: 1fr;
+    }
+  }
+  // .distributors__content
+  &__content {
+    height: 100%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    row-gap: 20px;
+  }
+  // .distributors__title
+  &__title {
+    margin-bottom: auto;
+
+    @include WorkSans400;
+  }
+  // .distributors__text
+  &__text {
+    @include NunitoSans300;
+    font-size: clampAd(14, 20);
+  }
+  // .distributors__btn
+  &__btn {
+    padding-left: clampAd(20, 44);
+  }
+  // .distributors__inner
+  &__inner {
+  }
+}

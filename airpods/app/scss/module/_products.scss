@@ -1,0 +1,53 @@
+.products {
+  padding: 45px 0 clamp(45px, calc(45px + (180 - 45) * ((100vw - 320px) / ($widthReportMax - $widthReportMin))), 180px);
+
+  // .products__container
+  &__container {
+  }
+  // .products__title
+  &__title {
+    font-size: clamp(20px, calc(20px + (36 - 20) * ((100vw - 320px) / ($widthReportMax - $widthReportMin))), 36px);
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  // .products__text
+  &__text {
+    max-width: 557px;
+    text-align: center;
+    margin: 0 auto clamp(30px, calc(30px + (80 - 30) * ((100vw - 320px) / ($widthReportMax - $widthReportMin))), 80px);
+  }
+  // .products__items
+  &__items {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: clamp(10px, calc(10px + (40 - 10) * ((100vw - 320px) / ($widthReportMax - $widthReportMin))), 40px);
+  }
+  // .products__item
+  &__item {
+    max-width: 260px;
+  }
+  // .products__btn
+  &__btn {
+    border-radius: 20px;
+    border: 1px solid #777777;
+    padding: clamp(20px, calc(20px + (49 - 20) * ((100vw - 320px) / ($widthReportMax - $widthReportMin))), 49px)
+      clamp(25px, calc(25px + (55 - 25) * ((100vw - 320px) / ($widthReportMax - $widthReportMin))), 55px);
+
+    img {
+      width: clamp(100px, calc(100px + (150 - 100) * ((100vw - 320px) / ($widthReportMax - $widthReportMin))), 150px);
+      height: clamp(125px, calc(125px + (175 - 125) * ((100vw - 320px) / ($widthReportMax - $widthReportMin))), 175px);
+      object-fit: cover;
+      transition: all 0.3s linear;
+    }
+
+    @media (any-hover: hover) and (min-width: 992px) {
+      &:hover {
+        img {
+          transform: scale(1.1);
+        }
+      }
+    }
+  }
+}

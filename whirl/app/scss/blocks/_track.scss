@@ -1,0 +1,72 @@
+.track {
+  padding: clampAd(40, 80) 0;
+  background: $color-dop-bg;
+  color: $white;
+
+  // .track__container
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 40px;
+  }
+  // .track__image
+  &__image {
+    max-width: 382px;
+    max-height: 374px;
+  }
+  // .track__img
+  &__img {
+    display: block;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    object-position: center;
+  }
+  // .track__content
+  &__content {
+    max-width: 500px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    row-gap: clampAd(10, 16);
+  }
+  // .track__title
+  &__title {
+    max-width: 400px;
+  }
+  // .track__text
+  &__text {
+    font-size: clampAd(14, 18);
+    letter-spacing: 0.01em;
+  }
+  // .track__list
+  &__list {
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+  }
+  // .track__point
+  &__point {
+    line-height: 1.35;
+    letter-spacing: 0.01em;
+
+    padding-left: 26px;
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 0;
+      width: 17px;
+      height: 10px;
+      transform: translateY(-50%);
+      background: url(../../images/icons/check.svg) center/cover no-repeat;
+    }
+  }
+  // .track__btn
+  &__btn {
+  }
+}

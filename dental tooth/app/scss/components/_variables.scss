@@ -1,0 +1,53 @@
+//Страница
+$widthReportMax: 1600;
+$widthReportMin: 360;
+$widthReportMinPx: $widthReportMin + px;
+// Контейнер
+$maxWidthContainer: 1240px;
+$containerPadding: 20px;
+
+//Фон
+$mainBackGround: #ffffff;
+
+//Шрифт
+$fontFamily: "SourceSans", sans-serif;
+$mainColor: #6b6868;
+$mainSize: 18;
+$size: $mainSize + px;
+$fontWeight: 400;
+$lineheight: calc(31 / $mainSize);
+
+// Доп цвета
+$white: #ffffff;
+$black: #000000;
+
+$color-accent: #f86d6d;
+$color-accent2: #2378c9;
+$color-accent3: #5eb8f0;
+$color-accent4: #67a9e9;
+
+$color-bg-light: #dfeefc;
+$color-bg-dop: #f6f6f6;
+$color-bg: #0e6eaa;
+$color-bg-dark: #10406f;
+
+$color-text: #302d2d;
+$color-text-light: #56565e;
+$color-text-dop: #a9a9a9;
+$color-text-dop2: #535050;
+$color-dop: #c5c1fe;
+$color-dop2: #c3c3c3;
+
+$color-placeholder: #b9b9b9;
+
+$color-slider: #e7e7e7;
+
+$color-border: #e4e4e4;
+$color-border2: #ececec;
+$color-decor: #e0e0e0;
+
+$color-gradient: linear-gradient(222deg, #dfeefc 0%, rgba(#a7d2fb, 0.92) 100%);
+
+$radius-circle: 50%;
+$radius: 29px;
+$radius-small: 10px;

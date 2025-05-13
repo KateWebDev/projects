@@ -1,0 +1,38 @@
+.btn {
+  padding: clampAd(8, 17) clampAd(15, 29);
+  background: $color-accent;
+
+  font-size: clampAd(7, 14);
+  line-height: 1.15;
+  text-align: center;
+  color: $white;
+  white-space: nowrap;
+
+  border-radius: $radius;
+  border: 1px solid transparent;
+  transition: all 0.3s linear;
+
+  @media (any-hover: hover) {
+    &:hover {
+      color: $color-accent;
+      border-color: currentColor;
+      background: $white;
+    }
+  }
+
+  &--big {
+    background: $color-accent3;
+    padding: 18px 43px;
+    font-size: clampAd(12, 18);
+
+    @media (any-hover: hover) {
+      &:hover {
+        color: $color-accent3;
+      }
+    }
+  }
+
+  &--small {
+    padding: clampAd(10, 16) clampAd(20, 54);
+  }
+}

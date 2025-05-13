@@ -1,0 +1,57 @@
+.cart {
+  background: $color-bg-dop;
+  padding: clampAd(35, 82) 0;
+
+  // .cart__container
+  &__container {
+  }
+  // .cart__title{
+  &__title {
+    display: none;
+    font-size: 24px;
+    margin-bottom: 30px;
+  }
+  // .cart__inner
+  &__inner {
+    padding: 72px 62px 54px 62px;
+    background: $white;
+    display: flex;
+    flex-direction: column;
+    row-gap: 15px;
+  }
+  // .cart__table
+  &__table {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  // .cart__dop
+  &__dop {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 7px 30px;
+    color: $color-accent;
+  }
+  // .cart__info
+  &__info {
+    font-size: 14px;
+  }
+  // .cart__all-price
+  &__all-price {
+    @include ClashDisplay400;
+    font-size: 20px;
+    line-height: 1.4;
+    display: flex;
+    align-items: flex-end;
+    column-gap: 16px;
+  }
+  // .cart__data
+  &__data {
+    font-size: 24px;
+    color: $color-dark;
+  }
+  // .cart__btn
+  &__btn {
+    align-self: flex-end;
+  }
+}

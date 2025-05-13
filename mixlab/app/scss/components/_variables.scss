@@ -1,0 +1,44 @@
+@import "components/mixin";
+
+//Страница
+$widthReportMax: 1440;
+$widthReportMin: 320;
+$widthReportMinPx: $widthReportMin + px;
+
+// Контейнер
+$maxWidthContainer: 1170px;
+$containerPadding: 15px;
+
+//Фон
+$mainBackGround: #ffffff;
+
+//Шрифт
+$fontFamily: "Roboto", sans-serif;
+$mainColor: #000000;
+$mainSize: 16;
+$size: $mainSize + px;
+$fontWeight: 400;
+$lineheight: calc(23 / $mainSize); // 1.4
+
+// Доп цвета
+$white: #ffffff;
+$black: #000000;
+
+$color-accent-1: #6f1eaa;
+$color-accent-2: #f7a500;
+
+$color-dop: #c282f0;
+$color-dark: #48156d;
+
+$color-bg-1: #faf9f6;
+$color-bg-2: #dff5f6;
+$color-bg-3: #f6f3fa;
+$color-bg-4: #fef7e5;
+$color-bg-5: #fff7c2;
+
+$color-border: #e8dcf8;
+
+// Радиусы
+$radius-circle: 50%;
+$radius-small: 20px;
+$radius: 24px;

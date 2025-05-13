@@ -1,0 +1,21 @@
+.socials {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  // .socials__item
+  &__item {
+  }
+  // .socials__link
+  &__link {
+    width: 15px;
+    aspect-ratio: 1/1;
+    transition: all 0.3s linear;
+
+    @media (any-hover: hover) {
+      &:hover {
+        transform: scale(1.1);
+      }
+    }
+  }
+}

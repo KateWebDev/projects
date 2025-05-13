@@ -1,0 +1,51 @@
+.contact {
+  // .contact__container
+  &__container {
+    display: grid;
+    grid-template-columns: clampAd(300, 610) clampAd(200, 530);
+    grid-template-rows: 300px;
+    justify-content: space-between;
+    gap: clampAd(20, 30);
+  }
+  // .contact__form
+  &__form {
+  }
+  // .contact__content
+  &__content {
+    padding: clampAd(20, 35);
+    background: $white;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    row-gap: clampAd(20, 30);
+  }
+  // .contact__item
+  &__item {
+  }
+  // .contact__subtitle
+  &__subtitle {
+    @include Fahkwang500;
+    font-size: clampAd(16, 20);
+    line-height: 1.3;
+    color: $color-light;
+    margin-bottom: 10px;
+  }
+  // .contact__address
+  &__address {
+    font-style: normal;
+  }
+  // .contact__link
+  &__link {
+    display: block;
+
+    transition: all 0.3s linear;
+
+    @media (any-hover: hover) {
+      &:hover {
+        color: $color-accent;
+      }
+    }
+  }
+}

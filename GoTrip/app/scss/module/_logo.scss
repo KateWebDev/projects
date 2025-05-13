@@ -1,0 +1,16 @@
+.logo {
+  display: flex;
+  align-items: center;
+
+  svg {
+    width: 68px;
+    height: 23px;
+    fill: $white;
+  }
+
+  &--color {
+    svg {
+      fill: $color-dop;
+    }
+  }
+}

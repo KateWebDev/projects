@@ -1,0 +1,93 @@
+.employee {
+  padding: clampAd(25, 70) 0;
+
+  // .employee__container
+  &__container {
+    display: grid;
+    align-items: center;
+    grid-template-columns: clampAd(200, 432) 1fr;
+    gap: 28px clampAd(20, 64);
+  }
+  // .employee__ibg
+  &__ibg {
+    box-shadow: -1px 1px 11px 3px rgba(46, 44, 44, 0.21);
+    padding: 0px 0px 145.5% 0px;
+    border-radius: 20px;
+  }
+  // .employee__img
+  &__img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 20px;
+  }
+  // .employee__content
+  &__content {
+    display: flex;
+    flex-direction: column;
+    gap: clampAd(20, 32);
+  }
+  // .employee__title
+  &__title {
+  }
+  // .employee__items
+  &__items {
+    display: flex;
+    flex-direction: column;
+    gap: clampAd(7, 32);
+  }
+  // .employee__item
+  &__item {
+    display: flex;
+    flex-direction: column;
+    gap: clampAd(10, 16);
+
+    @include SourceSans700;
+    font-size: clampAd(14, 22);
+    line-height: 1.8;
+    color: $color-text-light;
+
+    // .employee__item--small-text
+    &--small-text {
+      font-size: clampAd(12, 19);
+    }
+  }
+  // .employee__list
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: clampAd(10, 20);
+  }
+  // .employee__point
+  &__point {
+    @include SourceSans400;
+    font-size: clampAd(11, 18);
+    line-height: 1.8;
+    color: $color-text-light;
+
+    padding-left: clampAd(12, 19);
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 0;
+      transform: translateY(-50%);
+      width: clampAd(6, 9);
+      height: clampAd(6, 9);
+      border-radius: $radius-circle;
+      background: $color-accent3;
+    }
+  }
+
+  // .employee__text
+  &__text {
+    @include SourceSans400;
+    font-size: clampAd(12, 19);
+    line-height: 1.8;
+    color: $color-text-light;
+  }
+}

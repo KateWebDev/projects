@@ -1,0 +1,30 @@
+@media (max-width: 991.98px) {
+  .interior__items {
+    flex-wrap: wrap;
+  }
+
+  .interior__text:not(.interior__block .interior__text) {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 670.98px) {
+  .interior__block .interior__text {
+    max-width: 100%;
+  }
+  .slick-slide {
+    img {
+      margin: 0 auto;
+    }
+  }
+}
+
+@media (max-width: 575.98px) {
+  .info__item {
+    max-width: 100%;
+  }
+
+  .footer__container {
+    flex-direction: column;
+  }
+}

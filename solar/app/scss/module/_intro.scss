@@ -1,0 +1,73 @@
+.intro {
+  background: image-set(
+      url("../images/main/intro/bg.avif") type("image/avif"),
+      url("../images/main/intro/bg.webp") type("image/webp"),
+      url("../images/main/intro/bg.jpg")
+    )
+    center/cover no-repeat;
+  color: $white;
+  // .intro__container
+  &__container {
+    padding: clamp(38px, calc(38px + (70 - 38) * ((100vw - 320px) / ($widthReportMax - $widthReportMin))), 70px) 15px
+      38px;
+    min-height: 100svh;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    row-gap: clamp(70px, calc(70px + (140 - 70) * ((100vw - 320px) / ($widthReportMax - $widthReportMin))), 140px);
+    text-align: center;
+  }
+  // .intro__logo
+  &__logo {
+  }
+  // .intro__content
+  &__content {
+  }
+  // .intro__sudtitle
+  &__sudtitle {
+    font-size: clamp(14px, calc(14px + (18 - 14) * ((100vw - 320px) / ($widthReportMax - $widthReportMin))), 18px);
+  }
+  // .intro__title
+  &__title {
+    @include Noto700;
+    font-size: clamp(24px, calc(24px + (64 - 24) * ((100vw - 320px) / ($widthReportMax - $widthReportMin))), 64px);
+    margin-bottom: clamp(20px, calc(20px + (50 - 20) * ((100vw - 320px) / ($widthReportMax - $widthReportMin))), 50px);
+    span {
+      margin-top: 3px;
+      display: inline-block;
+      @include Noto400;
+      font-size: clamp(18px, calc(18px + (42 - 18) * ((100vw - 320px) / ($widthReportMax - $widthReportMin))), 42px);
+    }
+  }
+  // .intro__btn
+  &__btn {
+    margin-left: calc(
+      clamp(120px, calc(120px + (190 - 120) * ((100vw - 320px) / ($widthReportMax - $widthReportMin))), 190px) * -1
+    );
+  }
+  // .intro__socials
+  &__socials {
+    margin-top: auto;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+  // .intro__social
+  &__social {
+  }
+  // .intro__link
+  &__link {
+    transition: all 0.3s linear;
+
+    img {
+      max-width: clamp(20px, calc(20px + (30 - 20) * ((100vw - 320px) / ($widthReportMax - $widthReportMin))), 30px);
+      max-height: clamp(20px, calc(20px + (30 - 20) * ((100vw - 320px) / ($widthReportMax - $widthReportMin))), 30px);
+    }
+
+    @media (any-hover: hover) {
+      &:hover {
+        opacity: 0.8;
+      }
+    }
+  }
+}

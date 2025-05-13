@@ -1,0 +1,35 @@
+.partners {
+  // .partners__container
+  &__container {
+  }
+  // .partners__items
+  &__items {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    justify-items: center;
+    gap: 20px 0;
+  }
+  // .partners__item
+  &__item {
+    display: flex;
+
+    &:nth-child(-n + 3) {
+      width: calc(145px - (90px / 3));
+      justify-content: flex-start;
+      margin-left: 30px;
+    }
+    &:nth-child(n + 4) {
+      width: calc(145px - (105px / 3));
+      margin-right: 35px;
+      justify-content: flex-end;
+    }
+  }
+  // .partners__img
+  &__img {
+    width: auto;
+    height: auto;
+    object-fit: cover;
+    object-position: center;
+    filter: grayscale(100%);
+  }
+}

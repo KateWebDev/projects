@@ -1,0 +1,36 @@
+.comands {
+  padding-bottom: clamp(50px, calc(50px + (66 - 50) * ((100vw - 320px) / ($widthReportMax - $widthReportMin))), 66px);
+  // .comands__container
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 20px 10px;
+  }
+  // .comands__content
+  &__content {
+    max-width: 438px;
+  }
+  // .comands__title
+  &__title {
+    margin-bottom: 30px;
+  }
+  // .comands__block
+  &__block {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+  }
+  // .comands__text
+  &__text {
+    max-width: 352px;
+  }
+  // .comands__img
+  &__img {
+    max-width: clamp(150px, calc(150px + (437 - 150) * ((100vw - 320px) / ($widthReportMax - $widthReportMin))), 437px);
+    width: 100%;
+    height: auto;
+    clip-path: polygon(50% 0, 50% 0, 100% 30%, 100% 70%, 50% 100%, 50% 100%, 0% 70%, 0% 30%);
+  }
+}

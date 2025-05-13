@@ -1,0 +1,71 @@
+.btn {
+  min-width: clampAd(80, 193);
+  padding: clampAd(10, 12) clampAd(5, 10) clampAd(5, 10);
+  background: $mainColor;
+  color: $white;
+  border: 1px solid transparent;
+
+  @include Comfortaa700;
+  font-size: clampAd(14, 20);
+  text-align: center;
+  text-transform: uppercase;
+
+  transition: all 0.3s linear;
+
+  @media (any-hover: hover) {
+    &:hover {
+      background: $color-accent1;
+      color: $mainColor;
+      border-color: transparent;
+    }
+  }
+
+  &--transparent {
+    min-width: clampAd(200, 484);
+    padding: clampAd(10, 18);
+
+    background: transparent;
+    color: $color-accent2;
+    border-color: currentColor;
+
+    font-size: clampAd(20, 40);
+  }
+  &--reverse {
+    background: $white;
+    color: $mainColor;
+  }
+}
+
+.play {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: clampAd(6, 12);
+  transition: all 0.3s linear;
+
+  svg {
+    path {
+      fill: $white;
+      transition: all 0.3s linear;
+    }
+    circle {
+      stroke: $white;
+      transition: all 0.3s linear;
+    }
+  }
+
+  @media (any-hover: hover) {
+    &:hover {
+      @include Inter700;
+      color: $color-accent2;
+      svg {
+        path {
+          fill: $color-accent1;
+        }
+        circle {
+          stroke: $color-accent1;
+        }
+      }
+    }
+  }
+}

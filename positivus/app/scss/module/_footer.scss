@@ -1,0 +1,170 @@
+.footer {
+  color: $white;
+
+  // .footer__container
+  &__container {
+    padding: 58px 60px;
+    background: $color-bg-dark;
+    border-top-left-radius: $radius-big;
+    border-top-right-radius: $radius-big;
+  }
+  // .footer__top
+  &__top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 30px 20px;
+    margin-bottom: clampAd(40, 65);
+  }
+  // .footer__logo
+  &__logo {
+  }
+  // .footer__menu
+  &__menu {
+    .menu__items {
+      flex-wrap: wrap;
+    }
+    .menu__link {
+      text-decoration: underline;
+      transition: all 0.3s linear;
+
+      @media (any-hover: hover) {
+        &:hover {
+          color: $color-accent;
+        }
+      }
+    }
+  }
+  // .footer__socials
+  &__socials {
+    display: flex;
+    column-gap: 20px;
+  }
+  // .footer__social
+  &__social {
+    width: 30px;
+    aspect-ratio: 1;
+  }
+  // .footer__social-link
+  &__social-link {
+    transition: all 0.3s linear;
+
+    @media (any-hover: hover) {
+      &:hover {
+        opacity: 0.8;
+      }
+    }
+  }
+  // .footer__content
+  &__content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 30px;
+    margin-bottom: clampAd(0, 50);
+  }
+  // .footer__contact
+  &__contact {
+    max-width: 350px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    row-gap: clampAd(10, 20);
+  }
+  // .footer__title
+  &__title {
+    border-radius: $radius-small;
+    padding: 0px 7px;
+    background: $color-accent;
+    @include SpaceGrotesk500;
+    font-size: 20px;
+    color: $black;
+    margin-bottom: 7px;
+  }
+  // .footer__action
+  &__action {
+    transition: all 0.3s linear;
+
+    @media (any-hover: hover) {
+      &:hover {
+        color: $color-accent;
+      }
+    }
+  }
+  // .footer__address
+  &__address {
+    font-style: normal;
+  }
+  // .footer__form
+  &__form {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: clampAd(30, 58) clampAd(30, 40);
+    background: #292a32;
+    border-radius: $radius-small;
+  }
+  // .footer__input
+  &__input {
+    width: clampAd(260, 285);
+    padding: clampAd(20, 22) clampAd(30, 35);
+    border-radius: $radius;
+    border: $border;
+    border-color: currentColor;
+    color: $white;
+    background: transparent;
+
+    &::placeholder {
+      @include SpaceGrotesk400;
+      font-size: clampAd(16, 18);
+      color: $white;
+    }
+  }
+  // .footer__btn
+  &__btn {
+    width: 250px;
+    background: $color-accent;
+    border-radius: $radius;
+    text-align: center;
+    padding: 20px;
+    font-size: clampAd(16, 20);
+    line-height: 1.4;
+    color: $black;
+    transition: all 0.3s linear;
+
+    @media (any-hover: hover) {
+      &:hover {
+        background: $color-bg-light;
+      }
+    }
+  }
+  // .footer__bottom
+  &__bottom {
+    border-top: $border;
+    border-color: currentColor;
+    padding-top: clampAd(20, 50);
+    display: flex;
+    flex-wrap: wrap;
+    gap: clampAd(20, 30) clampAd(0, 40);
+    text-transform: capitalize;
+  }
+  // .footer__copy
+  &__copy {
+    text-align: center;
+  }
+  // .footer__link
+  &__link {
+    text-decoration: underline;
+    transition: all 0.3s linear;
+
+    @media (any-hover: hover) {
+      &:hover {
+        color: $color-accent;
+        text-decoration: underline;
+      }
+    }
+  }
+}

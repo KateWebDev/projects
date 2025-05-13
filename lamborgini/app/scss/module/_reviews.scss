@@ -1,0 +1,49 @@
+.reviews {
+  // .reviews__container
+  &__container {
+    display: flex;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 40px 20px;
+  }
+  // .reviews__items
+  &__items {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+  }
+  // .reviews__item
+  &__item {
+    max-width: 434px;
+  }
+
+  // .reviews__man
+  &__man {
+    display: block;
+    @include Roboto700;
+    margin-bottom: 10px;
+    font-style: normal;
+
+    span {
+      display: block;
+      @include Roboto400;
+      font-size: 12px;
+      color: $color-accent;
+      margin-bottom: 3px;
+    }
+  }
+  // .reviews__text
+  &__text {
+    @include Roboto400I;
+  }
+  // .reviews__image
+  &__image {
+    max-width: 438px;
+  }
+  // .reviews__img
+  &__img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+}

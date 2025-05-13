@@ -1,0 +1,52 @@
+.footer {
+  padding: clamp(50px, calc(50px + (100 - 50) * ((100vw - 320px) / ($widthReportMax - $widthReportMin))), 100px) 0;
+  background: image-set(
+      url("../images/footer/bg.avif") type("image/avif"),
+      url("../images/footer/bg.webp") type("image/webp"),
+      url("../images/footer/bg.jpg")
+    )
+    left center/cover no-repeat;
+  font-size: 16px;
+
+  // .footer__container
+  &__container {
+    display: flex;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+    gap: 50px;
+  }
+  // .footer__info
+  &__info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    row-gap: 30px;
+  }
+  // .footer__text
+  &__text {
+    max-width: 165px;
+  }
+  // .footer__items
+  &__items {
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+  }
+  // .footer__item
+  &__item {
+  }
+  // .footer__link
+  &__link {
+    text-transform: uppercase;
+    // .footer__link--color
+    &--color {
+      color: $color-accent;
+    }
+
+    @media (any-hover: hover) and (min-width: 992px) {
+      &:hover {
+        opacity: 0.8;
+      }
+    }
+  }
+}

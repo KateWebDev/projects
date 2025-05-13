@@ -1,0 +1,52 @@
+@function rem($px) {
+  $result: math.div($px, 16) + rem;
+  @return $result;
+}
+
+@function em($px, $current: 16) {
+  $result: math.div($px, $current) + em;
+  @return $result;
+}
+
+@function clampAd($min, $max) {
+  $minPx: $min + px;
+  $maxPx: $max + px;
+
+  $result: clamp(
+    $minPx,
+    calc($minPx + ($max - $min) * ((100vw - $widthReportMinPx) / ($widthReportMax - $widthReportMin))),
+    $maxPx
+  );
+
+  @return $result;
+}
+
+@function clampAdRem($min, $max) {
+  $minPx: rem($min);
+  $maxPx: rem($max);
+
+  $result: clamp(
+    $minPx,
+    calc($minPx + ($max - $min) * ((100vw - $widthReportMinPx) / ($widthReportMax - $widthReportMin))),
+    $maxPx
+  );
+
+  @return $result;
+}
+
+@mixin Montserrat700 {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+}
+@mixin NotoSans400 {
+  font-family: "Noto Sans", sans-serif;
+  font-weight: 400;
+}
+@mixin NotoSans500 {
+  font-family: "Noto Sans", sans-serif;
+  font-weight: 500;
+}
+@mixin NotoSans700 {
+  font-family: "Noto Sans", sans-serif;
+  font-weight: 700;
+}

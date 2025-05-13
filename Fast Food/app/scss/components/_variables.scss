@@ -1,0 +1,33 @@
+//Страница
+$widthReportMax: 1600;
+$widthReportMin: 320;
+$widthReportMinPx: $widthReportMin + px;
+
+// Контейнер
+$maxWidthContainer: 1170px;
+$containerPadding: 15px;
+
+//Фон
+$mainBackGround: #1c1c1c;
+
+//Шрифт
+$fontFamily: "Roboto", sans-serif;
+$mainColor: rgba(#ffffff, 0.7);
+$mainSize: 16;
+$size: $mainSize + px;
+$fontWeight: 400;
+$lineheight: calc(19 / $mainSize); // 1.1875
+
+// Доп цвета
+$white: #ffffff;
+$black: #000000;
+
+$color-accent: #f6762c;
+$color-accent-opacity: rgba($color-accent, 0.5);
+
+$color-light-bg: #312f30;
+
+// Радиусы
+$radius-circle: 50%;
+$radius-small: 5px;
+$radius-medium: 10px;

@@ -1,0 +1,116 @@
+.mobile {
+  padding: clamp(70px, calc(70px + (140 - 70) * ((100vw - 320px) / ($widthReportMax - $widthReportMin))), 140px) 0
+    clamp(60px, calc(60px + (120 - 60) * ((100vw - 320px) / ($widthReportMax - $widthReportMin))), 120px);
+  background: $color-btn;
+  color: #ffffff;
+
+  // .mobile__container
+  &__container {
+  }
+  // .mobile__content
+  &__content {
+    max-width: 550px;
+    width: 100%;
+    position: relative;
+    margin-bottom: clamp(
+      50px,
+      calc(50px + (125 - 50) * ((100vw - 320px) / ($widthReportMax - $widthReportMin))),
+      125px
+    );
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 110%;
+      width: 618px;
+      height: 493px;
+      background: image-set(
+          url("../images/main/mobile/1.avif") type("image/avif"),
+          url("../images/main/mobile/1.webp") type("image/webp"),
+          url("../images/main/mobile/1.png")
+        )
+        left center/contain no-repeat;
+    }
+  }
+  // .mobile__title
+  &__title {
+    color: #ffffff;
+    text-align: left;
+    margin-bottom: clamp(30px, calc(30px + (50 - 30) * ((100vw - 320px) / ($widthReportMax - $widthReportMin))), 50px);
+  }
+  // .mobile__items
+  &__items {
+    margin-bottom: clamp(30px, calc(30px + (50 - 30) * ((100vw - 320px) / ($widthReportMax - $widthReportMin))), 50px);
+  }
+  // .mobile__item
+  &__item {
+    position: relative;
+    padding-left: clamp(20px, calc(20px + (43 - 20) * ((100vw - 320px) / ($widthReportMax - $widthReportMin))), 43px);
+
+    &:not(:last-child) {
+      margin-bottom: 24px;
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: clamp(5px, calc(5px + (10 - 5) * ((100vw - 320px) / ($widthReportMax - $widthReportMin))), 10px);
+      left: 0;
+      width: 8px;
+      aspect-ratio: 1;
+      border-radius: 50%;
+      background: currentColor;
+    }
+  }
+  // .mobile__name
+  &__name {
+    font-size: clamp(14px, calc(14px + (18 - 14) * ((100vw - 320px) / ($widthReportMax - $widthReportMin))), 18px);
+    margin-bottom: 10px;
+  }
+  // .mobile__text
+  &__text {
+    opacity: 0.75;
+  }
+  // .mobile__actions
+  &__actions {
+    display: flex;
+    gap: 15px;
+  }
+  // .mobile__action
+  &__action {
+  }
+  // .mobile__btn
+  &__btn {
+    border: 1px solid #dadedf;
+
+    .btn {
+      font-size: clamp(14px, calc(14px + (18 - 14) * ((100vw - 320px) / ($widthReportMax - $widthReportMin))), 18px);
+    }
+
+    .btn-light {
+      font-size: clamp(14px, calc(14px + (17 - 14) * ((100vw - 320px) / ($widthReportMax - $widthReportMin))), 17px);
+    }
+  }
+  // .mobile__bottom
+  &__bottom {
+  }
+  // .mobile__list
+  &__list {
+    display: flex;
+    justify-content: center;
+    gap: 18px;
+    flex-wrap: wrap;
+  }
+  // .mobile__list-item
+  &__list-item {
+    max-width: 340px;
+    text-align: center;
+  }
+  // .mobile__icon
+  &__icon {
+    width: 48px;
+    aspect-ratio: 1;
+    margin-bottom: 20px;
+  }
+}

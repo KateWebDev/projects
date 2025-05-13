@@ -1,0 +1,21 @@
+.clients {
+  padding: 30px 0;
+  // .clients__items
+  &__items {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 30px clamp(50px, calc(50px + (120 - 50) * ((100vw - 320px) / ($widthReportMax - $widthReportMin))), 120px);
+  }
+  // .clients__item
+  &__item {
+    max-width: 126px;
+  }
+  // .clients__img
+  &__img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+}

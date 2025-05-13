@@ -1,0 +1,65 @@
+.works {
+  padding: 60px 0;
+  background: $color-bg-1;
+
+  // .works__container
+  &__container {
+  }
+  // .works__title
+  &__title {
+    margin-bottom: clampAd(30, 65);
+  }
+  // .works__items
+  &__items {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(clampAd(180, 360), 1fr));
+    gap: clampAd(20, 30);
+
+    margin-bottom: clampAd(24, 48);
+  }
+  // .works__item
+  &__item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  // .works__image
+  &__image {
+    width: clampAd(120, 192);
+    height: clampAd(120, 192);
+    border-radius: $radius-circle;
+    background: $color-bg-5;
+
+    margin-bottom: clampAd(20, 32);
+
+    position: relative;
+  }
+  // .works__img
+  &__img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    display: block;
+    max-width: 100%;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    object-position: center;
+  }
+  // .works__name
+  &__name {
+    margin-bottom: 8px;
+  }
+  // .works__text
+  &__text {
+  }
+  // .works__btn
+  &__btn {
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}

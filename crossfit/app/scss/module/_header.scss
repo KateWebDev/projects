@@ -1,0 +1,115 @@
+.header {
+  padding: 23px 0 26px;
+  background: $color-bg-accent;
+
+  &--fixed {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  overflow: auto;
+  background: #000000;
+  }
+
+  // .header__container
+  &__container {
+    max-width: 1920px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  // .header__logo
+  &__logo {
+    position: relative;
+    z-index: 3;
+  }
+  // .header__menu
+  &__menu {
+  }
+  // .header__actions
+  &__actions {
+    display: flex;
+    column-gap: clamp(10px, calc(10px + (30 - 10) * ((100vw - 320px) / ($widthReportMax - $widthReportMin))), 30px);
+  }
+  // .header__btn
+  &__btn {
+    display: inline-block;
+    min-width: clamp(60px, calc(60px + (124 - 60) * ((100vw - 320px) / ($widthReportMax - $widthReportMin))), 124px);
+    height: 38px;
+    padding: 7px;
+
+    color: #000000;
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 2;
+    letter-spacing: 1.2px;
+    text-align: center;
+    text-transform: uppercase;
+    white-space: nowrap;
+
+    border-radius: 30px;
+    background: #ffffff;
+    transition: all 0.3s linear;
+
+    @media (any-hover: hover) and (min-width: 992px) {
+      &:hover {
+        background: #000000;
+        color: #ffffff;
+      }
+    }
+
+    position: relative;
+    z-index: 3;
+  }
+  // .header__burger
+  &__burger {
+    position: relative;
+    z-index: 3;
+  }
+}
+
+.menu {
+  // .menu__items
+  &__items {
+    display: flex;
+    align-items: center;
+    column-gap: 50px;
+  }
+  // .menu__item
+  &__item {
+  }
+  // .menu__link
+  &__link {
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 1.5;
+    letter-spacing: 1.2px;
+    text-transform: uppercase;
+    position: relative;
+    transition: all 0.3s linear;
+
+    &--active {
+      padding-right: 11px;
+
+      &::before {
+        content: "";
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        right: 0;
+
+        width: 5px;
+        aspect-ratio: 1;
+        border-radius: 50%;
+        background: currentColor;
+      }
+    }
+
+    @media (any-hover: hover) and (min-width: 992px) {
+      &:hover {
+        color: $color-accent;
+      }
+    }
+  }
+}

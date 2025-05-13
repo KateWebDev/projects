@@ -1,0 +1,54 @@
+.header {
+  padding: 30px 0;
+
+  &--fixed {
+    position: fixed;
+    z-index: 2;
+    width: 100%;
+    top: 0;
+    left: 0;
+    overflow: auto;
+    background: #f7f2ea;
+  }
+  // .header__container
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  // .header__logo
+  &__logo {
+    margin-bottom: 37px;
+  }
+  // .header__menu
+  &__menu {
+    margin-left: 85px;
+  }
+  // .header__actions
+  &__actions {
+    display: flex;
+    column-gap: 20px;
+  }
+  // .header__action
+  &__action {
+    &:last-child {
+      margin-left: 80px;
+    }
+  }
+  // .header__btn
+  &__btn {
+    transition: all 0.3s linear;
+
+    @media (any-hover: hover) and (min-width: 992px) {
+      &:hover {
+        opacity: 0.8;
+      }
+    }
+  }
+  // .header__icon
+  &__icon {
+  }
+  // .header__burger
+  &__burger {
+  }
+}

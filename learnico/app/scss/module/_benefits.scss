@@ -1,0 +1,103 @@
+.benefits {
+  // .benefits__container
+  &__container {
+    display: flex;
+    flex-direction: column;
+  }
+  // .benefits__top
+  &__top {
+    max-width: 730px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    row-gap: 11px;
+    margin: 0 auto clampAd(40, 80);
+  }
+  // .benefits__chapter
+  &__chapter {
+  }
+  // .benefits__title
+  &__title {
+    margin-bottom: clampAd(10, 17);
+  }
+  // .benefits__text
+  &__text {
+  }
+  // .benefits__inner
+  &__inner {
+    display: grid;
+    grid-template-columns: clampAd(100, 336) clampAd(150, 504) clampAd(100, 336);
+    align-items: center;
+    gap: 30px clampAd(20, 48);
+    margin-bottom: clampAd(40, 80);
+  }
+  // .benefits__items
+  &__items {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: clampAd(30, 64);
+  }
+  // .benefits__item
+  &__item {
+    max-width: 240px;
+    text-align: center;
+  }
+  // .benefits__name
+  &__name {
+    padding-top: clampAd(60, 72);
+    margin-bottom: clampAd(8, 16);
+
+    &::before {
+      left: 50%;
+      transform: translateX(-50%);
+    }
+    // .benefits__name--1
+    &--1 {
+      &::before {
+        background: $color-accent url(../../images/icons/play_lesson.svg) center/27px 29px no-repeat;
+      }
+    }
+    // .benefits__name--2
+    &--2 {
+      &::before {
+        background: $color-accent url(../../images/icons/people_alt.svg) center/30px 22px no-repeat;
+      }
+    }
+    // .benefits__name--3
+    &--3 {
+      &::before {
+        background: $color-accent url(../../images/icons/emoji_emotions.svg) center/28px 28px no-repeat;
+      }
+    }
+    // .benefits__name--4
+    &--4 {
+      &::before {
+        background: $color-accent url(../../images/icons/person.svg) center/22px 22px no-repeat;
+      }
+    }
+  }
+  // .benefits__info
+  &__info {
+    font-size: 15px;
+    line-height: 1.6;
+  }
+  // .benefits__image
+  &__image {
+    max-width: 504px;
+    max-height: 600px;
+  }
+  // .benefits__img
+  &__img {
+    display: block;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    object-position: center;
+  }
+  // .benefits__btn
+  &__btn {
+    margin: 0 auto;
+  }
+}

@@ -1,0 +1,10 @@
+.title {
+  font-weight: 700;
+  font-size: clampAd(25, 52);
+  line-height: 1.2;
+  color: $white;
+
+  &--center {
+    text-align: center;
+  }
+}

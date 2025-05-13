@@ -1,0 +1,45 @@
+.form {
+  width: 100%;
+  position: relative;
+
+  // .form__input
+  &__input {
+    width: 100%;
+    padding: 17px 15px 7px 15px;
+    border-bottom: 1px solid $color-line;
+
+    font-size: clampAd(11, 13);
+    letter-spacing: 0.02em;
+    color: $mainColor;
+
+    &::placeholder {
+      @include Inter400;
+      font-size: clampAd(11, 13);
+      line-height: 1.5;
+      letter-spacing: 0.02em;
+      color: $color-dop-text;
+    }
+
+    &:focus {
+      outline: none;
+      border-color: $color-dop-bg;
+    }
+  }
+  // .form__button
+  &__button {
+    position: absolute;
+    top: 50%;
+    right: -5px;
+
+    transform: translateY(-50%);
+    z-index: 2;
+
+    transition: all 0.3s linear;
+
+    @media (any-hover: hover) {
+      &:hover {
+        opacity: 0.8;
+      }
+    }
+  }
+}

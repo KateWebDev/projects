@@ -1,0 +1,25 @@
+.dop {
+  // .dop__container
+  &__container {
+    transform: translateY(-50%);
+  }
+  // .dop__inner
+  &__inner {
+    background: $color-bg-accent;
+    margin: 0 clampAd(0, 145);
+    padding: 22px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+  }
+  // .dop__text
+  &__text {
+    font-size: 19px;
+    color: rgba($mainColor, 0.8);
+  }
+  // .dop__rateyo
+  &__rateyo {
+  }
+}

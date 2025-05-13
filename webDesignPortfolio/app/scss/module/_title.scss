@@ -1,0 +1,23 @@
+.title {
+  font-size: clampAd(28, 36);
+  letter-spacing: -0.01em;
+  text-transform: capitalize;
+
+  &--center {
+    text-align: center;
+  }
+}
+
+.badge {
+  display: inline-block;
+  font-size: 16px;
+  line-height: 1;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+  opacity: 0.7;
+}
+
+.subtitle {
+  font-size: clampAd(30, 32);
+  letter-spacing: -0.02em;
+}

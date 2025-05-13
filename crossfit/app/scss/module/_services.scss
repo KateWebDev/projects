@@ -1,0 +1,52 @@
+.services {
+  padding: 70px 0 120px;
+  // .services__container
+  &__container {
+    max-width: 1920px;
+  }
+  // .services__items
+  &__items {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 60px;
+    flex-wrap: wrap;
+  }
+  // .services__item
+  &__item {
+    height: 100%;
+
+    max-width: clamp(100px, calc(100px + (151 - 100) * ((100vw - 320px) / ($widthReportMax - $widthReportMin))), 151px);
+    width: 100%;
+    margin: 0 auto;
+    padding-top: 80px;
+    padding-right: 0;
+    position: relative;
+
+    &:before {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: calc(
+        clamp(50px, calc(50px + (82 - 50) * ((100vw - 320px) / ($widthReportMax - $widthReportMin))), 82px) * -1
+      );
+      width: clamp(50px, calc(50px + (82 - 50) * ((100vw - 320px) / ($widthReportMax - $widthReportMin))), 82px);
+      aspect-ratio: 1;
+      background: url(../images/main/services/arrow.svg) center/cover no-repeat;
+    }
+  }
+  // .services__img
+  &__img {
+    max-width: clamp(90px, calc(90px + (150 - 90) * ((100vw - 320px) / ($widthReportMax - $widthReportMin))), 150px);
+    max-height: clamp(90px, calc(90px + (150 - 90) * ((100vw - 320px) / ($widthReportMax - $widthReportMin))), 150px);
+    object-fit: cover;
+    margin-bottom: 32px;
+  }
+  // .services__name
+  &__name {
+    text-align: center;
+    font-weight: 700;
+    letter-spacing: 0.8px;
+    text-transform: uppercase;
+  }
+}

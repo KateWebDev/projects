@@ -1,0 +1,51 @@
+@import "components/mixin";
+
+//Страница
+$widthReportMax: 1440;
+$widthReportMin: 375;
+$widthReportMinPx: $widthReportMin + px;
+
+// Контейнер
+$maxWidthContainer: 1270px;
+$containerPadding: 15px;
+
+//Фон
+$mainBackGround: #000000;
+
+//Шрифт
+$fontFamily: "Noto Sans", sans-serif;
+$mainColor: #ffffff;
+$mainSize: 18;
+$size: $mainSize + px;
+$fontWeight: 400;
+$lineheight: calc(25 / $mainSize);
+
+// Доп цвета
+$white: #ffffff;
+$black: #000000;
+
+$color-accent-1: #f101bf;
+$color-accent-3: #0066ff;
+
+$color-accent-2: rgba(96, 92, 234, 0.5);
+
+$color-gradient-2: linear-gradient(41deg, $color-accent-1 0%, #0066ff 100%);
+$color-gradient-bg: linear-gradient(180deg, $black 6.2%, rgba($black, 0) 57.17%, $black 80.3%);
+$color-gradient-bg-small: linear-gradient(
+  179.83deg,
+  $black -1.85%,
+  rgba($black, 0.67) 11.21%,
+  rgba($black, 0) 54.71%,
+  $black 83.92%
+);
+
+// Радиусы
+$radius-circle: 50%;
+
+/*
+@include Montserrat700;
+
+@include NotoSans400;
+@include NotoSans500;
+@include NotoSans700;
+*/

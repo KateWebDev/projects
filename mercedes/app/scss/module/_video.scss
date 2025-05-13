@@ -1,0 +1,20 @@
+.video {
+  // .video__container
+  &__container {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+  }
+  // .video__image
+  &__image {
+  }
+  // .video__img
+  &__img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+  // .video__btn
+  &__btn {
+  }
+}

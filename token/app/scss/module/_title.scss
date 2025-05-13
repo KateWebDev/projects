@@ -1,0 +1,14 @@
+.title {
+  @include BakbakOne400;
+  font-size: clampAd(20, 40);
+  line-height: 1.5;
+  text-transform: uppercase;
+  color: $color-dark;
+
+  span {
+    display: block;
+  }
+  &--center {
+    text-align: center;
+  }
+}

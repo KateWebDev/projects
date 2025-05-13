@@ -1,0 +1,41 @@
+.intro {
+  // .intro__container
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 30px;
+  }
+  // .intro__content
+  &__content {
+    max-width: clampAd(300, 531);
+  }
+  // .intro__title
+  &__title {
+    @include SpaceGrotesk500;
+    font-size: clampAd(33, 60);
+    margin-bottom: clampAd(10, 35);
+  }
+  // .intro__text
+  &__text {
+    font-size: clampAd(16, 20);
+    line-height: 1.4;
+    margin-bottom: 35px;
+  }
+  // .intro__btn
+  &__btn {
+  }
+  // .intro__image
+  &__image {
+    max-width: clampAd(300, 600);
+  }
+  // .intro__img
+  &__img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    object-position: center;
+  }
+}
+.btn {
+}

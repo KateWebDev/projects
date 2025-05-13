@@ -1,0 +1,21 @@
+.conclusion {
+  padding-bottom: 220px;
+  // .conclusion__container
+  &__container {
+  }
+  // .conclusion__badge
+  &__badge {
+    margin-bottom: 12px;
+  }
+  // .conclusion__text
+  &__text {
+    margin-bottom: clampAd(109, 128);
+  }
+  // .conclusion__ibg
+  &__ibg {
+    padding: 0px 0px 54% 0px;
+  }
+  // .conclusion__img
+  &__img {
+  }
+}

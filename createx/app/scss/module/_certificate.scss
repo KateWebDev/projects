@@ -1,0 +1,59 @@
+.certificate {
+  // .certificate__container
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 30px;
+  }
+  // .certificate__content
+  &__content {
+    max-width: 400px;
+  }
+  // .certificate__name
+  &__name {
+    margin-bottom: clampAd(20, 48);
+  }
+  // .certificate__text
+  &__text {
+    margin-bottom: clampAd(20, 32);
+  }
+  // .certificate__companys
+  &__companys {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px clampAd(20, 40);
+  }
+  // .certificate__company
+  &__company {
+  }
+  // .certificate__icon
+  &__icon {
+    width: 105px;
+    height: 50px;
+    object-fit: cover;
+    object-position: center;
+  }
+  // .certificate__image
+  &__image {
+    margin-bottom: -3.659%;
+    max-width: 705px;
+    max-height: 500px;
+    border: 1px solid $color-border;
+    box-shadow:
+      0px 80px 80px -20px rgba(154, 156, 165, 0.16),
+      0px 30px 24px -10px rgba(154, 156, 165, 0.1),
+      0px 12px 10px -6px rgba(154, 156, 165, 0.08),
+      0px 4px 4px -4px rgba(30, 33, 44, 0.05);
+    border-radius: 4px;
+    position: relative;
+    z-index: 2;
+  }
+  // .certificate__img
+  &__img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    object-position: center;
+  }
+}

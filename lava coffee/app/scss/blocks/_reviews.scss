@@ -1,0 +1,62 @@
+.reviews {
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: calc(clampAd(50, 135) * -1);
+    transform: translateY(-50%);
+
+    width: clampAd(290, 422);
+    height: clampAd(295, 426);
+    background: url(../../images/main/decor/foliage.svg) center/cover no-repeat;
+    opacity: 0.1;
+  }
+  // .reviews__container
+  &__container {
+    position: relative;
+  }
+  // .reviews__slider
+  &__slider {
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 1s ease;
+
+    &.swiper-initialized {
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+  // .reviews__actions
+  &__actions {
+  }
+  // .reviews__button
+  &__button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 2;
+
+    svg {
+      width: clampAd(12, 19);
+      height: clampAd(24, 35);
+      fill: $color-light;
+    }
+    // .slider__button--prev
+    &--prev {
+      left: calc(clampAd(0, 70) * -1);
+    }
+    // .slider__button--next
+    &--next {
+      right: calc(clampAd(0, 70) * -1);
+    }
+
+    &.swiper-button-disabled {
+      cursor: default;
+      svg {
+        fill-opacity: 0.6;
+      }
+    }
+  }
+}

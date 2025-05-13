@@ -1,0 +1,74 @@
+.intro {
+  position: relative;
+  z-index: 2;
+  background: image-set(
+      url("../images/main/intro/bg.avif") type("image/avif"),
+      url("../images/main/intro/bg_2x.avif") 2x type("image/avif"),
+      url("../images/main/intro/bg.webp") type("image/webp"),
+      url("../images/main/intro/bg_2x.webp") 2x type("image/webp"),
+      url("../images/main/intro/bg.jpg"),
+      url("../images/main/intro/bg_2x.jpg") 2x
+    )
+    right 90% center/cover no-repeat;
+  color: $white;
+
+  // .intro__container
+  &__container {
+    margin-bottom: clampAd(60, 131);
+  }
+  // .intro__content
+  &__content {
+    padding: clampAd(50, 150) 0;
+
+    display: flex;
+    flex-direction: column;
+    row-gap: clampAd(20, 25);
+  }
+  // .intro__title
+  &__title {
+    max-width: clampAd(290, 510);
+
+    @include BakbakOne400;
+    font-size: clampAd(31, 60);
+    line-height: 1.16;
+    text-transform: uppercase;
+
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: -38px;
+      left: -68px;
+      width: clampAd(52, 82);
+      height: clampAd(120, 150);
+      background: image-set(
+          url("../images/main/intro/decor.avif") type("image/avif"),
+          url("../images/main/intro/decor_2x.avif") 2x type("image/avif"),
+          url("../images/main/intro/decor.webp") type("image/webp"),
+          url("../images/main/intro/decor_2x.webp") 2x type("image/webp"),
+          url("../images/main/intro/decor.png"),
+          url("../images/main/intro/decor_2x.png") 2x
+        )
+        center/cover no-repeat;
+    }
+  }
+  // .intro__text
+  &__text {
+    max-width: clampAd(290, 480);
+
+    font-size: clampAd(14, 18);
+    line-height: 1.66;
+
+    margin-bottom: clampAd(10, 17);
+  }
+  // .intro__actions
+  &__actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  // .intro__btn
+  &__btn {
+  }
+}

@@ -1,0 +1,144 @@
+@import "components/_mixin";
+@import "components/_resetStyle";
+@import "components/_fonts";
+@import "../../node_modules/slick-carousel/slick/slick";
+
+//Страница
+$widthReportMax: 1920;
+$widthReportMin: 320;
+$maxWidthContainer: 1230px; //максимальная ширина контейнера + padding left + padding right
+$containerPadding: 15px; //внутринние отступы в контейнере
+
+//Шрифт
+$fontFamily: "SF Pro Display", sans-serif;
+$mainColor: #ffffff; //основной цвет шрифта
+$mainBackGround: #010203; //основной цвет фона
+$mainSize: 24;
+$lineheight: calc(30 / $mainSize);
+$fontWeight: 400;
+
+$color-accent: #cb0e0e;
+$color-other: #036cca;
+//Контейнер
+[class*="__container"] {
+  max-width: $maxWidthContainer;
+  margin: 0 auto;
+  padding: 0 $containerPadding;
+}
+
+[class*="__burger"] {
+  display: none;
+  flex-direction: column;
+  row-gap: 5px;
+  cursor: pointer;
+
+  span {
+    width: 30px;
+    height: 3px;
+    border-radius: 2px;
+    background: #ffffff;
+    transition: all 0.3s linear;
+  }
+}
+
+[class*="__ibg"] {
+  position: relative;
+  /*Для самих картинок в карточках технический класс*/
+  img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+body {
+  font-family: $fontFamily;
+  background-color: $mainBackGround;
+  color: $mainColor;
+  font-size: $mainSize + px;
+  line-height: $lineheight;
+  font-weight: $fontWeight;
+}
+
+body.lock {
+  overflow: hidden;
+}
+
+.hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.main {
+  flex: 1 1 auto;
+}
+
+.box {
+  background: image-set(
+      url("../images/main/box/bg.avif") type("image/avif"),
+      url("../images/main/box/bg.webp") type("image/webp"),
+      url("../images/main/box/bg.jpg")
+    )
+    left center/cover no-repeat;
+
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(180deg, #010203 0%, rgba(1, 2, 3, 0) 84.9%);
+    transform: rotate(180deg);
+  }
+}
+
+.title {
+  font-family: "Space Age Cyrillic", sans-serif;
+  font-size: clamp(24px, calc(24px + (48 - 24) * ((100vw - 320px) / ($widthReportMax - $widthReportMin))), 48px);
+  text-transform: uppercase;
+}
+
+.btn {
+  display: inline-block;
+  border: 1px solid #ffffff;
+  background: transparent;
+  padding: 20px 0 19px;
+
+  min-width: clamp(250px, calc(250px + (500 - 250) * ((100vw - 320px) / ($widthReportMax - $widthReportMin))), 500px);
+
+  font-size: clamp(18px, calc(18px + (24 - 18) * ((100vw - 320px) / ($widthReportMax - $widthReportMin))), 24px);
+
+  text-align: center;
+  text-transform: uppercase;
+  transition: all 0.3s linear;
+
+  @media (any-hover: hover) and (min-width: 992px) {
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+}
+
+@import "module/_header";
+@import "module/_intro";
+@import "module/_about";
+@import "module/_stages";
+@import "module/_booking";
+@import "module/_stock";
+@import "module/_dop";
+@import "module/_contacts";
+@import "module/_footer";
+@import "components/_adaptive";

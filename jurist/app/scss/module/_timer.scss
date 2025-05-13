@@ -1,0 +1,36 @@
+.deal {
+  // .deal__time
+  &__time {
+    display: flex;
+    gap: 24px;
+  }
+  // .deal__item
+  &__item {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+  // .deal__days
+  &__days {
+  }
+  // .deal__num
+  &__num {
+    font-size: clamp(24px, calc(24px + (48 - 24) * ((100vw - 320px) / ($widthReportMax - $widthReportMin))), 48px);
+    font-weight: 700;
+    line-height: 1;
+  }
+  // .deal__smalltext
+  &__smalltext {
+    opacity: 0.7;
+    font-size: clamp(15px, calc(15px + (18 - 15) * ((100vw - 320px) / ($widthReportMax - $widthReportMin))), 18px);
+  }
+  // .deal__hours
+  &__hours {
+  }
+  // .deal__minutes
+  &__minutes {
+  }
+  // .deal__seconds
+  &__seconds {
+  }
+}

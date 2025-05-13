@@ -1,0 +1,40 @@
+.btn {
+  background: $color-accent;
+  border-radius: 12px;
+  padding: 11px 47px;
+  font-size: 21px;
+  text-align: center;
+  outline: 1px solid transparent;
+  outline-offset: 2px;
+  transition: all 0.3s linear;
+
+  &:focus-visible {
+    outline-color: $color-accent;
+  }
+  &:hover {
+    background: $color-accent-light;
+  }
+  &:active {
+    background: $color-accent-dsrk;
+    outline: none;
+  }
+}
+
+.link {
+  text-decoration: underline;
+  transition: all 0.3s linear;
+
+  &:focus-visible {
+    background: $color-accent;
+    padding: 1px 5px 4px;
+    outline: none;
+  }
+
+  &:hover {
+    color: $color-accent;
+  }
+
+  &:active {
+    color: $color-accent-dsrk;
+  }
+}

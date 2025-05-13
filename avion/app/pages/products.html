@@ -1,0 +1,316 @@
+<!--=include header.html -->
+<main class="main">
+  <div class="inner inner--all-products">
+    <div class="inner__container">
+      <h1 class="inner__text">
+        All products
+      </h1>
+    </div>
+  </div>
+  <section class="catalog">
+    <h2 class="hidden">Catalog</h2>
+    <div class="catalog__container">
+      <ul class="catalog__actions">
+        <li class="catalog__action">
+          <button class="catalog__button catalog__button--filter" type="button">
+            Filters
+          </button>
+        </li>
+        <li class="catalog__action">
+          <button class="catalog__button catalog__button--sort" type="button">
+            Sorting
+          </button>
+        </li>
+      </ul>
+      <div class="catalog__left filters">
+        <div class="filters__form">
+          <fieldset class="filters__fieldset">
+            <legend class="filters__type">
+              Product type
+            </legend>
+            <div class="filters__item">
+              <input class="filters__input" id="furniture" type="checkbox" name="productType" value="furniture" checked>
+              <label class="filters__label" for="furniture" tabindex="20">
+                Furniture
+              </label>
+            </div>
+            <div class="filters__item">
+              <input class="filters__input" id="homeware" type="checkbox" name="productType" value="homeware">
+              <label class="filters__label" for="homeware">
+                Homeware
+              </label>
+            </div>
+            <div class="filters__item">
+              <input class="filters__input" id="sofas" type="checkbox" name="productType" value="sofas">
+              <label class="filters__label" for="sofas">
+                Sofas
+              </label>
+            </div>
+            <div class="filters__item">
+              <input class="filters__input" id="homeware2" type="checkbox" name="productType" value="homeware2">
+              <label class="filters__label" for="homeware2">
+                Homeware
+              </label>
+            </div>
+            <div class="filters__item">
+              <input class="filters__input" id="fittings" type="checkbox" name="productType" value="fittings">
+              <label class="filters__label" for="fittings">
+                Light fittings
+              </label>
+            </div>
+            <div class="filters__item">
+              <input class="filters__input" id="accessories" type="checkbox" name="productType" value="accessories">
+              <label class="filters__label" for="accessories">
+                Accessories
+              </label>
+            </div>
+          </fieldset>
+          <fieldset class="filters__fieldset">
+            <legend class="filters__type">
+              Price
+            </legend>
+            <div class="filters__item">
+              <input class="filters__input" id="price0" type="checkbox" name="price" value="price0" checked>
+              <label class="filters__label" for="price0" tabindex="20">
+                0 - 100
+              </label>
+            </div>
+            <div class="filters__item">
+              <input class="filters__input" id="price101" type="checkbox" name="price" value="price101">
+              <label class="filters__label" for="price101" tabindex="21">
+                101 - 250
+              </label>
+            </div>
+            <div class="filters__item">
+              <input class="filters__input" id="price250" type="checkbox" name="price" value="price250">
+              <label class="filters__label" for="price250" tabindex="22">
+                250 +
+              </label>
+            </div>
+          </fieldset>
+          <fieldset class="filters__fieldset">
+            <legend class="filters__type">
+              Designer
+            </legend>
+            <div class="filters__item">
+              <input class="filters__input" id="designerSmith" type="checkbox" name="designer" value="designerSmith"
+                checked>
+              <label class="filters__label" for="designerSmith">
+                Robert Smith
+              </label>
+            </div>
+            <div class="filters__item">
+              <input class="filters__input" id="designerGallagher" type="checkbox" name="designer"
+                value="designerGallagher">
+              <label class="filters__label" for="designerGallagher">
+                Liam Gallagher
+              </label>
+            </div>
+            <div class="filters__item">
+              <input class="filters__input" id="designerSmalls" type="checkbox" name="designer" value="designerSmalls">
+              <label class="filters__label" for="designerSmalls">
+                Biggie Smalls
+              </label>
+            </div>
+            <div class="filters__item">
+              <input class="filters__input" id="designerYorke" type="checkbox" name="designer" value="designerYorke">
+              <label class="filters__label" for="designerYorke">
+                Thom Yorke
+              </label>
+            </div>
+          </fieldset>
+        </div>
+      </div>
+      <div class="catalog__products products">
+        <ul class="products__items">
+          <li class="products__item">
+            <div class="products__ibg">
+              <picture>
+                <source type='image/avif' srcset='../images/main/catalog/1.avif, ../images/main/catalog/1_2x.avif 2x'>
+                <source type='image/webp' srcset='../images/main/catalog/1.webp, ../images/main/catalog/1_2x.webp 2x'>
+                <img class="products__img" src="../images/main/catalog/1.jpg"
+                  srcset="../imageges/main/catalog/1_2x.jpg 2x" alt="" loading="lazy">
+              </picture>
+            </div>
+            <a class="products__name" href="#">
+              The Dandy chair
+            </a>
+            <span class="products__price">
+              £250
+            </span>
+          </li>
+          <li class="products__item">
+            <div class="products__ibg">
+              <picture>
+                <source type='image/avif' srcset='../images/main/catalog/2.avif, ../images/main/catalog/2_2x.avif 2x'>
+                <source type='image/webp' srcset='../images/main/catalog/2.webp, ../images/main/catalog/2_2x.webp 2x'>
+                <img class="products__img" src="../images/main/catalog/2.jpg"
+                  srcset="../imageges/main/catalog/2_2x.jpg 2x" alt="" loading="lazy">
+              </picture>
+            </div>
+            <a class="products__name" href="#">
+              The Dandy chair
+            </a>
+            <span class="products__price">
+              £250
+            </span>
+          </li>
+          <li class="products__item">
+            <div class="products__ibg">
+              <picture>
+                <source type='image/avif' srcset='../images/main/catalog/2.avif, ../images/main/catalog/2_2x.avif 2x'>
+                <source type='image/webp' srcset='../images/main/catalog/2.webp, ../images/main/catalog/2_2x.webp 2x'>
+                <img class="products__img" src="../images/main/catalog/2.jpg"
+                  srcset="../imageges/main/catalog/2_2x.jpg 2x" alt="" loading="lazy">
+              </picture>
+            </div>
+            <a class="products__name" href="#">
+              The Dandy chair
+            </a>
+            <span class="products__price">
+              £250
+            </span>
+          </li>
+          <li class="products__item">
+            <div class="products__ibg">
+              <picture>
+                <source type='image/avif' srcset='../images/main/catalog/2.avif, ../images/main/catalog/2_2x.avif 2x'>
+                <source type='image/webp' srcset='../images/main/catalog/2.webp, ../images/main/catalog/2_2x.webp 2x'>
+                <img class="products__img" src="../images/main/catalog/2.jpg"
+                  srcset="../imageges/main/catalog/2_2x.jpg 2x" alt="" loading="lazy">
+              </picture>
+            </div>
+            <a class="products__name" href="#">
+              The Dandy chair
+            </a>
+            <span class="products__price">
+              £250
+            </span>
+          </li>
+          <li class="products__item">
+            <div class="products__ibg">
+              <picture>
+                <source type='image/avif' srcset='../images/main/catalog/3.avif, ../images/main/catalog/3_2x.avif 2x'>
+                <source type='image/webp' srcset='../images/main/catalog/3.webp, ../images/main/catalog/3_2x.webp 2x'>
+                <img class="products__img" src="../images/main/catalog/3.jpg"
+                  srcset="../imageges/main/catalog/3_2x.jpg 2x" alt="" loading="lazy">
+              </picture>
+            </div>
+            <a class="products__name" href="#">
+              The Dandy chair
+            </a>
+            <span class="products__price">
+              £250
+            </span>
+          </li>
+          <li class="products__item">
+            <div class="products__ibg">
+              <picture>
+                <source type='image/avif' srcset='../images/main/catalog/4.avif, ../images/main/catalog/4_2x.avif 2x'>
+                <source type='image/webp' srcset='../images/main/catalog/4.webp, ../images/main/catalog/4_2x.webp 2x'>
+                <img class="products__img" src="../images/main/catalog/4.jpg"
+                  srcset="../imageges/main/catalog/4_2x.jpg 2x" alt="" loading="lazy">
+              </picture>
+            </div>
+            <a class="products__name" href="#">
+              The Dandy chair
+            </a>
+            <span class="products__price">
+              £250
+            </span>
+          </li>
+          <li class="products__item">
+            <div class="products__ibg">
+              <picture>
+                <source type='image/avif' srcset='../images/main/catalog/5.avif, ../images/main/catalog/5_2x.avif 2x'>
+                <source type='image/webp' srcset='../images/main/catalog/5.webp, ../images/main/catalog/5_2x.webp 2x'>
+                <img class="products__img" src="../images/main/catalog/5.jpg"
+                  srcset="../imageges/main/catalog/5_2x.jpg 2x" alt="" loading="lazy">
+              </picture>
+            </div>
+            <a class="products__name" href="#">
+              The Dandy chair
+            </a>
+            <span class="products__price">
+              £250
+            </span>
+          </li>
+          <li class="products__item">
+            <div class="products__ibg">
+              <picture>
+                <source type='image/avif' srcset='../images/main/catalog/6.avif, ../images/main/catalog/6_2x.avif 2x'>
+                <source type='image/webp' srcset='../images/main/catalog/6.webp, ../images/main/catalog/6_2x.webp 2x'>
+                <img class="products__img" src="../images/main/catalog/6.jpg"
+                  srcset="../imageges/main/catalog/6_2x.jpg 2x" alt="" loading="lazy">
+              </picture>
+            </div>
+            <a class="products__name" href="#">
+              The Dandy chair
+            </a>
+            <span class="products__price">
+              £250
+            </span>
+          </li>
+          <li class="products__item">
+            <div class="products__ibg">
+              <picture>
+                <source type='image/avif' srcset='../images/main/catalog/7.avif, ../images/main/catalog/7_2x.avif 2x'>
+                <source type='image/webp' srcset='../images/main/catalog/7.webp, ../images/main/catalog/7_2x.webp 2x'>
+                <img class="products__img" src="../images/main/catalog/7.jpg"
+                  srcset="../imageges/main/catalog/7_2x.jpg 2x" alt="" loading="lazy">
+              </picture>
+            </div>
+            <a class="products__name" href="#">
+              The Dandy chair
+            </a>
+            <span class="products__price">
+              £250
+            </span>
+          </li>
+          <li class="products__item">
+            <div class="products__ibg">
+              <picture>
+                <source type='image/avif' srcset='../images/main/catalog/8.avif, ../images/main/catalog/8_2x.avif 2x'>
+                <source type='image/webp' srcset='../images/main/catalog/8.webp, ../images/main/catalog/8_2x.webp 2x'>
+                <img class="products__img" src="../images/main/catalog/2.jpg"
+                  srcset="../imageges/main/catalog/8_2x.jpg 2x" alt="" loading="lazy">
+              </picture>
+            </div>
+            <a class="products__name" href="#">
+              The Dandy chair
+            </a>
+            <span class="products__price">
+              £250
+            </span>
+          </li>
+          <li class="products__item">
+            <div class="products__ibg">
+              <picture>
+                <source type='image/avif' srcset='../images/main/catalog/9.avif, ../images/main/catalog/9_2x.avif 2x'>
+                <source type='image/webp' srcset='../images/main/catalog/9.webp, ../images/main/catalog/9_2x.webp 2x'>
+                <img class="products__img" src="../images/main/catalog/9.jpg"
+                  srcset="../imageges/main/catalog/9_2x.jpg 2x" alt="" loading="lazy">
+              </picture>
+            </div>
+            <a class="products__name" href="#">
+              The Dandy chair
+            </a>
+            <span class="products__price">
+              £250
+            </span>
+          </li>
+        </ul>
+        <button class="products__btn btn btn--light" type="button">
+          Load more
+        </button>
+      </div>
+    </div>
+  </section>
+</main>
+
+
+
+
+
+
+<!--=include footer.html -->

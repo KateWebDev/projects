@@ -1,0 +1,18 @@
+    <picture>
+                <source type="image/webp" srcset="picture1.webp">
+                <!--если поддерживает формат webp-->
+                <source media="(min-width: 960px)" srcset="picture1.jpg">
+                <!--при разрешении экрана больше 960-->
+                <source media="(min-width: 640px)" srcset="picture2.jpg">
+                <!--при разрешении экрана больше 640-->
+                <source media="(min-width: 640px)" srcset="picture2.jpg 1x, picture2.jpg 2x">
+                <!--при разрешении экрана больше 640 и не ретина (1х) или больше 640 и ретина (2х) -->
+                <img src="picture3.jpg" alt="">
+                <!--если условия выше не подошли то вставляй эту картинку-->
+                <img src="picture3.jpg" srcset="picture4.jpg 2x" alt="">
+                <!--тут показывается как вставлять 2 изображения. где одно из них с ретиной (в srcset с 2x)-->
+                <img src="400.png" srcset="400.png 400w, 800.png 800w, 1200.png 1200w"
+                    sizes="(min-width:600px) 50vw: 100vw" alt="">
+                <!--тут подставляет картинку в соответствии размера окна (ширина окна указывается с w (400w, 800w, 1200w))-->
+                <!--sizes как условие - если ширина экрана больше 600 то картинка займет 50vw иначе 100vw-->
+            </picture>

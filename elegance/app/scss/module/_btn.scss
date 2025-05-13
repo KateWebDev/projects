@@ -1,0 +1,52 @@
+.btn {
+  padding: 8px 33px;
+  background: $color-accent;
+  border-radius: $radius;
+  border: 1px solid transparent;
+
+  @include PlayfairDisplay400;
+  font-size: clampAd(18, 26);
+  text-align: center;
+  color: $white;
+
+  transition: all 0.3s linear;
+
+  @media (any-hover: hover) {
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+
+  // .btn--shadow
+  &--shadow {
+    box-shadow: $shadow;
+  }
+  // .btn--reverse
+  &--reverse {
+    background: $white;
+    border-color: $color-accent;
+
+    font-size: clampAd(12, 16);
+    color: $mainColor;
+    text-transform: uppercase;
+  }
+}
+
+.button {
+  padding: 10px 30px;
+  background: $color-accent;
+  border-radius: $radius;
+  border: 1px solid transparent;
+
+  text-align: center;
+  color: $white;
+  transition: all 0.3s linear;
+
+  @media (any-hover: hover) {
+    &:hover {
+      color: $color-accent;
+      border-color: currentColor;
+      background: $white;
+    }
+  }
+}

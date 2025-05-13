@@ -1,0 +1,20 @@
+@mixin inter400 {
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+}
+
+@mixin inter700 {
+  font-family: "Inter", sans-serif;
+  font-weight: 700;
+}
+
+@mixin play400 {
+  font-family: "Playfair Display", serif;
+  font-weight: 400;
+}
+
+/*
+@include inter400;
+@include inter700;
+@include play400;
+*/

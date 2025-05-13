@@ -1,0 +1,79 @@
+.subscription {
+  // .subscription__container
+  &__container {
+    background: $color-dark;
+    border-radius: 20px;
+    color: $white;
+  }
+  // .subscription__inner
+  &__inner {
+    padding: 50px clampAd(20, 50);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+  }
+  // .subscription__content
+  &__content {
+    max-width: clampAd(200, 570);
+    display: flex;
+    flex-direction: column;
+    row-gap: 30px;
+  }
+  // .subscription__title
+  &__title {
+    text-align: left;
+    line-height: 1.35;
+  }
+  // .subscription__form
+  &__form {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px clampAd(10, 30);
+  }
+  // .subscription__input
+  &__input {
+    max-width: 283px;
+    width: 100%;
+    padding: clampAd(10, 17) clampAd(12, 24);
+    border: 1px solid $white;
+    border-radius: 34px;
+    background: $color-dark;
+    font-size: clampAd(12, 16);
+    color: $white;
+
+    &::placeholder {
+      @include Poppins500;
+      font-size: clampAd(12, 16);
+      text-transform: capitalize;
+      color: $white;
+    }
+  }
+  // .subscription__btn
+  &__btn {
+  }
+  // .subscription__images
+  &__images {
+    max-width: clampAd(210, 286);
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  // .subscription__image
+  &__image {
+    width: clampAd(100, 138);
+    height: clampAd(100, 138);
+
+    &:nth-child(odd) {
+      margin: 20px 0 -20px;
+    }
+  }
+  // .subscription__img
+  &__img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 8px;
+  }
+}

@@ -1,0 +1,30 @@
+//Страница
+$widthReportMax: 1920;
+$widthReportMin: 375;
+$widthReportMinPx: $widthReportMin + px;
+
+// Контейнер
+$maxWidthContainer: 1768px;
+$containerPadding: 24px;
+
+//Фон
+$mainBackGround: #ffffff;
+
+//Шрифт
+$fontFamily: "Gilroy", sans-serif;
+$mainColor: #114455;
+$mainSize: 28;
+$size: $mainSize + px;
+$fontWeight: 500;
+$lineheight: calc(44 / $mainSize);
+
+// Доп цвета
+$white: #ffffff;
+$black: #000000;
+
+$color-accent: #4a2ad3;
+$color-dark: #1f1f1f;
+
+// Радиусы
+$radius-circle: 50%;
+$radius-small: 2px;

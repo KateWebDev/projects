@@ -1,0 +1,130 @@
+.footer {
+  padding: clamp(50px, calc(50px + (100 - 50) * ((100vw - 320px) / ($widthReportMax - $widthReportMin))), 100px) 0;
+  background: $color-dop;
+  color: $white;
+
+  // .footer__container
+  &__container {
+  }
+  // .footer__top
+  &__top {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    flex-wrap: wrap;
+    gap: 40px;
+    margin-bottom: clamp(50px, calc(50px + (85 - 50) * ((100vw - 320px) / ($widthReportMax - $widthReportMin))), 85px);
+  }
+  // .footer__content
+  &__content {
+    max-width: 300px;
+  }
+  // .footer__title
+  &__title {
+    margin-bottom: 50px;
+  }
+  // .footer__items
+  &__items {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    margin-bottom: 50px;
+  }
+  // .footer__item
+  &__item {
+  }
+  // .footer__name
+  &__name {
+    @include Roboto700;
+    font-size: 16px;
+    margin-bottom: 20px;
+  }
+  // .footer__actions
+  &__actions {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  // .footer__action
+  &__action {
+  }
+  // .footer__action-link
+  &__action-link {
+    font-size: 15px;
+    transition: all 0.3s linear;
+
+    @media (any-hover: hover) {
+      &:hover {
+        color: $color-accent;
+      }
+    }
+  }
+  // .footer__socials
+  &__socials {
+    display: flex;
+    gap: 20px;
+  }
+  // .footer__social
+  &__social {
+  }
+  // .footer__social-link
+  &__social-link {
+    transition: all 0.3s linear;
+
+    img {
+      max-width: 43px;
+      height: 30px;
+    }
+
+    @media (any-hover: hover) {
+      &:hover {
+        opacity: 0.8;
+      }
+    }
+  }
+  // .footer__box
+  &__box {
+    max-width: 460px;
+  }
+  // .footer__address
+  &__address {
+    font-size: 15px;
+    font-style: normal;
+    margin-bottom: 20px;
+  }
+  // .footer__map
+  &__map {
+    max-width: 454px;
+    height: 255px;
+
+    iframe {
+      width: 100%;
+      height: 100%;
+    }
+  }
+  // .footer__bottom
+  &__bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: clamp(10px, calc(10px + (30 - 10) * ((100vw - 320px) / ($widthReportMax - $widthReportMin))), 30px);
+  }
+  // .footer__text
+  &__text {
+  }
+  // .footer__logo
+  &__logo {
+    width: 50px;
+  }
+  // .footer__link
+  &__link {
+    transition: all 0.3s linear;
+
+    @media (any-hover: hover) {
+      &:hover {
+        color: $color-accent;
+      }
+    }
+  }
+}

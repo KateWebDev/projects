@@ -1,0 +1,55 @@
+.footer {
+  padding-bottom: clampAd(40, 75);
+
+  // .footer__container
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+  }
+  // .footer__logo
+  &__logo {
+  }
+  // .footer__menu
+  &__menu {
+  }
+  // .footer__menu-items
+  &__menu-items {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px clampAd(40, 80);
+  }
+  // .footer__menu-item
+  &__menu-item {
+  }
+  // .footer__menu-link
+  &__menu-link {
+    font-size: 15px;
+    transition: all 0.3s linear;
+
+    @media (any-hover: hover) {
+      &:hover {
+        color: $color-dop;
+      }
+    }
+  }
+  // .footer__menu-btn
+  &__menu-btn {
+  }
+  // .footer__actions
+  &__actions {
+    display: flex;
+    align-items: center;
+    gap: clampAd(10, 23);
+  }
+  // .footer__action
+  &__action {
+  }
+  // .footer__btn
+  &__btn {
+    padding: 13px clampAd(25, 43);
+  }
+}

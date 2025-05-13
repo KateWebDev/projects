@@ -1,0 +1,22 @@
+.next-project {
+  padding-bottom: 150px;
+
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  // .next-project__link
+  &__link {
+    font-size: 32px;
+    letter-spacing: -0.02em;
+    text-decoration: underline;
+    text-underline-offset: 10px;
+    transition: all 0.3s linear;
+
+    @media (any-hover: hover) {
+      &:hover {
+        text-underline-offset: 6px;
+        text-decoration: underline;
+      }
+    }
+  }
+}

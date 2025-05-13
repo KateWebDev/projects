@@ -1,0 +1,35 @@
+.strategy {
+  // .strategy__container
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    gap: 30px;
+    padding-bottom: clampAd(50, 150);
+    border-bottom: 1px solid rgba($mainColor, 0.1);
+  }
+  // .strategy__content
+  &__content {
+    max-width: 475px;
+  }
+  // .strategy__subtitle
+  &__subtitle {
+    margin-bottom: clampAd(20, 30);
+  }
+  // .strategy__title
+  &__title {
+    max-width: 400px;
+    margin-bottom: clampAd(25, 35);
+  }
+  // .strategy__text
+  &__text {
+    margin-bottom: clampAd(30, 40);
+  }
+  // .strategy__link
+  &__link {
+  }
+  // .strategy__blockquote
+  &__blockquote {
+    max-width: 475px;
+  }
+}

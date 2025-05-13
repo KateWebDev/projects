@@ -1,0 +1,103 @@
+.advantages {
+  padding-top: clampAd(30, 50);
+
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    width: 466px;
+    height: 466px;
+    background: rgba(255, 233, 120, 0.33);
+    filter: blur(184px);
+  }
+
+  // .advantages__container
+  &__container {
+    padding-top: clampAd(28, 48);
+    padding-bottom: clampAd(20, 40);
+
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 30px clampAd(30, 100);
+    background: $white;
+    border-radius: $radius-medium;
+    box-shadow: 23px 19px 138px -45px rgba(12, 169, 65, 0.13);
+
+    position: relative;
+    z-index: -2;
+
+    &::before {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      transform: translateX(-50%);
+
+      width: clampAd(130, 192);
+      height: clampAd(200, 288);
+
+      background: image-set(
+          url("../images/main/advantages/flower.avif") type("image/avif"),
+          url("../images/main/advantages/flower@2x.avif") 2x type("image/avif"),
+          url("../images/main/advantages/flower.webp") type("image/webp"),
+          url("../images/main/advantages/flower@2x.webp") 2x type("image/webp"),
+          url("../images/main/advantages/flower.jpg"),
+          url("../images/main/advantages/flower@2x.jpg") 2x
+        )
+        bottom center/cover no-repeat;
+    }
+  }
+  // .advantages__content
+  &__content {
+    max-width: clampAd(290, 310);
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    row-gap: 10px;
+  }
+  // .advantages__title
+  &__title {
+    font-size: 30px;
+  }
+  // .advantages__text
+  &__text {
+  }
+  // .advantages__items
+  &__items {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: clampAd(20, 40);
+  }
+  // .advantages__item
+  &__item {
+    max-width: 160px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    row-gap: clampAd(10, 15);
+  }
+  // .advantages__num
+  &__num {
+    display: block;
+    font-weight: 800;
+    font-size: clampAd(30, 60);
+    line-height: 1;
+    color: $color-accent;
+  }
+  // .advantages__description
+  &__description {
+    font-weight: 600;
+    line-height: 1.2;
+    text-transform: capitalize;
+  }
+}

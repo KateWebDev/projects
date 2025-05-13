@@ -1,0 +1,70 @@
+.charging {
+  // .charging__container
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 30px clampAd(20, 50);
+  }
+  // .charging__content
+  &__content {
+    max-width: 300px;
+    width: 100%;
+  }
+  // .charging__title
+  &__title {
+    max-width: 260px;
+    margin-bottom: clampAd(18, 27);
+  }
+  // .charging__text
+  &__text {
+    max-width: 80%;
+    font-size: clampAd(16, 21);
+    margin-bottom: clampAd(20, 36);
+  }
+  // .charging__list
+  &__list {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    row-gap: clampAd(10, 16);
+  }
+  // .charging__point
+  &__point {
+    padding: clampAd(5, 7) clampAd(10, 16);
+    background: $color-bg;
+    border-radius: $radius-big;
+
+    display: flex;
+    align-items: center;
+    column-gap: clampAd(8, 16);
+
+    font-size: clampAd(12, 16);
+    line-height: 1.35;
+    color: $color-text;
+
+    &::before {
+      content: "";
+      width: clampAd(10, 16);
+      height: clampAd(10, 16);
+      background: url(../../images/icons/check.svg) center/contain no-repeat;
+    }
+  }
+  // .charging__items
+  &__items {
+    max-width: clampAd(500, 685);
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(clampAd(180, 334), 1fr));
+    grid-auto-flow: dense;
+    gap: 20px 16px;
+  }
+  // .charging__item
+  &__item {
+  }
+  // .charging__card
+  &__card {
+    .card__btn {
+      padding: clampAd(15, 20) clampAd(30, 54);
+    }
+  }
+}

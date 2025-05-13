@@ -1,0 +1,27 @@
+@function clampAd($min, $max) {
+  $minPx: $min + px;
+  $maxPx: $max + px;
+
+  $result: clamp(
+    $minPx,
+    calc($minPx + ($max - $min) * ((100vw - 320px) / ($widthReportMax - $widthReportMin))),
+    $maxPx
+  );
+
+  @return $result;
+}
+
+@mixin SpaceGrotesk400 {
+  font-family: "Space Grotesk", sans-serif;
+  font-weight: 400;
+}
+
+@mixin SpaceGrotesk500 {
+  font-family: "Space Grotesk", sans-serif;
+  font-weight: 500;
+}
+
+/*
+@include SpaceGrotesk400;
+@include SpaceGrotesk500;
+*/

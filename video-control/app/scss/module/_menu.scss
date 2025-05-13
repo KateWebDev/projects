@@ -1,0 +1,31 @@
+.menu {
+  // .menu__items
+  &__items {
+    display: flex;
+    gap: 20px 15px;
+  }
+  // .menu__item
+  &__item {
+    border-radius: $radius;
+    padding: 5px 15px;
+    background: $color-dop;
+    text-align: center;
+  }
+  // .menu__link
+  &__link {
+    @include Inter500;
+    color: #383838;
+    white-space: nowrap;
+    transition: all 0.3s linear;
+
+    @media (any-hover: hover) {
+      &:hover {
+        text-shadow: 0 0 1px currentColor;
+      }
+    }
+
+    &--active {
+      cursor: default;
+    }
+  }
+}

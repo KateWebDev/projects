@@ -1,0 +1,25 @@
+.about {
+  padding: clamp(60px, calc(60px + (120 - 60) * ((100vw - 320px) / ($widthReportMax - $widthReportMin))), 120px) 0;
+
+  // .about__container
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 30px;
+  }
+  // .about__title
+  &__title {
+    flex: 0 1 clamp(200px, calc(200px + (440 - 200) * ((100vw - 768px) / ($widthReportMax - 768))), 440px);
+  }
+  // .about__content
+  &__content {
+    flex: 0 1 clamp(300px, calc(300px + (540 - 300) * ((100vw - 320px) / ($widthReportMax - $widthReportMin))), 540px);
+    font-weight: 700;
+    p {
+      &:not(:last-child) {
+        margin-bottom: 20px;
+      }
+    }
+  }
+}

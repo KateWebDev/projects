@@ -1,0 +1,134 @@
+@import "components/_mixin";
+@import "components/_resetStyle";
+@import "components/_fonts";
+@import "../../node_modules/slick-carousel/slick/slick";
+@import "../../node_modules/@fancyapps/fancybox/dist/jquery.fancybox";
+//@import "../../node_modules/animate.css/animate";
+
+//Страница
+$widthReportMax: 1600;
+$widthReportMin: 320;
+$maxWidthContainer: 925px;
+$containerPadding: 15px;
+
+//Шрифт
+$fontFamily: "Roboto Condensed", sans-serif;
+$mainColor: #040404; //основной цвет шрифта
+$mainBackGround: #ffffff; //основной цвет фона
+$white: #ffffff;
+$black: #000000;
+$mainSize: 14;
+$size: $mainSize + px;
+$lineheight: calc(18 / $mainSize);
+$fontWeight: 400;
+
+$color-accent: #9f6b08;
+$color-dop: #363636;
+
+//Контейнер
+[class*="__container"] {
+  max-width: $maxWidthContainer;
+  margin: 0 auto;
+  padding: 0 $containerPadding;
+}
+
+[class*="__cont-left"] {
+  padding-left: calc((100% - $maxWidthContainer) / 2 + $containerPadding);
+}
+
+[class*="__cont-right"] {
+  padding-right: calc((100% - $maxWidthContainer) / 2 + $containerPadding);
+}
+
+//Бургер меню
+[class*="__burger"] {
+  display: none;
+  flex-direction: column;
+  row-gap: 4px;
+  cursor: pointer;
+
+  span {
+    width: 24px;
+    height: 3px;
+    border-radius: 5px;
+    background: #ffffff;
+    transition: all 0.3s linear;
+  }
+}
+
+/*Для контейнера картинок в карточках - технический класс*/
+[class*="__ibg"] {
+  position: relative;
+  /*Для самих картинок в карточках технический класс*/
+  img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+body {
+  font-family: $fontFamily;
+  background-color: $mainBackGround;
+  color: $mainColor;
+  font-size: clamp(
+    12px,
+    calc(12px + ($mainSize - 12) * ((100vw - 320px) / ($widthReportMax - $widthReportMin))),
+    $size
+  );
+  line-height: $lineheight;
+  font-weight: $fontWeight;
+
+  &.lock {
+    overflow: hidden;
+  }
+}
+
+.hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.main {
+  flex: 1 1 auto;
+
+  &__section {
+    margin-bottom: clamp(
+      50px,
+      calc(50px + (100 - 50) * ((100vw - 320px) / ($widthReportMax - $widthReportMin))),
+      100px
+    );
+  }
+}
+
+.title {
+  @include Roboto300;
+  font-size: clamp(20px, calc(20px + (32 - 20) * ((100vw - 320px) / ($widthReportMax - $widthReportMin))), 32px);
+  text-transform: uppercase;
+}
+
+@import "module/_logo";
+@import "module/_menu";
+@import "module/_header";
+@import "module/_intro";
+@import "module/_about";
+@import "module/_comands";
+@import "module/_calendar";
+@import "module/_track";
+@import "module/_car";
+@import "module/_promo";
+@import "module/_blog";
+@import "module/_reviews";
+@import "module/_footer";
+
+@import "components/_adaptive";

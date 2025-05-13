@@ -1,0 +1,35 @@
+.btn {
+  padding: 16px clampAd(22, 48);
+  border-radius: 4px;
+  background: $color-background-btn;
+  border: 1px solid transparent;
+
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 1.4;
+  text-align: center;
+  color: $white;
+  white-space: nowrap;
+  transition: all 0.3s linear;
+
+  // .btn--icon
+  &--icon {
+    display: inline-flex;
+    align-items: center;
+    column-gap: 14px;
+
+    &::before {
+      content: "";
+      width: 23px;
+      height: 19px;
+      background: url(../../images/icons/mail.svg) center/cover no-repeat;
+    }
+  }
+
+  @media (any-hover: hover) {
+    &:hover {
+      background: $mainBackGround;
+      border-color: currentColor;
+    }
+  }
+}

@@ -1,0 +1,82 @@
+.accardeon {
+  // .accardeon__items
+  &__items {
+    display: flex;
+    flex-direction: column;
+    row-gap: 50px;
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 100%;
+      left: 30%;
+      transform: translateY(-50%);
+      width: clamp(33px, calc(33px + (65 - 33) * ((100vw - 320px) / ($widthReportMax - $widthReportMin))), 65px);
+      height: clamp(60px, calc(60px + (120 - 60) * ((100vw - 320px) / ($widthReportMax - $widthReportMin))), 120px);
+      background: image-set(
+          url("../images/main/description/1.avif") type("image/avif"),
+          url("../images/main/description/1.webp") type("image/webp"),
+          url("../images/main/description/1.jpg")
+        )
+        center/cover no-repeat;
+    }
+  }
+  // .accardeon__item
+  &__item {
+    border-bottom: 1px solid $black;
+    padding-bottom: 20px;
+    min-height: 70px;
+  }
+  // .accardeon__button
+  &__button {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 387px);
+    gap: clamp(10px, calc(10px + (20 - 10) * ((100vw - 320px) / ($widthReportMax - $widthReportMin))), 20px);
+    text-align: left;
+    color: $black;
+    position: relative;
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: clamp(10px, calc(10px + (90 - 10) * ((100vw - 320px) / ($widthReportMax - $widthReportMin))), 90px);
+      width: clamp(6px, calc(6px + (16 - 6) * ((100vw - 320px) / ($widthReportMax - $widthReportMin))), 16px);
+      height: clamp(20px, calc(20px + (50 - 20) * ((100vw - 320px) / ($widthReportMax - $widthReportMin))), 50px);
+      background: url(../../images/arrowDown.svg) center/cover no-repeat;
+      transition: all 0.3s linear;
+    }
+
+    &--active {
+      &::after {
+        top: 5px;
+        transform: rotate(180deg);
+      }
+    }
+  }
+  // .accardeon__name
+  &__name {
+    font-size: clamp(12px, calc(12px + (24 - 12) * ((100vw - 320px) / ($widthReportMax - $widthReportMin))), 24px);
+    text-transform: uppercase;
+  }
+  // .accardeon__info
+  &__info {
+  }
+  // .accardeon__text
+  &__text {
+    display: none;
+    max-width: 795px;
+    margin-top: 30px;
+    p {
+      &:not(:last-child) {
+        margin-bottom: 20px;
+      }
+    }
+
+    &--active {
+      display: block;
+    }
+  }
+}

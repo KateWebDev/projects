@@ -1,0 +1,69 @@
+.product {
+  // .product__container
+  &__container {
+    padding-bottom: clampAd(40, 80);
+    border-bottom: 1px solid $color-dop;
+  }
+  // .product__title
+  &__title {
+    margin-bottom: 40px;
+  }
+  // .product__list
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 256px));
+    grid-auto-rows: clampAd(150, 256);
+    gap: clampAd(20, 32);
+    grid-auto-flow: dense;
+    color: $white;
+  }
+  // .product__point
+  &__point {
+    // .product__point--big
+    &--big {
+      grid-column: span 2;
+      grid-row: span 2;
+
+      .product__card {
+        padding: 16px 59px 29px 19px;
+      }
+    }
+  }
+  // .product__card
+  &__card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    row-gap: 15px;
+    width: 100%;
+    height: 100%;
+    padding: 16px 21px 19px 17px;
+    transition: all 0.3s linear;
+
+    @media (any-hover: hover) {
+      &:hover {
+        opacity: 0.8;
+      }
+    }
+  }
+
+  // .product__name
+  &__name {
+    @include Roboto500;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+  }
+  // .product__price
+  &__price {
+    @include Roboto700;
+    font-size: clampAd(14, 16);
+  }
+  // .product__county
+  &__county {
+  }
+  // .product__live
+  &__live {
+    margin-bottom: auto;
+  }
+}

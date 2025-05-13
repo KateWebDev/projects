@@ -1,0 +1,73 @@
+.btn {
+  padding: clampAd(6, 13) clampAd(13, 25);
+  border: 1px solid $white;
+  background: $white;
+  border-radius: 8px;
+  font-size: 16px;
+  text-align: center;
+  color: $color-dop;
+  text-transform: capitalize;
+  white-space: nowrap;
+  transition: all 0.3s linear;
+
+  @media (any-hover: hover) {
+    &:hover {
+      background: transparent;
+      border-color: currentColor;
+      color: $white;
+    }
+  }
+
+  &--accent {
+    border-color: $color-accent;
+    background: $color-accent;
+    color: $white;
+
+    @media (any-hover: hover) {
+      &:hover {
+        color: $color-accent;
+      }
+    }
+  }
+  &--dark {
+    border-color: $color-dop;
+    background: $color-dop;
+    color: $white;
+
+    @media (any-hover: hover) {
+      &:hover {
+        color: $color-dop;
+      }
+    }
+  }
+}
+
+.link {
+  font-size: 16px;
+  color: $color-dop;
+  padding-right: 15px;
+  position: relative;
+  transition: all 0.3s linear;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    width: 8px;
+    height: 12px;
+    background: url(../../images/icons/arrow_right.svg) center/cover no-repeat;
+    transition: all 0.3s linear;
+  }
+
+  @media (any-hover: hover) {
+    &:hover {
+      text-shadow: 0 0 1px currentColor;
+
+      &::after {
+        opacity: 0.8;
+      }
+    }
+  }
+}

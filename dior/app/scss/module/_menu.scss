@@ -1,0 +1,30 @@
+.menu {
+  // .menu__items
+  &__items {
+  }
+  // .menu__item
+  &__item {
+    &.action {
+      display: none;
+    }
+    &:not(:last-child) {
+      margin-bottom: 10px;
+    }
+  }
+  // .menu__link
+  &__link {
+    font-size: 12px;
+    line-height: 1;
+    white-space: nowrap;
+
+    @media (any-hover: hover) {
+      &:hover {
+        color: $color-accent;
+      }
+    }
+    &--active {
+      cursor: default;
+      color: $color-accent;
+    }
+  }
+}

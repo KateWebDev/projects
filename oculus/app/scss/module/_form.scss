@@ -1,0 +1,44 @@
+.form {
+  position: relative;
+  // .form__input
+  &__input {
+    width: 100%;
+    height: 55px;
+    padding-right: 70px;
+    border: none;
+    border-bottom: 1px solid #cacad6;
+    font-size: 13px;
+    color: $color-dop;
+
+    &::placeholder {
+      @include Helvetica400;
+      font-size: 13px;
+      color: #cacad6;
+    }
+
+    &:user-invalid {
+      border-bottom: 1px solid red;
+    }
+  }
+  // .form__btn
+  &__btn {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 50px;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    background: #cacad6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    @include Helvetica700;
+    transition: all 0.3s linear;
+
+    @media (any-hover: hover) {
+      &:hover {
+        opacity: 0.8;
+      }
+    }
+  }
+}

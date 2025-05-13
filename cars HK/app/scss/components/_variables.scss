@@ -1,0 +1,31 @@
+//Страница
+$widthReportMax: 1440;
+$widthReportMin: 320;
+$widthReportMinPx: $widthReportMin + px;
+
+// Контейнер
+$maxWidthContainer: 1230px;
+$containerPadding: 15px;
+
+//Фон
+$mainBackGround: #000000;
+
+//Шрифт
+$fontFamily: "Be Vietnam", sans-serif;
+$mainColor: rgba(#ffffff, 0.8);
+$mainSize: 16;
+$size: $mainSize + px;
+$fontWeight: 400;
+$lineheight: calc(28 / $mainSize);
+
+// Доп цвета
+$white: #ffffff;
+$black: #000000;
+
+$color-accent: #ee8313;
+$color-dop: #ffcc2c;
+
+$color-bg-dop: #1f1905;
+$color-bg-accent: #131313;
+// Радиусы
+$radius-circle: 50%;

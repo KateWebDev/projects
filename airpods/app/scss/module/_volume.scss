@@ -1,0 +1,64 @@
+.volume {
+  background: image-set(
+      url("../images/main/man.avif") type("image/avif"),
+      url("../images/main/man.webp") type("image/webp"),
+      url("../images/main/man.jpg")
+    )
+    top center/cover no-repeat;
+
+  color: $mainBackGround;
+  position: relative;
+
+  &:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -200px;
+    width: 100%;
+    height: 130vh;
+    background: image-set(
+        url("../images/main/bg.avif") type("image/avif"),
+        url("../images/main/bg.webp") type("image/webp"),
+        url("../images/main/bg.png")
+      )
+      bottom center/cover no-repeat;
+  }
+
+  // .volume__container
+  &__container {
+    padding-bottom: 30vh;
+    min-height: 200vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    position: relative;
+    z-index: 2;
+  }
+  // .volume__text
+  &__text {
+    text-align: center;
+    max-width: 295px;
+    margin: 0 auto 20px;
+  }
+  // .volume__btn
+  &__btn {
+    margin-top: clamp(0px, calc(0px + (40 - 0) * ((100vw - 320px) / ($widthReportMax - $widthReportMin))), 40px);
+    display: inline-block;
+    padding: 15px 58px;
+    border-radius: 30px;
+    background: $mainBackGround;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: $mainColor;
+    transition: all 0.3s linear;
+
+    @media (any-hover: hover) and (min-width: 992px) {
+      &:hover {
+        color: $mainBackGround;
+        background: $mainColor;
+      }
+    }
+  }
+}

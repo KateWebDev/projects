@@ -1,0 +1,25 @@
+.map {
+  padding-bottom: clamp(80px, calc(80px + (180 - 80) * ((100vw - 414px) / ($widthReportMax - $widthReportMin))), 180px);
+
+  // .map__container
+  &__container {
+    position: relative;
+  }
+  // .map__number
+  &__number {
+    right: 88%;
+  }
+  // .map__title
+  &__title {
+    margin-bottom: clamp(
+      50px,
+      calc(50px + (100 - 50) * ((100vw - 414px) / ($widthReportMax - $widthReportMin))),
+      100px
+    );
+  }
+
+  iframe {
+    width: 100%;
+    height: clamp(220px, calc(220px + (355 - 220) * ((100vw - 414px) / ($widthReportMax - $widthReportMin))), 355px);
+  }
+}

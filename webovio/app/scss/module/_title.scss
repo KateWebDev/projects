@@ -1,0 +1,13 @@
+.subtitle {
+  font-size: 14px;
+}
+
+.title {
+  font-weight: 700;
+  font-size: clampAd(20, 36);
+  color: $color-title;
+
+  span {
+    background: rgba($color-accent, 0.1);
+  }
+}

@@ -1,0 +1,22 @@
+.other {
+  // .other__container
+  &__container {
+  }
+  // .other__title
+  &__title {
+    @include Poppins700;
+    font-size: clampAd(40, 100);
+    color: $color-light;
+    text-transform: capitalize;
+    margin-bottom: 14px;
+  }
+  // .other__text
+  &__text {
+    max-width: 840px;
+    margin-bottom: clampAd(20, 40);
+  }
+  // .other__form
+  &__form {
+    max-width: 570px;
+  }
+}

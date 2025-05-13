@@ -1,0 +1,136 @@
+.recomendation {
+  padding: clamp(60px, calc(60px + (120 - 60) * ((100vw - 320px) / ($widthReportMax - $widthReportMin))), 120px) 0;
+  // .recomendation__container
+  &__container {
+  }
+  // .recomendation__content
+  &__content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    flex-wrap: wrap;
+    gap: 30px;
+    margin-bottom: clamp(20px, calc(20px + (48 - 20) * ((100vw - 320px) / ($widthReportMax - $widthReportMin))), 48px);
+  }
+  // .recomendation__box
+  &__box {
+    max-width: 492px;
+  }
+  // .recomendation__type
+  &__type {
+    margin-bottom: 16px;
+  }
+  // .recomendation__title
+  &__title {
+    margin-bottom: 16px;
+  }
+  // .recomendation__text
+  &__text {
+  }
+  // .recomendation__link
+  &__link {
+    padding-right: 52px;
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      right: 24px;
+      transform: translateY(-50%);
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      background: url(../images/main/recomendation/arrow.svg) center/cover no-repeat;
+      transition: all 0.3s linear;
+    }
+
+    @media (any-hover: hover) and (min-width: 992px) {
+      &:hover {
+        &::before {
+          background: url(../images/main/recomendation/arrow-white.svg) center/cover no-repeat;
+        }
+      }
+    }
+  }
+  // .recomendation__items
+  &__items {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px clamp(10px, calc(10px + (34 - 10) * ((100vw - 320px) / ($widthReportMax - $widthReportMin))), 34px);
+  }
+  // .recomendation__item
+  &__item {
+    max-width: clamp(276px, calc(276px + (376 - 276) * ((100vw - 320px) / ($widthReportMax - $widthReportMin))), 376px);
+    width: 100%;
+    padding: clamp(10px, calc(10px + (16 - 10) * ((100vw - 320px) / ($widthReportMax - $widthReportMin))), 16px);
+    border: 1px solid #dedcda;
+
+    background: $mainBackGround;
+  }
+  // .recomendation__ibg
+  &__ibg {
+    padding: 0px 0px 69% 0px;
+    margin-bottom: 16px;
+  }
+  // .recomendation__img
+  &__img {
+  }
+  // .recomendation__name
+  &__name {
+    font-size: clamp(18px, calc(18px + (24 - 18) * ((100vw - 320px) / ($widthReportMax - $widthReportMin))), 24px);
+    font-weight: 600;
+    line-height: 1.33;
+    letter-spacing: 0.06px;
+    color: $color-title;
+    margin-bottom: 8px;
+  }
+  // .recomendation__about
+  &__about {
+    line-height: 1.6;
+    letter-spacing: 0.04px;
+    color: $color-other;
+    margin-bottom: 20px;
+  }
+  // .recomendation__info
+  &__info {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px 40px;
+    margin-bottom: 24px;
+  }
+  // .recomendation__price
+  &__price {
+    font-size: clamp(18px, calc(18px + (24 - 18) * ((100vw - 320px) / ($widthReportMax - $widthReportMin))), 24px);
+    font-weight: 600;
+    line-height: 1.33;
+    letter-spacing: 0.06px;
+    color: $color-text-accent;
+  }
+  // .recomendation__square
+  &__square {
+    padding: 4px 8px;
+    background: $color-bg-accent;
+    line-height: 1.5;
+    letter-spacing: 0.04px;
+    color: $color-title;
+
+    span {
+      color: $color-other;
+    }
+  }
+  // .recomendation__btn
+  &__btn {
+    width: 100%;
+    text-align: center;
+    border: 1px solid $color-text-accent;
+    transition: all 0.3s linear;
+
+    @media (any-hover: hover) and (min-width: 992px) {
+      &:hover {
+        box-shadow: 0px 0px 20px 0px rgba(105, 185, 157, 0.58);
+      }
+    }
+  }
+}

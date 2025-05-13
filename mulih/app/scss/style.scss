@@ -1,0 +1,169 @@
+@import "components/_resetStyle";
+@import "../../node_modules/rateyo/src/jquery.rateyo";
+
+//Страница
+$widthReportMax: 1448;
+$widthReportMin: 320;
+$maxWidthContainer: 1226px; //максимальная ширина контейнера + padding left + padding right
+$containerPadding: 15px; //внутринние отступы в контейнере
+
+//Шрифт
+$fontFamily: "Poppins", sans-serif;
+$mainColor: #73788c; //основной цвет шрифта
+$mainBackGround: #fefeff; //основной цвет фона
+$mainSize: 16;
+$size: $mainSize + px;
+$lineheight: calc(24 / $mainSize);
+$fontWeight: 400;
+
+$color-text-accent: #69b99d;
+$color-title: #1f2744;
+$color-bg-accent: #f5f5f5;
+$color-subtitle: #054457;
+$color-other: #a6a6a6;
+$color-menu: #8e8e8e;
+
+//Контейнер
+[class*="__container"] {
+  max-width: $maxWidthContainer;
+  margin: 0 auto;
+  padding: 0 $containerPadding;
+}
+
+//Бургер меню
+[class*="__burger"] {
+  display: none;
+  flex-direction: column;
+  row-gap: 4px;
+  cursor: pointer;
+
+  span {
+    width: 24px;
+    height: 3px;
+    border-radius: 5px;
+    background: $color-subtitle;
+    transition: all 0.3s linear;
+  }
+}
+
+/*Для контейнера картинок в карточках - технический класс*/
+[class*="__ibg"] {
+  position: relative;
+  /*Для самих картинок в карточках технический класс*/
+  img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+body {
+  font-family: $fontFamily;
+  background-color: $mainBackGround;
+  color: $mainColor;
+  font-size: clamp(
+    12px,
+    calc(12px + ($mainSize - 12) * ((100vw - 320px) / ($widthReportMax - $widthReportMin))),
+    $size
+  );
+  line-height: $lineheight;
+  font-weight: $fontWeight;
+
+  &.lock {
+    overflow: hidden;
+  }
+}
+
+.hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.main {
+  flex: 1 1 auto;
+}
+
+.logo {
+  display: inline-block;
+  max-width: 115px;
+  max-height: 40px;
+  // .logo__img
+  &__img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+}
+
+.btn {
+  display: inline-block;
+  padding: 16px clamp(24px, calc(24px + (48 - 24) * ((100vw - 320px) / ($widthReportMax - $widthReportMin))), 48px);
+  background: $color-text-accent;
+  color: #ffffff;
+  font-weight: 500;
+  line-height: 1.5;
+  letter-spacing: 0.04px;
+  transition: all 0.3s linear;
+
+  @media (any-hover: hover) and (min-width: 992px) {
+    &:hover {
+      background: #ffffff;
+      color: $color-text-accent;
+    }
+  }
+
+  // .btn--reverse
+  &--reverse {
+    background: #ffffff;
+    color: $color-text-accent;
+
+    @media (any-hover: hover) and (min-width: 992px) {
+      &:hover {
+        background: $color-text-accent;
+        color: #ffffff;
+      }
+    }
+  }
+}
+
+.type {
+  display: inline-block;
+  padding: 12px clamp(12px, calc(12px + (24 - 21) * ((100vw - 320px) / ($widthReportMax - $widthReportMin))), 24px);
+  background: #f8f9fe;
+  color: $color-text-accent;
+  font-size: clamp(14px, calc(14px + (18 - 14) * ((100vw - 320px) / ($widthReportMax - $widthReportMin))), 18px);
+  font-weight: 500;
+  line-height: 1.44;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+.title {
+  color: $color-subtitle;
+  font-family: "Rubik", sans-serif;
+  font-size: clamp(20px, calc(20px + (48 - 20) * ((100vw - 320px) / ($widthReportMax - $widthReportMin))), 48px);
+  font-weight: 600;
+  line-height: 1.16;
+  letter-spacing: 0.5px;
+}
+
+@import "module/_header";
+@import "module/_menu";
+@import "module/_intro";
+@import "module/_tabs";
+@import "module/_search";
+@import "module/_recomendation";
+@import "module/_advantages";
+@import "module/_about";
+@import "module/_reviews";
+@import "module/_footer";
+@import "components/_adaptive";

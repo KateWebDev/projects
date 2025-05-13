@@ -1,0 +1,28 @@
+.btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  border: 1px solid currentColor;
+  padding: 14px;
+
+  @include corporate700;
+  font-size: clampAd(14, 18);
+  text-transform: uppercase;
+  color: $color-accent;
+  transition: all 0.3s linear;
+
+  svg {
+    fill: $color-accent;
+    transition: all 0.3s linear;
+  }
+
+  @media (any-hover: hover) {
+    &:hover {
+      color: $color-hover;
+      svg {
+        fill: $color-hover;
+      }
+    }
+  }
+}

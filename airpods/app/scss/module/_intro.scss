@@ -1,0 +1,72 @@
+.intro {
+  padding: 50px 0 50px;
+  position: relative;
+
+  // .intro__container
+  &__container {
+    min-height: calc(100vh - 100px);
+    position: relative;
+    padding-top: clamp(
+      100px,
+      calc(100px + (165 - 100) * ((100vw - 320px) / ($widthReportMax - $widthReportMin))),
+      165px
+    );
+  }
+  // .intro__title
+  &__title {
+    font-size: clamp(50px, calc(50px + (210 - 50) * ((100vw - 320px) / ($widthReportMax - $widthReportMin))), 210px);
+    font-weight: 700;
+    line-height: 1.2;
+    color: $mainColor;
+    position: absolute;
+    top: clamp(130px, calc(130px + (280 - 130) * ((100vw - 320px) / ($widthReportMax - $widthReportMin))), 280px);
+    left: 0;
+
+    span {
+      position: relative;
+    }
+
+    // .intro__title--air
+    &--air {
+      z-index: 1;
+    }
+    // .intro__title--pod
+    &--pod {
+    }
+    // .intro__title--s
+    &--s {
+      top: clamp(10px, calc(10px + (30 - 10) * ((100vw - 320px) / ($widthReportMax - $widthReportMin))), 30px);
+      text-transform: uppercase;
+      z-index: 1;
+    }
+    // .intro__title--m
+    &--m {
+      top: clamp(70px, calc(70px + (280 - 70) * ((100vw - 320px) / ($widthReportMax - $widthReportMin))), 280px);
+      right: clamp(17px, calc(17px + (40 - 17) * ((100vw - 320px) / ($widthReportMax - $widthReportMin))), 40px);
+      text-transform: uppercase;
+      z-index: 1;
+    }
+    // .intro__title--ax
+    &--ax {
+      text-transform: uppercase;
+      top: clamp(100px, calc(100px + (370 - 100) * ((100vw - 320px) / ($widthReportMax - $widthReportMin))), 370px);
+      right: clamp(30px, calc(30px + (120 - 30) * ((100vw - 320px) / ($widthReportMax - $widthReportMin))), 120px);
+    }
+  }
+  // .intro__images
+  &__images {
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    width: clamp(220px, calc(220px + (800 - 220) * ((100vw - 320px) / ($widthReportMax - $widthReportMin))), 800px);
+    height: clamp(175px, calc(175px + (755 - 175) * ((100vw - 320px) / ($widthReportMax - $widthReportMin))), 755px);
+  }
+  // .intro__img
+  &__img {
+    &:not(.hidden) {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+}

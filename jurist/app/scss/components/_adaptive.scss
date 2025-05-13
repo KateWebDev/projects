@@ -1,0 +1,123 @@
+@media (max-width: 1140px) {
+  .education__item--big-row {
+    display: none;
+  }
+}
+
+@media (max-width: 991.98px) {
+  .header__burger {
+    display: flex;
+  }
+
+  .header .menu__items {
+    position: fixed;
+    z-index: 3;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+    align-items: center;
+    padding: 120px 0;
+    background: #cecece;
+    transition: all 0.4s linear;
+    transform: translateY(-100%);
+    overflow: auto;
+    overflow-x: hidden;
+  }
+
+  .header .menu__items.menu__items--active {
+    transform: translateY(0);
+  }
+
+  .header .menu__item {
+    &:not(:last-child) {
+      margin-bottom: 30px;
+    }
+  }
+
+  .header .menu__link {
+    font-size: 24px;
+  }
+
+  .header .header__btn {
+    display: none;
+  }
+
+  .contacts__map {
+    width: 100%;
+    position: static !important;
+    margin-bottom: 30px;
+    transform: translateY(0);
+  }
+
+  .contacts__content {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 860.98px) {
+  .work__items {
+    max-width: clamp(300px, calc(300px + (500 - 300) * ((860px - 320px) / (860 - $widthReportMin))), 500px);
+  }
+  .work__item {
+    &:nth-child(2n) {
+      text-align: right;
+      padding-left: 0;
+      padding-right: clamp(
+        42px,
+        calc(42px + (96 - 42) * ((100vw - 320px) / ($widthReportMax - $widthReportMin))),
+        96px
+      );
+      left: 0;
+
+      &::before {
+        left: auto;
+        right: 0;
+      }
+    }
+
+    &:not(:last-child) {
+      &:nth-child(2n) {
+        &::after {
+          left: auto;
+          right: clamp(16px, calc(16px + (32 - 16) * ((100vw - 320px) / ($widthReportMax - $widthReportMin))), 32px);
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 830.98px) {
+  .call__form {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .education__items {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+@media (max-width: 630.98px) {
+  .about__title {
+    flex: 0 0 100%;
+  }
+
+  .about__content {
+    flex: 0 0 100%;
+  }
+}
+
+@media (max-width: 575.98px) {
+}
+
+@media (max-width: 479.98px) {
+  .header__link {
+    display: none;
+  }
+}
+
+@media (max-width: 349.98px) {
+}

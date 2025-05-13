@@ -1,0 +1,48 @@
+.btn {
+  min-width: clampAd(100, 172);
+  padding: clampAd(10, 18);
+
+  border-radius: $radius-big;
+  background: $color-accent;
+  border: 1px solid transparent;
+
+  font-weight: 700;
+  line-height: 1.5;
+  text-align: center;
+  color: $white;
+  white-space: nowrap;
+
+  transition: all 0.3s linear;
+
+  @media (any-hover: hover) {
+    &:hover {
+      background: $white;
+      color: $color-accent;
+      border-color: currentColor;
+    }
+  }
+
+  // .btn--color
+  &--color {
+    background: $white;
+    color: $mainColor;
+  }
+  // .btn--icon
+  &--icon {
+    display: inline-flex;
+    align-items: center;
+    column-gap: clampAd(6, 8);
+
+    &::before {
+      content: "";
+      width: clampAd(8, 12);
+      height: clampAd(8, 12);
+      background: url(../../images/icons/play.svg) center/cover no-repeat;
+    }
+  }
+  // .btn--transparent
+  &--transparent {
+    color: $color-accent;
+    background: transparent;
+  }
+}

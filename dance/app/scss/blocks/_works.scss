@@ -1,0 +1,61 @@
+.works {
+  color: $color-text;
+
+  // .works__container
+  &__container {
+    display: flex;
+    align-items: flex-end;
+    gap: 20px 5px;
+  }
+  // .works__content
+  &__content {
+    flex: 0 0 clampAd(290, 390);
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    row-gap: clampAd(30, 70);
+  }
+  // .works__title
+  &__title {
+  }
+  // .works__list
+  &__list {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    row-gap: clampAd(16, 24);
+    counter-reset: num;
+  }
+  // .works__point
+  &__point {
+    font-size: clampAd(18, 28);
+
+    display: flex;
+    align-items: center;
+    column-gap: clampAd(10, 15);
+
+    &::before {
+      content: counter(num) ".";
+      counter-increment: num;
+    }
+  }
+  // .works__btn
+  &__btn {
+    padding: clampAd(15, 20) clampAd(30, 54);
+  }
+  // .works__image
+  &__image {
+    flex: 0 0 clampAd(500, 769);
+  }
+  // .works__img
+  &__img {
+    display: block;
+    max-width: 100%;
+    max-height: 100%;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+}

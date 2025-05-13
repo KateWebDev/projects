@@ -1,0 +1,50 @@
+.clients {
+  // .clients__container
+  &__container {
+  }
+  // .clients__title
+  &__title {
+  }
+  // .clients__items
+  &__items {
+  }
+  // .clients__item
+  &__item {
+  }
+  // .clients__inner
+  &__inner {
+  }
+  // .clients__img
+  &__img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+  // .clients__content
+  &__content {
+  }
+  // .clients__name
+  &__name {
+    @include Noto700;
+    font-size: clamp(14px, calc(14px + (18 - 14) * ((100vw - 320px) / ($widthReportMax - $widthReportMin))), 18px);
+    margin-bottom: 30px;
+  }
+  // .clients__list
+  &__list {
+    margin-left: clamp(0px, calc(0px + (50 - 0) * ((100vw - 320px) / ($widthReportMax - $widthReportMin))), 50px);
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-bottom: clamp(20px, calc(20px + (65 - 20) * ((100vw - 320px) / ($widthReportMax - $widthReportMin))), 65px);
+  }
+  // .clients__point
+  &__point {
+  }
+  // .clients__btn
+  &__btn {
+  }
+
+  .slick-btn {
+    bottom: -30px;
+  }
+}

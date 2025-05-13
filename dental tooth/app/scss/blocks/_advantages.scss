@@ -1,0 +1,74 @@
+.advantages {
+  background: $color-bg-light;
+
+  // .advantages__container
+  &__container {
+    margin-bottom: clampAd(45, 90);
+  }
+  // .advantages__items
+  &__items {
+    padding: clampAd(55, 94) 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(clampAd(284, 326), 1fr));
+    grid-auto-flow: dense;
+    gap: 60px clampAd(30, 111);
+  }
+  // .advantages__item
+  &__item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 15px;
+
+    padding-top: clampAd(107, 125);
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: clampAd(85, 100);
+      height: clampAd(85, 100);
+      border-radius: $radius-circle;
+      background-color: $color-accent2;
+      border: clampAd(6, 7) solid $color-accent4;
+      background-position: center;
+      background-size: clampAd(41, 48) clampAd(41, 48);
+      background-repeat: no-repeat;
+    }
+
+    // .advantages__item--1
+    &--1 {
+      &::before {
+        background-image: url(../../images/icons/clock.svg);
+      }
+    }
+    // .advantages__item--2
+    &--2 {
+      &::before {
+        background-image: url(../../images/icons/help.svg);
+      }
+    }
+    // .advantages__item--3
+    &--3 {
+      &::before {
+        background-image: url(../../images/icons/raiting.svg);
+      }
+    }
+  }
+  // .advantages__name
+  &__name {
+    max-width: clampAd(260, 300);
+    font-size: clampAd(20, 24);
+    line-height: 1.25;
+    color: $black;
+  }
+  // .advantages__text
+  &__text {
+    line-height: 1.6;
+    color: $color-text-light;
+  }
+}

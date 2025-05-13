@@ -1,0 +1,71 @@
+.card {
+  padding: clampAd(20, 32) clampAd(16, 24);
+  color: $color-text;
+  border-radius: $radius-small;
+  background: $white;
+
+  height: 100%;
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+  // .card--background
+  &--background {
+    background: $color-bg;
+  }
+
+  // .card__ibg
+  &__ibg {
+    align-self: stretch;
+
+    padding: 0px 0px 80% 0px;
+  }
+  // .card__img
+  &__img {
+  }
+  // .card__info
+  &__info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+
+    margin-bottom: clampAd(20, 37);
+  }
+  // .card__price
+  &__price {
+    font-size: clampAd(12, 17);
+
+    span {
+      font-size: clampAd(14, 18);
+    }
+  }
+  // .card__sale
+  &__sale {
+    padding: 1px 10px;
+    border-radius: $radius-big;
+    background: $color-bg-dop;
+
+    font-size: clampAd(12, 16);
+    line-height: 1.5;
+    text-align: center;
+    color: $color-accent;
+  }
+  // .card__title
+  &__title {
+    font-size: clampAd(18, 29);
+    line-height: 1.18;
+    text-transform: capitalize;
+  }
+  // .card__subtitle
+  &__subtitle {
+    margin-bottom: 10px;
+  }
+  // .card__btn
+  &__btn {
+    margin-top: auto;
+    padding: clampAd(15, 21) clampAd(20, 38);
+  }
+}

@@ -1,0 +1,149 @@
+.footer {
+  padding: 66px 0 clamp(66px, calc(66px + (100 - 66) * ((100vw - 320px) / ($widthReportMax - $widthReportMin))), 100px);
+  background: $color-accent-bg;
+  color: $black;
+
+  // .footer__container
+  &__container {
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    gap: 40px clamp(40px, calc(40px + (80 - 40) * ((100vw - 320px) / ($widthReportMax - $widthReportMin))), 80px);
+  }
+  // .footer__logo
+  &__logo {
+  }
+  // .footer__inner
+  &__inner {
+  }
+  // .footer__box
+  &__box {
+    display: flex;
+    align-items: flex-start;
+    gap: clamp(30px, calc(30px + (70 - 30) * ((100vw - 320px) / ($widthReportMax - $widthReportMin))), 70px);
+    margin-bottom: 70px;
+  }
+  // .footer__ibg
+  &__ibg {
+    width: 337px;
+    padding: 0px 0px 44% 0px;
+  }
+  // .footer__img
+  &__img {
+  }
+  // .footer__content
+  &__content {
+    max-width: 387px;
+    width: 100%;
+    margin-right: 10px;
+
+    display: flex;
+    flex-direction: column;
+    row-gap: clamp(30px, calc(30px + (70 - 30) * ((100vw - 320px) / ($widthReportMax - $widthReportMin))), 70px);
+  }
+  // .footer__form
+  &__form {
+    position: relative;
+  }
+  // .footer__form-name
+  &__form-name {
+    @include inter700;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+  }
+  // .footer__input
+  &__input {
+    width: 100%;
+    padding: 10px 60px 10px 0;
+    border-bottom: 1px solid $black;
+    background: transparent;
+  }
+  // .footer__button
+  &__button {
+    position: absolute;
+    bottom: 10px;
+    right: 0;
+  }
+  // .footer__block
+  &__block {
+  }
+  // .footer__type
+  &__type {
+    @include inter700;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+  }
+  // .footer__links
+  &__links {
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+  }
+  // .footer__point
+  &__point {
+  }
+  // .footer__point-link
+  &__point-link {
+    text-transform: capitalize;
+    transition: all 0.3s linear;
+
+    @media (any-hover: hover) {
+      &:hover {
+        color: $color-accent;
+      }
+    }
+  }
+  // .footer__socials
+  &__socials {
+    align-self: flex-end;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  // .footer__social
+  &__social {
+    width: 24px;
+    height: 25px;
+  }
+  // .footer__social-link
+  &__social-link {
+    width: 100%;
+    height: auto;
+
+    svg {
+      fill: #0f0f0f;
+      transition: all 0.3s linear;
+    }
+
+    @media (any-hover: hover) {
+      &:hover {
+        svg {
+          fill: $color-accent;
+        }
+      }
+    }
+  }
+  // .footer__menu
+  &__menu {
+  }
+  // .footer__items
+  &__items {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  // .footer__item
+  &__item {
+  }
+  // .footer__link
+  &__link {
+    white-space: nowrap;
+    transition: all 0.3s linear;
+
+    @media (any-hover: hover) {
+      &:hover {
+        color: $color-accent;
+      }
+    }
+  }
+}

@@ -1,0 +1,125 @@
+@import "components/_mixin";
+@import "components/_resetStyle";
+@import "components/_fonts";
+@import "../../node_modules/slick-carousel/slick/slick.scss";
+@import "../../node_modules/@fancyapps/fancybox/dist/jquery.fancybox";
+
+//Страница
+$widthReportMax: 1920;
+$widthReportMin: 320;
+$maxWidthContainer: 1230px; //максимальная ширина контейнера + padding left + padding right
+$containerPadding: 15px; //внутринние отступы в контейнере
+
+//Шрифт
+$fontFamily: "Roboto Condensed", sans-serif;
+$mainColor: #ffffff; //основной цвет шрифта
+$mainBackGround: #070a1b; //основной цвет фона
+$white: #ffffff;
+$black: #000000;
+$mainSize: 16;
+$size: $mainSize + px;
+$lineheight: calc(20 / $mainSize);
+$fontWeight: 400;
+
+$color-accent: #f402a2;
+$colr-dop: #c1a1d2;
+$color-hover: #53a1cb;
+
+//Контейнер
+[class*="__container"] {
+  max-width: $maxWidthContainer;
+  margin: 0 auto;
+  padding: 0 $containerPadding;
+}
+
+[class*="__cont-left"] {
+  padding-left: calc((100% - $maxWidthContainer) / 2 + $containerPadding);
+}
+
+[class*="__cont-right"] {
+  padding-right: calc((100% - $maxWidthContainer) / 2 + $containerPadding);
+}
+
+//Бургер меню
+[class*="__burger"] {
+  display: flex;
+  flex-direction: column;
+  row-gap: 7px;
+  cursor: pointer;
+
+  span {
+    width: 30px;
+    height: 1px;
+    border-radius: 5px;
+    background: #ffffff;
+    transition: all 0.3s linear;
+  }
+}
+
+/*Для контейнера картинок в карточках - технический класс*/
+[class*="__ibg"] {
+  position: relative;
+  /*Для самих картинок в карточках технический класс*/
+  img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+body {
+  font-family: $fontFamily;
+  background-color: $mainBackGround;
+  color: $mainColor;
+  font-size: clampAd(12, $mainSize);
+  line-height: $lineheight;
+  font-weight: $fontWeight;
+
+  &.lock {
+    overflow: hidden;
+  }
+}
+
+.hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.main {
+  flex: 1 1 auto;
+  background: linear-gradient(180deg, #070a1b 0%, #2a3170 100%);
+  &__section {
+    margin-bottom: clampAd(50, 150);
+  }
+}
+
+.title {
+  @include corporate700;
+  font-size: clampAd(16, 18);
+  color: $color-accent;
+  text-transform: uppercase;
+}
+
+@import "module/_logo";
+@import "module/_menu";
+@import "module/_btn";
+@import "module/_header";
+@import "module/_intro";
+@import "module/_concept";
+@import "module/_premier";
+@import "module/_video";
+@import "module/_interior";
+@import "module/_slider";
+@import "module/_info";
+@import "module/_footer";
+@import "components/_adaptive";

@@ -1,0 +1,29 @@
+.btn {
+  min-width: clampAd(120, 180);
+  padding: clampAd(15, 20);
+  background: $mainColor;
+  font-weight: 600;
+  font-size: clampAd(15, 17);
+  text-align: center;
+  color: $white;
+  transition: all 0.3s linear;
+
+  @media (any-hover: hover) {
+    &:hover {
+      color: $mainColor;
+      background: $white;
+    }
+  }
+
+  &--reverse {
+    color: $mainColor;
+    background: $white;
+
+    @media (any-hover: hover) {
+      &:hover {
+        color: $white;
+        background: $mainColor;
+      }
+    }
+  }
+}

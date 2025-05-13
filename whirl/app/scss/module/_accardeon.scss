@@ -1,0 +1,100 @@
+.accardeon {
+  width: 100%;
+  // .accardeon__items
+  &__items {
+    display: flex;
+    flex-direction: column;
+    row-gap: 1px;
+  }
+  // .accardeon__item
+  &__item {
+    padding: 15px 16px 15px 12px;
+    max-width: 450px;
+    overflow: hidden;
+
+    display: flex;
+    flex-direction: column;
+
+    border-top: 1px solid $color-line;
+    border-bottom: 1px solid $color-line;
+
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 8px;
+      left: 0;
+      width: 32px;
+      height: 32px;
+      background: $black;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: clampAd(20, 25);
+      right: 16px;
+      width: 18px;
+      height: 10px;
+      background: url(../../images/icons/arrow-down.svg) center/cover no-repeat;
+      pointer-events: none;
+      transition: all 0.3s linear;
+    }
+
+    &--active {
+      row-gap: clampAd(12, 16);
+
+      &::after {
+        transform: rotate(180deg);
+      }
+    }
+
+    // .accardeon__item--1
+    &--1 {
+      &::before {
+        background: url(../../images/icons/staple.svg) center/cover no-repeat;
+      }
+    }
+    // .accardeon__item--2
+    &--2 {
+      &::before {
+        background: url(../../images/icons/smile.svg) center/cover no-repeat;
+      }
+    }
+    // .accardeon__item--3
+    &--3 {
+      &::before {
+        background: url(../../images/icons/mail.svg) center/cover no-repeat;
+      }
+    }
+    // .accardeon__item--4
+    &--4 {
+      &::before {
+        background: url(../../images/icons/thunder.svg) center/cover no-repeat;
+      }
+    }
+  }
+  // .accardeon__name
+  &__name {
+    padding-left: 48px;
+    @include Fraunces400;
+    font-size: clampAd(16, 21);
+    line-height: 1.2;
+    letter-spacing: 0.01em;
+    text-align: left;
+    user-select: none;
+    transition: all 0.3s linear;
+  }
+  // .accardeon__text
+  &__text {
+    padding-left: 48px;
+    opacity: 0;
+    user-select: none;
+    transition: all 0.3s linear;
+
+    &--active {
+      opacity: 1;
+    }
+  }
+}

@@ -1,0 +1,30 @@
+.menu {
+  // .menu__items
+  &__items {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+  // .menu__item
+  &__item {
+  }
+  // .menu__link
+  &__link {
+    font-weight: 800;
+    font-size: 20px;
+    line-height: 1.8;
+    white-space: nowrap;
+
+    transition: all 0.3s linear;
+
+    @media (any-hover: hover) {
+      &:hover:not(.menu__link--active) {
+        color: $color-accent;
+      }
+    }
+
+    &--active {
+      cursor: default;
+    }
+  }
+}

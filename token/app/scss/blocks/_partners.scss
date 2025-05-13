@@ -1,0 +1,35 @@
+.partners {
+  // .partners__container
+  &__container {
+    display: flex;
+    flex-direction: column;
+    row-gap: clampAd(20, 22);
+
+    margin-bottom: clampAd(70, 145);
+  }
+  // .partners__title
+  &__title {
+  }
+  // .partners__items
+  &__items {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px clampAd(20, 64);
+  }
+  // .partners__item
+  &__item {
+  }
+  // .partners__link
+  &__link {
+  }
+  // .partners__img
+  &__img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    object-position: center;
+  }
+}

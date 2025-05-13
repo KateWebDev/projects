@@ -1,0 +1,83 @@
+.about {
+  // .about__container
+  &__container {
+    display: flex;
+    align-items: center;
+    gap: 40px clampAd(20, 50);
+
+    margin-bottom: clampAd(45, 90);
+
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      transform: translateY(-39%);
+      width: 321px;
+      height: 321px;
+      border-radius: $radius-circle;
+      background: rgba(29, 161, 242, 0.5);
+      filter: blur(200px);
+    }
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 95%;
+      transform: translateY(-39%);
+      width: 321px;
+      height: 321px;
+      border-radius: $radius-circle;
+      background: rgba(29, 161, 242, 0.5);
+      filter: blur(200px);
+    }
+  }
+  // .about__image
+  &__image {
+    max-width: 451px;
+  }
+  // .about__img
+  &__img {
+    display: block;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    object-position: center;
+  }
+  // .about__content
+  &__content {
+    max-width: clampAd(290, 570);
+
+    display: flex;
+    flex-direction: column;
+    gap: clampAd(15, 27);
+  }
+  // .about__title
+  &__title {
+    span {
+      display: flex;
+      align-items: center;
+      column-gap: clampAd(5, 15);
+
+      &::after {
+        content: "";
+        width: clampAd(20, 40);
+        height: clampAd(27, 47);
+        background: image-set(
+            url("../images/main/about/chicken-head.avif") type("image/avif"),
+            url("../images/main/about/chicken-head.webp") type("image/webp"),
+            url("../images/main/about/chicken-head.png")
+          )
+          center/cover no-repeat;
+      }
+    }
+  }
+  // .about__text
+  &__text {
+    display: flex;
+    flex-direction: column;
+    row-gap: clampAd(15, 30);
+  }
+}

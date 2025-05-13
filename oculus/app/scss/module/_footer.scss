@@ -1,0 +1,43 @@
+.footer {
+  padding: 30px 0;
+  border: 1px solid #cacad6;
+  border-left: none;
+  border-right: none;
+
+  &.main__section {
+    margin-bottom: 45px;
+  }
+  // .footer__container
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 30px clampAd(10, 30);
+  }
+  // .footer__menu
+  &__menu {
+  }
+  // .footer__logo
+  &__logo {
+  }
+  // .footer__socials
+  &__socials {
+    display: flex;
+    gap: 20px;
+  }
+  // .footer__social
+  &__social {
+  }
+  // .footer__social-link
+  &__social-link {
+    width: 30px;
+    aspect-ratio: 1;
+  }
+  // .footer__social-img
+  &__social-img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+}

@@ -1,0 +1,44 @@
+.menu {
+  max-width: 100%;
+  // .menu__items
+  &__items {
+    display: flex;
+    align-items: center;
+    column-gap: clampAd(30, 50);
+
+    overflow-x: scroll;
+    scroll-snap-type: x mandatory;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
+  // .menu__item
+  &__item {
+    scroll-snap-align: start;
+  }
+  // .menu__link
+  &__link {
+    @include Inter400;
+    font-size: 16px;
+    color: $white;
+    white-space: nowrap;
+    user-select: none;
+    transition: all 0.3s linear;
+
+    &--active {
+      cursor: default;
+    }
+    &:focus-visible {
+      background: $color-accent;
+      outline: none;
+      color: $mainColor;
+    }
+    &:hover {
+      color: $color-accent;
+    }
+    &:active {
+      color: $color-accent-dsrk;
+    }
+  }
+}

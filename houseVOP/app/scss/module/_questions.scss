@@ -1,0 +1,24 @@
+.questions {
+  padding-bottom: clamp(80px, calc(80px + (180 - 80) * ((100vw - 414px) / ($widthReportMax - $widthReportMin))), 180px);
+
+  // .questions__container
+  &__container {
+  }
+  // .questions__title
+  &__title {
+    margin-bottom: clamp(40px, calc(40px + (50 - 40) * ((100vw - 414px) / ($widthReportMax - $widthReportMin))), 50px);
+  }
+  // .questions__form
+  &__form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px 30px;
+    flex-wrap: wrap;
+
+    .form__dop {
+      order: -1;
+      text-align: center;
+    }
+  }
+}

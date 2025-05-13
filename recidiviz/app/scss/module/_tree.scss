@@ -1,0 +1,67 @@
+.tree {
+  background: $color-bg-dark;
+  position: relative;
+  color: $white;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 287px;
+    height: 100%;
+    background: image-set(
+        url("../images/main/trees/left.avif") type("image/avif"),
+        url("../images/main/trees/left_2x.avif") 2x type("image/avif"),
+        url("../images/main/trees/left.webp") type("image/webp"),
+        url("../images/main/trees/left_2x.webp") 2x type("image/webp"),
+        url("../images/main/trees/left.jpg"),
+        url("../images/main/trees/left_2x.jpg") 2x
+      )
+      center / cover no-repeat;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 287px;
+    height: 100%;
+    background: image-set(
+        url("../images/main/trees/right.avif") type("image/avif"),
+        url("../images/main/trees/right_2x.avif") 2x type("image/avif"),
+        url("../images/main/trees/right.webp") type("image/webp"),
+        url("../images/main/trees/right_2x.webp") 2x type("image/webp"),
+        url("../images/main/trees/right.jpg"),
+        url("../images/main/trees/right_2x.jpg") 2x
+      )
+      center / cover no-repeat;
+  }
+  // .tree__container
+  &__container {
+    min-height: 90svh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: clampAd(30, 50);
+  }
+  // .tree__content
+  &__content {
+    max-width: 540px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 21px;
+    position: relative;
+    z-index: 2;
+  }
+  // .tree__title
+  &__title {
+    font-size: clampAd(18, 22);
+    line-height: 1;
+  }
+  // .tree__text
+  &__text {
+  }
+}

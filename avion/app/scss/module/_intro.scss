@@ -1,0 +1,48 @@
+.intro {
+  padding: clampAd(0, 60) 0;
+  // .intro__container
+  &__container {
+    display: grid;
+    grid-template-columns: 1fr clampAd(200, 520);
+  }
+  // .intro__content
+  &__content {
+    padding: clampAd(40, 60) clampAd(24, 60) clampAd(24, 60);
+    height: 100%;
+    background: $color-dark;
+    color: $white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    row-gap: 40px;
+  }
+  // .intro__subtitle
+  &__subtitle {
+    max-width: 500px;
+    @include ClashDisplay400;
+    font-size: 32px;
+    line-height: 1.4;
+  }
+  // .intro__btn
+  &__btn {
+    margin-bottom: auto;
+  }
+  // .intro__text
+  &__text {
+    max-width: 605px;
+    font-size: clampAd(14, 18);
+  }
+  // .intro__image
+  &__image {
+    max-width: 520px;
+  }
+  // .intro__img
+  &__img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+}

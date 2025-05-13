@@ -1,0 +1,53 @@
+.commodity {
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transform: translateY(30%) translateX(-25%);
+    width: clampAd(290, 422);
+    height: clampAd(295, 426);
+    background: url(../../images/main/decor/foliage.svg) center/cover no-repeat;
+    opacity: 0.1;
+  }
+  // .commodity__container
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+    position: relative;
+    z-index: 2;
+  }
+  // .commodity__content
+  &__content {
+    max-width: clampAd(290, 570);
+  }
+  // .commodity__title
+  &__title {
+    margin-bottom: 20px;
+  }
+  // .commodity__text
+  &__text {
+    margin-bottom: clampAd(20, 35);
+  }
+  // .commodity__btn
+  &__btn {
+  }
+  // .commodity__image
+  &__image {
+    max-width: clampAd(290, 430);
+    width: 100%;
+  }
+  // .commodity__img
+  &__img {
+    display: block;
+    max-width: 100%;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    object-position: center;
+  }
+}

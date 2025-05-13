@@ -1,0 +1,59 @@
+.about {
+  // .about__container
+  &__container {
+  }
+  // .about__items
+  &__items {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+  }
+  // .about__item
+  &__item {
+    display: grid;
+    grid-template-columns: clampAd(200, 500) clampAd(200, 600);
+    gap: clampAd(30, 100);
+
+    &:nth-child(2n) {
+      .about__image {
+        max-width: 420px;
+        grid-column-start: 1;
+      }
+    }
+  }
+  // .about__content
+  &__content {
+    display: flex;
+    flex-direction: column;
+    row-gap: 30px;
+  }
+  // .about__title
+  &__title {
+    @include RobotoSlab400;
+    font-size: clampAd(18, 24);
+    color: $color-accent;
+  }
+  // .about__box
+  &__box {
+    max-width: 420px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+  }
+  // .about__image
+  &__image {
+    grid-row: 1/-1;
+    grid-column-start: 2;
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+  // .about__block
+  &__block {
+    display: flex;
+    flex-direction: column;
+    gap: clampAd(30, 50);
+  }
+}

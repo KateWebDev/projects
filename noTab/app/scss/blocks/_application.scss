@@ -1,0 +1,41 @@
+.application {
+  // .application__container
+  &__container {
+    margin-bottom: clampAd(64, 125);
+  }
+  // .application__title
+  &__title {
+    text-align: center;
+    margin-bottom: 32px;
+  }
+  // .application__list
+  &__list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 24px clampAd(20, 60);
+  }
+  // .application__point
+  &__point {
+  }
+  // .application__link
+  &__link {
+    transition: all 0.3s linear;
+    @media (any-hover: hover) {
+      &:hover {
+        transform: scale(1.05);
+      }
+    }
+    height: clampAd(60, 81);
+  }
+  // .application__icon
+  &__icon {
+    display: block;
+    max-width: 100%;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+}

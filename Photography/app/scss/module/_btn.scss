@@ -1,0 +1,19 @@
+.btn {
+  padding: clampAd(10, 16);
+  border-radius: 3px;
+  background: $mainColor;
+
+  @include JosefinSans700;
+  font-size: clampAd(14, 18);
+  line-height: 1;
+  color: $black;
+  white-space: nowrap;
+  transition: all 0.3s linear;
+
+  @media (any-hover: hover) {
+    &:hover {
+      background: $black;
+      color: $mainColor;
+    }
+  }
+}

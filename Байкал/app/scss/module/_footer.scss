@@ -1,0 +1,124 @@
+.footer {
+  background: #282828;
+  padding: 40px 0 25px;
+
+  // .footer__container
+  &__container {
+  }
+  // .footer__top
+  &__top {
+    display: flex;
+    justify-content: space-between;
+    column-gap: 110px;
+    row-gap: 30px;
+    flex-wrap: wrap;
+    color: #ffffff;
+    margin-bottom: 15px;
+  }
+  // .footer__item
+  &__item {
+    display: flex;
+    flex-direction: column;
+  }
+  // .footer__logo
+  &__logo {
+    width: clamp(108px, calc(108px + (180 - 108) * ((100vw - 320px) / ($widthReportMax - $widthReportMin))), 180px);
+  }
+
+  // .footer__title
+  &__title {
+    color: $accent-color;
+    font-family: "Lora", serif;
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: 0.6px;
+    margin-bottom: clamp(10px, calc(10px + (20 - 10) * ((100vw - 320px) / ($widthReportMax - $widthReportMin))), 20px);
+  }
+  // .footer__list
+  &__list {
+    max-width: 140px;
+  }
+  // .footer__point
+  &__point {
+    &:not(:last-child) {
+      margin-bottom: 15px;
+    }
+  }
+  // .footer__point-link
+  &__point-link {
+    font-size: 18px;
+    letter-spacing: 0.54px;
+    @media (any-hover: hover) and (min-width: 992px) {
+      &:hover {
+        opacity: 0.8;
+      }
+    }
+  }
+  // .footer__btn
+  &__btn {
+    padding: 5px 0;
+    width: 210px;
+    border-radius: 5px;
+    text-align: center;
+    font-size: 18px;
+    letter-spacing: 0.54px;
+
+    &:not(:last-child) {
+      margin-bottom: 15px;
+    }
+  }
+  // .footer__address
+  &__address {
+    width: 220px;
+    font-size: 18px;
+    font-weight: 700;
+    letter-spacing: 0.9px;
+    margin-bottom: 15px;
+  }
+  // .footer__address-text
+  &__address-text {
+    margin-top: 5px;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    letter-spacing: 0.48px;
+  }
+  // .footer__phone-link
+  &__phone-link {
+    display: inline-block;
+    font-size: 20px;
+    letter-spacing: 0.6px;
+    margin-bottom: 5px;
+
+    & + .footer__phone-link {
+      margin-bottom: 15px;
+    }
+  }
+  // .footer__socials
+  &__socials {
+    display: flex;
+    column-gap: 10px;
+  }
+  // .footer__social
+  &__social {
+  }
+  // .footer__social-link
+  &__social-link {
+    svg {
+      width: clamp(30px, calc(30px + (60 - 30) * ((100vw - 320px) / ($widthReportMax - $widthReportMin))), 60px);
+      height: clamp(30px, calc(30px + (60 - 30) * ((100vw - 320px) / ($widthReportMax - $widthReportMin))), 60px);
+    }
+
+    @media (any-hover: hover) and (min-width: 992px) {
+      &:hover {
+        opacity: 0.8;
+      }
+    }
+  }
+  // .footer__copy
+  &__copy {
+    color: #ffffff;
+    font-family: "Lora", serif;
+    text-align: center;
+  }
+}

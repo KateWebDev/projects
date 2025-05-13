@@ -1,0 +1,58 @@
+.socials {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  // .socials__item
+  &__item {
+    width: clampAd(30, 40);
+    height: clampAd(30, 40);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border-radius: $radius-small;
+    background: transparent;
+
+    transition: all 0.3s linear;
+
+    &--active {
+      background: $color-accent;
+
+      .socials__link {
+        svg {
+          fill: $white;
+          transition: all 0.3s linear;
+        }
+
+        @media (any-hover: hover) {
+          &:hover {
+            svg {
+              fill: $white;
+            }
+          }
+        }
+      }
+    }
+  }
+  // .socials__link
+  &__link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    svg {
+      fill: rgba($mainColor, 0.53);
+      transition: all 0.3s linear;
+    }
+
+    @media (any-hover: hover) {
+      &:hover {
+        svg {
+          fill: $color-accent;
+        }
+      }
+    }
+  }
+}

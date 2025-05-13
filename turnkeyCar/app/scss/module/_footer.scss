@@ -1,0 +1,51 @@
+.footer {
+  background: $color-firm;
+  padding: 24px 0;
+  color: $mainBackGround;
+  // .footer__container
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 40px;
+  }
+  // .footer__logo
+  &__logo {
+    @media (any-hover: hover) and (min-width: 992px) {
+      &:hover {
+        opacity: 0.8;
+      }
+    }
+  }
+  // .footer__socials
+  &__socials {
+    display: flex;
+    column-gap: 10px;
+  }
+  // .footer__social
+  &__social {
+  }
+  // .footer__social-link
+  &__social-link {
+    svg {
+      fill: $mainBackGround;
+    }
+
+    @media (any-hover: hover) and (min-width: 992px) {
+      &:hover {
+        svg {
+          fill: $color-gray;
+        }
+      }
+    }
+  }
+  // .footer__link
+  &__link {
+    @media (any-hover: hover) and (min-width: 992px) {
+      &:hover {
+        color: $color-gray;
+      }
+    }
+  }
+}

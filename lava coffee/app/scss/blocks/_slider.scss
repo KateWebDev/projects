@@ -1,0 +1,83 @@
+.slider {
+  // .slider__items
+  &__items {
+  }
+  // .slider__item
+  &__item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+
+    padding: 50px 0;
+  }
+  // .slider__image
+  &__image {
+    max-width: 409px;
+    max-width: clampAd(300, 409);
+    width: 100%;
+    height: clampAd(250, 430);
+  }
+  // .slider__img
+  &__img {
+    display: block;
+    max-width: 100%;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top center;
+  }
+  // .slider__content
+  &__content {
+    max-width: 610px;
+    max-width: 500px;
+    width: 100%;
+    text-align: center;
+
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+
+      width: clampAd(100, 154);
+      height: clampAd(80, 124);
+      background: url(../../images/main/decor/coffee-beans.svg) center/cover no-repeat;
+      opacity: 0.5;
+    }
+  }
+  // .slider__text
+  &__text {
+    @include Fahkwang400;
+    font-size: clampAd(14, 20);
+    line-height: 1.9;
+    margin-bottom: clampAd(10, 17);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: clampAd(20, 40);
+
+    &::before {
+      content: "";
+      width: clampAd(39, 59);
+      height: clampAd(24, 44);
+      background: url(../../images/icons/quotation.svg) center/cover no-repeat;
+    }
+  }
+  // .slider__author
+  &__author {
+    @include Poppins600;
+    font-size: clampAd(16, 22);
+    line-height: 1;
+    color: $color-dark;
+    margin-bottom: 10px;
+  }
+  // .slider__work
+  &__work {
+    font-size: clampAd(14, 20);
+  }
+}

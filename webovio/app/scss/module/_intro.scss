@@ -1,0 +1,46 @@
+.intro {
+  background: image-set(
+      url("../images/main/intro/bg.avif") type("image/avif"),
+      url("../images/main/intro/bg_2x.avif") 2x type("image/avif"),
+      url("../images/main/intro/bg.webp") type("image/webp"),
+      url("../images/main/intro/bg_2x.webp") 2x type("image/webp"),
+      url("../images/main/intro/bg.jpg"),
+      url("../images/main/intro/bg_2x.jpg")
+    )
+    center/cover no-repeat;
+  color: $white;
+
+  // .intro__container
+  &__container {
+    min-height: 100svh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  // .intro__content
+  &__content {
+    max-width: 570px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    row-gap: clampAd(15, 25);
+  }
+  // .intro__subtitle
+  &__subtitle {
+  }
+  // .intro__title
+  &__title {
+    font-weight: 700;
+    font-size: clampAd(30, 60);
+    line-height: 1.2;
+  }
+  // .intro__text
+  &__text {
+    max-width: 500px;
+    font-size: clampAd(14, 16);
+    margin-bottom: clampAd(10, 20);
+  }
+  // .intro__link
+  &__link {
+  }
+}

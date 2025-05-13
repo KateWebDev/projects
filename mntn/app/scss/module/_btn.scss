@@ -1,0 +1,35 @@
+.link {
+  font-weight: 700;
+  font-size: clampAd(14, 18);
+
+  display: flex;
+  align-items: center;
+  column-gap: clampAd(10, 16);
+
+  transition: all 0.3s linear;
+
+  @media (any-hover: hover) {
+    &:hover {
+      color: $color-accent;
+    }
+  }
+
+  svg {
+    fill: currentColor;
+  }
+
+  &--color {
+    color: $color-accent;
+
+    @media (any-hover: hover) {
+      &:hover {
+        color: $mainColor;
+      }
+    }
+  }
+  &--rotate-icon {
+    svg {
+      transform: rotate(90deg);
+    }
+  }
+}

@@ -1,0 +1,11 @@
+.title {
+  font-weight: 700;
+  font-size: clampAd(22, 44);
+  line-height: 1.4;
+
+  // .title--big
+  &--big {
+    font-weight: 600;
+    font-size: clampAd(40, 96);
+  }
+}

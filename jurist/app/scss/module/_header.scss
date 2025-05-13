@@ -1,0 +1,68 @@
+.header {
+  padding: 26px 0;
+
+  &--fixed {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    overflow: auto;
+    background: #ffffff;
+  }
+  // .header__container
+  &__container {
+    max-width: 1390px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    column-gap: 30px;
+  }
+  // .header__logo
+  &__logo {
+    position: relative;
+    z-index: 4;
+  }
+  // .header__menu
+  &__menu {
+    margin-left: auto;
+    margin-right: 8px;
+  }
+  // .header__actions
+  &__actions {
+    display: flex;
+    column-gap: clamp(10px, calc(10px + (32 - 10) * ((100vw - 320px) / ($widthReportMax - $widthReportMin))), 32px);
+  }
+  // .header__link
+  &__link {
+    position: relative;
+    z-index: 4;
+    color: #000000;
+    font-size: clamp(16px, calc(16px + (18 - 16) * ((100vw - 320px) / ($widthReportMax - $widthReportMin))), 18px);
+    line-height: 1.33;
+    transition: all 0.3s linear;
+    span {
+      display: block;
+      color: $mainColor;
+      font-size: 13px;
+      font-weight: 700;
+      line-height: 1.38;
+      text-align: right;
+    }
+
+    @media (any-hover: hover) and (min-width: 992px) {
+      &:hover {
+        opacity: 0.8;
+      }
+    }
+  }
+  // .header__btn
+  &__btn {
+    font-size: 15px;
+  }
+  // .header__burger
+  &__burger {
+    position: relative;
+    z-index: 4;
+  }
+}

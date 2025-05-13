@@ -1,0 +1,169 @@
+<!--=include header.html -->
+
+<main class="main">
+  <section class="cart">
+    <div class="cart__container">
+      <h2 class="hidden">Basket</h2>
+      <table class="cart__table">
+        <thead class="cart__thead">
+          <tr class="cart__column cart__column--hade">
+            <th class="cart__subtitle"></th>
+            <th class="cart__subtitle">
+              Product Name
+            </th>
+            <th class="cart__subtitle">
+              Price
+            </th>
+            <th class="cart__subtitle">
+              Quantity
+            </th>
+            <th class="cart__subtitle">
+              Total
+            </th>
+          </tr>
+        </thead>
+        <tbody class="cart__tbody">
+          <tr class="cart__column">
+            <td class="cart__row">
+              <button class="cart__del" type="button"></button>
+            </td>
+            <td class="cart__row">
+              <div class="cart__image">
+                <picture>
+                  <source type='image/avif'
+                    srcset='../images/main/shop/shop1.avif, ../images/main/shop/shop1@2x.avif 2x'>
+                  <source type='image/webp'
+                    srcset='../images/main/shop/shop1.webp, ../images/main/shop/shop1@2x.webp 2x'>
+                  <img class="cart__img" src="../images/main/shop/shop1.jpg"
+                    srcset="../images/main/shop/shop1@2x.jpg 2x" alt="" loading="lazy" width="130" height="144">
+                </picture>
+              </div>
+              <h4 class="cart__name">
+                La Faquin, Brazil
+              </h4>
+            </td>
+            <td class="cart__row">
+              <span class="cart__price">
+                $7.85
+              </span>
+            </td>
+            <td class="cart__row">
+              <div class="cart__counter counter">
+                <button class="counter__button  counter__button--minus" aria-label="reduce count products"
+                  title="reduce count products" type="button" disabled> - </button>
+                <input class="counter__count-product" type="number" value="1" aria-label="count product"
+                  title="count product" size="4" min="1" max="10">
+                <button class="counter__button counter__button--plus" aria-label="add count products"
+                  title="add count products" type="button"> +
+                </button>
+              </div>
+            </td>
+            <td class="cart__row">
+              <span class="cart__total">
+                $7.85
+              </span>
+            </td>
+          </tr>
+          <tr class="cart__column">
+            <td class="cart__row">
+              <button class="cart__del" type="button"></button>
+            </td>
+            <td class="cart__row">
+              <div class="cart__image">
+                <picture>
+                  <source type='image/avif'
+                    srcset='../images/main/shop/shop2.avif, ../images/main/shop/shop2@2x.avif 2x'>
+                  <source type='image/webp'
+                    srcset='../images/main/shop/shop2.webp, ../images/main/shop/shop2@2x.webp 2x'>
+                  <img class="cart__img" src="../images/main/shop/shop2.jpg"
+                    srcset="../images/main/shop/shop2@2x.jpg 2x" alt="" loading="lazy" width="130" height="144">
+                </picture>
+              </div>
+              <h4 class="cart__name">
+                Coffee Grinder
+              </h4>
+            </td>
+            <td class="cart__row">
+              <span class="cart__price">
+                $7.85
+              </span>
+            </td>
+            <td class="cart__row">
+              <div class="cart__counter counter">
+                <button class="counter__button  counter__button--minus" aria-label="reduce count products"
+                  title="reduce count products" type="button" disabled> - </button>
+                <input class="counter__count-product" type="number" value="1" aria-label="count product"
+                  title="count product" size="4" min="1" max="10">
+                <button class="counter__button counter__button--plus" aria-label="add count products"
+                  title="add count products" type="button"> +
+                </button>
+              </div>
+            </td>
+            <td class="cart__row">
+              <span class="cart__total">
+                $29.85
+              </span>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div class="cart__content">
+        <div class="cart__actions">
+          <div class="cart__action">
+            <p class="cart__action-title">
+              Have A Promo Code For Checkout?
+            </p>
+            <form class="cart__form" action="#" method="post">
+              <label class="hidden" for="promocode">Enter promo code</label>
+              <input class="cart__input" id="promocode" type="text" placeholder="Enter promo code">
+              <button class="cart__button btn btn--small" type="button">
+                Apply
+              </button>
+            </form>
+          </div>
+          <div class="cart__action">
+            <p class="cart__action-title">
+              Add A Note To Your Order :
+            </p>
+            <form class="cart__form" action="#" method="post">
+              <label class="hidden" for="note">Add Your Note Here</label>
+              <textarea class="cart__textarea" name="note" id="note" placeholder="Add Your Note Here"></textarea>
+            </form>
+          </div>
+        </div>
+        <div class="cart__result">
+          <div class="cart__result-subtitle">
+            Cart Total
+          </div>
+          <div class="cart__result-items">
+            <div class="cart__result-item">
+              <span class="cart__result-name">
+                Sub Total:
+              </span>
+              <span class="cart__result-num">
+                $ 267.00
+              </span>
+            </div>
+            <div class="cart__result-item">
+              <span class="cart__result-name">
+                Shipping:
+              </span>
+              <span class="cart__result-num cart__result-num--color">
+                $ 267.00
+              </span>
+            </div>
+          </div>
+          <a class="cart__result-btn btn" href="#">
+            Proccess To Check Out
+          </a>
+        </div>
+      </div>
+      <a class="cart__reset" href="#">
+        Continue Shopping
+      </a>
+    </div>
+  </section>
+</main>
+
+<!--=include footer.html -->

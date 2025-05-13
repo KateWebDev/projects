@@ -1,0 +1,143 @@
+.directions {
+  padding-bottom: clampAd(50, 178);
+  // .directions__container
+  &__container {
+  }
+  // .directions__name
+  &__name {
+    align-items: center;
+    text-align: center;
+    margin-bottom: 88px;
+  }
+  // .directions__inner
+  &__inner {
+    display: flex;
+    flex-direction: column;
+    row-gap: 55px;
+  }
+  // .directions__nav
+  &__nav {
+  }
+  // .directions__items
+  &__items {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px clampAd(20, 45);
+  }
+  // .directions__item
+  &__item {
+  }
+  // .directions__button
+  &__button {
+    font-weight: 700;
+    white-space: nowrap;
+    color: #9a9ca5;
+    padding: 1px 8px;
+    border: 1px solid currentColor;
+    border-radius: 4px;
+    transition: all 0.3s linear;
+
+    &.mixitup-control-active {
+      background: $color-gradient;
+      border-color: transparent;
+      color: $white;
+    }
+  }
+  // .directions__works
+  &__works {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+  }
+  // .directions__work
+  &__work {
+    min-height: 250px;
+    height: 100%;
+    border: 1px solid $color-border;
+    border-radius: 4px;
+  }
+  // .directions__ibg
+  &__ibg {
+    padding: 0px 0px 50% 0px;
+  }
+  // .directions__img
+  &__img {
+  }
+  // .directions__work-content
+  &__work-content {
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    row-gap: clampAd(12, 24);
+  }
+  // .directions__type
+  &__type {
+    display: inline-block;
+    border-radius: 4px;
+    padding: 1px 8px;
+    font-weight: 700;
+    color: $white;
+    &--1 {
+      background: $color-1;
+    }
+    &--2 {
+      background: $color-2;
+    }
+    &--3 {
+      background: $color-3;
+    }
+    &--4 {
+      background: $color-4;
+    }
+    &--5 {
+      background: $color-5;
+    }
+  }
+  // .directions__text
+  &__text {
+  }
+  // .directions__link
+  &__link {
+    font-weight: 700;
+    color: $color-dark;
+    padding-right: 26px;
+    position: relative;
+    transition: all 0.3s linear;
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 55%;
+      right: 0;
+      transform: translateY(-50%);
+      width: 18px;
+      height: 12px;
+      background: url(../../images/icons/arrowRed.svg) center/cover no-repeat;
+    }
+
+    @media (any-hover: hover) {
+      &:hover {
+        color: $color-accent;
+      }
+    }
+  }
+  // .directions__dop
+  &__dop {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #f4f5f6;
+
+    span {
+      display: inline-block;
+      max-width: 240px;
+      font-weight: 700;
+      font-size: 20px;
+      line-height: 1.5;
+      text-align: center;
+      color: #424551;
+    }
+  }
+}

@@ -1,0 +1,36 @@
+@import "components/mixin";
+
+.menu {
+  color: $white;
+
+  // .menu__items
+  &__items {
+    display: flex;
+    align-items: center;
+    gap: rem(20) clampAdRem(20, 50);
+  }
+  // .menu__item
+  &__item {
+    &--mobile {
+      display: none;
+    }
+  }
+  // .menu__link
+  &__link {
+    @include Roboto500;
+    font-size: rem(18);
+    line-height: 1.5;
+    white-space: nowrap;
+    transition: all 0.3s linear;
+
+    @media (any-hover: hover) {
+      &:hover {
+        color: $color-accent;
+      }
+    }
+
+    &--active {
+      cursor: default;
+    }
+  }
+}

@@ -1,0 +1,24 @@
+.clients {
+  padding: clamp(40px, calc(40px + (56 - 40) * ((100vw - 320px) / ($widthReportMax - $widthReportMin))), 56px) 0;
+  // .clients__container
+  &__container {
+  }
+  // .clients__items
+  &__items {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px 35px;
+  }
+  // .clients__item
+  &__item {
+    width: 180px;
+  }
+  // .clients__img
+  &__img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+}

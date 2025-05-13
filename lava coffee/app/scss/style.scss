@@ -1,0 +1,148 @@
+@use "sass:math";
+
+@import "components/variables";
+@import "components/plugins";
+
+@import "components/fonts";
+@import "components/mixin";
+@import "components/resetStyle";
+
+//Контейнер
+[class*="__container"] {
+  max-width: $maxWidthContainer;
+  margin: 0 auto;
+  padding: 0 $containerPadding;
+}
+
+//Бургер меню
+[class*="__burger"] {
+  display: none;
+  flex-direction: column;
+  row-gap: 5px;
+  cursor: pointer;
+
+  span {
+    width: 32px;
+    height: 3px;
+    background: $color-dark;
+    transition: all 0.3s linear;
+  }
+
+  &.header__burger--active {
+    span {
+      &:nth-child(1) {
+        opacity: 0;
+      }
+      &:nth-child(2) {
+        transform: rotate(45deg);
+      }
+      &:nth-child(3) {
+        transform: rotate(-45deg) translateY(-5px) translateX(5px);
+      }
+    }
+  }
+}
+
+[class*="__ibg"] {
+  position: relative;
+
+  img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+}
+
+body {
+  font-family: $fontFamily;
+  background-color: $mainBackGround;
+  color: $mainColor;
+  font-size: clampAd(12, $mainSize);
+  line-height: $lineheight;
+  font-weight: $fontWeight;
+
+  &.lock {
+    overflow: hidden;
+  }
+}
+
+.hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.main {
+  flex: 1 1 auto;
+  &__section {
+    margin-bottom: clampAd(60, 120);
+  }
+}
+
+.wrapper {
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: calc(clampAd(0, 55) * -1);
+    right: calc(clampAd(20, 50) * -1);
+    width: clampAd(115, 307);
+    height: clampAd(185, 485);
+    background: url(../../images/main/decor/foliage-right.svg) center/cover no-repeat;
+    transform: rotate(-11deg);
+  }
+}
+.container-full {
+  padding-block: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+textarea {
+  resize: none;
+}
+textarea.auto {
+  overflow-y: hidden;
+}
+
+@import "module/logo";
+@import "module/menu";
+@import "module/btn";
+@import "module/title";
+@import "module/form";
+@import "module/accardeon";
+@import "module/breadcrumbs";
+@import "module/socials";
+
+@import "blocks/header";
+//------------------------------
+@import "pages/index";
+@import "pages/about";
+@import "pages/shop";
+@import "pages/equipment";
+@import "pages/contact";
+@import "pages/blog";
+@import "pages/single-blog";
+@import "pages/faq";
+@import "pages/error";
+@import "pages/comming";
+@import "pages/basket";
+//------------------------------
+@import "blocks/blog-footer ";
+@import "blocks/footer";
+
+@import "components/adaptive";

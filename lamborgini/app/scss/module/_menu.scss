@@ -1,0 +1,30 @@
+.menu {
+  // .menu__items
+  &__items {
+    display: flex;
+    gap: clamp(20px, calc(20px + (40 - 20) * ((100vw - 320px) / ($widthReportMax - $widthReportMin))), 40px);
+  }
+  // .menu__item
+  &__item {
+    &.menu__item--mobile {
+      display: none;
+    }
+  }
+  // .menu__link
+  &__link {
+    font-size: 15px;
+    color: $color-dop;
+    white-space: nowrap;
+    transition: all 0.3s linear;
+
+    &--active {
+      cursor: default;
+    }
+
+    @media (any-hover: hover) {
+      &:hover {
+        color: $color-accent;
+      }
+    }
+  }
+}

@@ -1,0 +1,120 @@
+.testimonials {
+  padding-bottom: 40px;
+
+  // .testimonials__container
+  &__container {
+  }
+  // .testimonials__top
+  &__top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+
+    margin-bottom: clampAd(30, 60);
+  }
+  // .testimonials__title
+  &__title {
+    max-width: clampAd(300, 455);
+  }
+  // .testimonials__text
+  &__text {
+    max-width: clampAd(300, 400);
+  }
+  // .testimonials__items
+  &__items {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(clampAd(250, 350), 1fr));
+    gap: clampAd(20, 30);
+
+    position: relative;
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 0;
+      transform: translate(50%, -50%);
+      width: clampAd(40, 80);
+      height: clampAd(40, 80);
+      background: url(../../images/main/testimonial/decor.svg) center/cover no-repeat;
+    }
+  }
+  // .testimonials__item
+  &__item {
+  }
+  // .testimonials__card
+  &__card {
+    transition: all 0.3s linear;
+
+    @media (any-hover: hover) {
+      &:hover {
+        box-shadow: 0 10px 52px 0 rgba(0, 0, 0, 0.08);
+
+        .testimonials__link {
+          opacity: 1;
+          visibility: visible;
+        }
+        .testimonials__location {
+          color: $color-accent;
+        }
+      }
+    }
+  }
+  // .testimonials__ibg
+  &__ibg {
+    padding: 0px 0px 58% 0px;
+    position: relative;
+  }
+  // .testimonials__img
+  &__img {
+  }
+  // .testimonials__link
+  &__link {
+    opacity: 0;
+    visibility: hidden;
+
+    position: absolute;
+    bottom: clampAd(10, 20);
+    right: clampAd(10, 20);
+
+    width: clampAd(30, 50);
+    height: clampAd(30, 50);
+    border-radius: $radius-circle;
+    background: $white;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    transition: all 0.3s linear;
+
+    &::before {
+      content: "";
+      width: clampAd(10, 15);
+      height: clampAd(10, 15);
+      background: url(../../images/icons/play.svg) center/cover no-repeat;
+    }
+  }
+  // .testimonials__content
+  &__content {
+    background: $white;
+    padding: clampAd(20, 30);
+  }
+  // .testimonials__info
+  &__info {
+    margin-bottom: clampAd(15, 23);
+  }
+  // .testimonials__author
+  &__author {
+    font-weight: 700;
+    font-size: clampAd(14, 18);
+    letter-spacing: 0.03em;
+  }
+  // .testimonials__location
+  &__location {
+    color: $color-bg-accent;
+    transition: all 0.3s linear;
+  }
+}

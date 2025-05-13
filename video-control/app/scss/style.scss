@@ -1,0 +1,137 @@
+@import "components/fonts";
+@import "components/mixin";
+@import "components/resetStyle";
+
+//Страница
+$widthReportMax: 1440;
+$widthReportMin: 320;
+$maxWidthContainer: 1190px; //максимальная ширина контейнера + padding left + padding right
+$containerPadding: 15px; //внутринние отступы в контейнере
+
+//Шрифт
+$fontFamily: "Inter", sans-serif;
+$mainColor: #000000; //основной цвет шрифта
+$mainBackGround: #f0f3f7; //основной цвет фона
+$white: #ffffff;
+$black: #000000;
+$mainSize: 16;
+$size: $mainSize + px;
+$lineheight: 1.3;
+$fontWeight: 400;
+
+$radius: 20px;
+$color-accent1: #97aac6;
+$color-accent2: #2d6ac8;
+$color-dop: #f0f3f7;
+//Контейнер
+[class*="__container"] {
+  max-width: $maxWidthContainer;
+  margin: 0 auto;
+  padding: 0 $containerPadding;
+}
+
+//Бургер меню
+[class*="__burger"] {
+  display: none;
+  flex-direction: column;
+  row-gap: 4px;
+  cursor: pointer;
+
+  span {
+    width: 24px;
+    height: 3px;
+    border-radius: 5px;
+    background: #ffffff;
+    transition: all 0.3s linear;
+  }
+}
+
+/*Для контейнера картинок в карточках - технический класс*/
+[class*="__ibg"] {
+  position: relative;
+  /*Для самих картинок в карточках технический класс*/
+  img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+}
+
+body {
+  font-family: $fontFamily;
+  background-color: $mainBackGround;
+  color: $mainColor;
+  font-size: clampAd(12, $mainSize);
+  line-height: $lineheight;
+  font-weight: $fontWeight;
+
+  &.lock {
+    overflow: hidden;
+  }
+}
+
+.hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.main {
+  flex: 1 1 auto;
+  &__section {
+    margin-bottom: clampAd(50, 100);
+  }
+}
+
+.title {
+  @include Inter600;
+  font-size: clampAd(20, 45);
+  text-transform: uppercase;
+}
+
+.dops {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+
+  p {
+    font-size: 14px;
+    color: $white;
+    background: $color-accent1;
+    padding: 5px 10px;
+    display: inline-block;
+    border-radius: $radius;
+  }
+}
+
+@import "module/logo";
+@import "module/menu";
+@import "module/btn";
+@import "module/form";
+
+@import "module/header";
+@import "module/intro";
+@import "module/running-line";
+@import "module/about";
+@import "module/services";
+@import "module/work";
+@import "module/warranty";
+@import "module/presentation";
+@import "module/stocks";
+@import "module/application";
+@import "module/footer";
+
+@import "components/adaptive";

@@ -1,0 +1,37 @@
+.about {
+  // .about__container
+  &__container {
+  }
+  // .about__inner
+  &__inner {
+    max-width: 1145px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    gap: clampAd(20, 32);
+  }
+  // .about__content
+  &__content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    row-gap: clampAd(20, 32);
+  }
+  // .about__title
+  &__title {
+  }
+  // .about__text
+  &__text {
+  }
+  // .about__btn
+  &__btn {
+  }
+  // .about__ibg
+  &__ibg {
+    padding: 0px 0px 87.7% 0px;
+  }
+  // .about__img
+  &__img {
+  }
+}

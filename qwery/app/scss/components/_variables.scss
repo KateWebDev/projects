@@ -1,0 +1,27 @@
+//Страница
+$widthReportMax: 1920;
+$widthReportMin: 320;
+
+// Контейнер
+$maxWidthContainer: 1490px;
+$containerPadding: 15px;
+
+//Фон
+$mainBackGround: #000000;
+
+//Шрифт
+$fontFamily: "Open Sans", sans-serif;
+$mainColor: #ffffff;
+$mainSize: 18;
+$size: $mainSize + px;
+$fontWeight: 400;
+$lineheight: calc(32 / $mainSize);
+
+// Доп цвета
+$white: #ffffff;
+$black: #000000;
+
+$color-accent: #ffc178;
+$color-accent-text: #fbd784;
+$color-accent-bg: #ffa343;
+$color-light: #ffd1a0;

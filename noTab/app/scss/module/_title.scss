@@ -1,0 +1,19 @@
+.main-title {
+  @include Montserrat700;
+  font-size: clampAd(35, 64);
+  line-height: 1.09;
+}
+
+.title {
+  @include Montserrat700;
+  font-size: clampAd(24, 51);
+  line-height: 1.2;
+}
+
+.subtitle {
+  @include NotoSans700;
+  font-size: 24px;
+  line-height: 1;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+}

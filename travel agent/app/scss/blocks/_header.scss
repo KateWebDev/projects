@@ -1,0 +1,39 @@
+.header {
+  padding: 16px 0;
+
+  // .header__container
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    column-gap: 16px;
+  }
+  // .header__logo
+  &__logo {
+    position: relative;
+    z-index: 4;
+  }
+  // .header__menu
+  &__menu {
+  }
+  // .header__actions
+  &__actions {
+    display: flex;
+    align-items: center;
+    column-gap: clampAd(10, 12);
+
+    position: relative;
+    z-index: 4;
+  }
+  // .header__action
+  &__action {
+  }
+  // .header__btn
+  &__btn {
+  }
+  // .header__burger
+  &__burger {
+    position: relative;
+    z-index: 4;
+  }
+}

@@ -1,0 +1,33 @@
+.questions {
+  // .questions__container
+  &__container {
+    display: flex;
+    flex-direction: column;
+    row-gap: clampAd(20, 35);
+
+    margin-bottom: clampAd(40, 80);
+
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: clampAd(150, 270);
+      height: clampAd(150, 270);
+      border-radius: $radius-circle;
+      background: rgba($color-accent-1, 0.7);
+      filter: blur(200px);
+    }
+  }
+  // .questions__title
+  &__title {
+  }
+  // .questions__accardeon
+  &__accardeon {
+    max-width: 770px;
+    margin: 0 auto;
+  }
+}

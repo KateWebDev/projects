@@ -1,0 +1,775 @@
+<!--=include header.html -->
+
+<main class="main">
+  <section class="main__section intro">
+    <div class="intro__container">
+      <div class="intro__content">
+        <h1 class="intro__title main-title">
+          Discover your favorite place with us
+        </h1>
+        <div class="intro__text text">
+          <p>
+            Your journey begins here with our curated travel experiences. Discover new horizons, create lasting
+            memories, and explore the world with our expertly crafted itineraries.
+          </p>
+        </div>
+        <form class="intro__form" action="#">
+          <div class="intro__item intro__item--location">
+            <label class="intro__label" for="location">Locations</label>
+            <input class="intro__input" id="location" type="text" placeholder="e.g Bali, Indonesia" required>
+          </div>
+          <div class="intro__item intro__item--date">
+            <label class="intro__label" for="date">Date and time</label>
+            <!--     <input class="intro__input" id="date" type="datetime" placeholder="MM/DD/YYYY" required> -->
+            <div class="calendar">MM/DD/YYYY</div>
+          </div>
+          <button class="intro__button" type="submit">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M11.5 21.7501C5.85 21.7501 1.25 17.1501 1.25 11.5001C1.25 5.85006 5.85 1.25006 11.5 1.25006C17.15 1.25006 21.75 5.85006 21.75 11.5001C21.75 17.1501 17.15 21.7501 11.5 21.7501ZM11.5 2.75006C6.67 2.75006 2.75 6.68006 2.75 11.5001C2.75 16.3201 6.67 20.2501 11.5 20.2501C16.33 20.2501 20.25 16.3201 20.25 11.5001C20.25 6.68006 16.33 2.75006 11.5 2.75006Z" />
+              <path
+                d="M21.9999 22.7501C21.8099 22.7501 21.6199 22.6801 21.4699 22.5301L19.4699 20.5301C19.1799 20.2401 19.1799 19.7601 19.4699 19.4701C19.7599 19.1801 20.2399 19.1801 20.5299 19.4701L22.5299 21.4701C22.8199 21.7601 22.8199 22.2401 22.5299 22.5301C22.3799 22.6801 22.1899 22.7501 21.9999 22.7501Z" />
+            </svg>
+          </button>
+        </form>
+      </div>
+      <div class="intro__image">
+        <a class="intro__promo promo" href="#">
+          <div class="promo__image">
+            <picture>
+              <source type='image/avif' srcset='../images/main/intro/1.avif, ../images/main/intro/1@2x.avif 2x'>
+              <source type='image/webp' srcset='../images/main/intro/1.webp, ../images/main/intro/1@2x.webp 2x'>
+              <img class="promo__img" src="../images/main/intro/1.jpg" srcset="../images/main/intro/1@2x.jpg 2x"
+                alt="Coco De Heaven" loading="lazy" width="58" height="55">
+            </picture>
+          </div>
+          <div class="promo__content">
+            <h5 class="promo__name">
+              Coco De Heaven
+            </h5>
+            <div class="promo__raiting raiting">
+              (4.5)
+            </div>
+            <div class="promo__text">
+              Starts from <span class="promo__text promo__text--weight promo__text--color">$</span> <span
+                class="promo__text--dark promo__text--weight">400</span>
+            </div>
+          </div>
+        </a>
+        <picture>
+          <source type='image/avif' srcset='../images/main/intro/photo.avif, ../images/main/intro/photo@2x.avif 2x'>
+          <source type='image/webp' srcset='../images/main/intro/photo.webp, ../images/main/intro/photo@2x.webp 2x'>
+          <img class="intro__img" src="../images/main/intro/photo.jpg" srcset="../images/main/intro/photo@2x.jpg 2x"
+            alt="" loading="lazy" width="560" height="640">
+        </picture>
+        <a class="intro__scroll" href="#partners">
+          <img src="../images/main/intro/scrollDown.svg" alt="scroll down" width="140" height="140" loading="lazy">
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="main__section partners" id="partners">
+    <div class="partners__container">
+      <h2 class="partners__title">
+        Our Travel Partner
+      </h2>
+      <ul class="partners__items">
+        <li class="partners__item">
+          <div class="partners__image">
+            <img class="partners__img" src="../images/main/partners/1.svg" alt="partner 1">
+          </div>
+        </li>
+        <li class="partners__item">
+          <div class="partners__image">
+            <img class="partners__img" src="../images/main/partners/2.svg" alt="partner 2">
+          </div>
+        </li>
+        <li class="partners__item">
+          <div class="partners__image">
+            <img class="partners__img" src="../images/main/partners/3.svg" alt="partner 3">
+          </div>
+        </li>
+        <li class="partners__item">
+          <div class="partners__image">
+            <img class="partners__img" src="../images/main/partners/4.svg" alt="partner 4">
+          </div>
+        </li>
+        <li class="partners__item">
+          <div class="partners__image">
+            <img class="partners__img" src="../images/main/partners/5.svg" alt="partner 5">
+          </div>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="main__section destinations">
+    <div class="destinations__container">
+      <div class="destinations__top">
+        <div class="destinations__inner">
+          <h2 class="destinations__title title">
+            Popular Destinations
+          </h2>
+          <div class="destinations__text text">
+            <p>
+              See our popular destinations that our client choose
+            </p>
+          </div>
+        </div>
+        <div class="destinations__actions">
+          <button class="destinations__button destinations__button--prev" type="button" aria-label="prev slide"
+            title="prev slide">
+            <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M20 11.5001H7.83L13.42 5.91012L12 4.50012L4 12.5001L12 20.5001L13.41 19.0901L7.83 13.5001H20V11.5001Z" />
+            </svg>
+          </button>
+          <button class="destinations__button destinations__button--next" type="button" aria-label="next slide"
+            title="next slide">
+            <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M12 4.50012L10.59 5.91012L16.17 11.5001H4V13.5001H16.17L10.59 19.0901L12 20.5001L20 12.5001L12 4.50012Z" />
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+    <div class="destinations__left-container">
+      <div class="destinations__slider slider swiper">
+        <ul class="slider__items swiper-wrapper">
+          <li class="slider__item swiper-slide">
+            <a class="slider__card" href="#">
+              <div class="slider__ibg">
+                <picture>
+                  <source type='image/avif'
+                    srcset='../images/main/destinations/1.avif, ../images/main/destinations/1@2x.avif 2x'>
+                  <source type='image/webp'
+                    srcset='../images/main/destinations/1.webp, ../images/main/destinations/1@2x.webp 2x'>
+                  <img class="slider__img" src="../images/main/destinations/1.jpg"
+                    srcset="../images/main/destinations/1@2x.jpg 2x" alt="slider 1" loading="lazy" width="304"
+                    height="304">
+                </picture>
+              </div>
+              <div class="slider__content">
+                <h5 class="slider__name">
+                  Venice, Italy
+                </h5>
+                <div class="slider__raiting raiting">
+                  (4.5)
+                </div>
+                <p class="slider__text info">
+                  Starts from <span class="info--color info--weight">$</span> <span
+                    class="info--dark info--weight">900</span>
+                </p>
+              </div>
+            </a>
+          </li>
+          <li class="slider__item swiper-slide">
+            <a class="slider__card" href="#">
+              <div class="slider__ibg">
+                <picture>
+                  <source type='image/avif'
+                    srcset='../images/main/destinations/2.avif, ../images/main/destinations/2@2x.avif 2x'>
+                  <source type='image/webp'
+                    srcset='../images/main/destinations/2.webp, ../images/main/destinations/2@2x.webp 2x'>
+                  <img class="slider__img" src="../images/main/destinations/2.jpg"
+                    srcset="../images/main/destinations/2@2x.jpg 2x" alt="slider 2" loading="lazy" width="304"
+                    height="304">
+                </picture>
+              </div>
+              <div class="slider__content">
+                <h5 class="slider__name">
+                  Bali, Indonesia
+                </h5>
+                <div class="slider__raiting raiting">
+                  (4.5)
+                </div>
+                <p class="slider__text info">
+                  Starts from <span class="info--color info--weight">$</span> <span
+                    class="info--dark info--weight">480</span>
+                </p>
+              </div>
+            </a>
+          </li>
+          <li class="slider__item swiper-slide">
+            <a class="slider__card" href="#">
+              <div class="slider__ibg">
+                <picture>
+                  <source type='image/avif'
+                    srcset='../images/main/destinations/3.avif, ../images/main/destinations/3@2x.avif 2x'>
+                  <source type='image/webp'
+                    srcset='../images/main/destinations/3.webp, ../images/main/destinations/3@2x.webp 2x'>
+                  <img class="slider__img" src="../images/main/destinations/3.jpg"
+                    srcset="../images/main/destinations/3@2x.jpg 2x" alt="slider 3" loading="lazy" width="304"
+                    height="304">
+                </picture>
+              </div>
+              <div class="slider__content">
+                <h5 class="slider__name">
+                  Bangkok, Thailand
+                </h5>
+                <div class="slider__raiting raiting">
+                  (4.5)
+                </div>
+                <p class="slider__text info">
+                  Starts from <span class="info--color info--weight">$</span> <span
+                    class="info--dark info--weight">440</span>
+                </p>
+              </div>
+            </a>
+          </li>
+          <li class="slider__item swiper-slide">
+            <a class="slider__card" href="#">
+              <div class="slider__ibg">
+                <picture>
+                  <source type='image/avif'
+                    srcset='../images/main/destinations/4.avif, ../images/main/destinations/4@2x.avif 2x'>
+                  <source type='image/webp'
+                    srcset='../images/main/destinations/4.webp, ../images/main/destinations/4@2x.webp 2x'>
+                  <img class="slider__img" src="../images/main/destinations/4.jpg"
+                    srcset="../images/main/destinations/4@2x.jpg 2x" alt="slider 4" loading="lazy" width="304"
+                    height="304">
+                </picture>
+              </div>
+              <div class="slider__content">
+                <h5 class="slider__name">
+                  Santorini, Greek
+                </h5>
+                <div class="slider__raiting raiting">
+                  (4.5)
+                </div>
+                <p class="slider__text info">
+                  Starts from <span class="info--color info--weight">$</span> <span
+                    class="info--dark info--weight">900</span>
+                </p>
+              </div>
+            </a>
+          </li>
+          <li class="slider__item swiper-slide">
+            <a class="slider__card" href="#">
+              <div class="slider__ibg">
+                <picture>
+                  <source type='image/avif'
+                    srcset='../images/main/destinations/5.avif, ../images/main/destinations/5@2x.avif 2x'>
+                  <source type='image/webp'
+                    srcset='../images/main/destinations/5.webp, ../images/main/destinations/5@2x.webp 2x'>
+                  <img class="slider__img" src="../images/main/destinations/5.jpg"
+                    srcset="../images/main/destinations/5@2x.jpg 2x" alt="slider 5" loading="lazy" width="304"
+                    height="304">
+                </picture>
+              </div>
+              <div class="slider__content">
+                <h5 class="slider__name">
+                  Paris, France
+                </h5>
+                <div class="slider__raiting raiting">
+                  (4.5)
+                </div>
+                <p class="slider__text info">
+                  Starts from <span class="info--color info--weight">$</span> <span
+                    class="info--dark info--weight">1100</span>
+                </p>
+              </div>
+            </a>
+          </li>
+          <li class="slider__item swiper-slide">
+            <a class="slider__card" href="#">
+              <div class="slider__ibg">
+                <picture>
+                  <source type='image/avif'
+                    srcset='../images/main/destinations/6.avif, ../images/main/destinations/6@2x.avif 2x'>
+                  <source type='image/webp'
+                    srcset='../images/main/destinations/6.webp, ../images/main/destinations/6@2x.webp 2x'>
+                  <img class="slider__img" src="../images/main/destinations/6.jpg"
+                    srcset="../images/main/destinations/6@2x.jpg 2x" alt="slider 6" loading="lazy" width="304"
+                    height="304">
+                </picture>
+              </div>
+              <div class="slider__content">
+                <h5 class="slider__name">
+                  New York, USA
+                </h5>
+                <div class="slider__raiting raiting">
+                  (4.5)
+                </div>
+                <p class="slider__text info">
+                  Starts from <span class="info--color info--weight">$</span> <span
+                    class="info--dark info--weight">1800</span>
+                </p>
+              </div>
+            </a>
+          </li>
+          <li class="slider__item swiper-slide">
+            <a class="slider__card" href="#">
+              <div class="slider__ibg">
+                <picture>
+                  <source type='image/avif'
+                    srcset='../images/main/destinations/7.avif, ../images/main/destinations/7@2x.avif 2x'>
+                  <source type='image/webp'
+                    srcset='../images/main/destinations/7.webp, ../images/main/destinations/7@2x.webp 2x'>
+                  <img class="slider__img" src="../images/main/destinations/7.jpg"
+                    srcset="../images/main/destinations/7@2x.jpg 2x" alt="slider 7" loading="lazy" width="304"
+                    height="304">
+                </picture>
+              </div>
+              <div class="slider__content">
+                <h5 class="slider__name">
+                  Dubai, UAE
+                </h5>
+                <div class="slider__raiting raiting">
+                  (4.5)
+                </div>
+                <p class="slider__text info">
+                  Starts from <span class="info--color info--weight">$</span> <span
+                    class="info--dark info--weight">900</span>
+                </p>
+              </div>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="main__section services">
+    <div class="services__container">
+      <div class="services__content">
+        <h2 class="services__title title">
+          Embark on unforgettable journeys with our premium travel services
+        </h2>
+        <div class="services__text text">
+          <p>
+            Picture-perfect getaways are just a click away. Find your slice of paradise, whether it's a tropical island,
+            a charming city, or an enchanting countryside retreat.
+          </p>
+        </div>
+        <ul class="services__items">
+          <li class="services__item">
+            <div class="services__inner">
+              <h5 class="services__name">
+                Best Choice
+              </h5>
+              <div class="services__info text">
+                <p>
+                  We always prioritize our customer comfort and satisfaction. That&rsquo;s why we only accept the best
+                  hotel and
+                  destination
+                </p>
+              </div>
+            </div>
+          </li>
+          <li class="services__item">
+            <div class="services__inner">
+              <h5 class="services__name">
+                Competitive Prices
+              </h5>
+              <div class="services__info text">
+                <p>
+                  Altough the price tends to be cheaper but it will not affect the quality of service
+                </p>
+              </div>
+            </div>
+          </li>
+          <li class="services__item">
+            <div class="services__inner">
+              <h5 class="services__name">
+                Refund and Reschedule
+              </h5>
+              <div class="services__info text">
+                <p>
+                  Don&rsquo;t worry if suddenly you have problem and want to reschule or refund, you can get fully.
+                </p>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+      <div class="services__images">
+        <div class="services__promo">
+          <ul class="services__promo-images">
+            <li class="services__promo-image">
+              <picture>
+                <source type='image/avif' srcset='../images/main/avatars/10.avif, ../images/main/avatars/10@2x.avif 2x'>
+                <source type='image/webp' srcset='../images/main/avatars/10.webp, ../images/main/avatars/10@2x.webp 2x'>
+                <img class="services__promo-img" src="../images/main/avatars/10.jpg"
+                  srcset="../images/main/avatars/10@2x.jpg 2x" alt="" loading="lazy" width="48" height="48">
+              </picture>
+            </li>
+            <li class="services__promo-image">
+              <picture>
+                <source type='image/avif' srcset='../images/main/avatars/11.avif, ../images/main/avatars/11@2x.avif 2x'>
+                <source type='image/webp' srcset='../images/main/avatars/1.webp, ../images/main/avatars/10@2x.webp 2x'>
+                <img class="services__promo-img" src="../images/main/avatars/11.jpg"
+                  srcset="../images/main/avatars/11@2x.jpg 2x" alt="" loading="lazy" width="48" height="48">
+              </picture>
+            </li>
+            <li class="services__promo-image">
+              <picture>
+                <source type='image/avif' srcset='../images/main/avatars/12.avif, ../images/main/avatars/12@2x.avif 2x'>
+                <source type='image/webp' srcset='../images/main/avatars/12.webp, ../images/main/avatars/12@2x.webp 2x'>
+                <img class="services__promo-img" src="../images/main/avatars/12.jpg"
+                  srcset="../images/main/avatars/12@2x.jpg 2x" alt="" loading="lazy" width="48" height="48">
+              </picture>
+            </li>
+          </ul>
+          <div class="services__promo-text">
+            <span>10K+</span> Satisfied Customer
+          </div>
+        </div>
+        <div class="services__image services__image--big">
+          <picture>
+            <source type='image/avif' srcset='../images/main/services/1.avif, ../images/main/services/1@2x.avif 2x'>
+            <source type='image/webp' srcset='../images/main/services/1.webp, ../images/main/services/1@2x.webp 2x'>
+            <img class="services__img" src="../images/main/services/1.jpg" srcset="../images/main/services/1@2x.jpg 2x"
+              alt="" loading="lazy" width="560" height="320">
+          </picture>
+        </div>
+        <div class="services__image">
+          <picture>
+            <source type='image/avif' srcset='../images/main/services/2.avif, ../images/main/services/2@2x.avif 2x'>
+            <source type='image/webp' srcset='../images/main/services/2.webp, ../images/main/services/2@2x.webp 2x'>
+            <img class="services__img" src="../images/main/services/2.jpg" srcset="../images/main/services/2@2x.jpg 2x"
+              alt="" loading="lazy" width="268" height="264">
+          </picture>
+        </div>
+        <div class="services__image">
+          <picture>
+            <source type='image/avif' srcset='../images/main/services/3.avif, ../images/main/services/3@2x.avif 2x'>
+            <source type='image/webp' srcset='../images/main/services/3.webp, ../images/main/services/3@2x.webp 2x'>
+            <img class="services__img" src="../images/main/services/3.jpg" srcset="../images/main/services/3@2x.jpg 2x"
+              alt="" loading="lazy" width="268" height="264">
+          </picture>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="about">
+    <div class="about__container">
+      <div class="about__image">
+        <picture>
+          <source type='image/avif' srcset='../images/main/about/photo.avif, ../images/main/about/photo@2x.avif 2x'>
+          <source type='image/webp' srcset='../images/main/about/photo.webp, ../images/main/about/photo@2x.webp 2x'>
+          <img class="about__img" src="../images/main/about/photo.jpg" srcset="../images/main/about/photo@2x.jpg 2x"
+            alt="" loading="lazy" width="560" height="560">
+        </picture>
+        <a class="about__promo promo" href="#">
+          <div class="promo__image">
+            <picture>
+              <source type='image/avif' srcset='../images/main/about/1.avif, ../images/main/about/1@2x.avif 2x'>
+              <source type='image/webp' srcset='../images/main/about/1.webp, ../images/main/about/1@2x.webp 2x'>
+              <img class="promo__img" src="../images/main/about/1.jpg" srcset="../images/main/about/1@2x.jpg 2x"
+                alt="Heaven Resort" loading="lazy" width="58" height="55">
+            </picture>
+          </div>
+          <div class="promo__content">
+            <h5 class="promo__name">
+              Heaven Resort
+            </h5>
+            <div class="promo__raiting raiting">
+              (4.8)
+            </div>
+            <div class="promo__text">
+              Starts from <span class="promo__text promo__text--weight promo__text--color">$</span> <span
+                class="promo__text--dark promo__text--weight">450</span>
+            </div>
+          </div>
+        </a>
+        <div class="about__person promo">
+          <div class="promo__image promo__image--small">
+            <picture>
+              <source type='image/avif' srcset='../images/main/avatars/13.avif, ../images/main/avatars/13@2x.avif 2x'>
+              <source type='image/webp' srcset='../images/main/avatars/13.webp, ../images/main/avatars/13@2x.webp 2x'>
+              <img class="promo__img promo__img--circle" src="../images/main/avatars/13.jpg"
+                srcset="../images/main/avatars/13@2x.jpg 2x" alt="Jake Anderson" loading="lazy" width="48" height="48">
+            </picture>
+          </div>
+          <div class="promo__content">
+            <h5 class="promo__name">
+              Heaven Resort
+            </h5>
+            <div class="promo__text promo__text--capitalize">
+              Best Tour Guide
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="about__content">
+        <h2 class="about__title title">
+          With Our Service We Will Explore Something Different
+        </h2>
+        <div class="about__text text">
+          <p>
+            Uncover hidden gems and immerse yourself in vibrant cultures. From breathtaking landscapes to awe-inspiring
+            destinations, let us guide you to the most extraordinary places on the planet.
+          </p>
+        </div>
+        <a class="about__btn btn btn--color" href="#">
+          Explore more
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="reviews">
+    <div class="reviews__container">
+      <ul class="reviews__items">
+        <li class="reviews__item">
+          <div class="reviews__raiting" data-rateyo-rating="5"></div>
+          <blockquote class="reviews__blockquote">
+            An outstanding resource for travel enthusiasts! The website's destination reviews and travel advice were
+            spot-on. I now trust their recommendations for all my trips..
+          </blockquote>
+          <div class="reviews__user">
+            <div class="reviews__user-image">
+              <picture>
+                <source type='image/avif' srcset='../images/main/avatars/01.avif, ../images/main/avatars/01@2x.avif 2x'>
+                <source type='image/webp' srcset='../images/main/avatars/01.webp, ../images/main/avatars/01@2x.webp 2x'>
+                <img class="reviews__user-img" src="../images/main/avatars/01.jpg"
+                  srcset="../images/main/avatars/01@2x.jpg 2x" alt="user 1" loading="lazy" width="56" height="56">
+              </picture>
+            </div>
+            <div class="reviews__user-content">
+              <a class="reviews__user-name" href="#">
+                Hendra Paru Paru
+              </a>
+              <div class="reviews__user-status">
+                Travel Enthusiast
+              </div>
+            </div>
+          </div>
+        </li>
+        <li class="reviews__item">
+          <div class="reviews__raiting" data-rateyo-rating="5"></div>
+          <blockquote class="reviews__blockquote">
+            I had a seamless booking process with this travel website. Their website was easy to navigate, and I got
+            fantastic deals on flights and accommodation. Will definitely use them for future trips.
+          </blockquote>
+          <div class="reviews__user">
+            <div class="reviews__user-image">
+              <picture>
+                <source type='image/avif' srcset='../images/main/avatars/02.avif, ../images/main/avatars/02@2x.avif 2x'>
+                <source type='image/webp' srcset='../images/main/avatars/02.webp, ../images/main/avatars/02@2x.webp 2x'>
+                <img class="reviews__user-img" src="../images/main/avatars/02.jpg"
+                  srcset="../images/main/avatars/02@2x.jpg 2x" alt="user 2" loading="lazy" width="56" height="56">
+              </picture>
+            </div>
+            <div class="reviews__user-content">
+              <a class="reviews__user-name" href="#">
+                Akbar Cenglu
+              </a>
+              <div class="reviews__user-status">
+                Travel Enthusiast
+              </div>
+            </div>
+          </div>
+        </li>
+        <li class="reviews__item">
+          <div class="reviews__raiting" data-rateyo-rating="4"></div>
+          <blockquote class="reviews__blockquote">
+            The detailed travel guides provided by this website were invaluable during our journey. We felt confident
+            exploring a new destination, thanks to their helpful tips and insights. erat.
+          </blockquote>
+          <div class="reviews__user">
+            <div class="reviews__user-image">
+              <picture>
+                <source type='image/avif' srcset='../images/main/avatars/03.avif, ../images/main/avatars/03@2x.avif 2x'>
+                <source type='image/webp' srcset='../images/main/avatars/03.webp, ../images/main/avatars/03@2x.webp 2x'>
+                <img class="reviews__user-img" src="../images/main/avatars/03.jpg"
+                  srcset="../images/main/avatars/03@2x.jpg 2x" alt="user 3" loading="lazy" width="56" height="56">
+              </picture>
+            </div>
+            <div class="reviews__user-content">
+              <a class="reviews__user-name" href="#">
+                Lake Paul
+              </a>
+              <div class="reviews__user-status">
+                Travel Enthusiast
+              </div>
+            </div>
+          </div>
+        </li>
+        <li class="reviews__item">
+          <div class="reviews__raiting" data-rateyo-rating="5"></div>
+          <blockquote class="reviews__blockquote">
+            Amazing experience! The travel website made booking our vacation a breeze. Everything was well-organized,
+            and we had a fantastic time exploring new places. Highly recommend!
+          </blockquote>
+          <div class="reviews__user">
+            <div class="reviews__user-image">
+              <picture>
+                <source type='image/avif' srcset='../images/main/avatars/04.avif, ../images/main/avatars/04@2x.avif 2x'>
+                <source type='image/webp' srcset='../images/main/avatars/04.webp, ../images/main/avatars/04@2x.webp 2x'>
+                <img class="reviews__user-img" src="../images/main/avatars/04.jpg"
+                  srcset="../images/main/avatars/04@2x.jpg 2x" alt="user 4" loading="lazy" width="56" height="56">
+              </picture>
+            </div>
+            <div class="reviews__user-content">
+              <a class="reviews__user-name" href="#">
+                Nichole Edward
+              </a>
+              <div class="reviews__user-status">
+                Travel Enthusiast
+              </div>
+            </div>
+          </div>
+        </li>
+        <li class="reviews__item">
+          <div class="reviews__raiting" data-rateyo-rating="4"></div>
+          <blockquote class="reviews__blockquote">
+            The travel website's customer service is top-notch! They were quick to respond to my queries and helped me
+            plan a dream vacation. It was an excellent experience from start to finish.
+          </blockquote>
+          <div class="reviews__user">
+            <div class="reviews__user-image">
+              <picture>
+                <source type='image/avif' srcset='../images/main/avatars/05.avif, ../images/main/avatars/05@2x.avif 2x'>
+                <source type='image/webp' srcset='../images/main/avatars/05.webp, ../images/main/avatars/05@2x.webp 2x'>
+                <img class="reviews__user-img" src="../images/main/avatars/05.jpg"
+                  srcset="../images/main/avatars/05@2x.jpg 2x" alt="user 5" loading="lazy" width="56" height="56">
+              </picture>
+            </div>
+            <div class="reviews__user-content">
+              <a class="reviews__user-name" href="#">
+                Jennice Ong
+              </a>
+              <div class="reviews__user-status">
+                Travel Enthusiast
+              </div>
+            </div>
+          </div>
+        </li>
+        <li class="reviews__item">
+          <div class="reviews__raiting" data-rateyo-rating="5"></div>
+          <blockquote class="reviews__blockquote">
+            Hands down the best travel website I've ever used! The user interface was so intuitive, and I was able to
+            book my dream vacation effortlessly. erat.
+          </blockquote>
+          <div class="reviews__user">
+            <div class="reviews__user-image">
+              <picture>
+                <source type='image/avif' srcset='../images/main/avatars/01.avif, ../images/main/avatars/01@2x.avif 2x'>
+                <source type='image/webp' srcset='../images/main/avatars/01.webp, ../images/main/avatars/01@2x.webp 2x'>
+                <img class="reviews__user-img" src="../images/main/avatars/01.jpg"
+                  srcset="../images/main/avatars/01@2x.jpg 2x" alt="user 6" loading="lazy" width="56" height="56">
+              </picture>
+            </div>
+            <div class="reviews__user-content">
+              <a class="reviews__user-name" href="#">
+                Hendra Paru Paru
+              </a>
+              <div class="reviews__user-status">
+                Travel Enthusiast
+              </div>
+            </div>
+          </div>
+        </li>
+        <li class="reviews__item">
+          <div class="reviews__raiting" data-rateyo-rating="5"></div>
+          <blockquote class="reviews__blockquote">
+            Lorem ipsum dolor sit amet, Efficient and reliable! The travel website helped me find the best travel deals,
+            and their user-friendly interface made the booking process a breeze.
+          </blockquote>
+          <div class="reviews__user">
+            <div class="reviews__user-image">
+              <picture>
+                <source type='image/avif' srcset='../images/main/avatars/07.avif, ../images/main/avatars/07@2x.avif 2x'>
+                <source type='image/webp' srcset='../images/main/avatars/07.webp, ../images/main/avatars/07@2x.webp 2x'>
+                <img class="reviews__user-img" src="../images/main/avatars/07.jpg"
+                  srcset="../images/main/avatars/07@2x.jpg 2x" alt="user 7" loading="lazy" width="56" height="56">
+              </picture>
+            </div>
+            <div class="reviews__user-content">
+              <a class="reviews__user-name" href="#">
+                Jonathan R.
+              </a>
+              <div class="reviews__user-status">
+                Travel Enthusiast
+              </div>
+            </div>
+          </div>
+        </li>
+        <li class="reviews__item">
+          <div class="reviews__raiting" data-rateyo-rating="5"></div>
+          <blockquote class="reviews__blockquote">
+            I loved the personalized itinerary feature of this travel website. It allowed me to plan my trip according
+            to my preferences, making it a truly customized experience.
+          </blockquote>
+          <div class="reviews__user">
+            <div class="reviews__user-image">
+              <picture>
+                <source type='image/avif' srcset='../images/main/avatars/08.avif, ../images/main/avatars/08@2x.avif 2x'>
+                <source type='image/webp' srcset='../images/main/avatars/08.webp, ../images/main/avatars/08@2x.webp 2x'>
+                <img class="reviews__user-img" src="../images/main/avatars/08.jpg"
+                  srcset="../images/main/avatars/08@2x.jpg 2x" alt="user 8" loading="lazy" width="56" height="56">
+              </picture>
+            </div>
+            <div class="reviews__user-content">
+              <a class="reviews__user-name" href="#">
+                Angela Cole
+              </a>
+              <div class="reviews__user-status">
+                Travel Enthusiast
+              </div>
+            </div>
+          </div>
+        </li>
+        <li class="reviews__item">
+          <div class="reviews__raiting" data-rateyo-rating="5"></div>
+          <blockquote class="reviews__blockquote">
+            A one-stop-shop for all things travel! The website's variety of travel options and user reviews helped me
+            make informed decisions and ensured a smooth trip.
+          </blockquote>
+          <div class="reviews__user">
+            <div class="reviews__user-image">
+              <picture>
+                <source type='image/avif' srcset='../images/main/avatars/09.avif, ../images/main/avatars/09@2x.avif 2x'>
+                <source type='image/webp' srcset='../images/main/avatars/09.webp, ../images/main/avatars/09@2x.webp 2x'>
+                <img class="reviews__user-img" src="../images/main/avatars/09.jpg"
+                  srcset="../images/main/avatars/09@2x.jpg 2x" alt="user 9" loading="lazy" width="56" height="56">
+              </picture>
+            </div>
+            <div class="reviews__user-content">
+              <a class="reviews__user-name" href="#">
+                Bambang Susilo
+              </a>
+              <div class="reviews__user-status">
+                Travel Enthusiast
+              </div>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="newsletter">
+    <div class="newsletter__container">
+      <div class="newsletter__content">
+        <h2 class="newsletter__title">
+          Join our newsletter to stay up to date
+        </h2>
+        <div class="newsletter__text text">
+          <p>
+            Stay connected with our brand
+          </p>
+        </div>
+      </div>
+      <form class="newsletter__form" action="#" autocomplete="off">
+        <div class="newsletter__item">
+          <label class="newsletter__label" for="email" aria-label="enter your email address">
+            <img src="../images/icons/email.svg" alt="email" loading="lazy" width="24" height="24">
+          </label>
+          <input class="newsletter__input" id="email" type="email" placeholder="Enter your email" required
+            autocomplete="off">
+        </div>
+        <button class="newsletter__btn btn" type="submit">
+          Subscribe
+        </button>
+      </form>
+    </div>
+  </section>
+</main>
+
+<!--=include footer.html -->

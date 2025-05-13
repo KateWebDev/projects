@@ -1,0 +1,65 @@
+.about {
+  // .about__items
+  &__items {
+  }
+  // .about__item
+  &__item {
+    min-height: 637px;
+
+    &:nth-child(2n) {
+      background: $color-bg-accent;
+
+      .about__card {
+        padding-left: 15px;
+        flex-direction: row-reverse;
+        justify-content: flex-end;
+        column-gap: 175px;
+      }
+
+      &:last-child {
+        .about__img {
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+  // .about__container
+  &__container {
+  }
+  // .
+  &__card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 50px;
+    padding-right: 75px;
+    column-gap: 200px;
+  }
+  // .about__content
+  &__content {
+    padding: clamp(50px, calc(50px + (100 - 50) * ((100vw - 320px) / ($widthReportMax - $widthReportMin))), 100px) 0;
+  }
+  // .about__title
+  &__title {
+    max-width: 482px;
+    margin-bottom: 15px;
+  }
+  // .about__text
+  &__text {
+    max-width: 400px;
+    color: $color-accent;
+    letter-spacing: 0.8px;
+    margin-bottom: 37px;
+  }
+  // .about__btn
+  &__btn {
+  }
+  // .about__img
+  &__img {
+    max-width: 518px;
+    max-height: 760px;
+    width: 100%;
+    margin-top: -60px;
+    margin-bottom: -60px;
+  }
+}

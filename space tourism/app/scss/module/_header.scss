@@ -1,0 +1,91 @@
+.header {
+  padding: clamp(30px, calc(30px + (75 - 30) * ((100vw - 320px) / ($widthReportMax - $widthReportMin))), 75px) 0 30px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 3;
+
+  &--fixed {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    overflow: auto;
+    background: #010203;
+  }
+
+  // .header__container
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  // .header__nav
+  &__nav {
+  }
+  // .header__menu
+  &__menu {
+  }
+  // .header__burger
+  &__burger {
+    position: relative;
+    z-index: 3;
+  }
+  // .header__link
+  &__link {
+    font-size: clamp(18px, calc(18px + (24 - 18) * ((100vw - 320px) / ($widthReportMax - $widthReportMin))), 24px);
+
+    margin-right: clamp(10px, calc(10px + (130 - 10) * ((100vw - 320px) / ($widthReportMax - $widthReportMin))), 130px);
+
+    padding-right: clamp(40px, calc(40px + (50 - 40) * ((100vw - 320px) / ($widthReportMax - $widthReportMin))), 50px);
+    position: relative;
+    z-index: 3;
+
+    &::after {
+      content: "";
+      position: absolute;
+      right: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 30px;
+      height: 30px;
+      background: image-set(
+          url("../images/header/head.avif") type("image/avif"),
+          url("../images/header/head.webp") type("image/webp"),
+          url("../images/header/head.png")
+        )
+        left center/cover no-repeat;
+    }
+
+    @media (any-hover: hover) and (min-width: 992px) {
+      &:hover {
+        opacity: 0.8;
+      }
+    }
+  }
+}
+
+.menu {
+  display: flex;
+  column-gap: 30px;
+  // .menu__item
+  &__item {
+  }
+  // .menu__link
+  &__link {
+    font-size: 18px;
+    text-transform: uppercase;
+    transition: all 0.3s linear;
+
+    @media (any-hover: hover) and (min-width: 992px) {
+      &:hover {
+        color: $color-accent;
+      }
+    }
+
+    &--active {
+      color: $color-accent;
+    }
+  }
+}

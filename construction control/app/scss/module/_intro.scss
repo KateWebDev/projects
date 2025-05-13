@@ -1,0 +1,67 @@
+.intro {
+  // .intro__container
+  &__container {
+    min-height: clamp(
+      600px,
+      calc(600px + (790 - 600) * ((100vw - 320px) / ($widthReportMax - $widthReportMin))),
+      790px
+    );
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      bottom: 100px;
+      left: 0;
+      width: 100%;
+      max-height: 328px;
+      height: 100%;
+      background: image-set(
+          url("../images/main/intro/bg.avif") type("image/avif"),
+          url("../images/main/intro/bg.webp") type("image/webp"),
+          url("../images/main/intro/bg.png")
+        )
+        center/cover no-repeat;
+      z-index: -1;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 67px;
+      background: image-set(
+          url("../images/main/intro/cars.avif") type("image/avif"),
+          url("../images/main/intro/cars.webp") type("image/webp"),
+          url("../images/main/intro/cars.png")
+        )
+        bottom center/cover no-repeat;
+      z-index: -1;
+    }
+  }
+  // .intro__title
+  &__title {
+    max-width: 818px;
+    padding-top: clamp(40px, calc(40px + (74 - 40) * ((100vw - 320px) / ($widthReportMax - $widthReportMin))), 74px);
+    font-size: clamp(22px, calc(22px + (48 - 22) * ((100vw - 320px) / ($widthReportMax - $widthReportMin))), 48px);
+    color: $color-btn;
+    line-height: 1.3;
+    text-align: center;
+    margin: 0 auto 30px;
+  }
+  // .intro__actions
+  &__actions {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px 16px;
+  }
+  // .intro__action
+  &__action {
+  }
+  // .intro__btn
+  &__btn {
+  }
+}

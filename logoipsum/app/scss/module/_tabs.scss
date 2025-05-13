@@ -1,0 +1,156 @@
+.tabs {
+  // .tabs__items
+  &__items {
+    position: absolute;
+    top: clamp(10%, calc(10% + (20 - 10) * ((100vw - 320px) / ($widthReportMax - $widthReportMin))), 20%);
+    right: 0;
+    display: inline-flex;
+    border-radius: 10px;
+    background: #f7f7fb;
+    padding: 0 6px;
+    margin-bottom: 20px;
+  }
+
+  // .tabs__item
+  &__item {
+    min-width: clamp(100px, calc(100px + (160 - 100) * ((100vw - 320px) / ($widthReportMax - $widthReportMin))), 160px);
+    padding: 23px 0;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    @include font_family;
+    font-size: clamp(14px, calc(14px + (16 - 14) * ((100vw - 320px) / ($widthReportMax - $widthReportMin))), 16px);
+    font-weight: 700;
+    line-height: 1;
+    letter-spacing: -0.5px;
+    color: #19191b;
+
+    // .tabs__item--active
+    &--active {
+      background: #5454d4;
+      color: #ffffff;
+      &:nth-child(1) {
+        border-radius: 10px 0px 0px 10px;
+      }
+      &:nth-child(2) {
+        border-radius: 0px 10px 10px 0px;
+      }
+    }
+  }
+
+  // .tabs__content
+  &__content {
+    padding: 30px 0;
+  }
+
+  // .tabs__block
+  &__block {
+    display: none;
+
+    // .tabs__block--active
+    &--active {
+      display: block;
+    }
+  }
+  // .tabs__list
+  &__list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  // .tabs__point
+  &__point {
+    border-radius: 10px;
+    background: #f8f8f8;
+    padding: 34px clamp(10px, calc(10px + (25 - 10) * ((100vw - 320px) / ($widthReportMax - $widthReportMin))), 25px)
+      22px;
+    max-width: 330px;
+    width: 100%;
+    text-align: center;
+
+    &--hit {
+      max-width: 375px;
+      padding: 50px clamp(10px, calc(10px + (34 - 10) * ((100vw - 320px) / ($widthReportMax - $widthReportMin))), 34px)
+        37px;
+      background: #ff7143;
+      box-shadow: 0px 32px 34px 0px rgba(255, 112, 59, 0.32);
+      color: #ffffff;
+
+      .tabs__price {
+        color: #ffffff;
+      }
+
+      .tabs__btn {
+        background: #9f3919;
+        border: 1px solid #9f3919;
+        color: #ffffff;
+
+        @media (any-hover: hover) and (min-width: 992px) {
+          &:hover {
+            color: #9f3919;
+            background: #ffffff;
+          }
+        }
+      }
+    }
+  }
+  // .tabs__name
+  &__name {
+    @include font_family;
+    font-size: clamp(14px, calc(14px + (18 - 14) * ((100vw - 320px) / ($widthReportMax - $widthReportMin))), 18px);
+    line-height: 1.55;
+    letter-spacing: -0.563px;
+    margin-bottom: 22px;
+  }
+  // .tabs__price
+  &__price {
+    @include font_family;
+    font-size: clamp(25px, calc(25px + (40 - 25) * ((100vw - 320px) / ($widthReportMax - $widthReportMin))), 40px);
+    font-weight: 700;
+    line-height: 1;
+    letter-spacing: -1.034px;
+    color: #1d293f;
+    margin-bottom: 28px;
+    span {
+      font-size: clamp(18px, calc(18px + (28 - 18) * ((100vw - 320px) / ($widthReportMax - $widthReportMin))), 28px);
+    }
+  }
+  // .tabs__enumerations
+  &__enumerations {
+    margin-bottom: 36px;
+  }
+  // .tabs__enumeration
+  &__enumeration {
+    font-size: clamp(12px, calc(12px + (17 - 12) * ((100vw - 320px) / ($widthReportMax - $widthReportMin))), 17px);
+    line-height: 2.94;
+    letter-spacing: -0.531px;
+  }
+  // .tabs__btn
+  &__btn {
+    display: inline-block;
+    width: 100%;
+    @include font_family;
+    font-size: 17px;
+    font-weight: 700;
+    line-height: 1;
+    text-align: center;
+    letter-spacing: -0.531px;
+    color: #5454d4;
+    border-radius: 10px;
+    border: 1px solid #eae9f2;
+    background: #ffffff;
+    padding: 19px;
+    transition: all 0.3s linear;
+
+    @media (any-hover: hover) and (min-width: 992px) {
+      &:hover {
+        background: #5454d4;
+        color: #ffffff;
+      }
+    }
+  }
+}

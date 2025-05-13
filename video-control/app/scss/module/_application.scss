@@ -1,0 +1,62 @@
+.application {
+  // .application__container
+  &__container {
+    display: flex;
+    flex-direction: column;
+    row-gap: clampAd(20, 40);
+  }
+  // .application__top
+  &__top {
+    border-radius: $radius;
+    background: $white;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: clampAd(20, 40);
+  }
+  // .application__title
+  &__title {
+    max-width: 400px;
+    text-transform: none;
+  }
+  // .application__items
+  &__items {
+    max-width: 640px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: clampAd(20, 40);
+  }
+  // .application__item
+  &__item {
+    flex: 0 0 calc(50% - (clampAd(20, 40) / 2));
+    border-radius: $radius;
+    background: $color-accent2;
+    color: $white;
+    padding: 10px;
+    min-height: clampAd(100, 130);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      width: clampAd(25, 37);
+      aspect-ratio: 1;
+      border-radius: 50%;
+      background: $white url(../../images/ok.svg) center/clampAd(15, 24) clampAd(15, 24) no-repeat;
+    }
+  }
+  // .application__text
+  &__text {
+    @include Inter500;
+    font-size: clampAd(12, 18);
+  }
+  // .application__form
+  &__form {
+  }
+}

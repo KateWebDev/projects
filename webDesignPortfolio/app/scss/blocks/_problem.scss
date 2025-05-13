@@ -1,0 +1,43 @@
+.problem {
+  padding-bottom: clampAd(220, 234);
+
+  // .problem__container
+  &__container {
+  }
+  // .problem__badge
+  &__badge {
+    margin-bottom: 12px;
+  }
+  // .problem__text
+  &__text {
+    margin-bottom: clampAd(48, 88);
+  }
+  // .problem__link
+  &__link {
+    text-decoration: underline;
+    text-underline-offset: 10px;
+    margin-bottom: clampAd(85, 100);
+    transition: all 0.3s linear;
+
+    @media (any-hover: hover) {
+      &:hover {
+        color: $color-dop;
+        text-decoration: underline;
+        text-underline-offset: 6px;
+      }
+    }
+  }
+  &__image {
+    width: 100%;
+    height: clampAd(574, 769);
+  }
+  // .problem__img
+  &__img {
+    display: block;
+    max-width: 100%;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+}

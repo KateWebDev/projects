@@ -1,0 +1,17 @@
+.btn {
+  font-weight: 500;
+  text-transform: uppercase;
+  color: $white;
+
+  padding: clampAd(10, 15) clampAd(20, 37);
+  background: $color-accent;
+  border-radius: $radius-small;
+  transition: all 0.3s linear;
+
+  @media (any-hover: hover) {
+    &:hover {
+      background: $white;
+      color: $color-accent;
+    }
+  }
+}

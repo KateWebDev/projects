@@ -1,0 +1,69 @@
+.intro {
+  background: image-set(
+      url("../images/main/intro/bg.avif") type("image/avif"),
+      url("../images/main/intro/bg@2x.avif") 2x type("image/avif"),
+      url("../images/main/intro/bg.webp") type("image/webp"),
+      url("../images/main/intro/bg@2x.webp") 2x type("image/webp"),
+      url("../images/main/intro/bg.jpg"),
+      url("../images/main/intro/bg@2x.jpg") 2x
+    )
+    center/cover no-repeat;
+  // .intro__container
+  &__container {
+    padding-block: 100px;
+    min-height: 100svh;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+
+    position: relative;
+  }
+  // .intro__content
+  &__content {
+    max-width: clampAd(240, 900);
+  }
+  // .intro__title
+  &__title {
+    max-width: 660px;
+    margin-bottom: 48px;
+  }
+  // .intro__text
+  &__text {
+    font-size: clampAd(16, 34);
+    line-height: 1.175;
+    letter-spacing: -0.02em;
+    color: $color-dark;
+    opacity: 0.7;
+
+    margin-bottom: clampAd(10, 72);
+  }
+  // .intro__btn
+  &__btn {
+  }
+  // .intro__scroll
+  &__scroll {
+    position: absolute;
+    bottom: clampAd(32, 60);
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+
+    svg {
+      stroke: $white;
+
+      transition: all 0.3s linear;
+    }
+
+    @media (any-hover: hover) {
+      &:hover {
+        svg {
+          width: clampAd(21, 39);
+          height: clampAd(18, 30);
+          stroke: $color-dark;
+        }
+      }
+    }
+  }
+}

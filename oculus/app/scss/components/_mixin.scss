@@ -1,0 +1,27 @@
+@function clampAd($min, $max) {
+  $minPx: $min + px;
+  $maxPx: $max + px;
+
+  $result: clamp(
+    $minPx,
+    calc($minPx + ($max - $min) * ((100vw - 320px) / ($widthReportMax - $widthReportMin))),
+    $maxPx
+  );
+
+  @return $result;
+}
+
+@mixin Helvetica400 {
+  font-family: "Helvetica", sans-serif;
+  font-weight: 400;
+}
+
+@mixin Helvetica700 {
+  font-family: "Helvetica", sans-serif;
+  font-weight: 700;
+}
+
+@mixin Inter700 {
+  font-family: "Inter", sans-serif;
+  font-weight: 700;
+}

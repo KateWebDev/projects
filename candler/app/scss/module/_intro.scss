@@ -1,0 +1,39 @@
+.intro {
+  padding-top: 104px;
+
+  // .intro__container
+  &__container {
+    min-height: 670px;
+    position: relative;
+  }
+  // .intro__content
+  &__content {
+    max-width: 370px;
+    padding-top: 165px;
+    padding-bottom: 50px;
+  }
+  // .intro__title
+  &__title {
+    font-family: "Yeseva One", serif;
+    font-size: 30px;
+    margin-bottom: 15px;
+  }
+  // .intro__text
+  &__text {
+    margin-bottom: 30px;
+  }
+  // .intro__btn
+  &__btn {
+  }
+  // .intro__image
+  &__image {
+    position: absolute;
+    top: 0;
+    left: 240px;
+  }
+  //.intro__img
+  &__img {
+    width: 100%;
+    object-fit: cover;
+  }
+}

@@ -1,0 +1,46 @@
+.press {
+  padding: 24px 0 20px;
+  // .press__container
+  &__container {
+  }
+  // .press__items
+  &__items {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(clampAd(100, 165), 1fr));
+    align-items: start;
+    grid-auto-flow: dense;
+    gap: 32px;
+  }
+  // .press__item
+  &__item {
+  }
+  // .press__item-link
+  &__item-link {
+    position: relative;
+    padding-top: 16px;
+    border-top: 1px solid rgba($color-text, 0.3);
+
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: all 0.3s linear;
+
+    @media (any-hover: hover) {
+      &:hover {
+        text-shadow: 0 0 1px currentColor;
+        border-color: currentColor;
+      }
+    }
+  }
+  // .press__img
+  &__img {
+    display: block;
+    width: 24px;
+    height: 24px;
+    object-fit: cover;
+    object-position: center;
+  }
+  // .press__name
+  &__name {
+  }
+}

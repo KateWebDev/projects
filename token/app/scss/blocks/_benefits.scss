@@ -1,0 +1,73 @@
+.benefits {
+  // .benefits__container
+  &__container {
+    display: flex;
+    flex-direction: column;
+    row-gap: clampAd(20, 40);
+
+    margin-bottom: clampAd(60, 130);
+  }
+  // .benefits__title
+  &__title {
+  }
+  // .benefits__list
+  &__list {
+    column-count: auto;
+    column-width: clampAd(290, 550);
+    column-gap: clampAd(25, 60);
+  }
+  // .benefits__point
+  &__point {
+    @include BaiJamjuree600;
+    margin-bottom: 7px;
+
+    padding-bottom: 12px;
+    border-bottom: 1px dashed rgba($black, 0.25);
+
+    position: relative;
+
+    &::first-letter {
+      padding-left: 20px;
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 5px;
+      left: 0;
+      width: 16px;
+      height: 16px;
+    }
+    &--dollar {
+      &::before {
+        background: url(../../images/icons/dollar.png) center/contain no-repeat;
+      }
+    }
+    &--lock {
+      &::before {
+        background: url(../../images/icons/lock.png) center/contain no-repeat;
+      }
+    }
+
+    &--document {
+      &::before {
+        background: url(../../images/icons/document.png) center/contain no-repeat;
+      }
+    }
+    &--rocket {
+      &::before {
+        background: url(../../images/icons/rocket.png) center/contain no-repeat;
+      }
+    }
+    &--diagram {
+      &::before {
+        background: url(../../images/icons/diagram.png) center/contain no-repeat;
+      }
+    }
+    &--tools {
+      &::before {
+        background: url(../../images/icons/tools.png) center/contain no-repeat;
+      }
+    }
+  }
+}

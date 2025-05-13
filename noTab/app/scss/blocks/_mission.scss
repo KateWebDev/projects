@@ -1,0 +1,56 @@
+.mission {
+  padding: clampAd(0, 80) 0 clampAd(65, 90);
+
+  // .mission__container
+  &__container {
+    position: relative;
+  }
+  // .mission__image
+  &__image {
+    position: absolute;
+    top: 0;
+    left: -100px;
+
+    max-width: clampAd(172, 499);
+    transform: rotate(90deg) translateX(-50%);
+
+    z-index: -1;
+  }
+  // .mission__img
+  &__img {
+    display: block;
+    max-width: 100%;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    object-position: center;
+  }
+  // .mission__content
+  &__content {
+    max-width: clampAd(315, 335);
+    margin: 0 clampAd(0, 85) 0 auto;
+  }
+  // .mission__title
+  &__title {
+    margin-bottom: clampAd(24, 33);
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 55%;
+      width: 85px;
+      aspect-ratio: 1/1;
+      background: $color-accent-1;
+      opacity: 0.7;
+      filter: blur(50px);
+      z-index: -1;
+    }
+  }
+  // .mission__text
+  &__text {
+    max-width: 315px;
+    font-size: clampAd(16, 18);
+  }
+}

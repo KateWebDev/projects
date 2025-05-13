@@ -1,0 +1,46 @@
+.btn {
+  padding: clampAd(10, 17) clampAd(15, 33);
+  border: 1px solid rgba($white, 0.3);
+  border-radius: 80px;
+  background: transparent;
+
+  font-size: 13px;
+  line-height: 1.5;
+  text-align: center;
+  color: $white;
+
+  transition: all 0.3s linear;
+
+  @media (any-hover: hover) {
+    &:hover {
+      background: $white;
+      color: $color-text;
+    }
+  }
+
+  &--color {
+    color: $color-dark;
+    border-color: rgba($color-text, 0.2);
+
+    @media (any-hover: hover) {
+      &:hover {
+        background: $color-dark;
+        color: $white;
+      }
+    }
+  }
+
+  &--full {
+    background: #00665f;
+    border-color: transparent;
+    color: $white;
+
+    @media (any-hover: hover) {
+      &:hover {
+        color: #00665f;
+        background: $white;
+        border-color: currentColor;
+      }
+    }
+  }
+}

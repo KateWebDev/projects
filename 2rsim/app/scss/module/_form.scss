@@ -1,0 +1,96 @@
+.form {
+  width: 100%;
+  border-radius: $radius;
+  background: $white;
+  padding: 8px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  row-gap: 10px;
+
+  // .form__item
+  &__item {
+    padding: clampAd(10, 16);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    background: $white;
+    border-radius: $radius;
+    padding: 16px 20px 16px 56px;
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 16px;
+      transform: translateY(-50%);
+      width: 24px;
+      height: 24px;
+      background: $color-dop;
+    }
+
+    &--location {
+      &::before {
+        background: url(../../images/icons/map.svg) center/cover no-repeat;
+      }
+    }
+    &--activities {
+      &::before {
+        background: url(../../images/icons/activity.svg) center/cover no-repeat;
+      }
+    }
+    &--when {
+      &::before {
+        background: url(../../images/icons/calendar.svg) center/cover no-repeat;
+      }
+    }
+    &--guests {
+      &::before {
+        background: url(../../images/icons/people.svg) center/cover no-repeat;
+      }
+    }
+    &--mail {
+      &::before {
+        background: url(../../images/icons/mail.svg) center/cover no-repeat;
+      }
+    }
+  }
+
+  // .form__label
+  &__label {
+    font-weight: 300;
+    font-size: clampAd(12, 14);
+    line-height: 1.15;
+    color: $mainColor;
+  }
+  // .form__select
+  &__select {
+    outline: none;
+
+    &:is(:hover, :focus) {
+      border-bottom: 1px solid $color-accent;
+    }
+  }
+  // .form__input
+  &__input {
+    width: 100%;
+    outline: none;
+    font-weight: 500;
+    color: $color-dark;
+    border-bottom: 1px solid transparent;
+
+    &:is(:hover, :focus) {
+      border-color: $color-accent;
+    }
+
+    &::placeholder {
+      font-weight: 500;
+      font-size: clampAd(12, 16);
+      line-height: 1.5;
+      color: $color-dark;
+    }
+  }
+}

@@ -1,0 +1,70 @@
+.weare {
+  padding: clampAd(0, 140) 0;
+  // .weare__container
+  &__container {
+  }
+  // .weare__top
+  &__top {
+    margin-bottom: clampAd(40, 80);
+  }
+  // .weare__video
+  &__video {
+    width: 100%;
+    min-height: clampAd(338, 967);
+
+    background: image-set(
+        url("../images/main/weare/bg.avif") type("image/avif"),
+        url("../images/main/weare/bg@2x.avif") 2x type("image/avif"),
+        url("../images/main/weare/bg.webp") type("image/webp"),
+        url("../images/main/weare/bg@2x.webp") 2x type("image/webp"),
+        url("../images/main/weare/bg.jpg"),
+        url("../images/main/weare/bg@2x.jpg") 2x
+      )
+      center/cover no-repeat;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba($mainColor, 0.5);
+    }
+  }
+  // .weare__link
+  &__link {
+    position: relative;
+    z-index: 1;
+
+    width: clampAd(48, 120);
+    height: clampAd(48, 120);
+
+    border-radius: $radius-circle;
+    background: rgba($black, 0.7);
+    border: 2px solid rgba($white, 0.5);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.3s linear;
+
+    svg {
+      width: clampAd(13, 31);
+      height: clampAd(14, 41);
+      fill: $white;
+    }
+
+    @media (any-hover: hover) {
+      &:hover {
+        transform: scale(1.1);
+      }
+    }
+  }
+}

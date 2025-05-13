@@ -1,0 +1,46 @@
+.about {
+  // .about--reverse
+  &--reverse {
+    .about__content {
+      order: -1;
+    }
+  }
+  // .about__container
+  &__container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 30px clampAd(10, 232);
+  }
+  // .about__ibg
+  &__ibg {
+    padding: 0px 0px 113% 0px;
+  }
+  // .about__img
+  &__img {
+  }
+  // .about__content
+  &__content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    row-gap: clampAd(15, 27);
+
+    *:last-child {
+      margin-bottom: 0 !important;
+    }
+  }
+  // .about__badge
+  &__badge {
+  }
+  // .about__title
+  &__title {
+    max-width: 450px;
+  }
+  // .about__text
+  &__text {
+  }
+  // .about__link
+  &__link {
+  }
+}

@@ -1,0 +1,41 @@
+@import "components/mixin";
+
+//Страница
+$widthReportMax: 1600;
+$widthReportMin: 320;
+$widthReportMinPx: $widthReportMin + px;
+
+// Контейнер
+$maxWidthContainer: 1170px;
+$containerPadding: 15px;
+
+//Фон
+$mainBackGround: #ffffff;
+
+//Шрифт
+$fontFamily: "Roboto", sans-serif;
+$mainColor: rgba(#000000, 0.6);
+$mainSize: 18;
+$size: $mainSize + px;
+$fontWeight: 400;
+$lineheight: calc(29 / $mainSize);
+
+// Доп цвета
+$white: #ffffff;
+$black: #000000;
+
+$color-accent: #c9453b;
+$color-bg: rgba(#269499, 0.04);
+
+// Радиусы
+$radius-circle: 50%;
+$radius-small: rem(5);
+$radius-medium: rem(10);
+
+/*
+@include Roboto400;
+@include Roboto500;
+
+@include Gelasio500;
+@include Gelasio700;
+*/

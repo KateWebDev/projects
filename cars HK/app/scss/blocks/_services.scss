@@ -1,0 +1,51 @@
+.services {
+  // .services__container
+  &__container {
+  }
+  // .services__title
+  &__title {
+    margin-bottom: clampAd(30, 66);
+  }
+  // .services__items
+  &__items {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(clampAd(200, 384), 1fr));
+    gap: 40px clampAd(16, 24);
+  }
+  // .services__item
+  &__item {
+  }
+  // .services__card
+  &__card {
+    width: 100%;
+    height: 100%;
+
+    transition: all 0.3s linear;
+
+    @media (any-hover: hover) {
+      &:hover {
+        opacity: 0.8;
+      }
+    }
+  }
+  // .services__ibg
+  &__ibg {
+    padding: 0px 0px 94% 0px;
+    margin-bottom: clampAd(16, 24);
+  }
+  // .services__img
+  &__img {
+  }
+  // .services__name
+  &__name {
+    font-weight: 700;
+    font-size: clampAd(16, 24);
+    line-height: 1.3;
+    color: $white;
+    text-transform: capitalize;
+    margin-bottom: clampAd(10, 16);
+  }
+  // .services__text
+  &__text {
+  }
+}

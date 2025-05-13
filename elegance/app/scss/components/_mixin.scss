@@ -1,0 +1,25 @@
+@function clampAd($min, $max) {
+  $minPx: $min + px;
+  $maxPx: $max + px;
+
+  $result: clamp(
+    $minPx,
+    calc($minPx + ($max - $min) * ((100vw - $widthReportMinPx) / ($widthReportMax - $widthReportMin))),
+    $maxPx
+  );
+
+  @return $result;
+}
+
+@mixin NotoSans400 {
+  font-family: "Noto Sans", sans-serif;
+  font-weight: 400;
+}
+@mixin NotoSans700 {
+  font-family: "Noto Sans", sans-serif;
+  font-weight: 700;
+}
+@mixin PlayfairDisplay400 {
+  font-family: "Playfair Display", sans-serif;
+  font-weight: 400;
+}

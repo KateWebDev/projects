@@ -1,0 +1,60 @@
+.popular {
+  padding: 20px 0;
+  background: $color-light-bg;
+  // .popular__container
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+  }
+  // .popular__image
+  &__image {
+    max-width: 549px;
+  }
+  // .popular__img
+  &__img {
+    display: block;
+    max-width: 100%;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    object-position: center;
+  }
+  // .popular__content
+  &__content {
+    max-width: 370px;
+  }
+  // .popular__title
+  &__title {
+    font-weight: 500;
+    font-size: clampAd(26, 44);
+    color: $white;
+    margin-bottom: clampAd(18, 24);
+  }
+  // .popular__text
+  &__text {
+    margin-bottom: 13px;
+  }
+  // .popular__price
+  &__price {
+    display: flex;
+    align-items: center;
+    column-gap: 6px;
+
+    font-weight: 500;
+    font-size: clampAd(16, 20);
+    letter-spacing: 0.1em;
+    color: $color-accent;
+    margin-bottom: 11px;
+
+    span {
+      font-size: clampAd(12, 16);
+      text-decoration: line-through;
+      color: $color-accent-opacity;
+    }
+  }
+  // .popular__btn
+  &__btn {
+  }
+}

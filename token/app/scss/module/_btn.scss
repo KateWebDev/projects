@@ -1,0 +1,71 @@
+.btn {
+  @include BaiJamjuree700;
+  font-size: 15px;
+  text-align: center;
+  color: $white;
+
+  padding: clampAd(10, 14) clampAd(10, 17);
+  background: $color-accent-1;
+  border-radius: $radius-big;
+  border: 1px solid transparent;
+
+  transition: all 0.3s linear;
+
+  @media (any-hover: hover) {
+    &:hover {
+      background: $color-dark;
+      color: $color-accent-1;
+      border-color: currentColor;
+    }
+  }
+
+  &--radius {
+    border-radius: $radius-small;
+  }
+
+  &--color1 {
+    background: $color-accent-2;
+
+    @media (any-hover: hover) {
+      &:hover {
+        color: $color-accent-2;
+        background: transparent;
+      }
+    }
+  }
+  &--color2 {
+    background: $white;
+    color: $color-dark;
+
+    @media (any-hover: hover) {
+      &:hover {
+        color: $white;
+      }
+    }
+  }
+
+  &--reverse {
+    border-color: currentColor;
+    background: transparent;
+    color: $white;
+
+    @media (any-hover: hover) {
+      &:hover {
+        background: $white;
+        color: $color-dark;
+      }
+    }
+  }
+
+  &--big {
+    min-width: clampAd(150, 200);
+  }
+
+  &--medium {
+    min-width: clampAd(120, 170);
+  }
+
+  &--small {
+    padding: 8px clampAd(15, 25);
+  }
+}

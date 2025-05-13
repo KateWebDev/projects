@@ -1,0 +1,96 @@
+.roadmap {
+  // .roadmap__container
+  &__container {
+    display: flex;
+    flex-direction: column;
+    row-gap: 30px;
+
+    margin-bottom: clampAd(60, 120);
+  }
+  // .roadmap__title
+  &__title {
+  }
+  // .roadmap__items
+  &__items {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+    grid-auto-rows: minmax(clampAd(250, 380), 1fr);
+    grid-auto-flow: dense;
+    gap: clampAd(20, 30);
+  }
+  // .roadmap__item
+  &__item {
+    border-radius: $radius;
+    background: $color-bg-4;
+    overflow: hidden;
+
+    position: relative;
+
+    &--active {
+      background: $color-gradient-2;
+
+      &::before {
+        content: "";
+        position: absolute;
+        top: clampAd(16, 23);
+        right: 30px;
+        width: clampAd(16, 24);
+        height: clampAd(16, 24);
+        border-radius: $radius-circle;
+        border: 3px solid rgba($white, 0.1);
+        background: transparent;
+      }
+
+      .roadmap__name {
+        backdrop-filter: none;
+      }
+    }
+  }
+  // .roadmap__name
+  &__name {
+    padding: clampAd(10, 15) clampAd(15, 25);
+
+    @include BakbakOne400;
+    font-size: clampAd(16, 24);
+    line-height: 1.6;
+    color: $color-dark;
+
+    backdrop-filter: blur(5px);
+    background: $color-bg-3;
+  }
+  // .roadmap__list
+  &__list {
+    padding: clampAd(15, 25);
+
+    display: flex;
+    flex-direction: column;
+    row-gap: clampAd(15, 22);
+  }
+  // .roadmap__point
+  &__point {
+    line-height: 1.5;
+
+    padding-left: 25px;
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 0;
+      transform: translateY(-50%);
+      width: 12px;
+      height: 12px;
+      border-radius: $radius-circle;
+      background: transparent;
+      border: 2px solid $color-bg-2;
+    }
+
+    &--active {
+      &::before {
+        background: $color-accent-1;
+        border-color: $color-accent-1;
+      }
+    }
+  }
+}

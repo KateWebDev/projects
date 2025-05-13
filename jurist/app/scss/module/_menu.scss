@@ -1,0 +1,27 @@
+.menu {
+  // .menu__items
+  &__items {
+    display: flex;
+    column-gap: clamp(10px, calc(10px + (24 - 10) * ((100vw - 768px) / ($widthReportMax - 768))), 24px);
+  }
+  // .menu__item
+  &__item {
+  }
+  // .menu__link
+  &__link {
+    font-size: clamp(14px, calc(14px + (18 - 14) * ((100vw - 992px) / ($widthReportMax - 992))), 18px);
+    line-height: 1.33;
+    transition: all 0.3s linear;
+    white-space: nowrap;
+
+    @media (any-hover: hover) and (min-width: 992px) {
+      &:hover {
+        text-shadow: 0 0 1px $mainColor;
+      }
+    }
+  }
+  // .menu__btn
+  &__btn {
+    font-size: 15px;
+  }
+}

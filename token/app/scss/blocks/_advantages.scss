@@ -1,0 +1,67 @@
+.advantages {
+  // .advantages__container
+  &__container {
+    margin-bottom: clampAd(60, 120);
+  }
+  // .advantages__list
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(clampAd(290, 370), 1fr));
+    grid-auto-flow: dense;
+    grid-auto-rows: minmax(clampAd(100, 170), 1fr);
+    gap: clampAd(20, 30);
+  }
+  // .advantages__point
+  &__point {
+    padding: clampAd(20, 50);
+    border-radius: $radius;
+    background: $color-gradient;
+
+    display: flex;
+    flex-direction: column;
+    row-gap: clampAd(10, 20);
+
+    line-height: 1;
+    color: $black;
+  }
+  // .advantages__name
+  &__name {
+    @include BaiJamjuree600;
+    font-size: clampAd(16, 18);
+    text-transform: uppercase;
+
+    padding-left: 30px;
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 0;
+      transform: translateY(-50%);
+      width: 20px;
+      height: 20px;
+    }
+
+    &--lying-saucer {
+      &::before {
+        background: url(../../images/icons/lying-saucer.png) center/contain no-repeat;
+      }
+    }
+    &--fire {
+      &::before {
+        background: url(../../images/icons/fire.png) center/contain no-repeat;
+      }
+    }
+    &--rocket {
+      &::before {
+        background: url(../../images/icons/rocket.png) center/contain no-repeat;
+      }
+    }
+  }
+  // .advantages__num
+  &__num {
+    @include BakbakOne400;
+    font-size: clampAd(25, 36);
+  }
+}

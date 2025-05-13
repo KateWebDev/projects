@@ -1,0 +1,94 @@
+.intro {
+  padding: 70px 0;
+  // .intro__container
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 30px;
+  }
+  // .intro__content
+  &__content {
+    padding-top: clamp(0px, calc(0px + (92 - 0) * ((100vw - 320px) / ($widthReportMax - $widthReportMin))), 92px);
+    max-width: clamp(300px, calc(300px + (460 - 300) * ((100vw - 600px) / ($widthReportMax - 600))), 460px);
+  }
+  // .intro__title
+  &__title {
+    color: #19191b;
+    @include font_family;
+    font-size: clamp(30px, calc(30px + (80 - 30) * ((100vw - 320px) / ($widthReportMax - $widthReportMin))), 80px);
+    font-weight: 700;
+    line-height: 1;
+    letter-spacing: -2.501px;
+    margin-bottom: clamp(15px, calc(15px + (30 - 15) * ((100vw - 320px) / ($widthReportMax - $widthReportMin))), 30px);
+  }
+  // .intro__text
+  &__text {
+    letter-spacing: -0.625px;
+    margin-bottom: clamp(30px, calc(30px + (50 - 30) * ((100vw - 320px) / ($widthReportMax - $widthReportMin))), 50px);
+  }
+  // .intro__actions
+  &__actions {
+    display: flex;
+    align-items: center;
+    column-gap: 40px;
+  }
+  // .intro__btn
+  &__btn {
+    background: #5454d4;
+    padding: 19px clamp(30px, calc(30px + (59 - 30) * ((100vw - 320px) / ($widthReportMax - $widthReportMin))), 59px);
+    @media (any-hover: hover) and (min-width: 992px) {
+      &:hover {
+        color: #5454d4;
+      }
+    }
+  }
+  // .intro__down
+  &__down {
+    width: 60px;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    border: 1px solid #e7e7e7;
+    background: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.3s linear;
+    animation: skok 0.5s linear infinite alternate;
+
+    svg {
+      stroke: #19191b;
+      transition: all 0.3s linear;
+    }
+
+    @media (any-hover: hover) and (min-width: 992px) {
+      &:hover {
+        background: #19191b;
+
+        svg {
+          stroke: #e7e7e7;
+        }
+      }
+    }
+  }
+  // .intro__image
+  &__image {
+    max-width: clamp(300px, calc(300px + (610 - 300) * ((100vw - 600px) / ($widthReportMax - 600))), 610px);
+  }
+  // .intro__img
+  &__img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+}
+
+@keyframes skok {
+  0% {
+    transform: translateY(-2px);
+  }
+  100% {
+    transform: translateY(2px);
+  }
+}

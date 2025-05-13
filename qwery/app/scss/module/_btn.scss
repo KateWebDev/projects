@@ -1,0 +1,25 @@
+.link {
+  @include OpenSans700;
+  color: $color-accent-text;
+  padding-right: 25px;
+  position: relative;
+  transition: all 0.3s linear;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    width: 16px;
+    height: 24px;
+    background: url(../../images/icons/arrow-right.svg) center/contain no-repeat;
+  }
+
+  @media (any-hover: hover) {
+    &:hover {
+      color: $color-accent;
+      transform: scale(1.1);
+    }
+  }
+}

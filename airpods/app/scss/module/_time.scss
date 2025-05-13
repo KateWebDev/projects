@@ -1,0 +1,28 @@
+.time {
+  padding: clamp(45px, calc(45px + (80 - 45) * ((100vw - 320px) / ($widthReportMax - $widthReportMin))), 80px) 0
+    clamp(45px, calc(45px + (90 - 45) * ((100vw - 320px) / ($widthReportMax - $widthReportMin))), 90px);
+  background: #fafafa;
+
+  // .time__container
+  &__container {
+    text-align: center;
+  }
+  // .time__title
+  &__title {
+    margin-bottom: clamp(20px, calc(20px + (40 - 20) * ((100vw - 320px) / ($widthReportMax - $widthReportMin))), 40px);
+  }
+  // .time__num
+  &__num {
+    font-size: clamp(70px, calc(70px + (210 - 70) * ((100vw - 320px) / ($widthReportMax - $widthReportMin))), 210px);
+    font-weight: 700;
+    margin-bottom: clamp(20px, calc(20px + (40 - 20) * ((100vw - 320px) / ($widthReportMax - $widthReportMin))), 40px);
+  }
+  // .time__text
+  &__text {
+    max-width: 403px;
+    margin: 0 auto;
+    a {
+      text-decoration: underline;
+    }
+  }
+}

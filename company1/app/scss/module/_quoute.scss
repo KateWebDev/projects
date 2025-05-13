@@ -1,0 +1,38 @@
+.quoute {
+  // .quoute__container
+  &__container {
+  }
+  // .quoute__content
+  &__content {
+    max-width: 820px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    row-gap: 50px;
+  }
+  // .quoute__title
+  &__title {
+    color: $color-dop;
+  }
+  // .quoute__blockquote
+  &__blockquote {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    row-gap: 30px;
+  }
+  // .quoute__text
+  &__text {
+    font-weight: 500;
+    font-size: clampAd(20, 36);
+  }
+  // .quoute__author
+  &__author {
+    font-style: normal;
+    color: $color-dop;
+  }
+  // .quoute__author-name
+  &__author-name {
+    color: #1d1d1f;
+  }
+}

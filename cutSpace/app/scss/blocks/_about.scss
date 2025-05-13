@@ -1,0 +1,89 @@
+.about {
+  padding-bottom: clampAd(70, 150);
+
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px clampAd(30, 100);
+  }
+  // .about__images
+  &__images {
+    margin-left: calc(clampAd(100, 250) * -1);
+    display: flex;
+    align-items: center;
+    gap: clampAd(20, 32);
+
+    position: relative;
+  }
+  // .about__img
+  &__img {
+    display: block;
+    max-width: clampAd(200, 385);
+    max-height: clampAd(300, 550);
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+
+    border-radius: $radius-medium;
+
+    &--not-radius-right-bottom {
+      border-radius: $radius-not-right-bottom;
+    }
+  }
+  // .about__dop
+  &__dop {
+    position: absolute;
+    top: 50%;
+    right: calc(clampAd(30, 60) * -1);
+
+    max-width: clampAd(220, 300);
+    width: 100%;
+    padding: clampAd(10, 32) clampAd(10, 30);
+
+    background: $white;
+    border-radius: $radius-medium;
+    box-shadow: $shadow;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    &::before {
+      content: "";
+      width: clampAd(25, 45);
+      height: clampAd(25, 45);
+      border-radius: $radius-big;
+      background: $color-bg-accent-light url(../../images/icons/building.svg) center/clampAd(10, 17) clampAd(16, 23)
+        no-repeat;
+    }
+  }
+  // .about__dop-content
+  &__dop-content {
+    max-width: clampAd(150, 177);
+  }
+  // .about__name
+  &__name {
+    font-weight: 700;
+    letter-spacing: 0.05em;
+  }
+  // .about__info
+  &__info {
+  }
+  // .about__content
+  &__content {
+    max-width: clampAd(290, 375);
+  }
+  // .about__title
+  &__title {
+    margin-bottom: 20px;
+  }
+  // .about__text
+  &__text {
+    margin-bottom: clampAd(20, 40);
+  }
+  // .about__btn
+  &__btn {
+  }
+}

@@ -1,0 +1,97 @@
+.btn {
+  padding: clampAd(5, 10) clampAd(16, 32);
+  border-radius: $radius-small;
+  background: $color-accent;
+  border: 1px solid transparent;
+
+  font-weight: 600;
+  color: $white;
+
+  transition: all 0.3s linear;
+
+  // .btn--reverse
+  &--reverse {
+    font-size: 16px;
+    line-height: 1.5;
+    text-align: center;
+    color: $mainColor;
+    text-transform: capitalize;
+
+    background: $white;
+    border-color: rgba($mainColor, 0.36);
+  }
+
+  @media (any-hover: hover) {
+    &:hover {
+      background: $white;
+      color: $color-accent;
+      border-color: currentColor;
+    }
+  }
+}
+
+.button {
+}
+
+.link {
+  padding: clampAd(12, 24) clampAd(14, 36);
+  border-radius: $radius-big;
+
+  background: $white;
+  border: 1px solid $color-accent;
+
+  font-weight: 600;
+  line-height: 1;
+  text-align: center;
+  text-transform: capitalize;
+  color: $color-dark1;
+
+  display: inline-flex;
+  align-items: center;
+  column-gap: 6px;
+
+  position: relative;
+
+  transition: all 0.3s linear;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 30%;
+    left: 100%;
+    width: clampAd(50, 112);
+    height: clampAd(40, 88);
+    background: url(../../images/icons/link-decor.svg) center/cover no-repeat;
+
+    animation: animate 0.5s linear 0s infinite forwards alternate;
+    transition: all 0.3s linear;
+  }
+
+  &::after {
+    content: "";
+    width: clampAd(10, 18);
+    height: clampAd(6, 11);
+    background: url(../../images/icons/link-arrow.svg) center/contain no-repeat;
+    transition: all 0.3s linear;
+  }
+
+  @media (any-hover: hover) {
+    &:hover {
+      &::before {
+        animation-play-state: paused;
+      }
+      &::after {
+        transform: rotate(180deg);
+      }
+    }
+  }
+}
+
+@keyframes animate {
+  0% {
+    transform: translateX(50%) scale(0.9);
+  }
+  100% {
+    transform: translateX(50%) scale(1.1);
+  }
+}

@@ -1,0 +1,37 @@
+.menu {
+  // .menu__items
+  &__items {
+    display: flex;
+    align-items: center;
+    gap: 30px clampAd(30, 50);
+  }
+  // .menu__item
+  &__item {
+  }
+  // .menu__link
+  &__link {
+    @include OpenSans600;
+    line-height: 1.38;
+    white-space: nowrap;
+    transition: all 0.3s linear;
+
+    @media (any-hover: hover) {
+      &:hover {
+        color: $color-accent;
+      }
+    }
+
+    &--active {
+      text-decoration: underline;
+      text-underline-offset: 10px;
+      cursor: default;
+
+      @media (any-hover: hover) {
+        &:hover {
+          color: currentColor;
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,78 @@
+.contacts {
+  padding: clamp(41px, calc(41px + (82 - 41) * ((100vw - 320px) / ($widthReportMax - $widthReportMin))), 82px) 0;
+  min-height: ad;
+  position: relative;
+
+  // .contacts__map
+  &__map {
+    width: 50%;
+    height: clamp(300px, calc(300px + (400 - 300) * ((100vw - 320px) / ($widthReportMax - $widthReportMin))), 400px);
+    position: absolute !important;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 0;
+  }
+  // .contacts__container
+  &__container {
+    display: flex;
+    justify-content: flex-end;
+  }
+  // .contacts__content
+  &__content {
+    max-width: 445px;
+    width: 100%;
+  }
+  // .contacts__title
+  &__title {
+    font-size: clamp(20px, calc(20px + (28 - 20) * ((100vw - 320px) / ($widthReportMax - $widthReportMin))), 28px);
+    line-height: 1.1;
+    margin-bottom: 16px;
+  }
+  // .contacts__actions
+  &__actions {
+    margin-bottom: 20px;
+  }
+  // .contacts__action
+  &__action {
+  }
+  // .contacts__link
+  &__link {
+    font-size: clamp(15px, calc(15px + (18 - 15) * ((100vw - 320px) / ($widthReportMax - $widthReportMin))), 18px);
+
+    // .contacts__link--color
+    &--color {
+      color: $color-accent;
+    }
+  }
+  // .contacts__address
+  &__address {
+    max-width: 270px;
+    margin-bottom: 32px;
+
+    p {
+      font-size: clamp(15px, calc(15px + (18 - 15) * ((100vw - 320px) / ($widthReportMax - $widthReportMin))), 18px);
+      font-style: normal;
+    }
+  }
+  // .contacts__btn
+  &__btn {
+    display: inline-block;
+    padding: 10px 16px 10px 50px;
+    border-radius: 6px;
+    background: #00e676;
+    font-size: 15px;
+    color: #ffffff;
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 16px;
+      transform: translateY(-50%);
+      width: 24px;
+      aspect-ratio: 1;
+      background: url(../images/main/contacts/whatsapp.svg) center/cover no-repeat;
+    }
+  }
+}

@@ -1,0 +1,104 @@
+@use "sass:math";
+
+@import "components/variables";
+@import "components/plugins";
+
+@import "components/fonts";
+@import "components/mixin";
+@import "components/resetStyle";
+
+[class*="__container"] {
+  max-width: $maxWidthContainer;
+  margin: 0 auto;
+  padding: 0 $containerPadding;
+}
+
+[class*="__burger"] {
+  display: none;
+  flex-direction: column;
+  row-gap: rem(4);
+  cursor: pointer;
+
+  span {
+    width: rem(24);
+    height: rem(3);
+    border-radius: rem(5);
+    background: $white;
+    transition: all 0.3s linear;
+  }
+
+  &.header__burger--active {
+    span {
+      &:nth-child(1) {
+        opacity: 0;
+      }
+      &:nth-child(2) {
+        transform: rotate(45deg);
+      }
+      &:nth-child(3) {
+        transform: rotate(-45deg) translateY(rem(-5)) translateX(rem(5));
+      }
+    }
+  }
+}
+
+[class*="__ibg"] {
+  position: relative;
+
+  img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+}
+
+body {
+  font-family: $fontFamily;
+  background-color: $mainBackGround;
+  color: $mainColor;
+  font-size: clampAdRem(14, $mainSize);
+  line-height: $lineheight;
+  font-weight: $fontWeight;
+
+  &.lock {
+    overflow: hidden;
+  }
+}
+
+.hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.main {
+  flex: 1 1 auto;
+  &__section {
+    margin-bottom: clampAdRem(70, 140);
+  }
+}
+
+@import "module/logo";
+@import "module/menu";
+@import "module/btn";
+@import "module/title";
+@import "module/slider";
+@import "module/socials";
+
+@import "blocks/header";
+//------------------------------
+@import "pages/index";
+//------------------------------
+@import "blocks/footer";
+
+@import "components/adaptive";

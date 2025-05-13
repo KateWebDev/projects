@@ -1,0 +1,103 @@
+.stages {
+  padding: clamp(50px, calc(50px + (100 - 50) * ((100vw - 320px) / ($widthReportMax - $widthReportMin))), 100px) 0;
+
+  background: image-set(
+      url("../images/main/stages/bg.avif") type("image/avif"),
+      url("../images/main/stages/bg.webp") type("image/webp"),
+      url("../images/main/stages/bg.jpg")
+    )
+    center/cover no-repeat;
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(180deg, #010203 0%, rgba(1, 2, 3, 0) 100%);
+    transform: rotate(180deg);
+  }
+  // .stages__container
+  &__container {
+    position: relative;
+    z-index: 2;
+  }
+  // .stages__title
+  &__title {
+    max-width: 578px;
+    margin-bottom: clamp(
+      50px,
+      calc(50px + (100 - 50) * ((100vw - 320px) / ($widthReportMax - $widthReportMin))),
+      100px
+    );
+  }
+  // .stages__items
+  &__items {
+    text-align: center;
+    svg {
+      fill: $mainColor;
+      width: clamp(320px, calc(320px + (880 - 320) * ((100vw - 320px) / ($widthReportMax - $widthReportMin))), 880px);
+
+      height: clamp(300px, calc(300px + (650 - 300) * ((100vw - 320px) / ($widthReportMax - $widthReportMin))), 650px);
+
+      text {
+        font-size: 18px;
+        transition: all 0.3s linear;
+      }
+
+      circle {
+        transition: all 0.3s linear;
+      }
+    }
+  }
+
+  // .stages__item
+  &__item {
+    &:hover {
+      fill: $color-other;
+      cursor: pointer;
+
+      & .stages__text {
+        font-size: 30px;
+        color: $color-other;
+      }
+
+      & .stages__text--1 {
+        x: 60;
+        width: 150px;
+      }
+      & .stages__text--2 {
+        y: 555;
+        width: 220px;
+      }
+      & .stages__text--3 {
+        width: clamp(150px, calc(150px + (300 - 150) * ((100vw - 320px) / ($widthReportMax - $widthReportMin))), 300px);
+        height: clamp(
+          150px,
+          calc(150px + (300 - 150) * ((100vw - 320px) / ($widthReportMax - $widthReportMin))),
+          300px
+        );
+      }
+    }
+
+    &:hover circle {
+      r: clamp(15, calc(15 + (20 - 15) * ((100vw - 320px) / ($widthReportMax - $widthReportMin))), 20);
+    }
+
+    &:hover text {
+      font-size: 36px;
+    }
+  }
+  // .stages__text
+  &__text {
+    font-size: 18px;
+    text-align: left;
+    transition: all 0.3s linear;
+
+    &--right {
+      text-align: right;
+    }
+  }
+}

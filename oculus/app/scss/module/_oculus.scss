@@ -1,0 +1,77 @@
+.oculus {
+  position: relative;
+  text-align: center;
+  min-height: clampAd(300, 500);
+
+  // .oculus__name
+  &__name {
+    @include Inter700;
+    font-size: clampAd(80, 400);
+    line-height: 1;
+    text-transform: uppercase;
+    position: absolute;
+    top: -5%;
+    left: 50%;
+    transform: translateX(-50%);
+    background: $color-gradient;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    opacity: 0.1;
+    z-index: -1;
+
+    //  animation: text 5s linear 0.5s infinite;
+  }
+  // .oculus__image
+  &__image {
+    display: block;
+    max-width: clampAd(250, 347);
+    margin: 0 auto 30px;
+  }
+  // .oculus__img
+  &__img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+  // .oculus__price
+  &__price {
+    display: inline-flex;
+    border: 1px solid transparent;
+    border-image: $color-gradient 1;
+    transition: all 0.3s linear;
+    margin-bottom: 10px;
+
+    span {
+      display: inline-block;
+      min-width: clampAd(140, 300);
+      padding: 21px;
+      @include Helvetica700;
+      font-size: clampAd(12, 16);
+      text-transform: uppercase;
+      text-align: center;
+    }
+
+    @media (any-hover: hover) {
+      &:hover {
+        opacity: 0.8;
+      }
+    }
+  }
+  // .oculus__btn
+  &__btn {
+  }
+  // .oculus__text
+  &__text {
+    font-size: 13px;
+  }
+}
+
+@keyframes text {
+  0% {
+    transform: translateX(120%);
+  }
+  100% {
+    transform: translateX(-120%);
+  }
+}

@@ -1,0 +1,93 @@
+.reliability {
+  padding-bottom: clamp(70px, calc(70px + (140 - 70) * ((100vw - 320px) / ($widthReportMax - $widthReportMin))), 140px);
+
+  // .reliability__container
+  &__container {
+  }
+  // .reliability__title
+  &__title {
+    display: inline-block;
+    margin-bottom: 16px;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: calc(clamp(9px, calc(9px + (18 - 9) * ((100vw - 320px) / ($widthReportMax - $widthReportMin))), 18px) * -1);
+      right: calc(
+        clamp(15px, calc(15px + (32 - 15) * ((100vw - 320px) / ($widthReportMax - $widthReportMin))), 32px) * -1
+      );
+      width: clamp(22px, calc(22px + (42 - 22) * ((100vw - 320px) / ($widthReportMax - $widthReportMin))), 42px);
+      height: clamp(20px, calc(20px + (40 - 20) * ((100vw - 320px) / ($widthReportMax - $widthReportMin))), 40px);
+      background: url(../images/main/reliability/foliage.svg) center/cover no-repeat;
+    }
+  }
+  // .reliability__text
+  &__text {
+    font-size: clamp(14px, calc(14px + (20 - 14) * ((100vw - 320px) / ($widthReportMax - $widthReportMin))), 20px);
+    text-align: center;
+    max-width: 857px;
+    margin: 0 auto 48px;
+  }
+  // .reliability__items
+  &__items {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px 20px;
+    margin-bottom: 60px;
+  }
+  // .reliability__item
+  &__item {
+    max-width: 333px;
+    text-align: center;
+  }
+  // .reliability__icon
+  &__icon {
+    width: 48px;
+    aspect-ratio: 1;
+    object-fit: cover;
+    margin-bottom: 20px;
+  }
+  // .reliability__name
+  &__name {
+    font-size: clamp(14px, calc(14px + (18 - 14) * ((100vw - 320px) / ($widthReportMax - $widthReportMin))), 18px);
+    color: $color-btn;
+    margin-bottom: 10px;
+  }
+  // .reliability__info
+  &__info {
+  }
+  // .reliability__promo
+  &__promo {
+    padding: 45px 40px;
+    background: #f6f8f9;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 30px;
+  }
+  // .reliability__promo-text
+  &__promo-text {
+    color: $color-btn;
+    position: relative;
+    padding-left: 64px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 0;
+      transform: translateY(-50%);
+      width: 40px;
+      aspect-ratio: 1;
+      background: url(../images/main/reliability/4.svg) center/cover no-repeat;
+    }
+  }
+  // .reliability__btn
+  &__btn {
+  }
+}

@@ -1,0 +1,44 @@
+.intro {
+  padding: clampAd(40, 80) 0;
+  // .intro__container
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+  }
+  // .intro__content
+  &__content {
+    max-width: 487px;
+  }
+  // .intro__title
+  &__title {
+    @include Arial700;
+    font-size: clampAd(28, 34);
+    margin-bottom: 20px;
+  }
+  // .intro__text
+  &__text {
+    max-width: 358px;
+    margin-bottom: 48px;
+  }
+  // .intro__link
+  &__link {
+  }
+  // .intro__btn
+  &__btn {
+  }
+  // .intro__image
+  &__image {
+    max-width: 493px;
+    max-height: 378px;
+  }
+  // .intro__img
+  &__img {
+    display: block;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    object-position: center;
+  }
+}

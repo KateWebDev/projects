@@ -1,0 +1,18 @@
+.logo {
+  width: 56px;
+  height: 56px;
+
+  &--big {
+    width: clampAd(56, 70);
+    height: clampAd(56, 70);
+  }
+
+  img {
+    display: block;
+    max-width: 100%;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+}

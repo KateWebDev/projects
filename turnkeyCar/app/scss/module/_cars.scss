@@ -1,0 +1,69 @@
+.cars {
+  padding-bottom: clamp(50px, calc(50px + (100 - 50) * ((100vw - 320px) / ($widthReportMax - $widthReportMin))), 100px);
+  // .cars__container
+  &__container {
+    position: relative;
+  }
+  // .cars__title
+  &__title {
+    margin-bottom: clamp(30px, calc(30px + (50 - 30) * ((100vw - 320px) / ($widthReportMax - $widthReportMin))), 50px);
+  }
+  // .cars__items
+  &__items {
+  }
+  // .cars__item
+  &__item {
+    max-width: 390px;
+    border: 1px solid $color-gray;
+    background: $mainBackGround;
+    padding: 7px 5px 10px;
+    text-align: center;
+  }
+  // .cars__ibg
+  &__ibg {
+    padding: 0px 0px 66% 0px;
+    margin-bottom: 20px;
+  }
+  // .cars__img
+  &__img {
+  }
+  // .cars__name
+  &__name {
+    text-transform: uppercase;
+    margin-bottom: 5px;
+  }
+  // .cars__info
+  &__info {
+    padding-bottom: 5px;
+  }
+
+  .slick-initialized {
+    text-align: center;
+  }
+
+  .slick-current {
+    .cars__item {
+      background: $color-accent;
+      color: $mainBackGround;
+    }
+  }
+
+  .slick-dots {
+    display: flex;
+    justify-content: center;
+    column-gap: 20px;
+    margin-top: clamp(30px, calc(30px + (50 - 30) * ((100vw - 320px) / ($widthReportMax - $widthReportMin))), 50px);
+    button {
+      font-size: 0;
+      width: clamp(30px, calc(30px + (50 - 30) * ((100vw - 320px) / ($widthReportMax - $widthReportMin))), 50px);
+      height: 1px;
+      background: $color-gray;
+    }
+    .slick-active {
+      button {
+        height: 3px;
+        background: $color-accent;
+      }
+    }
+  }
+}

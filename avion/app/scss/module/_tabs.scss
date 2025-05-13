@@ -1,0 +1,40 @@
+.tabs {
+  // .tabs__items
+  &__items {
+    display: flex;
+    gap: 10px;
+  }
+
+  // .tabs__item
+  &__item {
+    height: 40px;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(tomato, 0.2);
+    color: #101010;
+
+    // .tabs__item--active
+    &--active {
+      background: rgba(tomato, 1);
+      color: #ffffff;
+    }
+  }
+
+  // .tabs__content
+  &__content {
+    padding: 30px 0;
+    background: tan;
+  }
+
+  // .tabs__block
+  &__block {
+    display: none;
+
+    // .tabs__block--active
+    &--active {
+      display: block;
+    }
+  }
+}

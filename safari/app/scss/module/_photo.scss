@@ -1,0 +1,73 @@
+.photo {
+  background: $color-accent;
+  padding: 50px 0 clampAd(50, 100);
+  color: $white;
+  // .photo__container
+  &__container {
+  }
+  // .photo__content
+  &__content {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: clampAd(30, 55);
+    margin-bottom: 35px;
+  }
+  // .photo__title
+  &__title {
+  }
+  // .photo__link
+  &__link {
+    font-size: clampAd(14, 16);
+    text-decoration: underline;
+    margin-left: auto;
+  }
+  // .photo__buttons
+  &__buttons {
+    display: flex;
+    gap: 16px;
+  }
+  // .photo__button
+  &__button {
+    width: clampAd(30, 44);
+    aspect-ratio: 1;
+    border-radius: 50%;
+    border: 1px solid $white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    // .photo__button--prev
+    &--prev {
+    }
+    // .photo__button--next
+    &--next {
+    }
+  }
+  // .photo__items
+  &__items {
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 1s ease;
+    &.slick-initialized {
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+  // .photo__item
+  &__item {
+  }
+  // .photo__box
+  &__box {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(352px, 1fr));
+    grid-auto-flow: dense;
+    gap: 32px;
+  }
+  // .photo__img
+  &__img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}

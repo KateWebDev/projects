@@ -1,0 +1,36 @@
+.slider {
+  transition: all 1s linear;
+  // .slider__items
+  &__items {
+    transition: all 1s linear;
+  }
+  // .slider__item
+  &__item {
+    min-height: 100svh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    text-align: center;
+    transition: all 1s linear;
+
+    *:last-child {
+      margin-bottom: 0 !important;
+    }
+  }
+  // .slider__badge
+  &__badge {
+    margin-bottom: 24px;
+  }
+  // .slider__title
+  &__title {
+    margin-bottom: 27px;
+  }
+  // .slider__text
+  &__text {
+    margin-bottom: 39px;
+  }
+  // .slider__link
+  &__link {
+  }
+}

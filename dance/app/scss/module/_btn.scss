@@ -1,0 +1,39 @@
+.btn {
+  padding: clampAd(8, 12) clampAd(30, 50);
+  background: $color-accent;
+  border-radius: $radius-big;
+  border: 1px solid transparent;
+
+  line-height: 1;
+  text-align: center;
+  white-space: nowrap;
+  color: $white;
+
+  transition: all 0.3s linear;
+
+  // .btn--reverse
+  &--reverse {
+    color: $mainColor;
+    border-color: currentColor;
+    background: transparent;
+  }
+  // .btn--icon
+  &--icon {
+    display: inline-flex;
+    align-items: center;
+    column-gap: clampAd(5, 10);
+
+    &::after {
+      content: "";
+      width: 15px;
+      height: 13px;
+      background: url(../../images/icons/arrow-right.svg) center/contain no-repeat;
+    }
+  }
+
+  @media (any-hover: hover) {
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+}

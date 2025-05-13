@@ -1,0 +1,64 @@
+.header {
+  padding: 15px 0;
+
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: auto;
+
+  color: $white;
+
+  // .header__container
+  &__container {
+    max-width: 1230px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px clampAd(30, 50);
+  }
+  // .header__logo
+  &__logo {
+    margin-right: auto;
+
+    position: relative;
+    z-index: 4;
+  }
+  // .header__menu
+  &__menu {
+  }
+  // .header__languages
+  &__languages {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+
+    position: relative;
+    z-index: 4;
+  }
+  // .header__language
+  &__language {
+    font-size: clampAd(14, 17);
+    line-height: 1;
+    text-transform: capitalize;
+    transition: all 0.3s linear;
+
+    @media (any-hover: hover) {
+      &:hover {
+        color: $black;
+      }
+    }
+  }
+  // .header__btn
+  &__btn {
+    position: relative;
+    z-index: 4;
+  }
+  // .header__burger
+  &__burger {
+    position: relative;
+    z-index: 4;
+  }
+}

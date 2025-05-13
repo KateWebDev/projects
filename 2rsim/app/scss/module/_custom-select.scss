@@ -1,0 +1,28 @@
+.custom-select-container {
+}
+
+.custom-select-opener {
+  background: $white;
+  font-weight: 500;
+  font-size: clampAd(12, 16);
+  line-height: 1.5;
+  color: $color-dark;
+  padding: 0;
+}
+
+.custom-select-panel {
+  background: $mainColor;
+  color: $white;
+  font-weight: 500;
+  width: clampAd(280, 300);
+  left: -40px;
+}
+
+.custom-select-option {
+  width: 100%;
+  padding: 10px;
+}
+
+.custom-select-option.has-focus {
+  background: $color-dop;
+}

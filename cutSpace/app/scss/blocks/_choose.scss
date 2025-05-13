@@ -1,0 +1,66 @@
+.choose {
+  padding-bottom: clampAd(80, 170);
+
+  // .choose__container
+  &__container {
+  }
+  // .choose__title
+  &__title {
+    margin-bottom: clampAd(30, 55);
+  }
+  // .choose__items
+  &__items {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(clampAd(180, 248), 1fr));
+    gap: clampAd(30, 35);
+  }
+  // .choose__item
+  &__item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+
+    @media (any-hover: hover) {
+      &:hover {
+        .choose__icon {
+          background: $color-accent;
+
+          svg {
+            fill: $white;
+          }
+        }
+      }
+    }
+  }
+  // .choose__icon
+  &__icon {
+    width: clampAd(35, 70);
+    height: clampAd(35, 70);
+    border-radius: $radius-circle;
+    background: $color-bg-accent-light;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    margin-bottom: 15px;
+    transition: all 0.3s linear;
+
+    svg {
+      max-width: clampAd(20, 40);
+      height: clampAd(15, 30);
+      fill: $color-bg-accent;
+      transition: all 0.3s linear;
+    }
+  }
+  // .choose__name
+  &__name {
+    font-weight: 700;
+    font-size: clampAd(16, 28);
+    letter-spacing: 0.02em;
+  }
+  // .choose__text
+  &__text {
+  }
+}

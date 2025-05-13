@@ -1,0 +1,27 @@
+@function clampAd($min, $max) {
+  $minPx: $min + px;
+  $maxPx: $max + px;
+
+  $result: clamp(
+    $minPx,
+    calc($minPx + ($max - $min) * ((100vw - 320px) / ($widthReportMax - $widthReportMin))),
+    $maxPx
+  );
+
+  @return $result;
+}
+
+@mixin Roboto400 {
+  font-family: "Roboto Condensed", sans-serif;
+  font-weight: 400;
+}
+
+@mixin corporate700 {
+  font-family: "corporate", sans-serif;
+  font-weight: 700;
+}
+
+/*
+@include Roboto400;
+@include corporate700;
+*/

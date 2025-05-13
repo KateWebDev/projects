@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scable=0" />
+  <link rel="icon" type="image/ico" href="favicon.ico">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,700&family=Mulish&display=swap"
+    rel="stylesheet">
+
+  <link rel="stylesheet" href="css/style.min.css" />
+  <title>Logoipsum</title>
+</head>
+
+<body>
+  <div class="wrapper">
+    <header class="header">
+      <div class="header__container">
+        <a class="header__logo logo" href="#">
+          <picture>
+            <source srcset="images/header/small-logo.svg" media="(max-width: 768px)">
+            <img class="logo__img" src="images/header/logo.svg" alt="логотип" loading="lazy">
+          </picture>
+        </a>
+        <nav class="header__menu menu">
+          <ul class="menu__items">
+            <li class="menu__item">
+              <a class="menu__link menu__link--active" href="#intro">Главная</a>
+            </li>
+            <li class="menu__item">
+              <a class="menu__link" href="#advantages">Преимущества</a>
+            </li>
+            <li class="menu__item">
+              <a class="menu__link" href="#pricing">Цена</a>
+            </li>
+            <li class="menu__item">
+              <a class="menu__link" href="#about">Блог</a>
+            </li>
+          </ul>
+        </nav>
+        <a class="header__btn btn" href="#">
+          Начать
+        </a>
+        <div class="header__burger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+    </header>
+
+<main class="main">
+  <section class="intro" id="intro">
+    <div class="intro__container">
+      <div class="intro__content">
+        <h1 class="intro__title">
+          Развивайте свой бизнес по подписке
+        </h1>
+        <p class="intro__text">
+          Продукты, ориентированные на конечный результат, которые сокращают отток, оптимизируют ценообразование и
+          расширяют ваш бизнес по подписке от начала до конца.
+        </p>
+        <div class="intro__actions">
+          <a class="intro__btn btn" href="#">
+            Начать
+          </a>
+          <a class="intro__down" href="#clients">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M12 0.75V23.25" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+              <path d="M1.5 12.75L12 23.25L22.5 12.75" stroke-width="1.5" stroke-linecap="round"
+                stroke-linejoin="round" />
+            </svg>
+          </a>
+        </div>
+      </div>
+      <div class="intro__image">
+        <picture>
+          <source type="image/avif" srcset="images/main/intro/bg.avif">
+          <source type="image/webp" srcset="images/main/intro/bg.webp">
+          <img class="intro__img" src="images/main/intro/bg.png" alt="" loading="lazy">
+        </picture>
+      </div>
+    </div>
+  </section>
+
+  <section class="clients" id="clients">
+    <h2 class="hidden">
+      Наши клиенты
+    </h2>
+    <ul class="clients__items">
+      <li class="clients__item">
+        <img class="clients__img" src="images/main/clients/1.svg" alt="клиент 1">
+      </li>
+      <li class="clients__item">
+        <img class="clients__img" src="images/main/clients/2.svg" alt="клиент 2">
+      </li>
+      <li class="clients__item">
+        <img class="clients__img" src="images/main/clients/3.svg" alt="клиент 3">
+      </li>
+      <li class="clients__item">
+        <img class="clients__img" src="images/main/clients/4.svg" alt="клиент 4">
+      </li>
+      <li class="clients__item">
+        <img class="clients__img" src="images/main/clients/5.svg" alt="клиент 5">
+      </li>
+    </ul>
+  </section>
+
+  <section class="about" id="about">
+    <div class="about__container">
+      <div class="about__items">
+        <div class="about__item">
+          <picture>
+            <source type="image/avif" srcset="images/main/about/1.avif">
+            <source type="image/webp" srcset="images/main/about/1.webp">
+            <img class="about__img" src="images/main/about/1.png"
+              alt="человек с калькулятором, карандашом и круговой диаграммой" loading="lazy">
+          </picture>
+          <div class="about__content">
+            <h2 class="about__title">
+              Подписной индекс
+            </h2>
+            <div class="about__text">
+              Ежедневный набор данных, который позволит вам быть в курсе тенденций рынка подписки и того, что происходит
+              в вашей вертикали.
+            </div>
+            <a class="about__link" href="#">
+              Узнать больше
+            </a>
+          </div>
+        </div>
+        <div class="about__item">
+          <picture>
+            <source type="image/avif" srcset="images/main/about/2.avif">
+            <source type="image/webp" srcset="images/main/about/2.webp">
+            <img class="about__img" src="images/main/about/2.png" alt="человек с телефоном и диаграммой"
+              loading="lazy">
+          </picture>
+          <div class="about__content">
+            <h2 class="about__title">
+              Подробные показатели
+            </h2>
+            <div class="about__text">
+              Точная отчетность в режиме реального времени у вас под рукой. Получать данные еще никогда не было так
+              просто.
+            </div>
+            <a class="about__link" href="#">
+              Узнать больше
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="advantages" id="advantages">
+    <div class="advantages__container">
+      <h2 class="hidden">
+        Преимущества
+      </h2>
+      <div class="advantages__items">
+        <div class="advantages__item">
+          <picture>
+            <source type="image/avif" srcset="images/main/advantages/card.avif">
+            <source type="image/webp" srcset="images/main/advantages/card.webp">
+            <img class="advantages__img" src="images/main/advantages/card.jpg" alt="" loading="lazy">
+          </picture>
+          <h4 class="advantages__name">
+            Контрольные показатели
+          </h4>
+          <p class="advantages__text">
+            Посмотрите, как вы сравниваете себя с аналогичными компаниями на аналогичных этапах.
+          </p>
+        </div>
+        <div class="advantages__item">
+          <picture>
+            <source type="image/avif" srcset="images/main/advantages/calculator.avif">
+            <source type="image/webp" srcset="images/main/advantages/calculator.webp">
+            <img class="advantages__img" src="images/main/advantages/calculator.jpg" alt="" loading="lazy">
+          </picture>
+          <h4 class="advantages__name">
+            Аудит ценообразования
+          </h4>
+          <p class="advantages__text">
+            Оцените эффективность вашей стратегии монетизации и ценообразования.
+          </p>
+        </div>
+        <div class="advantages__item">
+          <picture>
+            <source type="image/avif" srcset="images/main/advantages/camera.avif">
+            <source type="image/webp" srcset="images/main/advantages/camera.webp">
+            <img class="advantages__img" src="images/main/advantages/camera.jpg" alt="" loading="lazy">
+          </picture>
+          <h4 class="advantages__name">
+            Аудит удержания
+          </h4>
+          <p class="advantages__text">
+            Проведите аудит, где существует утечка доходов и где вы можете увеличить удержание.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="pricing" id="pricing">
+    <div class="pricing__container">
+      <h2 class="pricing__title">
+        Получите правильный план для будущего продукта.
+      </h2>
+      <div class="tabs">
+        <nav class="tabs__items">
+          <a class="tabs__item tabs__item--active" href="#tab1">Годовой</a>
+          <a class="tabs__item" href="#tab2">Ежемесячно</a>
+        </nav>
+        <div class="tabs__content">
+          <div class="tabs__block tabs__block--active" id="tab1">
+            <ul class="tabs__list">
+              <li class="tabs__point">
+                <div class="tabs__name">
+                  Стартовый
+                </div>
+                <div class="tabs__price">
+                  0 руб
+                </div>
+                <ul class="tabs__enumerations">
+                  <li class="tabs__enumeration">
+                    1 Сайт
+                  </li>
+                  <li class="tabs__enumeration">
+                    5 GB памяти
+                  </li>
+                  <li class="tabs__enumeration">
+                    Ограниченная поддержка
+                  </li>
+                </ul>
+                <a class="tabs__btn" href="#">
+                  Начать
+                </a>
+              </li>
+              <li class="tabs__point tabs__point--hit">
+                <div class="tabs__name">
+                  Премиум
+                </div>
+                <div class="tabs__price">
+                  2560 руб<span>/месяц</span>
+                </div>
+                <ul class="tabs__enumerations">
+                  <li class="tabs__enumeration">
+                    10 сайтов
+                  </li>
+                  <li class="tabs__enumeration">
+                    15 GB памяти
+                  </li>
+                  <li class="tabs__enumeration">
+                    Премиальная поддержка
+                  </li>
+                </ul>
+                <a class="tabs__btn" href="#">
+                  Начать
+                </a>
+              </li>
+              <li class="tabs__point">
+                <div class="tabs__name">
+                  Корпоративный
+                </div>
+                <div class="tabs__price">
+                  4325 руб<span>/месяц</span>
+                </div>
+                <ul class="tabs__enumerations">
+                  <li class="tabs__enumeration">
+                    неограниченое количество сайтов
+                  </li>
+                  <li class="tabs__enumeration">
+                    50 GB памяти
+                  </li>
+                  <li class="tabs__enumeration">
+                    Премиальная поддержка
+                  </li>
+                </ul>
+                <a class="tabs__btn" href="#">
+                  Начать
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div class="tabs__block" id="tab2">
+            <ul class="tabs__list">
+              <li class="tabs__point">
+                <div class="tabs__name">
+                  Стартовый
+                </div>
+                <div class="tabs__price">
+                  0 руб
+                </div>
+                <ul class="tabs__enumerations">
+                  <li class="tabs__enumeration">
+                    1 сайт
+                  </li>
+                  <li class="tabs__enumeration">
+                    5 GB памяти
+                  </li>
+                  <li class="tabs__enumeration">
+                    Ограниченная поддержка
+                  </li>
+                </ul>
+                <a class="tabs__btn" href="#">
+                  Начать
+                </a>
+              </li>
+              <li class="tabs__point tabs__point--hit">
+                <div class="tabs__name">
+                  Премиум
+                </div>
+                <div class="tabs__price">
+                  794 руб<span>/месяц</span>
+                </div>
+                <ul class="tabs__enumerations">
+                  <li class="tabs__enumeration">
+                    10 сайтов
+                  </li>
+                  <li class="tabs__enumeration">
+                    15 GB памяти
+                  </li>
+                  <li class="tabs__enumeration">
+                    Премиальная поддержка
+                  </li>
+                </ul>
+                <a class="tabs__btn" href="#">
+                  Начать
+                </a>
+              </li>
+              <li class="tabs__point">
+                <div class="tabs__name">
+                  Корпоративный
+                </div>
+                <div class="tabs__price">
+                  1677 руб<span>/месяц</span>
+                </div>
+                <ul class="tabs__enumerations">
+                  <li class="tabs__enumeration">
+                    неограниченое количество сайтов
+                  </li>
+                  <li class="tabs__enumeration">
+                    50 GB памяти
+                  </li>
+                  <li class="tabs__enumeration">
+                    Премиальная поддержка
+                  </li>
+                </ul>
+                <a class="tabs__btn" href="#">
+                  Начать
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <footer class="footer">
+
+
+    <div class="footer__container">
+
+
+  
+
+
+    </div>
+
+
+  </footer>
+
+
+  </div>
+
+
+  
+
+
+  <script src="js/script.min.js"></script>
+
+
+  </body>
+
+
+  
+
+
+  </html>

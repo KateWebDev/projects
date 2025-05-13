@@ -1,0 +1,18 @@
+.pricing {
+  padding-bottom: clamp(50px, calc(50px + (150 - 50) * ((100vw - 320px) / ($widthReportMax - $widthReportMin))), 150px);
+  // .pricing__container
+  &__container {
+    position: relative;
+  }
+  // .pricing__title
+  &__title {
+    max-width: 525px;
+    @include font_family;
+    font-size: clamp(30px, calc(30px + (60 - 30) * ((100vw - 320px) / ($widthReportMax - $widthReportMin))), 60px);
+    font-weight: 700;
+    line-height: 1.16;
+    letter-spacing: -1.876px;
+    color: #19191b;
+    margin-bottom: clamp(30px, calc(30px + (80 - 30) * ((100vw - 320px) / ($widthReportMax - $widthReportMin))), 80px);
+  }
+}

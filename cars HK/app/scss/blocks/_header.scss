@@ -1,0 +1,29 @@
+.header {
+  padding: clampAd(20, 40) 0;
+  // .header__container
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    column-gap: clampAd(30, 72);
+  }
+  // .header__logo
+  &__logo {
+    position: relative;
+    z-index: 4;
+  }
+  // .header__menu
+  &__menu {
+    margin-left: auto;
+  }
+  // .header__btn
+  &__btn {
+    position: relative;
+    z-index: 4;
+  }
+  // .header__burger
+  &__burger {
+    position: relative;
+    z-index: 4;
+  }
+}

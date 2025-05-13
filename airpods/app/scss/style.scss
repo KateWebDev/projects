@@ -1,0 +1,120 @@
+@import "components/_resetStyle";
+
+//Страница
+$widthReportMax: 1920;
+$widthReportMin: 320;
+$maxWidthContainer: 1230px;
+$containerPadding: 15px;
+
+//Шрифт
+$fontFamily: "Inter", sans-serif;
+$mainColor: #000000;
+$mainBackGround: #ffffff;
+$mainSize: 16;
+$size: $mainSize + px;
+$lineheight: calc(19 / $mainSize);
+$fontWeight: 500;
+
+//Контейнер
+[class*="__container"] {
+  max-width: $maxWidthContainer;
+  margin: 0 auto;
+  padding: 0 $containerPadding;
+}
+
+//Бургер меню
+[class*="__burger"] {
+  display: none;
+  margin-left: 20px;
+  flex-direction: column;
+  row-gap: 4px;
+  cursor: pointer;
+
+  span {
+    width: 30px;
+    height: 3px;
+    background: #000000;
+    transition: all 0.3s linear;
+  }
+}
+
+body {
+  font-family: $fontFamily;
+  background-color: $mainBackGround;
+  color: $mainColor;
+  font-size: clamp(
+    12px,
+    calc(12px + ($mainSize - 12) * ((100vw - 320px) / ($widthReportMax - $widthReportMin))),
+    $size
+  );
+  line-height: $lineheight;
+  font-weight: $fontWeight;
+
+  &.lock {
+    overflow: hidden;
+  }
+}
+
+.hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.main {
+  flex: 1 1 auto;
+}
+
+.logo {
+  width: 25px;
+  height: 30px;
+  // .logo__img
+  &__img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+}
+
+.title {
+  font-size: clamp(25px, calc(25px + (64 - 25) * ((100vw - 320px) / ($widthReportMax - $widthReportMin))), 64px);
+  text-align: center;
+  font-weight: 700;
+}
+
+.color-blue {
+  background: linear-gradient(180deg, #cadbeb 0%, rgba(235, 235, 235, 0) 100%);
+}
+
+.color-red {
+  background: linear-gradient(180deg, #f3d6d1 0%, rgba(235, 235, 235, 0) 100%);
+}
+
+.color-black {
+  background: linear-gradient(180deg, #b6b6b6 0%, rgba(235, 235, 235, 0) 100%);
+}
+
+.color-green {
+  background: linear-gradient(180deg, #ddead9 0%, rgba(235, 235, 235, 0) 100%);
+}
+
+.color-white {
+  background: linear-gradient(180deg, #fafafa 0%, rgba(235, 235, 235, 0) 100%);
+}
+
+@import "module/_header";
+@import "module/_menu";
+@import "module/_intro";
+@import "module/_products";
+@import "module/_about";
+@import "module/_battery";
+@import "module/_time";
+@import "module/_volume";
+@import "module/_footer";
+@import "components/_adaptive";

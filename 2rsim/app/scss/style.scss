@@ -1,0 +1,142 @@
+@import "components/fonts";
+@import "components/mixin";
+@import "components/resetStyle";
+@import "../../node_modules/custom-select/src/css/custom-select";
+@import "../../node_modules/rateyo/src/jquery.rateyo";
+
+$widthReportMax: 1920;
+$widthReportMin: 320;
+$maxWidthContainer: 1408px;
+$containerPadding: 15px;
+
+$fontFamily: "Poppins", sans-serif;
+$mainColor: #5b5b5b;
+$mainBackGround: #ffffff;
+$white: #ffffff;
+$black: #000000;
+$mainSize: 16;
+$size: $mainSize + px;
+$lineheight: calc(32 / $mainSize); //2
+$fontWeight: 400;
+
+$color-accent: #5243c2;
+$color-dop: #ffa800;
+$color-dop-bg: #f9f9f9;
+$color-dark: #161414;
+$color-light: #979797;
+
+$radius: 12px;
+
+[class*="__container"] {
+  max-width: $maxWidthContainer;
+  margin: 0 auto;
+  padding: 0 $containerPadding;
+}
+
+[class*="__burger"] {
+  display: none;
+  flex-direction: column;
+  row-gap: 4px;
+  cursor: pointer;
+
+  span {
+    width: 24px;
+    height: 3px;
+    border-radius: 5px;
+    background: $white;
+    transition: all 0.3s linear;
+  }
+
+  &.header__burger--active {
+    span {
+      &:nth-child(1) {
+        display: none;
+      }
+      &:nth-child(2) {
+        transform: rotate(45deg);
+      }
+      &:nth-child(3) {
+        transform: rotate(-45deg) translateY(-5px) translateX(5px);
+      }
+    }
+  }
+}
+
+[class*="__ibg"] {
+  position: relative;
+  /*Для самих картинок в карточках технический класс*/
+  img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+}
+
+body {
+  font-family: $fontFamily;
+  background-color: $mainBackGround;
+  color: $mainColor;
+  font-size: clampAd(12, $mainSize);
+  line-height: $lineheight;
+  font-weight: $fontWeight;
+
+  &.lock {
+    overflow: hidden;
+  }
+}
+
+.hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.main {
+  flex: 1 1 auto;
+  &__section {
+    margin-bottom: clampAd(50, 100);
+  }
+}
+
+.top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 30px;
+}
+
+[class*="__top"] {
+  margin-bottom: clampAd(30, 64);
+}
+
+[class*="__img"] {
+  border-radius: $radius;
+}
+
+@import "module/logo";
+@import "module/menu";
+@import "module/btn";
+@import "module/title";
+@import "module/form";
+@import "module/custom-select";
+
+@import "module/header";
+@import "module/intro";
+@import "module/destinations";
+@import "module/hotels";
+@import "module/trips";
+@import "module/activities";
+@import "module/about";
+@import "module/footer";
+
+@import "components/adaptive";

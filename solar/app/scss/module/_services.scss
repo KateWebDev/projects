@@ -1,0 +1,41 @@
+.services {
+  // .services__container
+  &__container {
+  }
+  // .services__title
+  &__title {
+  }
+  // .services__inner
+  &__inner {
+  }
+  // .services__content
+  &__content {
+  }
+  // .services__item
+  &__item {
+    &:not(:last-child) {
+      margin-bottom: clamp(
+        30px,
+        calc(30px + (50 - 30) * ((100vw - 320px) / ($widthReportMax - $widthReportMin))),
+        20px
+      );
+    }
+  }
+  // .services__name
+  &__name {
+    @include Noto700;
+    font-size: clamp(14px, calc(14px + (18 - 14) * ((100vw - 320px) / ($widthReportMax - $widthReportMin))), 18px);
+    margin-bottom: 15px;
+  }
+  // .services__text
+  &__text {
+  }
+  // .services__ibg
+  &__image {
+  }
+  // .services__img
+  &__img {
+    width: 100%;
+    height: auto;
+  }
+}

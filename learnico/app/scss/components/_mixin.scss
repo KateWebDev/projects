@@ -1,0 +1,22 @@
+@function clampAd($min, $max) {
+  $minPx: $min + px;
+  $maxPx: $max + px;
+
+  $result: clamp(
+    $minPx,
+    calc($minPx + ($max - $min) * ((100vw - 320px) / ($widthReportMax - $widthReportMin))),
+    $maxPx
+  );
+
+  @return $result;
+}
+
+@mixin Poppins400 {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+}
+
+@mixin DMSans400 {
+  font-family: "DM Sans", sans-serif;
+  font-weight: 400;
+}

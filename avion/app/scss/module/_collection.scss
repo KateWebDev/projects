@@ -1,0 +1,45 @@
+.collection {
+  padding: clampAd(30, 60) 0;
+  // .collection__container
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    gap: 24px 16px;
+  }
+  // .collection__content
+  &__content {
+    max-width: 634px;
+    padding: clampAd(30, 64) clampAd(30, 75) clampAd(25, 54) clampAd(30, 64);
+    background: $color-dark;
+    color: $white;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    row-gap: 12px;
+  }
+  // .collection__title
+  &__title {
+    color: inherit;
+  }
+  // .collection__text
+  &__text {
+    font-size: clampAd(12, 18);
+    margin-bottom: auto;
+  }
+  // .collection__btn
+  &__btn {
+  }
+  // .collection__image
+  &__image {
+    max-width: 630px;
+    max-height: 478px;
+  }
+  // .collection__img
+  &__img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+}

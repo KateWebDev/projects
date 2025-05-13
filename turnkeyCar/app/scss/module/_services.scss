@@ -1,0 +1,143 @@
+.services {
+  padding: clamp(50px, calc(50px + (300 - 50) * ((100vw - 320px) / ($widthReportMax - $widthReportMin))), 300px) 0 100px;
+  // .services__container
+  &__container {
+  }
+  // .services__title
+  &__title {
+    margin-bottom: clamp(30px, calc(30px + (50 - 30) * ((100vw - 320px) / ($widthReportMax - $widthReportMin))), 50px);
+  }
+  // .services__content
+  &__content {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 50px 15px;
+  }
+  // .services__info
+  &__info {
+    max-width: 506px;
+  }
+  // .services__info-item
+  &__info-item {
+    margin-bottom: clamp(30px, calc(30px + (70 - 30) * ((100vw - 320px) / ($widthReportMax - $widthReportMin))), 70px);
+
+    &:last-of-type {
+      margin-bottom: 50px;
+    }
+  }
+  // .services__name
+  &__name {
+    color: $color-accent;
+    margin-bottom: 12px;
+  }
+  // .services__text
+  &__text {
+    & + .services__text {
+      margin-top: 12px;
+    }
+  }
+  // .services__btn
+  &__btn {
+    position: relative;
+
+    span {
+      display: inline-block;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      right: -110px;
+
+      font-size: 14px;
+      color: $color-gray;
+      text-transform: uppercase;
+      padding-left: 90px;
+      transition: all 0.3s linear;
+
+      &::before {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 0;
+        transform: translateY(-50%);
+        width: 80px;
+        height: 1px;
+        background: $color-gray;
+        transition: all 0.3s linear;
+      }
+    }
+
+    @media (any-hover: hover) and (min-width: 992px) {
+      &:hover {
+        span {
+          color: $color-firm;
+          &::before {
+            background: $color-firm;
+          }
+        }
+      }
+    }
+  }
+
+  // .services__points
+  &__points {
+    max-width: 500px;
+    width: 100%;
+  }
+  // .services__items
+  &__items {
+    counter-reset: num;
+  }
+  // .services__item
+  &__item {
+    position: relative;
+    max-width: 450px;
+    border: 1px solid $color-gray;
+    background: #ffffff;
+    padding: 5px 10px 5px
+      clamp(80px, calc(80px + (113 - 80) * ((100vw - 320px) / ($widthReportMax - $widthReportMin))), 113px);
+    transition: all 0.3s linear;
+
+    &::before {
+      content: counter(num, decimal-leading-zero);
+      counter-increment: num;
+      position: absolute;
+      top: calc(50% - 15px);
+      transform: translateY(-50%);
+      left: 20px;
+      font-size: clamp(28px, calc(28px + (36 - 28) * ((100vw - 320px) / ($widthReportMax - $widthReportMin))), 36px);
+      font-weight: 400;
+      color: $color-gray;
+      writing-mode: tb-rl;
+      transform: rotate(180deg);
+      transition: all 0.3s linear;
+    }
+
+    &:not(:last-child) {
+      margin-bottom: 12px;
+    }
+
+    @media (any-hover: hover) and (min-width: 992px) {
+      &:hover {
+        cursor: pointer;
+        max-width: 500px;
+        border: 2px solid $color-accent;
+
+        &::before {
+          color: $color-accent;
+        }
+
+        .services__item-name {
+          color: $color-accent;
+        }
+      }
+    }
+  }
+  // .services__item-name
+  &__item-name {
+    font-size: clamp(20px, calc(20px + (24 - 20) * ((100vw - 320px) / ($widthReportMax - $widthReportMin))), 24px);
+  }
+  // .services__item-text
+  &__item-text {
+  }
+}

@@ -1,0 +1,35 @@
+.calendar {
+  // .calendar__container
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 20px 5px;
+  }
+  // .calendar__content
+  &__content {
+    max-width: 438px;
+  }
+  // .calendar__title
+  &__title {
+    margin-bottom: 30px;
+  }
+  // .calendar__text
+  &__text {
+    max-width: 377px;
+  }
+  // .calendar__table
+  &__table {
+    max-width: 449px;
+    width: 100%;
+    border-top: 1px solid $black;
+    border-bottom: 1px solid $black;
+    border-spacing: 10px 20px;
+    tr {
+    }
+    td {
+      font-size: clamp(10px, calc(10px + (14 - 10) * ((100vw - 320px) / ($widthReportMax - $widthReportMin))), 14px);
+    }
+  }
+}

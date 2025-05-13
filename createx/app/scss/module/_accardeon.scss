@@ -1,0 +1,57 @@
+.accardeon {
+  // .accardeon__items
+  &__items {
+    display: flex;
+    flex-direction: column;
+    row-gap: clampAd(18, 24);
+  }
+  // .accardeon__item
+  &__item {
+  }
+  // .accardeon__name
+  &__name {
+    font-size: clampAd(14, 20);
+    font-weight: 700;
+    line-height: 1.5;
+    text-align: left;
+    color: $color-dark;
+    margin-bottom: clampAd(10, 16);
+    padding-left: clampAd(20, 40);
+    position: relative;
+    white-space: nowrap;
+
+    span {
+      display: inline-block;
+      padding-left: clampAd(4, 8);
+      font-weight: 400;
+      white-space: nowrap;
+      color: $color-accent;
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: clampAd(7, 10);
+      left: 0;
+      width: clampAd(10, 20);
+      height: clampAd(10, 20);
+      background: url(../../images/icons/plus.svg) center/cover no-repeat;
+      transition: all 0.3s linear;
+    }
+
+    &--active {
+      &::before {
+        background: url(../../images/icons/minus.svg) center/cover no-repeat;
+      }
+    }
+  }
+  // .accardeon__text
+  &__text {
+    padding-left: clampAd(20, 40);
+    display: none;
+
+    &--active {
+      display: block;
+    }
+  }
+}

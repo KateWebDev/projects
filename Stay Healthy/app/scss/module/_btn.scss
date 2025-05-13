@@ -1,0 +1,26 @@
+.btn {
+  padding: 13px clampAd(20, 37);
+  background: $color-gradient;
+  border-radius: 28px;
+  border: 1px solid transparent;
+  @include Poppins500;
+  font-size: clampAd(14, 18);
+  line-height: 1.4;
+  text-transform: capitalize;
+  text-align: center;
+  color: $white;
+  white-space: nowrap;
+  transition: all 0.3s linear;
+
+  &--transparent {
+    background: transparent;
+    border-color: currentColor;
+    @include Poppins300;
+  }
+
+  @media (any-hover: hover) {
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+}

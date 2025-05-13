@@ -1,0 +1,27 @@
+.subscription {
+  // .subscription__container
+  &__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    row-gap: 20px;
+  }
+  // .subscription__top
+  &__top {
+  }
+  // .subscription__title
+  &__title {
+  }
+  // .subscription__text
+  &__text {
+    max-width: 600px;
+    margin-bottom: 10px;
+
+    font-size: clampAd(14, 16);
+    color: $color-light;
+  }
+  // .subscription__form
+  &__form {
+  }
+}

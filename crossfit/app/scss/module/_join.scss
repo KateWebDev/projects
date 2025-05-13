@@ -1,0 +1,150 @@
+.join {
+  background: $color-bg-accent;
+  text-align: center;
+  // .join__top
+  &__top {
+    padding: clamp(50px, calc(50px + (150 - 50) * ((100vw - 320px) / ($widthReportMax - $widthReportMin))), 150px) 15px;
+    background-image: url("../images/main/join/bg.jpg");
+    background: image-set(
+        url("../images/main/join/bg.avif") type("image/avif"),
+        url("../images/main/join/bg.webp") type("image/webp"),
+        url("../images/main/join/bg.jpg")
+      )
+      center/cover no-repeat;
+  }
+  // .join__link
+  &__link {
+  }
+  // .join__video
+  &__video {
+    position: relative;
+    max-width: 960px;
+    width: 100%;
+    margin: 0 auto;
+  }
+  // .join__img
+  &__img {
+    width: 100%;
+  }
+  // .join__play
+  &__play {
+    width: clamp(70px, calc(70px + (200 - 70) * ((100vw - 320px) / ($widthReportMax - $widthReportMin))), 200px);
+    aspect-ratio: 1;
+    border-radius: 50%;
+    background: transparent;
+    border-radius: 50%;
+    border: 1px solid currentColor;
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    font-size: clamp(10px, calc(10px + (14 - 10) * ((100vw - 320px) / ($widthReportMax - $widthReportMin))), 14px);
+    font-weight: 700;
+    text-transform: uppercase;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 2px;
+    transition: all 0.3s linear;
+
+    svg {
+      fill: currentColor;
+      stroke: currentColor;
+      transition: all 0.3s linear;
+    }
+
+    @media (any-hover: hover) and (min-width: 992px) {
+      &:hover {
+        color: $color-bg-accent;
+
+        svg {
+          transform: rotate(-135deg);
+        }
+      }
+    }
+  }
+  // .join__bottom
+  &__bottom {
+    padding: 0 15px
+      clamp(50px, calc(50px + (150 - 50) * ((100vw - 320px) / ($widthReportMax - $widthReportMin))), 150px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  // .join__name
+  &__name {
+    margin-top: -0.55em;
+    display: inline-block;
+    font-size: clamp(40px, calc(40px + (180 - 40) * ((100vw - 320px) / ($widthReportMax - $widthReportMin))), 180px);
+    font-weight: 700;
+    line-height: 1.2;
+    text-transform: uppercase;
+    margin-bottom: 58px;
+    padding-right: clamp(
+      58px,
+      calc(58px + (158 - 58) * ((100vw - 320px) / ($widthReportMax - $widthReportMin))),
+      158px
+    );
+    position: relative;
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      right: 0;
+      transform: translateY(-50%);
+      width: clamp(30px, calc(30px + (127 - 30) * ((100vw - 320px) / ($widthReportMax - $widthReportMin))), 127px);
+      aspect-ratio: 1;
+      background: url(../images/main/arrowUp.svg) center/cover no-repeat;
+    }
+  }
+  // .join__title
+  &__title {
+    margin-bottom: 10px;
+  }
+  // .join__text
+  &__text {
+    font-size: clamp(14px, calc(14px + (20 - 14) * ((100vw - 320px) / ($widthReportMax - $widthReportMin))), 20px);
+    line-height: 1.65;
+    text-transform: uppercase;
+    margin-bottom: 50px;
+  }
+  // .join__form
+  &__form {
+    display: flex;
+    justify-content: center;
+    gap: 30px 20px;
+  }
+  // .join__input
+  &__input {
+    width: 400px;
+    border-radius: 30px;
+    background: transparent;
+    border: 1px solid #404040;
+    padding: 15px 25px;
+    color: #ffffff;
+    font-size: 16px;
+    letter-spacing: 0.8px;
+    transition: all 0.3s linear;
+
+    &::placeholder {
+      color: $color-accent;
+      font-family: "Heebo", sans-serif;
+      font-size: 16px;
+      font-weight: 300;
+      letter-spacing: 0.8px;
+    }
+
+    @media (any-hover: hover) and (min-width: 992px) {
+      &:hover {
+        border-color: $color-accent;
+      }
+    }
+  }
+  // .join__btn
+  &__btn {
+  }
+}

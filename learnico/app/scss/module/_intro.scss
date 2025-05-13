@@ -1,0 +1,150 @@
+.intro {
+  background: $color-bg-dark;
+  color: $white;
+
+  // .intro__container
+  &__container {
+  }
+  // .intro__top
+  &__top {
+    padding: clampAd(40, 57) 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: clampAd(20, 30);
+  }
+  // .intro__content
+  &__content {
+    max-width: 600px;
+  }
+  // .intro__title
+  &__title {
+    @include Poppins400;
+    font-size: clampAd(30, 56);
+    line-height: 1.2;
+    margin-bottom: clampAd(20, 30);
+  }
+  // .intro__text
+  &__text {
+    max-width: 560px;
+    margin-bottom: clampAd(20, 40);
+  }
+  // .intro__actions
+  &__actions {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    column-gap: clampAd(8, 16);
+    margin-bottom: clampAd(20, 48);
+  }
+  // .intro__btn
+  &__btn {
+  }
+  // .intro__video
+  &__video {
+    display: flex;
+    align-items: center;
+    column-gap: clampAd(8, 16);
+    padding-right: 28px;
+    text-transform: capitalize;
+    position: relative;
+    transition: all 0.3s linear;
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      right: 0;
+      transform: translateY(-50%);
+      width: 20px;
+      aspect-ratio: 1;
+      background: url(../../images/icons/play.svg) center/cover no-repeat;
+    }
+
+    @media (any-hover: hover) {
+      &:hover {
+        text-shadow: 0 0 2px currentColor;
+      }
+    }
+  }
+  // .intro__raiting
+  &__raiting {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: clampAd(8, 16);
+  }
+  // .intro__images
+  &__images {
+    display: flex;
+  }
+  // .intro__image
+  &__image {
+    border: 2px solid $white;
+    width: 48px;
+    height: 48px;
+
+    &:nth-child(even) {
+      margin-left: -20px;
+      margin-right: -20px;
+      position: relative;
+      z-index: 2;
+    }
+  }
+  // .intro__icon
+  &__icon {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+  // .intro__rateyo
+  &__rateyo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 5px;
+    position: relative;
+    z-index: 2;
+  }
+  // .intro__rateyo-stars
+  &__rateyo-stars {
+  }
+  // .intro__desc
+  &__desc {
+    font-size: 16px;
+  }
+  // .intro__picture
+  &__picture {
+    max-width: clampAd(300, 600);
+    max-height: 640px;
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 48%;
+      right: 100%;
+      transform: translateX(50%);
+      width: clampAd(100, 209);
+      height: clampAd(150, 250);
+      background: url(../../images/main/intro/decor.svg) center/cover no-repeat;
+    }
+  }
+  // .intro__img
+  &__img {
+    border-radius: 24px;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    object-position: center;
+  }
+  // .intro__bottom
+  &__bottom {
+    padding-bottom: clampAd(50, 164);
+    text-align: center;
+  }
+  // .intro__dop-text
+  &__dop-text {
+  }
+}

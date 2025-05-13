@@ -1,0 +1,42 @@
+.header {
+  padding: clampAd(30, 57) 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: auto;
+  z-index: 2;
+
+  &--fixed {
+    position: fixed;
+    overflow: auto;
+    background: $color-accent2;
+  }
+  // .header__container
+  &__container {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    column-gap: clampAd(15, 100);
+  }
+  // .header__logo
+  &__logo {
+  }
+
+  // .header__btn
+  &__btn {
+  }
+  // .header__link
+  &__link {
+    @include Comfortaa700;
+    font-size: clampAd(12, 20);
+    transition: all 0.3s linear;
+    white-space: nowrap;
+
+    @media (any-hover: hover) { 
+      &:hover {
+        font-size: clampAd(16, 24);
+      }
+    }
+  }
+}

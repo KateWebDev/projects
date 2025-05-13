@@ -1,0 +1,33 @@
+.program {
+  padding: clampAd(50, 103) 0 clampAd(60, 185);
+  // .program__container
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+  }
+  // .program__content
+  &__content {
+    max-width: clampAd(300, 602);
+  }
+  // .program__name
+  &__name {
+    margin-bottom: clampAd(30, 60);
+  }
+  // .program__accardeon
+  &__accardeon {
+  }
+  // .program__image
+  &__image {
+    max-width: clampAd(300, 495);
+    max-height: 554px;
+  }
+  // .program__img
+  &__img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    object-position: center;
+  }
+}

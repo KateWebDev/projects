@@ -1,0 +1,9 @@
+.description {
+  // .description__container
+  &__container {
+    padding-left: clamp(30px, calc(30px + (200 - 30) * ((100vw - 320px) / ($widthReportMax - $widthReportMin))), 200px);
+  }
+  // .description__accardeon
+  &__accardeon {
+  }
+} 

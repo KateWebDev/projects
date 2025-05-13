@@ -1,0 +1,143 @@
+.about {
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 814px;
+    height: 612px;
+    transform: translateY(-30%);
+    background: url(../../images/main/about/bg-ellipse-top.svg) center/cover no-repeat;
+  }
+
+  // .about__container
+  &__container {
+    position: relative;
+    z-index: 1;
+  }
+  // .about__items
+  &__items {
+    display: flex;
+    flex-direction: column;
+    row-gap: clampAd(40, 80);
+  }
+  // .about__item
+  &__item {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 40px 30px;
+
+    &:nth-child(odd) {
+      flex-direction: row-reverse;
+    }
+  }
+  // .about__content
+  &__content {
+    max-width: clampAd(300, 460);
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    row-gap: clampAd(30, 40);
+  }
+  // .about__top
+  &__top {
+  }
+  // .about__link
+  &__link {
+  }
+  // .about__inner
+  &__inner {
+  }
+  // .about__image
+  &__image {
+  }
+  // .about__img
+  &__img {
+    display: block;
+    max-width: 100%;
+    max-height: 100%;
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    object-position: center;
+  }
+  // .about__list
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(clampAd(180, 268), 1fr));
+    align-items: center;
+    grid-auto-flow: dense;
+    gap: clampAd(20, 30);
+
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 0;
+      transform: translateY(-50%) translateX(50%);
+      width: 410px;
+      height: 395px;
+      background: url(../../images/main/about/bg.svg) center/cover no-repeat;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: url(../../images/main/about/bg-ellipse.svg) center/contain no-repeat;
+    }
+  }
+  // .about__point
+  &__point {
+    padding: 18px 25px;
+    box-shadow: 8px 9px 42px 0 rgba(12, 169, 65, 0.12);
+    background: $white;
+    border-radius: $radius-small;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    row-gap: clampAd(10, 12);
+
+    position: relative;
+    z-index: 1;
+
+    &--big-row {
+      grid-row: span 2;
+    }
+  }
+  // .about__picture
+  &__picture {
+    width: 103px;
+    height: 90px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  // .about__icon
+  &__icon {
+  }
+  // .about__name
+  &__name {
+    @include Fredoka;
+    font-size: clampAd(16, 24);
+    line-height: 1;
+    color: $color-dark1;
+  }
+  // .about__info
+  &__info {
+    font-size: clampAd(12, 16);
+    line-height: 1.5;
+  }
+}

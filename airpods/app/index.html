@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scable=0" />
+  <link rel="icon" type="image/ico" href="favicon.ico">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.min.css" />
+  <title>Airpods MAX</title>
+</head>
+
+<body>
+  <div class="wrapper">
+    <header class="header">
+      <div class="header__container">
+        <a class="header__logo logo" href="#">
+          <img class="logo__img" src="images/logo.svg" alt="logo" width="25" height="30">
+        </a>
+        <nav class="header__menu menu">
+          <ul class="menu__items">
+            <li class="menu__item">
+              <a class="menu__link" href="#about" aria-label="go to the section info">
+                Info
+              </a>
+            </li>
+            <li class="menu__item">
+              <a class="menu__link" href="#products" aria-label="go to the section product">
+                Product
+              </a>
+            </li>
+            <li class="menu__item">
+              <a class="menu__link" href="#footer" aria-label="go to the section contacts">
+                Contacts
+              </a>
+            </li>
+          </ul>
+        </nav>
+        <a class="header__btn" href="#" aria-label="make a purchase">
+          Buy
+        </a>
+        <div class="header__burger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+    </header>
+
+<main class="main">
+  <section class="intro color-blue">
+    <div class="intro__container ">
+      <h1 class="intro__title">
+        <span class="intro__title--air">Air</span><span class="intro__title--pod">Pod</span><span
+          class="intro__title--s">s</span><span class="intro__title--m">m</span><span class="intro__title--ax">ax</span>
+      </h1>
+      <div class="intro__images">
+        <picture>
+          <source type="image/avif" srcset="images/main/intro/1.avif">
+          <source type="image/webp" srcset="images/main/intro/1.webp">
+          <img class="intro__img blue" src="images/main/intro/1.png" alt="blue airpods headphones">
+        </picture>
+        <picture>
+          <source type="image/avif" srcset="images/main/intro/2.avif">
+          <source type="image/webp" srcset="images/main/intro/2.webp">
+          <img class="intro__img red hidden" src="images/main/intro/2.png" alt="red airpods headphones">
+        </picture>
+        <picture>
+          <source type="image/avif" srcset="images/main/intro/3.avif">
+          <source type="image/webp" srcset="images/main/intro/3.webp">
+          <img class="intro__img black hidden" src="images/main/intro/3.png" alt="black airpods headphones">
+        </picture>
+        <picture>
+          <source type="image/avif" srcset="images/main/intro/4.avif">
+          <source type="image/webp" srcset="images/main/intro/4.webp">
+          <img class="intro__img green hidden" src="images/main/intro/4.png" alt="green airpods headphones">
+        </picture>
+        <picture>
+          <source type="image/avif" srcset="images/main/intro/5.avif">
+          <source type="image/webp" srcset="images/main/intro/5.webp">
+          <img class="intro__img white hidden" src="images/main/intro/5.png" alt="white airpods headphones">
+        </picture>
+      </div>
+    </div>
+  </section>
+
+  <section class="products" id="products">
+    <div class="products__container">
+      <h3 class="products__title">
+        Choose your colour
+      </h3>
+      <p class="products__text">
+        The perfect balance between the purityof hi-fi and the magic of AirPods.
+        The ultimate personal audio experience.
+      </p>
+      <ul class="products__items">
+        <li class="products__item products__item--blue hidden">
+          <button class="products__btn products__btn--blue" type="button" aria-label="Open the blue headphones">
+            <picture>
+              <source type="image/avif" srcset="images/main/products/blue.avif">
+              <source type="image/webp" srcset="images/main/products/blue.webp">
+              <img src="images/main/products/blue.png" alt="blue headphones">
+            </picture>
+          </button>
+        </li>
+        <li class="products__item products__item--red">
+          <div>
+            <button class="products__btn products__btn--red" type="button" aria-label="Open the red headphones">
+              <picture>
+                <source type="image/avif" srcset="images/main/products/red.avif">
+                <source type="image/webp" srcset="images/main/products/red.webp">
+                <img src="images/main/products/red.png" alt="red headphones">
+              </picture>
+            </button>
+          </div>
+        </li>
+        <li class="products__item products__item--black">
+          <button class="products__btn products__btn--black" type="button" aria-label="Open the black headphones">
+            <picture>
+              <source type="image/avif" srcset="images/main/products/black.avif">
+              <source type="image/webp" srcset="images/main/products/black.webp">
+              <img src="images/main/products/black.png" alt="black headphones">
+            </picture>
+          </button>
+        </li>
+        <li class="products__item products__item--green">
+          <button class="products__btn products__btn--green" type="button" aria-label="Open the green headphones">
+            <picture>
+              <source type="image/avif" srcset="images/main/products/green.avif">
+              <source type="image/webp" srcset="images/main/products/green.webp">
+              <img src="images/main/products/green.png" alt="green headphones">
+            </picture>
+          </button>
+        </li>
+        <li class="products__item products__item--white">
+          <button class="products__btn products__btn--white" type="button" aria-label="Open the white headphones">
+            <picture>
+              <source type="image/avif" srcset="images/main/products/white.avif">
+              <source type="image/webp" srcset="images/main/products/white.webp">
+              <img src="images/main/products/white.png" alt="white headphones">
+            </picture>
+          </button>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="about" id="about">
+    <div class="about__container">
+      <h2 class="about__title title">
+        An extremely original composition.
+      </h2>
+      <p class="about__text">
+        Introducing the reinvention of over-the-ear headphones. From the cushion to the headband, the AirPods Max are
+        designed with acoustic insulation in mind, adapted to many head shapes, so you can immerse yourself in the
+        purity of sound.
+      </p>
+      <div class="about__content">
+        <div class="about__description">
+          <p class="about__info">
+            The headband is made of breathable mesh, distributing the weight to reduce pressure on the head.
+          </p>
+          <p class="about__info">
+            The stainless steel structure is wrapped in a soft-touch material to provide a remarkable harmony between
+            resistance, flexibility and comfort.
+          </p>
+          <p class="about__info">
+            The telescoping arms expand and stay in any position you want, allowing you to maintain fit and isolation.
+          </p>
+        </div>
+        <div class="about__images">
+          <picture>
+            <source type="image/avif" srcset="images/main/about/blue.avif">
+            <source type="image/webp" srcset="images/main/about/blue.webp">
+            <img class="about__img blue" src="images/main/about/blue.jpg" alt="blue earphone side view">
+          </picture>
+          <picture>
+            <source type="image/avif" srcset="images/main/about/red.avif">
+            <source type="image/webp" srcset="images/main/about/red.webp">
+            <img class="about__img red hidden" src="images/main/about/red.jpg" alt="red earphone side view">
+          </picture>
+          <picture>
+            <source type="image/avif" srcset="images/main/about/black.avif">
+            <source type="image/webp" srcset="images/main/about/black.webp">
+            <img class="about__img black hidden" src="images/main/about/black.jpg" alt="black earphone side view">
+          </picture>
+          <picture>
+            <source type="image/avif" srcset="images/main/about/green.avif">
+            <source type="image/webp" srcset="images/main/about/green.webp">
+            <img class="about__img green hidden" src="images/main/about/green.jpg" alt="green earphone side view">
+          </picture>
+          <picture>
+            <source type="image/avif" srcset="images/main/about/white.avif">
+            <source type="image/webp" srcset="images/main/about/white.webp">
+            <img class="about__img white hidden" src="images/main/about/white.jpg" alt="white earphone side view">
+          </picture>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="battery">
+    <div class="battery__container">
+      <h2 class="battery__title title">
+        It even preserves the battery.
+      </h2>
+      <p class="battery__text">
+        When stored in the sleek and lightweight <span>Smart Case</span>, AirPods Max enter a low-power state to save
+        energy.
+      </p>
+      <div class="battery__images">
+        <picture>
+          <source type="image/avif" srcset="images/main/battery/blue.avif">
+          <source type="image/webp" srcset="images/main/battery/blue.webp">
+          <img class="battery__img blue" src="images/main/battery/blue.png" alt="blue earphone case">
+        </picture>
+        <picture>
+          <source type="image/avif" srcset="images/main/battery/red.avif">
+          <source type="image/webp" srcset="images/main/battery/red.webp">
+          <img class="battery__img red hidden" src="images/main/battery/red.png" alt="red earphone case">
+        </picture>
+        <picture>
+          <source type="image/avif" srcset="images/main/battery/black.avif">
+          <source type="image/webp" srcset="images/main/battery/black.webp">
+          <img class="battery__img black hidden" src="images/main/battery/black.png" alt="black earphone case">
+        </picture>
+        <picture>
+          <source type="image/avif" srcset="images/main/battery/green.avif">
+          <source type="image/webp" srcset="images/main/battery/green.webp">
+          <img class="battery__img green hidden" src="images/main/battery/green.png" alt="green earphone case">
+        </picture>
+        <picture>
+          <source type="image/avif" srcset="images/main/battery/white.avif">
+          <source type="image/webp" srcset="images/main/battery/white.webp">
+          <img class="battery__img white hidden" src="images/main/battery/white.png" alt="white earphone case">
+        </picture>
+      </div>
+    </div>
+  </section>
+
+  <section class="time">
+    <div class="time__container">
+      <h2 class="time__title title">
+        Stayin' alive, stayin' alive.
+      </h2>
+      <div class="time__num">
+        20
+      </div>
+      <p class="time__text">
+        hours of music, movies and calls with Active Noise Cancellation and Custom Spatial Audio turned on. <a
+          href="#">5</a> And just 5
+        minutes of charging via the Lightning connector gives you an hour and a half of sound. <a href="#">6</a>
+      </p>
+    </div>
+  </section>
+
+  <div class="volume">
+    <div class="volume__container">
+      <p class="volume__text">
+        Custom Spatial Audio with dynamic head tracking provides a surround sound experience worthy of a movie theater.
+      </p>
+      <p class="volume__text">
+        Through built-in gyroscopes and accelerometers, AirPods Max and your iPhone, iPad, Mac or Apple TV detect the
+        slightest head movements and keep the sound steady on your device.
+      </p>
+      <p class="volume__text">
+        And with Apple Music, custom Spatial Audio with dynamic head tracking creates a unique three-dimensional
+        listening experience.
+      </p>
+      <a class="volume__btn" href="#">
+        BUY
+      </a>
+    </div>
+  </div>
+</main>
+
+<footer class="footer" id="footer">
+
+  <div class="footer__container">
+
+    <a class="footer__link" href="#">
+
+      Find a retailer near you
+
+    </a>
+
+    <p class="footer__text">
+
+      Or call
+
+      <a href="tel:800207758">
+
+        800 207 758
+
+      </a>
+
+    </p>
+
+    <a class="footer__logo logo" href="#">
+
+      <img class="logo__img" src="images/logo-white.svg" alt="logo" width="25" height="30">
+
+    </a>
+
+    <nav class="footer__nav">
+
+      <ul class="footer__items">
+
+        <li class="footer__item">
+
+          Copyright &copy; 2023 Apple Inc.
+
+        </li>
+
+        <li class="footer__item">
+
+          All rights reserved.
+
+        </li>
+
+        <li class="footer__item">
+
+          <a class="footer__item-link" href="#">
+
+            Legal Notices
+
+          </a>
+
+        </li>
+
+        <li class="footer__item">
+
+          <a class="footer__item-link" href="#">
+
+            Site Map
+
+          </a>
+
+        </li>
+
+        <li class="footer__item">
+
+          <a class="footer__item-link" href="#">
+
+            Privacy Policy
+
+          </a>
+
+        </li>
+
+      </ul>
+
+    </nav>
+
+  </div>
+
+</footer>
+
+</div>
+
+<script src="js/script.min.js"></script>
+
+</body>
+
+
+
+</html>

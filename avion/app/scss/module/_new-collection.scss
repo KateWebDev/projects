@@ -1,0 +1,13 @@
+.new-collection {
+  padding: clampAd(40, 80) 0 clampAd(30, 55);
+  // .new-collection__container
+  &__container {
+  }
+  // .new-collection__title
+  &__title {
+    margin-bottom: 28px;
+  }
+  // .new-collection__products
+  &__products {
+  }
+}

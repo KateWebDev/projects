@@ -1,0 +1,123 @@
+.footer {
+  background: $mainColor;
+  color: rgba($color-light, 0.8);
+  line-height: 1.6;
+  text-transform: capitalize;
+
+  // .footer__container
+  &__container {
+    max-width: 1412px;
+  }
+  // .footer__top
+  &__top {
+    padding: clampAd(30, 64) 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  // .footer__logo
+  &__logo {
+    svg {
+      fill: $color-light;
+    }
+  }
+  // .footer__socials
+  &__socials {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px clampAd(18, 36);
+  }
+  // .footer__social
+  &__social {
+  }
+  // .footer__social-link
+  &__social-link {
+    font-size: 15px;
+    transition: all 0.3s linear;
+
+    @media (any-hover: hover) {
+      &:hover {
+        text-shadow: 0 0 2px currentColor;
+      }
+    }
+  }
+  // .footer__items
+  &__items {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(clampAd(280, 318), 1fr));
+    grid-auto-flow: dense;
+    gap: 20px clampAd(18, 36);
+    margin-bottom: clampAd(30, 94);
+  }
+  // .footer__item
+  &__item {
+  }
+  // .footer__name
+  &__name {
+    padding-bottom: 32px;
+    border-bottom: 1px solid rgba($color-light, 0.5);
+    margin-bottom: 20px;
+    font-size: 17px;
+    line-height: 1.2;
+  }
+  // .footer__menu
+  &__menu {
+  }
+  // .footer__list
+  &__list {
+    display: flex;
+    flex-direction: column;
+    row-gap: clampAd(15, 17);
+  }
+  // .footer__point
+  &__point {
+  }
+  // .footer__link
+  &__link {
+    transition: all 0.3s linear;
+
+    @media (any-hover: hover) {
+      &:hover {
+        text-shadow: 0 0 2px currentColor;
+      }
+    }
+  }
+  // .footer__bottom
+  &__bottom {
+    padding: 7px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  // .footer__copy
+  &__copy {
+  }
+  // .footer__actions
+  &__actions {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px clampAd(18, 36);
+  }
+  // .footer__action
+  &__action {
+  }
+  // .footer__action-link
+  &__action-link {
+    transition: all 0.3s linear;
+
+    @media (any-hover: hover) {
+      &:hover {
+        text-shadow: 0 0 2px currentColor;
+      }
+    }
+  }
+  // .footer__razrab
+  &__razrab {
+  }
+}

@@ -1,0 +1,119 @@
+.footer {
+  padding: clampAd(45, 90) 0 clampAd(63, 126);
+  background: $black;
+  color: $white;
+
+  // .footer__container
+  &__container {
+    @include grid;
+  }
+  // .footer__content
+  &__content {
+  }
+  // .footer__logo
+  &__logo {
+    margin-bottom: clampAd(24, 48);
+  }
+  // .footer__address
+  &__address {
+    font-style: normal;
+    color: $color-dop;
+    margin-bottom: 30px;
+  }
+  // .footer__socials
+  &__socials {
+    display: flex;
+    align-items: center;
+    column-gap: 20px;
+  }
+  // .footer__social
+  &__social {
+  }
+  // .footer__link
+  &__link {
+    svg {
+      width: 40px;
+      height: 40px;
+      fill: $white;
+      transition: all 0.3s linear;
+    }
+
+    @media (any-hover: hover) {
+      &:hover {
+        svg {
+          fill: red;
+        }
+      }
+    }
+  }
+  // .footer__sublist
+  &__sublist {
+  }
+  // .footer__text
+  &__text {
+    max-width: 460px;
+    font-weight: 500;
+    font-size: clampAd(20, 32);
+    line-height: 1.3;
+    margin-bottom: 30px;
+  }
+  // .footer__form
+  &__form {
+    width: 100%;
+    position: relative;
+  }
+  // .footer__input
+  &__input {
+    width: 100%;
+    padding: 0 clampAd(30, 50) 25px 0;
+    border-bottom: 1px solid $color-dop;
+    background: transparent;
+    font-weight: 700;
+    font-size: 13px;
+    letter-spacing: 0.08em;
+    color: $white;
+
+    @media (any-hover: hover) {
+      &:hover {
+        border-color: red;
+      }
+    }
+
+    &:focus {
+      outline: none;
+      border-color: red;
+    }
+
+    &::placeholder {
+      font-family: "Inter", sans-serif;
+      font-weight: 700;
+      font-size: 13px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: $color-dop;
+    }
+  }
+  // .footer__btn
+  &__btn {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    z-index: 2;
+
+    svg {
+      stroke: $white;
+      width: 24px;
+      height: 24px;
+      transition: all 0.3s linear;
+    }
+
+    @media (any-hover: hover) {
+      &:hover {
+        svg {
+          stroke: red;
+        }
+      }
+    }
+  }
+}

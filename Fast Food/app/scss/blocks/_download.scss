@@ -1,0 +1,23 @@
+.download {
+  padding: clampAd(40, 60) 0;
+  background: $color-light-bg;
+  // .download__container
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: clampAd(20, 30);
+    padding-inline: clampAd(15, 95);
+  }
+  // .download__text
+  &__text {
+    font-weight: 500;
+    font-size: clampAd(20, 40);
+    color: $white;
+    text-transform: capitalize;
+  }
+  // .download__btn
+  &__btn {
+  }
+}

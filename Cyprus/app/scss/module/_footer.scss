@@ -1,0 +1,99 @@
+.footer {
+    background: #031c34;
+    color: #ffffff;
+
+    // .footer__container
+    &__container {
+        min-height: 136px;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        max-width: 1700px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        row-gap: 30px;
+    }
+
+    // .footer__logo
+    &__logo {
+        margin-right: 125px;
+    }
+
+    // .footer__nav
+    &__nav {
+    }
+
+    // .footer__menu
+    &__menu {
+    }
+
+    // .footer__menu-items
+    &__menu-items {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        row-gap: 30px;
+        margin: 0 -18px;
+    }
+
+    // .footer__menu-item
+    &__menu-item {
+        padding: 0 18px;
+    }
+
+    // .footer__menu-link
+    &__menu-link {
+        font-weight: 700;
+        font-size: 18px;
+        line-height: 1.56;
+        letter-spacing: 0.5px;
+        transition: all 0.2s linear;
+
+        @media (any-hover: hover) and (min-width: 992px) {
+            &:hover {
+                color: #ff8c00;
+            }
+        }
+    }
+
+    // .footer__actions
+    &__actions {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        margin-left: auto;
+        margin-right: 50px;
+    }
+
+    // .footer__action
+    &__action {
+        &:not(:last-child) {
+            margin-right: 22px;
+        }
+    }
+
+    // .footer__btn
+    &__btn {
+        svg {
+            width: 24px;
+            height: 24px;
+            fill: #ffffff;
+            transition: all 0.2s linear;
+
+            @media (any-hover: hover) and (min-width: 992px) {
+                &:hover {
+                    fill: #ff8c00;
+                }
+            }
+        }
+    }
+
+    // .footer__copy
+    &__copy {
+        font-weight: 700;
+        font-size: 18px;
+        line-height: 1.56;
+        letter-spacing: 0.5px;
+    }
+}

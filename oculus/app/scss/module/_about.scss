@@ -1,0 +1,26 @@
+.about {
+  // .about__container
+  &__container {
+    display: flex;
+    flex-direction: column;
+    row-gap: 30px;
+  }
+  // .about__top
+  &__top {
+    display: grid;
+    grid-template-columns: clampAd(100, 300) auto;
+  }
+  // .about__type
+  &__type {
+    padding-right: 15px;
+  }
+  // .about__title
+  &__title {
+    max-width: 330px;
+  }
+  // .about__tabs
+  &__tabs {
+    display: grid;
+    grid-template-columns: clampAd(100, 300) auto;
+  }
+}

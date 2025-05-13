@@ -1,0 +1,105 @@
+.about {
+  padding: clampAd(40, 179) 0 clampAd(40, 160);
+  // .about__container
+  &__container {
+    display: flex;
+    flex-direction: column;
+    row-gap: clampAd(40, 179);
+  }
+  // .about__inner-top
+  &__inner-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    gap: 30px;
+  }
+  // .about__content
+  &__content {
+    max-width: clampAd(300, 600);
+  }
+  // .about__name
+  &__name {
+    margin-bottom: clampAd(24, 48);
+  }
+  // .about__info
+  &__info {
+    font-weight: 700;
+    font-size: clampAd(16, 20);
+    line-height: 1.5;
+    color: $color-dark;
+    margin-bottom: clampAd(18, 24);
+  }
+  // .about__text
+  &__text {
+    margin-bottom: clampAd(20, 60);
+  }
+  // .about__actions
+  &__actions {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: clampAd(10, 24);
+  }
+  // .about__action
+  &__action {
+  }
+  // .about__btn
+  &__btn {
+  }
+  // .about__top-image
+  &__top-image {
+    max-width: clampAd(300, 465);
+    max-height: 400px;
+  }
+  // .about__img
+  &__img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    object-position: center;
+  }
+  // .about__inner-bottom
+  &__inner-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+  }
+  // .about__bottom-image
+  &__bottom-image {
+    max-width: clampAd(390, 810);
+    max-width: 810px;
+    max-height: 500px;
+  }
+  // .about__statistics
+  &__statistics {
+  }
+  // .about__items
+  &__items {
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+  }
+  // .about__item
+  &__item {
+    display: flex;
+    align-items: center;
+    column-gap: clampAd(8, 16);
+  }
+  // .about__num
+  &__num {
+    font-weight: 900;
+    font-size: clampAd(22, 48);
+    line-height: 1.3;
+    letter-spacing: 0.02em;
+    color: $color-accent;
+  }
+  // .about__descr
+  &__descr {
+    font-weight: 700;
+    font-size: clampAd(12, 18);
+    line-height: 1.5;
+    white-space: nowrap;
+    color: $color-dark;
+  }
+}

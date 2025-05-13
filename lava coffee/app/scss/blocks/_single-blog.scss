@@ -1,0 +1,78 @@
+.single-blog {
+  // .single-blog__container
+  &__container {
+  }
+  // .single-blog__ibg
+  &__ibg {
+    max-width: 100%;
+    width: 100%;
+    padding: 0px 0px 34.53% 0px;
+
+    margin-bottom: 20px;
+  }
+  // .single-blog__img
+  &__img {
+  }
+  // .single-blog__title
+  &__title {
+    @include Fahkwang600;
+    font-size: clampAd(16, 26);
+    color: $color-light;
+    margin-bottom: 4px;
+  }
+  // .single-blog__info
+  &__info {
+    display: flex;
+    align-items: center;
+    column-gap: 5px;
+    margin-bottom: 20px;
+
+    *:not(:last-child) {
+      &::after {
+        content: "/";
+        font-size: inherit;
+        color: currentColor;
+      }
+    }
+  }
+  // .single-blog__date
+  &__date {
+  }
+  // .single-blog__comments
+  &__comments {
+    transition: all 0.3s linear;
+
+    @media (any-hover: hover) {
+      &:hover {
+        color: $color-accent;
+      }
+    }
+  }
+  // .single-blog__text
+  &__text {
+    font-size: clampAd(14, 18);
+  }
+  // .single-blog__items
+  &__items {
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+  }
+  // .single-blog__item
+  &__item {
+    color: $color-light;
+    padding-left: clampAd(15, 20);
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 8px;
+      left: 0;
+      width: 5px;
+      height: 5px;
+      border-radius: $radius-circle;
+      background: currentColor;
+    }
+  }
+}

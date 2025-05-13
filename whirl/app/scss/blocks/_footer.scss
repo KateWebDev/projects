@@ -1,0 +1,144 @@
+.footer {
+  // .footer__container
+  &__container {
+  }
+  // .footer__top
+  &__top {
+    padding: 48px 0 64px;
+  }
+  // .footer__items
+  &__items {
+    display: grid;
+    grid-template-columns: 2fr repeat(3, 1fr);
+    gap: 40px 16px;
+  }
+  // .footer__item
+  &__item {
+  }
+  // .footer__logo
+  &__logo {
+    margin-bottom: 20px;
+  }
+  // .footer__info
+  &__info {
+    font-size: clampAd(12, 14);
+    line-height: 1.4;
+    letter-spacing: 0.01em;
+
+    a {
+      font-size: clampAd(11, 13);
+      line-height: 1.5;
+      letter-spacing: 0.02em;
+      color: $color-dop-bg;
+      text-underline-offset: 0px;
+      transition: all 0.3s linear;
+
+      @media (any-hover: hover) {
+        &:hover {
+          text-decoration: underline;
+          text-underline-offset: 2px;
+        }
+      }
+    }
+  }
+  // .footer__type
+  &__type {
+    display: block;
+    font-size: clampAd(13, 15);
+    line-height: 1.6;
+    letter-spacing: 0.01em;
+    margin-bottom: 15px;
+  }
+  // .footer__nav
+  &__nav {
+  }
+  // .footer__list
+  &__list {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    row-gap: 10px;
+  }
+  // .footer__point
+  &__point {
+  }
+  // .footer__link
+  &__link {
+    font-size: clampAd(11, 13);
+    letter-spacing: 0.02em;
+    color: $color-dop-text;
+    white-space: nowrap;
+    transition: all 0.3s linear;
+
+    @media (any-hover: hover) {
+      &:hover {
+        color: $color-dop-bg;
+      }
+    }
+  }
+  // .footer__text
+  &__text {
+    letter-spacing: 0.01em;
+    margin-bottom: 14px;
+  }
+  // .footer__form
+  &__form {
+  }
+  // .footer__bottom
+  &__bottom {
+    padding: clampAd(20, 35) 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+
+    border-top: 1px solid $color-line2;
+  }
+  // .footer__copy
+  &__copy {
+    font-size: clampAd(11, 13);
+    letter-spacing: 0.02em;
+
+    a {
+      color: $color-dop-bg;
+      text-underline-offset: 0px;
+      transition: all 0.3s linear;
+
+      @media (any-hover: hover) {
+        &:hover {
+          text-decoration: underline;
+          text-underline-offset: 2px;
+        }
+      }
+    }
+  }
+  // .footer__socials
+  &__socials {
+    display: flex;
+    align-items: center;
+    column-gap: 20px;
+  }
+  // .footer__social
+  &__social {
+    width: 22px;
+    height: 23px;
+  }
+  // .footer__social-link
+  &__social-link {
+    svg {
+      width: 100%;
+      height: 100%;
+      fill: $black;
+      transition: all 0.3s linear;
+    }
+
+    @media (any-hover: hover) {
+      &:hover {
+        svg {
+          fill: $color-dop-bg;
+        }
+      }
+    }
+  }
+}

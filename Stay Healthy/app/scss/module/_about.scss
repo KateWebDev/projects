@@ -1,0 +1,125 @@
+.about {
+  padding-bottom: clampAd(50, 100);
+  // .about__container
+  &__container {
+  }
+  // .about__heading
+  &__heading {
+    max-width: clampAd(400, 607);
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+    padding: 0 clampAd(50, 110);
+    margin: 0 auto 30px;
+    position: relative;
+
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      width: clampAd(36, 71);
+      height: clampAd(30, 60);
+    }
+
+    &::before {
+      left: 0;
+      background: url(../../images/icons/q-left.svg) center/cover no-repeat;
+    }
+    &::after {
+      right: 0;
+      background: url(../../images/icons/q-right.svg) center/cover no-repeat;
+    }
+  }
+  // .about__subtitle
+  &__subtitle {
+  }
+  // .about__title
+  &__title {
+  }
+  // .about__list
+  &__list {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    flex-wrap: wrap;
+    gap: 20px 15px;
+    margin-bottom: clampAd(30, 50);
+  }
+  // .about__point
+  &__point {
+    min-width: clampAd(130, 270);
+    color: $color-dark;
+    &:not(:last-child) {
+      position: relative;
+      padding-left: 15px;
+
+      &::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        width: 1px;
+        background: $color-dark;
+        opacity: 0.4;
+      }
+    }
+  }
+  // .about__num
+  &__num {
+    @include Inter800;
+    font-size: clampAd(20, 48);
+    line-height: 1.3;
+  }
+  // .about__descr
+  &__descr {
+    @include Poppins500;
+    font-size: clampAd(14, 18);
+  }
+  // .about__items
+  &__items {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(clampAd(280, 540), 1fr));
+    grid-auto-flow: dense;
+    gap: 30px;
+  }
+  // .about__item
+  &__item {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px clampAd(20, 30);
+  }
+  // .about__image
+  &__image {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    background: #c2d8fe;
+    border: 1px solid rgba($color-dark, 0.1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  // .about__icon
+  &__icon {
+  }
+  // .about__content
+  &__content {
+    max-width: calc(100% - (70px + clampAd(20, 30)));
+    text-transform: capitalize;
+    display: flex;
+    flex-direction: column;
+    row-gap: 5px;
+  }
+  // .about__name
+  &__name {
+    @include Poppins600;
+    font-size: clampAd(18, 28);
+    line-height: 1.5;
+    color: $color-dark;
+  }
+  // .about__text
+  &__text {
+  }
+}

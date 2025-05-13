@@ -1,0 +1,13 @@
+.title {
+  @include Fraunces400;
+  font-size: clampAd(25, 39);
+  line-height: 1.29;
+  letter-spacing: 0.01em;
+}
+
+.name {
+  @include Fraunces400;
+  font-size: clampAd(20, 25);
+  line-height: 1.25;
+  letter-spacing: 0.01em;
+}

@@ -1,0 +1,52 @@
+.promo {
+  // .promo__container
+  &__container {
+    min-height: 270px;
+
+    background: image-set(
+        url("../images/main/promo/bg.avif") type("image/avif"),
+        url("../images/main/promo/bg.webp") type("image/webp"),
+        url("../images/main/promo/bg.jpg")
+      )
+      center/cover no-repeat;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  // .promo__btn
+  &__btn {
+    svg {
+      fill: $white;
+      stroke: $color-accent;
+      transition: all 0.3s linear;
+      .stroke {
+        fill: $color-accent;
+        stroke: $white;
+      }
+    }
+    span {
+      display: block;
+      color: $white;
+      transition: all 0.3s linear;
+    }
+
+    @media (any-hover: hover) {
+      &:hover {
+        span {
+          opacity: 0.8;
+        }
+        svg {
+          fill: $color-accent;
+          stroke: $white;
+
+          .stroke {
+            fill: $white;
+            stroke: $color-accent;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,29 @@
+.inner {
+  &--all-products {
+    color: $white;
+    background: image-set(
+        url("../images/main/inner/1.avif") type("image/avif"),
+        url("../images/main/inner/1_2x.avif") 2x type("image/webp"),
+        url("../images/main/inner/1.webp") type("image/webp"),
+        url("../images/main/inner/1_2x.webp") 2x type("image/webp"),
+        url("../images/main/inner/1.jpg"),
+        url("../images/main/inner/1_2x.jpg") 2x
+      )
+      center right / cover no-repeat;
+  }
+  // .inner__container
+  &__container {
+    padding-block: clampAd(30, 36);
+    min-height: clampAd(140, 210);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-start;
+  }
+  // .inner__text
+  &__text {
+    @include ClashDisplay400;
+    font-size: 36px;
+    line-height: 1.4;
+  }
+}

@@ -1,0 +1,66 @@
+.questions {
+  padding-bottom: 150px;
+
+  // .questions__container
+  &__container {
+    display: flex;
+    gap: 30px 20px;
+  }
+  // .questions__content
+  &__content {
+  }
+  // .questions__items
+  &__items {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+  }
+  // .questions__item
+  &__item {
+    padding: 16px 13px;
+    background: $color-light;
+    box-shadow: 0px 4px 11px 0px rgba(196, 174, 151, 0.2);
+  }
+  // .questions__name
+  &__name {
+    width: 100%;
+    text-align: left;
+    font-family: "Yeseva One", serif;
+    font-size: 16px;
+    margin-bottom: 20px;
+    position: relative;
+    padding-right: 50px;
+    margin-bottom: 0;
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      right: 25px;
+      transform: translateY(-50%);
+      width: 15px;
+      height: 15px;
+      background: url(../images/main/arrow.svg) center/cover no-repeat;
+      transition: all 0.3s linear;
+    }
+
+    &.questions__name--active {
+      &::after {
+        transform: rotate(180deg) translateY(8px);
+      }
+    }
+  }
+  // .questions__text
+  &__text {
+    opacity: 0;
+    max-height: 0;
+    transition: all 0.3s linear;
+
+    &.questions__text--active {
+      padding-top: 18px;
+      padding-bottom: 39px;
+      opacity: 1;
+    }
+  }
+}

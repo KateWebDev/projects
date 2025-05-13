@@ -1,0 +1,47 @@
+.user {
+  display: flex;
+  align-items: center;
+  gap: clampAd(20, 30);
+
+  // .user__image
+  &__image {
+    flex: 0 0 clampAd(60, 134);
+    aspect-ratio: 1 / 1;
+    border-radius: $radius-circle;
+    background: $color-dop;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  // .user__img
+  &__img {
+    display: block;
+    max-width: 100%;
+    max-height: 100%;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+  // .user__content
+  &__content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    row-gap: clampAd(5, 10);
+
+    line-height: 1.5;
+  }
+  // .user__name
+  &__name {
+    font-size: clampAd(18, 33);
+    color: $color-dark;
+  }
+  // .user__location
+  &__location {
+    font-size: clampAd(14, 25);
+    font-weight: 400;
+    text-transform: capitalize;
+  }
+}

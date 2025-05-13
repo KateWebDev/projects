@@ -1,0 +1,95 @@
+.subscribe {
+  padding: 100px 0;
+  background: #f7f2ea;
+  // .subscribe__container
+  &__container {
+  }
+  // .subscribe__title
+  &__title {
+    margin-bottom: 50px;
+  }
+  // .subscribe__content
+  &__content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    row-gap: 60px;
+  }
+  // .subscribe__text
+  &__text {
+    max-width: 580px;
+    line-height: 1.5;
+  }
+  // .subscribe__form
+  &__form {
+    max-width: 580px;
+    width: 100%;
+  }
+  // .subscribe__form-box
+  &__form-box {
+    display: flex;
+    justify-content: space-between;
+    column-gap: 10px;
+    margin-bottom: 10px;
+  }
+  // .subscribe__input
+  &__input {
+    max-width: 440px;
+    width: 100%;
+    background: transparent;
+    border-bottom: 1px solid #b8b58b;
+    font-size: 20px;
+
+    &::placeholder {
+      color: #b8b58b;
+      font-family: "Open Sans", sans-serif;
+      font-size: 20px;
+      font-weight: 300;
+      line-height: 1.5;
+    }
+  }
+  // .subscribe__btn
+  &__btn {
+  }
+
+  // .subscribe__chekbox
+  &__chekbox {
+    display: none;
+
+    &:checked + .subscribe__label {
+      &::after {
+        background: url("../images/main/subscribe/ok.svg") center/cover no-repeat;
+      }
+    }
+  }
+
+  // .subscribe__label
+  &__label {
+    display: block;
+    font-size: 13px;
+    padding-left: 20px;
+    position: relative;
+    cursor: pointer;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 5px;
+      left: 0;
+      width: 10px;
+      height: 10px;
+      background: #ffffff;
+      border: 1px solid #151618;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 5px;
+      left: 0;
+      width: 10px;
+      height: 10px;
+    }
+  }
+}

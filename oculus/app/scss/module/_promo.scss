@@ -1,0 +1,40 @@
+.promo {
+  min-height: 100svh;
+  background: image-set(
+      url("../images/main/promo.avif") type("image/avif"),
+      url("../images/main/promo.webp") type("image/webp"),
+      url("../images/main/promo.jpg")
+    )
+    center/cover no-repeat;
+  text-align: center;
+  position: relative;
+  // .promo__text
+  &__text {
+    max-width: 100px;
+    color: $color-light;
+    text-transform: uppercase;
+    text-shadow: 0 4px 4px 0 #bc10d8;
+
+    position: absolute;
+    top: 13%;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  // .promo__btn
+  &__btn {
+    width: 50px;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    background: $color-gradient;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    @include Helvetica700;
+    text-transform: uppercase;
+    color: $white;
+    position: absolute;
+    top: 80%;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}

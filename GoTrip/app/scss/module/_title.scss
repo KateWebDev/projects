@@ -1,0 +1,38 @@
+.main-title {
+  font-weight: 400;
+  font-size: clampAd(27, 55);
+  line-height: 1.49;
+  color: $white;
+  text-transform: capitalize;
+}
+
+.title {
+  font-size: clampAd(20, 45);
+  line-height: 1.5;
+  color: $color-dark;
+  text-transform: capitalize;
+
+  &--center {
+    text-align: center;
+  }
+  &--no-capitalize {
+    text-transform: none;
+  }
+}
+
+.title-big {
+  font-weight: 600;
+  font-size: clampAd(27, 55);
+  line-height: 1.5;
+  color: $color-dark;
+  text-transform: capitalize;
+
+  span {
+    display: block;
+    font-size: clampAd(20, 30);
+  }
+
+  &--center {
+    text-align: center;
+  }
+}

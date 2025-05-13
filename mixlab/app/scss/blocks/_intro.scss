@@ -1,0 +1,85 @@
+.intro {
+  background: $color-bg-4;
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: calc(clampAd(0, 20) * -1);
+    width: clampAd(60, 118);
+    height: clampAd(300, 473);
+    background: image-set(
+        url("../images/main/intro/decor-left.avif") type("image/avif"),
+        url("../images/main/intro/decor-left@2x.avif") 2x type("image/avif"),
+        url("../images/main/intro/decor-left.webp") type("image/webp"),
+        url("../images/main/intro/decor-left@2x.webp") 2x type("image/webp"),
+        url("../images/main/intro/decor-left.png"),
+        url("../images/main/intro/decor-left@2x.png") 2x
+      )
+      center/cover no-repeat;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: clampAd(100, 199);
+    height: clampAd(300, 561);
+    background: image-set(
+        url("../images/main/intro/decor-right.avif") type("image/avif"),
+        url("../images/main/intro/decor-right@2x.avif") 2x type("image/avif"),
+        url("../images/main/intro/decor-right.webp") type("image/webp"),
+        url("../images/main/intro/decor-right@2x.webp") 2x type("image/webp"),
+        url("../images/main/intro/decor-right.png"),
+        url("../images/main/intro/decor-right@2x.png") 2x
+      )
+      center/cover no-repeat;
+  }
+  // .intro__container
+  &__container {
+    justify-content: flex-start;
+    align-items: center;
+
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 60%;
+      transform: translateX(-50%);
+      width: clampAd(200, 350);
+      height: clampAd(130, 250);
+      background: url(../../images/main/intro/decor.svg) center/cover no-repeat;
+    }
+  }
+  // .intro__content
+  &__content {
+    padding: 10svh 0;
+    max-width: 560px;
+    position: relative;
+    z-index: 1;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: clampAd(20, 32);
+  }
+  // .intro__main-title
+  &__main-title {
+  }
+  // .intro__text
+  &__text {
+    font-size: clampAd(16, 20);
+    text-align: center;
+
+    a {
+      color: $color-accent-1;
+    }
+  }
+  // .intro__btn
+  &__btn {
+  }
+}

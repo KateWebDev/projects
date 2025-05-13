@@ -1,0 +1,43 @@
+.chapter {
+  display: inline-block;
+  padding: 4px 8px;
+  background: $white;
+  border-radius: 4px;
+  font-size: clampAd(12, 14);
+  text-align: center;
+  color: $color-dop;
+
+  &--bg {
+    background: $color-bg-dop;
+  }
+}
+.title {
+  @include Poppins400;
+  font-size: clampAd(24, 48);
+  line-height: 1.2;
+  text-align: center;
+  color: $color-dop;
+
+  &--left {
+    text-align: left;
+  }
+}
+
+.name {
+  @include Poppins400;
+  font-size: clampAd(18, 24);
+  line-height: 1.4;
+  color: $color-dop;
+  padding-top: clampAd(60, 80);
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+  }
+}

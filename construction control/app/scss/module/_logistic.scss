@@ -1,0 +1,45 @@
+.logistic {
+  background: $color-accent
+    image-set(
+      url("../images/main/logistic/bg.avif") type("image/avif"),
+      url("../images/main/logistic/bg.webp") type("image/webp"),
+      url("../images/main/logistic/bg.png")
+    )
+    center/contain no-repeat;
+  border-radius: 6px;
+
+  // .logistic__container
+  &__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    min-height: clamp(
+      300px,
+      calc(300px + (466 - 300) * ((100vw - 320px) / ($widthReportMax - $widthReportMin))),
+      466px
+    );
+    padding: clamp(20px, calc(20px + (20 - 20) * ((100vw - 320px) / ($widthReportMax - $widthReportMin))), 50px) 15px;
+  }
+  // .logistic__text
+  &__text {
+    max-width: 980px;
+    color: $color-btn;
+    font-size: clamp(24px, calc(24px + (48 - 24) * ((100vw - 320px) / ($widthReportMax - $widthReportMin))), 48px);
+    line-height: 1.33;
+    margin-bottom: clamp(30px, calc(30px + (55 - 30) * ((100vw - 320px) / ($widthReportMax - $widthReportMin))), 55px);
+  }
+  // .logistic__actions
+  &__actions {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+  }
+  // .logistic__action
+  &__action {
+  }
+  // .logistic__btn
+  &__btn {
+  }
+}

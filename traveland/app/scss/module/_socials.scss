@@ -1,0 +1,29 @@
+@import "components/mixin";
+
+.socials {
+  display: flex;
+  align-items: center;
+  gap: rem(10) clampAdRem(15, 27);
+
+  // .socials__item
+  &__item {
+  }
+  // .socials__link
+  &__link {
+    transition: all 0.3s linear;
+
+    img {
+      display: block;
+      width: rem(20);
+      height: rem(20);
+      object-fit: cover;
+      object-position: center;
+    }
+
+    @media (any-hover: hover) {
+      &:hover {
+        opacity: 0.8;
+      }
+    }
+  }
+}

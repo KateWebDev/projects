@@ -1,0 +1,141 @@
+.contacts {
+  padding: clampAd(24, 67) 0 0;
+
+  // .contacts__container
+  &__container {
+    margin-bottom: clampAd(45, 60);
+  }
+  // .contacts__title
+  &__title {
+    margin-bottom: clampAd(24, 48);
+  }
+  // .contacts__items
+  &__items {
+    display: flex;
+    flex-wrap: wrap;
+    gap: clampAd(15, 21);
+
+    color: $white;
+
+    &--edition {
+      .contacts__item {
+        flex: 1 1 clampAd(147, 386);
+        min-height: clampAd(110, 288);
+      }
+    }
+  }
+  // .contacts__item
+  &__item {
+    flex: 1 1 clampAd(147, 284);
+    min-height: clampAd(149, 288);
+
+    border-radius: clampAd(3, 5);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    // .contacts__item--address
+    &--address {
+      background: #5eb8f0;
+      .contacts__inner {
+        padding-top: clampAd(41, 79);
+
+        &::before {
+          width: clampAd(23, 45);
+          height: clampAd(30, 57);
+          background: url(../../images/icons/location.svg) center/cover no-repeat;
+        }
+      }
+    }
+    // .contacts__item--phone
+    &--phone {
+      background: #54a0cf;
+      .contacts__inner {
+        padding-top: clampAd(41, 67);
+
+        &::before {
+          width: clampAd(23, 45);
+          height: clampAd(23, 45);
+          background: url(../../images/icons/phone.svg) center/cover no-repeat;
+        }
+      }
+    }
+    // .contacts__item--mail
+    &--mail {
+      background: #29a9f9;
+      .contacts__inner {
+        padding-top: clampAd(35, 67);
+
+        &::before {
+          width: clampAd(23, 45);
+          height: clampAd(17, 34);
+          background: url(../../images/icons/mail.svg) center/cover no-repeat;
+        }
+      }
+    }
+    // .contacts__item--socials
+    &--socials {
+      background: #328dc6;
+
+      .contacts__inner {
+        padding-top: clampAd(28, 68);
+
+        &::before {
+          width: clampAd(24, 47);
+          height: clampAd(24, 47);
+          background: url(../../images/icons/molekula.svg) center/cover no-repeat;
+        }
+      }
+    }
+  }
+  // .contacts__inner
+  &__inner {
+    max-width: clampAd(105, 210);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: clampAd(6, 12);
+
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
+  // .contacts__type
+  &__type {
+    @include SourceSans700;
+    font-size: clampAd(12, 24);
+    line-height: 1.2;
+  }
+  // .contacts__text
+  &__text {
+    font-size: clampAd(9, 18);
+    line-height: 1.28;
+    font-style: normal;
+  }
+  // .contacts__link
+  &__link {
+    font-size: clampAd(9, 18);
+    line-height: 1.28;
+    transition: all 0.3s linear;
+
+    @media (any-hover: hover) {
+      &:hover {
+        color: $color-accent;
+      }
+    }
+  }
+  // .contacts__socials
+  &__socials {
+  }
+}

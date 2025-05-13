@@ -1,0 +1,118 @@
+.sellers {
+  padding-bottom: clampAd(50, 165);
+
+  // .sellers__container
+  &__container {
+    display: grid;
+    grid-template-columns: clampAd(100, 335) 1fr;
+    gap: 10px;
+  }
+  // .sellers__content
+  &__content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    row-gap: 20px;
+  }
+  // .sellers__title
+  &__title {
+  }
+  // .sellers__text
+  &__text {
+    font-size: clampAd(12, 15);
+    line-height: 1.9;
+    color: rgba($mainColor, 0.8);
+    margin-bottom: auto;
+  }
+  // .sellers__btn
+  &__btn {
+  }
+  // .sellers__slider-container
+  &__slider-container {
+    overflow: hidden;
+    width: clampAd(150, 1015);
+  }
+
+  // .sellers__slider
+  &__slider {
+    padding-top: 50px;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 1s ease;
+
+    &.swiper-initialized {
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+
+  // .sellers__items
+  &__items {
+  }
+  // .sellers__item
+  &__item {
+    text-align: center;
+  }
+  // .sellers__ibg
+  &__ibg {
+    padding: 0px 0px 94.21% 0px;
+    margin-bottom: 20px;
+  }
+  // .sellers__img
+  &__img {
+  }
+  // .sellers__category
+  &__category {
+    font-size: 12px;
+    line-height: 1.2;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+  }
+  // .sellers__name
+  &__name {
+    font-size: clampAd(16, 23);
+    line-height: 1.5;
+    text-transform: capitalize;
+    margin-bottom: 5px;
+  }
+  // .sellers__price
+  &__price {
+  }
+  // .sellers__buttons
+  &__buttons {
+    position: absolute;
+    top: 0;
+    right: 0;
+    transform: translateX(-50%);
+    z-index: 3;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+  }
+  // .sellers__button
+  &__button {
+    transition: all 0.3s linear;
+    svg {
+      stroke: $mainColor;
+      width: 50px;
+      height: 25px;
+    }
+    // .sellers__button--prev
+    &--prev {
+    }
+    // .sellers__button--next
+    &--next {
+    }
+
+    &.swiper-button-disabled {
+      opacity: 0.3;
+      cursor: default;
+    }
+
+    @media (any-hover: hover) {
+      &:hover {
+        opacity: 0.5;
+      }
+    }
+  }
+}

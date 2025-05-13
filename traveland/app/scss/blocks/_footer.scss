@@ -1,0 +1,127 @@
+.footer {
+  padding: clampAdRem(30, 70) 0 clampAdRem(40, 80);
+  background: $color-bg;
+
+  @include Roboto500;
+  letter-spacing: 0.06em;
+  color: $black;
+
+  // .footer__container
+  &__container {
+  }
+  // .footer__items
+  &__items {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: rem(30);
+  }
+  // .footer__item
+  &__item {
+  }
+  // .footer__logo
+  &__logo {
+    display: block;
+    margin-bottom: clampAdRem(20, 40);
+  }
+  // .footer__action
+  &__action {
+    @include Roboto400;
+    font-size: rem(16);
+
+    display: flex;
+    flex-direction: column;
+    row-gap: rem(10);
+
+    margin-bottom: rem(20);
+  }
+  // .footer__action-title
+  &__action-title {
+  }
+  // .footer__action-link
+  &__action-link {
+    transition: all 0.3s linear;
+
+    @media (any-hover: hover) {
+      &:hover {
+        color: $color-accent;
+      }
+    }
+  }
+  // .footer__socials
+  &__socials {
+  }
+  // .footer__nav
+  &__nav {
+  }
+  // .footer__list
+  &__list {
+    display: flex;
+    flex-direction: column;
+    row-gap: clampAdRem(15, 20);
+  }
+  // .footer__point
+  &__point {
+  }
+  // .footer__point-link
+  &__point-link {
+    font-size: clampAdRem(14, 16);
+    line-height: 1.5;
+    white-space: nowrap;
+    transition: all 0.3s linear;
+
+    @media (any-hover: hover) {
+      &:hover {
+        color: $color-accent;
+      }
+    }
+  }
+  // .footer__subtitle
+  &__subtitle {
+    font-size: clampAdRem(16, 20);
+    line-height: 1.5;
+    text-transform: uppercase;
+    margin-bottom: clampAdRem(15, 40);
+  }
+  // .footer__form
+  &__form {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: clampAdRem(10, 20) clampAdRem(20, 35);
+  }
+  // .footer__input
+  &__input {
+    max-width: rem(195);
+    padding: rem(10) rem(20);
+    border-radius: $radius-small;
+    border: 1px solid rgba($black, 0.1);
+    box-shadow: 0 0 rem(10) rem(10) rgba($black, 0.015);
+    transition: all 0.3s linear;
+
+    @include Roboto400;
+
+    &::placeholder {
+      @include Roboto400;
+      font-size: rem(16);
+      line-height: 1.5;
+      letter-spacing: 0.06em;
+      color: $black;
+    }
+
+    &:focus {
+      outline: 1px solid $color-accent;
+    }
+
+    @media (any-hover: hover) {
+      &:hover {
+        outline: 1px solid $color-accent;
+      }
+    }
+  }
+  // .footer__btn
+  &__btn {
+  }
+}

@@ -1,0 +1,39 @@
+.menu {
+  // .menu__items
+  &__items {
+    display: flex;
+    gap: 10px clampAd(20, 44);
+  }
+  // .menu__item
+  &__item {
+  }
+  // .menu__link
+  &__link {
+    white-space: nowrap;
+    color: #726e8d;
+
+    &--active {
+      cursor: default;
+    }
+
+    @media (any-hover: hover) {
+      &:hover {
+        text-shadow: 0 0 1px currentColor;
+      }
+    }
+  }
+}
+
+.menu-top {
+  // .menu-top__items
+  &__items {
+    display: flex;
+    gap: 20px 32px;
+  }
+  // .menu-top__item
+  &__item {
+    &--mobile {
+      display: none;
+    }
+  }
+}

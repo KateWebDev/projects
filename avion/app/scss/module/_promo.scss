@@ -1,0 +1,25 @@
+.promo {
+  padding: clampAd(30, 88) 0;
+  // .promo__container
+  &__container {
+  }
+  // .promo__content
+  &__content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 30px;
+  }
+  // .promo__text
+  &__text {
+    max-width: clampAd(300, 705);
+    @include ClashDisplay400;
+    font-size: clampAd(28, 36);
+    line-height: 1.4;
+    color: $color-dark;
+  }
+  // .promo__btn
+  &__btn {
+  }
+}

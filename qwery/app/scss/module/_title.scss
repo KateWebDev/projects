@@ -1,0 +1,49 @@
+.badge {
+  display: inline-block;
+  @include OpenSans700;
+  letter-spacing: 0.33em;
+  text-transform: uppercase;
+  color: $color-accent-text;
+  padding-left: clampAd(50, 96);
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: clampAd(30, 72);
+    height: 2px;
+    background: currentColor;
+  }
+
+  &--color {
+    padding-left: clampAd(50, 104);
+    color: $color-accent;
+  }
+
+  &--full {
+    padding-left: clampAd(50, 101);
+    padding-right: clampAd(50, 101);
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      right: 0;
+      width: clampAd(30, 72);
+      height: 2px;
+      background: currentColor;
+    }
+  }
+}
+
+.title {
+  @include OpenSans700;
+  font-size: clampAd(25, 64);
+  line-height: 1.35;
+
+  &--center {
+    text-align: center;
+  }
+}

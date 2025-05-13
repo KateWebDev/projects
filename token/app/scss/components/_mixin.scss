@@ -1,0 +1,29 @@
+@function clampAd($min, $max) {
+  $minPx: $min + px;
+  $maxPx: $max + px;
+
+  $result: clamp(
+    $minPx,
+    calc($minPx + ($max - $min) * ((100vw - $widthReportMinPx) / ($widthReportMax - $widthReportMin))),
+    $maxPx
+  );
+
+  @return $result;
+}
+
+@mixin BakbakOne400 {
+  font-family: "BakbakOne", sans-serif;
+  font-weight: 400;
+}
+@mixin BaiJamjuree500 {
+  font-family: "BaiJamjuree", sans-serif;
+  font-weight: 500;
+}
+@mixin BaiJamjuree600 {
+  font-family: "BaiJamjuree", sans-serif;
+  font-weight: 600;
+}
+@mixin BaiJamjuree700 {
+  font-family: "BaiJamjuree", sans-serif;
+  font-weight: 700;
+}

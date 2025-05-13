@@ -1,0 +1,41 @@
+.prioritise {
+  padding: 150px 0;
+  // .prioritise__container
+  &__container {
+  }
+  // .prioritise__title
+  &__title {
+    text-align: center;
+    margin-bottom: 60px;
+  }
+  // .prioritise__items
+  &__items {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px 49px;
+  }
+  // .prioritise__item
+  &__item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  // .prioritise__name
+  &__name {
+    font-size: 30px;
+    margin-bottom: 10px;
+  }
+  // .prioritise__info
+  &__info {
+    font-weight: 600;
+    line-height: 1.4;
+    word-spacing: nowrap;
+    margin-bottom: 40px;
+  }
+  // .prioritise__img
+  &__img {
+    width: 60px;
+    height: 60px;
+  }
+}

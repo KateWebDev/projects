@@ -1,0 +1,40 @@
+@media (max-width: 767.98px) {
+  .footer {
+    &__container {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+    &__link {
+      order: 1;
+    }
+    &__socials {
+      order: 2;
+      margin-bottom: 16px;
+    }
+    &__copy {
+      margin: 0;
+      order: 3;
+    }
+  }
+}
+
+@media (max-width: 575.98px) {
+  .header {
+    &__burger {
+      display: flex;
+    }
+    &__btn {
+      display: none;
+    }
+    &__menu {
+      display: none;
+    }
+  }
+
+  .intro {
+    &__btn {
+      display: none;
+    }
+  }
+}

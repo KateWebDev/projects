@@ -1,0 +1,73 @@
+.product {
+  padding-top: 50px;
+  color: $black;
+  // .product__container
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 30px clamp(0px, calc(0px + (100 - 0) * ((100vw - 320px) / ($widthReportMax - $widthReportMin))), 100px);
+  }
+  // .product__title
+  &__title {
+    display: inline-block;
+    max-width: 100px;
+    @include play400;
+    font-size: clamp(20px, calc(20px + (32 - 20) * ((100vw - 320px) / ($widthReportMax - $widthReportMin))), 32px);
+  }
+  // .product__items
+  &__items {
+    width: clamp(900px, calc(900px + (1200 - 900) * ((100vw - 992px) / ($widthReportMax - 992))), 1200px);
+    display: flex;
+    gap: 50px 20px;
+  }
+  // .product__item
+  &__item {
+    flex: 0 0 clamp(250px, calc(250px + (386 - 250) * ((100vw - 992px) / ($widthReportMax - 992))), 386px);
+  }
+  // .product__card
+  &__card {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    text-align: center;
+    transition: all 0.3s linear;
+
+    @media (any-hover: hover) {
+      &:hover {
+        opacity: 0.8;
+      }
+    }
+  }
+  // .product__point
+  &__point {
+    @include inter700;
+    color: rgba(0, 0, 0, 0.5);
+  }
+  // .product__ibg
+  &__ibg {
+    padding: 0px 0px 124% 0px;
+  }
+  // .product__img
+  &__img {
+  }
+  // .product__content
+  &__content {
+    padding: 0 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  // .product__name
+  &__name {
+    @include inter700;
+  }
+  // .product__info
+  &__info {
+  }
+  // .product__price
+  &__price {
+    @include play400;
+    font-size: clamp(20px, calc(20px + (32 - 20) * ((100vw - 320px) / ($widthReportMax - $widthReportMin))), 32px);
+  }
+}

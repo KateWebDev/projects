@@ -1,0 +1,63 @@
+.btn {
+  background: transparent;
+  border: 1px solid currentColor;
+  border-radius: $radius-small;
+
+  padding: 10px clampAd(10, 24);
+
+  font-weight: 800;
+  font-size: 20px;
+  line-height: 1.8;
+  text-transform: capitalize;
+  white-space: nowrap;
+
+  display: inline-flex;
+  align-items: center;
+  column-gap: 16px;
+
+  transition: all 0.3s linear;
+
+  &::after {
+    content: "";
+    width: 32px;
+    height: 32px;
+    background: url(../../images/icons/arrow-right-dark.svg) center/28px 16px no-repeat;
+    transition: all 0.3s linear;
+  }
+
+  @media (any-hover: hover) {
+    &:hover {
+      background: $mainColor;
+      color: $white;
+      border-color: transparent;
+
+      &::after {
+        background: url(../../images/icons/arrow-right-light.svg) center/28px 16px no-repeat;
+      }
+    }
+  }
+
+  &--dark {
+    padding: clampAd(10, 14) clampAd(15, 32);
+    background: $mainColor;
+    color: $white;
+    border-color: transparent;
+
+    &::after {
+      background: url(../../images/icons/arrow-right-light.svg) center/28px 16px no-repeat;
+    }
+
+    @media (any-hover: hover) {
+      &:hover {
+        background: transparent;
+        border-color: currentColor;
+
+        color: $mainColor;
+
+        &::after {
+          background: url(../../images/icons/arrow-right-dark.svg) center/28px 16px no-repeat;
+        }
+      }
+    }
+  }
+}

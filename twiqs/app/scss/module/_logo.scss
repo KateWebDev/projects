@@ -1,0 +1,15 @@
+.logo {
+  svg {
+    width: 100px;
+    height: 50px;
+    fill: #424928;
+  }
+
+  &--footer {
+    svg {
+      width: 135px;
+      height: 55px;
+      fill: #fcf8f3;
+    }
+  }
+}

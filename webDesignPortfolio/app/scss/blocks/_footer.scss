@@ -1,0 +1,27 @@
+.footer {
+  padding: 48px 0 36px;
+  border-top: 1px solid $color-border;
+  // .footer__container
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 35px 30px;
+  }
+  // .footer__copy
+  &__copy {
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 2.25;
+    letter-spacing: -0.03em;
+    color: $color-light;
+
+    span {
+      color: $color-dop;
+    }
+  }
+  // .footer__socials
+  &__socials {
+  }
+}

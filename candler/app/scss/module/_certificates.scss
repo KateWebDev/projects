@@ -1,0 +1,32 @@
+.certificates {
+  padding-bottom: 150px;
+  // .certificates__container
+  &__container {
+    display: flex;
+    gap: 30px 22px;
+  }
+  // .certificates__content
+  &__content {
+  }
+  // .certificates__inner
+  &__inner {
+    width: 1165px;
+  }
+  // .certificates__items
+  &__items {
+    overflow: hidden;
+  }
+
+  // .certificates__item
+  &__item {
+    img {
+      width: 375px;
+      height: 240px;
+      object-fit: cover;
+    }
+  }
+
+  .slick-dots {
+    justify-content: flex-start;
+  }
+}

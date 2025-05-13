@@ -1,0 +1,57 @@
+.footer {
+  padding: 40px 0;
+  background: $mainColor;
+  color: $mainBackGround;
+
+  // .footer__container
+  &__container {
+    min-height: clamp(
+      400px,
+      calc(400px + (500 - 400) * ((100vw - 320px) / ($widthReportMax - $widthReportMin))),
+      500px
+    );
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    text-align: center;
+    align-items: center;
+    row-gap: 20px;
+    font-weight: 700;
+  }
+  // .footer__link
+  &__link {
+  }
+  // .footer__text
+  &__text {
+  }
+  // .footer__logo
+  &__logo {
+    margin-bottom: clamp(30px, calc(30px + (60 - 30) * ((100vw - 320px) / ($widthReportMax - $widthReportMin))), 60px);
+  }
+  // .footer__nav
+  &__nav {
+  }
+  // .footer__items
+  &__items {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  // .footer__item
+  &__item {
+  }
+  // .footer__item-link
+  &__item-link {
+  }
+
+  a {
+    transition: all 0.3s linear;
+
+    @media (any-hover: hover) and (min-width: 992px) {
+      &:hover {
+        opacity: 0.8;
+      }
+    }
+  }
+}

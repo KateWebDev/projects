@@ -1,0 +1,244 @@
+     <ul class="skills__progress">
+        <li class="skills__point">
+          <p class="skills__info chapter">
+            Создание сайтов
+          </p>
+          <div class="skills__number">
+            100%
+            <span class="skills__num" style="width: calc(100% - 100%);"></span>
+          </div>
+        </li>
+        <li class="skills__point">
+          <p class="skills__info chapter">
+            Создание приложений
+          </p>
+          <div class="skills__number">
+            85%
+            <span class="skills__num" style="width: calc(100% - 85%);"></span>
+          </div>
+        </li>
+        <li class="skills__point">
+          <p class="skills__info chapter">
+            Работа с данными
+          </p>
+          <div class="skills__number">
+            90%
+            <span class="skills__num" style="width: calc(100% - 90%);"></span>
+          </div>
+        </li>
+        <li class="skills__point">
+          <p class="skills__info chapter">
+            Креативность
+          </p>
+          <div class="skills__number">
+            75%
+            <span class="skills__num" style="width: calc(100% - 75%);"></span>
+          </div>
+        </li>
+        <li class="skills__point">
+          <p class="skills__info chapter">
+            Создание дизайна
+          </p>
+          <div class="skills__number">
+            90%
+            <span class="skills__num" style="width: calc(100% - 90%);"></span>
+          </div>
+        </li>
+        <li class="skills__point">
+          <p class="skills__info chapter">
+            Soft skills
+          </p>
+          <div class="skills__number">
+            95%
+            <span class="skills__num" style="width: calc(100% - 95%);"></span>
+          </div>
+        </li>
+      </ul>
+
+
+
+CSS
+
+&__progress {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(clampAd(300, 350), 1fr));
+    grid-auto-flow: dense;
+    gap: 30px clampAd(20, 45);
+  }
+  // .skills__point
+  &__point {
+    position: relative;
+    padding-bottom: 40px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 14px;
+      background: $color-accent;
+      border-radius: 4px;
+    }
+  }
+  // .skills__info
+  &__info {
+    font-size: 14px;
+    font-weight: 700;
+    white-space: nowrap;
+  }
+
+  // .skills__number
+  &__number {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    text-align: right;
+  }
+
+  // .skills__num
+  &__num {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+
+    &::before {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      right: -1px;
+      width: 100%;
+      height: 14px;
+      background: #e8e4de;
+    }
+  }
+
+
+
+
+
+
+
+
+или 2 вариант
+
+HTML
+
+ <ul class="skills__progress">
+        <li class="skills__point">
+          <p class="skills__info chapter">
+            Создание сайтов
+          </p>
+          <div class="skills__number">
+            100%
+            <span class="skills__num" style="width: 100%"></span>
+          </div>
+        </li>
+        <li class="skills__point">
+          <p class="skills__info chapter">
+            Создание приложений
+          </p>
+          <div class="skills__number">
+            85%
+            <span class="skills__num" style="width: 85%;"></span>
+          </div>
+        </li>
+        <li class="skills__point">
+          <p class="skills__info chapter">
+            Работа с данными
+          </p>
+          <div class="skills__number">
+            90%
+            <span class="skills__num" style="width: 90%;"></span>
+          </div>
+        </li>
+        <li class="skills__point">
+          <p class="skills__info chapter">
+            Креативность
+          </p>
+          <div class="skills__number">
+            75%
+            <span class="skills__num" style="width: 75%"></span>
+          </div>
+        </li>
+        <li class="skills__point">
+          <p class="skills__info chapter">
+            Создание дизайна
+          </p>
+          <div class="skills__number">
+            90%
+            <span class="skills__num" style="width: 90%;"></span>
+          </div>
+        </li>
+        <li class="skills__point">
+          <p class="skills__info chapter">
+            Soft skills
+          </p>
+          <div class="skills__number">
+            95%
+            <span class="skills__num" style="width: 95%"></span>
+          </div>
+        </li>
+      </ul>
+
+CSS
+
+  // .skills__progress
+  &__progress {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(clampAd(300, 350), 1fr));
+    grid-auto-flow: dense;
+    gap: 30px clampAd(20, 45);
+  }
+  // .skills__point
+  &__point {
+    position: relative;
+    padding-bottom: 40px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 14px;
+      background: #e8e4de;
+      border-radius: 4px;
+    }
+  }
+  // .skills__info
+  &__info {
+    font-size: 14px;
+    font-weight: 700;
+    white-space: nowrap;
+  }
+
+  // .skills__number
+  &__number {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    text-align: right;
+  }
+
+  // .skills__num
+  &__num {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+
+    &::before {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 14px;
+      background: $color-accent;
+      border-radius: 4px;
+    }
+  }

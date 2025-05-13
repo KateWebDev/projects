@@ -1,0 +1,44 @@
+.tabs {
+  // .tabs__items
+  &__items {
+    display: flex;
+    gap: 10px;
+  }
+  // .tabs__item
+  &__item {
+    padding: 12px 32px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: $color-bg-accent;
+    color: $color-other;
+    transition: all 0.3s linear;
+    font-size: clamp(18px, calc(18px + (24 - 18) * ((100vw - 320px) / ($widthReportMax - $widthReportMin))), 24px);
+    font-weight: 500;
+    line-height: 1.33;
+    letter-spacing: 0.06px;
+
+    &--active {
+      background: $mainBackGround;
+      color: $color-text-accent;
+    }
+  }
+  // .tabs__content
+  &__content {
+    display: inline-block;
+    padding: 32px;
+    background: $mainBackGround;
+    box-shadow: 35px 35px 65px 0px rgba(146, 106, 120, 0.16);
+  }
+  // .tabs__block
+  &__block {
+    display: none;
+
+    &--active {
+      display: block;
+    }
+  }
+  // .tabs__search
+  &__search {
+  }
+}

@@ -1,0 +1,27 @@
+.promo {
+  background: image-set(
+      url("../images/main/promo/bg.avif") type("image/avif"),
+      url("../images/main/promo/bg.webp") type("image/webp"),
+      url("../images/main/promo/bg.jpg")
+    )
+    center/cover no-repeat;
+  color: $white;
+  // .promo__container
+  &__container {
+    min-height: clamp(
+      300px,
+      calc(300px + (500 - 300) * ((100vw - 320px) / ($widthReportMax - $widthReportMin))),
+      500px
+    );
+    padding: 15px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  // .promo__text
+  &__text {
+    max-width: clamp(375px, calc(375px + (675 - 375) * ((100vw - 320px) / ($widthReportMax - $widthReportMin))), 675px);
+    font-size: clamp(20px, calc(20px + (42 - 20) * ((100vw - 320px) / ($widthReportMax - $widthReportMin))), 42px);
+  }
+}

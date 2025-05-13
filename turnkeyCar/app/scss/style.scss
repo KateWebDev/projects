@@ -1,0 +1,157 @@
+@import "components/_resetStyle";
+@import "../../node_modules/slick-carousel/slick/slick";
+//@import "../../node_modules/@fancyapps/fancybox/dist/jquery.fancybox";
+
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@300;400&display=swap");
+
+//Страница
+$widthReportMax: 1600;
+$widthReportMin: 320;
+$maxWidthContainer: 1230px; //максимальная ширина контейнера + padding left + padding right
+$containerPadding: 15px; //внутринние отступы в контейнере
+
+//Шрифт
+$fontFamily: "Oswald", sans-serif;
+$mainColor: #2c2b2b; //основной цвет шрифта
+$mainBackGround: #ffffff; //основной цвет фона
+$mainSize: 18;
+$lineheight: calc(27 / $mainSize);
+$fontWeight: 300;
+
+$color-accent: #5a0d67;
+$color-firm: #21062a;
+$color-gray: #c4c4c4;
+
+//Контейнер
+[class*="__container"] {
+  max-width: $maxWidthContainer;
+  margin: 0 auto;
+  padding: 0 $containerPadding;
+}
+
+[class*="__cont-left"] {
+  padding-left: calc((100% - $maxWidthContainer) / 2 + $containerPadding);
+}
+
+[class*="__cont-right"] {
+  padding-right: calc((100% - $maxWidthContainer) / 2 + $containerPadding);
+}
+
+//Бургер меню
+[class*="__burger"] {
+  display: none;
+  flex-direction: column;
+  row-gap: 4px;
+  cursor: pointer;
+
+  span {
+    width: 24px;
+    height: 3px;
+    border-radius: 5px;
+    background: #ffffff;
+    transition: all 0.3s linear;
+  }
+}
+
+/*Для контейнера картинок в карточках - технический класс*/
+[class*="__ibg"] {
+  position: relative;
+  /*Для самих картинок в карточках технический класс*/
+  img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+body {
+  font-family: $fontFamily;
+  background-color: $mainBackGround;
+  color: $mainColor;
+  font-size: $mainSize + px;
+  line-height: $lineheight;
+  font-weight: $fontWeight;
+}
+
+body.lock {
+  overflow: hidden;
+}
+
+.hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+/*
+// пример ретинизации картинки фона
+@media (min-width: 768px) and (min-resolution: 144dpi), (min-width: 768px) and (min-resolution: 1.5dppx) {
+    .kartinka_kak_fon {
+        background-image: url(images/bg@2x.jpg);
+        background-size: xxx auto; // xxx - реальная ширина картинки в px
+    }
+}
+*/
+
+.main {
+  flex: 1 1 auto;
+}
+
+.btn {
+  display: inline-block;
+  max-width: clamp(200px, calc(200px + (250 - 200) * ((100vw - 320px) / ($widthReportMax - $widthReportMin))), 250px);
+  width: 100%;
+  padding: 15px 0;
+  font-size: 14px;
+  text-align: center;
+  text-transform: uppercase;
+  background: $color-accent;
+  color: $mainBackGround;
+  transition: all 0.3s linear;
+
+  @media (any-hover: hover) and (min-width: 992px) {
+    &:hover {
+      color: $color-accent;
+      background: $mainBackGround;
+    }
+  }
+}
+
+.title {
+  display: inline-block;
+  color: $color-firm;
+  font-size: 36px;
+  font-weight: 400;
+  text-transform: uppercase;
+  padding-right: 90px;
+  position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 80px;
+    height: 3px;
+    background: $color-firm;
+  }
+}
+
+@import "module/_header";
+@import "module/_intro";
+@import "module/_services";
+@import "module/_about";
+@import "module/_cars";
+@import "module/_contacts";
+@import "module/_footer";
+@import "components/_adaptive";

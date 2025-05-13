@@ -1,0 +1,58 @@
+.intro {
+  padding-top: clamp(40px, calc(40px + (70 - 40) * ((100vw - 320px) / ($widthReportMax - $widthReportMin))), 70px);
+  padding-bottom: clamp(30px, calc(30px + (50 - 30) * ((100vw - 320px) / ($widthReportMax - $widthReportMin))), 50px);
+  // .intro__container
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    //flex-wrap: wrap;
+  }
+  // .intro__content
+  &__content {
+    max-width: 497px;
+  }
+  // .intro__title
+  &__title {
+    text-transform: uppercase;
+    display: inline-block;
+    color: $accent-color;
+    font-family: "Lora", serif;
+    font-size: clamp(40px, calc(40px + (110 - 40) * ((100vw - 320px) / ($widthReportMax - $widthReportMin))), 110px);
+    font-weight: 700;
+    letter-spacing: clamp(
+      1.8px,
+      calc(1.8px + (3.93 - 1.8) * ((100vw - 320px) / ($widthReportMax - $widthReportMin))),
+      3.93px
+    );
+    margin-bottom: clamp(3px, calc(3px + (6 - 3) * ((100vw - 320px) / ($widthReportMax - $widthReportMin))), 6px);
+    position: relative;
+    padding-top: 10px;
+
+    svg {
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: clamp(83px, calc(83px + (181 - 83) * ((100vw - 320px) / ($widthReportMax - $widthReportMin))), 181px);
+      height: 33px;
+    }
+  }
+  // .intro__text
+  &__text {
+    max-width: 483px;
+    margin-bottom: clamp(20px, calc(20px + (40 - 20) * ((100vw - 320px) / ($widthReportMax - $widthReportMin))), 40px);
+  }
+  // .intro__btn
+  &__btn {
+    margin-bottom: 30px;
+  }
+  // .intro__image
+  &__image {
+    max-width: 706px;
+  }
+  // .intro__img
+  &__img {
+    width: 100%;
+    object-fit: cover;
+  }
+}

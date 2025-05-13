@@ -1,0 +1,108 @@
+.form {
+  display: flex;
+  flex-direction: column;
+  // .form__items
+  &__items {
+  }
+  // .form__action
+  &__action {
+    display: flex;
+    column-gap: 35px;
+    margin-bottom: 40px;
+  }
+  // .form__action-item
+  &__action-item {
+  }
+  // .form__action-input
+  &__action-input {
+    display: none;
+    &:checked + .form__action-label {
+      &::after {
+        content: "";
+        position: absolute;
+        top: clampAd(2, 3);
+        left: 6px;
+        width: 16px;
+        aspect-ratio: 1;
+        border-radius: 50%;
+        background: $color-accent;
+      }
+    }
+  }
+  // .form__action-label
+  &__action-label {
+    display: inline-block;
+    padding-left: 42px;
+    position: relative;
+    cursor: pointer;
+    font-size: clampAd(14, 18);
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 0;
+      transform: translateY(-50%);
+      width: 28px;
+      aspect-ratio: 1;
+      border-radius: 50%;
+      border: $border;
+    }
+  }
+  // .form__item
+  &__item {
+    display: flex;
+    flex-direction: column;
+    row-gap: 5px;
+    &:not(:last-child) {
+      margin-bottom: clampAd(15, 25);
+    }
+  }
+  // .form__label
+  &__label {
+    font-size: clampAd(14, 16);
+    line-height: 1.75;
+    position: relative;
+    padding-right: 10px;
+
+    &:has(+ *[required]) {
+      &::after {
+        content: "*";
+        font-size: inherit;
+        line-height: inherit;
+      }
+    }
+  }
+  // .form__input
+  &__input,
+  &__textarea {
+    width: 100%;
+    border: $border;
+    border-radius: $radius;
+    padding: 18px 30px;
+    background: $white;
+    transition: all 0.3s linear;
+
+    &::placeholder {
+      @include SpaceGrotesk400;
+      font-size: clampAd(16, 18);
+      color: #898989;
+    }
+
+    @media (any-hover: hover) {
+      &:hover {
+        background-color: rgba($color-accent, 0.5);
+      }
+    }
+  }
+  // .form__textarea
+  &__textarea {
+    min-height: 190px;
+    margin-bottom: 40px;
+    resize: vertical;
+  }
+  // .form__btn
+  &__btn {
+    width: 100%;
+  }
+}

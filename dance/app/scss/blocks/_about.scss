@@ -1,0 +1,44 @@
+.about {
+  padding: clampAd(40, 70) 0;
+  background: $color-bg;
+
+  // .about__container
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px clampAd(10, 15);
+  }
+  // .about__content
+  &__content {
+    max-width: clampAd(320, 423);
+    width: 100%;
+  }
+  // .about__title
+  &__title {
+    margin-bottom: clampAd(20, 25);
+  }
+  // .about__text
+  &__text {
+    max-width: 71%;
+    margin-bottom: clampAd(20, 40);
+  }
+  // .about__btn
+  &__btn {
+    padding: clampAd(8, 12) clampAd(20, 38);
+  }
+  // .about__image
+  &__image {
+    max-width: clampAd(350, 597);
+  }
+  // .about__img
+  &__img {
+    display: block;
+    max-width: 100%;
+    max-height: 100%;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+}

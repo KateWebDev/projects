@@ -1,0 +1,22 @@
+.socials {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 20px 10px;
+
+  // .socials__item
+  &__item {
+  }
+  // .socials__link
+  &__link {
+    width: 18px;
+    height: 18px;
+    transition: all 0.3s linear;
+
+    @media (any-hover: hover) {
+      &:hover {
+        transform: scale(1.2);
+      }
+    }
+  }
+}

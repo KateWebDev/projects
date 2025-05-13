@@ -1,0 +1,103 @@
+.footer {
+  // .footer__container
+  &__container {
+  }
+  // .footer__top
+  &__top {
+    padding: clamp(50px, calc(50px + (150 - 50) * ((100vw - 320px) / ($widthReportMax - $widthReportMin))), 150px) 0;
+  }
+  // .footer__items
+  &__items {
+    display: flex;
+    gap: 50px clamp(40px, calc(40px + (160 - 40) * ((100vw - 320px) / ($widthReportMax - $widthReportMin))), 160px);
+  }
+  // .footer__item
+  &__item {
+  }
+  // .footer__logo
+  &__logo {
+    margin-bottom: 20px;
+  }
+  // .footer__address
+  &__address {
+    max-width: 221px;
+    font-size: 15px;
+    font-style: normal;
+    margin-bottom: 10px;
+  }
+  // .footer__actions
+  &__actions {
+    margin-bottom: 20px;
+  }
+  // .footer__action
+  &__action {
+  }
+  // .footer__action-link
+  &__action-link {
+    transition: all 0.3s linear;
+    @media (any-hover: hover) and (min-width: 992px) {
+      &:hover {
+        text-shadow: 0 0 1px $mainColor;
+        text-decoration: underline;
+      }
+    }
+  }
+  // .footer__social-link
+  &__social-link {
+    svg {
+      fill: #73787c;
+      fill-opacity: 0.5;
+      transition: all 0.3s linear;
+    }
+
+    @media (any-hover: hover) and (min-width: 992px) {
+      &:hover {
+        svg {
+          fill-opacity: 1;
+        }
+      }
+    }
+  }
+  // .footer__name
+  &__name {
+    color: $color-btn;
+    margin-bottom: 22px;
+    white-space: nowrap;
+  }
+  // .footer__item-list
+  &__item-list {
+    white-space: nowrap;
+  }
+  // .footer__item-point
+  &__item-point {
+    &:not(:last-child) {
+      margin-bottom: 8px;
+    }
+  }
+  // .footer__item-link
+  &__item-link {
+    font-size: 15px;
+    transition: all 0.3s linear;
+    @media (any-hover: hover) and (min-width: 992px) {
+      &:hover {
+        text-shadow: 0 0 1px $mainColor;
+        text-decoration: underline;
+      }
+    }
+  }
+  // .footer__bottom
+  &__bottom {
+    padding: 40px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 30px;
+  }
+  // .footer__text
+  &__text {
+  }
+  // .footer__link
+  &__link {
+  }
+}

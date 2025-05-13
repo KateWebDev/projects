@@ -1,0 +1,22 @@
+.main-title {
+  @include Fredoka;
+  font-size: clampAd(40, 72);
+  line-height: 1;
+  color: $color-dark1;
+
+  span {
+    text-transform: capitalize;
+    color: $color-accent;
+  }
+}
+
+.title {
+  @include Fredoka;
+  font-size: clampAd(24, 36);
+  line-height: 1.2;
+  color: $color-dark1;
+  text-transform: capitalize;
+}
+
+.subtitle {
+}

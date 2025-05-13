@@ -1,0 +1,92 @@
+.table {
+  // .table__thead
+  &__thead {
+  }
+  // .table__tr
+  &__tr {
+    display: grid;
+    grid-template-columns: 1fr clampAd(50, 200) clampAd(50, 200);
+
+    &:first-of-type {
+      .table__td {
+        padding-top: 28px;
+        border-top: 1px solid $color-bg-dop;
+      }
+    }
+    &:last-of-type {
+      .table__td {
+        padding-bottom: 28px;
+        border-bottom: 1px solid $color-bg-dop;
+      }
+    }
+  }
+  // .table__name
+  &__name {
+    @include ClashDisplay400;
+    font-size: 14px;
+    line-height: 1.4;
+    text-align: left;
+    margin-bottom: 14px;
+
+    &:last-of-type {
+      text-align: right;
+    }
+  }
+  // .table__tbody
+  &__tbody {
+    display: flex;
+    flex-direction: column;
+    row-gap: 26px;
+  }
+  // .table__td
+  &__td {
+    &:last-of-type {
+      text-align: right;
+    }
+  }
+  // .table__block
+  &__block {
+    display: flex;
+    gap: 25px;
+  }
+  // .table__img
+  &__img {
+    display: block;
+    width: 109px;
+    height: 134px;
+    object-fit: cover;
+    object-position: center;
+  }
+  // .table__content
+  &__content {
+    padding: 12px 0;
+    max-width: clampAd(150, 235);
+    display: flex;
+    flex-direction: column;
+    row-gap: 8px;
+  }
+  // .table__title
+  &__title {
+    @include ClashDisplay400;
+    font-size: clampAd(16, 20);
+    line-height: 1.4;
+  }
+  // .table__text
+  &__text {
+    font-size: 14px;
+  }
+  // .table__price
+  &__price {
+    font-size: clampAd(16, 18);
+  }
+  // .table__counter
+  &__counter {
+    background: $color-bg-dop;
+    margin-top: 12px;
+  }
+  // .table__all-price
+  &__all-price {
+    display: inline-block;
+    padding-top: 12px;
+  }
+}

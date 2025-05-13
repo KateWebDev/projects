@@ -1,0 +1,77 @@
+.price {
+  background: $color-gradient;
+  position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 27px;
+    bottom: 27px;
+    right: 0;
+    width: clampAd(0, 830);
+    background: image-set(
+        url("../images/main/price/decor.avif") type("image/avif"),
+        url("../images/main/price/decor_2x.avif") 2x type("image/avif"),
+        url("../images/main/price/decor.webp") type("image/webp"),
+        url("../images/main/price/decor_2x.webp") 2x type("image/webp"),
+        url("../images/main/price/decor.jpg"),
+        url("../images/main/price/decor_2x.jpg") 2x
+      )
+      right center/contain no-repeat;
+  }
+
+  // .price__container
+  &__container {
+    min-height: 100svh;
+    padding: 30px 20px 35px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-bottom: clampAd(40, 105);
+  }
+  // .price__inner
+  &__inner {
+    max-width: clampAd(320, 712);
+    padding: clampAd(24, 55) clampAd(27, 61);
+    text-align: center;
+    background: $color-accent3;
+    color: $white;
+    border-radius: clampAd(10, 20);
+  }
+  // .price__title
+  &__title {
+    margin-bottom: clampAd(3, 6);
+  }
+  // .price__text
+  &__text {
+    @include SourceSans300;
+    font-size: clampAd(7, 16);
+    line-height: 1.28;
+    margin-bottom: clampAd(32, 72);
+  }
+  // .price__items
+  &__items {
+    display: flex;
+    flex-direction: column;
+    row-gap: clampAd(17, 28);
+  }
+  // .price__item
+  &__item {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    border-bottom: 1px dashed currentColor;
+    line-height: 1.25;
+    padding-bottom: clampAd(2, 15);
+  }
+  // .price__name
+  &__name {
+    @include SourceSans300;
+    font-size: clampAd(12, 18);
+  }
+  // .price__num
+  &__num {
+    @include SourceSans700;
+    font-size: clampAd(12, 18);
+  }
+}

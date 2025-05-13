@@ -1,0 +1,88 @@
+.serve {
+  padding-bottom: clampAd(50, 110);
+  background: linear-gradient(180deg, $color-bg-light 50%, $white 50%);
+
+  // .serve__container
+  &__container {
+  }
+  // .serve__title
+  &__title {
+    margin-bottom: 10px;
+  }
+  // .serve__text
+  &__text {
+    margin-bottom: clampAd(30, 45);
+  }
+  // .serve__items
+  &__items {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(clampAd(250, 540), 1fr));
+    gap: clampAd(20, 30);
+  }
+  // .serve__item
+  &__item {
+    padding: clampAd(20, 40) clampAd(30, 88);
+
+    box-shadow: 0 40px 52px -22px rgba($black, 0.08);
+    background: $white;
+    border-radius: $radius-small;
+    transition: all 0.3s linear;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+
+    @media (any-hover: hover) {
+      &:hover {
+        background: $color-accent;
+        color: $white;
+
+        .serve__icon {
+          svg {
+            fill: $white;
+          }
+        }
+
+        .serve__name {
+          color: $white;
+        }
+
+        .serve__info {
+          color: $white;
+        }
+
+        .serve__btn {
+          background: $white;
+          color: $color-accent;
+          border-color: currentColor;
+        }
+      }
+    }
+  }
+  // .serve__icon
+  &__icon {
+    margin-bottom: 15px;
+
+    svg {
+      width: clampAd(35, 70);
+      height: clampAd(35, 70);
+      fill: $color-accent;
+      transition: all 0.3s linear;
+    }
+  }
+  // .serve__name
+  &__name {
+    transition: all 0.3s linear;
+  }
+  // .serve__info
+  &__info {
+    margin-bottom: clampAd(15, 25);
+
+    transition: all 0.3s linear;
+  }
+  // .serve__btn
+  &__btn {
+    margin-top: auto;
+  }
+}

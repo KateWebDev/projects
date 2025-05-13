@@ -1,0 +1,47 @@
+.footer {
+  padding: 30px 0;
+  background: $black;
+  color: $white;
+
+  // .footer__container
+  &__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    row-gap: 25px;
+  }
+  // .footer__nav
+  &__nav {
+  }
+  // .footer__menu
+  &__menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px clampAd(20, 30);
+  }
+  // .footer__item
+  &__item {
+  }
+  // .footer__link
+  &__link {
+    text-transform: uppercase;
+
+    transition: all 0.3s linear;
+
+    @media (any-hover: hover) {
+      &:hover {
+        color: $color-accent;
+      }
+    }
+  }
+  // .footer__socials
+  &__socials {
+  }
+  // .footer__copy
+  &__copy {
+    color: $color-light;
+  }
+}

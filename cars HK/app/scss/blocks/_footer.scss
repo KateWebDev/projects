@@ -1,0 +1,135 @@
+.footer {
+  background: $color-bg-dop;
+  letter-spacing: 0;
+
+  // .footer__top
+  &__top {
+    padding: clampAd(30, 50) 0 clampAd(20, 40);
+  }
+  // .footer__container
+  &__container {
+  }
+  // .footer__items
+  &__items {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 30px clampAd(30, 96);
+  }
+  // .footer__item
+  &__item {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    row-gap: clampAd(30, 64);
+  }
+  // .footer__block
+  &__block {
+    display: flex;
+    align-items: center;
+    gap: 10px clampAd(10, 17);
+
+    span {
+      font-weight: 600;
+      line-height: 1.5;
+      color: $white;
+    }
+  }
+  // .footer__logo
+  &__logo {
+  }
+  // .footer__text
+  &__text {
+    max-width: 215px;
+
+    font-size: 18px;
+    line-height: 1.7;
+    text-transform: capitalize;
+    color: $white;
+  }
+  // .footer__nav
+  &__nav {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px clampAd(20, 48);
+    margin-left: auto;
+  }
+  // .footer__nav-item
+  &__nav-item {
+    display: flex;
+    flex-direction: column;
+    row-gap: clampAd(20, 32);
+  }
+  // .footer__type
+  &__type {
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 1.1;
+    color: $white;
+  }
+  // .footer__list
+  &__list {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    row-gap: clampAd(16, 28);
+  }
+  // .footer__point
+  &__point {
+  }
+  // .footer__link
+  &__link {
+    font-size: 16px;
+    line-height: 1.25;
+    text-transform: capitalize;
+    white-space: nowrap;
+    transition: all 0.3s linear;
+
+    @media (any-hover: hover) {
+      &:hover {
+        color: $color-accent;
+      }
+    }
+  }
+  // .footer__socials
+  &__socials {
+    display: flex;
+    flex-direction: column;
+    row-gap: clampAd(20, 40);
+  }
+  // .footer__social
+  &__social {
+  }
+  // .footer__social-link
+  &__social-link {
+    max-width: 100px;
+    max-height: 30px;
+    transition: all 0.3s linear;
+
+    @media (any-hover: hover) {
+      &:hover {
+        transform: scale(1.1);
+      }
+    }
+  }
+  // .footer__icon
+  &__icon {
+    display: block;
+    max-width: 100%;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    filter: grayscale(100%) brightness(10000%);
+  }
+  // .footer__bottom
+  &__bottom {
+    padding: 20px;
+    background: $color-accent;
+    text-align: center;
+  }
+  // .footer__copy
+  &__copy {
+    color: $white;
+  }
+}

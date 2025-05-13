@@ -1,0 +1,114 @@
+.testimonials {
+  // .testimonials__container
+  &__container {
+  }
+  // .testimonials__info
+  &__info {
+    margin-bottom: clampAd(30, 80);
+
+    .info__text {
+      max-width: 475px;
+    }
+  }
+  // .testimonials__slider
+  &__slider {
+    padding: clampAd(30, 80) 0px;
+    background: $color-bg-dark;
+    border-radius: $radius-big;
+    max-width: 100%;
+    min-height: clampAd(500, 654);
+    overflow: hidden;
+  }
+  // .testimonials__items
+  &__items {
+  }
+  // .testimonials__item
+  &__item {
+    max-width: clampAd(260, 606);
+    background: $color-bg-dark;
+    color: $white;
+  }
+  // .testimonials__blockquote
+  &__blockquote {
+  }
+  // .testimonials__text
+  &__text {
+    padding: clampAd(30, 48) clampAd(20, 52);
+    border: $border;
+    border-color: $color-accent;
+    border-radius: $radius-big;
+    margin-bottom: 40px;
+    font-size: clampAd(14, 18);
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      bottom: calc(clampAd(15, 21) * -1);
+      left: 55px;
+      width: clampAd(30, 40);
+      aspect-ratio: 1;
+      border: $border;
+      border-color: $color-accent;
+      transform: rotate(45deg);
+      border-top: none;
+      border-left: none;
+      background: $color-bg-dark;
+    }
+  }
+  // .testimonials__cite
+  &__cite {
+    display: block;
+    padding: 0 clampAd(20, 52);
+    font-style: normal;
+  }
+  // .testimonials__author
+  &__author {
+    @include SpaceGrotesk500;
+    font-size: clampAd(14, 20);
+    color: $color-accent;
+  }
+  // .testimonials__spec
+  &__spec {
+    font-size: clampAd(14, 18);
+  }
+  // .testimonials__action
+  &__action {
+    position: absolute;
+    top: 90%;
+    left: 0;
+    right: 0;
+    max-width: clampAd(300, 565);
+    height: clampAd(14, 24);
+    margin: 0 auto;
+  }
+  // .testimonials__arrow
+  &__arrow {
+    z-index: 11;
+    svg {
+      width: clampAd(14, 24);
+      height: clampAd(14, 24);
+      fill: $white;
+    }
+    &::after {
+      display: none;
+    }
+  }
+  // .testimonials__pagination
+  &__pagination {
+    .swiper-pagination-bullet {
+      border-radius: 0;
+      width: 14px;
+      height: 14px;
+      background: url(../../images/main/testimonials/pagination.svg) center/cover no-repeat;
+      opacity: 1;
+      cursor: pointer;
+
+      &-active {
+        background: url(../../images/main/testimonials/pagination-active.svg) center/contain no-repeat;
+      }
+    }
+  }
+}
+
+//

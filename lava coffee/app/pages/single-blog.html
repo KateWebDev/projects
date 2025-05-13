@@ -1,0 +1,124 @@
+<!--=include header.html -->
+
+<main class="main">
+  <div class="top">
+    <h1 class="top__title title">
+      Single Blog
+    </h1>
+    <div class=" top__breadcrumbs breadcrumbs">
+      <div class="breadcrumbs__container">
+        <nav class="breadcrumbs__nav">
+          <ul class="breadcrumbs__list">
+            <li class="breadcrumbs__point">
+              <a class="breadcrumbs__link breadcrumbs__link--default" href="index.html">
+                Home
+              </a>
+            </li>
+            <li class="breadcrumbs__point">
+              <a class="breadcrumbs__link" href="#">
+                Single Blog
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </div>
+
+  <section class="main__section single-blog">
+    <div class="single-blog__container">
+      <div class="single-blog__ibg">
+        <picture>
+          <source type='image/avif' srcset='../images/main/blog/single1.avif, ../images/main/blog/single1@2x.avif 2x'>
+          <source type='image/webp' srcset='../images/main/blog/single1.webp, ../images/main/blog/single1@2x.webp 2x'>
+          <img class="single-blog__img" src="../images/main/blog/single1.jpg"
+            srcset="../images/main/blog/single1@2x.jpg 2x" alt="" loading="lazy" height="404">
+        </picture>
+      </div>
+      <h3 class="single-blog__title">
+        Server-Side Rendering
+      </h3>
+      <div class="single-blog__info">
+        <time class="single-blog__date" datetime="20221221">
+          21 December 2022
+        </time>
+        <a class="single-blog__comments" href="#">
+          0 Comments
+        </a>
+      </div>
+      <div class="single-blog__text text">
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+          dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
+          ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat
+          nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit
+          anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+          incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+          laboris nisi ut aliquip ex ea commodo consequat.
+        </p>
+        <ul class="single-blog__items">
+          <li class="single-blog__item">
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit
+            </p>
+          </li>
+          <li class="single-blog__item">
+            <p>
+              Excepteur sint occaecat cupidatat non proident.
+            </p>
+          </li>
+          <li class="single-blog__item">
+            <p>
+              sunt in culpa qui officia deserunt mollit anim id est laborum.
+            </p>
+          </li>
+        </ul>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+          dolore
+          magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+          commodo
+          consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+          pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id
+          est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+        </p>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+          dolore
+          magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+          commodo
+          consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+          pariatu
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="main__section news">
+    <div class="news__container">
+      <div class="news__image">
+        <picture>
+          <source type='image/avif' srcset='../images/main/news/new.avif, ../images/main/news/new@2x.avif 2x'>
+          <source type='image/webp' srcset='../images/main/news/new.webp, ../images/main/news/new@2x.webp 2x'>
+          <img class="news__img" src="../images/main/news/new.jpg" srcset="../images/main/news/new@2x.jpg 2x" alt=""
+            loading="lazy" width="567" height="396">
+        </picture>
+      </div>
+      <div class="news__content">
+        <h2 class="news__title title">
+          News As Fresh As Our Coffee
+        </h2>
+        <p class="news__text">
+          Get The Latest Updated On New Products And Upcoming Sales
+        </p>
+        <form class="news__form form" action="#" method="post" autocomplete="off">
+          <label class="hidden" for="email">Enter Your E-mail</label>
+          <input class="form__input" id="email" type="email" autocomplete="off" placeholder="Your email">
+          <button class="form__button" aria-label="send message" title="send message"> </button>
+        </form>
+      </div>
+    </div>
+  </section>
+</main>
+
+<!--=include footer.html -->

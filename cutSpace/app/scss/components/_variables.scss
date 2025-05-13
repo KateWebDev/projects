@@ -1,0 +1,45 @@
+//Страница
+$widthReportMax: 1440;
+$widthReportMin: 320;
+$widthReportMinPx: $widthReportMin + px;
+
+// Контейнер
+$maxWidthContainer: 1140px;
+$containerPadding: 15px;
+
+//Фон
+$mainBackGround: #ffffff;
+
+//Шрифт
+$fontFamily: "Poppins", sans-serif;
+$mainColor: #323232;
+$mainSize: 16;
+$size: $mainSize + px;
+$fontWeight: 400;
+$lineheight: calc(27 / $mainSize); //1.68
+
+// Доп цвета
+$white: #ffffff;
+$black: #000000;
+
+$color-accent: #f78434;
+
+$color-light-1: #bbbbbb; // form text
+$color-light-2: #d8d8d8; // svg company
+
+$color-bg-light: #f5f6fa;
+$color-bg-accent: #58bebf;
+$color-bg-accent-light: rgba(#58bebf, 0.2);
+
+// Радиусы
+$radius-circle: 50%;
+
+$radius-small: 10px;
+$radius-medium: 20px;
+$radius-big: 30px;
+
+$radius-not-bottom: 5px 5px 0 0;
+$radius-not-left-bottom: 40px 40px 40px 0;
+$radius-not-right-bottom: 20px 20px 0 20px;
+
+$shadow: 4px 20px 42px -2px rgba($black, 0.12);

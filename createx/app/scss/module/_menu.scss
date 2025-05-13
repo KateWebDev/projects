@@ -1,0 +1,27 @@
+.menu {
+  // .menu__items
+  &__items {
+    display: flex;
+    gap: clampAd(20, 40);
+  }
+  // .menu__item
+  &__item {
+    &--mobile {
+      display: none;
+    }
+  }
+  // .menu__link
+  &__link {
+    &:not(.menu__link.btn, .menu__link.link) {
+      font-weight: 700;
+      white-space: nowrap;
+      transition: all 0.3s linear;
+    }
+
+    @media (any-hover: hover) {
+      &:hover {
+        text-shadow: 0 0 1px currentColor;
+      }
+    }
+  }
+}

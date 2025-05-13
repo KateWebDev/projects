@@ -1,0 +1,71 @@
+.tarif {
+  // .tarif__container
+  &__container {
+  }
+  // .tarif__title
+  &__title {
+  }
+  // .tarif__inner
+  &__inner {
+  }
+  // .tarif__box
+  &__box {
+  }
+  // .tarif__tabs
+  &__tabs {
+    margin-bottom: clamp(
+      30px,
+      calc(30px + (100 - 30) * ((100vw - 320px) / ($widthReportMax - $widthReportMin))),
+      100px
+    );
+  }
+  // .tarif__block
+  &__block {
+    display: grid;
+    grid-template-columns: repeat(2, 235px);
+    gap: 40px;
+  }
+  // .tarif__img
+  &__img {
+  }
+  // .tarif__info
+  &__info {
+  }
+  // .tarif__list
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px 40px;
+  }
+  // .tarif__point
+  &__point {
+    flex: 0 0 calc(50% - (40px / 2));
+  }
+  // .tarif__type
+  &__type {
+    @include Noto700;
+    font-size: clamp(14px, calc(14px + (18 - 14) * ((100vw - 320px) / ($widthReportMax - $widthReportMin))), 18px);
+    margin-bottom: 5px;
+  }
+  // .tarif__description
+  &__description {
+  }
+  // .tarif__content
+  &__content {
+  }
+  // .tarif__text
+  &__text {
+    @include Noto700;
+    font-size: clamp(14px, calc(14px + (18 - 14) * ((100vw - 320px) / ($widthReportMax - $widthReportMin))), 18px);
+    margin-bottom: 17px;
+  }
+  // .tarif__image
+  &__image {
+    max-width: clamp(300px, calc(300px + (600 - 300) * ((100vw - 320px) / ($widthReportMax - $widthReportMin))), 600px);
+
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+}

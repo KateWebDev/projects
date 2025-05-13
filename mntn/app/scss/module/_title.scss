@@ -1,0 +1,30 @@
+.main-title {
+  font-weight: 600;
+  font-size: clampAd(40, 88);
+  line-height: 1.13;
+  text-transform: capitalize;
+}
+
+.title {
+  font-weight: 600;
+  font-size: clampAd(28, 64);
+}
+
+.badge {
+  font-weight: 800;
+  font-size: clampAd(14, 18);
+  letter-spacing: 0.33em;
+  text-transform: uppercase;
+  color: $color-accent;
+
+  display: flex;
+  align-items: center;
+  column-gap: clampAd(15, 32);
+
+  &::before {
+    content: "";
+    width: clampAd(30, 72);
+    height: 2px;
+    background: currentColor;
+  }
+}

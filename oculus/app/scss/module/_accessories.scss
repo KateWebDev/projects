@@ -1,0 +1,66 @@
+.accessories {
+  // .accessories__container
+  &__container {
+  }
+  // .accessories__type
+  &__type {
+    margin-bottom: 30px;
+  }
+  // .accessories__title
+  &__title {
+    margin-bottom: 30px;
+  }
+  // .accessories__items
+  &__items {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(clampAd(150, 300), 1fr));
+    grid-auto-flow: dense;
+    gap: 30px 0;
+  }
+  // .accessories__item
+  &__item {
+    padding: 20px 20px 18px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+    border: 1px solid transparent;
+    border-image: $color-gradient 1;
+  }
+  // .accessories__ibg
+  &__ibg {
+    padding: 0px 0px 107% 0px;
+  }
+  // .accessories__img
+  &__img {
+  }
+  // .accessories__name
+  &__name {
+    font-size: clampAd(16, 24);
+    color: $color-dop;
+    text-transform: capitalize;
+  }
+  // .accessories__text
+  &__text {
+    margin-bottom: 30px;
+    flex: 1 1 auto;
+  }
+  // .accessories__price
+  &__price {
+    @include Helvetica700;
+    color: $color-dop;
+    margin-bottom: 10px;
+  }
+  // .accessories__btn
+  &__btn {
+    background: $color-gradient;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    @include Helvetica700;
+    text-transform: uppercase;
+    text-align: center;
+    padding: 6px;
+    border: 1px solid transparent;
+    border-image: $color-gradient 1;
+  }
+}

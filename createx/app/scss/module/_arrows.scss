@@ -1,0 +1,40 @@
+.arrows {
+  // .arrows__arrow
+  &__arrow {
+    width: clampAd(30, 48);
+    aspect-ratio: 1;
+    border-radius: 50%;
+    background: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.3s linear;
+
+    svg {
+      width: 18px;
+      height: 12px;
+      fill: $mainColor;
+      transition: all 0.3s linear;
+    }
+
+    &.swiper-button-disabled {
+      opacity: 0.5;
+    }
+
+    @media (any-hover: hover) {
+      &:hover {
+        background: $color-accent;
+        svg {
+          fill: $white;
+        }
+      }
+    }
+
+    // .arrows__arrow--prev
+    &--prev {
+    }
+    // .arrows__arrow--next
+    &--next {
+    }
+  }
+}

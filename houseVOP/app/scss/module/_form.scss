@@ -1,0 +1,36 @@
+.form {
+  // .form__input
+  &__input {
+    width: 255px;
+    padding: 12px;
+    background: rgba(#ffffff, 0.2);
+    color: #ffffff;
+    font-size: 14px;
+    line-height: 1.92;
+
+    &::placeholder {
+      font-family: "Raleway", sans-serif;
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 1;
+      text-align: center;
+      color: #bebebe;
+    }
+  }
+  // .form__dop
+  &__dop {
+    width: 255px;
+    font-size: clamp(11px, calc(11px + (13 - 11) * ((100vw - 414px) / ($widthReportMax - $widthReportMin))), 13px);
+    line-height: 1.23;
+    color: #e7e7e7;
+  }
+  // .form__btn
+  &__btn {
+    width: 255px;
+    padding: 12px 53px;
+    background: $color-accent;
+    font-weight: 700;
+    line-height: 1.63;
+  }
+}
