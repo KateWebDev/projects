@@ -1,0 +1,25 @@
+.words {
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: clampAd(10, 18) 10px;
+
+  &--small-rowgap {
+    row-gap: 10px;
+  }
+
+  // .words__item
+  &__item {
+    padding: clampAd(5, 10) clampAd(10, 20);
+    border-radius: $radius-big;
+    backdrop-filter: blur(2px);
+    background: rgba($white, 0.2);
+    border: 1px solid currentColor;
+
+    font-weight: 700;
+    font-size: clampAd(16, 26);
+    color: $color-accent;
+  }
+}

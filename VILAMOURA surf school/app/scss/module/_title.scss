@@ -1,0 +1,13 @@
+@import "components/mixin";
+
+.title {
+  font-weight: 800;
+  font-size: clampAd(26, 64);
+  line-height: 1.29;
+  text-transform: uppercase;
+}
+
+.badge {
+  font-weight: 700;
+  font-size: clampAd(16, 20);
+}

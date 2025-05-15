@@ -1,0 +1,79 @@
+.header {
+  padding: clampAd(20, 50);
+
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: auto;
+  z-index: 2;
+
+  &--fixed {
+    padding: 20px 0;
+    position: fixed;
+    overflow: auto;
+    background: $white;
+  }
+
+  // .header__container
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    column-gap: 30px;
+  }
+  // .header__menu
+  &__menu {
+  }
+  // .header__action
+  &__action {
+    padding: 10px clampAd(10, 20);
+    border-radius: $radius-big;
+    background: $color-accent;
+
+    font-size: clampAd(16, 20);
+    font-weight: 700;
+    color: $white;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    column-gap: 10px;
+
+    transition: all 0.3s linear;
+
+    position: relative;
+    z-index: 4;
+
+    &::before {
+      --sizeIcon: #{clampAd(16, 24)};
+
+      content: "";
+      width: var(--sizeIcon);
+      height: var(--sizeIcon);
+      background: url(../../images/icons/phone.svg) center/contain no-repeat;
+    }
+
+    span {
+      @include w_991 {
+        display: none;
+      }
+    }
+
+    @media (any-hover: hover) {
+      &:hover {
+        background: $color-accent-light;
+      }
+    }
+  }
+  // .header__burger
+  &__burger {
+    position: relative;
+    z-index: 4;
+
+    @include w_991 {
+      display: flex;
+      order: -1;
+    }
+  }
+}

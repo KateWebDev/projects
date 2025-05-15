@@ -1,0 +1,73 @@
+@import "components/mixin";
+
+.menu {
+  @include w_991 {
+    position: fixed;
+    z-index: 3;
+    top: 0;
+    left: 0;
+    width: 50%;
+    min-height: 70%;
+    height: 100%;
+    transition: all 0.4s linear;
+    transform: translateX(-150%);
+    overflow: auto;
+    overflow-x: hidden;
+    background: $color-dark;
+  }
+
+  @include w_575 {
+    width: 80%;
+  }
+
+  &.menu--active {
+    @include w_991 {
+      transform: translateX(0);
+    }
+  }
+
+  // .menu__items
+  &__items {
+    display: flex;
+    align-items: center;
+    gap: 20px clampAd(20, 40);
+
+    @include w_991 {
+      padding: 100px 0;
+      min-height: 100%;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+  // .menu__item
+  &__item {
+  }
+  // .menu__link
+  &__link {
+    font-size: clampAd(16, 20);
+    font-weight: 700;
+    color: $color-accent;
+    text-transform: lowercase;
+
+    white-space: nowrap;
+    transition: all 0.3s linear;
+
+    @media (any-hover: hover) {
+      &:hover:not(.menu__link--active) {
+        color: $color-dark;
+      }
+    }
+
+    &--active {
+      font-weight: 800;
+      color: $color-dark;
+      cursor: default;
+    }
+
+    @include w_991 {
+      font-size: 20px;
+      color: $white;
+    }
+  }
+}

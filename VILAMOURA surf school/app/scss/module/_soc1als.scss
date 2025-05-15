@@ -1,0 +1,41 @@
+@import "components/mixin";
+
+.soc1als {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+
+  &--light {
+    .soc1als__link {
+      svg {
+        fill: $white;
+      }
+    }
+  }
+
+  // .soc1als__item
+  &__item {
+  }
+  // .soc1als__link
+  &__link {
+    --sizeIcon: #{clampAd(40, 60)};
+
+    width: var(--sizeIcon);
+    height: var(--sizeIcon);
+
+    svg {
+      width: 100%;
+      height: 100%;
+      fill: $color-dark;
+      transition: all 0.3s linear;
+    }
+
+    @media (any-hover: hover) {
+      &:hover {
+        svg {
+          transform: scale(1.05);
+        }
+      }
+    }
+  }
+}

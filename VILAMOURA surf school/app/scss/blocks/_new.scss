@@ -1,0 +1,46 @@
+.new {
+  width: 100%;
+
+  padding: clampAd(20, 50) clampAd(10, 20);
+  backdrop-filter: blur(2px);
+  background: rgba($white, 0.8);
+  border: 1px solid $white;
+  border-radius: $radius-small;
+
+  display: flex;
+  flex-direction: column;
+  row-gap: clampAd(20, 30);
+
+  // .new__content
+  &__content {
+    font-weight: 800;
+    font-size: clampAd(18, 32);
+    text-transform: uppercase;
+
+    display: flex;
+    flex-direction: column;
+  }
+  // .new__title
+  &__title {
+  }
+  // .new__date
+  &__date {
+    margin-bottom: 10px;
+  }
+  // .new__link
+  &__link {
+    font-size: clampAd(12, 16);
+    text-decoration: underline;
+  }
+  // .new__ibg
+  &__ibg {
+    padding: 0px 0px 68.575% 0px;
+
+    @include w_575 {
+      padding: 0px 0px 50% 0px;
+    }
+  }
+  // .new__img
+  &__img {
+  }
+}

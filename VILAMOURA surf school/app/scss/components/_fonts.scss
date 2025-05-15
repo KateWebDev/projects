@@ -1,0 +1,29 @@
+@font-face {
+  font-family: "Rethink Sans";
+  src:
+    url("../../fonts/RethinkSans-SemiBold.woff2") format("woff2"),
+    url("../../fonts/RethinkSans-SemiBold.woff") format("woff");
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Rethink Sans";
+  src:
+    url("../../fonts/RethinkSans-Bold.woff2") format("woff2"),
+    url("../../fonts/RethinkSans-Bold.woff") format("woff");
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Rethink Sans";
+  src:
+    url("../../fonts/RethinkSans-ExtraBold.woff2") format("woff2"),
+    url("../../fonts/RethinkSans-ExtraBold.woff") format("woff");
+  font-style: normal;
+  font-weight: 800;
+  font-display: swap;
+}

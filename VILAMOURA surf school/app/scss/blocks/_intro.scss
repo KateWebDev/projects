@@ -1,0 +1,98 @@
+.intro {
+  background: image-set(
+      url("../images/main/intro/bg-main.avif") type("image/avif"),
+      url("../images/main/intro/bg-main@2x.avif") 2x type("image/avif"),
+      url("../images/main/intro/bg-main.webp") type("image/webp"),
+      url("../images/main/intro/bg-main@2x.webp") 2x type("image/webp"),
+      url("../images/main/intro/bg-main.jpg"),
+      url("../images/main/intro/bg-main@2x.jpg") 2x
+    )
+    center/cover no-repeat;
+
+  // .intro__container
+  &__container {
+    min-height: 100svh;
+    padding-top: clampAd(100, 130);
+    padding-bottom: clampAd(40, 80);
+
+    display: flex;
+    flex-direction: column;
+    row-gap: 40px;
+  }
+  // .intro__image
+  &__image {
+    position: relative;
+
+    span {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+
+      padding: clampAd(5, 10) clampAd(10, 20);
+      border-radius: $radius-big;
+      background: $color-dark;
+      color: $white;
+
+      font-weight: 700;
+      font-size: clampAd(12, 20);
+      text-align: center;
+
+      @include w_1200 {
+        position: static;
+      }
+    }
+  }
+  // .intro__information
+  &__information {
+    //margin-top: calc(clampAd(50, 100) * -1);
+    margin-bottom: auto;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    gap: clampAd(20, 30);
+
+    position: relative;
+    z-index: 1;
+
+    @include w_767 {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  }
+  // .intro__words
+  &__words {
+    max-width: 490px;
+  }
+  // .intro__new
+  &__new {
+    max-width: 392px;
+  }
+  // .intro__actions
+  &__actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: clampAd(20, 30);
+
+    position: relative;
+    z-index: 1;
+  }
+  // .intro__soc1als
+  &__soc1als {
+  }
+  // .intro__items
+  &__items {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: clampAd(10, 20);
+  }
+  // .intro__item
+  &__item {
+  }
+  // .intro__btn
+  &__btn {
+  }
+}

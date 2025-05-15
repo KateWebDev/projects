@@ -1,0 +1,13 @@
+.top {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  row-gap: clampAd(10, 20);
+
+  // .top__badge
+  &__badge {
+  }
+  // .top__title
+  &__title {
+  }
+}

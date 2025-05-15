@@ -1,0 +1,17 @@
+.review {
+  // .review__container
+  &__container {
+    display: flex;
+    flex-direction: column;
+    row-gap: clampAd(50, 100);
+  }
+  // .review__top
+  &__top {
+    max-width: 850px;
+    width: 100%;
+    margin-left: auto;
+  }
+  // .review__slider
+  &__slider {
+  }
+}

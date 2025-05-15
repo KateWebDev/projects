@@ -1,0 +1,65 @@
+.about {
+  // .about__container
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: clampAd(20, 30);
+
+    @include w_1440 {
+      .about__content {
+        max-width: 100%;
+      }
+    }
+  }
+  // .about__content
+  &__content {
+    max-width: 560px;
+
+    display: flex;
+    flex-direction: column;
+    row-gap: clampAd(30, 100);
+  }
+  // .about__top
+  &__top {
+  }
+  // .about__words
+  &__words {
+    margin-bottom: auto;
+  }
+  // .about__text
+  &__text {
+  }
+  // .about__image
+  &__image {
+    max-width: 850px;
+
+    position: relative;
+  }
+  // .about__img
+  &__img {
+    display: block;
+    max-width: 100%;
+    max-height: 100%;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+  // .about__dop
+  &__dop {
+    position: absolute;
+    bottom: clampAd(26, 46);
+    right: clampAd(48, 68);
+
+    color: $white;
+
+    @media (any-hover: hover) {
+      &:hover {
+        background: rgba($white, 0.3);
+        color: $white;
+        border-color: currentColor;
+      }
+    }
+  }
+}

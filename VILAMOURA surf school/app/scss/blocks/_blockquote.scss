@@ -1,0 +1,18 @@
+.blockquote {
+  // .blockquote__container
+  &__container {
+  }
+  // .blockquote__text
+  &__text {
+    display: block;
+    max-width: 65%;
+
+    font-weight: 800;
+    font-size: clampAd(20, 64);
+    text-transform: uppercase;
+
+    @include w_767 {
+      max-width: 100%;
+    }
+  }
+}

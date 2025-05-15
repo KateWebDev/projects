@@ -1,0 +1,133 @@
+.footer {
+  padding: clampAd(50, 100) 0;
+  background: $color-dark;
+  color: $white;
+
+  // .footer__container
+  &__container {
+    display: flex;
+    flex-direction: column;
+    row-gap: clampAd(30, 60);
+  }
+  // .footer__top
+  &__top {
+    display: flex;
+    flex-direction: column;
+    row-gap: clampAd(20, 30);
+
+    position: relative;
+
+    @include w_479 {
+      align-items: center;
+    }
+  }
+  // .footer__title
+  &__title {
+    font-weight: 800;
+    font-size: clampAd(22, 64);
+    text-transform: uppercase;
+  }
+  // .footer__logo
+  &__logo {
+    position: absolute;
+    top: 0;
+    left: 70%;
+    transform: translateX(-50%);
+
+    @include w_991 {
+      position: static;
+      transform: translateX(0);
+    }
+  }
+  // .footer__items
+  &__items {
+    display: flex;
+    flex-wrap: wrap;
+    gap: clampAd(30, 70);
+
+    @include w_479 {
+      justify-content: center;
+    }
+  }
+  // .footer__item
+  &__item {
+    flex: 0 0 clampAd(200, 222);
+    display: flex;
+    flex-direction: column;
+    row-gap: clampAd(10, 20);
+
+    @include w_479 {
+      align-items: center;
+    }
+  }
+  // .footer__type
+  &__type {
+    font-weight: 700;
+    font-size: clampAd(16, 20);
+    text-transform: capitalize;
+  }
+  // .footer__content
+  &__content {
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+
+    @include w_479 {
+      align-items: center;
+      text-align: center;
+    }
+  }
+  // .footer__text
+  &__text {
+  }
+  // .footer__link
+  &__link {
+    transition: all 0.3s linear;
+
+    @media (any-hover: hover) {
+      &:hover {
+        color: $color-accent-light;
+      }
+    }
+  }
+  // .footer__bottom
+  &__bottom {
+    display: flex;
+    align-items: flex-end;
+    gap: clampAd(20, 30);
+
+    @include w_575 {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+  // .footer__sos1als
+  &__sos1als {
+  }
+  // .footer__actions
+  &__actions {
+    margin: 0 auto;
+
+    display: flex;
+    align-items: center;
+    gap: clampAd(10, 40) clampAd(20, 40);
+
+    @include w_575 {
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+  }
+  // .footer__action
+  &__action {
+  }
+  // .footer__action-link
+  &__action-link {
+    transition: all 0.3s linear;
+
+    @media (any-hover: hover) {
+      &:hover {
+        color: $color-accent-light;
+      }
+    }
+  }
+}

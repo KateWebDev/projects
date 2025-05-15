@@ -1,0 +1,46 @@
+@import "components/mixin";
+
+.btn {
+  padding: 10px clampAd(10, 20);
+  border-radius: $radius-big;
+  background: $color-dark;
+  border: 1px solid transparent;
+  color: $white;
+
+  font-weight: 800;
+  font-size: clampAd(16, 32);
+  text-align: center;
+  text-transform: uppercase;
+  white-space: nowrap;
+
+  transition: all 0.3s linear;
+
+  @media (any-hover: hover) {
+    &:hover {
+      background: $white;
+      color: $color-dark;
+      border-color: currentColor;
+    }
+  }
+  // .btn--light
+  &--light {
+    color: $color-dark;
+    border-color: currentColor;
+    backdrop-filter: blur(2px);
+    background: rgba($white, 0.3);
+
+    @media (any-hover: hover) {
+      &:hover {
+        background: $color-accent;
+        color: $white;
+        border-color: transparent;
+      }
+    }
+  }
+}
+
+.button {
+}
+
+.link {
+}
