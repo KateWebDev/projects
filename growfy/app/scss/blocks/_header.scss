@@ -1,0 +1,90 @@
+.header {
+  padding: clampAd(20, 32) 0;
+
+  // .header__container
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px clampAd(20, 30);
+  }
+  // .header__logo
+  &__logo {
+    position: relative;
+    z-index: 4;
+  }
+  // .header__menu
+  &__menu {
+    margin-left: auto;
+  }
+  // .header__actions
+  &__actions {
+    position: relative;
+    z-index: 4;
+
+    display: flex;
+    align-items: center;
+    gap: clampAd(20, 32);
+
+    @include w_767 {
+      margin-left: auto;
+    }
+  }
+  // .header__action
+  &__action {
+    &:has(.header__btn) {
+      @include w_479 {
+        display: none;
+      }
+    }
+  }
+  // .header__cart
+  &__cart {
+    font-size: clampAd(12, 17);
+    letter-spacing: 0.05em;
+    color: $white;
+
+    display: flex;
+    align-items: center;
+    column-gap: 5px;
+    transition: all 0.3s linear;
+
+    @media (any-hover: hover) {
+      &:hover:not(:disabled) {
+        text-shadow: 0 0 1px currentColor;
+        span {
+          background: $color-accent;
+        }
+      }
+    }
+
+    span {
+      width: clampAd(20, 30);
+      height: clampAd(20, 30);
+      background: rgba(129, 129, 139, 0.3);
+      border-radius: $radius-circle;
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      font-weight: 500;
+      font-size: clampAd(10, 14);
+      line-height: 1;
+      letter-spacing: 0.07em;
+      color: $white;
+      transition: all 0.3s linear;
+    }
+  }
+  // .header__btn
+  &__btn {
+  }
+  // .header__burger
+  &__burger {
+    position: relative;
+    z-index: 4;
+    @include w_767 {
+      display: flex;
+    }
+  }
+}

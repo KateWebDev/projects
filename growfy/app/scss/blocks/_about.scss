@@ -1,0 +1,109 @@
+.main {
+  // .main__section
+  &__section {
+  }
+}
+.about {
+  // .about__container
+  &__container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    gap: clampAd(30, 64);
+
+    @include w_991 {
+      grid-template-columns: 1fr;
+    }
+  }
+  // .about__images
+  &__images {
+    display: flex;
+    align-items: flex-end;
+
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: -15px;
+      width: 122px;
+      height: 122px;
+      background: url(../../images/icons/dots.svg) center/cover no-repeat;
+      z-index: -1;
+    }
+
+    @include w_991 {
+      display: none;
+    }
+  }
+  // .about__image
+  &__image {
+    overflow: hidden;
+    // .about__image--border-top-right
+    &--border-top-right {
+      border-radius: $radius-big-img;
+      border-top-right-radius: 0;
+    }
+    // .about__image--small
+    &--small {
+      width: 181px;
+      height: 182px;
+    }
+    // .about__image--border-bottom-left
+    &--border-bottom-left {
+      border-radius: $radius-middle-img;
+      border-bottom-left-radius: 0;
+    }
+  }
+  // .about__img
+  &__img {
+    display: block;
+    max-width: 100%;
+    max-height: 100%;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+  // .about__content
+  &__content {
+  }
+  // .about__top
+  &__top {
+    row-gap: clampAd(20, 40);
+    margin-bottom: clampAd(20, 40);
+  }
+  // .about__text
+  &__text {
+    max-width: 490px;
+    width: 100%;
+
+    margin-bottom: clampAd(20, 35);
+  }
+  // .about__list
+  &__list {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    row-gap: clampAd(10, 16);
+  }
+  // .about__li
+  &__li {
+    display: flex;
+    align-items: center;
+    column-gap: clampAd(5, 10);
+
+    &::before {
+      content: "";
+      width: clampAd(24, 32);
+      height: clampAd(24, 32);
+      border-radius: $radius-circle;
+      background: $color-dop url(../../images/icons/check.svg) center/clampAd(14, 16) clampAd(14, 16) no-repeat;
+    }
+  }
+  // .about__info
+  &__info {
+    font-size: clampAd(12, 16);
+  }
+}

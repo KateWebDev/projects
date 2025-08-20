@@ -1,0 +1,15 @@
+Если нужно чтобы border выходил с 1 стороны за пределы контейнера
+
+то задаем блоку псевдоэлемент, ширину высчитываем как 100vw - ширина контейнера и берем только половину, то есть делим на 2
+
+  position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      bottom: 100%;
+      right: 100%;
+      width: calc((100vw - $maxWidthContainer) / 2);
+      height: 1px;
+      background: $color-dark-15;
+    }

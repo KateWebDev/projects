@@ -1,0 +1,32 @@
+.up {
+  // .up__top
+  &__top {
+    max-width: 630px;
+    width: 100%;
+
+    margin-bottom: 12px;
+
+    // .up__top--small-width
+    &--small-width {
+      max-width: 390px;
+    }
+  }
+  // .up__content
+  &__content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    flex-wrap: wrap;
+    gap: clampAd(20, 32);
+
+    margin-bottom: clampAd(30, 64);
+  }
+  // .up__text
+  &__text {
+    max-width: 740px;
+    width: 100%;
+  }
+  // .up__btn
+  &__btn {
+  }
+}

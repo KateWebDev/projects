@@ -1,0 +1,24 @@
+Telegram
+tg://resolve?domain=youraccountname
+
+https://t.me/youraccountname
+
+WhatsApp
+https://wa.me/79051234567
+
+Viber
+viber://add?number=79051234567
+
+Вконтакте
+https://vk.me/youraccountname
+
+Ссылка на email почту
+mailto:info@yourmail.com
+
+Ссылка на email с темой письма и сообщением
+mailto:info@yourmail.com?subject=Вопрос%20с%20сайта&body=Здравствуйте
+
+Пробел конвертируем в %20. Таблица с кодировкой символов.
+
+Ссылка на номер телефона
+tel:+79051324567

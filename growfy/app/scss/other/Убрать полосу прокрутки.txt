@@ -1,0 +1,9 @@
+на родителя
+
+   &::-webkit-scrollbar {
+      width: 0;
+    }
+
+или можно просто указать 
+
+ scrollbar-width: none;

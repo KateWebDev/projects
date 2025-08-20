@@ -1,0 +1,38 @@
+HTML
+
+<div class="video__clip">
+              <video class="video__source" src="../videos/video1.mp4" width="718" height="412"
+                poster="../images/main/video/2.jpg" conaria-label="watch video" title="watch video"></video>
+              <div class="video__control">
+                <button class="video__button" type="button" aria-label="play video" title="play video">
+                  <img src="../images/icons/play.svg" alt="icon play" width="70" height="70" loading="lazy">
+                </button>
+                <div class="video__duration">
+                  2.30 min
+                </div>
+              </div>
+            </div>
+
+ 
+
+JS
+
+  const videoBtns = document.querySelectorAll(".video__button");
+  const videosPanels = document.querySelectorAll(".video__control"); 
+  const videos = document.querySelectorAll("video");
+
+  videoBtns.forEach((videoBtn, index) => {
+    videoBtn.addEventListener("click", function (evt) {
+      evt.preventDefault();
+      videos[index].play();
+      videos[index].setAttribute("controls", "");
+      videosPanels[index].classList.add("video__control--active");
+    });
+  });
+
+  videos.forEach((video, index) => {
+    video.addEventListener("pause", function (evt) {
+      this.removeAttribute("controls");
+      videosPanels[index].classList.remove("video__control--active");
+    });
+  });

@@ -1,0 +1,20 @@
+  БЫЛО:
+
+  <form>
+    <label for="name">Enter your name</label>
+    <input id="name" type="text" placeholder="Ivan">
+  </form>
+
+  <button>Enter</button>
+
+1) задаем форме идентификатор (id)
+2) на кнопке добавляем атрибут form и указываем идентификатор формы
+
+
+СТАЛО:
+  <form id="myForm">
+    <label for="name">Enter your name</label>
+    <input id="name" type="text" placeholder="Ivan">
+  </form>
+
+  <button form="myForm">Enter</button>

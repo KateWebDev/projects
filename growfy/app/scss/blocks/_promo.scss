@@ -1,0 +1,47 @@
+.promo {
+  // .promo__container
+  &__container {
+    padding-block: clampAd(30, 52);
+    border-radius: $radius-small;
+    background: $color-dop;
+
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: clampAd(20, 32);
+  }
+  // .promo__content
+  &__content {
+    max-width: 370px;
+    width: 100%;
+
+    text-align: center;
+  }
+  // .promo__title
+  &__title {
+    font-weight: 400;
+    font-size: clampAd(20, 32);
+    line-height: 1.4;
+    color: $white;
+
+    margin-bottom: 16px;
+  }
+  // .promo__text
+  &__text {
+    font-size: clampAd(12, 16);
+  }
+  // .promo__actions
+  &__actions {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: clampAd(20, 32);
+  }
+  // .promo__action
+  &__action {
+  }
+  // .promo__btn
+  &__btn {
+  }
+}

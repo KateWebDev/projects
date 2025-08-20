@@ -1,0 +1,123 @@
+.footer {
+  // .footer__container
+  &__container {
+  }
+  // .footer__top
+  &__top {
+    padding-bottom: clampAd(50, 160);
+    border-bottom: 1px solid rgba(129, 129, 139, 0.2);
+  }
+  // .footer__items
+  &__items {
+    display: grid;
+    grid-template-columns: 1fr 0.5fr 0.5fr 1fr;
+    gap: clampAd(30, 64);
+
+    @include w_1200 {
+      grid-template-columns: repeat(3, 1fr);
+    }
+    @include w_767 {
+      grid-template-columns: repeat(2, 1fr);
+      align-items: center;
+    }
+    @include w_575 {
+      grid-template-columns: 1fr;
+    }
+  }
+  // .footer__item
+  &__item {
+    &:nth-child(1) {
+      @include w_767 {
+        order: 1;
+      }
+      @include w_575 {
+        order: 1;
+      }
+    }
+    &:nth-child(2) {
+      @include w_767 {
+        order: 3;
+      }
+      @include w_575 {
+        order: 2;
+      }
+    }
+    &:nth-child(3) {
+      @include w_767 {
+        order: 4;
+      }
+      @include w_575 {
+        order: 3;
+      }
+    }
+    &:nth-child(4) {
+      @include w_767 {
+        order: 2;
+      }
+      @include w_575 {
+        order: 4;
+      }
+    }
+  }
+  // .footer__logo
+  &__logo {
+    margin-bottom: clampAd(24, 32);
+  }
+  // .footer__text
+  &__text {
+    font-size: clampAd(12, 16);
+
+    margin-bottom: clampAd(24, 32);
+  }
+  // .footer__soc1als
+  &__soc1als {
+  }
+  // .footer__type
+  &__type {
+    font-weight: 500;
+    font-size: clampAd(14, 20);
+    line-height: 1.2;
+    letter-spacing: 0.05em;
+    color: $white;
+
+    margin-bottom: clampAd(20, 30);
+  }
+  // .footer__list
+  &__list {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    row-gap: clampAd(16, 24);
+  }
+  // .footer__point
+  &__point {
+  }
+  // .footer__link
+  &__link {
+    font-size: clampAd(12, 16);
+    transition: all 0.3s linear;
+
+    @media (any-hover: hover) {
+      &:hover:not(:disabled) {
+        color: $color-accent;
+      }
+    }
+  }
+  // .footer__form
+  &__form {
+  }
+  // .footer__bottom
+  &__bottom {
+    padding: clampAd(20, 45) 0;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: clampAd(8, 10);
+  }
+  // .footer__copy
+  &__copy {
+    font-size: clampAd(10, 14);
+  }
+}

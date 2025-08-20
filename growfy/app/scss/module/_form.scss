@@ -1,0 +1,45 @@
+@import "components/mixin";
+
+.form {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+
+  @include w_767 {
+    flex-wrap: wrap;
+  }
+
+  // .form__input
+  &__input {
+    padding: clampAd(10, 14) clampAd(20, 32);
+    border: 1px solid rgba(129, 129, 139, 0.3);
+    border-radius: $radius;
+    background: transparent;
+
+    font-weight: 400;
+    font-size: clampAd(12, 16);
+    color: $white;
+
+    &::placeholder {
+      font-family: "Poppins", sans-serif;
+      font-weight: 400;
+      font-size: clampAd(12, 16);
+      color: #999999;
+    }
+
+    &:focus,
+    &:active {
+      outline-color: $color-accent;
+    }
+
+    @include w_767 {
+      width: 100%;
+    }
+  }
+  // .form__btn
+  &__btn {
+    @include w_767 {
+      width: 100%;
+    }
+  }
+}

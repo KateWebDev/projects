@@ -1,0 +1,9 @@
+ &__item {
+    --sizeStar: #{rem(24)};
+
+    width: var(--sizeStar);
+    height: var(--sizeStar);
+
+    @include w_1440_rem {
+      --sizeStar: #{rem(20)};
+    }

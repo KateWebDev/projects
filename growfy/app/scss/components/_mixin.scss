@@ -1,0 +1,48 @@
+@mixin w_1200 {
+  @media (max-width: 1199.98px) {
+    @content;
+  }
+}
+
+@mixin w_991 {
+  @media (max-width: 991.98px) {
+    @content;
+  }
+}
+
+@mixin w_767 {
+  @media (max-width: 767.98px) {
+    @content;
+  }
+}
+
+@mixin w_575 {
+  @media (max-width: 575.98px) {
+    @content;
+  }
+}
+
+@mixin w_479 {
+  @media (max-width: 479.98px) {
+    @content;
+  }
+}
+
+@mixin w_349 {
+  @media (max-width: 349.98px) {
+    @content;
+  }
+}
+
+@function clampAd($min, $max) {
+  $minPx: $min + px;
+  $maxPx: $max + px;
+
+  $result: clamp(
+    $minPx,
+    calc($minPx + ($max - $min) * ((100vw - $widthReportMinPx) / ($widthReportMax - $widthReportMin))),
+    $maxPx
+  );
+
+  @return $result;
+}

@@ -1,0 +1,27 @@
+@import "components/mixin";
+.logo {
+  width: 147px;
+  height: 40px;
+
+  &--big {
+    width: clampAd(120, 147);
+    height: clampAd(30, 40);
+  }
+
+  @include w_767 {
+    &:not(.logo--big) {
+      width: clampAd(23, 31);
+      height: clampAd(25, 33);
+    }
+  }
+
+  img {
+    display: block;
+    max-width: 100%;
+    max-height: 100%;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+}

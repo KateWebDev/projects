@@ -1,0 +1,38 @@
+.testimonials {
+  // .testimonials__container
+  &__container {
+  }
+  // .testimonials__up
+  &__up {
+  }
+  // .testimonials__items
+  &__items {
+  }
+  // .testimonials__item
+  &__item {
+    padding: clampAd(30, 64) clampAd(20, 40);
+    border-radius: $radius-small;
+    background: $color-dop;
+
+    display: flex;
+    flex-direction: column;
+    row-gap: clampAd(20, 32);
+  }
+  // .testimonials__author
+  &__author {
+  }
+  // .testimonials__quote
+  &__quote {
+    font-size: clampAd(20, 32);
+    font-weight: 400;
+    line-height: 1.4;
+    color: $white;
+  }
+  // .testimonials__text
+  &__text {
+    font-size: clampAd(12, 16);
+  }
+  // .testimonials__raiting
+  &__raiting {
+  }
+}

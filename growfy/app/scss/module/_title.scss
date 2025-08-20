@@ -1,0 +1,26 @@
+@import "components/mixin";
+
+.top {
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: flex-start;
+  row-gap: clampAd(15, 20);
+}
+
+.title {
+  font-weight: 500;
+  font-size: clampAd(30, 51);
+  line-height: 1.2;
+  color: $white;
+}
+
+.badge {
+  padding: clampAd(6, 11) clampAd(10, 19);
+
+  border: 1px solid rgba(129, 129, 139, 0.2);
+  border-radius: 12px;
+
+  font-size: clampAd(8, 10);
+  letter-spacing: 0.19em;
+  text-transform: uppercase;
+}

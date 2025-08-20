@@ -1,0 +1,119 @@
+.intro {
+  padding-top: 44px;
+  // .intro__container
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: clampAd(20, 32);
+
+    @include w_767 {
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+  }
+  // .intro__content
+  &__content {
+    align-self: center;
+    max-width: 510px;
+
+    display: flex;
+    flex-direction: column;
+
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: clampAd(80, 122);
+      height: clampAd(80, 122);
+      background: url(../../images/icons/dots.svg) center/cover no-repeat;
+      transform: translate(-25%, -20%);
+    }
+
+    @include w_767 {
+      max-width: 100%;
+    }
+  }
+  // .intro__title
+  &__title {
+    margin-bottom: clampAd(20, 28);
+  }
+  // .intro__text
+  &__text {
+    margin-bottom: clampAd(22, 33);
+  }
+  // .intro__actions
+  &__actions {
+    display: flex;
+    align-items: center;
+    gap: clampAd(20, 32);
+  }
+  // .intro__action
+  &__action {
+  }
+  // .intro__btn
+  &__btn {
+  }
+  // .intro__images
+  &__images {
+    max-width: clampAd(310, 540);
+    width: 100%;
+
+    display: grid;
+    grid-template-columns: repeat(2, clampAd(135, 242));
+
+    gap: clampAd(20, 32) clampAd(20, 60);
+  }
+  // .intro__images-row
+  &__images-row {
+    display: grid;
+    grid-template-columns: 1fr;
+    row-gap: clampAd(20, 32);
+  }
+  // .intro__image
+  &__image {
+    overflow: hidden;
+
+    // .intro__image--ellipse
+    &--ellipse {
+      img {
+        border-radius: $radius-big-img;
+      }
+    }
+    // .intro__image--right-top
+    &--right-top {
+      img {
+        border-radius: $radius-medium-img;
+        border-top-right-radius: 0;
+      }
+    }
+    // .intro__image--right-bottom
+    &--right-bottom {
+      img {
+        border-radius: $radius-medium-img;
+        border-bottom-right-radius: 0;
+      }
+    }
+    // .intro__image--big
+    &--big {
+      height: clampAd(236, 423);
+    }
+    // .intro__image--small
+    &--small {
+      height: clampAd(135, 242);
+    }
+  }
+  // .intro__img
+  &__img {
+    display: block;
+    max-width: 100%;
+    max-height: 100%;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+}
