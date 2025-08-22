@@ -1,0 +1,63 @@
+.services {
+  // .services__container
+  &__container {
+    display: flex;
+    flex-direction: column;
+    row-gap: clampAd(30, 50);
+  }
+  // .services__top
+  &__top {
+  }
+  // .services__items
+  &__items {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(clampAd(290, 350), 1fr));
+    grid-auto-flow: dense;
+    gap: clampAd(20, 30);
+  }
+  // .services__item
+  &__item {
+    display: flex;
+    flex-direction: column;
+    gap: clampAd(10, 20);
+  }
+  // .services__item-top
+  &__item-top {
+    display: flex;
+    align-items: center;
+    gap: clampAd(10, 20);
+  }
+  // .services__image
+  &__image {
+    width: clampAd(40, 62);
+    height: clampAd(40, 62);
+    background: image-set(
+        url("../images/icons/decor-services.avif") type("image/avif"),
+        url("../images/icons/decor-services@2x.avif") 2x type("image/avif"),
+        url("../images/icons/decor-services.webp") type("image/webp"),
+        url("../images/icons/decor-services@2x.webp") 2x type("image/webp"),
+        url("../images/icons/decor-services.png"),
+        url("../images/icons/decor-services@2x.png") 2x
+      )
+      center/cover no-repeat;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  // .services__icon
+  &__icon {
+    max-width: clampAd(20, 28);
+    max-height: clampAd(20, 28);
+    width: auto;
+    height: auto;
+  }
+  // .services__name
+  &__name {
+    font-weight: 500;
+    font-size: clampAd(16, 24);
+  }
+  // .services__text
+  &__text {
+  }
+}

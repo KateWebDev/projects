@@ -1,0 +1,32 @@
+.header {
+  padding: clampAd(20, 50) 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: auto;
+  z-index: 2;
+
+  // .header__container
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    column-gap: clampAd(30, 100);
+  }
+  // .header__logo
+  &__logo {
+    position: relative;
+    z-index: 4;
+  }
+  // .header__menu
+  &__menu {
+  }
+  // .header__burger
+  &__burger {
+    margin-left: auto;
+
+    position: relative;
+    z-index: 4;
+  }
+}

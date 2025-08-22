@@ -1,0 +1,117 @@
+.clients {
+  // .clients__container
+  &__container {
+    display: flex;
+    flex-direction: column;
+    row-gap: clampAd(30, 40);
+  }
+  // .clients__top
+  &__top {
+  }
+  // .clients__items
+  &__items {
+    margin-inline: clampAd(0, 30);
+
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(clampAd(80, 170), 1fr));
+    grid-auto-flow: dense;
+    gap: clampAd(25, 50);
+  }
+  // .clients__item
+  &__item {
+    padding: clampAd(20, 33);
+
+    border: 1px solid $black;
+    border-radius: $radius-small;
+
+    position: relative;
+    &::before {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: clampAd(70, 124);
+      height: clampAd(70, 124);
+      border-radius: $radius-small;
+      filter: blur(50px);
+    }
+
+    // .clients__item--slack
+    &--slack {
+      border-color: #ffe7f0;
+      background: #fff6fa;
+
+      &::before {
+        background: #ffd7e9;
+      }
+    }
+    // .clients__item--medium
+    &--medium {
+      border-color: #caffe1;
+      background: #edfff5;
+
+      &::before {
+        background: #bcffdb;
+      }
+    }
+    // .clients__item--microsoft
+    &--microsoft {
+      border-color: #ddf5ff;
+      background: #f5fcff;
+
+      &::before {
+        background: #cef2ff;
+      }
+    }
+    // .clients__item--zeplin
+    &--zeplin {
+      border-color: #ffeec9;
+      background: #fffbf2;
+
+      &::before {
+        background: #ffe9bc;
+      }
+    }
+    // .clients__item--shopify
+    &--shopify {
+      border-color: #dbffc3;
+      background: #f4ffed;
+
+      &::before {
+        background: #d2ffb5;
+      }
+    }
+  }
+  // .clients__content
+  &__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    row-gap: clampAd(20, 30);
+
+    position: relative;
+    z-index: 1;
+  }
+  // .clients__image
+  &__image {
+    max-width: clampAd(40, 70);
+    max-height: clampAd(40, 50);
+  }
+  // .clients__img
+  &__img {
+    display: block;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+    object-position: center;
+  }
+  // .clients__name
+  &__name {
+    font-weight: 500;
+    font-size: clampAd(14, 18);
+    line-height: calc(24 / 18);
+    color: $black;
+  }
+}

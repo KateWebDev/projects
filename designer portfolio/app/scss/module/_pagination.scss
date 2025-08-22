@@ -1,0 +1,28 @@
+.pagination {
+  display: none;
+
+  justify-content: center;
+  align-items: center;
+  column-gap: clampAd(10, 20);
+
+  position: relative;
+  z-index: 1;
+
+  @include w_767 {
+    display: flex;
+  }
+
+  .swiper-pagination-bullet {
+    width: clampAd(7, 10);
+    height: clampAd(7, 10);
+
+    border-radius: $radius-circle;
+    background: transparent;
+    border: 1px solid $color-accent;
+
+    &.swiper-pagination-bullet-active {
+      background: $color-accent;
+      border-color: transparent;
+    }
+  }
+}

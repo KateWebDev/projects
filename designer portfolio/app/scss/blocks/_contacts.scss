@@ -1,0 +1,31 @@
+.contacts {
+  padding-block: clampAd(30, 50);
+  // .contacts__container
+  &__container {
+    display: flex;
+    flex-direction: column;
+    row-gap: clampAd(30, 50);
+  }
+  // .contacts__top
+  &__top {
+  }
+  // .contacts__form
+  &__form {
+  }
+  // .contacts__soc1als-content
+  &__soc1als-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: clampAd(10, 30);
+  }
+  // .contacts__soc1als-name
+  &__soc1als-name {
+    font-weight: 500;
+    font-size: clampAd(16, 36);
+    line-height: calc(48 / 36);
+  }
+  // .contacts__soc1als
+  &__soc1als {
+  }
+}

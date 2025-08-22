@@ -1,0 +1,11 @@
+.main {
+  flex: 1 1 auto;
+  // .main__section
+  &__section {
+    margin-bottom: clampAd(50, 100);
+    // .main__section--padding
+    &--padding {
+      padding: clampAd(20, 50) 0 clampAd(30, 67);
+    }
+  }
+}

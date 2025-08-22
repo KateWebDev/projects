@@ -1,0 +1,28 @@
+@use "sass:math";
+
+@import "components/variables";
+@import "components/plugins";
+
+@import "components/fonts";
+@import "components/mixin";
+@import "components/resetStyle";
+
+@import "module/container";
+@import "module/burger";
+@import "module/ibg";
+@import "module/body";
+@import "module/main";
+@import "module/hidden";
+@import "module/text";
+
+@import "module/logo";
+@import "module/menu";
+@import "module/btn";
+@import "module/title";
+@import "module/form";
+@import "module/soc1als";
+@import "module/pagination";
+
+@import "blocks/header";
+//------------------------------
+@import "pages/index";

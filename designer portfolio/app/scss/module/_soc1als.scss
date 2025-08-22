@@ -1,0 +1,41 @@
+@import "components/mixin";
+
+.soc1als {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: clampAd(20, 40);
+
+  // .soc1als__item
+  &__item {
+    width: clampAd(30, 50);
+    height: clampAd(30, 50);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background: image-set(
+        url("../images/icons/decor-services.avif") type("image/avif"),
+        url("../images/icons/decor-services@2x.avif") 2x type("image/avif"),
+        url("../images/icons/decor-services.webp") type("image/webp"),
+        url("../images/icons/decor-services@2x.webp") 2x type("image/webp"),
+        url("../images/icons/decor-services.png"),
+        url("../images/icons/decor-services@2x.png") 2x
+      )
+      center/cover no-repeat;
+  }
+  // .soc1als__link
+  &__link {
+    max-width: clampAd(16, 24);
+    max-height: clampAd(16, 24);
+  }
+  // .soc1als__icon
+  &__icon {
+    display: block;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+    object-position: center;
+  }
+}

@@ -1,0 +1,46 @@
+@import "components/mixin";
+
+.main-title {
+  font-weight: 700;
+  font-size: clampAd(45, 60);
+  line-height: 1.2;
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+  span {
+    font-weight: 500;
+    font-size: clampAd(20, 24);
+    line-height: 1.2;
+    color: $color-dop;
+  }
+}
+
+.title {
+  font-weight: 700;
+  font-size: clampAd(24, 36);
+  line-height: calc(52 / 36);
+  // .title--weight
+  &--weight {
+    font-weight: 500;
+  }
+}
+
+.badge {
+  font-size: clampAd(12, 18);
+  line-height: calc(24 / 18);
+  color: $color-accent;
+  text-transform: capitalize;
+
+  display: flex;
+  flex-direction: column;
+  row-gap: clampAd(5, 10);
+
+  &::after {
+    content: "";
+    width: clampAd(30, 50);
+    height: 2px;
+    background: currentColor;
+  }
+}

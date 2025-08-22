@@ -1,0 +1,61 @@
+@import "components/mixin";
+
+.btn {
+  border-radius: $radius;
+  background: $color-accent;
+  padding: clampAd(10, 14) clampAd(24, 49);
+  border: 1px solid transparent;
+
+  font-weight: 500;
+  font-size: clampAd(16, 24);
+  line-height: calc(32 / 24);
+  text-align: center;
+  color: $white;
+
+  transition: all 0.3s linear;
+
+  // .btn--small-size
+  &--small-size {
+    font-size: clampAd(14, 18);
+    line-height: calc(24 / 18);
+  }
+
+  @media (any-hover: hover) {
+    &:hover:not(:disabled) {
+      background: $white;
+      color: $color-accent;
+      border-color: currentColor;
+    }
+  }
+}
+
+.link {
+  font-weight: 500;
+  font-size: clampAd(16, 24);
+  line-height: calc(32 / 24);
+  text-decoration: underline;
+  text-underline-offset: 6px;
+  text-transform: capitalize;
+
+  display: flex;
+  align-items: center;
+  column-gap: 10px;
+  transition: all 0.3s linear;
+
+  @media (any-hover: hover) {
+    &:hover:not(:disabled) {
+      color: $color-accent;
+      &::after {
+        transform: rotate(180deg);
+      }
+    }
+  }
+
+  &::after {
+    content: "";
+    width: clampAd(16, 24);
+    height: clampAd(16, 24);
+    background: url(../../images/icons/arrow-right.svg) center/cover no-repeat;
+    transition: all 0.3s linear;
+  }
+}
