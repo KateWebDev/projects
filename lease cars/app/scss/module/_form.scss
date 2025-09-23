@@ -1,0 +1,65 @@
+@import "components/mixin";
+
+.form {
+  width: 100%;
+
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: clampAd(30, 50) clampAd(20, 40);
+
+  @include w_479 {
+    grid-template-columns: 1fr;
+  }
+
+  // .form__input
+  &__input {
+    padding: clampAd(12, 18) clampAd(10, 20);
+    border: 1px solid $color-accent;
+
+    &::placeholder {
+      font-family: "Inter", sans-serif;
+      font-weight: 400;
+      font-size: clampAd(12, 16);
+      line-height: 1.3;
+      color: $color-dark;
+      opacity: 0.5;
+    }
+  }
+  // .form__textarea
+  &__textarea {
+    min-height: clampAd(150, 290);
+    grid-column: span 2;
+
+    padding: clampAd(12, 18) clampAd(10, 20);
+    border: 1px solid $color-accent;
+
+    &::placeholder {
+      font-family: "Inter", sans-serif;
+      font-weight: 400;
+      font-size: clampAd(12, 16);
+      line-height: 1.3;
+      color: $color-dark;
+      opacity: 0.5;
+    }
+
+    @include w_479 {
+      grid-column: span 1;
+    }
+  }
+  // .form__btn
+  &__btn {
+    grid-column: span 2;
+    margin: 0 auto;
+
+    @include w_479 {
+      grid-column: span 1;
+    }
+  }
+
+  textarea {
+    resize: none;
+  }
+  textarea.auto {
+    overflow-y: hidden;
+  }
+}

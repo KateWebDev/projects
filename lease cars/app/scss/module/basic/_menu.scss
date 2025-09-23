@@ -1,0 +1,66 @@
+@import "components/mixin";
+
+.menu {
+  @include w_767 {
+    position: fixed;
+    z-index: 3;
+    top: 0;
+    left: 0;
+    width: 100%;
+    min-height: 100%;
+    height: 100%;
+    transition: all 0.4s linear;
+    transform: translateY(-100%);
+    overflow: auto;
+    overflow-x: hidden;
+    background: $color-dark;
+  }
+
+  &.menu--active {
+    @include w_767 {
+      transform: translateY(0);
+    }
+  }
+
+  // .menu__items
+  &__items {
+    display: flex;
+    align-items: center;
+    gap: 20px clampAd(20, 35);
+
+    @include w_767 {
+      padding: 100px 0;
+      min-height: 100%;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+  // .menu__item
+  &__item {
+  }
+  // .menu__link
+  &__link {
+    font-weight: 700;
+    color: $white;
+    text-transform: uppercase;
+    white-space: nowrap;
+    transition: all 0.3s linear;
+
+    @media (any-hover: hover) {
+      &:hover:not(.menu__link--active) {
+        color: $color-accent;
+      }
+    }
+
+    &--active {
+      color: $color-accent;
+      cursor: default;
+    }
+
+    @include w_767 {
+      color: $white;
+      font-size: 24px;
+    }
+  }
+}

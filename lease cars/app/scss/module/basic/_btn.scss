@@ -1,0 +1,27 @@
+@import "components/mixin";
+
+.btn {
+  background: $color-dark;
+  padding: clampAd(10, 13) clampAd(20, 61);
+  border: 1px solid transparent;
+
+  color: $white;
+  text-transform: uppercase;
+  white-space: nowrap;
+  transition: all 0.3s linear;
+
+  @media (any-hover: hover) {
+    &:hover:not(:disabled) {
+      background: $white;
+      color: $color-dark;
+      border-color: currentColor;
+    }
+  }
+
+  // .btn--big
+  &--big {
+    padding: clampAd(13, 23) clampAd(30, 112);
+    font-weight: 700;
+    font-size: clampAd(16, 36);
+  }
+}

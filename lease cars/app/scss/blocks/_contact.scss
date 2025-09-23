@@ -1,0 +1,23 @@
+.contact {
+  padding-top: clampAd(50, 10);
+
+  // .contact__container
+  &__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  // .contact__title
+  &__title {
+    margin-bottom: 20px;
+  }
+  // .contact__subtitle
+  &__subtitle {
+    margin-bottom: clampAd(30, 50);
+  }
+  // .contact__form
+  &__form {
+    max-width: 580px;
+  }
+}

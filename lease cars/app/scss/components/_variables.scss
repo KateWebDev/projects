@@ -1,0 +1,37 @@
+@import "components/mixin";
+
+//Страница
+$widthReportMax: 1920;
+$widthReportMin: 320;
+$widthReportMinPx: $widthReportMin + px;
+
+// Контейнер
+$widthContainer-num: 1200;
+$widthContainer: $widthContainer-num + px;
+$containerPadding-num: 15;
+$containerPadding: $containerPadding-num + px;
+$maxWidthContainer: calc($widthContainer + (2 * $containerPadding));
+
+// Доп цвета
+$white: #ffffff;
+$black: #000000;
+
+$color-accent: #0066ff;
+$color-dark: #151515;
+$color-light: #e8e8e8;
+
+// Радиусы
+$radius-circle: 50%;
+
+// Шрифты
+
+//Фон
+$mainBackGround: #ffffff;
+
+//Шрифт
+$fontFamily: "Inter", sans-serif;
+$mainColor: $color-dark;
+$mainSize: 16;
+$size: $mainSize + px;
+$fontWeight: 400;
+$lineheight: calc(21 / $mainSize);

@@ -1,0 +1,15 @@
+.car {
+  padding-top: clampAd(50, 100);
+  // .car__container
+  &__container {
+    display: flex;
+    flex-direction: column;
+    row-gap: clampAd(30, 50);
+  }
+  // .car__title
+  &__title {
+  }
+  // .car__tabs
+  &__tabs {
+  }
+}

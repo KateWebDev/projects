@@ -1,0 +1,20 @@
+@import "components/mixin";
+
+.main-title {
+  font-weight: 700;
+  font-size: clampAd(28, 96);
+  color: $white;
+}
+
+.title {
+  font-weight: 700;
+  font-size: clampAd(22, 48);
+  text-align: center;
+  color: $color-dark;
+}
+
+.subtitle {
+  font-weight: 700;
+  font-size: clampAd(16, 24);
+  color: $black;
+}

@@ -1,0 +1,128 @@
+.footer {
+  background: $color-dark;
+  color: $white;
+
+  // .footer__container
+  &__container {
+  }
+  // .footer__top
+  &__top {
+    padding: clampAd(30, 50) 0;
+
+    display: flex;
+    flex-direction: column;
+    row-gap: clampAd(30, 50);
+  }
+  // .footer__items
+  &__items {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    justify-items: center;
+    gap: 20px clampAd(20, 40);
+
+    @include w_991 {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include w_479 {
+      grid-template-columns: 1fr;
+      text-align: center;
+    }
+  }
+  // .footer__item
+  &__item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: clampAd(20, 40);
+  }
+  // .footer__name
+  &__name {
+    font-weight: 700;
+    font-size: clampAd(16, 24);
+    white-space: nowrap;
+  }
+  // .footer__list
+  &__list {
+    display: flex;
+    flex-direction: column;
+
+    row-gap: 20px;
+  }
+  // .footer__point
+  &__point {
+  }
+  // .footer__link
+  &__link {
+    transition: all 0.3s linear;
+
+    @media (any-hover: hover) {
+      &:hover:not(:disabled) {
+        color: $color-accent;
+      }
+    }
+  }
+  // .footer__actions
+  &__actions {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px clampAd(20, 40);
+  }
+  // .footer__action
+  &__action {
+  }
+  // .footer__action-link
+  &__action-link {
+    transition: all 0.3s linear;
+
+    @media (any-hover: hover) {
+      &:hover:not(:disabled) {
+        opacity: 0.8;
+      }
+    }
+  }
+  // .footer__icon
+  &__icon {
+  }
+  // .footer__text
+  &__text {
+    max-width: 810px;
+    width: 100%;
+    margin: 0 auto;
+
+    font-size: 12px;
+    text-align: center;
+
+    a {
+      text-decoration: underline;
+    }
+  }
+  // .footer__bottom
+  &__bottom {
+    padding: clampAd(20, 30) 0;
+  }
+  // .footer__bottom-actions
+  &__bottom-actions {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px clampAd(20, 40);
+  }
+  // .footer__bottom-action
+  &__bottom-action {
+  }
+  // .footer__bottom-link
+  &__bottom-link {
+    white-space: nowrap;
+    transition: all 0.3s linear;
+
+    @media (any-hover: hover) {
+      &:hover:not(:disabled) {
+        color: $color-accent;
+      }
+    }
+  }
+}

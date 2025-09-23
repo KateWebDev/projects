@@ -1,0 +1,80 @@
+@@include('../components/header.html', {'title':'DM Leasing | Contact Us', "page": "contact"})
+
+<main class="main">
+  <section class="main__section contact" aria-labelledby="contact-title">
+    <div class="contact__container">
+      <h1 class="contact__title title" id="contact-title">
+        Contact Us
+      </h1>
+      <h3 class="contact__subtitle subtitle">
+        Feel free to contact us with questions, potencial partnerships or media inquiries
+      </h3>
+      <form class="contact__form form" action="#" method="post">
+        <label class="hidden" for="name">Enter your name</label>
+        <input class="form__input" id="name" name="name" type="text" placeholder="Name" required>
+
+        <label class="hidden" for="email">Enter your email</label>
+        <input class="form__input" id="email" name="email" type="email" placeholder="E-mail" required>
+
+        <label class="hidden" for="message">Enter your message</label>
+        <textarea class="form__textarea" name="message" id="message" placeholder="Your text" required></textarea>
+
+        <button class="form__btn btn" type="submit">
+          Submit
+        </button>
+      </form>
+    </div>
+  </section>
+
+  <section class="main__section blog">
+    <div class="blog__container">
+      <ul class="blog__items">
+        <li class="blog__item">
+          <a class="blog__card" href="#">
+            <div class="blog__ibg">
+              <picture>
+                <source type='image/avif' srcset='../images/main/blog/1.avif, ../images/main/blog/1@2x.avif 2x'>
+                <source type='image/webp' srcset='../images/main/blog/1.webp, ../images/main/blog/1@2x.webp 2x'>
+                <img class="blog__img" src="../images/main/blog/1.jpg" srcset="../images/main/blog/1@2x.jpg 2x" alt=""
+                  loading="lazy" width="580" height="260">
+              </picture>
+            </div>
+            <div class="blog__content">
+              <h3 class="blog__name subtitle">
+                An easier way to buy your next Toyota
+              </h3>
+              <button class="blog__button" type="button">
+                more
+              </button>
+            </div>
+          </a>
+        </li>
+        <li class="blog__item">
+          <a class="blog__card" href="#">
+            <div class="blog__ibg">
+              <picture>
+                <source type='image/avif' srcset='../images/main/blog/2.avif, ../images/main/blog/2@2x.avif 2x'>
+                <source type='image/webp' srcset='../images/main/blog/2.webp, ../images/main/blog/2@2x.webp 2x'>
+                <img class="blog__img" src="../images/main/blog/2.jpg" srcset="../images/main/blog/2@2x.jpg 2x" alt=""
+                  loading="lazy" width="580" height="260">
+              </picture>
+            </div>
+            <div class="blog__content">
+              <h3 class="blog__name subtitle">
+                A Guide to Road-Tripping With Pets
+              </h3>
+              <button class="blog__button" type="button">
+                more
+              </button>
+            </div>
+          </a>
+        </li>
+      </ul>
+      <a class="blog__btn btn" href="#">
+        SHOW MORE
+      </a>
+    </div>
+  </section>
+</main>
+
+@@include('../components/footer.html')

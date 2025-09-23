@@ -1,0 +1,6 @@
+.main {
+  flex: 1 1 auto;
+  &__section {
+    margin-bottom: clampAd(50, 150);
+  }
+}
