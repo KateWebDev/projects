@@ -1,0 +1,27 @@
+.reviews {
+  padding: clampAd(50, 120) $containerPadding;
+
+  display: flex;
+  flex-direction: column;
+  row-gap: clampAd(30, 60);
+
+  @include tablet-above {
+    padding-inline: 0;
+  }
+
+  // .reviews__top
+  &__top {
+    padding-inline: $containerPadding;
+  }
+  // .reviews__slider
+  &__slider {
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 1s ease;
+
+    &.swiper-initialized {
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+}

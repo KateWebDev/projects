@@ -1,0 +1,19 @@
+.main-title {
+  font-size: clampAd(28, 72);
+  line-height: 1.1;
+  letter-spacing: 0.01em;
+  color: $color-light;
+}
+
+.title {
+  font-size: clampAd(24, 72);
+  line-height: 1.1;
+  letter-spacing: 0.01em;
+}
+
+.subtitle {
+  font-size: clampAd(12, 15);
+  line-height: 1.28;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+}

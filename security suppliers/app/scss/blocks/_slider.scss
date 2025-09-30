@@ -1,0 +1,128 @@
+.slider {
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+  row-gap: clampAd(20, 32);
+
+  color: $color-dark;
+
+  cursor: pointer;
+
+  // .slider__items
+  &__items {
+  }
+  // .slider__item
+  &__item {
+    margin: auto 0;
+
+    padding: clampAd(16, 44);
+    border-radius: $radius-big;
+    background: $white;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    row-gap: clampAd(16, 30);
+
+    transition: all 0.3s linear;
+
+    &.swiper-slide-active {
+      background: $color-bg-dop;
+    }
+  }
+  // .slider__logo
+  &__logo {
+    width: clampAd(96, 128);
+  }
+  // .slider__logo-img
+  &__logo-img {
+    display: block;
+    max-width: 100%;
+    max-height: 100%;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+  // .slider__text
+  &__text {
+    max-width: 80%;
+
+    font-size: clampAd(16, 32);
+    line-height: 1.2;
+
+    @include tablet {
+      max-width: 100%;
+    }
+  }
+  // .slider__author
+  &__author {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px clampAd(10, 24);
+  }
+  // .slider__author-image
+  &__author-image {
+    flex: 0 0 clampAd(40, 64);
+  }
+  // .slider__author-img
+  &__author-img {
+    display: block;
+    max-width: 100%;
+    max-height: 100%;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+  // .slider__author-info
+  &__author-info {
+    font-size: clampAd(12, 18);
+  }
+  // .slider__actions
+  &__actions {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 16px;
+  }
+  // .slider__button
+  &__button {
+    --size: #{clampAd(24, 48)};
+
+    width: var(--size);
+    height: var(--size);
+
+    border: 1px solid $white;
+    transition: all 0.3s linear;
+
+    position: relative;
+    z-index: 2;
+
+    svg {
+      width: 100%;
+      height: 100%;
+      stroke: $white;
+      transition: all 0.3s linear;
+    }
+
+    &.swiper-button-disabled {
+      opacity: 0.5;
+      cursor: default;
+      pointer-events: none;
+    }
+
+    @media (any-hover: hover) {
+      &:hover:not(:disabled) {
+        border-color: $color-accent;
+
+        svg {
+          stroke: $color-accent;
+        }
+      }
+    }
+  }
+}

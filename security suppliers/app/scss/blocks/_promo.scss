@@ -1,0 +1,34 @@
+.promo {
+  padding: clampAd(50, 120) 0 clampAd(60, 140);
+
+  //  overflow: hidden;
+
+  // .promo__container
+  &__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+
+    row-gap: clampAd(20, 40);
+
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 0;
+      transform: translateX(-20%) translateY(-50%);
+      width: clampAd(130, 250);
+      height: clampAd(200, 466);
+      background: url(../../images/icons/decor.svg) center/cover no-repeat;
+    }
+  }
+  // .promo__title
+  &__title {
+  }
+  // .promo__btn
+  &__btn {
+  }
+}

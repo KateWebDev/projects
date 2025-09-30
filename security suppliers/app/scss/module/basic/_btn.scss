@@ -1,0 +1,31 @@
+.btn {
+  padding: clampAd(12, 15) clampAd(24, 31);
+  background: $color-accent;
+  border-radius: $radius-small;
+
+  font-size: clampAd(12, 16);
+  color: $white;
+  text-transform: capitalize;
+  white-space: nowrap;
+
+  transition: all 0.3s linear;
+
+  // .btn--transparent
+  &--transparent {
+    background: transparent;
+  }
+
+  &--small-padding {
+    padding: clampAd(10, 16) clampAd(16, 24);
+  }
+
+  &--transform {
+    text-transform: none;
+  }
+
+  @media (any-hover: hover) {
+    &:hover:not(:disabled) {
+      opacity: 0.8;
+    }
+  }
+}

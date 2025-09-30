@@ -1,0 +1,42 @@
+.progress {
+  --progress: 0%;
+  --sizeCircle: #{clampAd(140, 280)};
+
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+
+  width: var(--sizeCircle);
+  height: var(--sizeCircle);
+  border-radius: $radius-circle;
+  background: conic-gradient($color-dop var(--progress), rgba($color-dop, 0.3) 0);
+
+  &::before {
+    content: "";
+    width: 85%;
+    height: 85%;
+    border-radius: $radius-circle;
+    background: $white;
+  }
+
+  // .progress__data
+  &__data {
+    position: absolute;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  // .progress__number
+  &__number {
+    font-size: clampAd(20, 50);
+  }
+  // .progress__text
+  &__text {
+    max-width: 60%;
+  }
+}

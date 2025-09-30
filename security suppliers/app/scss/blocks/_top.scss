@@ -1,0 +1,27 @@
+.top {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  row-gap: clampAd(10, 16);
+  // .top__header
+  &__header {
+    display: flex;
+    flex-direction: column-reverse;
+    row-gap: 6px;
+  }
+  //. top__title
+  &__title {
+    margin-bottom: clampAd(4, 8);
+  }
+  // .top__subtitle
+  &__subtitle {
+    margin-bottom: 6px;
+  }
+  // .top__text
+  &__text {
+  }
+  // .top__btn
+  &__btn {
+  }
+}

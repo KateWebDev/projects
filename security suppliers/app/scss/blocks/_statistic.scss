@@ -1,0 +1,86 @@
+.statistic {
+  padding: clampAd(60, 120) 0;
+
+  // .statistic--deco
+  &--decor {
+    .statistic__container {
+      position: relative;
+
+      &::after {
+        --size: #{clampAd(0, 497)};
+
+        content: "";
+        position: absolute;
+        top: 55%;
+        left: 60%;
+        transform: translateY(-45%);
+        width: var(--size);
+        height: var(--size);
+        background: url(../../images/icons/decor-line.svg) center/cover no-repeat;
+
+        @include laptop {
+          display: none;
+        }
+      }
+    }
+  }
+
+  // .statistic__container
+  &__container {
+    display: flex;
+    flex-direction: column;
+    row-gap: clampAd(40, 80);
+  }
+  // .statistic__top
+  &__top {
+    position: relative;
+    z-index: 1;
+  }
+  // .statistic
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px 1rem;
+
+    @include tablet {
+      flex-direction: column;
+    }
+  }
+  // .statistic__content
+  &__content {
+    max-width: 470px;
+    width: 100%;
+
+    @include tablet {
+      max-width: 100%;
+      text-align: center;
+    }
+  }
+  // .statistic__items
+  &__items {
+    display: flex;
+    flex-direction: column;
+  }
+  // .statistic__item
+  &__item {
+    padding: clampAd(12, 22) 0 clampAd(15, 25);
+    border-bottom: 1px solid $color-dark;
+
+    &:first-of-type {
+      border-top: 1px solid $color-dark;
+    }
+  }
+  // .statistic__text
+  &__text {
+    font-size: clampAd(15, 30);
+    line-height: 1.2;
+    color: $color-dark-text;
+  }
+  // .statistic__media
+  &__media {
+    &--center {
+      margin: 0 auto;
+    }
+  }
+}

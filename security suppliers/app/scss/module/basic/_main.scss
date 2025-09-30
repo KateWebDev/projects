@@ -1,0 +1,14 @@
+.main {
+  flex: 1 1 auto;
+
+  // .main__section
+  &__section {
+    margin-bottom: clampAd(50, 100);
+  }
+
+  // .main__section-background
+  &__section-background {
+    background: $color-dark;
+    color: $color-light;
+  }
+}

@@ -1,0 +1,89 @@
+//mobile-first
+@mixin laptop-above {
+  @media (width > $laptop) {
+    @content;
+  }
+}
+@mixin tablet-above {
+  @media (width > $tablet) {
+    @content;
+  }
+}
+@mixin mobile-above {
+  @media (width > $mobile) {
+    @content;
+  }
+}
+@mixin big-mobile-above {
+  @media (width > $big-mobile) {
+    @content;
+  }
+}
+@mixin medium-mobile-above {
+  @media (width > $medium-mobile) {
+    @content;
+  }
+}
+@mixin small-mobile-above {
+  @media (width > $small-mobile) {
+    @content;
+  }
+}
+// desctop first
+@mixin laptop {
+  @media (width <= $laptop) {
+    @content;
+  }
+}
+@mixin tablet {
+  @media (width <= $tablet) {
+    @content;
+  }
+}
+@mixin mobile {
+  @media (width <= $mobile) {
+    @content;
+  }
+}
+@mixin big-mobile {
+  @media (width <= $big-mobile) {
+    @content;
+  }
+}
+@mixin medium-mobile {
+  @media (width <= $medium-mobile) {
+    @content;
+  }
+}
+@mixin small-mobile {
+  @media (width <= $small-mobile) {
+    @content;
+  }
+}
+
+@mixin hide {
+  opacity: 0;
+  visibility: hidden;
+}
+@mixin show {
+  opacity: 1;
+  visibility: visible;
+}
+
+@mixin disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+@function clampAd($min, $max) {
+  $minPx: $min + px;
+  $maxPx: $max + px;
+
+  $result: clamp(
+    $minPx,
+    calc($minPx + ($max - $min) * ((100vw - $widthReportMinPx) / ($widthReportMax - $widthReportMin))),
+    $maxPx
+  );
+
+  @return $result;
+}

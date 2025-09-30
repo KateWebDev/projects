@@ -1,0 +1,30 @@
+[class*="__burger"] {
+  display: none;
+  flex-direction: column;
+  row-gap: 5px;
+  cursor: pointer;
+
+  span {
+    width: 50px;
+    height: 5px;
+    border-radius: $radius-small;
+    background: $color-dop;
+    transition: all 0.3s linear;
+  }
+
+  &.header__burger--active {
+    span {
+      width: 40px;
+
+      &:nth-child(1) {
+        opacity: 0;
+      }
+      &:nth-child(2) {
+        transform: rotate(45deg);
+      }
+      &:nth-child(3) {
+        transform: rotate(-45deg) translateY(-7px) translateX(7px);
+      }
+    }
+  }
+}
