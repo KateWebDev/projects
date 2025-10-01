@@ -1,0 +1,18 @@
+.main {
+  flex: 1 1 auto;
+
+  // .main__section
+  &__section {
+    padding: clampAd(60, 120) 0;
+  }
+  // .main__section--background-dark
+  &__section--background-dark {
+    background: $color-dark;
+    color: $color-light;
+  }
+
+  // .main__section--background-light
+  &__section--background-light {
+    background: $color-bg-dop;
+  }
+}

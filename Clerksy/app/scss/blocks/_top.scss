@@ -1,0 +1,23 @@
+.top {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  row-gap: clampAd(16, 27);
+
+  // .top--center
+  &--center {
+    align-items: center;
+    text-align: center;
+  }
+
+  // .top__title
+  &__titile {
+  }
+  // .top__text
+  &__text {
+  }
+  // .top__btn
+  &__btn {
+  }
+}

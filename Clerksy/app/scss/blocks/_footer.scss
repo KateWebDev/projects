@@ -1,0 +1,83 @@
+.footer {
+  // .footer__container
+  &__container {
+  }
+  // .footer__top
+  &__top {
+    padding: clampAd(20, 40) 0;
+    border-bottom: 1px solid $color-bg-dop;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+
+    @include mobile {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+  // .footer__logo
+  &__logo {
+  }
+  // .footer__name
+  &__name {
+    @include Recoleta600;
+    font-size: clampAd(20, 24);
+  }
+  // .footer__soc1als
+  &__soc1als {
+  }
+  // .footer__bottom
+  &__bottom {
+    padding: clampAd(15, 25) 0;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+
+    @include mobile {
+      justify-content: center;
+      text-align: center;
+    }
+  }
+  // .footer__copy
+  &__copy {
+    font-size: clampAd(12, 14);
+  }
+  // .footer__nav
+  &__nav {
+  }
+  // .footer__items
+  &__items {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 14px;
+
+    @include mobile {
+      gap: 15px 30px;
+    }
+  }
+  // .footer__item
+  &__item {
+  }
+  // .footer__link
+  &__link {
+    font-size: clampAd(12, 14);
+    color: $color-accent;
+    white-space: nowrap;
+
+    transition: all 0.3s linear;
+
+    @media (any-hover: hover) {
+      &:hover:not(:disabled) {
+        color: $color-accent-dark;
+      }
+    }
+  }
+}

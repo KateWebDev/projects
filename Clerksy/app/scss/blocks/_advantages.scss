@@ -1,0 +1,44 @@
+.advantages {
+  // .advantages__container
+  &__container {
+    display: flex;
+    flex-direction: column;
+    row-gap: clampAd(35, 75);
+  }
+  // .advantages__top
+  &__top {
+  }
+  // .advantages__items
+  &__items {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(clampAd(145, 295), 1fr));
+    row-gap: 20px;
+  }
+  // .advantages__item
+  &__item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: clampAd(14, 28);
+
+    text-align: center;
+  }
+  // .advantages__image
+  &__image {
+    max-width: clampAd(60, 120);
+    width: auto;
+  }
+  // .advantages__img
+  &__img {
+    display: block;
+    max-width: 100%;
+    max-height: 100%;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+  // .advantages__text
+  &__text {
+  }
+}

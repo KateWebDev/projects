@@ -1,0 +1,55 @@
+@import "components/mixin";
+
+$laptop: 1440px;
+$tablet: 1023px;
+$mobile: 767px;
+$big-mobile: 574px;
+$medium-mobile: 478px;
+$small-mobile: 389px;
+
+//Страница
+$widthReportMax: 1440;
+$widthReportMin: 320;
+$widthReportMinPx: $widthReportMin + px;
+
+// Контейнер
+$widthContainer-num: 1180;
+$widthContainer: $widthContainer-num + px;
+$containerPadding-num: 15;
+$containerPadding: $containerPadding-num + px;
+$maxWidthContainer: calc($widthContainer + (2 * $containerPadding));
+
+// Доп цвета
+$white: #ffffff;
+$black: #000000;
+
+$color-accent: #198c36;
+$color-accent-dark: #15762e;
+$color-dark: #163a24;
+$color-light: #fbfaf7;
+$color-dop: #fab5a0;
+$color-bg-dop: #f2efe6;
+$color-shadow: #e9e4d5;
+
+// Радиусы
+$radius-circle: 50%;
+$radius-big: 160px;
+$radius-medium: 15px;
+
+// Шрифты
+/*
+@include Recoleta600;
+@include NotoSans400;
+@include NotoSans600;
+*/
+
+//Фон
+$mainBackGround: $white;
+
+//Шрифт
+$fontFamily: "Noto Sans", sans-serif;
+$mainColor: $color-dark;
+$mainSize: 18;
+$size: $mainSize + px;
+$fontWeight: 400;
+$lineheight: calc(27 / $mainSize); // 1.5

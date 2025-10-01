@@ -1,0 +1,24 @@
+.btn {
+  padding: clampAd(10, 15) clampAd(15, 25);
+  border-radius: $radius-big;
+  background: $color-accent;
+
+  text-align: center;
+  color: $color-light;
+  white-space: nowrap;
+
+  transition: all 0.3s linear;
+
+  // .btn--background
+  &--background {
+    background: $color-dop;
+    color: $color-dark;
+    @include NotoSans600;
+  }
+
+  @media (any-hover: hover) {
+    &:hover:not(:disabled) {
+      opacity: 0.7;
+    }
+  }
+}

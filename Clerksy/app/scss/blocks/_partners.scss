@@ -1,0 +1,40 @@
+.partners {
+  // .partners__container
+  &__container {
+    display: flex;
+    flex-direction: column;
+    row-gap: clampAd(30, 65);
+  }
+  // .partners__top
+  &__top {
+  }
+  // .partners__items
+  &__items {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(clampAd(100, 110), 1fr));
+    grid-auto-flow: dense;
+    align-items: center;
+    justify-items: center;
+    gap: clampAd(20, 87);
+  }
+  // .partners__item
+  &__item {
+  }
+  // .partners__image
+  &__image {
+    max-width: 100%;
+    width: 100%;
+    height: auto;
+  }
+
+  // .partners__img
+  &__img {
+    display: block;
+    max-width: 100%;
+    max-height: 100%;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+}

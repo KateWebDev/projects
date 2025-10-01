@@ -1,0 +1,29 @@
+.soc1als {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+
+  // .soc1als__item
+  &__item {
+  }
+  // .soc1als__link
+  &__link {
+    width: 30px;
+    height: 30px;
+
+    svg {
+      width: auto;
+      height: auto;
+      fill: $color-accent;
+      transition: all 0.3s linear;
+    }
+
+    @media (any-hover: hover) {
+      &:hover {
+        svg {
+          fill: $color-accent-dark;
+        }
+      }
+    }
+  }
+}

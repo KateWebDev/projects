@@ -1,0 +1,32 @@
+.start {
+  position: relative;
+  overflow: hidden;
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    width: clampAd(100, 300);
+    height: clampAd(150, 400);
+  }
+
+  &::before {
+    left: 0;
+    background: url(../../images/main/promo/decor-left.svg) center/cover no-repeat;
+  }
+
+  &::after {
+    right: 0;
+    background: url(../../images/main/promo/decor-right.svg) center/cover no-repeat;
+  }
+
+  // .start__container
+  &__container {
+    position: relative;
+    z-index: 1;
+  }
+  // .start__top
+  &__top {
+  }
+}

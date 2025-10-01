@@ -1,0 +1,62 @@
+.row {
+  display: flex;
+  flex-direction: column;
+
+  // .row--odd-reverse
+  &--odd-reverse {
+    .row__item:nth-child(odd) {
+      flex-direction: row-reverse;
+
+      @include mobile {
+        flex-direction: column;
+      }
+    }
+  }
+
+  @include mobile {
+    row-gap: 30px;
+  }
+
+  // .row__item
+  &__item {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 30px;
+
+    @include mobile {
+      flex-direction: column;
+    }
+  }
+  // .row__content
+  &__content {
+    max-width: 400px;
+    width: 100%;
+
+    @include mobile {
+      max-width: 100%;
+    }
+  }
+  // .row__top
+  &__top {
+    @include mobile {
+      align-items: center;
+      text-align: center;
+    }
+  }
+  // .row__image
+  &__image {
+    max-width: 492px;
+    width: 100%;
+  }
+  // .row__img
+  &__img {
+    display: block;
+    max-width: 100%;
+    max-height: 100%;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+}

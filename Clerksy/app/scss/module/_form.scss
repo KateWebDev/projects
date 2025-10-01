@@ -1,0 +1,48 @@
+.form {
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+  row-gap: clampAd(10, 15);
+
+  // .form__row
+  &__row {
+    position: relative;
+    height: clampAd(32, 54);
+  }
+  // .form__input
+  &__input {
+    width: 100%;
+    height: 100%;
+
+    border: 1px solid $color-bg-dop;
+    border-radius: $radius-big;
+    background: $white;
+    padding: 10px clampAd(100, 150) 10px clampAd(20, 30);
+
+    font-size: clampAd(12, 16);
+
+    &::placeholder {
+      font-family: "Noto Sans", sans-serif;
+      font-size: clampAd(12, 16);
+      font-weight: 400;
+      line-height: 1.1;
+      color: $color-dark;
+    }
+  }
+  // .form__btn
+  &__btn {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+  }
+  // .form__text
+  &__text {
+    font-size: clampAd(10, 14);
+
+    a {
+      color: $color-accent;
+    }
+  }
+}
