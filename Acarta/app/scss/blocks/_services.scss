@@ -1,0 +1,75 @@
+.services {
+  padding-bottom: clampAd(50, 200);
+
+  // .services__container
+  &__container {
+  }
+  // .services__items
+  &__items {
+    margin: 0 clampAd(10, 87);
+
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(clampAd(150, 496), 1fr));
+    grid-auto-flow: dense;
+    grid-auto-rows: minmax(clampAd(100, 498), 1fr);
+    gap: clampAd(20, 30);
+  }
+  // .services__item
+  &__item {
+    border: 1px solid $color-border-2;
+    border-radius: $radius-small;
+    box-shadow: $shadow;
+    background: $color-bg-2;
+  }
+  // .services__card
+  &__card {
+    width: 100%;
+    height: 100%;
+
+    padding: clampAd(20, 30);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    transition: $transition;
+
+    &:has(.services__btn:hover) {
+      transform: scale(1.04);
+    }
+  }
+  // .services__image
+  &__image {
+    width: clampAd(130, 223);
+    height: clampAd(127, 220);
+
+    margin-bottom: clampAd(10, 26);
+  }
+  // .services__img
+  &__img {
+    display: block;
+    max-width: 100%;
+    max-height: 100%;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+  // .services__name
+  &__name {
+    font-weight: 700;
+    font-size: clampAd(20, 42);
+    line-height: 1.2;
+    text-transform: capitalize;
+
+    margin-bottom: clampAd(10, 16);
+  }
+  // .services__text
+  &__text {
+    margin-bottom: clampAd(14, 23);
+  }
+  // .services__btn
+  &__btn {
+  }
+}

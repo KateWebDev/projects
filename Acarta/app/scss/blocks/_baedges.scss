@@ -1,0 +1,37 @@
+.baedges {
+  display: flex;
+  align-items: center;
+
+  // .baedges__item
+  &__item {
+    padding: clampAd(4, 8) clampAd(10, 13);
+    border-radius: $radius;
+    background: $color-light-1;
+
+    text-align: center;
+    color: $color-dark-2;
+
+    // .baedges__item--multi-color
+    &--multi-color {
+      background: $color-accent-2;
+      color: $color-white;
+    }
+
+    // .baedges__item--big-padding
+    &--big-padding {
+      padding-inline: clampAd(10, 20);
+    }
+
+    &:not(:first-of-type) {
+      transform: translateX(-8px);
+    }
+  }
+  // .baedges__text
+  &__text {
+    font-weight: 700;
+    font-size: clampAd(10, 12);
+    line-height: 1;
+
+    text-transform: capitalize;
+  }
+}

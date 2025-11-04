@@ -1,0 +1,121 @@
+.menu {
+  @include tablet {
+    position: fixed;
+    z-index: 3;
+    top: 0;
+    left: 0;
+    width: 100%;
+    min-height: 100%;
+    height: 100%;
+    transition: all 0.4s linear;
+    transform: translateY(-100%);
+    overflow: auto;
+    overflow-x: hidden;
+    background: $color-bg-2;
+  }
+
+  &.menu--active {
+    @include tablet {
+      transform: translateY(0);
+    }
+  }
+
+  // .menu__items
+  &__items {
+    display: flex;
+    align-items: center;
+    gap: 20px clampAd(20, 45);
+
+    @include tablet {
+      padding: 100px 0;
+      min-height: 100%;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+  // .menu__item
+  &__item {
+    &--mobile {
+      display: none;
+
+      @include big-mobile {
+        display: block;
+      }
+    }
+  }
+  // .menu__link
+  &__link {
+    font-weight: 700;
+    font-size: clampAd(12, 15);
+    line-height: 1.3;
+
+    white-space: nowrap;
+    transition: all 0.3s linear;
+
+    @media (any-hover: hover) {
+      &:hover:not(.menu__link--active) {
+        color: $color-accent-1;
+      }
+    }
+
+    &--active {
+      cursor: default;
+    }
+
+    @include tablet {
+      color: $color-dark-1;
+      font-size: 20px;
+    }
+  }
+}
+
+/*
+Вложенное меню
+
+.menu {
+  // .menu__items
+  &__items {
+    padding-top: 50px;
+    display: flex;
+    justify-content: center;
+    column-gap: 40px;
+  }
+  // .menu__item
+  &__item {
+    position: relative;
+
+    @media (any-hover: hover) and (min-width: 992px) {
+      &:hover {
+        & > .submenu__items {
+          transform: translateX(0) rotate(0deg);
+          visibility: visible;
+          opacity: 1;
+          background: $color-white;
+        }
+        .menu__arrow {
+          transform: translateY(-50%) rotate(180deg);
+        }
+      }
+    }
+  }
+  // .menu__link
+  &__link {
+    font-size: 20px;
+    white-space: nowrap;
+    transition: all 0.3s linear;
+
+    &--arrow {
+      padding-right: 20px;
+    }
+  }
+  // .menu__arrow
+  &__arrow {
+    top: 50%;
+    transform: translateY(-50%);
+    position: relative;
+    z-index: 3;
+  }
+}
+
+*/

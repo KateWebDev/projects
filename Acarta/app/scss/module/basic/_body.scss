@@ -1,0 +1,15 @@
+body {
+  font-family: $fontFamily;
+  font-size: clampAd(12, $mainSize);
+  line-height: $lineheight;
+  font-weight: $fontWeight;
+  color: $mainColor;
+
+  &.lock {
+    overflow: hidden;
+  }
+}
+
+.wrapper {
+  background: linear-gradient(180deg, $color-bg-2 50%, $color-bg-1 50% 55%, $color-white 100%) no-repeat;
+}

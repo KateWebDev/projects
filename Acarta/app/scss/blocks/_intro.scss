@@ -1,0 +1,38 @@
+.intro {
+  padding: clampAd(50, 130) 0 clampAd(30, 50);
+  // .intro__container
+  &__container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  // .intro__content
+  &__content {
+    max-width: 520px;
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  // .intro__baedges
+  &__baedges {
+    margin-bottom: 10px;
+  }
+  // .intro__title
+  &__title {
+    margin-bottom: clampAd(15, 28);
+  }
+  // .intro__text
+  &__text {
+    font-size: clampAd(14, 21);
+    line-height: 1.5;
+
+    margin-bottom: clampAd(15, 20);
+  }
+  // .intro__btn
+  &__btn {
+    font-size: clampAd(12, 16);
+  }
+}

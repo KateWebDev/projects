@@ -1,0 +1,70 @@
+@import "components/mixin";
+
+$tablet: 991px;
+$mobile: 767px;
+$big-mobile: 574px;
+$medium-mobile: 478px;
+$small-mobile: 389px;
+
+//Страница
+$widthReportMax: 1440;
+$widthReportMin: 320;
+$widthReportMinPx: $widthReportMin + px;
+
+// Контейнер
+$widthContainer-num: 1200;
+$widthContainer: $widthContainer-num + px;
+$containerPadding-num: 15;
+$containerPadding: $containerPadding-num + px;
+$maxWidthContainer: calc($widthContainer + (2 * $containerPadding));
+
+// Доп цвета
+$color-white: #ffffff;
+$color-black: #000000;
+
+$color-dark-1: #322f2e;
+$color-dark-2: #4d4d4d;
+$color-dark-3: #1a1918;
+$color-dark-4: #333333;
+$color-dark-5: #313131;
+$color-dark-opacity: rgba($color-black, 0.45);
+
+$color-light-1: #f9ede2;
+$color-light-2: #d3d3d3;
+
+$color-bg-1: #fff8ee;
+$color-bg-2: #fffaf2;
+$color-bg-3: #faf7f3;
+
+$color-accent-1: #c47344;
+$color-accent-2: #f9a38f;
+
+$color-border-1: #e1ded9;
+$color-border-2: #dddddd;
+$color-border-light: rgba($color-white, 0.18);
+
+$color-dop: #32686f;
+
+// Радиусы
+$radius-circle: 50%;
+$radius-small: 10px;
+$radius: 50px;
+
+// Задержка
+$transition: all 0.3s linear;
+
+// Тень
+$shadow: 1px 1px 20px 0 rgba($color-black, 0.08);
+$shadow-2: 1px 1px 12px 0 rgba($color-black, 0.55);
+$shadow-form: 0 1px 12px 0 rgba(0, 0, 0, 0.1);
+
+//Фон
+$mainBackGround: $color-bg-1;
+
+//Шрифт
+$fontFamily: "Roboto", sans-serif;
+$mainColor: $color-dark-1;
+$mainSize: 16;
+$size: $mainSize + px;
+$fontWeight: 500;
+$lineheight: calc(28 / $mainSize);

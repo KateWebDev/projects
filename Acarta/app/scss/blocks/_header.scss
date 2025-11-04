@@ -1,0 +1,39 @@
+.header {
+  padding: clampAd(20, 40) 0;
+
+  // .header__container
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: clampAd(20, 30);
+  }
+  // .header__logo
+  &__logo {
+    margin-right: auto;
+
+    position: relative;
+    z-index: 4;
+  }
+  // .header__menu
+  &__menu {
+  }
+  // .header__btn
+  &__btn {
+    position: relative;
+    z-index: 4;
+
+    @include big-mobile {
+      display: none;
+    }
+  }
+  // .header__burger
+  &__burger {
+    position: relative;
+    z-index: 4;
+
+    @include tablet {
+      display: flex;
+    }
+  }
+}
