@@ -1,0 +1,28 @@
+.tags {
+  display: flex;
+  align-items: center;
+  gap: clampAd(10, 16);
+
+  // .tags__item
+  &__item {
+    border: 1px solid $color-light;
+    border-radius: $radius-m;
+    padding: clampAd(2, 4) clampAd(4, 8);
+
+    transition: $transition;
+
+    &:has(.tags__name:hover) {
+      color: $color-accent;
+      border-color: currentColor;
+    }
+  }
+  // .tags__name
+  &__name {
+    display: block;
+    font-weight: 500;
+    font-size: clampAd(8, 12);
+    line-height: calc(15 / 12);
+
+    transition: $transition;
+  }
+}

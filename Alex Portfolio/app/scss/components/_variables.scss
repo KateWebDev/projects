@@ -1,0 +1,68 @@
+@import "components/mixin";
+
+$laptop: 1440px;
+$tablet: 991px;
+$mobile: 767px;
+$big-mobile: 574px;
+$medium-mobile: 478px;
+$small-mobile: 389px;
+
+//Страница
+$widthReportMax: 1440;
+$widthReportMin: 320;
+$widthReportMinPx: $widthReportMin + px;
+
+// Контейнер
+$widthContainer-num: 1200;
+$widthContainer: $widthContainer-num + px;
+$containerPadding-num: 15;
+$containerPadding: $containerPadding-num + px;
+$maxWidthContainer: calc($widthContainer + (2 * $containerPadding));
+
+// Доп цвета
+$color-white: #ffffff;
+$color-black: #000000;
+
+$color-accent: #7e74f1;
+
+$color-bg-light-1: #f5f3fe;
+$color-bg-light-2: #eae6fe;
+$color-bg-light-3: #fbfbfb;
+$color-bg-light-opacity: rgba($color-bg-light-2, 0.5);
+
+$color-dark-1: #232e35;
+$color-dark-2: #656d72;
+
+$color-light: #f1f1f1;
+$color-ligh-2: #f5f5f5;
+$color-ligh-3: #d9d9d9;
+
+// Радиусы
+$radius-circle: 50%;
+
+$radius-s: 2px;
+$radius-m: 4px;
+$radius-l: 8px;
+$radius-xl: 16px;
+
+// Задержка
+$transition: all 0.3s linear;
+
+// Шрифты
+/*
+@include Inter400;
+@include Inter500;
+@include PlusJakartaSans500;
+@include PlusJakartaSans700;
+*/
+
+//Фон
+$mainBackGround: $color-white;
+
+//Шрифт
+$fontFamily: "Inter", sans-serif;
+$mainColor: $color-dark-2;
+$mainSize: 16;
+$size: $mainSize + px;
+$fontWeight: 400;
+$lineheight: calc(32 / $mainSize);

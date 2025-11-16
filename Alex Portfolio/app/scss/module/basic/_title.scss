@@ -1,0 +1,37 @@
+.main-title {
+  @include PlusJakartaSans700;
+  font-size: clampAd(22, 44);
+  line-height: calc(55 / 44);
+  color: $color-dark-1;
+  text-transform: capitalize;
+
+  span {
+    color: $color-accent;
+  }
+}
+
+.title {
+  @include PlusJakartaSans700;
+  font-size: clampAd(18, 36);
+  line-height: calc(45 / 36);
+  color: $color-dark-1;
+  text-transform: capitalize;
+}
+
+.subtitle {
+  font-weight: 500;
+  font-size: clampAd(10, 12);
+  letter-spacing: 0.62em;
+  text-transform: uppercase;
+
+  display: flex;
+  align-items: center;
+  column-gap: clampAd(8, 16);
+
+  &::before {
+    content: "";
+    width: clampAd(8, 16);
+    height: 2px;
+    background: currentColor;
+  }
+}

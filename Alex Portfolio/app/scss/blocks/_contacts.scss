@@ -1,0 +1,104 @@
+.contacts {
+  padding: clampAd(40, 104) 0 clampAd(50, 134);
+  background: $color-bg-light-3;
+
+  // .contacts__container
+  &__container {
+    display: flex;
+    align-items: center;
+    gap: 30px clampAd(30, 100);
+
+    @include mobile {
+      flex-direction: column;
+    }
+  }
+  // .contacts__form
+  &__form {
+    max-width: clampAd(300, 600);
+
+    @include mobile {
+      max-width: 100%;
+    }
+  }
+  // .contacts__actions
+  &__actions {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    row-gap: clampAd(30, 30);
+  }
+  // .contacts__action
+  &__action {
+    display: flex;
+    align-items: center;
+    column-gap: clampAd(16, 24);
+
+    &::before {
+      content: "";
+      width: clampAd(28, 56);
+      height: clampAd(28, 56);
+      border-radius: $radius-xl;
+      padding: 5px;
+      background-color: $color-bg-light-1;
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: clampAd(16, 24);
+    }
+
+    // .contacts__action--address
+    &--address {
+      &::before {
+        background-image: url(../../images/icons/pin.svg);
+      }
+    }
+    // .contacts__action--phone
+    &--phone {
+      &::before {
+        background-image: url(../../images/icons/phone.svg);
+      }
+    }
+    // .contacts__action--email
+    &--email {
+      &::before {
+        background-image: url(../../images/icons/mail.svg);
+      }
+    }
+  }
+  // .contacts__block
+  &__block {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    row-gap: 4px;
+
+    font-size: clampAd(10, 14);
+    line-height: calc(24 / 14);
+  }
+  // .contacts__type
+  &__type {
+    font-weight: 500;
+    font-size: clampAd(12, 16);
+    line-height: calc(19 / 16);
+    color: $color-dark-1;
+    text-transform: capitalize;
+  }
+  // .contacts__address
+  &__address {
+    font-style: normal;
+  }
+  // .contacts__link
+  &__link {
+    transition: $transition;
+
+    @media (any-hover: hover) {
+      &:hover:not(:disabled) {
+        color: $color-accent;
+      }
+    }
+  }
+}

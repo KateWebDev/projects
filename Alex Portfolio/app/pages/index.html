@@ -1,0 +1,794 @@
+@@include('../components/header.html', {'title':'Alex : Portfolio'})
+
+<main class="main">
+  <section class="intro" aria-labelledby="intro-title">
+    <div class="intro__container">
+      <div class="intro__inner">
+        <div class="intro__content">
+          <div class="intro__top top top--indent">
+            <h1 class="top__title main-title" id="intro-title">
+              Alex <span>Smith.</span>
+            </h1>
+            <h2 class="top__subtitle subtitle">
+              MY NAME IS
+            </h2>
+          </div>
+          <div class="intro__text text">
+            <p>
+              Creative front-end developer with more than +5 years of experience in enterprise companies and startups.
+              Proficient in JavaScript, Angular, and React. Passionate about UI/UX
+            </p>
+          </div>
+          <ul class="intro__soc1als soc1als">
+            <li class="soc1als__item">
+              <a class="soc1als__link" href="#" aria-label="go to instagram" title="go to instagram">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M12 7C11.0111 7 10.0444 7.29324 9.22215 7.84265C8.3999 8.39206 7.75904 9.17295 7.3806 10.0866C7.00216 11.0002 6.90315 12.0055 7.09607 12.9755C7.289 13.9454 7.7652 14.8363 8.46447 15.5355C9.16373 16.2348 10.0546 16.711 11.0245 16.9039C11.9945 17.0969 12.9998 16.9978 13.9134 16.6194C14.827 16.241 15.6079 15.6001 16.1573 14.7779C16.7068 13.9556 17 12.9889 17 12C17 10.6739 16.4732 9.40215 15.5355 8.46447C14.5979 7.52678 13.3261 7 12 7ZM12 15C11.4067 15 10.8266 14.8241 10.3333 14.4944C9.83994 14.1648 9.45542 13.6962 9.22836 13.1481C9.0013 12.5999 8.94189 11.9967 9.05764 11.4147C9.1734 10.8328 9.45912 10.2982 9.87868 9.87868C10.2982 9.45912 10.8328 9.1734 11.4147 9.05764C11.9967 8.94189 12.5999 9.0013 13.1481 9.22836C13.6962 9.45542 14.1648 9.83994 14.4944 10.3333C14.8241 10.8266 15 11.4067 15 12C15 12.7956 14.6839 13.5587 14.1213 14.1213C13.5587 14.6839 12.7956 15 12 15ZM17 6C16.8022 6 16.6089 6.05865 16.4444 6.16853C16.28 6.27841 16.1518 6.43459 16.0761 6.61732C16.0004 6.80004 15.9806 7.00111 16.0192 7.19509C16.0578 7.38907 16.153 7.56725 16.2929 7.70711C16.4327 7.84696 16.6109 7.9422 16.8049 7.98079C16.9989 8.01937 17.2 7.99957 17.3827 7.92388C17.5654 7.84819 17.7216 7.72002 17.8315 7.55557C17.9414 7.39112 18 7.19778 18 7C18 6.73478 17.8946 6.48043 17.7071 6.29289C17.5196 6.10536 17.2652 6 17 6ZM21.94 8.24C21.9234 7.38542 21.7611 6.53995 21.46 5.74C21.1808 5.01207 20.7516 4.35099 20.2003 3.7997C19.649 3.2484 18.9879 2.81922 18.26 2.54C17.4601 2.2389 16.6146 2.07657 15.76 2.06C14.79 2 14.47 2 12 2C9.53 2 9.21 2 8.24 2.06C7.38542 2.07657 6.53995 2.2389 5.74 2.54C5.01207 2.81922 4.35099 3.2484 3.7997 3.7997C3.2484 4.35099 2.81922 5.01207 2.54 5.74C2.2389 6.53995 2.07657 7.38542 2.06 8.24C2 9.22 2 9.54 2 12C2 14.46 2 14.78 2.06 15.76C2.07657 16.6146 2.2389 17.4601 2.54 18.26C2.81922 18.9879 3.2484 19.649 3.7997 20.2003C4.35099 20.7516 5.01207 21.1808 5.74 21.46C6.53995 21.7611 7.38542 21.9234 8.24 21.94C9.24 21.94 9.53 22 12 22C14.47 22 14.79 22 15.76 21.94C16.6146 21.9234 17.4601 21.7611 18.26 21.46C18.9879 21.1808 19.649 20.7516 20.2003 20.2003C20.7516 19.649 21.1808 18.9879 21.46 18.26C21.7611 17.4601 21.9234 16.6146 21.94 15.76C21.94 14.76 22 14.46 22 12C22 9.54 22 9.22 21.94 8.24ZM19.94 15.67C19.9225 16.3046 19.8043 16.9324 19.59 17.53C19.4128 18.0023 19.1327 18.4293 18.77 18.78C18.4214 19.1428 17.9936 19.4201 17.52 19.59C16.921 19.8131 16.289 19.9348 15.65 19.95C14.71 19.95 14.42 20 11.99 20C9.56 20 9.28 20 8.34 20C7.70202 19.9835 7.07075 19.8654 6.47 19.65C5.99766 19.4728 5.57067 19.1927 5.22 18.83C4.85715 18.4814 4.57992 18.0536 4.41 17.58C4.1878 16.9842 4.06615 16.3557 4.05 15.72C4.05 14.72 4.05 14.47 4.05 12.05C4.05 9.63 4.05 9.34 4.05 8.38C4.06724 7.74121 4.18884 7.10954 4.41 6.51C4.58256 6.04063 4.85953 5.61662 5.22 5.27C5.56858 4.90715 5.99641 4.62992 6.47 4.46C7.06899 4.2369 7.70099 4.11523 8.34 4.1C9.28 4 9.57 4 12 4C14.43 4 14.72 4 15.66 4C16.3021 4.01633 16.9373 4.13794 17.54 4.36C18.0094 4.53256 18.4334 4.80953 18.78 5.17C19.1428 5.51858 19.4201 5.94641 19.59 6.42C19.8348 7.02856 19.9735 7.67458 20 8.33C20 9.33 20.05 9.58 20.05 12C20.05 14.42 20 14.71 20 15.67H19.94Z" />
+                </svg>
+              </a>
+            </li>
+            <li class="soc1als__item">
+              <a class="soc1als__link" href="#" aria-label="go to github" title="go to github">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M10.0703 20.5029C10.0703 20.3563 10.038 20.2114 9.97578 20.0786C9.91353 19.9458 9.82284 19.8284 9.71014 19.7345C9.59743 19.6407 9.46546 19.5728 9.32359 19.5356C9.18171 19.4985 9.03341 19.493 8.88917 19.5195C7.58009 19.7598 5.92726 19.7959 5.4878 18.5615C5.10461 17.6055 4.46987 16.7711 3.65089 16.1465C3.59246 16.1148 3.53677 16.0782 3.48439 16.0372C3.41272 15.8481 3.2854 15.6852 3.11925 15.5699C2.95311 15.4547 2.75592 15.3925 2.55372 15.3916H2.54884C2.28444 15.3916 2.03077 15.4962 1.84335 15.6827C1.65594 15.8692 1.55004 16.1224 1.54884 16.3868C1.54493 17.2022 2.35984 17.7247 2.69044 17.9014C3.08029 18.2931 3.39359 18.7541 3.61427 19.2608C3.97853 20.2842 5.03712 21.837 8.08009 21.6368C8.08109 21.6719 8.08204 21.7051 8.08253 21.7354L8.08692 22.003C8.08692 22.2682 8.19228 22.5226 8.37982 22.7101C8.56735 22.8976 8.82171 23.003 9.08692 23.003C9.35214 23.003 9.60649 22.8976 9.79403 22.7101C9.98157 22.5226 10.0869 22.2682 10.0869 22.003L10.082 21.6846C10.0772 21.4951 10.0703 21.2207 10.0703 20.5029ZM20.7373 5.37694C20.7691 5.25194 20.8003 5.11327 20.8277 4.95702C20.9894 3.84261 20.8484 2.70521 20.4195 1.66402C20.3653 1.52828 20.2822 1.40603 20.1758 1.30582C20.0694 1.20562 19.9425 1.12989 19.8037 1.08395C19.4477 0.963828 18.1333 0.727498 15.6197 2.33395C13.5302 1.84224 11.3551 1.84224 9.26565 2.33395C6.76222 0.751028 5.4546 0.965828 5.10206 1.07911C4.95993 1.12319 4.82946 1.19851 4.72021 1.29957C4.61097 1.40062 4.52572 1.52483 4.47071 1.66311C4.03301 2.72429 3.89355 3.88488 4.06739 5.01955C4.09181 5.14748 4.11817 5.26565 4.14552 5.37404C3.31709 6.47748 2.87583 7.8234 2.89015 9.20314C2.88745 9.51097 2.90163 9.81873 2.93263 10.125C3.26663 14.7275 6.26663 16.1094 8.35694 16.584C8.31349 16.709 8.27394 16.8428 8.23878 16.9844C8.17612 17.2417 8.21805 17.5133 8.35538 17.7398C8.49271 17.9662 8.71422 18.1289 8.97135 18.1923C9.22848 18.2556 9.50024 18.2144 9.72703 18.0777C9.95382 17.941 10.1171 17.7199 10.1812 17.4629C10.2448 17.1297 10.4079 16.8236 10.6489 16.585C10.7947 16.4574 10.9002 16.2902 10.9527 16.1037C11.0052 15.9172 11.0023 15.7195 10.9445 15.5346C10.8866 15.3497 10.7763 15.1856 10.6269 15.0623C10.4775 14.9389 10.2955 14.8617 10.103 14.8399C6.64894 14.4453 5.14942 13.0381 4.92384 9.94143C4.89885 9.69616 4.88761 9.44968 4.89015 9.20315C4.87411 8.2198 5.19898 7.26123 5.80958 6.49026C5.87093 6.40988 5.93628 6.33263 6.00538 6.25881C6.12781 6.12181 6.21013 5.95373 6.2433 5.77301C6.27646 5.5923 6.25919 5.40594 6.19338 5.2344C6.12592 5.05393 6.07397 4.86803 6.03811 4.67873C5.95664 4.14044 5.98337 3.59132 6.11671 3.06349C6.98585 3.30896 7.80383 3.70853 8.53171 4.24317C8.65208 4.32334 8.78828 4.3767 8.93108 4.39961C9.07388 4.42253 9.21994 4.41447 9.35935 4.37599C11.3805 3.82749 13.5113 3.82783 15.5322 4.37699C15.6724 4.41543 15.8192 4.42303 15.9626 4.39926C16.106 4.37549 16.2425 4.32091 16.3628 4.2393C17.0872 3.70244 17.9018 3.2993 18.768 3.04887C18.9008 3.56402 18.9305 4.10032 18.8554 4.62699C18.8192 4.83453 18.7626 5.03799 18.6865 5.23442C18.6207 5.40596 18.6034 5.59232 18.6366 5.77303C18.6697 5.95375 18.7521 6.12183 18.8745 6.25883C18.9516 6.34574 19.0288 6.43949 19.0981 6.52738C19.7044 7.2853 20.0238 8.23285 20 9.20314C20.0018 9.46275 19.9893 9.72226 19.9624 9.98048C19.7422 13.0361 18.2368 14.4443 14.7666 14.8398C14.5741 14.8618 14.392 14.9392 14.2427 15.0626C14.0933 15.1861 13.983 15.3503 13.9253 15.5353C13.8675 15.7202 13.8647 15.918 13.9172 16.1046C13.9698 16.2911 14.0754 16.4583 14.2212 16.5859C14.4698 16.831 14.6333 17.1493 14.6875 17.4941C14.7551 17.7618 14.7861 18.0375 14.7798 18.3135V20.6475C14.77 21.2949 14.77 21.7803 14.77 22.0029C14.77 22.2682 14.8754 22.5225 15.0629 22.71C15.2504 22.8976 15.5048 23.0029 15.77 23.0029C16.0352 23.0029 16.2896 22.8976 16.4771 22.71C16.6647 22.5225 16.77 22.2682 16.77 22.0029C16.77 21.7861 16.77 21.3106 16.7798 20.6631V18.3135C16.7878 17.8713 16.7358 17.4301 16.625 17.002C16.5933 16.8614 16.5545 16.7226 16.5088 16.586C18.03 16.3332 19.4123 15.5489 20.4094 14.3726C21.4065 13.1962 21.9539 11.7042 21.9541 10.1621C21.987 9.84355 22.0024 9.5234 22 9.20314C22.0222 7.82191 21.5773 6.47366 20.7373 5.37696L20.7373 5.37694Z" />
+                </svg>
+              </a>
+            </li>
+            <li class="soc1als__item">
+              <a class="soc1als__link" href="#" aria-label="go to twitter" title="go to twitter">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M22.9912 3.95021C22.9913 3.77357 22.9446 3.60007 22.8559 3.44735C22.7671 3.29464 22.6395 3.16817 22.4859 3.08084C22.3324 2.9935 22.1585 2.94842 21.9819 2.95017C21.8052 2.95193 21.6322 3.00046 21.4805 3.09083C20.8951 3.43921 20.265 3.70601 19.6075 3.88383C18.6684 3.07806 17.4708 2.63713 16.2335 2.64164C14.876 2.6432 13.5723 3.17223 12.5977 4.11702C11.623 5.06181 11.0536 6.3484 11.0098 7.70512C8.33381 7.27838 5.90846 5.88164 4.19628 3.78126C4.09312 3.65609 3.96136 3.55757 3.81214 3.494C3.66291 3.43043 3.50059 3.40368 3.33886 3.41601C3.17722 3.42932 3.02125 3.4818 2.88445 3.56892C2.74765 3.65603 2.63413 3.77516 2.5537 3.91601C2.14123 4.63582 1.90433 5.44276 1.86225 6.27131C1.82017 7.09986 1.97409 7.92666 2.31151 8.68456L2.30956 8.68651C2.15791 8.77991 2.03275 8.91066 1.94606 9.06625C1.85938 9.22185 1.81406 9.39708 1.81444 9.57519C1.8126 9.72211 1.82142 9.86898 1.84081 10.0146C1.94295 11.2729 2.50059 12.4507 3.40917 13.3271C3.34753 13.4446 3.30991 13.5731 3.29851 13.7052C3.28711 13.8373 3.30215 13.9704 3.34276 14.0967C3.73887 15.3308 4.58126 16.3727 5.70507 17.0185C4.56331 17.46 3.33049 17.614 2.11522 17.4668C1.89029 17.4386 1.66245 17.4876 1.46907 17.6059C1.27569 17.7242 1.12825 17.9047 1.05093 18.1178C0.973623 18.3309 0.97103 18.5639 1.04358 18.7787C1.11613 18.9935 1.25952 19.1772 1.45022 19.2998C3.54031 20.646 5.9739 21.3617 8.45999 21.3613C11.2792 21.393 14.03 20.4921 16.2842 18.7988C18.5385 17.1054 20.1699 14.7145 20.9248 11.998C21.2779 10.8146 21.4581 9.58648 21.46 8.35157C21.46 8.28614 21.46 8.21876 21.459 8.15138C21.9811 7.58831 22.3856 6.92668 22.6487 6.20527C22.9118 5.48387 23.0282 4.7172 22.9912 3.95021ZM19.6846 7.16212C19.5194 7.35746 19.4358 7.60891 19.4512 7.86427C19.4609 8.02927 19.4599 8.19527 19.4599 8.35157C19.4579 9.39511 19.3049 10.4329 19.0058 11.4326C18.3893 13.744 17.015 15.7817 15.1029 17.2192C13.1909 18.6568 10.8517 19.4111 8.45999 19.3613C7.60087 19.3616 6.74471 19.2606 5.90921 19.0606C6.97462 18.7172 7.9708 18.1879 8.85159 17.4971C9.01381 17.3693 9.13254 17.1945 9.19148 16.9967C9.25041 16.7988 9.24667 16.5875 9.18076 16.3918C9.11486 16.1961 8.99002 16.0257 8.82337 15.9038C8.65672 15.7819 8.45643 15.7145 8.24999 15.7109C7.41882 15.698 6.62512 15.363 6.03612 14.7764C6.18554 14.7481 6.33398 14.7129 6.48144 14.6709C6.69745 14.6094 6.88648 14.477 7.0181 14.295C7.14972 14.1131 7.21626 13.8921 7.20701 13.6677C7.19777 13.4433 7.11327 13.2285 6.96712 13.058C6.82098 12.8874 6.6217 12.7711 6.40136 12.7275C5.9189 12.6323 5.46491 12.427 5.07467 12.1277C4.68444 11.8284 4.36848 11.4432 4.15136 11.002C4.33209 11.0266 4.51397 11.0419 4.69628 11.0479C4.91286 11.0511 5.12487 10.9854 5.30166 10.8603C5.47844 10.7351 5.61083 10.5569 5.67968 10.3516C5.74566 10.1443 5.74226 9.92123 5.67001 9.7161C5.59775 9.51096 5.46058 9.33499 5.27929 9.21485C4.83944 8.92182 4.47913 8.52427 4.23065 8.0578C3.98216 7.59134 3.85325 7.07052 3.85546 6.54201C3.85546 6.47561 3.85741 6.4092 3.86132 6.34377C6.10258 8.43402 9.00964 9.66621 12.0703 9.82326C12.2248 9.82934 12.3787 9.80024 12.5203 9.73816C12.6619 9.67607 12.7875 9.58262 12.8877 9.46486C12.9869 9.34596 13.0571 9.20566 13.0929 9.05501C13.1286 8.90437 13.1289 8.74748 13.0937 8.5967C13.0365 8.35806 13.0074 8.11357 13.0068 7.86818C13.0077 7.01271 13.3479 6.19254 13.9529 5.58764C14.5578 4.98274 15.3779 4.64251 16.2334 4.64161C16.6735 4.64043 17.1091 4.7305 17.5127 4.90615C17.9163 5.0818 18.279 5.3392 18.5781 5.66212C18.6934 5.7862 18.8386 5.87871 18.9998 5.93085C19.161 5.98299 19.3328 5.99303 19.499 5.96001C19.9098 5.88006 20.3147 5.7724 20.7109 5.63775C20.4406 6.19072 20.0953 6.70369 19.6846 7.16212Z" />
+                </svg>
+              </a>
+            </li>
+            <li class="soc1als__item">
+              <a class="soc1als__link" href="#" aria-label="go to linkedin" title="go to linkedin">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M17.5 8.99891C16.6047 8.99853 15.7233 9.21997 14.9346 9.64344C14.8626 9.45386 14.7346 9.29068 14.5677 9.17555C14.4008 9.06043 14.2028 8.99882 14 8.99891H10C9.86866 8.99883 9.73859 9.02465 9.61723 9.07488C9.49587 9.1251 9.3856 9.19876 9.29273 9.29164C9.19985 9.38451 9.1262 9.49478 9.07597 9.61614C9.02574 9.7375 8.99993 9.86757 9 9.99891V21.9989C8.99993 22.1303 9.02574 22.2603 9.07597 22.3817C9.12619 22.503 9.19985 22.6133 9.29272 22.7062C9.3856 22.7991 9.49587 22.8727 9.61723 22.9229C9.73859 22.9732 9.86866 22.999 10 22.9989H14C14.1313 22.999 14.2614 22.9732 14.3828 22.9229C14.5041 22.8727 14.6144 22.7991 14.7073 22.7062C14.8002 22.6133 14.8738 22.503 14.924 22.3817C14.9743 22.2603 15.0001 22.1303 15 21.9989V16.4989C15 16.2337 15.1054 15.9793 15.2929 15.7918C15.4804 15.6043 15.7348 15.4989 16 15.4989C16.2652 15.4989 16.5196 15.6043 16.7071 15.7918C16.8946 15.9793 17 16.2337 17 16.4989V21.9989C16.9999 22.1303 17.0257 22.2603 17.076 22.3817C17.1262 22.503 17.1999 22.6133 17.2927 22.7062C17.3856 22.7991 17.4959 22.8727 17.6172 22.9229C17.7386 22.9732 17.8687 22.999 18 22.9989H22C22.1313 22.999 22.2614 22.9732 22.3828 22.9229C22.5041 22.8727 22.6144 22.7991 22.7073 22.7062C22.8002 22.6133 22.8738 22.503 22.924 22.3817C22.9743 22.2603 23.0001 22.1303 23 21.9989V14.4989C22.9982 13.0408 22.4181 11.6429 21.3871 10.6118C20.356 9.58077 18.9581 9.00072 17.5 8.99891ZM21 20.9989H19V16.4989C19 15.7033 18.6839 14.9402 18.1213 14.3776C17.5587 13.815 16.7957 13.4989 16 13.4989C15.2044 13.4989 14.4413 13.815 13.8787 14.3776C13.3161 14.9402 13 15.7033 13 16.4989V20.9989H11V10.9989H13V11.702C13.0001 11.9092 13.0646 12.1113 13.1845 12.2803C13.3043 12.4493 13.4737 12.5769 13.6692 12.6455C13.8647 12.7141 14.0767 12.7203 14.2759 12.6633C14.4751 12.6062 14.6517 12.4887 14.7813 12.327C15.23 11.7571 15.8456 11.3415 16.542 11.1383C17.2384 10.9351 17.9809 10.9544 18.6657 11.1936C19.3506 11.4328 19.9437 11.8799 20.3622 12.4725C20.7806 13.065 21.0036 13.7735 21 14.4989V20.9989ZM7 8.99891H3C2.86866 8.99883 2.73859 9.02465 2.61723 9.07488C2.49587 9.1251 2.3856 9.19876 2.29273 9.29164C2.19985 9.38451 2.1262 9.49478 2.07597 9.61614C2.02574 9.7375 1.99993 9.86757 2 9.99891V21.9989C1.99993 22.1303 2.02574 22.2603 2.07597 22.3817C2.12619 22.503 2.19985 22.6133 2.29272 22.7062C2.3856 22.7991 2.49587 22.8727 2.61723 22.9229C2.73859 22.9732 2.86866 22.999 3 22.9989H7C7.13134 22.999 7.26142 22.9732 7.38277 22.9229C7.50413 22.8727 7.6144 22.7991 7.70728 22.7062C7.80015 22.6133 7.87381 22.503 7.92404 22.3817C7.97426 22.2603 8.00008 22.1303 8 21.9989V9.99891C8.00008 9.86757 7.97426 9.7375 7.92403 9.61614C7.87381 9.49478 7.80015 9.38451 7.70728 9.29164C7.6144 9.19876 7.50413 9.1251 7.38277 9.07488C7.26141 9.02465 7.13134 8.99883 7 8.99891ZM6 20.9989H4V10.9989H6V20.9989ZM5.01465 1.54191C4.57701 1.51571 4.13862 1.57881 3.72613 1.72735C3.31364 1.8759 2.93567 2.1068 2.61522 2.406C2.29476 2.70521 2.03852 3.06646 1.86206 3.46781C1.6856 3.86915 1.59262 4.3022 1.58878 4.7406C1.58493 5.17901 1.6703 5.61361 1.83969 6.01799C2.00907 6.42237 2.25894 6.78807 2.5741 7.09285C2.88925 7.39763 3.26311 7.63512 3.67293 7.79089C4.08275 7.94665 4.51997 8.01742 4.958 7.99891H4.98632C5.42512 8.02497 5.86462 7.96129 6.27798 7.81176C6.69133 7.66223 7.06986 7.42998 7.39042 7.12922C7.71099 6.82845 7.96686 6.46548 8.14241 6.06249C8.31796 5.65949 8.40949 5.22494 8.41142 4.78537C8.41335 4.3458 8.32563 3.91046 8.15362 3.50594C7.98162 3.10142 7.72894 2.73622 7.41102 2.43266C7.09311 2.12909 6.71663 1.89353 6.30461 1.74038C5.89258 1.58723 5.45365 1.5197 5.01464 1.54191H5.01465ZM4.98633 5.99891H4.958C4.78507 6.01991 4.60964 6.00369 4.44349 5.95134C4.27734 5.89899 4.1243 5.81171 3.99464 5.69537C3.86498 5.57903 3.7617 5.43631 3.69172 5.27678C3.62173 5.11726 3.58667 4.94461 3.58887 4.77042C3.58887 4.02432 4.14844 3.5419 5.01465 3.5419C5.18935 3.51861 5.36701 3.53303 5.53567 3.58418C5.70432 3.63534 5.86006 3.72204 5.99239 3.83845C6.12471 3.95486 6.23056 4.09828 6.30279 4.25904C6.37502 4.4198 6.41197 4.59418 6.41113 4.77042C6.41113 5.51651 5.85156 5.99891 4.98633 5.99891Z" />
+                </svg>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="intro__media">
+          <div class="intro__image">
+            <picture>
+              <source type='image/avif' srcset='../images/main/intro/photo.avif, ../images/main/intro/photo@2x.avif 2x'>
+              <source type='image/webp' srcset='../images/main/intro/photo.webp, ../images/main/intro/photo@2x.webp 2x'>
+              <img class="intro__img" src="../images/main/intro/photo.png" srcset="../images/main/intro/photo@2x.png 2x"
+                alt="" loading="lazy" width="255" height="295">
+            </picture>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="services" aria-labelledby="services-title">
+    <div class="services__container">
+      <div class="services__top top top--center">
+        <h2 class="top__tilte title" id="services-title">
+          Specialized in
+        </h2>
+        <h3 class="top__subtitle subtitle">
+          SERVICES
+        </h3>
+      </div>
+      <ul class="services__items">
+        <li class="services__item services__item--image-crown">
+          <h4 class="services__name">
+            UI/UX Design
+          </h4>
+          <p class="services__text">
+            Turn what you have in mind of a digital product into reality. For any platform you consider.
+          </p>
+        </li>
+        <li class="services__item services__item--image-app">
+          <h4 class="services__name">
+            Application Development
+          </h4>
+          <p class="services__text">
+            Standard designing, building, and implementing your applications with documentation.
+          </p>
+        </li>
+        <li class="services__item services__item--image-globe">
+          <h4 class="services__name">
+            Web Development
+          </h4>
+          <p class="services__text">
+            Create and maintain your websites and also take care of its performance and traffic capacity.
+          </p>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="portfolio" aria-labelledby="portfolio-title">
+    <div class="portfolio__container">
+      <div class="portfolio__inner">
+        <div class="portfolio__top top">
+          <h2 class="top__title title" id="portfolio-title">
+            Featured Portfolios
+          </h2>
+          <h3 class="top__subtitle subtitle">
+            MY WORKS
+          </h3>
+        </div>
+        <ul class="portfolio__actions">
+          <li class="portfolio__action">
+            <button class="portfolio__button" id="slider-button-prev" type="button" aria-label="previous slide"
+              title="previous slide">
+              <img class="portfolio__icon" src="../images/icons/left.svg" alt="arrow left" width="24" height="24"
+                loading="lazy">
+            </button>
+          </li>
+          <li class="portfolio__action">
+            <button class="portfolio__button" id="slider-button-next" type="button" aria-label="next slide"
+              title="next slide">
+              <img class="portfolio__icon" src="../images/icons/right.svg" alt="arrow left" width="24" height="24"
+                loading="lazy">
+            </button>
+          </li>
+        </ul>
+      </div>
+      <div class="portfolio__slider slider swiper">
+        <ul class="slider__items swiper-wrapper">
+          <li class="slider__item swiper-slide">
+            <div class="slider__ibg">
+              <picture>
+                <source type='image/avif'
+                  srcset='../images/main/portfolio/1.avif, ../images/main/portfolio/1@2x.avif 2x'>
+                <source type='image/webp'
+                  srcset='../images/main/portfolio/1.webp, ../images/main/portfolio/1@2x.webp 2x'>
+                <img class="slider__img" src="../images/main/portfolio/1.jpg"
+                  srcset="../images/main/portfolio/1@2x.jpg 2x" alt="" loading="lazy" width="360" height="295">
+              </picture>
+            </div>
+            <div class="slider__content">
+              <a class="slider__title" href="#">
+                Agency Website.
+              </a>
+              <div class="slider__actions">
+                <ul class="slider__tag tags">
+                  <li class="tags__item">
+                    <a class="tags__name" href="#">
+                      WordPress
+                    </a>
+                  </li>
+                </ul>
+                <a class="slider__link" href="#" aria-label="go over" title="go over"></a>
+              </div>
+            </div>
+          </li>
+          <li class="slider__item swiper-slide">
+            <div class="slider__ibg">
+              <picture>
+                <source type='image/avif'
+                  srcset='../images/main/portfolio/2.avif, ../images/main/portfolio/2@2x.avif 2x'>
+                <source type='image/webp'
+                  srcset='../images/main/portfolio/2.webp, ../images/main/portfolio/2@2x.webp 2x'>
+                <img class="slider__img" src="../images/main/portfolio/2.jpg"
+                  srcset="../images/main/portfolio/2@2x.jpg 2x" alt="" loading="lazy" width="360" height="295">
+              </picture>
+            </div>
+            <div class="slider__content">
+              <a class="slider__title" href="#">
+                Dashboard Website.
+              </a>
+              <div class="slider__actions">
+                <ul class="slider__tag tags">
+                  <li class="tags__item">
+                    <a class="tags__name" href="#">
+                      React
+                    </a>
+                  </li>
+                </ul>
+                <a class="slider__link" href="#" aria-label="go over" title="go over"></a>
+              </div>
+            </div>
+          </li>
+          <li class="slider__item swiper-slide">
+            <div class="slider__ibg">
+              <picture>
+                <source type='image/avif'
+                  srcset='../images/main/portfolio/3.avif, ../images/main/portfolio/3@2x.avif 2x'>
+                <source type='image/webp'
+                  srcset='../images/main/portfolio/3.webp, ../images/main/portfolio/3@2x.webp 2x'>
+                <img class="slider__img" src="../images/main/portfolio/3.jpg"
+                  srcset="../images/main/portfolio/3@2x.jpg 2x" alt="" loading="lazy" width="360" height="295">
+              </picture>
+            </div>
+            <div class="slider__content">
+              <a class="slider__title" href="#">
+                Support Center Website.
+              </a>
+              <div class="slider__actions">
+                <ul class="slider__tag tags">
+                  <li class="tags__item">
+                    <a class="tags__name" href="#">
+                      PHP
+                    </a>
+                  </li>
+                </ul>
+                <a class="slider__link" href="#" aria-label="go over" title="go over"></a>
+              </div>
+            </div>
+          </li>
+          <li class="slider__item swiper-slide">
+            <div class="slider__ibg">
+              <picture>
+                <source type='image/avif'
+                  srcset='../images/main/portfolio/2.avif, ../images/main/portfolio/2@2x.avif 2x'>
+                <source type='image/webp'
+                  srcset='../images/main/portfolio/2.webp, ../images/main/portfolio/2@2x.webp 2x'>
+                <img class="slider__img" src="../images/main/portfolio/2.jpg"
+                  srcset="../images/main/portfolio/2@2x.jpg 2x" alt="" loading="lazy" width="360" height="295">
+              </picture>
+            </div>
+            <div class="slider__content">
+              <a class="slider__title" href="#">
+                Dashboard Website.
+              </a>
+              <div class="slider__actions">
+                <ul class="slider__tag tags">
+                  <li class="tags__item">
+                    <a class="tags__name" href="#">
+                      React
+                    </a>
+                  </li>
+                </ul>
+                <a class="slider__link" href="#" aria-label="go over" title="go over"></a>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="work" aria-labelledby="work-title">
+    <div class="work__container">
+      <div class="work__tabs tabs">
+        <div class="tabs__wrapper">
+          <div class="tabs__top top">
+            <h2 class="top__title title" id="work-title">
+              Work Experices
+            </h2>
+            <h3 class="top__subtitle subtitle">
+              career path
+            </h3>
+          </div>
+          <nav class="tabs__items">
+            <a class="tabs__item tabs__item--active" href="#tab1">Apple</a>
+            <a class="tabs__item" href="#tab2">Microsoft</a>
+            <a class="tabs__item" href="#tab3">Facebook</a>
+            <a class="tabs__item" href="#tab4">Slack</a>
+          </nav>
+        </div>
+        <div class="tabs__content">
+          <div class="tabs__block tabs__block--active" id="tab1">
+            <div class="tabs__inner">
+              <h4 class="tabs__title">
+                Front-end Developer Apple .Inc
+              </h4>
+              <p class="tabs__country">
+                California, United States
+              </p>
+              <p class="tabs__time">
+                Nov 2020 - Present · Full-time
+              </p>
+              <ul class="tabs__tags tags">
+                <li class="tags__item">
+                  <a class="tags__name" href="#">
+                    Swift
+                  </a>
+                </li>
+                <li class="tags__item">
+                  <a class="tags__name" href="#">
+                    Go
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <ul class="tabs__list">
+              <li class="tabs__point">
+                <p class="tabs__description">
+                  Improving overall website performance for mobile users.
+                </p>
+              </li>
+              <li class="tabs__point">
+                <p class="tabs__description">
+                  Collaborate with back-end developers and web designers to improve usability
+                </p>
+              </li>
+              <li class="tabs__point">
+                <p class="tabs__description">
+                  Add voice search feature for mobile app.
+                </p>
+              </li>
+              <li class="tabs__point">
+                <p class="tabs__description">
+                  Developing an admin panel to manage contents, users, products and ...
+                </p>
+              </li>
+            </ul>
+          </div>
+          <div class="tabs__block" id="tab2">
+            <div class="tabs__inner">
+              <h4 class="tabs__title">
+                Front-end Developer Microsoft .Inc
+              </h4>
+              <p class="tabs__country">
+                California, United States
+              </p>
+              <p class="tabs__time">
+                Nov 2020 - Present · Full-time
+              </p>
+              <ul class="tabs__tags tags">
+                <li class="tags__item">
+                  <a class="tags__name" href="#">
+                    Swift
+                  </a>
+                </li>
+                <li class="tags__item">
+                  <a class="tags__name" href="#">
+                    Go
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <ul class="tabs__list">
+              <li class="tabs__point">
+                <p class="tabs__description">
+                  Improving overall website performance for mobile users.
+                </p>
+              </li>
+              <li class="tabs__point">
+                <p class="tabs__description">
+                  Collaborate with back-end developers and web designers to improve usability
+                </p>
+              </li>
+              <li class="tabs__point">
+                <p class="tabs__description">
+                  Add voice search feature for mobile app.
+                </p>
+              </li>
+              <li class="tabs__point">
+                <p class="tabs__description">
+                  Developing an admin panel to manage contents, users, products and ...
+                </p>
+              </li>
+            </ul>
+          </div>
+          <div class="tabs__block" id="tab3">
+            <div class="tabs__inner">
+              <h4 class="tabs__title">
+                Front-end Developer Facebook .Inc
+              </h4>
+              <p class="tabs__country">
+                California, United States
+              </p>
+              <p class="tabs__time">
+                Nov 2020 - Present · Full-time
+              </p>
+              <ul class="tabs__tags tags">
+                <li class="tags__item">
+                  <a class="tags__name" href="#">
+                    Swift
+                  </a>
+                </li>
+                <li class="tags__item">
+                  <a class="tags__name" href="#">
+                    Go
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <ul class="tabs__list">
+              <li class="tabs__point">
+                <p class="tabs__description">
+                  Improving overall website performance for mobile users.
+                </p>
+              </li>
+              <li class="tabs__point">
+                <p class="tabs__description">
+                  Collaborate with back-end developers and web designers to improve usability
+                </p>
+              </li>
+              <li class="tabs__point">
+                <p class="tabs__description">
+                  Add voice search feature for mobile app.
+                </p>
+              </li>
+              <li class="tabs__point">
+                <p class="tabs__description">
+                  Developing an admin panel to manage contents, users, products and ...
+                </p>
+              </li>
+            </ul>
+          </div>
+          <div class="tabs__block" id="tab4">
+            <div class="tabs__inner">
+              <h4 class="tabs__title">
+                Front-end Developer Slack .Inc
+              </h4>
+              <p class="tabs__country">
+                California, United States
+              </p>
+              <p class="tabs__time">
+                Nov 2020 - Present · Full-time
+              </p>
+              <ul class="tabs__tags tags">
+                <li class="tags__item">
+                  <a class="tags__name" href="#">
+                    Swift
+                  </a>
+                </li>
+                <li class="tags__item">
+                  <a class="tags__name" href="#">
+                    Go
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <ul class="tabs__list">
+              <li class="tabs__point">
+                <p class="tabs__description">
+                  Improving overall website performance for mobile users.
+                </p>
+              </li>
+              <li class="tabs__point">
+                <p class="tabs__description">
+                  Collaborate with back-end developers and web designers to improve usability
+                </p>
+              </li>
+              <li class="tabs__point">
+                <p class="tabs__description">
+                  Add voice search feature for mobile app.
+                </p>
+              </li>
+              <li class="tabs__point">
+                <p class="tabs__description">
+                  Developing an admin panel to manage contents, users, products and ...
+                </p>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="blog" aria-labelledby="blog-title">
+    <div class="blog__container">
+      <div class="blog__top top top--center">
+        <h2 class="top__title title" id="blog-title">
+          Personal blog
+        </h2>
+        <h3 class="top__subtitle subtitle">
+          MY ARTICLES
+        </h3>
+      </div>
+      <ul class="blog__items">
+        <li class="blog__item">
+          <article class="blog__post post">
+            <div class="post__ibg">
+              <picture>
+                <source type='image/avif' srcset='../images/main/blog/1.avif, ../images/main/blog/1@2x.avif 2x'>
+                <source type='image/webp' srcset='../images/main/blog/1.webp, ../images/main/blog/1@2x.webp 2x'>
+                <img class="post__img" src="../images/main/blog/1.jpg" srcset="../images/main/blog/1@2x.jpg 2x" alt=""
+                  loading="lazy" width="361" height="243">
+              </picture>
+            </div>
+            <div class="post__content">
+              <h4 class="post__name">
+                How to prototype in figma
+              </h4>
+              <time class="post__data" datetime="2021-07-15">
+                July 15, 2021
+              </time>
+              <p class="post__text">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat, culpa aspernatur? Tempore deserunt,
+                laborum veniam est itaque quis reprehenderit obcaecati?
+              </p>
+              <a class="post__link link" href="#">
+                Continue Reading
+              </a>
+            </div>
+          </article>
+        </li>
+        <li class="blog__item">
+          <article class="blog__post post">
+            <div class="post__ibg">
+              <picture>
+                <source type='image/avif' srcset='../images/main/blog/2.avif, ../images/main/blog/2@2x.avif 2x'>
+                <source type='image/webp' srcset='../images/main/blog/2.webp, ../images/main/blog/2@2x.webp 2x'>
+                <img class="post__img" src="../images/main/blog/2.jpg" srcset="../images/main/blog/2@2x.jpg 2x" alt=""
+                  loading="lazy" width="361" height="243">
+              </picture>
+            </div>
+            <div class="post__content">
+              <h4 class="post__name">
+                Being more productive with Notion.
+              </h4>
+              <time class="post__data" datetime="2020-08-08">
+                Aug 8, 2020
+              </time>
+              <p class="post__text">
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Alias obcaecati velit dolore consequuntur ex
+                sint iusto nisi tempora ratione debitis?
+              </p>
+              <a class="post__link link" href="#">
+                Continue Reading
+              </a>
+            </div>
+          </article>
+        </li>
+        <li class="blog__item">
+          <article class="blog__post post">
+            <div class="post__ibg">
+              <picture>
+                <source type='image/avif' srcset='../images/main/blog/3.avif, ../images/main/blog/3@2x.avif 2x'>
+                <source type='image/webp' srcset='../images/main/blog/3.webp, ../images/main/blog/3@2x.webp 2x'>
+                <img class="post__img" src="../images/main/blog/3.jpg" srcset="../images/main/blog/3@2x.jpg 2x" alt=""
+                  loading="lazy" width="361" height="243">
+              </picture>
+            </div>
+            <div class="post__content">
+              <h4 class="post__name">
+                Beginners guide to adobe illustrator
+              </h4>
+              <time class="post__data" datetime="2021-02-19">
+                Feb 19, 2021
+              </time>
+              <p class="post__text">
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Alias obcaecati velit dolore consequuntur ex
+                sint iusto nisi tempora ratione debitis?
+              </p>
+              <a class="post__link link" href="#">
+                Continue Reading
+              </a>
+            </div>
+          </article>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="testimonials" aria-labelledby="testimonials-title">
+    <div class="testimonials__container">
+      <div class="testimonials__top top">
+        <h2 class="top__title title" id="testimonials-title">
+          Testimonials
+        </h2>
+        <h3 class="top__subtitle subtitle">
+          MY CLIENTS
+        </h3>
+      </div>
+      <ul class="testimonials__items">
+        <li class="testimonials__item">
+          <div class="testimonials__content">
+            <div class="testimonials__image">
+              <picture>
+                <source type='image/avif'
+                  srcset='../images/main/testimonials/1.avif, ../images/main/testimonials/1@2x.avif 2x'>
+                <source type='image/webp'
+                  srcset='../images/main/testimonials/1.webp, ../images/main/testimonials/1@2x.webp 2x'>
+                <img class="testimonials__img" src="../images/main/testimonials/1.jpg"
+                  srcset="../images/main/testimonials/1@2x.jpg 2x" alt="" loading="lazy" width="96" height="96">
+              </picture>
+            </div>
+            <p class="testimonials__text">
+              We were very pleased to hear how you resolved our website's user interface issues and challenges.
+            </p>
+            <div class="testimonials__info">
+              <p class="testimonials__author">
+                Amelia Miller
+              </p>
+              <span class="testimonials__work">
+                Designer
+              </span>
+            </div>
+          </div>
+        </li>
+        <li class="testimonials__item">
+          <div class="testimonials__content">
+            <div class="testimonials__image">
+              <picture>
+                <source type='image/avif'
+                  srcset='../images/main/testimonials/2.avif, ../images/main/testimonials/2@2x.avif 2x'>
+                <source type='image/webp'
+                  srcset='../images/main/testimonials/2.webp, ../images/main/testimonials/2@2x.webp 2x'>
+                <img class="testimonials__img" src="../images/main/testimonials/2.jpg"
+                  srcset="../images/main/testimonials/2@2x.jpg 2x" alt="" loading="lazy" width="96" height="96">
+              </picture>
+            </div>
+            <p class="testimonials__text">
+              I’m glad I decided to work with you. The project was delivered on time with all the requirements.
+            </p>
+            <div class="testimonials__info">
+              <p class="testimonials__author">
+                James Delaney
+              </p>
+              <span class="testimonials__work">
+                Developer
+              </span>
+            </div>
+          </div>
+        </li>
+        <li class="testimonials__item">
+          <div class="testimonials__content">
+            <div class="testimonials__image">
+              <picture>
+                <source type='image/avif'
+                  srcset='../images/main/testimonials/3.avif, ../images/main/testimonials/3@2x.avif 2x'>
+                <source type='image/webp'
+                  srcset='../images/main/testimonials/3.webp, ../images/main/testimonials/3@2x.webp 2x'>
+                <img class="testimonials__img" src="../images/main/testimonials/3.jpg"
+                  srcset="../images/main/testimonials/3@2x.jpg 2x" alt="" loading="lazy" width="96" height="96">
+              </picture>
+            </div>
+            <p class="testimonials__text">
+              The management of our projects was always faced with difficulties, but you handled these well.
+            </p>
+            <div class="testimonials__info">
+              <p class="testimonials__author">
+                Isabella Bennett
+              </p>
+              <span class="testimonials__work">
+                Manager
+              </span>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="skills" aria-labelledby="skills-title">
+    <div class="skills__container">
+      <div class="skills__top top">
+        <h2 class="top__title title" id="skills-title">
+          Education & Skills
+        </h2>
+        <h3 class="top__subtitle subtitle">
+          LEARNING PATH
+        </h3>
+      </div>
+      <div class="skills__inner">
+        <ul class="skills__educations">
+          <li class="skills__education">
+            <h4 class="skills__education-name">
+              Kingston university
+            </h4>
+            <p class="skills__education-text">
+              Master's degree - Software Engineering
+            </p>
+            <p class="skills__education-date">
+              2019 - 2021
+            </p>
+          </li>
+          <li class="skills__education">
+            <h4 class="skills__education-name">
+              Kingston university
+            </h4>
+            <p class="skills__education-text">
+              Bachelor's degree - Computer Engineering
+            </p>
+            <p class="skills__education-date">
+              2015 - 2019
+            </p>
+          </li>
+          <li class="skills__education">
+            <h4 class="skills__education-name">
+              Westminster School
+            </h4>
+            <p class="skills__education-text">
+              Diploma's degree - Mathematics
+            </p>
+            <p class="skills__education-date">
+              2013 - 2015
+            </p>
+          </li>
+        </ul>
+        <div class="skills__info">
+          <div class="skills__text text">
+            <p>
+              For 5+ years, I have been continuously learning in the field of front-end and experimenting with new
+              technologies and frameworks, and here you can see a summary of my skills.
+            </p>
+            <ul class="skills__progress">
+              <li class="skills__point">
+                <p class="skills__chapter">
+                  React
+                </p>
+                <div class="skills__number">
+                  <span class="skills__num" style="width: calc(100% - 80%);"></span>
+                </div>
+              </li>
+              <li class="skills__point">
+                <p class="skills__chapter">
+                  Angular
+                </p>
+                <div class="skills__number">
+                  <span class="skills__num" style="width: calc(100% - 50%);"></span>
+                </div>
+              </li>
+              <li class="skills__point">
+                <p class="skills__chapter">
+                  Javascript
+                </p>
+                <div class="skills__number">
+                  <span class="skills__num" style="width: calc(100% - 65%);"></span>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="contacts" aria-labelledby="contacts-title">
+    <div class="contacts__container">
+      <h2 class="hidden" id="contacts-title">Contacts</h2>
+      <form class="contacts__form form" action="#">
+        <div class="form__item">
+          <label class="hidden" for="name"> Enter your name</label>
+          <input class="form__input" id="name" name="name" type="text" placeholder="Name" required>
+        </div>
+        <div class="form__item">
+          <label class="hidden" for="email"> Enter your email</label>
+          <input class="form__input" id="email" name="email" type="email" placeholder="Email" required>
+        </div>
+        <div class="form__item">
+          <label class="hidden" for="message"> Enter your message</label>
+          <textarea class="form__textarea" name="message" id="message" placeholder="Message" required></textarea>
+        </div>
+        <button class="form__btn btn btn--color" type="submit">
+          Send message
+        </button>
+      </form>
+      <ul class="contacts__actions">
+        <li class="contacts__action contacts__action--address">
+          <div class="contacts__block">
+            <span class="contacts__type">
+              Address
+            </span>
+            <address class="contacts__address">
+              <p>
+                3424 Layman Avenue, Fayetteville, NC
+              </p>
+            </address>
+          </div>
+        </li>
+        <li class="contacts__action contacts__action--phone">
+          <div class="contacts__block">
+            <span class="contacts__type">
+              Phone
+            </span>
+            <a class="contacts__link" href="tel:5014141541">
+              (501) 414-1541
+            </a>
+          </div>
+        </li>
+        <li class="contacts__action contacts__action--email">
+          <div class="contacts__block">
+            <span class="contacts__type">
+              E-Mail
+            </span>
+            <a class="contacts__link" href="mailto:devchapter@gmail.com">
+              devchapter@gmail.com
+            </a>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </section>
+</main>
+
+@@include('../components/footer.html')

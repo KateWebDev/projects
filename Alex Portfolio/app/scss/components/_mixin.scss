@@ -1,0 +1,134 @@
+//mobile-first
+@mixin laptop-above {
+  @media (min-width: $laptop) {
+    @content;
+  }
+}
+@mixin tablet-above {
+  @media (min-width: $tablet) {
+    @content;
+  }
+}
+@mixin mobile-above {
+  @media (min-width: $mobile) {
+    @content;
+  }
+}
+@mixin big-mobile-above {
+  @media (min-width: $big-mobile) {
+    @content;
+  }
+}
+@mixin medium-mobile-above {
+  @media (min-width: $medium-mobile) {
+    @content;
+  }
+}
+@mixin small-mobile-above {
+  @media (min-width: $small-mobile) {
+    @content;
+  }
+}
+// desctop first
+@mixin laptop {
+  @media (max-width: $laptop) {
+    @content;
+  }
+}
+@mixin tablet {
+  @media (max-width: $tablet) {
+    @content;
+  }
+}
+@mixin mobile {
+  @media (max-width: $mobile) {
+    @content;
+  }
+}
+@mixin big-mobile {
+  @media (max-width: $big-mobile) {
+    @content;
+  }
+}
+@mixin medium-mobile {
+  @media (max-width: $medium-mobile) {
+    @content;
+  }
+}
+@mixin small-mobile {
+  @media (max-width: $small-mobile) {
+    @content;
+  }
+}
+
+@mixin hide {
+  opacity: 0;
+  visibility: hidden;
+}
+@mixin show {
+  opacity: 1;
+  visibility: visible;
+}
+
+@mixin disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+@function rem($px) {
+  $result: math.div($px, 16) + rem;
+  @return $result;
+}
+
+@function em($px, $current: 16) {
+  $result: math.div($px, $current) + em;
+  @return $result;
+}
+
+@function percent($px, $current) {
+  $result: math.div($px, $current) * 100%;
+  @return $result;
+}
+
+@function clampAd($min, $max) {
+  $minPx: $min + px;
+  $maxPx: $max + px;
+
+  $result: clamp(
+    $minPx,
+    calc($minPx + ($max - $min) * ((100vw - $widthReportMinPx) / ($widthReportMax - $widthReportMin))),
+    $maxPx
+  );
+
+  @return $result;
+}
+
+@function clampAdRem($min, $max) {
+  $minRem: rem($min);
+  $maxRem: rem($max);
+
+  $result: clamp(
+    $minRem,
+    calc($minRem + ($max - $min) * ((100vw - $widthReportMinPx) / ($widthReportMax - $widthReportMin))),
+    $maxRem
+  );
+
+  @return $result;
+}
+
+@mixin Inter400 {
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+}
+@mixin Inter500 {
+  font-family: "Inter", sans-serif;
+  font-weight: 500;
+}
+@mixin PlusJakartaSans500 {
+  font-family: "PlusJakartaSans", sans-serif;
+  font-weight: 500;
+}
+@mixin PlusJakartaSans700 {
+  font-family: "PlusJakartaSans", sans-serif;
+  font-weight: 700;
+}

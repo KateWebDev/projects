@@ -1,0 +1,15 @@
+[class*="__container"] {
+  max-width: $maxWidthContainer;
+  margin: 0 auto;
+  padding: 0 $containerPadding;
+}
+
+[class*="__left-container"] {
+  padding-left: calc((100vw - $widthContainer) / 2); // - $containerPadding
+  margin-left: $containerPadding;
+}
+
+[class*="__right-container"] {
+  padding-right: calc((100vw - $widthContainer) / 2); // - $containerPadding
+  margin-right: $containerPadding;
+}

@@ -1,0 +1,23 @@
+.top {
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: flex-start;
+  row-gap: 8px;
+
+  // .top--big-indent
+  &--indent {
+    row-gap: clampAd(8, 16);
+  }
+
+  // .top--center
+  &--center {
+    margin: 0 auto;
+  }
+
+  // .top__title
+  &__title {
+  }
+  // .top__subtitle
+  &__subtitle {
+  }
+}

@@ -1,0 +1,42 @@
+.progress {
+  --progress: 0%;
+  --sizeCircle: #{clampAd(140, 280)};
+
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+
+  width: var(--sizeCircle);
+  height: var(--sizeCircle);
+  border-radius: $radius-circle;
+  background: conic-gradient(blue var(--progress), red 0);
+
+  &::before {
+    content: "";
+    // от width и height зависит толщина обводка, чем меньше %, тем шире обводка
+    width: 80%;
+    height: 80%;
+    border-radius: $radius-circle;
+    background: $color-white;
+  }
+
+  // .progress__data
+  &__data {
+    position: absolute;
+
+    display: flex;
+    flex-direction: column;
+  }
+  // .progress__number
+  &__number {
+    font-size: 50px;
+  }
+  // .progress__text
+  &__text {
+    font-size: 16px;
+  }
+}

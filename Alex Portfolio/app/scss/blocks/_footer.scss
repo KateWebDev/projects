@@ -1,0 +1,22 @@
+.footer {
+  padding: clampAd(44, 88) 0;
+
+  // .footer__container
+  &__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: clampAd(16, 24);
+  }
+  // .footer__soc1als
+  &__soc1als {
+  }
+  // .footer__copy
+  &__copy {
+    font-size: clampAd(10, 14);
+
+    span {
+      font-weight: 500;
+    }
+  }
+}

@@ -1,0 +1,18 @@
+.work {
+  padding: clampAd(30, 104) 0 clampAd(40, 120);
+  background: $color-bg-light-3;
+
+  // .work__container
+  &__container {
+  }
+  // .work__tabs
+  &__tabs {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 30px clampAd(30, 120);
+
+    @include mobile {
+      grid-template-columns: 1fr;
+    }
+  }
+}

@@ -1,0 +1,32 @@
+.soc1als {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px 32px;
+
+  // .soc1als__item
+  &__item {
+  }
+  // .soc1als__link
+  &__link {
+    --size: #{clampAd(20, 24)};
+
+    width: var(--size);
+    height: var(--size);
+
+    svg {
+      width: 100%;
+      height: 100%;
+      fill: $color-dark-2;
+      transition: all 0.3s linear;
+    }
+
+    @media (any-hover: hover) {
+      &:hover {
+        svg {
+          fill: $color-accent;
+        }
+      }
+    }
+  }
+}

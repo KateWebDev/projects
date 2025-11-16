@@ -1,0 +1,155 @@
+.skills {
+  padding: clampAd(40, 105) 0 clampAd(50, 175);
+  // .skills__container
+  &__container {
+    display: flex;
+    flex-direction: column;
+    row-gap: clampAd(30, 70);
+  }
+  // .skills__top
+  &__top {
+  }
+  // .skills__inner
+  &__inner {
+    display: flex;
+    align-items: center;
+    gap: 30px clampAd(30, 150);
+
+    @include mobile {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  }
+  // .skills__educations
+  &__educations {
+    max-width: 400px;
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+
+    @include mobile {
+      max-width: 100%;
+    }
+  }
+  // .skills__education
+  &__education {
+    --colorDopElement: #{$color-light};
+
+    padding-left: clampAd(18, 36);
+    padding-bottom: clampAd(32, 64);
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: clampAd(8, 16);
+      height: clampAd(8, 16);
+      border-radius: $radius-circle;
+      background: var(--colorDopElement);
+    }
+
+    &:not(:last-child) {
+      &::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: clampAd(4, 8);
+        bottom: 0;
+        width: 1px;
+        background: var(--colorDopElement);
+      }
+    }
+  }
+  // .skills__education-name
+  &__education-name {
+    @include PlusJakartaSans500;
+    line-height: calc(20 / 16);
+    color: $color-dark-1;
+
+    margin-bottom: clampAd(5, 10);
+  }
+  // .skills__education-text
+  &__education-text {
+    font-size: clampAd(10, 14);
+    line-clamp: calc(17 / 14);
+
+    margin-bottom: clampAd(16, 24);
+  }
+  // .skills__education-date
+  &__education-date {
+    font-weight: 500;
+    font-size: clampAd(10, 14);
+    color: $color-dark-1;
+  }
+  // .skills__info
+  &__info {
+    display: flex;
+    flex-direction: column;
+    row-gap: clampAd(32, 64);
+  }
+  // .skills__text
+  &__text {
+  }
+  // .skills__progress
+  &__progress {
+    --heightLine: #{clampAd(6, 8)};
+
+    max-width: 550px;
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    row-gap: clampAd(20, 40);
+  }
+  // .skills__point
+  &__point {
+    position: relative;
+    padding-bottom: clampAd(8, 16);
+
+    &::before {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: var(--heightLine);
+      background: $color-accent;
+      border-radius: $radius-s;
+    }
+  }
+  // .skills__chapter
+  &__chapter {
+    font-weight: 500;
+    font-size: clampAd(10, 14);
+    color: $color-dark-1;
+    white-space: nowrap;
+  }
+  // .skills__number
+  &__number {
+  }
+  // .skills__num
+  &__num {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+
+    &::before {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      right: -1px;
+      width: 100%;
+      height: var(--heightLine);
+      background: $color-bg-light-1;
+      border-radius: 0 $radius-s $radius-s 0;
+    }
+  }
+}

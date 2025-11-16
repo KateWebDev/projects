@@ -1,0 +1,56 @@
+.btn {
+  padding: clampAd(8, 16) clampAd(16, 24);
+  border: 1px solid $color-light;
+  border-radius: $radius-l;
+  background: $color-white;
+
+  font-weight: 500;
+  font-size: clampAd(12, 14);
+  color: $color-dark-1;
+  text-transform: capitalize;
+
+  user-select: none;
+  white-space: nowrap;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  transition: all 0.3s linear;
+
+  @media (any-hover: hover) {
+    &:hover:not(:disabled) {
+      background: $color-accent;
+      color: $color-white;
+    }
+  }
+  // .btn--color
+  &--color {
+    background: $color-accent;
+    color: $color-bg-light-1;
+
+    @media (any-hover: hover) {
+      &:hover:not(:disabled) {
+        color: $color-accent;
+        background: $color-bg-light-1;
+      }
+    }
+  }
+}
+
+.link {
+  font-weight: 500;
+  font-size: clampAd(12, 14);
+  text-transform: capitalize;
+
+  user-select: none;
+  white-space: nowrap;
+
+  transition: all 0.3s linear;
+
+  @media (any-hover: hover) {
+    &:hover:not(:disabled) {
+      color: $color-accent;
+    }
+  }
+}
