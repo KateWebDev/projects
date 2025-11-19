@@ -1,0 +1,27 @@
+@font-face {
+  font-family: "Rubik";
+  src:
+    url("../../fonts/Rubik-Regular.woff2") format("woff2"),
+    url("../../fonts/Rubik-Regular.woff") format("woff");
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Rubik";
+  src:
+    url("../../fonts/Rubik-Medium.woff2") format("woff2"),
+    url("../../fonts/Rubik-Medium.woff") format("woff");
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Merriweather";
+  src:
+    url("../../fonts/Merriweather_36pt-Black.woff2") format("woff2"),
+    url("../../fonts/Merriweather_36pt-Black.woff") format("woff");
+  font-style: normal;
+  font-weight: 900;
+  font-display: swap;
+}

@@ -1,0 +1,41 @@
+.footer {
+  padding: clampAd(15, 33) 0;
+  background: $color-accent;
+
+  font-weight: 500;
+  font-size: clampAd(10, 12);
+  color: $color-opacity-2;
+
+  // .footer__container
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+
+    @include medium-mobile {
+      justify-content: center;
+    }
+  }
+  // .footer__contact
+  &__contact {
+  }
+  // .footer__logo
+  &__logo {
+    //transform: translateX(30%);
+  }
+  // .footer__actions
+  &__actions {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: clampAd(20, 30);
+  }
+  // .footer__action
+  &__action {
+  }
+  // .footer__link
+  &__link {
+  }
+}

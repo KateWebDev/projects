@@ -1,0 +1,8 @@
+[class*="__container"] {
+  max-width: $maxWidthContainer;
+  margin: 0 auto;
+  padding: 0 $containerPadding;
+}
+[class*="__container--big"] {
+  max-width: 900px;
+}

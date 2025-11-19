@@ -1,0 +1,56 @@
+@import "components/mixin";
+
+$laptop: 1440px;
+$tablet: 1023px;
+$mobile: 767px;
+$big-mobile: 574px;
+$medium-mobile: 478px;
+$small-mobile: 389px;
+
+//Страница
+$widthReportMax: 1000;
+$widthReportMin: 320;
+$widthReportMinPx: $widthReportMin + px;
+
+// Контейнер
+$widthContainer-num: 800;
+$widthContainer: $widthContainer-num + px;
+$containerPadding-num: 10;
+$containerPadding: $containerPadding-num + px;
+$maxWidthContainer: calc($widthContainer + (2 * $containerPadding));
+
+// Доп цвета
+$color-white: #ffffff;
+$color-black: #000000;
+
+$color-light-1: #606b74;
+$color-light-2: #646d70;
+
+$color-opacity-1: rgba($color-white, 0.8);
+$color-opacity-2: rgba($color-white, 0.6);
+$color-opacity-3: rgba($color-white, 0.4);
+$color-opacity-4: rgba($color-white, 0.7);
+
+$color-accent: #222f33;
+
+// Радиусы
+$radius-circle: 50%;
+$radius-s: 4px;
+
+// Задержка
+$transition: all 0.3s linear;
+
+// Шрифты
+// @include Merriweather900;
+// Rubik
+
+//Фон
+$mainBackGround: $color-white;
+
+//Шрифт
+$fontFamily: "Rubik", sans-serif;
+$mainColor: $color-light-2;
+$mainSize: 14;
+$size: $mainSize + px;
+$fontWeight: 400;
+$lineheight: calc(26 / $mainSize);

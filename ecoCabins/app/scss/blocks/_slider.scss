@@ -1,0 +1,29 @@
+.slider {
+  --height: #{clampAd(300, 366)};
+
+  background: $color-accent;
+  max-height: var(--height);
+  // .slider__items
+  &__items {
+  }
+  // .slider__item
+  &__item {
+  }
+  // .slider__image
+  &__image {
+    opacity: 0.8;
+  }
+  // .slider__img
+  &__img {
+    display: block;
+    max-width: 100%;
+    min-height: var(--height);
+    width: 100%;
+    object-fit: cover;
+    object-position: bottom center;
+  }
+  // .slider__pagination
+  &__pagination {
+    margin-top: -20px;
+  }
+}

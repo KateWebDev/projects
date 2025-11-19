@@ -1,0 +1,28 @@
+.info {
+  padding: clampAd(30, 70) 0 clampAd(40, 80);
+  background: $color-accent;
+  color: $color-opacity-4;
+
+  // .info__container
+  &__container {
+    display: flex;
+    flex-direction: column;
+    row-gap: 8px;
+  }
+  // .info__title
+  &__title {
+  }
+  // .info__text
+  &__text {
+    columns: 2;
+    column-gap: clampAd(20, 43);
+
+    @include big-mobile {
+      columns: 1;
+
+      display: flex;
+      flex-direction: column;
+      row-gap: 10px;
+    }
+  }
+}

@@ -1,0 +1,23 @@
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  column-gap: 8px;
+
+  position: relative;
+  z-index: 1;
+
+  .swiper-pagination-bullet {
+    --sizeCircle: 8px;
+
+    width: var(--sizeCircle);
+    height: var(--sizeCircle);
+    border-radius: $radius-circle;
+    background: $color-opacity-3;
+    opacity: 1;
+  }
+
+  .swiper-pagination-bullet-active {
+    background: $color-white;
+  }
+}

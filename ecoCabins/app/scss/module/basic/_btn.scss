@@ -1,0 +1,35 @@
+.btn {
+  padding: clampAd(5, 10) clampAd(10, 20);
+  background: $color-white;
+  border-radius: $radius-s;
+  border: 1px solid $color-white;
+
+  user-select: none;
+  white-space: nowrap;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  font-weight: 500;
+  font-size: clampAd(10, 12);
+  line-height: calc(14 / 12);
+  text-align: center;
+  color: $color-light-1;
+
+  transition: all 0.3s linear;
+
+  &--reverse {
+    border-color: $color-light-2;
+  }
+
+  &--small-padding-inline {
+    padding-inline: clampAd(8, 15);
+  }
+
+  @media (any-hover: hover) {
+    &:hover:not(:disabled) {
+      background: $color-opacity-1;
+    }
+  }
+}

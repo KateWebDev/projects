@@ -1,0 +1,10 @@
+.title {
+  @include Merriweather900;
+  font-size: clampAd(20, 30);
+  line-height: calc(38 / 30);
+  color: $color-accent;
+
+  &--color-light {
+    color: $color-white;
+  }
+}
