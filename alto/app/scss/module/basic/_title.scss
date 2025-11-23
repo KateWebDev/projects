@@ -1,0 +1,14 @@
+.main-title {
+  font-size: clampAd(30, 72);
+  line-height: 1.1;
+  letter-spacing: 0.03em;
+  color: $color-dark-1;
+}
+
+.title {
+  font-size: clampAd(24, 48);
+  line-height: 1.25;
+  letter-spacing: 0.02em;
+  text-align: center;
+  color: $color-dark-1;
+}

@@ -1,0 +1,24 @@
+.soc1als {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+
+  // .soc1als__item
+  &__item {
+  }
+  // .soc1als__link
+  &__link {
+    --size: #{clampAd(18, 20)};
+
+    width: var(--size);
+    height: var(--size);
+    transition: $transition;
+
+    @media (any-hover: hover) {
+      &:hover {
+        transform: scale(1.1);
+      }
+    }
+  }
+}

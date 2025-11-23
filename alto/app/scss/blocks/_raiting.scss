@@ -1,0 +1,28 @@
+.raiting {
+  display: inline-flex;
+  align-items: center;
+  // column-gap: 8px;
+
+  // .raiting__item
+  &__item {
+    width: clampAd(24, 28);
+    height: clampAd(24, 28);
+
+    #star-1 {
+      width: 100%;
+      height: 100%;
+      fill: $color-white;
+    }
+    #star-2 {
+      width: 100%;
+      height: 100%;
+      stroke: $color-star-2;
+    }
+
+    &--active {
+      #star-1 {
+        fill: $color-star-1;
+      }
+    }
+  }
+}

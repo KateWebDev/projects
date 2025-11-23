@@ -1,0 +1,65 @@
+.btn {
+  padding: clampAd(10, 17) clampAd(15, 30);
+  border-radius: $radius;
+  background: $color-accent;
+
+  font-size: clampAd(14, 18);
+  line-height: 1.3;
+  color: $color-dark-1;
+
+  user-select: none;
+  white-space: nowrap;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  column-gap: clampAd(10, 25);
+
+  transition: all 0.3s linear;
+
+  &::after {
+    content: "";
+    width: 18px;
+    height: 12px;
+    background: url(../../images/icons/arrow-right.svg) center/cover no-repeat;
+  }
+
+  @media (any-hover: hover) {
+    &:hover:not(:disabled) {
+      background: $color-light-4;
+    }
+  }
+}
+
+.link {
+  display: flex;
+  align-items: center;
+  column-gap: 10px;
+
+  font-size: clampAd(14, 18);
+  line-height: 1.6;
+  text-align: center;
+  color: $color-dark-1;
+
+  user-select: none;
+  white-space: nowrap;
+
+  transition: all 0.3s linear;
+
+  &::after {
+    content: "";
+    width: clampAd(8, 16);
+    height: clampAd(7, 15);
+    background: url(../../images/icons/arrow-right.svg) center/cover no-repeat;
+    transition: $transition;
+  }
+
+  @media (any-hover: hover) {
+    &:hover:not(:disabled) {
+      text-shadow: 0 0 1px currentColor;
+      &::after {
+        transform: rotate(180deg);
+      }
+    }
+  }
+}

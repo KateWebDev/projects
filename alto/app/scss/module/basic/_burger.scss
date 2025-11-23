@@ -1,0 +1,29 @@
+[class*="__burger"] {
+  display: flex;
+  flex-direction: column;
+  row-gap: clampAd(8, 12);
+  cursor: pointer;
+
+  span {
+    width: 24px;
+    height: 4px;
+    background: url(../../images/icons/line.svg) center/contain no-repeat;
+
+    transition: all 0.3s linear;
+  }
+
+  &.header__burger--active {
+    span {
+      &:nth-child(1) {
+        transform: rotate(45deg);
+      }
+      &:nth-child(2) {
+        transform: rotate(-45deg) translateY(-11px) translateX(11px);
+
+        @include big-mobile {
+          transform: rotate(-45deg) translateY(-9px) translateX(8px);
+        }
+      }
+    }
+  }
+}

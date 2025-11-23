@@ -1,0 +1,5 @@
+.text {
+  display: flex;
+  flex-direction: column;
+  row-gap: clampAd(15, 35);
+}

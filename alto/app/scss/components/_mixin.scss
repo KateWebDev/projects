@@ -1,0 +1,27 @@
+@mixin mobile {
+  @media (max-width: $mobile) {
+    @content;
+  }
+}
+@mixin big-mobile {
+  @media (max-width: $big-mobile) {
+    @content;
+  }
+}
+@mixin medium-mobile {
+  @media (max-width: $medium-mobile) {
+    @content;
+  }
+}
+@function clampAd($min, $max) {
+  $minPx: $min + px;
+  $maxPx: $max + px;
+
+  $result: clamp(
+    $minPx,
+    calc($minPx + ($max - $min) * ((100vw - $widthReportMinPx) / ($widthReportMax - $widthReportMin))),
+    $maxPx
+  );
+
+  @return $result;
+}
