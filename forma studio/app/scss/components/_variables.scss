@@ -13,7 +13,7 @@ $widthReportMin: 320;
 $widthReportMinPx: $widthReportMin + px;
 
 // Контейнер
-$widthContainer-num: 1170;
+$widthContainer-num: 1720;
 $widthContainer: $widthContainer-num + px;
 $containerPadding-num: 15;
 $containerPadding: $containerPadding-num + px;
@@ -23,22 +23,20 @@ $maxWidthContainer: calc($widthContainer + (2 * $containerPadding));
 $color-white: #ffffff;
 $color-black: #000000;
 
+$color-light: #f5f5f5;
+$color-dark: #2b2b2b;
+$color-bg-dark: #171717;
 $color-accent: #ff0000;
-
-// Радиусы
-$radius-circle: 50%;
 
 // Задержка
 $transition: all 0.3s linear;
-
-// Шрифты
 
 //Фон
 $mainBackGround: $color-white;
 
 //Шрифт
 $fontFamily: "Roboto", sans-serif;
-$mainColor: $color-black;
+$mainColor: $color-dark;
 $mainSize: 16;
 $size: $mainSize + px;
 $fontWeight: 400;

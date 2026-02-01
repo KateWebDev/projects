@@ -1,8 +1,13 @@
 .main-title {
+  font-size: clampAd(35, 85);
+  line-height: 1.1;
+  text-transform: uppercase;
+  color: $color-light;
 }
 
 .title {
-}
-
-.subtitle {
+  font-weight: 300;
+  font-size: clampAd(24, 42);
+  line-height: 1.1;
+  text-transform: uppercase;
 }

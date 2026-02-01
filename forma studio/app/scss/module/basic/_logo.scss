@@ -1,5 +1,9 @@
 .logo {
-  flex: 0 0 100px;
+  flex: 0 0 144px;
+  // .logo--big
+  &--big {
+    flex: 0 0 235px;
+  }
 
   img {
     display: block;

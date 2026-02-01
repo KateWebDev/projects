@@ -13,31 +13,3 @@
     }
   }
 }
-
-.button {
-  user-select: none;
-  white-space: nowrap;
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-  transition: all 0.3s linear;
-
-  @media (any-hover: hover) {
-    &:hover:not(:disabled) {
-    }
-  }
-}
-
-.link {
-  user-select: none;
-  white-space: nowrap;
-
-  transition: all 0.3s linear;
-
-  @media (any-hover: hover) {
-    &:hover:not(:disabled) {
-    }
-  }
-}

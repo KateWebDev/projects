@@ -1,4 +1,17 @@
 .header {
+  // .header__container
+  &__container {
+  }
+  // .header__logo
+  &__logo {
+  }
+  // .header__menu
+  &__menu {
+  }
+  // .header__link
+  &__link {
+  }
+  // .header__burger
   &__burger {
     position: relative;
     z-index: 4;

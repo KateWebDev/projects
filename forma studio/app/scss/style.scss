@@ -17,20 +17,14 @@
 @import "module/basic/main";
 //Контейнер
 @import "module/basic/container";
-// Линии ( для border) за пределами контейнера
-//@import "module/basic/full-line";
 //Бургер меню
 @import "module/basic/burger";
 //Для контейнера картинок в карточках - технический класс
-//@import "module/basic/ibg";
+@import "module/basic/ibg";
 // для сокрытия элемнетов на странице + none
 @import "module/basic/hidden";
-// стрелка для многоуровневого меню
-//@import "module/basic/arrow";
 // для блока с текстом
 @import "module/basic/text";
-// Контейнер на весь экран
-//@import "module/basic/container-full";
 // Логотип
 @import "module/basic/logo";
 // Меню
@@ -40,14 +34,8 @@
 // Заголовки
 @import "module/basic/title";
 //------------------------------
-//@import "module/submenu";
-//@import "module/form";
-//@import "module/custom-select";
-//@import "module/accardeon";
-//@import "module/tabs";
-//@import "module/soc1als";
-//@import "module/pagination";
-//@import "module/progress";
+@import "module/form";
+@import "module/phone";
 //------------------------------
 // Шапка
 @import "blocks/header";
@@ -57,4 +45,3 @@
 //------------------------------
 // Подвал
 @import "blocks/footer";
-// @import "components/adaptive";
