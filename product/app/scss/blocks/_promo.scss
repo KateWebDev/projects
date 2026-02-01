@@ -1,0 +1,89 @@
+.promo {
+  // .promo__container
+  &__container {
+    display: flex;
+    justify-content: center;
+    padding: 0 20px;
+  }
+  // .promo__inner
+  &__inner {
+    padding: clampAd(17, 50) clampAd(11, 50) clampAd(0, 50);
+
+    max-width: 87.5%;
+    width: 100%;
+    background: $color-accent;
+    border-radius: $radius-xl;
+
+    position: relative;
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      right: 50px;
+      transform: translateY(-50%);
+      padding-top: 330px;
+      max-width: 350px;
+      width: 100%;
+      background: image-set(
+          url("../images/main/promo/bg.avif") type("image/avif"),
+          url("../images/main/promo/bg@2x.avif") 2x type("image/avif"),
+          url("../images/main/promo/bg.webp") type("image/webp"),
+          url("../images/main/promo/bg@2x.webp") 2x type("image/webp"),
+          url("../images/main/promo/bg.png"),
+          url("../images/main/promo/bg@2x.png") 2x
+        )
+        center/cover no-repeat;
+      -webkit-filter: drop-shadow(0 0 32px rgba($color-black, 0.15));
+    }
+
+    @include tablet {
+      max-width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      row-gap: 40px;
+
+      &::after {
+        position: static;
+        transform: translateY(0);
+      }
+    }
+    @include small-mobile {
+      row-gap: 20px;
+
+      &::after {
+        padding-top: 220px;
+        max-width: 80%;
+      }
+    }
+  }
+  // .promo__content
+  &__content {
+    max-width: 400px;
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    row-gap: 46px;
+
+    @include tablet {
+      max-width: 100%;
+      align-items: center;
+      row-gap: 60px;
+    }
+    @include small-mobile {
+      row-gap: 20px;
+    }
+  }
+  // .promo__top
+  &__top {
+    color: $color-white;
+  }
+  // .promo__btn
+  &__btn {
+    padding: 10px 34px;
+  }
+}

@@ -1,0 +1,20 @@
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  column-gap: 10px;
+
+  position: relative;
+  z-index: 1;
+
+  .swiper-pagination-bullet {
+    flex: 0 0 16px;
+    height: 16px;
+    border-radius: $radius-circle;
+    background: $color-light-4;
+  }
+
+  .swiper-pagination-bullet-active {
+    background: $color-accent;
+  }
+}

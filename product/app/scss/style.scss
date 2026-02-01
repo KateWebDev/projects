@@ -1,0 +1,53 @@
+@use "sass:math";
+//------------------------------
+// Переменные
+@import "components/variables";
+// Библиотеки
+@import "components/plugins";
+// Шрифты
+@import "components/fonts";
+// Миксины
+@import "components/mixin";
+// Сброс настроек
+@import "components/resetStyle";
+//------------------------------
+// body
+@import "module/basic/body";
+// main
+@import "module/basic/main";
+//Контейнер
+@import "module/basic/container";
+//Бургер меню
+@import "module/basic/burger";
+//Для контейнера картинок в карточках - технический класс
+@import "module/basic/ibg";
+// для сокрытия элемнетов на странице + none
+@import "module/basic/hidden";
+// для блока с текстом
+@import "module/basic/text";
+// Логотип
+@import "module/basic/logo";
+// Меню
+@import "module/basic/menu";
+// Кнопки
+@import "module/basic/btn";
+// Заголовки
+@import "module/basic/title";
+
+@import "module/theme";
+@import "module/raiting";
+@import "module/pagination";
+@import "module/form";
+@import "module/soc1als";
+//------------------------------
+// Шапка
+@import "blocks/header";
+//------------------------------
+// Страницы
+@import "pages/index";
+@import "pages/pricing";
+@import "pages/customers";
+@import "pages/resources";
+//------------------------------
+// Подвал
+@import "blocks/footer";

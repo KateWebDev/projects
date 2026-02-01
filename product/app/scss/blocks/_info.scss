@@ -1,0 +1,210 @@
+.info {
+  // .info__container
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 88px 30px;
+
+    @include tablet {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    @include small-mobile {
+      row-gap: 30px;
+    }
+  }
+  // .info__content
+  &__content {
+    max-width: 520px;
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    row-gap: clampAd(16, 24);
+
+    @include tablet {
+      max-width: 100%;
+    }
+  }
+  // .info__title
+  &__title {
+    letter-spacing: -0.03em;
+
+    @include tablet {
+      text-align: center;
+    }
+  }
+  // .info__text
+  &__text {
+    font-size: 20px;
+    letter-spacing: -0.03em;
+
+    @include tablet {
+      text-align: center;
+    }
+
+    @include small-mobile {
+      font-size: 16px;
+    }
+  }
+  // .info__form
+  &__form {
+    max-width: 470px;
+    width: 100%;
+    height: 66px;
+
+    border: 1px solid $color-light-16;
+    border-radius: $radius-xxxl;
+    overflow: hidden;
+
+    position: relative;
+
+    transition: $transition;
+
+    &:has(.info__input:active, .info__input:focus) {
+      border-color: $color-accent;
+    }
+
+    @include tablet {
+      max-width: 100%;
+    }
+
+    @include small-mobile {
+      height: 50px;
+    }
+  }
+  // .info__input
+  &__input {
+    width: 70%;
+    height: 100%;
+    padding: 10px 25px;
+    outline: none;
+    background: transparent;
+
+    &::placeholder {
+      @include Poppins400;
+      font-size: 16px;
+      line-height: 1;
+      letter-spacing: -0.03em;
+      color: $color-dark-1;
+
+      @include small-mobile {
+        font-size: 12px;
+      }
+    }
+
+    @include big-mobile {
+      width: 65%;
+    }
+
+    @include small-mobile {
+      padding: 10px;
+    }
+  }
+  // .info__btn
+  &__btn {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+
+    padding: 13px 22px;
+    border-radius: $radius-xxxl;
+
+    @include small-mobile {
+      padding: 10px;
+    }
+  }
+  // .info__media
+  &__media {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  // .info__photos
+  &__photos {
+    display: flex;
+    align-items: center;
+  }
+  // .info__photo
+  &__photo {
+    width: 50px;
+    height: 50px;
+    border-radius: $radius-circle;
+    overflow: hidden;
+    outline: 4px solid $color-white;
+
+    &:not(:first-of-type) {
+      margin-left: -20px;
+    }
+
+    &:last-of-type {
+      outline-color: $color-light-15;
+    }
+  }
+  // .info__photo-img
+  &__photo-img {
+    display: block;
+    max-width: 100%;
+    max-height: 100%;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+  // .info__descr
+  &__descr {
+    font-size: 14px;
+
+    span {
+      @include Poppins500;
+      color: $color-accent;
+    }
+  }
+  // .info__images
+  &__images {
+    margin-right: clampAd(0, 95);
+
+    max-width: 435px;
+    width: 100%;
+
+    position: relative;
+  }
+  // .info__image
+  &__image {
+    box-shadow: $shadow-5;
+    border-radius: $radius-xl;
+    overflow: hidden;
+
+    // .info__image--big
+    &--big {
+      max-width: 100%;
+      width: 100%;
+    }
+    // .info__image--small
+    &--small {
+      max-width: 360px;
+      width: 100%;
+
+      position: absolute;
+      top: 50%;
+      left: 42%;
+
+      @include mobile {
+        display: none;
+      }
+    }
+  }
+  // .info__img
+  &__img {
+    display: block;
+    max-width: 100%;
+    max-height: 100%;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+}

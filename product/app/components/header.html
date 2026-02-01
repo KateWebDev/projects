@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scable=0" />
+  <link rel="stylesheet" href="css/style.min.css" />
+  <title>@@title</title>
+</head>
+
+<body class="light-theme">
+  <div class="wrapper">
+    <header class="header">
+      <div class="header__container">
+        <a class="header__logo logo" href="/" aria-label="Главная страница" title="Логотип сайта">
+          <img src="images/logo/logo.svg" alt="Логотип сайта" width="178" height="36" data-theme="light">
+          <img src="images/logo/logo-dark.svg" alt="Логотип сайта" width="178" height="36" data-theme="dark">
+        </a>
+        <nav class="header__menu menu">
+          <ul class="menu__items">
+            <li class="menu__item">
+              <a class="menu__link @@if (context.page === 'home') {menu__link--active}" href="index.html">Product</a>
+            </li>
+            <li class="menu__item">
+              <a class="menu__link @@if (context.page === 'pricing') {menu__link--active}"
+                href="pricing.html">Pricing</a>
+            </li>
+            <li class="menu__item">
+              <a class="menu__link @@if (context.page === 'customers') {menu__link--active}"
+                href="customers.html">Customers</a>
+            </li>
+            <li class="menu__item">
+              <a class="menu__link @@if (context.page === 'resources') {menu__link--active}"
+                href="resources.html">Resources</a>
+            </li>
+          </ul>
+          <ul class="menu__actions-mobile">
+            <li class="menu__action">
+              <button class="header__btn btn btn--light btn--capitalize" type="button">
+                Sign In
+              </button>
+            </li>
+            <li class="menu__action">
+              <button class="header__btn btn btn--capitalize" type="button">
+                Sign Up
+              </button>
+            </li>
+            <li class="menu__action theme">
+              <label for="theme-toggle" aria-label="theme" title="theme">
+                <img src="../images/icons/theme.svg" alt="theme" width="24" height="24">
+              </label>
+              <input type="checkbox" id="theme-toggle" />
+            </li>
+          </ul>
+        </nav>
+        <ul class="header__actions">
+          <li class="header__action">
+            <button class="header__btn btn btn--light btn--capitalize" type="button">
+              Sign In
+            </button>
+          </li>
+          <li class="header__action">
+            <button class="header__btn btn btn--capitalize" type="button">
+              Sign Up
+            </button>
+          </li>
+          <li class="header__action theme">
+            <label for="theme-toggle" aria-label="theme" title="theme">
+              <img src="../images/icons/theme.svg" alt="theme" width="24" height="24">
+            </label>
+            <input type="checkbox" id="theme-toggle" />
+          </li>
+        </ul>
+        <button class="header__burger" type="button" aria-label="open menu" title="open menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </header>

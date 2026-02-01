@@ -1,0 +1,110 @@
+.intro {
+  // .intro__container
+  &__container {
+    display: flex;
+    align-items: center;
+    gap: clampAd(10, 35);
+
+    &::after {
+      content: "";
+      padding-top: clampAd(311, 555);
+      max-width: clampAd(338, 610);
+      width: 100%;
+      background: url(../../images/main/index/hero-img.svg) center/cover no-repeat;
+
+      @include small-mobile {
+        padding-top: 280px;
+      }
+    }
+
+    @include tablet {
+      flex-direction: column-reverse;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+  }
+  // .intro__content
+  &__content {
+    max-width: 465px;
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    row-gap: clampAd(16, 18);
+
+    @include tablet {
+      max-width: 100%;
+      justify-content: center;
+      text-align: center;
+    }
+  }
+  // .intro__title
+  &__title {
+  }
+  // .intro__text
+  &__text {
+    font-size: 18px;
+    line-height: 1.5;
+
+    margin-bottom: clampAd(2, 27);
+
+    @include small-mobile {
+      font-size: 14px;
+    }
+  }
+  // .intro__actions
+  &__actions {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: $gap-big;
+
+    @include tablet {
+      justify-content: center;
+    }
+  }
+  // .intro__action
+  &__action {
+  }
+  // .intro__btn
+  &__btn {
+    min-width: clampAd(142, 178);
+    width: 100%;
+
+    @include small-mobile {
+      min-width: 100px;
+    }
+  }
+
+  // .intro__play
+  &__play {
+    @include Poppins600;
+    text-decoration: underline;
+    text-underline-offset: 2px;
+    color: $color-accent;
+
+    display: flex;
+    align-items: center;
+    column-gap: 8px;
+    transition: $transition;
+
+    &::before {
+      content: "";
+      width: 16px;
+      height: 18px;
+      background: url(../../images/icons/play.svg) center/contain no-repeat;
+      transition: $transition;
+    }
+
+    @media (any-hover: hover) {
+      &:hover:not(:disabled) {
+        text-underline-offset: 3px;
+        text-decoration: underline;
+
+        &::before {
+          transform: scale(1.1);
+        }
+      }
+    }
+  }
+}

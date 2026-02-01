@@ -1,0 +1,60 @@
+.header {
+  padding: clampAd(17, 19) 0;
+
+  &--fixed {
+    padding: 10px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    overflow: auto;
+    background: $color-light-1;
+    box-shadow: $shadow-1;
+  }
+
+  @include tablet {
+    box-shadow: $shadow-1;
+  }
+
+  @include small-mobile {
+    padding: 10px 0;
+  }
+
+  // .header__container
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    column-gap: $gap-medium;
+  }
+  // .header__logo
+  &__logo {
+    margin-right: auto;
+  }
+  // .header__menu
+  &__menu {
+  }
+  // .header__actions
+  &__actions {
+    display: flex;
+    align-items: center;
+    column-gap: $gap-medium;
+
+    @include big-mobile {
+      display: none;
+    }
+  }
+  // .header__action
+  &__action {
+  }
+  // .header__btn
+  &__btn {
+  }
+  // .header__burger
+  &__burger {
+    @include tablet {
+      display: flex;
+    }
+  }
+}

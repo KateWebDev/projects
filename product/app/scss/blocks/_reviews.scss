@@ -1,0 +1,190 @@
+.reviews {
+  position: relative;
+  overflow: hidden;
+
+  &::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%) rotate(180deg);
+    width: 100%;
+    height: 100%;
+    background: url(../../images/main/index/advantages-decor.svg) center/cover no-repeat;
+  }
+
+  // .reviews__container
+  &__container {
+    padding-top: 50px;
+
+    position: relative;
+    z-index: 1;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: clampAd(32, 50);
+
+    @include mobile {
+      padding-top: 72px;
+    }
+
+    @include small-mobile {
+      padding-top: 30px;
+    }
+  }
+  // .reviews__top
+  &__top {
+    max-width: 542px;
+  }
+  // .reviews__items
+  &__items {
+    align-self: stretch;
+
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px 100px;
+
+    @include mobile {
+      grid-template-columns: 1fr;
+      gap: 32px;
+    }
+  }
+  // .reviews__item
+  &__item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    &:nth-child(4n + 2),
+    &:nth-child(4n + 3) {
+      flex-direction: row-reverse;
+
+      .reviews__blockquote {
+        &::before {
+          right: 36px;
+          left: auto;
+        }
+        &::after {
+          right: 20px;
+          left: auto;
+        }
+      }
+
+      @include mobile {
+        flex-direction: row;
+        gap: 14px;
+
+        .reviews__blockquote {
+          &::before {
+            left: 36px;
+          }
+          &::after {
+            left: 20px;
+          }
+        }
+      }
+    }
+
+    &:nth-child(2n + 2) {
+      @include mobile {
+        flex-direction: row-reverse;
+
+        .reviews__blockquote {
+          &::before {
+            right: 36px;
+            left: auto;
+          }
+          &::after {
+            right: 20px;
+            left: auto;
+          }
+        }
+      }
+    }
+  }
+  // .reviews__image
+  &__image {
+    flex: 0 0 clampAd(90, 98);
+    aspect-ratio: 1/1;
+    border-radius: $radius-circle;
+    overflow: hidden;
+    border: 2px solid transparent;
+
+    // .reviews__image--border-color-1
+    &--border-color-1 {
+      border-color: $color-multi-3;
+    }
+    // .reviews__image--border-color-2
+    &--border-color-2 {
+      border-color: $color-multi-2;
+    }
+    // .reviews__image--border-color-3
+    &--border-color-3 {
+      border-color: $color-accent;
+    }
+    // .reviews__image--border-color-4
+    &--border-color-4 {
+      border-color: $color-multi-5;
+    }
+
+    @include small-mobile {
+      flex: 0 0 60px;
+    }
+  }
+  // .reviews__img
+  &__img {
+    display: block;
+    max-width: 100%;
+    max-height: 100%;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+  // .reviews__blockquote
+  &__blockquote {
+    padding: 13px 17px;
+    background: $color-white;
+    box-shadow: $shadow-3;
+    border-radius: $radius-xl;
+
+    @include Poppins500;
+    line-height: 1.5;
+    text-align: center;
+    color: $color-dark-3;
+
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 36px;
+      transform: translateY(30%);
+      width: 18px;
+      height: 18px;
+      border-radius: $radius-circle;
+      border: 1px solid $color-white;
+      background: $color-white;
+      box-shadow: $shadow-3;
+    }
+    &::after {
+      content: "";
+      position: absolute;
+      top: 100%;
+      left: 20px;
+      transform: translateY(100%);
+      width: 10px;
+      height: 10px;
+      border-radius: $radius-circle;
+      border: 1px solid $color-white;
+      background: $color-white;
+      box-shadow: $shadow-3;
+    }
+
+    @include mobile {
+      padding: 12px 20px;
+    }
+  }
+}

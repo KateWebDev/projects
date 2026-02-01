@@ -1,0 +1,69 @@
+.main-title {
+  @include Poppins700;
+  font-size: clampAd(36, 40);
+  line-height: 1.5;
+
+  // .main-title--capitalize
+  &--capitalize {
+    text-transform: capitalize;
+  }
+
+  // .main-title--center
+  &--center {
+    text-align: center;
+  }
+
+  @include small-mobile {
+    font-size: 24px;
+  }
+}
+
+.title {
+  @include Poppins700;
+  font-size: clampAd(32, 34);
+  line-height: 1.5;
+  text-transform: capitalize;
+
+  // .title--no-capitalize
+  &--no-capitalize {
+    text-transform: none;
+  }
+  @include small-mobile {
+    font-size: 18px;
+  }
+}
+
+.subtitle {
+  @include Poppins600;
+  line-height: 1.5;
+
+  @include small-mobile {
+    font-size: 14px;
+  }
+}
+
+.name {
+  @include Poppins600;
+  font-size: 24px;
+
+  @include small-mobile {
+    font-size: 18px;
+  }
+
+  // .name--small
+  &--small {
+    font-size: 22px;
+
+    @include small-mobile {
+      font-size: 14px;
+    }
+  }
+  // .name--small-weight
+  &--small-weight {
+    @include Poppins500;
+  }
+  // .name--big-weight
+  &--big-weight {
+    @include Poppins700;
+  }
+}

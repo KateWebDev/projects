@@ -1,0 +1,77 @@
+.blog-card {
+  border-radius: $radius-s;
+  overflow: hidden;
+
+  // .blog-card__ibg
+  &__ibg {
+    padding: 0px 0px 53.5% 0px;
+  }
+  // .blog-card__img
+  &__img {
+  }
+  // .blog-card__content
+  &__content {
+    padding: 24px;
+    border: 1px solid $color-light-6;
+
+    display: flex;
+    flex-direction: column;
+    row-gap: 12px;
+  }
+  // .blog-card__info
+  &__info {
+    display: flex;
+    align-items: center;
+    column-gap: 5px;
+
+    &:has(.blog-card__author + .blog-card__date) {
+      .blog-card__author {
+        padding-right: 7px;
+        position: relative;
+
+        &::after {
+          content: "";
+          position: absolute;
+          top: 50%;
+          right: 0;
+          transform: translateY(-50%);
+          width: 2px;
+          height: 60%;
+          background: currentColor;
+        }
+      }
+    }
+  }
+  // .blog-card__author
+  &__author {
+    @include Poppins700;
+    display: flex;
+    align-items: flex-start;
+    column-gap: 3px;
+
+    &::before {
+      content: "By";
+      @include Poppins400;
+    }
+  }
+  // .blog-card__date
+  &__date {
+  }
+  // .blog-card__name
+  &__name {
+    transition: $transition;
+
+    display: -webkit-box;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    -o-text-overflow: ellipsis;
+
+    @media (any-hover: hover) {
+      &:hover:not(:disabled) {
+        color: $color-accent;
+      }
+    }
+  }
+}

@@ -1,0 +1,9 @@
+[class*="__container"] {
+  max-width: $maxWidthContainer;
+  margin: 0 auto;
+  padding: 0 $containerPadding;
+
+  @include small-mobile {
+    padding: 0 15px;
+  }
+}

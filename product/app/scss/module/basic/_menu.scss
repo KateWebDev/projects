@@ -1,0 +1,88 @@
+.menu {
+  @include tablet {
+    padding: 30px 0;
+    position: fixed;
+    top: 75px;
+    right: 0;
+    z-index: 3;
+    width: 80vw;
+    height: 90vh;
+    overflow: auto;
+    overflow-x: hidden;
+    transform: translateX(100%);
+    transition: transform 0.4s ease-in-out;
+
+    background: $color-light-1;
+
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-items: center;
+    row-gap: 30px;
+  }
+
+  @include small-mobile {
+    top: 45px;
+  }
+
+  &.menu--active {
+    @include tablet {
+      transform: translateX(0);
+    }
+  }
+
+  // .menu__items
+  &__items {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px clampAd(20, 40);
+
+    @include tablet {
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+  // .menu__item
+  &__item {
+  }
+  // .menu__link
+  &__link {
+    white-space: nowrap;
+    transition: all 0.3s linear;
+
+    @media (any-hover: hover) {
+      &:hover:not(&--active) {
+        color: $color-accent;
+      }
+    }
+
+    &--active {
+      @include Poppins600;
+      cursor: default;
+    }
+
+    @include tablet {
+      padding: 5px 0;
+      font-size: 20px;
+    }
+  }
+  // .menu__actions-mobile
+  &__actions-mobile {
+    display: none;
+    grid-template-columns: 1fr;
+    justify-items: center;
+    align-content: center;
+    row-gap: 30px;
+
+    @include big-mobile {
+      display: grid;
+    }
+  }
+  // .menu__action
+  &__action {
+  }
+  // .menu__btn
+  &__btn {
+  }
+}

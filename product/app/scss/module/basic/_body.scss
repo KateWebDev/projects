@@ -1,0 +1,105 @@
+body {
+  font-family: $fontFamily;
+  font-size: $size;
+  line-height: $lineheight;
+  font-weight: $fontWeight;
+  background-color: $mainBackGround;
+  color: $mainColor;
+
+  @include small-mobile {
+    font-size: 12px;
+  }
+
+  &.lock {
+    overflow: hidden;
+  }
+}
+
+//------
+// светлая тема
+.light-theme {
+  background-color: $mainBackGround;
+  color: $mainColor;
+
+  img[data-theme="dark"] {
+    display: none;
+  }
+}
+//------
+// темная тема
+.dark-theme {
+  $shadow-1: 0 -2px 8px 0 rgba($color-white, 0.25) !global;
+
+  color: $color-white;
+  background-color: $color-dark-5;
+
+  img[data-theme="light"] {
+    display: none;
+  }
+
+  .header {
+    &--fixed {
+      background-color: $color-dark-5;
+    }
+  }
+
+  .header__burger {
+    span {
+      background: $color-white;
+    }
+  }
+
+  .btn--light {
+    color: $color-white;
+    border-color: currentColor;
+  }
+
+  .menu {
+    @include tablet {
+      background: $color-dark-1;
+    }
+  }
+
+  .advantages,
+  .reviews {
+    &::before {
+      background: url(../../images/main/index/advantages-decor-dark.svg) center/cover no-repeat;
+    }
+  }
+
+  .enterprice,
+  .offers {
+    background: $color-dark-1;
+  }
+
+  .accardeon {
+    &__item {
+      border-color: $color-light-13;
+    }
+  }
+
+  .advantages {
+    &--background {
+      background: $color-dark-1;
+    }
+  }
+
+  .offers {
+    &__link {
+      color: $color-white;
+    }
+  }
+
+  .info {
+    input::placeholder {
+      color: $color-white;
+    }
+  }
+
+  .form {
+    background: $color-dark-1;
+    &__name {
+      color: $color-white;
+    }
+  }
+}

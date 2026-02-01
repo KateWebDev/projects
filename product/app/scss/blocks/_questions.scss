@@ -1,0 +1,11 @@
+.questions {
+  // .questions__container
+  &__container {
+    display: flex;
+    flex-direction: column;
+    row-gap: clampAd(30, 50);
+  }
+  // .questions__top
+  &__top {
+  }
+}

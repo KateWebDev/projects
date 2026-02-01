@@ -1,0 +1,73 @@
+.btn {
+  padding: clampAd(5, 9) clampAd(16, 24);
+  border-radius: $radius-xs;
+  background: $color-accent;
+
+  @include Poppins600;
+  line-height: 1.5;
+
+  text-align: center;
+  color: $color-white;
+
+  user-select: none;
+  white-space: nowrap;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  transition: $transition;
+
+  @media (any-hover: hover) {
+    &:hover:not(:disabled) {
+      box-shadow: 0 0 8px 1px $color-accent;
+    }
+  }
+  // .btn--reverse
+  &--reverse {
+    color: $color-accent;
+    background: $color-white;
+
+    @media (any-hover: hover) {
+      &:hover:not(:disabled) {
+        box-shadow: 0 0 8px 1px $color-white;
+      }
+    }
+  }
+  // .btn--light
+  &--light {
+    background: transparent;
+    border: 1px solid $color-light-2;
+    color: $color-dark-2;
+
+    @media (any-hover: hover) {
+      &:hover:not(:disabled) {
+        box-shadow: 0 0 8px 1px $color-light-2;
+      }
+    }
+  }
+  // .btn--big-padding
+  &--big-padding {
+    padding: 15px 30px;
+
+    @include small-mobile {
+      padding: 10px 20px;
+    }
+  }
+  // .btn--big-weight
+  &--big-weight {
+    @include Poppins700;
+  }
+  // .btn--capitalize
+  &--capitalize {
+    text-transform: capitalize;
+  }
+  // .btn--uppercase
+  &--uppercase {
+    text-transform: uppercase;
+  }
+  // .btn--big-radius
+  &--big-radius {
+    border-radius: $radius-s;
+  }
+}

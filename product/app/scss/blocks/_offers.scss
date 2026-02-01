@@ -1,0 +1,126 @@
+.offers {
+  padding: clampAd(30, 35) 0 clampAd(35, 45);
+  background: $color-gradient-2;
+
+  // .offers__container
+  &__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: clampAd(85, 95);
+
+    @include small-mobile {
+      row-gap: 30px;
+    }
+  }
+  // .offers__top
+  &__top {
+    max-width: 570px;
+  }
+  // .offers__items
+  &__items {
+    align-self: stretch;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    gap: 60px;
+
+    @include mobile {
+      flex-wrap: wrap;
+    }
+
+    @include small-mobile {
+      gap: 30px;
+    }
+  }
+  // .offers__item
+  &__item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  // .offers__image
+  &__image {
+    --sizeCircle: 150px;
+
+    width: var(--sizeCircle);
+    height: var(--sizeCircle);
+    border-radius: $radius-circle;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    margin-bottom: 27px;
+
+    @include big-mobile {
+      margin-bottom: 35px;
+    }
+
+    @include small-mobile {
+      --sizeCircle: 80px;
+      margin-bottom: 20px;
+    }
+
+    // .offers__image--background-1
+    &--background-1 {
+      background: $color-multi-7;
+    }
+
+    // .offers__image--background-2
+    &--background-2 {
+      background: $color-multi-8;
+    }
+  }
+  // .offers__icon
+  &__icon {
+    --sizeCircle: 60px;
+
+    display: block;
+    width: var(--sizeCircle);
+    height: var(--sizeCircle);
+    object-fit: cover;
+    object-position: center;
+
+    @include small-mobile {
+      --sizeCircle: 40px;
+    }
+  }
+  // .offers__name
+  &__name {
+    margin-bottom: 16px;
+  }
+  // .offers__list
+  &__list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 5px;
+
+    margin-bottom: 12px;
+  }
+  // .offers__point
+  &__point {
+    font-size: 18px;
+    text-transform: capitalize;
+    white-space: nowrap;
+
+    @include small-mobile {
+      font-size: 14px;
+    }
+  }
+  // .offers__link
+  &__link {
+    @include Poppins500;
+    color: $color-black;
+
+    transition: $transition;
+
+    @media (any-hover: hover) {
+      &:hover:not(:disabled) {
+        color: $color-accent;
+      }
+    }
+  }
+}

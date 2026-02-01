@@ -1,0 +1,21 @@
+.main {
+  flex: 1 1 auto;
+
+  // .main__section
+  &__section {
+    margin-bottom: 150px;
+
+    @include medium-mobile {
+      margin-bottom: 100px;
+    }
+
+    &:first-of-type {
+      margin-top: clampAd(50, 90);
+    }
+  }
+  // .main__section-background
+  &__section-background {
+    background: $color-black;
+    color: $color-white;
+  }
+}

@@ -1,0 +1,29 @@
+.top {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+  // .top--center
+  &--center {
+    align-items: center;
+    text-align: center;
+  }
+  // .top__subtitle
+  &__subtitle {
+    margin-bottom: 8px;
+  }
+  // .top__title
+  &__title {
+    margin-bottom: 10px;
+
+    // .top__title--big-bottom
+    &--big-bottom {
+      margin-bottom: clampAd(16, 25);
+    }
+  }
+  // .top__text
+  &__text {
+    line-height: 1.625;
+  }
+}
