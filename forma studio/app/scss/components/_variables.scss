@@ -26,7 +26,10 @@ $color-black: #000000;
 $color-light: #f5f5f5;
 $color-dark: #2b2b2b;
 $color-bg-dark: #171717;
-$color-accent: #ff0000;
+
+$link-active: 1px 1px 10px currentColor;
+
+$color-gradient: linear-gradient(181.42deg, $color-black -16.45%, rgba($color-black, 0) 115.05%);
 
 // Задержка
 $transition: all 0.3s linear;

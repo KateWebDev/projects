@@ -3,11 +3,21 @@
 
   // .main__section
   &__section {
-    margin-bottom: clampAd(50, 100);
+    padding: clampAd(50, 150) 0;
+
+    // .main__section--small-padding
+    &--small-padding {
+      padding: clampAd(30, 60) 0 clampAd(40, 95);
+    }
   }
   // .main__section-background
   &__section-background {
     background: $color-black;
     color: $color-white;
+  }
+  // .main__section-color-reverse
+  &__section-color-reverse {
+    color: $color-light;
+    background: $color-dark;
   }
 }

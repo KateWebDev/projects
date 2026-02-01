@@ -1,8 +1,7 @@
 "use strict";
 
 document.addEventListener("DOMContentLoaded", () => {
-  /*
-    // header fixed
+  // header fixed
   const header = document.querySelector(".header");
   const up = document.querySelector(".up");
   const heightHeader = header.offsetHeight;
@@ -104,7 +103,7 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     }
   });
-  */
+
   // Плавный переход между страницами
   /*
 barba.init({

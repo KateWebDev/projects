@@ -1,6 +1,9 @@
 .services {
   // .services__container
   &__container {
+    display: flex;
+    flex-direction: column;
+    row-gap: 60px;
   }
   // .services__title
   &__title {
@@ -10,9 +13,22 @@
   }
   // .services__item
   &__item {
+    padding: clampAd(10, 20) 0;
+    border-bottom: 1px solid currentColor;
+
+    display: grid;
+    grid-template-columns: 0.9fr 1fr;
+    gap: clampAd(20, 30);
+
+    &:first-of-type {
+      border-top: 1px solid currentColor;
+    }
   }
   // .services__name
   &__name {
+    font-weight: 300;
+    font-size: clampAd(14, 28);
+    text-transform: uppercase;
   }
   // .services__text
   &__text {

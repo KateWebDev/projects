@@ -1,15 +1,56 @@
 .header {
+  padding: clampAd(20, 63) 0;
+
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: auto;
+  z-index: 2;
+
+  color: $color-light;
+
+  &--fixed {
+    padding: 20px 0;
+    position: fixed;
+    overflow: auto;
+    background: $color-dark;
+  }
+
   // .header__container
   &__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+
+    @include big-mobile {
+      flex-wrap: wrap;
+    }
   }
   // .header__logo
   &__logo {
+    transform: translateX(-80%);
+    position: relative;
+    z-index: 4;
+
+    @include tablet {
+      transform: translateX(0);
+    }
   }
   // .header__menu
   &__menu {
   }
   // .header__link
   &__link {
+    position: relative;
+    z-index: 4;
+
+    @include big-mobile {
+      order: -1;
+      flex: 0 0 100%;
+      justify-content: center;
+    }
   }
   // .header__burger
   &__burger {

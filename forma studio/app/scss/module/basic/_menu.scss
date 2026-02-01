@@ -11,7 +11,7 @@
     transform: translateY(-100%);
     overflow: auto;
     overflow-x: hidden;
-    background: $color-black;
+    background: $color-bg-dark;
   }
 
   &.menu--active {
@@ -24,7 +24,7 @@
   &__items {
     display: flex;
     align-items: center;
-    gap: 20px clampAd(20, 40);
+    gap: clampAd(20, 30);
 
     @include mobile {
       padding: 100px 0;
@@ -36,40 +36,27 @@
   }
   // .menu__item
   &__item {
-    &--desctop {
-      display: block;
-
-      @include mobile {
-        display: none;
-      }
-    }
-
-    &--mobile {
-      display: none;
-
-      @include mobile {
-        display: block;
-      }
-    }
   }
   // .menu__link
   &__link {
+    font-weight: 300;
+    text-transform: uppercase;
     white-space: nowrap;
     transition: all 0.3s linear;
 
     @media (any-hover: hover) {
       &:hover:not(&--active) {
-        color: $color-accent;
+        text-shadow: $link-active;
       }
     }
 
     &--active {
+      text-shadow: 0 0 1px currentColor;
       cursor: default;
     }
 
     @include mobile {
-      color: $color-white;
-      font-size: 24px;
+      font-size: 20px;
     }
   }
 }

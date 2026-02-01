@@ -1,4 +1,15 @@
 .btn {
+  padding: clampAd(10, 19) clampAd(20, 49);
+
+  background: $color-light;
+  color: $color-dark;
+
+  font-weight: 300;
+  font-size: clampAd(14, 18);
+  line-height: 1.1;
+  text-transform: uppercase;
+  text-align: center;
+
   user-select: none;
   white-space: nowrap;
 
@@ -10,6 +21,8 @@
 
   @media (any-hover: hover) {
     &:hover:not(:disabled) {
+      color: $color-light;
+      background: $color-bg-dark;
     }
   }
 }

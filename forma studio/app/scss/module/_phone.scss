@@ -1,2 +1,23 @@
 .phone {
+  font-weight: 300;
+  white-space: nowrap;
+
+  display: flex;
+  align-items: center;
+  column-gap: 10px;
+
+  transition: $transition;
+
+  &::before {
+    content: "";
+    width: 15px;
+    height: 15px;
+    background: url(../../images/icons/phone.svg) center/contain no-repeat;
+  }
+
+  @media (any-hover: hover) {
+    &:hover:not(:disabled) {
+      text-shadow: $link-active;
+    }
+  }
 }

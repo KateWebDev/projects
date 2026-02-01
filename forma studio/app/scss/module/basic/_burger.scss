@@ -5,10 +5,9 @@
   cursor: pointer;
 
   span {
-    width: 24px;
+    width: 30px;
     height: 3px;
-    border-radius: 5px;
-    background: $color-black;
+    background: $color-light;
     transition: all 0.3s linear;
   }
 
