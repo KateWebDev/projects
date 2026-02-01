@@ -1,0 +1,29 @@
+.pagination {
+  margin-top: 20px;
+
+  display: none;
+  justify-content: center;
+  align-items: center;
+  column-gap: clampAd(10, 20);
+
+  position: relative;
+  z-index: 1;
+
+  @include mobile {
+    display: flex;
+  }
+
+  .swiper-pagination-bullet {
+    --sizeCircle: #{clampAd(8, 10)};
+
+    width: var(--sizeCircle);
+    height: var(--sizeCircle);
+    border-radius: $radius-circle;
+    background: transparent;
+    border: 1px solid $color-black;
+  }
+
+  .swiper-pagination-bullet-active {
+    background: $color-black;
+  }
+}

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scable=0" />
+  <link rel="icon" type="image/ico" href="favicon.ico">
+  <link rel="stylesheet" href="css/style.min.css" />
+  <title>Document</title>
+</head>
+
+<body>
+  <div class="wrapper">
+    <header class="header">
+      <div class="header__container">
+
+      </div>
+    </header>
+
+<main class="main">
+  <section class="intro">
+    <div class="intro__container">
+    </div>
+  </section>
+</main>
+
+<!--
+  Ленивая загрузка изображений:
+  атрибут loading со значением lazy в теге img + ВАЖНО! указывать width и height для изображения
+
+  <img loading="lazy" src="" alt="" width="" height="">
+-->
+
+<a class="header__logo logo" href="#" aria-label="logo company name" title="logo company name">
+<img src="images/logo/logo.svg"
+alt="logo" loading="lazy" width="" height="">
+</a>
+<nav class="header__menu menu">
+<ul class="menu__items">
+<li class="menu__item">
+<a class="menu__link @@if (context.page === 'home') {menu__link--active}" href="#">пункт</a>
+</li>
+</ul>
+</nav>
+<button class="header__burger" type="button" aria-label="open menu" title="open menu">
+<span></span>
+<span></span>
+<span></span>
+</button>
+
+<!-- Таймер
+<div id="clockdiv" class="deal__time">
+                <div class="deal__item">
+                    <span class="deal__days deal__num"></span>
+                    <div class="deal__smalltext">Days</div>
+                </div>
+                <div class="deal__item">
+                    <span class="deal__hours deal__num"></span>
+                    <div class="smalltext">Hours</div>
+                </div>
+                <div class="deal__item">
+                    <span class="deal__minutes deal__num"></span>
+                    <div class="deal__smalltext">Minutes</div>
+                </div>
+                <div class="deal__item">
+                    <span class="deal__seconds deal__num"></span>
+                    <div class="deal__smalltext">Seconds</div>
+                </div>
+            </div>
+-->
+
+<footer class="footer">
+
+  <div class="footer__container">
+
+
+
+  </div>
+
+</footer>
+
+</div>
+
+
+
+<script src="js/script.min.js"></script>
+
+</body>
+
+
+
+</html>
