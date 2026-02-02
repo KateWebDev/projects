@@ -25,4 +25,9 @@
       background: $color-bg-dark;
     }
   }
+
+  // .btn--border
+  &--border {
+    border: 1px solid currentColor;
+  }
 }

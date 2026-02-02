@@ -8,8 +8,3 @@
   padding-left: calc((100vw - $widthContainer) / 2); // - $containerPadding
   margin-left: $containerPadding;
 }
-
-[class*="__right-container"] {
-  padding-right: calc((100vw - $widthContainer) / 2); // - $containerPadding
-  margin-right: $containerPadding;
-}

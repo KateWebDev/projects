@@ -1,9 +1,10 @@
 .projects {
-  // .projects__container
-  &__container {
+  // .projects__left-container
+  &__left-container {
   }
   // .projects__title
   &__title {
+    margin-bottom: clampAd(30, 50);
   }
   // .projects__slider
   &__slider {

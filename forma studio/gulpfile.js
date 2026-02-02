@@ -34,7 +34,7 @@ function styles() {
       autoprefixer({
         overrideBrowserslist: ["last 3 versions"],
         grid: false,
-      })
+      }),
     )
     .pipe(dest("app/css"))
     .pipe(replace("../../images", "../images"))
@@ -44,7 +44,7 @@ function styles() {
     .pipe(
       scss({
         outputStyle: "compressed", //сжимает файл
-      })
+      }),
     )
 
     .pipe(dest("app/css"))
@@ -52,29 +52,11 @@ function styles() {
 }
 
 function scripts() {
-  return src([
-    "node_modules/jquery/dist/jquery.js",
-    //'node_modules/swiper/swiper-bundle.js',
-    //"node_modules/slick-carousel/slick/slick.js",
-    //"node_modules/@fancyapps/fancybox/dist/jquery.fancybox.js",
-    //"node_modules/magnific-popup/dist/jquery.magnific-popup.js"
-    // "node_modules/mixitup/dist/mixitup.js",
-    //'node_modules/rateyo/src/jquery.rateyo.js',
-    //"node_modules/@barba/dist/barba.js",
-    //"node_modules/gsap/dist/gsap.js",
-    //"node_modules/jquery-validation/dist/jquery.validate.js",
-    //"node_modules/jquery.maskedinput/src/jquery.maskedinput.js",
-    "node_modules/custom-select/build/custom-select.min.js",
-    //"node_modules/wow..js/dist/wow.js",
-    // "node_modules/@tarekraafat/autocomplete.js/dist/autoComplete.js",
-    //"node_modules/flipclock/dist/flipclock.js", // таймер обратного отсчета
-    //"node_modules/lottie-web/build/player/lottie.js", //анимация lottie
-    "app/js/script.js",
-  ])
+  return src(["node_modules/jquery/dist/jquery.js", "node_modules/swiper/swiper-bundle.js", "app/js/script.js"])
     .pipe(
       babel({
         presets: ["@babel/preset-env"],
-      })
+      }),
     )
     .pipe(concat("script.min.js"))
     .pipe(uglify())
@@ -107,7 +89,7 @@ function spritesvg() {
             example: true,
           },
         },
-      })
+      }),
     )
     .pipe(dest("app/images"));
 }
@@ -117,7 +99,7 @@ function fonts() {
     .pipe(
       fonter({
         formats: ["woff", "ttf"],
-      })
+      }),
     )
     .pipe(src("app/fonts/*.ttf"))
     .pipe(ttf2woff2())
@@ -131,7 +113,7 @@ function pages() {
       fileinclude({
         prefix: "@@",
         basepath: "@file",
-      })
+      }),
     )
     .pipe(replace("../../images", "images"))
     .pipe(replace("../images", "images"))
@@ -182,7 +164,7 @@ function building() {
     ],
     {
       base: "app",
-    }
+    },
   ).pipe(dest("dist"));
 }
 
