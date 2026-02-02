@@ -297,6 +297,9 @@
 
   <section class="main__section gallery" aria-labelledby="gallery-title">
     <div class="gallery__container">
+      <h2 class="gallery__title title" id="gallery-title">
+        Get a catalog of our projects
+      </h2>
       <div class="gallery__inner">
         <div class="gallery__media">
           <picture>
@@ -309,10 +312,10 @@
           </picture>
         </div>
         <div class="gallery__content">
-          <h2 class="gallery__title title" id="gallery-title">
+          <h3 class="gallery__name">
             Leave your email to receive
             our project catalog
-          </h2>
+          </h3>
           <div class="gallery__text text">
             <p>
               The catalog will help you choose a style and plan your layout.
@@ -321,11 +324,11 @@
           <form class="gallery__form form" action="#" method="post">
             <label class="hidden" for="email">Enter your email address</label>
             <input class="form__input" id="email" type="email" name="email" placeholder="Enter your email" required>
-            <input class="form__check" id="check" type="checkbox" name="check">
+            <input class="form__check" id="check" type="checkbox" name="check" checked required>
             <label class="form__label" for="check">
               I agree to the processing of personal data
             </label>
-            <button class="form__btn btn" type="submit">
+            <button class="form__btn btn btn--reverse" type="submit">
               Get the catalog
             </button>
           </form>
@@ -422,14 +425,14 @@
         <h2 class="request__title title" id="request-title">
           Submit a request and we will assist you with your project
         </h2>
+        <form class="request__form" action="#" method="post">
+          <label class="hidden" for="mail">Enter your email address</label>
+          <input class="request__input" id="mail" type="email" name="email" required placeholder="Enter your email">
+          <button class="request__btn btn" type="submit">
+            Submit a request
+          </button>
+        </form>
       </div>
-      <form class="request__form" action="#" method="post">
-        <label class="hidden" for="mail">Enter your email address</label>
-        <input class="request__input" id="mail" type="email" name="email" required placeholder="Enter your email">
-        <button class="request__btn btn" type="submit">
-          Submit a request
-        </button>
-      </form>
     </div>
   </section>
 </main>

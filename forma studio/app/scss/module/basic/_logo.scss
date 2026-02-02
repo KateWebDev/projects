@@ -1,8 +1,9 @@
 .logo {
-  flex: 0 0 144px;
+  width: clampAd(120, 144);
+
   // .logo--big
   &--big {
-    flex: 0 0 235px;
+    width: clampAd(100, 235);
   }
 
   img {

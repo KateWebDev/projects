@@ -30,4 +30,16 @@
   &--border {
     border: 1px solid currentColor;
   }
+  // .btn--reverse
+  &--reverse {
+    color: $color-light;
+    background: $color-dark;
+
+    @media (any-hover: hover) {
+      &:hover:not(:disabled) {
+        background: $color-light;
+        color: $color-dark;
+      }
+    }
+  }
 }

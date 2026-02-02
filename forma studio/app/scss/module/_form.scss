@@ -1,12 +1,56 @@
 .form {
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
   // .form__input
   &__input {
+    width: 100%;
+    border: 1px solid $color-bg-dark;
+    padding: 20px;
+    margin-bottom: clampAd(20, 30);
+
+    &::placeholder {
+      font-family: "Roboto", sans-serif;
+      font-weight: 100;
+      font-size: clampAd(16, 24);
+      color: $color-dark;
+    }
   }
   // .form__check
   &__check {
+    display: none;
+
+    &:checked {
+      & + .form__label::before {
+        background: $color-dark url(../../images/icons/check.svg) center/13px 10px no-repeat;
+      }
+    }
   }
   // .form__label
   &__label {
+    display: flex;
+    align-items: center;
+    column-gap: 10px;
+
+    font-weight: 300;
+    font-size: clampAd(10, 14);
+    line-height: 1.4;
+
+    cursor: pointer;
+    user-select: none;
+    transition: $transition;
+
+    margin-bottom: clampAd(30, 50);
+
+    &::before {
+      content: "";
+      width: 17px;
+      height: 17px;
+      background: $color-dark;
+    }
   }
   // .form__btn
   &__btn {
