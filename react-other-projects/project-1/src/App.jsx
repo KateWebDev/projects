@@ -1,31 +1,44 @@
+import { useState } from "react";
+
 function App() {
+  const [isOpen, setIsOpen] = useState({
+    openForm: false,
+    openTasks: true,
+    openCompletedTasks: false,
+  });
+
+  function showSection(sectionName) {
+    setIsOpen((prevStatus) => ({
+      ...prevStatus,
+      [sectionName]: !prevStatus[sectionName],
+    }));
+  }
+
   return (
     <div className="app">
+      ----------------------------------------------------------------------
       <div className="task-container">
         <h1>Task List with Priority</h1>
-        <TaskForm />
-        <button className="close-button" type="button">
-          +
-        </button>
+        {isOpen.openForm && <TaskForm />}
+        <ButtonClose open={isOpen} functionName={showSection} sectionName="openForm" />
       </div>
+      ----------------------------------------------------------------------
       <div className="task-container">
         <h2>Tasks</h2>
         <div className="sort-controls">
           <button className="sort-button">By Date</button>
           <button className="sort-button">By Proirity</button>
         </div>
-        <TaskList />
-        <button className="close-button" type="button">
-          +
-        </button>
+        {isOpen.openTasks && <TaskList />}
+        <ButtonClose open={isOpen} functionName={showSection} sectionName="openTasks" />
       </div>
+      ----------------------------------------------------------------------
       <div className="completed-task-container">
         <h2>Completed Tasks</h2>
-        <TaskCompleted />
-        <button className="close-button" type="button">
-          +
-        </button>
+        {isOpen.openCompletedTasks && <TaskCompleted />}
+        <ButtonClose open={isOpen} functionName={showSection} sectionName="openCompletedTasks" />
       </div>
+      ----------------------------------------------------------------------
       <Footer />
     </div>
   );
@@ -99,6 +112,18 @@ function Footer() {
         et sapiente aut tempore similique.
       </p>
     </footer>
+  );
+}
+
+function ButtonClose({ open, sectionName, functionName }) {
+  return (
+    <button
+      className={`close-button ${open[sectionName] ? "open" : ""}`}
+      type="button"
+      onClick={() => functionName(sectionName)}
+    >
+      +
+    </button>
   );
 }
 
