@@ -2,10 +2,16 @@ import { useState } from "react";
 
 function App() {
   const [isOpen, setIsOpen] = useState({
-    openForm: false,
-    openTasks: true,
+    openForm: true,
+    openTasks: false,
     openCompletedTasks: false,
   });
+
+  const [tasks, setTasks] = useState([]);
+
+  function addTask(task) {
+    setTasks([...tasks], { ...task, completed: false, id: Date.now() });
+  }
 
   function showSection(sectionName) {
     setIsOpen((prevStatus) => ({
@@ -19,7 +25,7 @@ function App() {
       ----------------------------------------------------------------------
       <div className="task-container">
         <h1>Task List with Priority</h1>
-        {isOpen.openForm && <TaskForm />}
+        {isOpen.openForm && <TaskForm addTask={addTask} />}
         <ButtonClose open={isOpen} functionName={showSection} sectionName="openForm" />
       </div>
       ----------------------------------------------------------------------
@@ -44,16 +50,42 @@ function App() {
   );
 }
 
-function TaskForm() {
+function TaskForm({ addTask }) {
+  const [titleTask, setTitlteTask] = useState("");
+  const [priorityTask, setPriorityTask] = useState("");
+  const [deadlineTask, setDeadlineTask] = useState("");
+
+  function sendTask(evt) {
+    evt.preventDefault();
+    if (titleTask && deadlineTask) {
+      titleTask.trim();
+      addTask({ titleTask, priorityTask, deadlineTask });
+      setTitlteTask("");
+      setPriorityTask("");
+      setDeadlineTask("");
+    }
+  }
+
   return (
-    <form className="task-form" action="#">
-      <input type="text" value={""} placeholder="Task title" required />
-      <select value={""}>
+    <form className="task-form" action="#" onSubmit={sendTask}>
+      <input
+        type="text"
+        value={titleTask}
+        placeholder="Task title"
+        required
+        onChange={(evt) => setTitlteTask(evt.target.value)}
+      />
+      <select value={priorityTask} onChange={(evt) => setPriorityTask(evt.target.value)}>
         <option value="low">Low</option>
         <option value="medium">Medium</option>
         <option value="high">High</option>
       </select>
-      <input type="datetime-local" value={""} required />
+      <input
+        type="datetime-local"
+        value={deadlineTask}
+        required
+        onChange={(evt) => setDeadlineTask(evt.target.value)}
+      />
       <button type="submit">Add Task</button>
     </form>
   );
