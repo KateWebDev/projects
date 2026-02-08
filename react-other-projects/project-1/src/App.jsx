@@ -21,7 +21,15 @@ function App() {
   const completedTasks = tasks.filter((task) => task.completed);
 
   function addTask(task) {
-    setTasks([...tasks, { ...task, completed: false, id: new Date().toLocaleString() }]);
+    setTasks([...tasks, { ...task, completed: false, id: Date.now() }]);
+  }
+
+  function completedTaskButton(id) {
+    setTasks(tasks.map((task) => (task.id === id ? { ...task, completed: true } : task)));
+  }
+
+  function deletedTaskButton(id) {
+    setTasks(tasks.filter((task) => task.id != id));
   }
 
   function showSection(sectionName) {
@@ -36,7 +44,7 @@ function App() {
       ----------------------------------------------------------------------
       <div className="task-container">
         <h1>Task List with Priority</h1>
-        {isOpen.openForm && <TaskForm addTask={addTask} activeTasks={tasks} />}
+        {isOpen.openForm && <TaskForm addTask={addTask} />}
         <ButtonClose open={isOpen} functionName={showSection} sectionName="openForm" />
       </div>
       ----------------------------------------------------------------------
@@ -46,13 +54,21 @@ function App() {
           <button className="sort-button">By Date</button>
           <button className="sort-button">By Proirity</button>
         </div>
-        {isOpen.openTasks && <TaskList activeTasks={activeTasks} />}
+        {isOpen.openTasks && (
+          <TaskList
+            activeTasks={activeTasks}
+            completedTaskButton={completedTaskButton}
+            deletedTaskButton={deletedTaskButton}
+          />
+        )}
         <ButtonClose open={isOpen} functionName={showSection} sectionName="openTasks" />
       </div>
       ----------------------------------------------------------------------
       <div className="completed-task-container">
         <h2>Completed Tasks</h2>
-        {isOpen.openCompletedTasks && <TaskCompleted completedTasks={completedTasks} />}
+        {isOpen.openCompletedTasks && (
+          <TaskCompleted completedTasks={completedTasks} deletedTaskButton={deletedTaskButton} />
+        )}
         <ButtonClose open={isOpen} functionName={showSection} sectionName="openCompletedTasks" />
       </div>
       ----------------------------------------------------------------------
@@ -102,27 +118,32 @@ function TaskForm({ addTask }) {
   );
 }
 
-function TaskList({ activeTasks }) {
+function TaskList({ activeTasks, completedTaskButton, deletedTaskButton }) {
   return (
     <ul className="task-list">
       {activeTasks.map((task) => (
-        <Task task={task} key={task.id} />
+        <Task
+          task={task}
+          key={task.id}
+          completedTaskButton={completedTaskButton}
+          deletedTaskButton={deletedTaskButton}
+        />
       ))}
     </ul>
   );
 }
 
-function TaskCompleted({ completedTasks }) {
+function TaskCompleted({ completedTasks, deletedTaskButton }) {
   return (
     <ul className="completed-task-list">
       {completedTasks.map((task) => (
-        <Task task={task} key={task.id} />
+        <Task task={task} key={task.id} deletedTaskButton={deletedTaskButton} />
       ))}
     </ul>
   );
 }
 
-function Task({ task }) {
+function Task({ task, completedTaskButton, deletedTaskButton }) {
   return (
     <li className={`task-item ${task.priorityTask}`}>
       <div className="task-info">
@@ -132,10 +153,12 @@ function Task({ task }) {
         <div className="task-deadline">Due: {task.deadlineTask}</div>
       </div>
       <div className="task-buttons">
-        <button className="complete-button" type="button">
-          Complete
-        </button>
-        <button className="delete-button" type="button">
+        {!task.completed && (
+          <button className="complete-button" type="button" onClick={() => completedTaskButton(task.id)}>
+            Completed
+          </button>
+        )}
+        <button className="delete-button" type="button" onClick={() => deletedTaskButton(task.id)}>
           Delete
         </button>
       </div>
