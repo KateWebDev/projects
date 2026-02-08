@@ -3,14 +3,25 @@ import { useState } from "react";
 function App() {
   const [isOpen, setIsOpen] = useState({
     openForm: true,
-    openTasks: false,
-    openCompletedTasks: false,
+    openTasks: true,
+    openCompletedTasks: true,
   });
 
-  const [tasks, setTasks] = useState([]);
+  const [tasks, setTasks] = useState([
+    { titleTask: "Task1", priorityTask: "low", deadlineTask: new Date().toLocaleString(), completed: false, id: 1 },
+    { titleTask: "Task2", priorityTask: "medium", deadlineTask: new Date().toLocaleString(), completed: false, id: 2 },
+    { titleTask: "Task3", priorityTask: "high", deadlineTask: new Date().toLocaleString(), completed: false, id: 3 },
+    { titleTask: "Task4", priorityTask: "low", deadlineTask: new Date().toLocaleString(), completed: true, id: 4 },
+    { titleTask: "Task5", priorityTask: "medium", deadlineTask: new Date().toLocaleString(), completed: true, id: 5 },
+    { titleTask: "Task6", priorityTask: "high", deadlineTask: new Date().toLocaleString(), completed: true, id: 6 },
+  ]);
+
+  const activeTasks = tasks.filter((task) => !task.completed);
+
+  const completedTasks = tasks.filter((task) => task.completed);
 
   function addTask(task) {
-    setTasks([...tasks], { ...task, completed: false, id: Date.now() });
+    setTasks([...tasks, { ...task, completed: false, id: new Date().toLocaleString() }]);
   }
 
   function showSection(sectionName) {
@@ -25,7 +36,7 @@ function App() {
       ----------------------------------------------------------------------
       <div className="task-container">
         <h1>Task List with Priority</h1>
-        {isOpen.openForm && <TaskForm addTask={addTask} />}
+        {isOpen.openForm && <TaskForm addTask={addTask} activeTasks={tasks} />}
         <ButtonClose open={isOpen} functionName={showSection} sectionName="openForm" />
       </div>
       ----------------------------------------------------------------------
@@ -35,13 +46,13 @@ function App() {
           <button className="sort-button">By Date</button>
           <button className="sort-button">By Proirity</button>
         </div>
-        {isOpen.openTasks && <TaskList />}
+        {isOpen.openTasks && <TaskList activeTasks={activeTasks} />}
         <ButtonClose open={isOpen} functionName={showSection} sectionName="openTasks" />
       </div>
       ----------------------------------------------------------------------
       <div className="completed-task-container">
         <h2>Completed Tasks</h2>
-        {isOpen.openCompletedTasks && <TaskCompleted />}
+        {isOpen.openCompletedTasks && <TaskCompleted completedTasks={completedTasks} />}
         <ButtonClose open={isOpen} functionName={showSection} sectionName="openCompletedTasks" />
       </div>
       ----------------------------------------------------------------------
@@ -91,38 +102,34 @@ function TaskForm({ addTask }) {
   );
 }
 
-function TaskList() {
-  return <Tasks />;
-}
-
-function TaskCompleted() {
-  return <TasksComplited />;
-}
-
-function Tasks() {
+function TaskList({ activeTasks }) {
   return (
     <ul className="task-list">
-      <Task />
+      {activeTasks.map((task) => (
+        <Task task={task} key={task.id} />
+      ))}
     </ul>
   );
 }
 
-function TasksComplited() {
+function TaskCompleted({ completedTasks }) {
   return (
     <ul className="completed-task-list">
-      <Task />
+      {completedTasks.map((task) => (
+        <Task task={task} key={task.id} />
+      ))}
     </ul>
   );
 }
 
-function Task() {
+function Task({ task }) {
   return (
-    <li className="task-item">
+    <li className={`task-item ${task.priorityTask}`}>
       <div className="task-info">
         <div>
-          #1 Task - <strong>Low</strong>
+          #1 {task.titleTask} - <strong>{task.priorityTask}</strong>
         </div>
-        <div className="task-deadline">Due: {new Date().toLocaleString()}</div>
+        <div className="task-deadline">Due: {task.deadlineTask}</div>
       </div>
       <div className="task-buttons">
         <button className="complete-button" type="button">
