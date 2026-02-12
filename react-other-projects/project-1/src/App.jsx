@@ -2,191 +2,172 @@ import { useState } from "react";
 
 function App() {
   const [isOpen, setIsOpen] = useState({
-    openForm: true,
-    openTasks: true,
-    openCompletedTasks: true,
+    form: true,
+    list: true,
+    completed: true,
   });
 
-  const [tasks, setTasks] = useState([
-    { titleTask: "Task1", priorityTask: "low", deadlineTask: new Date().toLocaleString(), completed: false, id: 1 },
-    { titleTask: "Task2", priorityTask: "medium", deadlineTask: new Date().toLocaleString(), completed: false, id: 2 },
-    { titleTask: "Task3", priorityTask: "high", deadlineTask: new Date().toLocaleString(), completed: false, id: 3 },
-    { titleTask: "Task4", priorityTask: "low", deadlineTask: new Date().toLocaleString(), completed: true, id: 4 },
-    { titleTask: "Task5", priorityTask: "medium", deadlineTask: new Date().toLocaleString(), completed: true, id: 5 },
-    { titleTask: "Task6", priorityTask: "high", deadlineTask: new Date().toLocaleString(), completed: true, id: 6 },
-  ]);
+  function showSection(sectionName) {
+    setIsOpen((prevCondition) => ({ ...prevCondition, [sectionName]: !prevCondition[sectionName] }));
+  }
 
-  const activeTasks = tasks.filter((task) => !task.completed);
-
-  const completedTasks = tasks.filter((task) => task.completed);
+  const [tasks, setTasks] = useState([]);
 
   function addTask(task) {
     setTasks([...tasks, { ...task, completed: false, id: Date.now() }]);
   }
 
-  function completedTaskButton(id) {
-    setTasks(tasks.map((task) => (task.id === id ? { ...task, completed: true } : task)));
+  function completedTask(id) {
+    setTasks(tasks.map((task) => (task.id === id ? { ...task, completed: true, date: Date.now() } : task)));
   }
 
-  function deletedTaskButton(id) {
-    setTasks(tasks.filter((task) => task.id != id));
+  function deleteTask(id) {
+    setTasks(tasks.filter((item) => item.id != id));
   }
 
-  function showSection(sectionName) {
-    setIsOpen((prevStatus) => ({
-      ...prevStatus,
-      [sectionName]: !prevStatus[sectionName],
-    }));
+  const [sortType, setSortType] = useState("date");
+  const [sortOrder, setSortOrder] = useState("asc");
+
+  function reverseTypeSort(typeSort) {
+    if (sortType === typeSort) {
+      setSortOrder(sortOrder === "asc" ? "desc" : "asc");
+    } else {
+      setSortType(typeSort);
+      setSortOrder("asc");
+    }
   }
+
+  function sortTask(tasks) {
+    return tasks.slice().sort((a, b) => {
+      if (sortType === "priority") {
+        const priority = { low: 1, medium: 2, high: 3 };
+        return sortOrder === "asc"
+          ? priority[a.priority] - priority[b.priority]
+          : priority[b.priority] - priority[a.priority];
+      } else {
+        return sortOrder === "asc" ? new Date(a.date) - new Date(b.date) : new Date(b.date) - new Date(a.date);
+      }
+    });
+  }
+
+  const activeTasks = sortTask(tasks.filter((item) => !item.completed));
+  const completedTasks = sortTask(tasks.filter((item) => item.completed));
 
   return (
     <div className="app">
-      ----------------------------------------------------------------------
       <div className="task-container">
-        <h1>Task List with Priority</h1>
-        {isOpen.openForm && <TaskForm addTask={addTask} />}
-        <ButtonClose open={isOpen} functionName={showSection} sectionName="openForm" />
+        <h1>Создание задачи</h1>
+        {isOpen.form && <FormTask addTask={addTask} />}
+        <ButtonClose isOpen={isOpen} showSection={showSection} sectionName="form" />
       </div>
-      ----------------------------------------------------------------------
       <div className="task-container">
-        <h2>Tasks</h2>
+        <h2>Активные задачи</h2>
         <div className="sort-controls">
-          <button className="sort-button">By Date</button>
-          <button className="sort-button">By Proirity</button>
+          <button className="sort-button" onClick={() => reverseTypeSort("date")}>
+            По дате {sortType === "date" ? (sortOrder === "asc" ? "\u2191" : "\u2193") : ""}
+          </button>
+          <button className="sort-button" onClick={() => reverseTypeSort("priority")}>
+            По приоритету {sortType === "priority" ? (sortOrder === "asc" ? "\u2191" : "\u2193") : ""}
+          </button>
         </div>
-        {isOpen.openTasks && (
-          <TaskList
-            activeTasks={activeTasks}
-            completedTaskButton={completedTaskButton}
-            deletedTaskButton={deletedTaskButton}
-          />
+        {isOpen.list && activeTasks.length > 0 && (
+          <TaksList activeTasks={activeTasks} completedTask={completedTask} deleteTask={deleteTask} />
         )}
-        <ButtonClose open={isOpen} functionName={showSection} sectionName="openTasks" />
+        <ButtonClose isOpen={isOpen} showSection={showSection} sectionName="list" />
       </div>
-      ----------------------------------------------------------------------
       <div className="completed-task-container">
-        <h2>Completed Tasks</h2>
-        {isOpen.openCompletedTasks && (
-          <TaskCompleted completedTasks={completedTasks} deletedTaskButton={deletedTaskButton} />
+        <h2>Выполненные задачи</h2>
+        {isOpen.completed && completedTasks.length > 0 && (
+          <TaksListCompleted completedTasks={completedTasks} completedTask={completedTask} deleteTask={deleteTask} />
         )}
-        <ButtonClose open={isOpen} functionName={showSection} sectionName="openCompletedTasks" />
+        <ButtonClose isOpen={isOpen} showSection={showSection} sectionName="completed" />
       </div>
-      ----------------------------------------------------------------------
-      <Footer />
     </div>
   );
 }
 
-function TaskForm({ addTask }) {
-  const [titleTask, setTitlteTask] = useState("");
-  const [priorityTask, setPriorityTask] = useState("");
-  const [deadlineTask, setDeadlineTask] = useState("");
+function FormTask({ addTask }) {
+  const [title, setTitle] = new useState("");
+  const [priority, setPriority] = new useState("low");
+  const [date, setDate] = new useState("");
 
-  function sendTask(evt) {
-    evt.preventDefault();
-    if (titleTask && deadlineTask) {
-      titleTask.trim();
-      addTask({ titleTask, priorityTask, deadlineTask });
-      setTitlteTask("");
-      setPriorityTask("");
-      setDeadlineTask("");
-    }
+  function sendTask() {
+    addTask({ title, priority, date });
+    setTitle("");
+    setPriority("low");
+    setDate("");
   }
 
   return (
-    <form className="task-form" action="#" onSubmit={sendTask}>
+    <form action="#" className="task-form" onSubmit={sendTask}>
+      <label htmlFor="nameTask">Введите название задачи</label>
       <input
+        id="nameTask"
         type="text"
-        value={titleTask}
-        placeholder="Task title"
+        value={title}
+        placeholder="Название задачи"
         required
-        onChange={(evt) => setTitlteTask(evt.target.value)}
+        onChange={(evt) => setTitle(evt.target.value)}
       />
-      <select value={priorityTask} onChange={(evt) => setPriorityTask(evt.target.value)}>
-        <option value="low">Low</option>
-        <option value="medium">Medium</option>
-        <option value="high">High</option>
+      <label htmlFor="priorityTask">Выберите приоритет задачи</label>
+      <select id="priorityTask" value={priority} onChange={(evt) => setPriority(evt.target.value)}>
+        <option value="low">не срочная</option>
+        <option value="medium">срочная</option>
+        <option value="high">очень срочная</option>
       </select>
-      <input
-        type="datetime-local"
-        value={deadlineTask}
-        required
-        onChange={(evt) => setDeadlineTask(evt.target.value)}
-      />
-      <button type="submit">Add Task</button>
+      <label htmlFor="dateTask">Выберите время выполнения задачи</label>
+      <input id="dateTask" type="datetime-local" value={date} required onChange={(evt) => setDate(evt.target.value)} />
+      <button type="submit">Добавить задачу</button>
     </form>
   );
 }
 
-function TaskList({ activeTasks, completedTaskButton, deletedTaskButton }) {
+function TaksList({ activeTasks, completedTask, deleteTask }) {
   return (
-    <ul className="task-list">
-      {activeTasks.map((task) => (
-        <Task
-          task={task}
-          key={task.id}
-          completedTaskButton={completedTaskButton}
-          deletedTaskButton={deletedTaskButton}
-        />
-      ))}
-    </ul>
+    <ol className="task-list">
+      {activeTasks.map((task) => {
+        return <TaskItem task={task} completedTask={completedTask} deleteTask={deleteTask} key={task.id} />;
+      })}
+    </ol>
   );
 }
 
-function TaskCompleted({ completedTasks, deletedTaskButton }) {
+function TaksListCompleted({ completedTasks, completedTask, deleteTask }) {
   return (
-    <ul className="completed-task-list">
-      {completedTasks.map((task) => (
-        <Task task={task} key={task.id} deletedTaskButton={deletedTaskButton} />
-      ))}
-    </ul>
+    <ol className="task-list">
+      {completedTasks.map((task) => {
+        return <TaskItem task={task} completedTask={completedTask} deleteTask={deleteTask} key={task.id} />;
+      })}
+    </ol>
   );
 }
 
-function Task({ task, completedTaskButton, deletedTaskButton }) {
+function TaskItem({ task, completedTask, deleteTask }) {
   return (
-    <li className={`task-item ${task.priorityTask}`}>
-      <div className="task-info">
-        <div>
-          #1 {task.titleTask} - <strong>{task.priorityTask}</strong>
-        </div>
-        <div className="task-deadline">Due: {task.deadlineTask}</div>
+    <li className={`task-item ${task.priority} ${task.completed ? "completed" : ""}`}>
+      <div>
+        <p className="task-info">{task.title}</p>
+        <p className="task-deadline">{new Date(task.date).toLocaleString()}</p>
       </div>
       <div className="task-buttons">
         {!task.completed && (
-          <button className="complete-button" type="button" onClick={() => completedTaskButton(task.id)}>
-            Completed
+          <button className="complete-button" onClick={() => completedTask(task.id)}>
+            Выполнено
           </button>
         )}
-        <button className="delete-button" type="button" onClick={() => deletedTaskButton(task.id)}>
-          Delete
+        <button className="delete-button" onClick={() => deleteTask(task.id)}>
+          Удалить
         </button>
       </div>
     </li>
   );
 }
 
-function Footer() {
+function ButtonClose({ isOpen, showSection, sectionName }) {
   return (
-    <footer className="footer">
-      <p>
-        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tempora quas delectus eveniet quae illum praesentium
-        et sapiente aut tempore similique.
-      </p>
-    </footer>
-  );
-}
-
-function ButtonClose({ open, sectionName, functionName }) {
-  return (
-    <button
-      className={`close-button ${open[sectionName] ? "open" : ""}`}
-      type="button"
-      onClick={() => functionName(sectionName)}
-    >
+    <button className={`close-button ${isOpen[sectionName] ? "open" : ""}`} onClick={() => showSection(sectionName)}>
       +
     </button>
   );
 }
-
 export default App;
