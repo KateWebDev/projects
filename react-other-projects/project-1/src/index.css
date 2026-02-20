@@ -17,11 +17,9 @@ body {
 }
 
 .app {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-  max-width: 500px;
-  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px; 
 }
 
 /* Main container for current tasks and completed tasks */
@@ -300,6 +298,19 @@ h2 {
   color: #211557;
   border-left: 6px solid #a5b1d6;
   opacity: 0.9;
+}
+
+.task-item.expired{
+  background-color: #d20000;
+  color: #ffffff;
+  border-left: 6px solid #ac0000;
+  opacity: 0.9;
+}
+
+.task-item.expired .task-deadline{
+  color: #ffffff;
+  font-size: 1em;
+  font-weight: 700;
 }
 
 /* Animation for completed tasks */

@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 function App() {
   const [isOpen, setIsOpen] = useState({
@@ -11,7 +11,22 @@ function App() {
     setIsOpen((prevCondition) => ({ ...prevCondition, [sectionName]: !prevCondition[sectionName] }));
   }
 
-  const [tasks, setTasks] = useState([]);
+  const [tasks, setTasks] = useState([
+    { title: "task 1", priority: "low", date: new Date("2023-09-15T12:34:56"), completed: false, id: 1 },
+    { title: "task 2", priority: "low", date: new Date("2026-09-15T12:34:56"), completed: false, id: 2 },
+    { title: "task 3", priority: "low", date: new Date("2025-09-15T12:34:56"), completed: false, id: 3 },
+    { title: "task 4", priority: "low", date: new Date("2026-03-15T12:34:56"), completed: false, id: 4 },
+    { title: "task 5", priority: "low", date: new Date("2025-02-15T12:34:56"), completed: false, id: 5 },
+  ]);
+
+  const [timestamp, setTimestamp] = useState(new Date());
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setTimestamp(new Date());
+    }, 1000);
+    return () => clearInterval(timer);
+  }, []);
 
   function addTask(task) {
     setTasks([...tasks, { ...task, completed: false, id: Date.now() }]);
@@ -50,8 +65,9 @@ function App() {
     });
   }
 
-  const activeTasks = sortTask(tasks.filter((item) => !item.completed));
+  const activeTasks = sortTask(tasks.filter((item) => !item.completed && item.date > timestamp));
   const completedTasks = sortTask(tasks.filter((item) => item.completed));
+  const expiredTasks = sortTask(tasks.filter((item) => !item.completed && item.date < timestamp));
 
   return (
     <div className="app">
@@ -59,6 +75,26 @@ function App() {
         <h1>Создание задачи</h1>
         {isOpen.form && <FormTask addTask={addTask} />}
         <ButtonClose isOpen={isOpen} showSection={showSection} sectionName="form" />
+      </div>
+      <div className="task-container">
+        <h2>Просроченные задачи</h2>
+        <div className="sort-controls">
+          <button className="sort-button" onClick={() => reverseTypeSort("date")}>
+            По дате {sortType === "date" ? (sortOrder === "asc" ? "\u2191" : "\u2193") : ""}
+          </button>
+          <button className="sort-button" onClick={() => reverseTypeSort("priority")}>
+            По приоритету {sortType === "priority" ? (sortOrder === "asc" ? "\u2191" : "\u2193") : ""}
+          </button>
+        </div>
+        {isOpen.list && expiredTasks.length > 0 && (
+          <ExpiredList
+            expiredTasks={expiredTasks}
+            completedTask={completedTask}
+            deleteTask={deleteTask}
+            timestamp={timestamp}
+          />
+        )}
+        <ButtonClose isOpen={isOpen} showSection={showSection} sectionName="list" />
       </div>
       <div className="task-container">
         <h2>Активные задачи</h2>
@@ -71,7 +107,12 @@ function App() {
           </button>
         </div>
         {isOpen.list && activeTasks.length > 0 && (
-          <TaksList activeTasks={activeTasks} completedTask={completedTask} deleteTask={deleteTask} />
+          <TaksList
+            activeTasks={activeTasks}
+            completedTask={completedTask}
+            deleteTask={deleteTask}
+            timestamp={timestamp}
+          />
         )}
         <ButtonClose isOpen={isOpen} showSection={showSection} sectionName="list" />
       </div>
@@ -122,11 +163,37 @@ function FormTask({ addTask }) {
   );
 }
 
-function TaksList({ activeTasks, completedTask, deleteTask }) {
+function TaksList({ activeTasks, completedTask, deleteTask, timestamp }) {
   return (
     <ol className="task-list">
       {activeTasks.map((task) => {
-        return <TaskItem task={task} completedTask={completedTask} deleteTask={deleteTask} key={task.id} />;
+        return (
+          <TaskItem
+            task={task}
+            completedTask={completedTask}
+            deleteTask={deleteTask}
+            key={task.id}
+            isTimestamp={timestamp > new Date(task.date)}
+          />
+        );
+      })}
+    </ol>
+  );
+}
+
+function ExpiredList({ expiredTasks, completedTask, deleteTask, timestamp }) {
+  return (
+    <ol className="task-list">
+      {expiredTasks.map((task) => {
+        return (
+          <TaskItem
+            task={task}
+            completedTask={completedTask}
+            deleteTask={deleteTask}
+            key={task.id}
+            isTimestamp={timestamp > new Date(task.date)}
+          />
+        );
       })}
     </ol>
   );
@@ -142,9 +209,9 @@ function TaksListCompleted({ completedTasks, completedTask, deleteTask }) {
   );
 }
 
-function TaskItem({ task, completedTask, deleteTask }) {
+function TaskItem({ task, completedTask, deleteTask, isTimestamp }) {
   return (
-    <li className={`task-item ${task.priority} ${task.completed ? "completed" : ""}`}>
+    <li className={`task-item ${task.priority} ${task.completed ? "completed" : ""} ${isTimestamp ? "expired" : ""} `}>
       <div>
         <p className="task-info">{task.title}</p>
         <p className="task-deadline">{new Date(task.date).toLocaleString()}</p>
