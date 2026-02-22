@@ -77,13 +77,17 @@ function App() {
           />
           <select className="dropdown" value={fromCurrency} onChange={(evt) => setFromCurrency(evt.target.value)}>
             {currenci.map((item) => (
-              <option key={item}>{item}</option>
+              <option value={item} key={item}>
+                {item}
+              </option>
             ))}
           </select>
           <span className="arrow">→</span>
           <select className="dropdown" value={toCurrency} onChange={(evt) => setToCurrency(evt.target.value)}>
             {currenci.map((item) => (
-              <option key={item}>{item}</option>
+              <option value={item} key={item}>
+                {item}
+              </option>
             ))}
           </select>
         </div>
