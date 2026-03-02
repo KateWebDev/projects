@@ -1,2 +1,105 @@
-@import 'tailwindcss'
+@import 'tailwindcss';
 
+/* 
+  Слой темы:
+    прописываем основные переменные (размер, цвет, отступы)
+*/
+@layer theme{
+  @theme{
+    --color-dark: #0f1418;
+    --color-light: #f0f2f5;
+
+    --color-card: #141a1f;
+
+    --color-accent:#7777f6;
+
+    --color-secondary: #1f2830;
+
+    --color-secondary-foreground: #20b2a6;
+    --color-muted-foreground: #6264a6;
+
+    --color-nav: #d1d1d1;
+    --color-border: #434181;
+
+    --color-highlight: #f5a623;
+    --color-surface: #1a2329;
+
+    --radius: 0.75rem;
+
+    --font-orbion: 'Orbion', sans-serif;
+    --font-doto: 'Doto', sans-serif;
+  }
+}
+
+/* 
+  Слой базовый:
+    стилизация тегов, сброс стилей
+*/
+@layer base{  
+  html{
+    scroll-behavior: smooth;
+  }
+
+  body{
+    background: var(--color-dark);
+    color: var(--color-light);
+    font-family: 'Inter', sans-serif;
+  }
+
+  button{
+    cursor: pointer;
+  }
+}
+
+/* 
+  Слой компонентов:
+    описываем классы компонентов
+*/
+@layer components{
+.glass{
+  @apply border border-solid border-card bg-surface/10 backdrop-blur;
+}
+.trans {
+  @apply transition-all duration-300;
+}
+}
+
+/* 
+  Слой утилит:
+    описываем классы утилит
+*/
+@layer utilities{
+  @keyframes fade-in {
+    from{
+      opacity: 0;
+      transform: translateY(20px);
+      filter: blur(10px);
+    }
+    to{
+      opacity: 1;
+      transform: translateY(0);
+      filter: blur(0);
+    }
+  }
+
+  .animate-fade-in{
+    animation: fade-in 0.5s linear both;
+  }
+
+  .animation-delay-200{
+    animation-delay: 200ms;
+  }
+  .animation-delay-300{
+    animation-delay: 300ms;
+  }
+  .animation-delay-400{
+    animation-delay: 400ms;
+  }
+  .animation-delay-450{
+    animation-delay: 450ms;
+  }
+
+  .glow-text{
+    text-shadow:  0 0 30px color-mix(in srgb, var(--color-accent) 50%, transparent);
+  }
+}
