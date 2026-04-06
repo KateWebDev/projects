@@ -1,0 +1,52 @@
+.questions {
+  padding: clampAd(50, 80) 0;
+  background: $color-light-bg;
+
+  // .questions__container
+  &__container {
+    display: flex;
+    align-items: center;
+    gap: 30px clampAd(30, 80);
+
+    @include tablet {
+      flex-direction: column;
+    }
+  }
+  // .questions__content
+  &__content {
+    max-width: 525px;
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    row-gap: clampAd(20, 30);
+
+    @include tablet {
+      max-width: 100%;
+    }
+  }
+  // .questions__title
+  &__title {
+  }
+  // .questions__text
+  &__text {
+    margin-bottom: clampAd(0, 14);
+  }
+  // .questions__ibg
+  &__ibg {
+    align-self: stretch;
+    padding: 0px 0px 56.5% 0px;
+  }
+  // .questions__img
+  &__img {
+  }
+  // .questions__form
+  &__form {
+    max-width: 485px;
+
+    @include tablet {
+      max-width: 100%;
+    }
+  }
+}

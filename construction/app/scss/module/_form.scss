@@ -1,0 +1,52 @@
+.form {
+  width: 100%;
+  height: 100%;
+  box-shadow: $shadow-5;
+  background: $color-white;
+
+  padding: clampAd(34, 63) clampAd(30, 44) clampAd(25, 55);
+  display: flex;
+  flex-direction: column;
+  row-gap: clampAd(20, 24);
+
+  border-top: clampAd(6, 10) solid $color-accent;
+
+  // .form__item
+  &__item {
+  }
+  // .form__input
+  &__input,
+  &__textarea {
+    width: 100%;
+    padding: clampAd(18, 28);
+    background: $color-light-3;
+
+    color: $color-light-bg;
+    transition: $transition;
+
+    &::placeholder {
+      font-family: "Montserrat", sans-serif;
+      font-weight: 400;
+      font-size: clampAd(12, 16);
+      color: $color-grey;
+    }
+
+    &:focus,
+    &:active {
+      outline-color: $color-accent;
+    }
+  }
+  // .form__textarea
+  &__textarea {
+    margin-bottom: auto;
+    min-height: clampAd(90, 140);
+    resize: none;
+
+    &.auto {
+      overflow-y: hidden;
+    }
+  }
+  // .form__btn
+  &__btn {
+  }
+}

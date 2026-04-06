@@ -1,0 +1,92 @@
+.intro {
+  padding-top: clampAd(20, 30);
+
+  // .intro__container
+  &__container {
+  }
+  // .intro__items
+  &__items {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+
+    @include tablet {
+      grid-template-columns: repeat(3, 1fr);
+    }
+    @include mobile {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include medium-mobile {
+      grid-template-columns: 1fr;
+    }
+  }
+  // .intro__item
+  &__item {
+    display: flex;
+    flex-direction: column;
+
+    // .intro__item--big
+    &--big {
+      padding: clampAd(30, 60) clampAd(20, 30);
+      grid-column: span 3;
+      grid-row: span 2;
+      row-gap: 20px;
+      background: image-set(
+          url("../images/main/intro/bg.avif") type("image/avif"),
+          url("../images/main/intro/bg@2x.avif") 2x type("image/avif"),
+          url("../images/main/intro/bg.webp") type("image/webp"),
+          url("../images/main/intro/bg@2x.webp") 2x type("image/webp"),
+          url("../images/main/intro/bg.jpg"),
+          url("../images/main/intro/bg@2x.jpg") 2x
+        )
+        center/cover no-repeat;
+      justify-content: center;
+      align-items: flex-start;
+
+      @include tablet {
+        grid-column: span 2;
+      }
+
+      @include medium-mobile {
+        grid-column: span 1;
+      }
+    }
+  }
+  // .intro__title
+  &__title {
+    max-width: 400px;
+    width: 100%;
+  }
+  // .intro__text
+  &__text {
+    max-width: 330px;
+    width: 100%;
+  }
+  // .intro__btn
+  &__btn {
+    margin-top: auto;
+  }
+  // .intro__link
+  &__link {
+    transition: $transition;
+
+    @media (any-hover: hover) {
+      &:hover:not(:disabled) {
+        transform: scale(1.05);
+      }
+    }
+  }
+  // .intro__ibg
+  &__ibg {
+    padding: 0px 0px 55% 0px;
+    margin-bottom: 16px;
+
+    @include big-mobile {
+      padding: 0px 0px 30% 0px;
+    }
+  }
+  // .intro__img
+  &__img {
+  }
+}

@@ -1,0 +1,23 @@
+.btn {
+  padding: clampAd(10, 14) clampAd(20, 34);
+  background: $color-main;
+
+  font-weight: 600;
+  text-align: center;
+  color: $color-white;
+
+  user-select: none;
+  white-space: nowrap;
+
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+
+  transition: all 0.3s linear;
+
+  @media (any-hover: hover) {
+    &:hover:not(:disabled) {
+      background: $color-bg;
+    }
+  }
+}

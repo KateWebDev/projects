@@ -1,0 +1,12 @@
+.logo {
+  svg {
+    fill: $color-main;
+    width: clampAd(130, 154);
+  }
+
+  &--light {
+    svg {
+      fill: $color-white;
+    }
+  }
+}

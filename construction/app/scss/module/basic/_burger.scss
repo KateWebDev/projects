@@ -1,0 +1,28 @@
+[class*="__burger"] {
+  display: none;
+  flex-direction: column;
+  row-gap: 9px;
+  cursor: pointer;
+
+  span {
+    width: 26px;
+    height: 1px;
+    background: $color-white;
+    transition: all 0.3s linear;
+  }
+
+  &.mobile-header__burger--active {
+    span {
+      &:nth-child(1) {
+        transform: rotate(45deg);
+      }
+      &:nth-child(2) {
+        transform: rotate(-45deg) translateY(-7px) translateX(7px);
+      }
+    }
+  }
+
+  @include tablet {
+    display: flex;
+  }
+}

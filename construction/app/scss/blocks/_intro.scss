@@ -1,0 +1,12 @@
+.intro {
+  // .intro__slider
+  &__slider {
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 1s ease;
+    &.swiper-initialized {
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+}

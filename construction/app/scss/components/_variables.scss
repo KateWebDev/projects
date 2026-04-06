@@ -1,0 +1,63 @@
+@import "components/mixin";
+
+$laptop: 1200px;
+$tablet: 991px;
+$mobile: 767px;
+$big-mobile: 574px;
+$medium-mobile: 478px;
+$small-mobile: 359px;
+
+//Страница
+$widthReportMax: 1600;
+$widthReportMin: 360;
+$widthReportMinPx: $widthReportMin + px;
+
+// Контейнер
+$widthContainer-num: 1200;
+$widthContainer: $widthContainer-num + px;
+$containerPadding-num: 20;
+$containerPadding: $containerPadding-num + px;
+$maxWidthContainer: calc($widthContainer + (2 * $containerPadding));
+
+// Доп цвета
+$color-white: #ffffff;
+$color-black: #000000;
+
+$color-accent: #d62e4c;
+
+$color-dark-1: #18353e;
+$color-dark-2: #1c2835;
+$color-dark-3: #090808;
+
+$color-grey: #5a5454;
+$color-main: #6d6a6a;
+$color-light: #9d9494;
+$color-light-2: #c2c1c1;
+$color-light-3: #f6f6f6;
+$color-light-4: #d2d2d2;
+$color-border: #d5d5d5;
+$color-light-bg: #f9f9f9;
+
+// Радиусы
+$radius-circle: 50%;
+
+// Задержка
+$transition: all 0.3s linear;
+
+// Тень
+$shadow-1: 0 4px 4px 0 rgba(65, 62, 62, 0.17);
+$shadow-2: 0 4px 4px 0 rgba(0, 0, 0, 0.11);
+$shadow-3: 0 4px 4px 0 rgba(95, 87, 87, 0.12);
+$shadow-4: 0 1px 12px 1px rgba(0, 0, 0, 0.15);
+$shadow-5: 0 -1px 8px 4px rgba(88, 83, 83, 0.12);
+
+//Фон
+$mainBackGround: $color-white;
+
+//Шрифт
+$fontFamily: "Montserrat", sans-serif;
+$mainColor: $color-main;
+$mainSize: 16;
+$size: $mainSize + px;
+$fontWeight: 400;
+$lineheight: 1.89;

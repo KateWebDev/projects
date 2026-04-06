@@ -1,0 +1,82 @@
+.about {
+  padding: clampAd(40, 90) 0;
+
+  // .about__container
+  &__container {
+    display: flex;
+    flex-direction: column;
+    row-gap: clampAd(20, 30);
+  }
+  // .about__title
+  &__title {
+  }
+  // .about__items
+  &__items {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+
+    @include tablet {
+      grid-template-columns: 1fr;
+    }
+  }
+  // .about__item
+  &__item {
+    display: flex;
+    flex-direction: column;
+
+    &--big {
+      grid-row: 1/4;
+
+      @include tablet {
+        grid-row: auto;
+      }
+    }
+  }
+  // .about__ibg
+  &__ibg {
+    padding: 0px 0px 22.5% 0px;
+
+    // .about__ibg--big
+    &--big {
+      padding: 0px 0px 71.5% 0px;
+      margin-bottom: clampAd(20, 30);
+
+      @include tablet {
+        padding: 0px 0px 40% 0px;
+      }
+
+      @include medium-mobile {
+        padding: 0px 0px 60% 0px;
+      }
+    }
+  }
+  // .about__img
+  &__img {
+  }
+  // .about__name
+  &__name {
+    margin-bottom: clampAd(10, 14);
+  }
+  // .about__text
+  &__text {
+  }
+  // .about__link
+  &__link {
+    display: flex;
+    flex-direction: column;
+
+    transition: $transition;
+
+    @media (any-hover: hover) {
+      &:hover:not(:disabled) {
+        transform: scale(1.05);
+      }
+    }
+  }
+  // .about__item-name
+  &__item-name {
+    padding: clampAd(10, 18) clampAd(20, 30);
+    border: 1px solid $color-light;
+  }
+}

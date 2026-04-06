@@ -1,0 +1,47 @@
+.reviews {
+  padding: clampAd(75, 100) 0 80px;
+
+  background: $color-dark-1;
+
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: image-set(
+        url("../images/main/reviews/bg.avif") type("image/avif"),
+        url("../images/main/reviews/bg_2x.avif") 2x type("image/avif"),
+        url("../images/main/reviews/bg.webp") type("image/webp"),
+        url("../images/main/reviews/bg_2x.webp") 2x type("image/webp"),
+        url("../images/main/reviews/bg.jpg"),
+        url("../images/main/reviews/bg_2x.jpg") 2x
+      )
+      center/cover no-repeat;
+    opacity: 0.06;
+  }
+
+  // .reviews__container
+  &__container {
+    position: relative;
+    z-index: 1;
+  }
+  // .reviews__title
+  &__title {
+    margin-bottom: clampAd(35, 50);
+  }
+  // .reviews__slider
+  &__slider {
+    align-self: stretch;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 1s ease;
+    &.swiper-initialized {
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+}
