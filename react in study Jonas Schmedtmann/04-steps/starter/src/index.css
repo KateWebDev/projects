@@ -21,6 +21,8 @@ body {
   border-radius: 7px;
   padding: 25px 100px;
   margin: 100px auto;
+
+  user-select: none;
 }
 
 .numbers {
@@ -28,7 +30,7 @@ body {
   justify-content: space-between;
 }
 
-.numbers > div {
+.numbers > li {
   height: 40px;
   aspect-ratio: 1;
   background-color: #e7e7e7;
