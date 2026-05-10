@@ -1,4 +1,4 @@
-const initialFriends = [
+export const initialFriends = [
   {
     id: 118836,
     name: "Clark",
