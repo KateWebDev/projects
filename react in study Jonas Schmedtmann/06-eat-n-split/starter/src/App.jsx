@@ -29,12 +29,25 @@ export default function App() {
 
   return (
     <div className="app">
-      <div className="sidebar">
+      {/* <div className="sidebar">
         <List data={friends} friend={friend} setFriend={setFriend} setAddForm={setAddForm} />
         {addForm && <AddForm addFriend={addFriend} />}
         <Button onClick={() => setAddForm((prev) => !prev)}>{addForm ? "Close" : "Add friend"}</Button>
       </div>
-      {friend && <FormSplitBill friend={friend} editBalance={editBalance} />}
+      {friend && <FormSplitBill friend={friend} editBalance={editBalance} key={friend.id} />} */}
+
+      <header
+        onClick={() => console.log("this is header")}
+        style={{
+          width: "300px",
+          height: "200px",
+          background: "red",
+        }}
+      >
+        <div className="logo" onClick={() => console.log("this is parent logo")}>
+          <a href="#">click me</a>
+        </div>
+      </header>
     </div>
   );
 }
