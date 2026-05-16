@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import { useState } from "react";
 
 const styles = {
@@ -6,7 +7,7 @@ const styles = {
     justifyContent: "space-between",
     alignItems: "center",
     gap: "16px",
-    background: "tan",
+    userSelect: "none",
   },
   stars: {
     display: "flex",
@@ -30,7 +31,7 @@ const defaultVar = {
   widthStroke: 1,
   sizeStar: "10px",
   text: true,
-  className: "rating",
+  className: "", //rating
   defaultRating: 0,
 };
 
@@ -43,6 +44,7 @@ export default function Rating({
   text = defaultVar.text,
   className = defaultVar.className,
   defaultRating = defaultVar.defaultRating,
+  setUseRating,
 }) {
   const [numRating, setNumRating] = useState(defaultRating);
   const [tempNumRating, setTempNumRating] = useState(0);
@@ -51,8 +53,15 @@ export default function Rating({
     setNumRating(newRating);
   }
 
+  useEffect(() => {
+    setUseRating(numRating);
+  }, [numRating, setUseRating]);
+
   return (
-    <div className={className} style={styles.container}>
+    <div
+      className={className}
+      style={defaultRating > 0 ? { ...styles.container, pointerEvents: "none" } : styles.container}
+    >
       <div style={styles.stars}>
         {Array.from({ length: numStars }, (_, index) => (
           <Star
