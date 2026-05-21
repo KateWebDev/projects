@@ -7,9 +7,11 @@ export default function ListMovies({ movies, watched, showSelectedFilm, delWatch
         return (
           <Movie
             movie={movie}
-            key={movie.imdbID}
+            key={movie?.imdbID}
             watched={watched}
-            onClick={() => showSelectedFilm(movie?.imdbID)}
+            onClick={() => {
+              showSelectedFilm(movie?.imdbID);
+            }}
             delWatchedFilm={delWatchedFilm}
             setSelectedFilm={setSelectedFilm}
           />

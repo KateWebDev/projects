@@ -1,3 +1,4 @@
+import { useRef } from "react";
 import { useEffect } from "react";
 import { useState } from "react";
 
@@ -49,6 +50,8 @@ export default function Rating({
   const [numRating, setNumRating] = useState(defaultRating);
   const [tempNumRating, setTempNumRating] = useState(0);
 
+  const countClickStar = useRef([]);
+
   function handleRating(newRating) {
     setNumRating(newRating);
   }
@@ -66,7 +69,10 @@ export default function Rating({
         {Array.from({ length: numStars }, (_, index) => (
           <Star
             key={index}
-            onClick={() => handleRating(index + 1)}
+            onClick={() => {
+              handleRating(index + 1);
+              countClickStar.current.push(index + 1);
+            }}
             activeStar={tempNumRating ? tempNumRating >= index + 1 : numRating >= index + 1 ? true : false}
             onMouseOver={() => handleRating(index + 1)}
             onMouseEnter={() => setTempNumRating(index + 1)}

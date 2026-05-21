@@ -1,15 +1,14 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import Rating from "./Rating";
 import Loader from "./Loader";
 import ErrorMessage from "./ErrorMessage";
-
-const KEY = "***";
+import { useMovies } from "../useMovies";
+import { useTitle } from "../useTitle";
+import useKey from "../useKey";
 
 export default function MovieDetails({ selectedFilm, addWatchedMovie, setSelectedFilm, watched }) {
-  const [movie, setMovie] = useState({});
-  const [isLoading, setIsLoading] = useState(true);
-  const [error, setError] = useState(null);
   const [useRating, setUseRating] = useState(null);
+  const { data, isLoading, error } = useMovies(selectedFilm?.imdbID, "i");
 
   const {
     imdbID,
@@ -22,66 +21,13 @@ export default function MovieDetails({ selectedFilm, addWatchedMovie, setSelecte
     Plot: plot,
     Actors: actors,
     Director: director,
-  } = movie;
+  } = data;
 
-  const isWatched = watched.map((movie) => movie.imdbID).includes(selectedFilm.imdbID);
-  const watchedUserRating = watched.find((item) => item.imdbID === selectedFilm.imdbID)?.userRating;
+  const isWatched = watched?.map((movie) => movie.imdbID).includes(selectedFilm.imdbID);
+  const watchedUserRating = watched?.find((item) => item.imdbID === selectedFilm.imdbID)?.userRating;
 
-  function closeMovie() {
-    setMovie({});
-    setSelectedFilm({});
-  }
-
-  useEffect(() => {
-    async function getDataDetails() {
-      setError(null);
-      try {
-        const response = await fetch(`http://www.omdbapi.com/?apikey=${KEY}&i=${selectedFilm.imdbID}`);
-
-        if (!response.ok) {
-          throw new Error("Error Fetch Data");
-        }
-        const data = await response.json();
-
-        if (data.Response === "False") {
-          throw new Error("Movie Not Found");
-        }
-        setMovie(data);
-        setError(null);
-      } catch (error) {
-        if (error.name !== "AbortError") {
-          setError(error.message);
-        }
-      } finally {
-        setIsLoading(false);
-      }
-    }
-
-    getDataDetails();
-  }, [selectedFilm]);
-
-  useEffect(() => {
-    if (!title) return;
-    document.title = `Movies | ${title}`;
-
-    return () => {
-      document.title = "usePopcorn";
-    };
-  }, [title]);
-
-  useEffect(() => {
-    function closeKey(evt) {
-      if (evt.key === "Escape") {
-        closeMovie();
-      }
-    }
-
-    document.addEventListener("keyup", closeKey);
-
-    return () => {
-      document.removeEventListener("keyup", closeKey);
-    };
-  }, [closeMovie]);
+  useTitle(title);
+  useKey("escape", () => setSelectedFilm({}));
 
   if (isLoading) {
     return <Loader />;
@@ -94,7 +40,7 @@ export default function MovieDetails({ selectedFilm, addWatchedMovie, setSelecte
   return (
     <div className="details">
       <header>
-        <button className="btn-back" onClick={closeMovie}>
+        <button className="btn-back" onClick={() => setSelectedFilm({})}>
           &larr;
         </button>
         <img src={poster} alt={title} />
@@ -132,7 +78,7 @@ export default function MovieDetails({ selectedFilm, addWatchedMovie, setSelecte
                       runtime: parseInt(runtime, 10),
                       userRating: Number(useRating),
                     });
-                    closeMovie();
+                    setSelectedFilm({});
                   }}
                 >
                   💗
