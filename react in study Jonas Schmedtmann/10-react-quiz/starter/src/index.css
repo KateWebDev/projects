@@ -8,7 +8,7 @@
   --color-accent: #ffa94d;
 }
 
-@import url("https://fonts.googleapis.com/css2?family=Codystar&display=swap");
+/* @import url("https://fonts.googleapis.com/css2?family=Codystar&display=swap"); */
 
 * {
   margin: 0;
@@ -81,6 +81,10 @@ h4 {
   font-size: 2.2rem;
   font-weight: 600;
   margin-bottom: 2.4rem;
+}
+
+li{
+  list-style: none;
 }
 
 .start {
@@ -213,7 +217,6 @@ progress {
   border-radius: 100px;
 }
 
-/* CREDIT: https://dev.to/afif/i-made-100-css-loaders-for-your-next-project-4eje */
 .loader {
   width: 50px;
   height: 24px;
