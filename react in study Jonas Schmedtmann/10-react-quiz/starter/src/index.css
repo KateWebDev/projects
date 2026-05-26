@@ -136,6 +136,10 @@ progress {
   background-color: var(--color-darkest);
 }
 
+.btn[disabled] {
+  opacity: 0.2;
+}
+
 .btn-option:not([disabled]):hover {
   transform: translateX(1.2rem);
 }
@@ -259,4 +263,34 @@ progress {
 .counter * {
   font-size: inherit;
   padding: 0.8rem;
+}
+
+
+/**************/
+/* Project Study */
+
+.actions{
+  display: grid;
+  row-gap: 1.6rem;
+}
+
+.form{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+
+.form-item{
+  display: flex;
+  flex-direction: column;
+  row-gap: 1rem;
+}
+
+input{
+  height: 50px;
+  margin-bottom: 2rem;
+}
+
+label{
+  font-size: 2rem;
 }

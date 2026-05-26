@@ -7,6 +7,7 @@ import Error from "./components/Error";
 import Quiz from "./components/Quiz";
 import Question from "./components/Question";
 import FinishWindow from "./components/FinishWindow";
+import PracticeComponent from "./components/practiceComponent";
 
 const TIME = 30; // кол-во секунд на ответ для 1 вопроса
 
@@ -112,6 +113,7 @@ export default function App() {
           <FinishWindow points={points} allPoints={allPoints} maxPoints={maxPoints} dispath={dispath} />
         )}
       </Main>
+      <PracticeComponent />
     </div>
   );
 }
