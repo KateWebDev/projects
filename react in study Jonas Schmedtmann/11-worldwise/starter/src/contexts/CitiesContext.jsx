@@ -1,18 +1,74 @@
-import { useState, useEffect, createContext } from "react";
+import { useEffect, createContext, useReducer } from "react";
 
 const CitiesContext = createContext();
 
+const initialState = {
+  cities: [],
+  isLoading: false,
+  error: null,
+  currentCity: {},
+  position: {
+    lat: 0,
+    lng: 0,
+  },
+};
+
+function reducer(state, action) {
+  switch (action.type) {
+    case "loading":
+      return {
+        ...state,
+        isLoading: action.payload.loading,
+      };
+    case "error":
+      return {
+        ...state,
+        isLoading: false,
+        error: action.payload.error,
+      };
+    case "cities/loaded":
+      return {
+        ...state,
+        isLoading: false,
+        cities: action.payload.cities,
+      };
+    case "city/created":
+      return {
+        ...state,
+        isLoading: false,
+        cities: [...state.cities, action.payload.newCity],
+        currentCity: action.payload.newCity,
+      };
+    case "city/deleted":
+      return {
+        ...state,
+        isLoading: false,
+        cities: state.cities.filter((city) => city.id !== action.payload.idCity),
+        currentCity: {},
+      };
+    case "city/currentCity":
+      return {
+        ...state,
+        currentCity: state.cities.find((item) => item.id === action.payload.id),
+      };
+    case "position/created":
+      return {
+        ...state,
+        position: { lat: action.payload.lat, lng: action.payload.lng },
+      };
+    default:
+      throw new Error("There is no such action type");
+  }
+}
+
 function CitiesProvider({ children }) {
-  const [cities, setCities] = useState([]);
-  const [isLoading, setIsLoading] = useState(false);
-  const [error, setError] = useState(null);
-  const [currentCity, setCurrentCity] = useState({});
-  const [position, setPosition] = useState({ lat: 0, lng: 0 });
+  const [state, dispath] = useReducer(reducer, initialState);
+  const { cities, isLoading, error, currentCity, position } = state;
 
   useEffect(() => {
     async function getData() {
-      setError(null);
-      setIsLoading(true);
+      dispath({ type: "error", payload: { error: null } });
+      dispath({ type: "loading", payload: { loading: true } });
       try {
         const response = await fetch("http://localhost:9000/cities");
 
@@ -24,13 +80,11 @@ function CitiesProvider({ children }) {
         if (data.Response === "False") {
           throw new Error("Movie Not Found");
         }
-        setCities(data);
+        dispath({ type: "cities/loaded", payload: { cities: data } });
       } catch (error) {
         if (!error.name === "AbortError") {
-          setError(error.message);
+          dispath({ type: "error", payload: { error: error.message } });
         }
-      } finally {
-        setIsLoading(false);
       }
     }
 
@@ -38,12 +92,12 @@ function CitiesProvider({ children }) {
   }, []);
 
   function editCurrentCity(id) {
-    setCurrentCity(cities.find((item) => item.id === id));
+    dispath({ type: "city/currentCity", payload: { id: id } });
   }
 
   // добавление локация в API
   async function addCityAPI(city) {
-    setIsLoading(true);
+    dispath({ type: "loading", payload: { loading: true } });
     try {
       const response = await fetch("http://localhost:9000/cities", {
         method: "POST",
@@ -56,30 +110,33 @@ function CitiesProvider({ children }) {
       if (cities.some((item) => item.cityName === city.cityName && item.date === city.date)) {
         alert("This location is already on your list with the date and name entered.");
       } else {
-        setCities((prev) => [...prev, city]);
+        dispath({ type: "city/created", payload: { newCity: city } });
       }
     } catch (error) {
-      setIsLoading(false);
-      setError(error.message);
-    } finally {
-      setIsLoading(false);
+      dispath({ type: "loading", payload: { loading: false } });
+      dispath({ type: "error", payload: { error: error.message } });
     }
   }
 
   // добавление локация в API
   async function delCityAPI(id) {
-    setIsLoading(true);
+    dispath({ type: "loading", payload: { loading: true } });
     try {
       const response = await fetch(`http://localhost:9000/cities/${id}`, {
         method: "DELETE",
       });
-      setCities(cities.filter((city) => city.id !== id));
+
+      dispath({ type: "city/deleted", payload: { idCity: id } });
     } catch (error) {
-      setIsLoading(false);
-      setError(error.message);
+      dispath({ type: "loading", payload: { loading: false } });
+      dispath({ type: "error", payload: { error: error.message } });
     } finally {
-      setIsLoading(false);
+      dispath({ type: "loading", payload: { loading: false } });
     }
+  }
+
+  function setPosition(lat, lng) {
+    dispath({ type: "position/created", payload: { lat: lat, lng: lng } });
   }
 
   const value = {

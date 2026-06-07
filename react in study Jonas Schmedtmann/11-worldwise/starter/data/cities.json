@@ -25,16 +25,16 @@
       "id": "8uTi8zEVOxg"
     },
     {
-      "cityName": "Sokol’skiy Rayon",
-      "country": "Russian Federation (the)",
-      "emoji": "RU",
-      "date": "2026-06-07T07:22:59.791Z",
+      "cityName": "Guadalajara",
+      "country": "Spain",
+      "emoji": "ES",
+      "date": "2026-06-07T13:12:18.024Z",
       "notes": "",
       "position": {
-        "lat": "57.42129439209407",
-        "lng": "43.58299479489001"
+        "lat": "40.6306300839918",
+        "lng": "-3.186776894533455"
       },
-      "id": "OSIHyLgwTlQ"
+      "id": "jYfbljBQcAQ"
     }
   ],
   "$schema": "./node_modules/json-server/schema.json"

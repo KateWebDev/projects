@@ -47,7 +47,8 @@ function ClickOnTheMap() {
   const { setPosition } = useCitiesContext();
   useMapEvents({
     click: (evt) => {
-      setPosition({ lat: evt.latlng.lat, lng: evt.latlng.lng });
+      setPosition(evt.latlng.lat, evt.latlng.lng);
+
       navigate("form");
     },
   });
