@@ -10,31 +10,32 @@
         "lat": 38.727881642324164,
         "lng": -9.140900099907554
       },
-      "id": 73930385
+      "id": "73930385"
     },
     {
-      "cityName": "Madrid",
-      "country": "Spain",
-      "emoji": "🇪🇸",
-      "date": "2027-07-15T08:22:53.976Z",
+      "cityName": "Nefteyuganskiy Rayon",
+      "country": "Russian Federation (the)",
+      "emoji": "RU",
+      "date": "2026-06-07T07:21:07.352Z",
       "notes": "",
       "position": {
-        "lat": 40.46635901755316,
-        "lng": -3.7133789062500004
+        "lat": "59.712097173322924",
+        "lng": "72.392390903233"
       },
-      "id": 17806751
+      "id": "8uTi8zEVOxg"
     },
     {
-      "cityName": "Berlin",
-      "country": "Germany",
-      "emoji": "🇩🇪",
-      "date": "2027-02-12T09:24:11.863Z",
-      "notes": "Amazing 😃",
+      "cityName": "Sokol’skiy Rayon",
+      "country": "Russian Federation (the)",
+      "emoji": "RU",
+      "date": "2026-06-07T07:22:59.791Z",
+      "notes": "",
       "position": {
-        "lat": 52.53586782505711,
-        "lng": 13.376933665713324
+        "lat": "57.42129439209407",
+        "lng": "43.58299479489001"
       },
-      "id": 98443197
+      "id": "OSIHyLgwTlQ"
     }
-  ]
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
 }

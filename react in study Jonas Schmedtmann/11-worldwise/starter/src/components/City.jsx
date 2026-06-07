@@ -1,41 +1,58 @@
-import { useParams } from "react-router-dom";
+import { useEffect } from "react";
+import { useNavigate, useParams } from "react-router-dom";
+
+import useCitiesContext from "../hooks/useCitiesContext";
+import Spinner from "./Spinner";
+
 import styles from "./City.module.css";
 
-function City({ cities }) {
+export default function City() {
   const paramsURL = useParams();
+  const navigate = useNavigate();
+  const { currentCity, isLoading, editCurrentCity } = useCitiesContext();
 
-  const city = cities.find((item) => item.id === paramsURL.id);
+  useEffect(() => {
+    editCurrentCity(paramsURL.id);
+  }, [paramsURL.id]);
 
+  if (isLoading) return <Spinner />;
   return (
     <div className={styles.city}>
       <div className={styles.row}>
         <h6>City name</h6>
         <h3>
-          <span>{city?.emoji}</span> {city?.cityName}
+          <span>{currentCity?.emoji}</span> {currentCity?.cityName}
         </h3>
       </div>
 
       <div className={styles.row}>
-        <h6>You went to {city?.cityName} on</h6>
+        <h6>You went to {currentCity?.cityName} on</h6>
         {/* <p>{formatDate(date || null)}</p> */}
-        <p>{city?.date}</p>
+        <p>{currentCity?.date}</p>
       </div>
 
-      {city?.notes && (
+      {currentCity?.notes && (
         <div className={styles.row}>
           <h6>Your notes</h6>
-          <p>{city?.notes}</p>
+          <p>{currentCity?.notes}</p>
         </div>
       )}
 
       <div className={styles.row}>
         <h6>Learn more</h6>
-        <a href={`https://en.wikipedia.org/wiki/${city?.cityName}`} target="_blank" rel="noreferrer">
-          Check out {city?.cityName} on Wikipedia &rarr;
+        <a href={`https://en.wikipedia.org/wiki/${currentCity?.cityName}`} target="_blank" rel="noreferrer">
+          Check out {currentCity?.cityName} on Wikipedia &rarr;
         </a>
       </div>
+
+      <button
+        type="button"
+        onClick={() => {
+          navigate(-1);
+        }}
+      >
+        back
+      </button>
     </div>
   );
 }
-
-export default City;

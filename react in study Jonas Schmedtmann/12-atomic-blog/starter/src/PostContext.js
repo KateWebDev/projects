@@ -1,4 +1,4 @@
-import { createContext, useEffect, useState } from "react";
+import { createContext, useState } from "react";
 import { faker } from "@faker-js/faker";
 
 function createRandomPost() {
