@@ -1,7 +1,4 @@
-import { useContextQuiz } from "../hooks/useContextQuiz";
-
-export default function FinishWindow() {
-  const { points, allPoints, maxPoints, dispath } = useContextQuiz();
+export default function FinishWindow({ points, allPoints, maxPoints, dispath }) {
   let emoji = "";
   let percent = Math.floor((points / allPoints) * 100);
 

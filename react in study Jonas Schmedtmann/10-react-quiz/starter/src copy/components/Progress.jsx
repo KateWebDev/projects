@@ -1,7 +1,4 @@
-import { useContextQuiz } from "../hooks/useContextQuiz";
-
-export default function Progress() {
-  const { currentIndex, countQuestions, points, allPoints, answer } = useContextQuiz();
+export default function Progress({ currentIndex, countQuestions, points, allPoints, answer }) {
   return (
     <div className="progress">
       <progress value={answer !== null ? currentIndex + 1 : currentIndex} max={countQuestions}></progress>

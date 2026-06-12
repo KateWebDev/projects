@@ -1,9 +1,6 @@
 import { useEffect } from "react";
 
-import { useContextQuiz } from "../hooks/useContextQuiz";
-
-export default function Timer() {
-  const { timer, dispath } = useContextQuiz();
+export default function Timer({ timer, dispath }) {
   const minutes = `${Math.floor(timer / 60)
     .toString()
     .padStart(2, "0")}:${(timer % 60).toString().padStart(2, "0")}`;

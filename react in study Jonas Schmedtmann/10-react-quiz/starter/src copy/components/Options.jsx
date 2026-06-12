@@ -1,7 +1,4 @@
-import { useContextQuiz } from "../hooks/useContextQuiz";
-
-export default function Options({ question }) {
-  const { dispath, answer } = useContextQuiz();
+export default function Options({ question, dispath, answer }) {
   const isResponseAnswer = answer !== null;
 
   return (
@@ -10,7 +7,9 @@ export default function Options({ question }) {
         <li key={index}>
           <button
             className={`btn btn-option ${index === answer ? "answer" : ""} ${isResponseAnswer ? (index === question.correctOption ? "correct" : "wrong") : ""}`}
-            onClick={() => dispath({ type: "addAnswer", payload: { answer: index } })}
+            onClick={() => {
+              dispath({ type: "addAnswer", payload: { answer: index } });
+            }}
             disabled={isResponseAnswer}
           >
             {item}
