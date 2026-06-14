@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, memo } from "react";
 import { PostProvider } from "./PostContext";
 import { usePostContext } from "./usePostContext";
 // import Test from "./Test";
