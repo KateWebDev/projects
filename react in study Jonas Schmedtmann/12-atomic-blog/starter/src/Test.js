@@ -23,4 +23,4 @@ export default function Test() {
       <SlowComponent />
     </div>
   );
-}
+} 
