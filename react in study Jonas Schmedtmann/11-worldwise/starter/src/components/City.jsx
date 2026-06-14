@@ -13,7 +13,7 @@ export default function City() {
 
   useEffect(() => {
     editCurrentCity(paramsURL.id);
-  }, [paramsURL.id]);
+  }, [paramsURL.id, editCurrentCity]);
 
   if (isLoading) return <Spinner />;
   return (

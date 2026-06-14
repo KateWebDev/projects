@@ -1,3 +1,4 @@
+import { useCallback } from "react";
 import { useEffect, createContext, useReducer } from "react";
 
 const CitiesContext = createContext();
@@ -91,9 +92,9 @@ function CitiesProvider({ children }) {
     getData();
   }, []);
 
-  function editCurrentCity(id) {
+  const editCurrentCity = useCallback((id) => {
     dispath({ type: "city/currentCity", payload: { id: id } });
-  }
+  }, []);
 
   // добавление локация в API
   async function addCityAPI(city) {

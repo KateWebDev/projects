@@ -35,6 +35,18 @@
         "lng": "-3.186776894533455"
       },
       "id": "jYfbljBQcAQ"
+    },
+    {
+      "cityName": "El Faouar",
+      "country": "Tunisia",
+      "emoji": "TN",
+      "date": "2026-06-14T06:17:09.896Z",
+      "notes": "fefe",
+      "position": {
+        "lat": "32.87643173152544",
+        "lng": "8.587115681665068"
+      },
+      "id": "gRBZaT_BA7Q"
     }
   ],
   "$schema": "./node_modules/json-server/schema.json"
