@@ -7,6 +7,7 @@ const initialStateMoney = {
   balance: 0,
   credit: 0,
   purposeCredit: "",
+  currency: "USD",
 };
 
 export function reducerMoney(state = initialStateMoney, action) {
@@ -42,8 +43,16 @@ export function reducerMoney(state = initialStateMoney, action) {
   }
 }
 
-export function deposit(sum) {
-  return { type: ACCOUNT_DEPOSIT, payload: { sum: sum } };
+export function deposit(sum, currency) {
+  if (currency === "USD") return { type: ACCOUNT_DEPOSIT, payload: { sum: sum } };
+  return async function (dispatch, getState) {
+    // API
+    const response = await fetch(`https://api.frankfurter.dev/v1/latest?amount=${sum}&from=${currency}&to=USD`);
+    const data = await response.json();
+    const convertAmount = data.rates.USD;
+
+    dispatch({ type: ACCOUNT_DEPOSIT, payload: { sum: convertAmount } });
+  };
 }
 export function withdraw(sum) {
   return { type: ACCOUNT_WITHDRAW, payload: { sum: sum } };
