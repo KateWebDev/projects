@@ -12,7 +12,7 @@ function Menu() {
   const menu = useLoaderData();
 
   return (
-    <ul>
+    <ul className="flex flex-col divide-y divide-stone-300">
       {menu.map((item) => (
         <MenuItem key={item.id} pizza={item} />
       ))}

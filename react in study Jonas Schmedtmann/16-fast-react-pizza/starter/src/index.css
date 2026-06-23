@@ -1,40 +1,40 @@
 @import "tailwindcss";
 
-body {
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
-    Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-  background-color: #f7f7f7;
-  color: #444;
+@theme {
+  --font-roboto-mono: "Roboto Mono", monospace, sans-serif;
 }
 
-.layout {
-  display: grid;
-  grid-template-rows: auto 1fr auto;
-  gap: 32px;
-  height: 100dvh;
+@layer components{
+  .trans{
+    @apply duration-300 ease-linear transition-all
+  }
+
+  .focus-element {
+    @apply focus:outline-none focus:ring focus:ring-yellow-500 focus:ring-offset-2;
+  }
+
+  .input{
+    @apply w-full p-2 text-xs border rounded-lg border-stone-300 sm:text-base placeholder:text-stone-400;
+  }
+
+  .form-item{
+    @apply flex flex-col gap-y-1;
+  }
 }
 
-/* https://dev.to/afif/i-made-100-css-loaders-for-your-next-project-4eje */
+
+
 .loader {
-  width: 45px;
-  aspect-ratio: 0.75;
-  --c: no-repeat linear-gradient(#333 0 0);
-  background: var(--c) 0% 50%, var(--c) 50% 50%, var(--c) 100% 50%;
-  background-size: 20% 50%;
-  animation: loading 1s infinite linear;
+  width: 50px;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  padding: 3px;
+  background: 
+    radial-gradient(farthest-side,#eab308 95%,#0000) 50% 0/12px 12px no-repeat,
+    radial-gradient(farthest-side,#0000 calc(100% - 5px),#eab308 calc(100% - 4px)) content-box;
+  animation: loading 2s infinite ;
 }
 
 @keyframes loading {
-  20% {
-    background-position: 0% 0%, 50% 50%, 100% 50%;
-  }
-  40% {
-    background-position: 0% 100%, 50% 0%, 100% 50%;
-  }
-  60% {
-    background-position: 0% 50%, 50% 100%, 100% 0%;
-  }
-  80% {
-    background-position: 0% 50%, 50% 50%, 100% 100%;
-  }
+  to{transform: rotate(1turn)}
 }

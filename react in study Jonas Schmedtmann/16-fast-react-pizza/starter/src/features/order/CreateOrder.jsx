@@ -1,5 +1,6 @@
 import { Form, redirect, useActionData, useNavigation } from "react-router-dom";
 import { createOrder } from "../../services/apiRestaurant";
+import Button from "../../components/Button";
 
 // https://uibakery.io/regex-library/phone-number
 const isValidPhone = (str) => /^\+?\d{1,4}?[-.\s]?\(?\d{1,3}?\)?[-.\s]?\d{1,4}[-.\s]?\d{1,4}[-.\s]?\d{1,9}$/.test(str);
@@ -38,37 +39,45 @@ function CreateOrder() {
 
   return (
     <div>
-      <h2>Ready to order? Let's go!</h2>
+      <h2 className="mb-4 text-lg md:mb-8 sm:text-xl">Ready to order? Let's go!</h2>
 
-      <Form method="POST" action="/order/new">
-        <div>
+      <Form className="space-y-4 md:space-y-8" method="POST" action="/order/new">
+        <div className="form-item">
           <label>First Name</label>
-          <input type="text" name="customer" required placeholder="Tom" />
+          <input className="input focus-element trans" type="text" name="customer" required placeholder="Tom" />
         </div>
 
-        <div>
+        <div className="form-item">
           <label>Phone number</label>
           <div>
-            <input type="tel" name="phone" required placeholder="+7(999)123-45-67" />
+            <input
+              className="input focus-element trans"
+              type="tel"
+              name="phone"
+              required
+              placeholder="+7(999)123-45-67"
+            />
           </div>
           {formError?.phone && <p>{formError.phone}</p>}
         </div>
 
-        <div>
+        <div className="form-item">
           <label>Address</label>
           <div>
-            <input type="text" name="address" required />
+            <input className="input focus-element trans" name="address" required />
           </div>
         </div>
 
-        <div>
-          <input type="checkbox" name="priority" id="priority" />
+        <div className="flex item-center gap-x-2">
+          <input className="w-5 h-5 accent-yellow-500 focus-element" type="checkbox" name="priority" id="priority" />
           <label htmlFor="priority">Want to yo give your order priority?</label>
         </div>
 
         <div>
           <input type="hidden" name="cart" value={JSON.stringify(cart)} />
-          <button disabled={isSubmitting}>{!isSubmitting ? "Order now" : "Placing order..."}</button>
+          <Button disabled={isSubmitting} type="submit">
+            {!isSubmitting ? "Order now" : "Placing order..."}
+          </Button>
         </div>
       </Form>
     </div>
