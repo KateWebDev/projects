@@ -58,7 +58,7 @@ function CreateOrder() {
               placeholder="+7(999)123-45-67"
             />
           </div>
-          {formError?.phone && <p>{formError.phone}</p>}
+          {formError?.phone && <p className="text-red-500">{formError.phone}</p>}
         </div>
 
         <div className="form-item">
