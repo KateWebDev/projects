@@ -1,3 +1,10 @@
+import { useSelector } from "react-redux";
+import { getUserName } from "./userSlice";
+
 export default function UserName() {
-  return <p className="text-sm font-semibold sm:order-3">Kate</p>;
+  const userName = useSelector(getUserName);
+
+  if (!userName) return null;
+
+  return <p className="text-sm font-semibold sm:order-3">{userName}</p>;
 }

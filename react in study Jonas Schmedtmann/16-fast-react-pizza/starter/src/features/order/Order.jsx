@@ -5,7 +5,9 @@ import OrderItem from "./OrderItem";
 
 function Order() {
   const order = useLoaderData();
-  const { id, status, priority, priorityPrice, orderPrice, estimatedDelivery, cart } = order;
+
+  const { id, status, priority, orderPrice, priorityPrice, estimatedDelivery, cart } = order;
+
   const deliveryIn = calcMinutesLeft(estimatedDelivery);
 
   return (
@@ -13,10 +15,11 @@ function Order() {
       <div className="flex flex-wrap items-center justify-between gap-4">
         <h2 className="font-bold uppercase text-l sm:text-xl">Order #{id} status</h2>
         <div className="flex flex-wrap items-center gap-4">
-          {/* {priority && <span>Priority</span>} */}
-          <span className="px-3 py-1 text-sm font-semibold tracking-wide uppercase bg-red-500 rounded-lg sm:text-base text-red-50">
-            Priority
-          </span>
+          {priority && (
+            <span className="px-3 py-1 text-sm font-semibold tracking-wide uppercase bg-red-500 rounded-lg sm:text-base text-red-50">
+              Priority
+            </span>
+          )}
           <span className="px-3 py-1 text-sm font-semibold tracking-wide uppercase bg-green-500 rounded-lg sm:text-base text-green-50">
             {status} order
           </span>
@@ -31,7 +34,7 @@ function Order() {
 
       <ul className="grid divide-y gap-y-2 divide-stone-300">
         {cart.map((item) => (
-          <OrderItem key={item.id} item={item} />
+          <OrderItem key={item.pizzaId} item={item} />
         ))}
       </ul>
       <div className="p-5 bg-stone-200">
@@ -43,7 +46,8 @@ function Order() {
   );
 }
 export async function loader({ params }) {
-  const order = getOrder(params.id);
+  const order = await getOrder(params.id);
+
   return order;
 }
 
