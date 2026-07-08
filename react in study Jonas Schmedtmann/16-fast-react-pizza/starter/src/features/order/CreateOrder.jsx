@@ -1,30 +1,32 @@
 import { Form, redirect, useActionData, useNavigation } from "react-router-dom";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { useState } from "react";
 
 import { createOrder } from "../../services/apiRestaurant";
 import { allPriceProducts, clearCart, getCart } from "../cart/cartSlice";
-import { getUserName } from "../user/userSlice";
+import { fetchAddress, getUserAddress, getUserName } from "../user/userSlice";
 
 import Button from "../../components/Button";
 import EmptyCart from "../cart/EmptyCart";
 import store from "../../store";
 import { formatCurrency } from "../../utils/helpers";
+import { getAddress } from "../../services/apiGeocoding";
 
 // https://uibakery.io/regex-library/phone-number
 const isValidPhone = (str) => /^\+?\d{1,4}?[-.\s]?\(?\d{1,3}?\)?[-.\s]?\d{1,4}[-.\s]?\d{1,4}[-.\s]?\d{1,9}$/.test(str);
 
 function CreateOrder() {
   const [isPriority, setIsPriority] = useState(false);
-  const userName = useSelector(getUserName);
+  const dispatch = useDispatch();
   const navigation = useNavigation();
   const formError = useActionData();
+
+  const userName = useSelector(getUserName);
+  const address = useSelector(getUserAddress);
   const cart = useSelector(getCart);
   const allPrice = useSelector(allPriceProducts);
   const priority = isPriority ? (allPrice * 20) / 100 : 0;
-
   const totalSum = allPrice + priority;
-
   const isSubmitting = navigation.state === "submitting";
 
   if (cart.length === 0) return <EmptyCart />;
@@ -33,7 +35,15 @@ function CreateOrder() {
     <div>
       <h2 className="mb-4 text-lg md:mb-8 sm:text-xl">Ready to order? Let's go!</h2>
 
-      <Form className="space-y-4 md:space-y-8" method="POST" action="/order/new">
+      <Button
+        onClick={() => {
+          dispatch(fetchAddress());
+        }}
+      >
+        Find my address
+      </Button>
+
+      <Form className="mt-10 space-y-4 md:space-y-8" method="POST" action="/order/new">
         <div className="form-item">
           <label>First Name</label>
           <input
@@ -61,7 +71,7 @@ function CreateOrder() {
         <div className="form-item">
           <label>Address</label>
           <div>
-            <input className="input focus-element trans" name="address" required />
+            <input className="input focus-element trans" name="address" required defaultValue={address} />
           </div>
         </div>
         <div className="flex item-center gap-x-2">
