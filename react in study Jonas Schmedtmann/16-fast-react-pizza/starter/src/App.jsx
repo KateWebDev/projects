@@ -7,6 +7,7 @@ import Order, { loader as orderLoader } from "./features/order/Order";
 import CreateOrder, { sending as SendNewOrder } from "./features/order/CreateOrder";
 import Error from "./components/Error";
 import Layout from "./components/Layout";
+import { action as updateOrderAction } from "./features/order/UpdateOrder";
 
 const router = createBrowserRouter([
   {
@@ -18,7 +19,13 @@ const router = createBrowserRouter([
       { path: "/menu", element: <Menu />, loader: menuLoader, errorElement: <Error /> },
       { path: "/cart", element: <Cart /> },
       { path: "/order/new", element: <CreateOrder />, action: SendNewOrder },
-      { path: "/order/:id", element: <Order />, loader: orderLoader, errorElement: <Error /> },
+      {
+        path: "/order/:id",
+        element: <Order />,
+        loader: orderLoader,
+        errorElement: <Error />,
+        action: updateOrderAction,
+      },
     ],
   },
 ]);

@@ -1,10 +1,19 @@
-import { useLoaderData } from "react-router-dom";
+import { useFetcher, useLoaderData } from "react-router-dom";
 import { calcMinutesLeft, formatCurrency, formatDate } from "../../utils/helpers";
 import { getOrder } from "../../services/apiRestaurant";
 import OrderItem from "./OrderItem";
+import { useEffect } from "react";
+import UpdateOrder from "./UpdateOrder";
 
 function Order() {
   const order = useLoaderData();
+  const fetcher = useFetcher();
+
+  useEffect(() => {
+    if (!fetcher.data && fetcher.state === "idle") {
+      fetcher.load("/menu");
+    }
+  }, [fetcher]);
 
   const { id, status, priority, orderPrice, priorityPrice, estimatedDelivery, cart } = order;
 
@@ -15,10 +24,12 @@ function Order() {
       <div className="flex flex-wrap items-center justify-between gap-4">
         <h2 className="font-bold uppercase text-l sm:text-xl">Order #{id} status</h2>
         <div className="flex flex-wrap items-center gap-4">
-          {priority && (
+          {priority ? (
             <span className="px-3 py-1 text-sm font-semibold tracking-wide uppercase bg-red-500 rounded-lg sm:text-base text-red-50">
               Priority
             </span>
+          ) : (
+            <UpdateOrder />
           )}
           <span className="px-3 py-1 text-sm font-semibold tracking-wide uppercase bg-green-500 rounded-lg sm:text-base text-green-50">
             {status} order
@@ -34,7 +45,12 @@ function Order() {
 
       <ul className="grid divide-y gap-y-2 divide-stone-300">
         {cart.map((item) => (
-          <OrderItem key={item.pizzaId} item={item} />
+          <OrderItem
+            key={item.pizzaId}
+            item={item}
+            ingredients={fetcher?.data?.find((element) => element.id === item.pizzaId)?.ingredients ?? []}
+            isLoadingIngredients={fetcher.state === "loading"}
+          />
         ))}
       </ul>
       <div className="p-5 bg-stone-200">
