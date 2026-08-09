@@ -17,14 +17,29 @@ const Wrapper = styled.div`
   height: 100%;
 `;
 
+const Container = styled.div`
+  max-width: 80svw;
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+  row-gap: 2rem;
+
+  @media (min-width: 768px) {
+    max-width: 120rem;
+    row-gap: 3rem;
+  }
+`;
+
 export default function AppLayout() {
   return (
     <Wrapper>
       <Header />
-
       <Sidebar />
       <Main>
-        <Outlet />
+        <Container>
+          <Outlet />
+        </Container>
       </Main>
     </Wrapper>
   );
