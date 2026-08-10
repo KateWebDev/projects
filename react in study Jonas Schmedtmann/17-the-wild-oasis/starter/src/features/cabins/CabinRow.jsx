@@ -3,6 +3,7 @@ import { deleteCabin } from "../../services/apiCabins";
 import { formatCurrency } from "../../utils/helpers";
 import styled from "styled-components";
 import toast from "react-hot-toast";
+import { Button } from "../../ui/Button";
 
 const TableRow = styled.div`
   display: grid;
@@ -67,9 +68,9 @@ export default function CabinRow({ cabin }) {
       <p>Fits up to {maxCapacity} guests</p>
       <Price>{formatCurrency(regularPrice)}</Price>
       <Discount>{formatCurrency(discount)}</Discount>
-      <button onClick={() => mutate(id)} disabled={isLoading}>
+      <Button size="small" variations="danger" onClick={() => mutate(id)} disabled={isLoading}>
         Delete
-      </button>
+      </Button>
     </TableRow>
   );
 }
