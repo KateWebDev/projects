@@ -4,6 +4,8 @@ import { formatCurrency } from "../../utils/helpers";
 import styled from "styled-components";
 import toast from "react-hot-toast";
 import { Button } from "../../ui/Button";
+import { useState } from "react";
+import CreateCabinForm from "./CreateCabinForm";
 
 const TableRow = styled.div`
   display: grid;
@@ -46,6 +48,7 @@ const Discount = styled.div`
 
 export default function CabinRow({ cabin }) {
   const { id, name, maxCapacity, regularPrice, discount, image } = cabin;
+  const [showForm, setShowForm] = useState(false);
 
   const queryClient = useQueryClient();
 
@@ -62,15 +65,24 @@ export default function CabinRow({ cabin }) {
   });
 
   return (
-    <TableRow role="row">
-      <Img src={image} />
-      <Cabin>{name}</Cabin>
-      <p>Fits up to {maxCapacity} guests</p>
-      <Price>{formatCurrency(regularPrice)}</Price>
-      <Discount>{formatCurrency(discount)}</Discount>
-      <Button size="small" variations="danger" onClick={() => mutate(id)} disabled={isLoading}>
-        Delete
-      </Button>
-    </TableRow>
+    <>
+      <TableRow role="row">
+        <Img src={image} />
+        <Cabin>{name}</Cabin>
+        <p>Fits up to {maxCapacity} guests</p>
+        <Price>{formatCurrency(regularPrice)}</Price>
+        <Discount>{formatCurrency(discount)}</Discount>
+        <div>
+          <Button size="small" variations="primary" onClick={() => setShowForm((prev) => !prev)}>
+            {showForm ? "close" : "Edit"}
+          </Button>
+          <Button size="small" variations="danger" onClick={() => mutate(id)} disabled={isLoading}>
+            Delete
+          </Button>
+        </div>
+      </TableRow>
+
+      {showForm && <CreateCabinForm editCabin={cabin} />}
+    </>
   );
 }
