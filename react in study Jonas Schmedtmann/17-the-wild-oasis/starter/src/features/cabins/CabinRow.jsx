@@ -62,6 +62,7 @@ export default function CabinRow({ cabin }) {
       image,
     });
   }
+  
   return (
     <>
       <TableRow role="row">
